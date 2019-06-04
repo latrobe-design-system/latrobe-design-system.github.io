@@ -1,4 +1,4 @@
 <div class="sg-sample {{ include.snippet | remove: ".html" }}">
-    <a class="sg-snippet-file" href="{{ page.url }}{{ include.snippet }}" target="_blank" title="Open in new tab">Preview in new window</a>
-    <iframe id="{{ include.snippet | remove: ".html" }}" src="{{ page.url }}{{ include.snippet }}" style="width: 100%;"></iframe>
+    <a class="sg-snippet-file" href="{{ site.baseURL }}{{ page.url }}{{ include.snippet }}" target="_blank" title="Open in new tab">Preview in new window</a>
+    <iframe id="{{ include.snippet | remove: ".html" }}" src="{{ site.baseURL }}{{ page.url }}{{ include.snippet }}" style="width: 100%;"></iframe>
 </div>

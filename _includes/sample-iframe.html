@@ -1,6 +1,6 @@
 <div class="sg-sample {{ include.snippet | remove: ".html" }}">
-    <a class="sg-snippet-file" href="{{ page.url }}{{ include.snippet }}" target="_blank" title="Open in new tab">Preview in new window</a>
-    <iframe id="{{ include.snippet | remove: ".html" }}" src="{{ page.url }}{{ include.snippet }}" style="width: 100%;"></iframe>
+    <a class="sg-snippet-file" href="{{ site.baseURL }}{{ page.url }}{{ include.snippet }}" target="_blank" title="Open in new tab">Preview in new window</a>
+    <iframe id="{{ include.snippet | remove: ".html" }}" src="{{ site.baseURL }}{{ page.url }}{{ include.snippet }}" style="width: 100%;"></iframe>
     <pre><code class="language-html">
 {% for page in site.pages %}{% if page.name == include.snippet %}{{ page.content | escape }}{% endif %}{% endfor %}
     </code></pre>
