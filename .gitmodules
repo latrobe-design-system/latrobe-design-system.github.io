@@ -1,0 +1,3 @@
+[submodule "ltucss"]
+	path = ltucss
+	url = https://github.com/latrobe-ict-web/web-ui-master-files.git

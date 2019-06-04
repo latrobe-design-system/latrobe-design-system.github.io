@@ -1,0 +1,30 @@
+<script
+src="https://code.jquery.com/jquery-2.2.4.min.js"
+integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+<script>
+    function setIframeHeight(iframe) {
+        if (iframe) {
+            var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+            if (iframeWin.document.body) {
+                iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+            }
+        }
+    };
+    $(window).load(function () {
+        $('iframe').each(function () {
+            var id = $(this).attr('id');
+            setIframeHeight(document.getElementById(id));
+        });
+    });
+    $(window).resize(function () {
+        $('iframe').each(function () {
+            var id = $(this).attr('id');
+            setIframeHeight(document.getElementById(id));
+        });
+    });
+</script>
+</body>
+
+</html>

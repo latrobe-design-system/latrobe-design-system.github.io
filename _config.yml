@@ -1,0 +1,14 @@
+baseURL: "https://latrobe-ict-web.github.io/design-system/"
+languageCode: en
+title: "La Trobe Design System"
+sass:
+    sass_dir: ltucss/sass/partials
+exclude:
+    - build.sh
+    - server.sh
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
