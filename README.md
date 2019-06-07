@@ -5,11 +5,11 @@ https://latrobe-ict-web.github.io/design-system-jekyll/
 
 ## Using Jekyll static generator
 To use this you must install
-Jekyll: https://gohugo.io/getting-started/installing/
+Jekyll: https://jekyllrb.com/docs/installation/
 Sass: https://sass-lang.com/install
 
 ### For local development
-Make sure server.sh is executable: chmod +x build.sh
+Make sure server.sh is executable: chmod +x server.sh
 Open terminal at folder and run: ./server.sh
 
 ### To build and deploy
