@@ -1,7 +1,5 @@
 <div class="sg-sample {{ include.snippet | remove: ".html" }}">
     <a class="sg-snippet-file" href="{{ site.url }}{{ page.url }}{{ include.snippet }}" target="_blank" title="Open in new tab">Preview in new window</a>
-    <iframe id="{{ include.snippet | remove: ".html" }}" src="{{ site.url }}{{ page.url }}{{ include.snippet }}" height="0px" style="width: 100%;"></iframe>
-    <pre><code class="language-html">
-{% for page in site.pages %}{% if page.name == include.snippet %}{{ page.content | escape }}{% endif %}{% endfor %}
-    </code></pre>
+    <iframe class="sg-snippet-iframe" id="{{ include.snippet | remove: ".html" }}" src="{{ site.url }}{{ page.url }}{{ include.snippet }}" height="0px" frameborder="0"></iframe>
+    <pre><code class="language-html">{% for page in site.pages %}{% if page.name == include.snippet %}{{ page.content | escape  | strip }}{% endif %}{% endfor %}</code></pre>
 </div>

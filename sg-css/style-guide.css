@@ -212,13 +212,13 @@ th {
     position: absolute;
     top: -26px;
 }
-.sg-sample .sg-snippet-file {
+.sg-snippet-file {
     position: absolute;
     right: 0;
     top: -26px;
     color: #905;
 }
-.sg-sample .sg-snippet-file::after {
+.sg-snippet-file::after {
     content: "";
     background: url('/ltucss/css/icons/feather/external-link.svg');
     background-size: 100%;
@@ -229,21 +229,14 @@ th {
     color: #905;
     margin-left: 0.5em;
 }
+.sg-snippet-iframe {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-top-width: 0;
+
+}
 
 /* override prism styles */
-.sg-sample pre[class*=language-] {
-    position: relative;
-    padding: 2em 1em 0 1em;
-}
-.sg-sample pre::before {
-    content: "Code";
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-weight: 300;
-    color: #bbb;
-    position: absolute;
-    font-size: 16px;
-    top: 8px;
-}
 .sg-sample pre code[class*=language-] {
     white-space: pre-wrap;
     position: relative;
