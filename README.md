@@ -1,7 +1,7 @@
 # design-system
 ## This design system is under construction
 
-https://latrobe-ict-web.github.io/design-system/
+https://latrobe-design-system.github.io/design-system/
 
 ## Using Jekyll static generator
 To use this you must install
