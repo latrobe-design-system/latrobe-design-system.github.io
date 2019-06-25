@@ -1,4 +1,4 @@
-# style-guide
+# design-system
 ## This design system is under construction
 
 https://latrobe-ict-web.github.io/design-system/
