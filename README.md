@@ -12,8 +12,7 @@ Sass: https://sass-lang.com/install
 Make sure server.sh is executable: chmod +x server.sh
 Open terminal at folder and run: ./server.sh
 
-### To build and deploy
-Make sure build.sh is executable: chmod +x build.sh
-With terminal open at folder and run: ./build.sh
-
+### Deploy
 Commit code and push to GitHub
+
+GitHub will build and serve site
