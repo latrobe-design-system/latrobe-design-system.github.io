@@ -2,7 +2,7 @@ url: "https://latrobe-design-system.github.io/design-system"
 languageCode: en
 title: "La Trobe Design System"
 sass:
-    sass_dir: ltucss/sass/partials
+    sass_dir: ltucss/_sass
 exclude:
     - build.sh
     - server.sh

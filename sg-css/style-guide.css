@@ -42,6 +42,7 @@ h5 {
 }
 p, li {
     max-width: 800px;
+    line-height: 1.4;
 }
 table {
     width: 100%;
@@ -245,4 +246,15 @@ th {
 .sg-sample-header {
     height: 52px;
     background: #f4f4f4;
+}
+
+.sg-icon-list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+.sg-icon-list li {
+    width: 100px;
+    margin: 12px;
+    text-align: center;
 }
