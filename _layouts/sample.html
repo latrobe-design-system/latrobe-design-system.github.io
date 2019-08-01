@@ -1,10 +1,33 @@
 {% include snippet-top.html %}
-    <div class="wrapper Live a549405"> <!-- WRAP -->
-        <main id="content" role="main">
-            <section class="layout">
-                <div class="main-content">
-                    <div id="bodyContent" class="content-wrapper">
-{{ content }}
+<div class="wrapper Live">
+    <!-- WRAP -->
+    <main id="content" role="main">
+        <!--noindex-->
+        <!--
+        <nav id="nav-container" class="nav-container lv-6271" role="navigation">
+            <ul class="local-nav parent">
+                <li class="hide-nav"><button title="Hide navigation panel"></button></li>
+                <li class="root"><a href="">Local nav home</a>
+                    <ul class="level-one">
+                        <li class="current"><a href="">Current page</a>
+                            <ul class="level-two">
+                                <li><a href="https://www.latrobe.edu.au/study/apply/pathways/undergrad">Undergraduate pathways (school leavers)</a></li>
+                                <li><a href="https://www.latrobe.edu.au/study/apply/pathways/undergraduate-non-year-12">Undergraduate (non-current year 12)</a></li>
+                                <li><a href="https://www.latrobe.edu.au/study/apply/pathways/postgraduate-pathways">Postgraduate pathways</a></li>
+                                <li><a href="https://www.latrobe.edu.au/study/apply/pathways/international">International student pathways</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        -->
+        <!--endnoindex-->
+        <!--LAYOUT-->
+        <section class="layout">
+            <div class="main-content">
+                <div id="bodyContent" class="content-wrapper">
+                    {{ content }}
                     <div class="clear"></div>
                 </div><!-- End bodyContent -->
             </div> <!-- End main-content -->
@@ -15,5 +38,5 @@
     </main>
     <!--endnoindex-->
 
-    </div> <!-- WRAP -->
+</div> <!-- WRAP -->
 {% include snippet-bottom.html %}
