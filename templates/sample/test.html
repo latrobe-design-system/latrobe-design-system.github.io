@@ -1,0 +1,205 @@
+---
+title: "Sample"
+layout: "sample"
+ltulayout: "home"
+---
+<link href="https://www.latrobe.edu.au/__data/assets/css_file/0008/815093/LP2.css?v=0.1.32" rel="stylesheet" media="screen" />
+<link href="https://www.latrobe.edu.au/__data/assets/css_file/0009/838692/course-parent.css?v=0.1.33" rel="stylesheet" media="screen" />
+
+
+
+
+
+<style>
+    @media (max-width:1023px) {.breadcrumbs {margin-right:44px;}}
+    #overlay-content.student-type-overlay {overflow:auto; padding:0;}
+    .student-type-overlay h2 {border-bottom:1px solid #ccc; font-size:20px; line-height:24px; margin-bottom:0; padding:20px 0; text-align:center;}
+    .student-type-overlay h3 {font-size:18px; line-height:22px;}
+    .student-type-overlay ul {list-style-type:none; margin:0; padding:0;}
+    .student-type-overlay p {font-size:14px; line-height:18px; margin:0;}
+    .student-type-overlay .flex-item {padding:20px;}
+    .student-type-overlay div.flex-item {background-color:#f4f4f4;}
+    .student-type-overlay .flex-item:first-child {border-bottom:1px solid #ccc;}
+    @media (min-width:768px) {
+        .student-type-overlay .flex-item:first-child {border-bottom:none; border-right:1px solid #ccc;}
+    }
+    .student-type-overlay li {text-align:center;}
+    .student-type-overlay .shout {font-size:20px!important;}
+    .student-type-overlay button {-webkit-appearance:none; appearance:none; border:1px solid #ccc; color:#fff; padding:11px 14px 11px 48px;}
+    #overlay-dom {background:#333 url(/__data/assets/file/0010/864856/australia-nz.svg) no-repeat left center;}
+    #overlay-int {background:#333 url(/__data/assets/file/0011/864857/globe.svg) no-repeat left center;}
+    #overlay-dom:hover, #overlay-int:hover {background-color:#e42312;}
+
+    #saved-student-type {background-color:#e42312; background-repeat:no-repeat; background-position:0 0; border:1px solid #fff; color:#fff; cursor:pointer; font-size:14px; left:100%; margin:6px 0 0 -6px; padding:24px; position:absolute; text-align:center; top:128px; transition:all 0.3s ease-in-out; -webkit-transform:translateX(-100%); transform:translateX(-100%); z-index:9;}
+    .gdpr-on #saved-student-type {top:176px;}
+    #saved-student-type.D {background-image:url(/__data/assets/file/0010/864856/australia-nz.svg);}
+    #saved-student-type.I {background-image:url(/__data/assets/file/0011/864857/globe.svg);}
+    @media (min-width:1024px) {
+        #saved-student-type {padding:12px 12px 12px 48px;}
+        #saved-student-type.D:after {content:"Domestic";}
+        #saved-student-type.I:after {content:"International";}
+    }
+
+    .D span.D {display:inline-block;}
+    .D span.I {display:none;}
+    .I span.I {display:inline;}
+    .I span.D {display:none;}
+
+    /* Interaction note */
+    .interaction-note {background-color:#fff; box-shadow:0 0 4px rgba(0,0,0,0.4); box-sizing:border-box; color:#242424; margin:8px auto 0; padding:20px 48px 20px 20px; position:absolute; right:-4px; text-align:center; top:-70px; width:100vw; z-index:100;}
+    .interaction-note:before {color:#fff; content:"\25B2"; display:block; position:absolute; right:18px; top:-16px; transform:scale(1.5);}
+    .interaction-note p {text-align:left;}
+    #utility .interaction-note p a {color:#e42312; text-decoration:underline; width:auto;}
+    #utility .interaction-note p a:hover {text-decoration:none;}
+    @media (min-width:1024px) {
+        .interaction-note {max-width:50vw; min-width:320px; right:0; top:auto; width:auto;}
+    }
+    .close-note {background:transparent url(/__data/assets/file/0007/767095/delete.svg) no-repeat 0 0; border:0; height:48px; padding:0; position:absolute; right:0; top:10px; width:48px;}
+    .close-note:after {background-color:#333; border-radius:100%; content:""; display:block; height:24px; left:12px; position:absolute; top:12px; width:24px; z-index:-1;}
+
+
+    .book-alert-temp {
+        border: 2px solid rgba(0,170,152, 0.2);
+        border-radius: 6px;
+        padding: 20px;
+        margin: 40px auto;
+        max-width: 700px;
+    }
+    .book-alert-temp-text {
+        font-family: Brioni Light;
+        font-size: 24px;
+        color: rgba(0,170,152);
+    }
+    @media(min-width: 768px){
+        .book-alert-temp {
+            padding: 20px 20px 20px 80px;
+            background-image: url(/ltucss/css/icons/alert-circle-seagreen.svg); background-repeat: no-repeat; background-position: 20px 20px;
+            background-size: 30px;
+        }
+    }
+</style>
+
+<section id="overview" style="padding: 3vw 12vw;">
+    <h2 class="section-heading">Overview</h2>
+        <div class="mock-table alt  zero-margin" ref="domestic">
+                <div class="mock-table-row">
+                <div id="awardtitle-header" class="mock-table-cell contrast">
+                    <span id="award">Award</span>
+                </div>
+                <div class="mock-table-cell" id="awardtitle-content">
+                    Bachelor of Laws/Bachelor of Media and Communication
+                </div>
+        </div>
+
+                    <!-- For a single ATAR score -->
+            <div class="mock-table-row">
+
+                                <div id="atar-header" class="mock-table-cell contrast">
+                    <span id="atar-year">2019 Melbourne ATAR</span>
+                </div>
+                <div class="mock-table-cell" id="atar-content">
+                    <span class="bold">N/P</span> - Minimum selection rank<br>
+                                        <span class="bold">N/P</span> - Lowest ATAR offered before adjustments<br>
+                                    </div>
+                            </div>
+                <div class="mock-table-row">
+            <div class="mock-table-cell contrast">Start&nbsp;dates</div><div class="mock-table-cell">Semester 1 (March 2020), Semester 2 (July 2020)</div>
+        </div>
+        <div class="mock-table-row">
+            <div class="mock-table-cell contrast">Duration</div><div class="mock-table-cell">5 years full time or part-time equivalent</div>
+        </div>
+                    <div class="mock-table-row">
+                <div class="mock-table-cell contrast">Prerequisite</div><div class="mock-table-cell">English (Please refer to <a href="#entry-requirements">admission requirements</a> for details)</div>
+            </div>
+                <div class="mock-table-row">
+            <div class="mock-table-cell contrast">Fees&nbsp;and&nbsp;scholarships</div><div id="ovfees" class="mock-table-cell">
+
+Estimated cost per year if studying full time $11,155 <span class="pls-explain" aria-describedby="tip-0" tabindex="0">(CSP)</span><span id="tip-0" class="tip-text" role="tooltip" aria-hidden="true">A Commonwealth supported place (CSP) is a place at a university or higher education provider where the government pays part of your fees. This part is a subsidy, not a loan, and you don’t have to pay it back.</span>.
+<!--Use our <a href="https://www.latrobe.edu.au/students/admin/fees-and-money/course">Fee calculator</a> for an estimation of your course fees.-->
+<br>
+Learn more about <a href="#fees">Fees and scholarships</a>.
+<!-- csp_band condition end --><style>
+/*-----this needs to be in header  */
+.pls-explain{
+ border-bottom: 1px dotted #666;
+color: #242424;
+text-decoration: none;
+}
+</style>
+            </div>
+        </div>
+                    <div class="mock-table-row">
+                <div class="mock-table-cell contrast">VTAC&nbsp;code</div><div class="mock-table-cell">2100310011 (CSP)</div>
+            </div>
+            </div>
+                    <p class="feature-mini footnote">*NA: Not applicable, NC: New course, NP: Not published, &lt;5: less than five offers made. Learn more about <a href="/study/undergrad/how-to-apply/admissions">our processes</a>.
+Courses may not have a profile if they are new, graduate entry or if fewer than 5 offers have been made.<br><br>View the 2019 ATAR distribution report for the <a href="https://www.latrobe.edu.au/__data/assets/pdf_file/0007/1038094/bachelor-of-laws-bachelor-of-media-and-communication-melbourne.pdf">Bachelor of Laws/Bachelor of Media and Communication [174.0 KB]</a>.</p>
+
+<div class="book-alert-temp">
+    <p class="book-alert-temp-text">Want to find out more about your options? Talk face to face with one of our expert consultants</p>
+    <p><a href="https://wwwqas.latrobe.edu.au/study/one-on-one-consultations/undergraduate" class="btn icon-users">Book one-on-one</a></p>
+</div>
+
+
+    <!-- For 4 ATAR scores -->
+                    <!--table class="atar-content">
+            <caption>ATAR Scores</caption>
+            <thead>
+                <tr class="sticky-header"><th><span class="pls-explain" title="This is the selection rank to which a recent Year 12 student was offered a place in 2018">2018 Minimum selection rank offered (Clearly&nbsp;In)</span></th><th><span class="pls-explain" title="This is the median ATAR offered to a recent year 12 student in 2018 without bonuses">2018 Median ATAR offered</span></th><th><span class="pls-explain" title="This is the lowest ATAR offered to a recent year 12 student in 2018 without bonuses">2018 Lowest ATAR offered before bonuses</span></th><th><span class="pls-explain" title="This is the indicative lowest adjusted ATAR that will be considered for 2018">2018 Aspire – Early Admission Program*</span></th></tr>
+            </thead>
+            <tbody id="atar-content">
+                <tr>
+                    <td colspan="4">
+                        <p class="zero-margin footnote">N/P: Not published, N/A: Not applicable, NC: New course, RC: Range of criteria<br />
+                        Additional information on the 2018 intake is now available at the <a href="https://www.latrobe.edu.au/study/undergrad/find-your-course-by-atar">ATAR Wizard</a></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table-->
+                <!-- Include content - Nest content metadata -->
+        <div><p>This double degree combines an innovative legal education with a practical insight into the rapidly evolving media industry. It's the ideal preparation for a career in law and/or media, across different platforms and industries.</p><p>The law degree includes the compulsory subjects required by the Victorian Council of Legal Education to practise in Victoria. It also includes compulsory specialised subjects relevant to media such as Intellectual Property Law and Competition Policy. You'll get a high-quality legal education with a global and social justice perspective, and great hands-on experience. Our electives give you experience in areas like international advocacy, clinical legal education, mediation and negotiation.</p><p>The Bachelor of Media and Communication degree takes a 'digital first' approach to the converging fields of film, radio, television, new media and communications. You can major in media industries, journalism or public relations, and you'll have access to professionals from a range of backgrounds.</p><p>This program will get you career-ready with an emphasis on practical experience. Our moot court gives you the chance to apply the full range of skills, including client interviews, witness examination and negotiation. Depending on your Media and Communication major, you'll have the chance to work in our on-campus strategic communications agency, complete a professional internship, contribute to our digital publication, <a href="www.upstart.net.au">www.upstart.net.au</a>, and use our AV production equipment, TV studio, 24-hour digital editing suites and audio recording studio.</p><p class="footnote">The qualification awarded on graduation is recognised in the Australian Qualifications Framework (AQF) as Level 7.</p></div>
+    <!-- Include content - Nest content 2 metadata -->
+            <h3>Sample course structure</h3>
+    <p>Please note, the following course structure is indicative and subject to change depending on your course’s location, offer year or how you tailor your course with specialisations, majors, minors and electives. Structures for the following year are not finalised until October, so the sample provided is based on the most recently approved structure.  For more information, please refer to the <a href="http://www.latrobe.edu.au/handbook/current/undergraduate/assc/law/courses/lwlmc.htm">La Trobe University Handbook</a>.</p>
+    <div class="block course-structure-content">
+        <div class="checkbox-expander"><input id="check-course-struct-1" title="Check to expand content" type="checkbox"><h4 class="checkbox-expander-heading"><label for="check-course-struct-1">First year</label></h4><div class="checkbox-expander-content"><table class="datatable-smallText"><tbody><tr><th rowspan="2" style="width: 12%;">Semester 1</th><th style="width: 22%;"><a href="/students/subjects/2019/LAW1LIM">LAW1LIM</a></th><th style="width: 22%;"><a href="/students/subjects/2019/LAW1DR">LAW1DR</a></th><th style="width: 22%;"><a href="/students/subjects/2019/MAc1mme">MAC1MME</a></th><th style="width: 22%;">OPTION</th></tr><tr><td>Legal Institutions and Methods</td><td>Dispute Resolution</td><td>Making Media</td><td>Media &amp; Communications Major or Elective (15 cps)</td></tr><tr><th rowspan="2">Semester 2</th><th><a href="/students/subjects/2019/LAW1CRL">LAW1CRL</a></th><th><a href="/students/subjects/2019/LAW1PPL">LAW1PPL</a></th><th><a href="/students/subjects/2019/MAC1WFM">MAC1WFM</a></th><th>OPTION</th></tr><tr><td>Principles of Criminal Law</td><td>Principles of Public Law</td><td>Writing for Media</td><td>Media &amp; Communications Major or Elective (15 cps)</td></tr></tbody></table></div></div><div class="checkbox-expander"><input id="check-course-struct-2" title="Check to expand content" type="checkbox"><h4 class="checkbox-expander-heading"><label for="check-course-struct-2">Second year</label></h4><div class="checkbox-expander-content"><table class="datatable-smallText"><tbody><tr><th rowspan="2" style="width: 12%;">Semester 1</th><th style="width: 22%;"><a href="/students/subjects/2019/LAW2CTA">LAW2CTA</a></th><th style="width: 22%;"><a href="/students/subjects/2019/LAW2TOT">LAW2TOT</a></th><th style="width: 22%;"><a href="/students/subjects/2019/MAC2USM">MAC2USM</a></th><th style="width: 22%;">OPTION</th></tr><tr><td>Contract Law A</td><td>Principles of Tort Law</td><td>Using Social Media</td><td>Media &amp; Communications Major or Elective (15 cps)</td></tr><tr><th rowspan="2">Semester 2</th><th><a href="/students/subjects/2019/LAW2CTB">LAW2CTB</a></th><th><a href="/students/subjects/2019/LAW2CSL">LAW2CSL</a></th><th>OPTION</th><th>OPTION</th></tr><tr><td>Contract Law B</td><td>Principles of Constitutional Law</td><td>Media &amp; Communications Major or Elective (15 cps)</td><td>Media &amp; Communications Major or Elective (15 cps)</td></tr></tbody></table></div></div><div class="checkbox-expander"><input id="check-course-struct-3" title="Check to expand content" type="checkbox"><h4 class="checkbox-expander-heading"><label for="check-course-struct-3">Third year</label></h4><div class="checkbox-expander-content"><table class="datatable-smallText"><tbody><tr><th rowspan="2" style="width: 12%;">Semester 1</th><th style="width: 22%;"><a href="/students/subjects/2019/LAW2FPL">LAW2FPL</a></th><th style="width: 22%;"><a href="/students/subjects/2019/LAW2STA">LAW2STA</a></th><th style="width: 22%;">OPTION</th><th style="width: 22%;">OPTION</th></tr><tr><td>Foundations of Property Law</td><td>Statutory Interpretation</td><td>&nbsp;Law Elective (15 cps)</td><td>&nbsp;Media &amp; Communications Major or Elective (15 cps)</td></tr><tr><th rowspan="2">Semester 2</th><th><a href="/students/subjects/2019/LAW2CIV">LAW2CIV</a></th><th><a href="/students/subjects/2019/LAW2RPT">LAW2RPT</a></th><th><a href="/students/subjects/2019/LAW2IPL">LAW2IPL</a></th><th><a href="/students/subjects/2019/MAC2MLE">MAC2MLE</a></th></tr><tr><td>Civil Procedure</td><td>Real Property Law</td><td>Intellectual Property Law</td><td>Media, Law and Ethics</td></tr></tbody></table></div></div><div class="checkbox-expander"><input id="check-course-struct-4" title="Check to expand content" type="checkbox"><h4 class="checkbox-expander-heading"><label for="check-course-struct-4">Fourth year</label></h4><div class="checkbox-expander-content"><table class="datatable-smallText"><tbody><tr><th rowspan="2" style="width: 12%;">Semester 1</th><th style="width: 22%;"><a href="/students/subjects/2019/LAW2ECP">LAW2ECP</a></th><th style="width: 22%;">OPTION</th><th style="width: 22%;">OPTION</th><th style="width: 22%;">OPTION</th></tr><tr><td>Evidence and Criminal Procedure</td><td>Law Elective (15 cps)</td><td>Level 3 Media &amp; Communications Elective (15 cps)</td><td>Level 3 Media &amp; Communications Major or Elective (15 cps)</td></tr><tr><th rowspan="2" style="width: 10%;">Semester 2</th><th><a href="/students/subjects/2019/LAW3ADN">LAW3ADN</a></th><th>OPTION</th><th>OPTION</th><th>OPTION</th></tr><tr><td>Principles of Administrative Law</td><td>Law Elective (15 cps)</td><td>Level 3 Media &amp; Communications Major or Elective (15 cps)</td><td>Level 3 Media &amp; Communications Major or Elective (15 cps)</td></tr></tbody></table><p class="key"><strong><sup>*</sup></strong> <a href="/students/subjects/2019/MAC3INT">MAC3INT</a> - Coordinator's approval required for this subject</p></div></div><div class="checkbox-expander"><input id="check-course-struct-5" title="Check to expand content" type="checkbox"><h4 class="checkbox-expander-heading"><label for="check-course-struct-5">Fifth year</label></h4><div class="checkbox-expander-content"><table class="datatable-smallText"><tbody><tr><th rowspan="2" style="width: 12%;">Semester 1</th><th style="width: 22%;"><a href="/students/subjects/2019/LAW3CMP">LAW3CMP</a></th><th style="width: 22%;"><a href="/students/subjects/2019/LAW3ETR">LAW3ETR</a></th><th style="width: 22%;">OPTION</th><th style="width: 22%;">OPTION</th></tr><tr><td>Company Law</td><td>Principles of Equity and Trusts</td><td>Level 3 Media &amp; Communications Elective (15 cps)</td><td>Level 3 Law Elective (15 cps)</td></tr><tr><th rowspan="2">Semester 2</th><th><a href="/students/subjects/2019/LAW3LPC">LAW3LPC</a></th><th><a href="/students/subjects/2019/LAW3REM">LAW3REM</a></th><th>OPTION</th><th>OPTION</th></tr><tr><td>Legal Practice and Conduct</td><td>Remedies</td><td>Level 3 Media &amp; Communications Elective (15 cps)</td><td>Level 3 Law Elective (15 cps)</td></tr></tbody></table></div></div>
+    </div>
+            <div id="handbook-content" class="hndbook-content">
+    <h4>See La Trobe University Handbook for more details</h4>
+    <p>The Handbook contains detailed course information designed for enrolled students, including course structures, electives and options. The delivery of this course can vary between campuses.</p>
+    <ul class="list-arrows" style="margin-top:16px;"><li><a href="http://www.latrobe.edu.au/handbook/current/undergraduate/assc/law/courses/lwlmc.htm">Melbourne (Bundoora)</a></li></ul>
+        <p>To view other campus handbook course details, please select relevant campus in the drop down.</p>
+        </div>
+                <!-- Contacts - mobile only -->
+    <aside class="course-contacts mobile-only"><ul>
+    <li id="utility" class="desktop-only"><div id="save-course"><input id="save-course-icon" value="save this course" title="save this course" data-ltu-cm-bp="SaveCourseClicked" type="checkbox"><label for="save-course-icon">Save</label></div><button id="myprint-pdf" title="Download a brochure of this course content">Brochure</button></li>
+    <li id="li-stickyCallCTA"><a href="tel:1300135045" data-ltu-cm-bp="stickyCallCTAClicked"><img src="https://www.latrobe.edu.au/__data/assets/file/0011/850259/course-call.svg" alt="" width="42" height="42">1300 135 045</a></li>
+    <li id="li-stickyChatCTA" class="desktop-only"><a href="http://latrobe.custhelp.com/app/chat/chat_launch" data-ltu-cm-bp="stickyChatCTAClicked"><img src="https://www.latrobe.edu.au/__data/assets/file/0007/850255/course-chat.svg" alt="" width="42" height="42">Live chat</a></li>
+    <li id="li-stickyAskCTA" class="desktop-only"><a href="http://latrobe.custhelp.com/app/" data-ltu-cm-bp="stickyAskCTAClicked"><img src="https://www.latrobe.edu.au/__data/assets/file/0010/850258/course-faqs.svg" alt="" width="42" height="42">Ask a question/FAQs</a></li>
+        <li id="li-stickyBookOneOnOneCTA" class="desktop-only"><a href="https://www.latrobe.edu.au/study/one-on-one-consultations/undergraduate" data-ltu-cm-bp="stickyBookOneOnOneCTAClicked"><img src="https://www.latrobe.edu.au/__data/assets/file/0009/860922/course-people.svg" alt="" width="42" height="42">Book one-on-one</a></li>
+    <li id="li-stickyApplyCTA" class="highlight"><a href="https://apply.latrobe" data-ltu-cm-bp="stickyApplyCTAClicked"><img src="https://www.latrobe.edu.au/__data/assets/file/0009/850257/course-apply.svg" alt="" width="42" height="42">Apply now</a></li>
+</ul></aside>
+    <!-- Include open day 2019 promo -->
+    <section id="open-day" class="hide-pdf">
+    <div style="margin-top: 24px;"></div>
+
+<div id="content_container_956316">
+<section id="lp2-1035756" class="story-widget" data-position="left" data-color="black" data-tcolor="black">
+            <div class="story-widget__background" style="background-image: url(https://www.latrobe.edu.au/openday/images/Melbourne-Campus.jpg/1680.jpg);"></div>
+        <div class="story-widget__wrapper">
+        <div class="story-widget__content">
+                            <h2 class="story-widget__content-title">Discover your clever future at Open Day</h2>
+                                        <h5 class="story-widget__content-subtitle"></h5>
+                        <div class="story-widget__content-description">
+                <p><strong>Sunday 4 August 2019</strong><br><strong>10 am–4 pm</strong></p><p>Speak to staff and students. Explore our campus. Uncover for yourself what it’s like to study at La Trobe.</p>
+            </div>
+                                                                                                <a class="story-widget__content-cta ltu-button light" href="https://www.latrobe.edu.au/openday/melbourne-2019">Plan your day</a>
+                                                        </div>
+    </div>
+    <iframe id="yt-" class="banner-iframe" data-youtube="" type="text/html" src="https://www.youtube.com/embed/?rel=0&amp;enablejsapi=1" allowfullscreen="" width="640" height="360" frameborder="0"></iframe>
+
+</section>
+</div>
+
+    </section>
+</section>
