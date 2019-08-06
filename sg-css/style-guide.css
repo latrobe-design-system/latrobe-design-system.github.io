@@ -44,6 +44,9 @@ p, li {
     max-width: 800px;
     line-height: 1.4;
 }
+p.intro {
+    font-size: 1.2rem;
+}
 table {
     width: 100%;
 }
