@@ -139,14 +139,16 @@ th {
     font-weight: 300;
 
 }
-.sg-menu-list li a {
+.sg-menu-list a {
     display: block;
     width: 100%;
     color: #555;
     text-decoration: none;
+}
+.sg-menu-list li a {
     padding: 4px 10px 4px 20px;
 }
-.sg-menu-list li a:hover {
+.sg-menu-list a:hover {
     background: yellow;
 }
 .color-box {
