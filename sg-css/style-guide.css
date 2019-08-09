@@ -118,13 +118,15 @@ th {
     }
 }
 .sg-menu-list p {
-    padding:  4px 8px 4px 12px;
     margin: 4px 0;
     font-size: 12px;
     font-weight: bold;
     color: #555;
     text-transform: uppercase;
     background: #ddd;
+}
+.sg-menu-list p a {
+    padding:  4px 8px 4px 12px;
 }
 .sg-menu-list ul {
     margin: 0;
