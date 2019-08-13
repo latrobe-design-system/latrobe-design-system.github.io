@@ -6,4 +6,4 @@ sass --style=expanded ltucss/_sass:ltucss/css
 
 #build Site
 echo -e "\033[0;32mBuilding site...\033[0m"
-jekyll build
+bundle exec jekyll build
