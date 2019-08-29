@@ -2,6 +2,8 @@
 title: "Sample"
 layout: "sample"
 ltulayout: "home"
+
+banner-videoId: uRlAjAbxkck
 ---
 <div class="ds-block-container">
     <div class="banner-box" style="background-image:url(https://wwwqas.latrobe.edu.au/lp2-pages/soft-content/campaign/arts-social-sciences-and-communications/apply-direct-arts.jpg);">
@@ -16,15 +18,15 @@ ltulayout: "home"
             </ul>
             <p class="banner-box-ctas">
                 <a id="banner-cta1" href="#featured-courses" class="btn icon-chevron-down chevron scroll-link">View popular courses</a>
-                <a id="banner-video-play-mobile" class="btn-secondary icon-play mobile" href="https://youtu.be/uRlAjAbxkck" data-youtube="uRlAjAbxkck">Watch video</a>
-                <a id="banner-video-play" class="btn-secondary-light icon-play tablet-up" href="https://youtu.be/uRlAjAbxkck" data-youtube="uRlAjAbxkck">Watch video</a>
+                <a id="banner-video-play-mobile" class="btn-secondary icon-play mobile" href="https://youtu.be/{{ page.banner-videoId }}" data-youtube="{{ page.banner-videoId }}">Watch video</a>
+                <a id="banner-video-play" class="btn-secondary-light icon-play tablet-up" href="https://youtu.be/{{ page.banner-videoId }}" data-youtube="{{ page.banner-videoId }}">Watch video</a>
             </p>
         </div>
         <div role="dialog" class="banner-overlay">
             <button id="banner-overlay-close" class="btn-round-light icon-x">Close</button>
             <div class="banner-video-wrapper">
                 <div class="banner-video-embed">
-
+                    <!-- banner-video.js injects video iframe here on view click -->
                 </div>
             </div>
         </div>
