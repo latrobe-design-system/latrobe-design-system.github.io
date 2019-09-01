@@ -1,0 +1,37 @@
+---
+title: "banner box"
+layout: "sample"
+ltulayout: "home"
+
+#snippet_content:
+banner-img: https://wwwqas.latrobe.edu.au/lp2-pages/soft-content/campaign/arts-social-sciences-and-communications/apply-direct-arts.jpg
+banner-label: Optional label
+banner-videoId: uRlAjAbxkck
+---
+<div class="ds-block-container">
+    <div class="banner-box" style="background-image:url({{ page.banner-img }});">
+        <div class="banner-box-text">
+            <p class="banner-box-label">{{ page.banner-label }}</p>
+            <h1>Arts, social sciences and communications</h1>
+            <p>The world needs creative thinkers. Get ready to and see the world differently and expand your future career possibilities with flexible and varied degrees. Arts, social sciences and communications give you:</p>
+            <ul>
+                <li>more choice and flexibility</li>
+                <li>the opportunity to keep it broad or develop a niche</li>
+                <li>the skills to seize opportunities and build a career you love.</li>
+            </ul>
+            <p class="banner-box-ctas">
+                <a id="banner-cta1" href="#featured-courses" class="btn icon-chevron-down chevron scroll-link">View popular courses</a>
+                <a id="banner-video-play-mobile" class="btn-secondary icon-play mobile" href="https://youtu.be/{{ page.banner-videoId }}" data-youtube="{{ page.banner-videoId }}">Watch video</a>
+                <a id="banner-video-play" class="btn-secondary-light icon-play tablet-up" href="https://youtu.be/{{ page.banner-videoId }}" data-youtube="{{ page.banner-videoId }}">Watch video</a>
+            </p>
+        </div>
+        <div role="dialog" class="banner-overlay">
+            <button id="banner-overlay-close" class="btn-round-light icon-x">Close</button>
+            <div class="banner-video-wrapper">
+                <div class="banner-video-embed">
+                    <!-- banner-video.js injects video iframe here on view click -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
