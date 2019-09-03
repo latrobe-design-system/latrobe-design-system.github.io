@@ -1,7 +1,9 @@
 ---
 title: "Colour"
 ---
-<h2>Brand colours</h2>
+
+## Brand colours
+
 <p><span class="color-box" style="background: rgba(255,0,0)"></span>rgba(255,0,0) | La Trobe red</p>
 <p><span class="color-box" style="background: rgba(0,0,0)"></span>rgba(0,0,0) | Black</p>
 <p><span class="color-box" style="background: rgba(83,86,90)"></span>rgba(83,86,90) | Pantone Cool Gray 11</p>
@@ -9,15 +11,17 @@ title: "Colour"
 <p><span class="color-box" style="background: rgba(151,153,153)"></span>rgba(151,153,153) | Pantone Cool Gray 7</p>
 <p><span class="color-box" style="background: rgba(255,255,255)"></span>rgba(255,255,255) | White</p>
 
-<h3>Web variants</h3>
-<p>For screen readability and to meet accessibility requirements the following variants of the brand colours are to be used on the web and other screen scenarios.</p>
+### Web variants
+
+For screen readability and to meet accessibility requirements the following variants of the brand colours are to be used on the web and other screen scenarios.
+
 <p><span class="color-box" style="background: #e2231b"></span>#e2231b | La Trobe red replacement</p>
 <p><span class="color-box" style="background: #242424"></span>#242424 | Black replacement</p>
 <h4>Other web colours</h4>
 <p><span class="color-box" style="background: #cccccc"></span>#cccccc | Grey 1 | main usage - border</p>
 <p><span class="color-box" style="background: #eeeeee"></span>#eeeeee | Grey 2 | main usage - block background</p>
 
-<h2>Other colors in legacy css</h2>
+## Other colors in legacy css
 <p><span class="color-box" style="background: #EF3829"></span>#EF3829 | Primary red</p>
 <p><span class="color-box" style="background: #575757"></span>#575757 | visited links</p>
 <p><span class="color-box" style="background: #000"></span>#000 | ins | mark</p>
