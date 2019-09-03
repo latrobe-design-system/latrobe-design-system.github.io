@@ -1,6 +1,13 @@
 url: "https://latrobe-design-system.github.io"
 languageCode: en
 title: "La Trobe Design System"
+
+## Preprocessor settings
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+
 sass:
     sass_dir: ltucss/_sass
 exclude:
