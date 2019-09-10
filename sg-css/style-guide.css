@@ -238,7 +238,7 @@ th {
     width: 100%;
     border: 1px solid #ddd;
     border-top-width: 0;
-
+    overflow: hidden;
 }
 
 /* override prism styles */
