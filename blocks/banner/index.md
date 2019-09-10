@@ -2,11 +2,11 @@
 title: "Banners"
 ---
 
-<h2>Banner promo</h2>
+## Banner promo
 {% include sample-iframe.html snippet="banner-promo.html" %}
 
-<h2>Banner default</h2>
+## Banner default
 {% include sample-iframe.html snippet="banner.html" %}
 
-<h2>Banner box</h2>
+## Banner box
 {% include sample-iframe.html snippet="banner-box.html" %}
