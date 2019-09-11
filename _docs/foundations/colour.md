@@ -3,6 +3,7 @@ title: "Colour"
 ---
 
 ## Brand colours
+
 <span class="color-box" style="background: rgba(255,0,0)"></span>rgba(255,0,0) | La Trobe red
 <span class="color-box" style="background: rgba(0,0,0)"></span>rgba(0,0,0) | Black
 <span class="color-box" style="background: rgba(83,86,90)"></span>rgba(83,86,90) | Pantone Cool Gray 11
@@ -11,16 +12,19 @@ title: "Colour"
 <span class="color-box" style="background: rgba(255,255,255)"></span>rgba(255,255,255) | White
 
 ### Web variants
+
 For screen readability and to meet accessibility requirements the following variants of the brand colours are to be used on the web and other screen scenarios.
 
 <span class="color-box" style="background: #e2231b"></span>#e2231b | La Trobe red replacement
 <span class="color-box" style="background: #242424"></span>#242424 | Black replacement
 
 #### Other web colours
+
 <span class="color-box" style="background: #cccccc"></span>#cccccc | Grey 1 | main usage - border
 <span class="color-box" style="background: #eeeeee"></span>#eeeeee | Grey 2 | main usage - block background
 
 ## Other colors in legacy css
+
 <span class="color-box" style="background: #EF3829"></span>#EF3829 | Primary red
 <span class="color-box" style="background: #575757"></span>#575757 | visited links
 <span class="color-box" style="background: #000"></span>#000 | ins | mark

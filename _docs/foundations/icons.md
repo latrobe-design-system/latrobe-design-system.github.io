@@ -1,6 +1,7 @@
 ---
 title: "Icons"
 ---
+
 <ul class="sg-icon-list">
 {% for image in site.static_files %}
     {% if image.path contains 'ltucss/css/icons/feather/' %}
@@ -11,12 +12,13 @@ title: "Icons"
     {% endif %}
 {% endfor %}
 </ul>
-<p>CSS</p>
+
+CSS
+
 {% for image in site.static_files %}
     {% if image.path contains 'ltucss/css/icons/feather/' %}
         .icon-{{ image.name | remove: ".svg"}}::after {
             background-image: url({{ image.path | remove: "/ltucss/css/" }});
         }
     {% endif %}
-
 {% endfor %}
