@@ -17,19 +17,19 @@ title: "Text"
 
 ## Lists
 ### Ordered lists
-{% include sample-iframe.html snippet="ordered-list.html" %}
+{% include sample-iframe.html snippet="ordered_list.html" %}
 
 ### Unordered lists
-{% include sample-iframe.html snippet="unordered-list.html" %}
+{% include sample-iframe.html snippet="unordered_list.html" %}
 
 ### Double lists
-{% include sample-iframe.html snippet="double-list.html" %}
+{% include sample-iframe.html snippet="double_list.html" %}
 
 ## Block quote
 {% include sample-iframe.html snippet="blockquote.html" %}
 
 ## Pull quote
-{% include sample-iframe.html snippet="pull-quote.html" %}
+{% include sample-iframe.html snippet="pull_quote.html" %}
 
 ## Horizontal rule
 {% include sample-iframe.html snippet="hr.html" %}
