@@ -1,6 +1,53 @@
 <div class="sg-menu">
     <label for="sg-menu" class="sg-menu-toggle">Menu</label> La Trobe University design system
     <input type="checkbox" id="sg-menu" />
+    
+    <nav class="sg-menu-list">
+        <p>Foundations</p>
+        
+        <ul>            
+            {% for pattern in site.foundations %}
+                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{% if doc.url == page.url %} class="active"{% endif %}>{{ pattern.title }}</a></li>
+            {% endfor %}
+        </ul>
+
+        <p>Elements</p>
+        
+        <ul>            
+            {% for pattern in site.elements %}
+                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{% if doc.url == page.url %} class="active"{% endif %}>{{ pattern.title }}</a></li>
+            {% endfor %}
+        </ul>
+
+        <p>Components</p>
+        
+        <ul>
+            {% for pattern in site.components %}
+                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{% if doc.url == page.url %} class="active"{% endif %}>{{ pattern.title }}</a></li>
+            {% endfor %}
+        </ul>
+
+        <p>Blocks</p>
+        
+        <ul>
+            {% for pattern in site.blocks %}
+                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{% if doc.url == page.url %} class="active"{% endif %}>{{ pattern.title }}</a></li>
+            {% endfor %}
+        </ul>
+
+        <p>Templates</p>
+        
+        <ul>
+            {% for pattern in site.templates %}
+                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{% if doc.url == page.url %} class="active"{% endif %}>{{ pattern.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+</div>
+
+<!-- <div class="sg-menu">
+    <label for="sg-menu" class="sg-menu-toggle">Menu</label> La Trobe University design system
+    <input type="checkbox" id="sg-menu" />
     <nav class="sg-menu-list">
         <ul>
             <li><a href="{{ site.url }}">Overview</a></li>
@@ -34,4 +81,4 @@
             <li><a href="{{ site.url }}/templates/sample/">Sample</a></li>
         </ul>
     </nav>
-</div>
+</div> -->
