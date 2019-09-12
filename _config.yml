@@ -22,21 +22,44 @@ exclude:
 
 ## Outputs the navigation collections
 collections:
-  foundations: 
+  docs: 
     output: true
-  components:
-    output: true
-  elements:
-    output: true
-  blocks:
-    output: true
-  templates:
-    output: true
+    permalink: /:path
 
 ## Sets the default attributes for the Documentation and Pattern Files
 defaults:
-    -
-      scope:
-        path: "" # an empty string here means all files in the project
-      values:
-        layout: "default"
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+  - 
+    scope:
+      path: "_docs/components"
+    values:
+      layout: doc
+      type: component 
+  - 
+    scope:
+      path: "_docs/foundations"
+    values:
+      layout: doc
+      type: foundation
+  - 
+    scope:
+      path: "_docs/elements"
+    values:
+      layout: doc
+      type: element
+  - 
+    scope:
+      path: "_docs/blocks"
+    values:
+      layout: doc
+      type: block
+  - 
+    scope:
+      path: "_docs/templates"
+    values:
+      layout: doc
+      type: template
