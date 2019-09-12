@@ -5,7 +5,7 @@ markdown: kramdown
 kramdown:
   input: GFM
 sass:
-    sass_dir: src/assets/_sass
+    sass_dir: patterns/assets/_sass
 exclude:
     - build.sh
     - server.sh
