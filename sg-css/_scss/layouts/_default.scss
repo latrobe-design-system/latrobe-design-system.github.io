@@ -1,0 +1,122 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.color-box {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid #eee;
+    margin-right: 4px;
+}
+.sg-2col {
+    display: flex;
+}
+.sg-2col div {
+    flex-basis: 50%;
+}
+.vspace-example {
+    position: relative;
+    box-sizing: border-box;
+}
+.vspace-example::after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("spacing-example-grid.png");
+}
+.sg-rule {
+    border: 1px solid lightgreen;
+    padding: 16px;
+}
+.sg-rule::before {
+    content: 'Rule';
+    display: inline-block;
+    background: #f4f4f4;
+    margin-right: 12px;
+    padding: 4px;
+}
+.sg-alert {
+    border: 1px solid red;
+    padding: 16px;
+}
+.sg-alert::before {
+    content: 'Alert';
+    display: inline-block;
+    background: #f4f4f4;
+    margin-right: 12px;
+    padding: 4px;
+}
+
+.sg-sample {
+    position: relative;
+    border-top: 1px solid #905;
+    border-bottom: none;
+    padding: 2px 0 24px 0;
+    margin: 48px 0 0 0;
+}
+.sg-sample.dark {
+    background: #222;
+}
+.sg-sample::before {
+    content: "Sample";
+    font-size: 16px;
+    color: #905;
+    position: absolute;
+    top: -26px;
+}
+.sg-snippet-file {
+    position: absolute;
+    right: 0;
+    top: -26px;
+    color: #905;
+}
+.sg-snippet-file::after {
+    content: "";
+    background: url('/ltucss/css/icons/feather/external-link.svg');
+    background-size: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    color: #905;
+    margin-left: 0.5em;
+}
+.sg-snippet-iframe {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-top-width: 0;
+    overflow: hidden;
+}
+
+/* override prism styles */
+.sg-sample pre code[class*=language-] {
+    white-space: pre-wrap;
+    position: relative;
+}
+
+.sg-sample-header {
+    height: 52px;
+    background: #f4f4f4;
+}
+
+.sg-icon-list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+.sg-icon-list li {
+    width: 100px;
+    margin: 12px;
+    text-align: center;
+}
