@@ -121,10 +121,11 @@ th {
     color: #555;
     text-transform: uppercase;
     background: #ddd;
-}
-.sg-menu-list p a {
     padding:  4px 8px 4px 12px;
 }
+/* .sg-menu-list p a {
+    padding:  4px 8px 4px 12px;
+} */
 .sg-menu-list ul {
     margin: 0;
     padding: 0;
