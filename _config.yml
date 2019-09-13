@@ -35,6 +35,12 @@ defaults:
       layout: "default"
   - 
     scope:
+      path: "_docs/about"
+    values:
+      layout: doc
+      type: about 
+  - 
+    scope:
       path: "_docs/components"
     values:
       layout: doc
@@ -63,3 +69,8 @@ defaults:
     values:
       layout: doc
       type: template
+  - 
+    scope:
+      path: "ltu-patterns/html"
+    values:
+      status: draft

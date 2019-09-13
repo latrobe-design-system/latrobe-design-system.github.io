@@ -15,6 +15,16 @@
             <li><a href="/"{% if page.url == '/' %} class="active"{% endif %}>Overview</a></li>
         </ul>
 
+        <p>About</p>
+
+        {% assign about = site.docs | where: 'type', 'about' | sort: 'url' %}
+        
+        <ul>            
+            {% for pattern in about %}
+                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{% if doc.url == page.url %} class="active"{% endif %}>{{ pattern.title }}</a></li>
+            {% endfor %}
+        </ul>
+
         <p>Foundations</p>
 
         {% assign foundations = site.docs | where: 'type', 'foundation' | sort: 'url' %}
