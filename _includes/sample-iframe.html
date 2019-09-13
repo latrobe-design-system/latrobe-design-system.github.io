@@ -3,7 +3,7 @@
 
     <iframe style="background: {{ include.bgcolor | default: transparent }};" class="sg-snippet-iframe" id="{{ include.snippet | remove: ".html" }}" src="/ltu-patterns/html/{{ include.snippet }}" height="0px" frameborder="0" scrolling="no"></iframe>
     
-    <pre>
+    <!-- <pre>
         <code class="language-html">
             {% highlight html %}
                 {% for page in site.pages %}
@@ -13,5 +13,5 @@
                 {% endfor %}
             {% endhighlight %}
         </code>
-    </pre>
+    </pre> -->
 </div>
