@@ -20,6 +20,12 @@
     float: left;
     overflow: hidden;
 
+    &:hover {
+        .tile-title {
+            text-decoration: underline;
+        }
+    }
+
     &:after {
         /* make it square */
         content: "";
@@ -94,10 +100,6 @@
         overflow: hidden;
         white-space: nowrap;
         cursor: pointer;
-
-        &:hover {
-            background: rgba($color-1,0.2);
-        }
     }
 
     .tile-content {
