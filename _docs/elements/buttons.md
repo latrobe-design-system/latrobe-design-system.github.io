@@ -34,12 +34,13 @@ To place the icon on the left also include the class `<icon-before>` See example
 ### Primary buttons
 
 The primary button style is used for primary actions. Only one of these types of buttons should be used in each view (ie block).
-{% include sample-iframe.html snippet="button-primary.html" %}
+
+<!-- {% include sample-iframe.html snippet="/ltu-patterns/html/elements/buttons/primary_button.html" %} -->
 
 ### Secondary buttons
 
 The secondary button style is used for secondary actions. They are often used next to primary buttons or elsewhere on a page for secondary actions.
-{% include sample-iframe.html snippet="button-secondary.html" %}
+{% include sample-iframe.html snippet="/ltu-patterns/html/elements/buttons/secondary_button.html" %}
 
 ### Light buttons
 
@@ -49,26 +50,26 @@ Add -light to button classes to use light versions.
 
 Primary light button `<class="btn-light">` should only be used on red backgrounds or backgrounds where the white provides better contrast than red.
 
-{% include sample-iframe.html snippet="button-light.html" %}
+{% include sample-iframe.html snippet="/ltu-patterns/html/elements/buttons/light_button.html" %}
 
 ### Filter buttons
 
 These butons are used for filters. They have a `<selected>` class.
 
-{% include sample-iframe.html snippet="button-filter.html" %}
+{% include sample-iframe.html snippet="/ltu-patterns/html/elements/buttons/filter_button.html" %}
 
 ### Round buttons
 
 These butons are used for f
-{% include sample-iframe.html snippet="button-round.html" %}
+{% include sample-iframe.html snippet="/ltu-patterns/html/elements/buttons/round_button.html" %}
 
 ### Small button
 
-{% include sample-iframe.html snippet="button-small.html" %}
+{% include sample-iframe.html snippet="/ltu-patterns/html/elements/buttons/small_button.html" %}
 
 ### Small button with icon
 
-{% include sample-iframe.html snippet="button-small-icon.html" %}
+{% include sample-iframe.html snippet="/ltu-patterns/html/elements/buttons/small_icon_button.html" %}
 
 ### Form buttons
 
@@ -76,7 +77,7 @@ These butons are used for f
 
 Use `<input>` buttons in forms.
 
-{% include sample-iframe.html snippet="button-input.html" %}
+{% include sample-iframe.html snippet="elements/buttons/form_button.html" %}
 
 ## Legacy classes
 
