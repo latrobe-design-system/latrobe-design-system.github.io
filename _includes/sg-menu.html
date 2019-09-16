@@ -3,12 +3,11 @@
 
     La Trobe University design system
     
-    {%- if jekyll.environment == "stage" -%}
-         <span class="highlight">Staging</span>
-    {%- endif -%}
+    {% if jekyll.environment == "stage" %}
+         : Staging Environment
+    {% endif %}
 
-    <!-- <input type="checkbox" id="sg-menu" /> -->
-    
+    <input type="checkbox" id="sg-menu" />
     <nav class="sg-menu-list">
 
         <ul>
