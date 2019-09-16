@@ -1,11 +1,11 @@
-.tile-mosaic {
+.mosaic {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
-.tile {
+.mosaic-tile {
     box-sizing: border-box;
     margin: 0 !important;
     position: relative;
@@ -21,7 +21,7 @@
     overflow: hidden;
 
     &:hover {
-        .tile-title {
+        .mosaic-tile-title {
             text-decoration: underline;
         }
     }
@@ -41,8 +41,8 @@
     &[data-bg="red"] {
         color: white;
 
-        .tile-content-footer a,
-        .tile-content-footer a:visited {
+        .mosaic-tile-content-footer a,
+        .mosaic-tile-content-footer a:visited {
             color: white;
         }
     }
@@ -56,11 +56,11 @@
     }
 
     &[data-bg="image"] {
-        .tile-image {
+        .mosaic-tile-image {
             display: block;
         }
 
-        .tile-title {
+        .mosaic-tile-title {
             margin-top: auto;
             color: white;
             font-size: 20px;
@@ -73,23 +73,23 @@
             }
         }
 
-        .tile-content-footer,
-        .tile-description {
+        .mosaic-tile-content-footer,
+        .mosaic-tile-description {
             display: none;
         }
     }
 
-    .tile-wrapper {
+    .mosaic-tile-wrapper {
         position: absolute;
         width: 100%;
         height: 100%;
     }
 
-    .tile-image {
+    .mosaic-tile-image {
         display: none;
     }
 
-    .tile-link {
+    .mosaic-tile-link {
         display: block;
         position: absolute;
         top: 0;
@@ -102,7 +102,7 @@
         cursor: pointer;
     }
 
-    .tile-content {
+    .mosaic-tile-content {
         position: absolute;
         top: 0;
         right: 0;
@@ -113,7 +113,7 @@
         flex-direction: column;
     }
 
-    .tile-title {
+    .mosaic-tile-title {
         font-size: calc(16px + 6 * ((100vw - 320px) / 680));
         line-height: calc(20px + 6 * ((100vw - 320px) / 680));
         @media screen and (min-width: 1000px) {
@@ -122,11 +122,11 @@
         }
     }
 
-    .tile-content-footer {
+    .mosaic-tile-content-footer {
         margin-top: auto;
     }
 
-    .tile-image {
+    .mosaic-tile-image {
         float: none !important;
         padding: 0 !important;
         position: absolute;
@@ -138,8 +138,8 @@
     }
 }
 
-.tile-primary {
-    @extend .tile;
+.mosaic-tile-primary {
+    @extend .mosaic-tile;
     width: 100%;
     min-width: 270px;
     @media(min-width: 500px) {
@@ -147,7 +147,7 @@
         min-width: 400px;
     }
 
-    .tile-title {
+    .mosaic-tile-title {
         font-size: 24px;
         line-height: 28px;
         font-size: calc(24px + 6 * ((100vw - 320px) / 680));
@@ -159,7 +159,7 @@
     }
 }
 @supports(display:grid) {
-    .tile-mosaic {
+    .mosaic {
         overflow-x: scroll;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(135px,20%));
@@ -169,13 +169,13 @@
         }
     }
 
-    .tile,
-    .tile-primary {
+    .mosaic-tile,
+    .mosaic-tile-primary {
         min-width: 100%;
         width: 100%;
     }
 
-    .tile-primary {
+    .mosaic-tile-primary {
         grid-column: span 2;
         grid-row: span 2;
     }
