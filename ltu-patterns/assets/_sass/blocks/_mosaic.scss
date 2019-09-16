@@ -16,7 +16,6 @@
         width: 20%;
         min-width: 200px;
     }
-    background-color: $color-3a;
     float: left;
     overflow: hidden;
 
@@ -33,10 +32,9 @@
         padding-bottom: 100%;
     }
 
-    &:nth-child(odd) {
-        background-color: $color-3b;
+    &[data-bg="grey"] {
+        background-color: $color-3a;
     }
-
     &[data-bg="black"],
     &[data-bg="red"] {
         color: white;
