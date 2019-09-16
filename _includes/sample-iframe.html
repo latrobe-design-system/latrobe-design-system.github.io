@@ -1,6 +1,5 @@
 {%- for pattern in site.pages -%}
     {%- if pattern.url contains include.snippet -%}
-
         {%- if pattern.status -%}
             <div class="pattern-status">Status: {{ pattern.status }}</div>
         {%- endif -%}
@@ -10,6 +9,5 @@
         {%- highlight html -%}
             {{ pattern.content }}
         {%- endhighlight -%}
-
     {%- endif -%}
-{%- endfor -%}
+{%- endfor -%}  
