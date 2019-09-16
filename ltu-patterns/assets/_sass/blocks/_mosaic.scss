@@ -112,6 +112,7 @@
     }
 
     .mosaic-tile-title {
+        margin: 0 0 8% 0;
         font-size: calc(16px + 6 * ((100vw - 320px) / 680));
         line-height: calc(20px + 6 * ((100vw - 320px) / 680));
         @media screen and (min-width: 1000px) {
