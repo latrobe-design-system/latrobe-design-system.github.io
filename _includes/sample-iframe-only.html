@@ -1,9 +1,11 @@
-{%- for pattern in site.pages -%}
+{% for pattern in site.pages %}
     {%- if pattern.url contains include.snippet -%}
-        {%- if pattern.status -%}
-            <div class="pattern-status">Status: {{ pattern.status }}</div>
-        {%- endif -%}
-
-        <iframe style="background: {{ include.bgcolor | default: transparent }};" class="sg-snippet-iframe" id="{{ include.snippet | remove: ".html" }}" src="/ltu-patterns/html/{{ include.snippet }}" height="0px" frameborder="0" scrolling="no"></iframe>
+        <strong>Status: {{ pattern.status }}</strong>
     {%- endif -%}
-{%- endfor -%}  
+
+    <div class="sg-sample button-primary">
+        <a class="sg-snippet-file" href="/ltu-patterns/html/{{ include.snippet }}" target="_blank" title="Open in new tab">Preview in new window</a>
+    
+        <iframe style="background: {{ include.bgcolor | default: transparent }};" class="sg-snippet-iframe" id="{{ include.snippet | remove: ".html" }}" src="/ltu-patterns/html/{{ include.snippet }}" height="0px" frameborder="0" scrolling="no"></iframe>
+    </div>
+{% endfor %}
