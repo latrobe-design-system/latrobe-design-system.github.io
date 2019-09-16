@@ -3,76 +3,76 @@
 
     La Trobe University design system
     
-    {% if jekyll.environment == "stage" %}
+    {%- if jekyll.environment == "stage" -%}
          <span class="highlight">Staging</span>
-    {% endif %}
+    {%- endif -%}
 
     <input type="checkbox" id="sg-menu" />
     
     <nav class="sg-menu-list">
 
         <ul>
-            <li><a href="/"{% if page.url == '/' %} class="active"{% endif %}>Overview</a></li>
+            <li><a href="/"{%- if page.url == '/' -%} class="active"{%- endif -%}>Overview</a></li>
         </ul>
 
         <p>About</p>
 
-        {% assign about = site.docs | where: 'type', 'about' | sort: 'url' %}
+        {%- assign about = site.docs | where: 'type', 'about' | sort: 'url' -%}
         
         <ul>            
-            {% for pattern in about %}
-                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{% if doc.url == page.url %} class="active"{% endif %}>{{ pattern.title }}</a></li>
-            {% endfor %}
+            {%- for pattern in about -%}
+                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+            {%- endfor -%}
         </ul>
 
         <p>Foundations</p>
 
-        {% assign foundations = site.docs | where: 'type', 'foundation' | sort: 'url' %}
+        {%- assign foundations = site.docs | where: 'type', 'foundation' | sort: 'url' -%}
         
         <ul>            
-            {% for pattern in foundations %}
-                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{% if doc.url == page.url %} class="active"{% endif %}>{{ pattern.title }}</a></li>
-            {% endfor %}
+            {%- for pattern in foundations -%}
+                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+            {%- endfor -%}
         </ul>
 
         <p>Elements</p>
 
-        {% assign elements = site.docs | where: 'type', 'element' | sort: 'url' %}
+        {%- assign elements = site.docs | where: 'type', 'element' | sort: 'url' -%}
         
         <ul>            
-            {% for pattern in elements %}
-                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{% if doc.url == page.url %} class="active"{% endif %}>{{ pattern.title }}</a></li>
-            {% endfor %}
+            {%- for pattern in elements -%}
+                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+            {%- endfor -%}
         </ul>
 
         <p>Components</p>
 
-        {% assign components = site.docs | where: 'type', 'component' | sort: 'url' %}
+        {%- assign components = site.docs | where: 'type', 'component' | sort: 'url' -%}
         
         <ul>
-            {% for pattern in components %}
-                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{% if doc.url == page.url %} class="active"{% endif %}>{{ pattern.title }}</a></li>
-            {% endfor %}
+            {%- for pattern in components -%}
+                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+            {%- endfor -%}
         </ul>
 
         <p>Blocks</p>
 
-        {% assign blocks = site.docs | where: 'type', 'block' | sort: 'url' %}
+        {%- assign blocks = site.docs | where: 'type', 'block' | sort: 'url' -%}
         
         <ul>
-            {% for pattern in blocks %}
-                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{% if doc.url == page.url %} class="active"{% endif %}>{{ pattern.title }}</a></li>
-            {% endfor %}
+            {%- for pattern in blocks -%}
+                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+            {%- endfor -%}
         </ul>
 
         <p>Templates</p>
 
-        {% assign templates = site.docs | where: 'type', 'template' | sort: 'url' %}
+        {%- assign templates = site.docs | where: 'type', 'template' | sort: 'url' -%}
         
         <ul>
-            {% for pattern in templates %}
-                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{% if doc.url == page.url %} class="active"{% endif %}>{{ pattern.title }}</a></li>
-            {% endfor %}
+            {%- for pattern in templates -%}
+                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+            {%- endfor -%}
         </ul>
     </nav>
 </div>
