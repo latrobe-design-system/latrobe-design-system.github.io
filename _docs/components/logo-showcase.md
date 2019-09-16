@@ -4,7 +4,7 @@ title: "Logo showcase"
 
 For displaying partner logos etc
 
-{% include sample-iframe.html snippet="logo-showcase.html" %}
+{% include sample-iframe.html snippet="components/logo-showcase/logo-showcase.html" %}
 
 ## Settings
 
@@ -12,4 +12,4 @@ For displaying partner logos etc
 
 ## Use within a block
 
-{% include sample-iframe.html snippet="logo-showcase-block.html" %}
+{% include sample-iframe.html snippet="components/logo-showcase/logo-showcase-block.html" %}

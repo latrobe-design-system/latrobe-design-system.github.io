@@ -2,4 +2,4 @@
 title: "Card set"
 ---
 
-{% include sample-iframe.html snippet="card-set.html" %}
+{% include sample-iframe.html snippet="blocks/card-set/card-set.html" %}
