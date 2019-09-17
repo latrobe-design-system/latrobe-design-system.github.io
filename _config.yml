@@ -1,16 +1,78 @@
+<<<<<<< HEAD
+=======
+###################################
+## General Settings
+
+## These settings are standard Jekyll Settings, check the Jekyll docs for help
+
+>>>>>>> dev
 languageCode: en
 title: "La Trobe Design System"
+
+## Preprocessor settings
 markdown: kramdown
 kramdown:
   input: GFM
+
+## Generates Pattern Styles
+## Disable to prevent pattern styles from being generated.
 sass:
-    sass_dir: ltu-patterns/assets/_sass
+    sass_dir: sg-css/css
 exclude:
     - build.sh
     - server.sh
+
+## Outputs the navigation collections
+collections:
+  docs: 
+    output: true
+    permalink: /:path
+
+## Sets the default attributes for the Documentation and Pattern Files
 defaults:
-    -
-        scope:
-          path: "" # an empty string here means all files in the project
-        values:
-          layout: "default"
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+  - 
+    scope:
+      path: "_docs/about"
+    values:
+      layout: doc
+      type: about 
+  - 
+    scope:
+      path: "_docs/components"
+    values:
+      layout: doc
+      type: component 
+  - 
+    scope:
+      path: "_docs/foundations"
+    values:
+      layout: doc
+      type: foundation
+  - 
+    scope:
+      path: "_docs/elements"
+    values:
+      layout: doc
+      type: element
+  - 
+    scope:
+      path: "_docs/blocks"
+    values:
+      layout: doc
+      type: block
+  - 
+    scope:
+      path: "_docs/templates"
+    values:
+      layout: doc
+      type: template
+  - 
+    scope:
+      path: "ltu-patterns/html"
+    values:
+      status: Draft

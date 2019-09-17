@@ -4,7 +4,7 @@ title: "Text"
 
 ## Headings and paragraphs
 
-{% include sample-iframe.html snippet="headings.html" %}
+{% include sample-iframe.html snippet="elements/text/headings.html" %}
 
 ### Font styles
 
@@ -22,30 +22,30 @@ title: "Text"
 
 ### Ordered lists
 
-{% include sample-iframe.html snippet="ordered-list.html" %}
+{% include sample-iframe.html snippet="elements/text/ordered_list.html" %}
 
 ### Unordered lists
 
-{% include sample-iframe.html snippet="unordered-list.html" %}
+{% include sample-iframe.html snippet="elements/text/unordered_list.html" %}
 
 ### Double lists
 
-{% include sample-iframe.html snippet="double-list.html" %}
+{% include sample-iframe.html snippet="elements/text/double_list.html" %}
 
 ## Block quote
 
-{% include sample-iframe.html snippet="blockquote.html" %}
+{% include sample-iframe.html snippet="elements/text/blockquote.html" %}
 
 ## Pull quote
 
-{% include sample-iframe.html snippet="pull-quote.html" %}
+{% include sample-iframe.html snippet="elements/text/pull_quote.html" %}
 
 ## Horizontal rule
 
-{% include sample-iframe.html snippet="hr.html" %}
+{% include sample-iframe.html snippet="elements/text/hr.html" %}
 
 ## Inline text elements
 
 Inline text elements are used within headings, paragraphs and list items to markup and format words and phrases.
 
-{% include sample-iframe.html snippet="inline.html" %}
+{% include sample-iframe.html snippet="elements/text/inline.html" %}

@@ -1,5 +1,19 @@
-<div class="sg-sample {{ include.snippet | remove: ".html" }}">
-    <a class="sg-snippet-file" href="{{ site.url }}{{ page.url }}{{ include.snippet }}" target="_blank" title="Open in new tab">Preview in new window</a>
-    <iframe style="background: {{ include.bgcolor | default: transparent }};" class="sg-snippet-iframe" id="{{ include.snippet | remove: ".html" }}" src="{{ site.url }}{{ page.url }}{{ include.snippet }}" height="0px" frameborder="0" scrolling="no"></iframe>
-    <pre><code class="language-html">{% highlight html %}{% for page in site.pages %}{% if page.name == include.snippet %}{{ page.content }}{% endif %}{% endfor %}{% endhighlight %}</code></pre>
+{% for pattern in site.pages %}
+    {%- if pattern.url contains include.snippet -%}
+        <strong>Status: {{ pattern.status }}</strong>
+    {%- endif -%}
+{% endfor %}
+
+<div class="sg-sample button-primary">
+    <a class="sg-snippet-file" href="/ltu-patterns/html/{{ include.snippet }}" target="_blank" title="Open in new tab">Preview in new window</a>
+
+    <iframe style="background: {{ include.bgcolor | default: transparent }};" class="sg-snippet-iframe" id="{{ include.snippet | remove: ".html" }}" src="/ltu-patterns/html/{{ include.snippet }}" height="0px" frameborder="0" scrolling="no"></iframe>
 </div>
+
+{% for pattern in site.pages %}
+    {%- if pattern.url contains include.snippet -%}
+        {%- highlight html -%}
+            {{ pattern.content }}
+        {%- endhighlight -%}
+    {%- endif -%}
+{% endfor %}
