@@ -27,7 +27,3 @@ The card component is used to provide a brief summary of content or a task, ofte
 ## Card with image linked with cta
 
 {% include sample-iframe.html snippet="components/cards/card-image-linked-cta.html" %}
-
-# Card with profile
-
-{% include sample-iframe.html snippet="components/cards/card-profile.html" %}
