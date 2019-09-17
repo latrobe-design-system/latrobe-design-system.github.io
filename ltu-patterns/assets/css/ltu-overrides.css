@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 /*
 Sass::SyntaxError: ".ltu-button" failed to @extend ".btn-secondary".
 The selector ".btn-secondary" was not found.
@@ -35,3 +36,7 @@ body:before {
   white-space: pre;
   font-family: monospace;
   content: "Sass::SyntaxError: \".ltu-button\" failed to @extend \".btn-secondary\".\A The selector \".btn-secondary\" was not found.\A Use \"@extend .btn-secondary !optional\" if the extend should be able to fail.\A "; }
+=======
+
+/*# sourceMappingURL=ltu-overrides.css.map */
+>>>>>>> Stashed changes
