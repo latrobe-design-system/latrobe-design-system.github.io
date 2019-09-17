@@ -57,6 +57,7 @@
     .testimonial-subheading {
         display: block;
         @include font-roboto-light;
+        font-size: initial;
     }
 
     .testimonial-footer {
