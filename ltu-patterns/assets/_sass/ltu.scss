@@ -1,8 +1,19 @@
-@charset "UTF-8";
+// ==================================================================================================================
+
+// La Trobe University Legacy Styling
+
+// Overrides (!important tags) are used to override existing legacy styling on top of new DS styling.
+// See ds-overrides.scss for more
+
+// ==================================================================================================================
+
+
 @import "fonts";
 @import "variables";
 @import "mixins";
-/* pre design system */
+
+
+// Legacy
 @import "legacy/core";
 @import "legacy/styles";
 @import "legacy/buttons";
@@ -15,13 +26,28 @@
 @import "legacy/news-events";
 @import "legacy/contacts";
 @import "legacy/awesomeplete";
-/* end pre design system */
+
+
+// Legacy
 @import "icons";
+
+
+// Elements
 @import "elements/buttons";
+
+
+// Components
 @import "components/alertbox";
 @import "components/cards";
 /*@import "components/logo-showcase";*/
 @import "components/proofpoint";
+
+
+// Blocks
 @import "blocks/blocks";
 @import "blocks/banner";
 @import "blocks/mosaic";
+
+
+// Overrides (!important) !!!!!!!!!!!!!!!
+@import "ltu-overrides";
