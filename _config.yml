@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 ###################################
 ## General Settings
 
 ## These settings are standard Jekyll Settings, check the Jekyll docs for help
 
->>>>>>> dev
 languageCode: en
 title: "La Trobe Design System"
 
@@ -24,7 +21,7 @@ exclude:
 
 ## Outputs the navigation collections
 collections:
-  docs: 
+  docs:
     output: true
     permalink: /:path
 
@@ -35,43 +32,43 @@ defaults:
       path: "" # an empty string here means all files in the project
     values:
       layout: "default"
-  - 
+  -
     scope:
       path: "_docs/about"
     values:
       layout: doc
-      type: about 
-  - 
+      type: about
+  -
     scope:
       path: "_docs/components"
     values:
       layout: doc
-      type: component 
-  - 
+      type: component
+  -
     scope:
       path: "_docs/foundations"
     values:
       layout: doc
       type: foundation
-  - 
+  -
     scope:
       path: "_docs/elements"
     values:
       layout: doc
       type: element
-  - 
+  -
     scope:
       path: "_docs/blocks"
     values:
       layout: doc
       type: block
-  - 
+  -
     scope:
       path: "_docs/templates"
     values:
       layout: doc
       type: template
-  - 
+  -
     scope:
       path: "ltu-patterns/html"
     values:
