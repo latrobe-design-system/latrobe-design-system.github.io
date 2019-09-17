@@ -1,26 +1,10 @@
 // ==================================================================================================================
-<<<<<<< Updated upstream
 
 // La Trobe University Legacy Styling
 
 // Overrides (!important tags) are used to override existing legacy styling on top of new DS styling.
 // See ds-overrides.scss for more
 
-// ==================================================================================================================
-
-
-@import "fonts";
-@import "variables";
-@import "mixins";
-
-
-// Legacy
-=======
-//
-// La Trobe University Legacy Styling
-// Overrides (!important tags) are used to override existing legacy styling on top of new DS styling.
-// See ds-overrides.scss for more
-//
 // ==================================================================================================================
 
 
@@ -33,7 +17,6 @@
 
 // LEGACY
 // ==================================================================================================================
->>>>>>> Stashed changes
 @import "legacy/core";
 @import "legacy/styles";
 @import "legacy/buttons";
@@ -48,24 +31,6 @@
 @import "legacy/awesomeplete";
 
 
-<<<<<<< Updated upstream
-// Legacy
-@import "icons";
-
-
-// Elements
-@import "elements/buttons";
-
-
-// Components
-@import "components/alertbox";
-@import "components/cards";
-/*@import "components/logo-showcase";*/
-@import "components/proofpoint";
-
-
-// Blocks
-=======
 // ICONS
 // ==================================================================================================================
 @import "base/icons";
@@ -114,6 +79,25 @@ blockquote .ltu-button {
 }
 
 
+// LOGO SHOWCASE
+// ==================================================================================================================
+@import "components/logo-showcase";
+
+.logo-showcase-logos {
+    margin: 0 auto 24px auto !important;
+}
+
+.logo-showcase-logo {
+    margin: 4px !important;
+
+    img {
+        float: none !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+    }
+}
+
+
 // CARDS
 // =================================================================================================================
 @import "components/cards";
@@ -143,16 +127,6 @@ blockquote .ltu-button {
 }
 
 
-// ALERTBOX
-// =================================================================================================================
-@import "components/alertbox";
-
-
-// TESTIMONIALS
-// ==================================================================================================================
-@import "components/testimonials";
-
-
 // PROOFPOINTS
 // ==================================================================================================================
 @import "components/proofpoint";
@@ -176,12 +150,6 @@ blockquote .ltu-button {
 }
 
 
-// BLOCKS
-// ==================================================================================================================
->>>>>>> Stashed changes
-@import "blocks/blocks";
-
-
 // BANNERS
 // ==================================================================================================================
 @import "blocks/banner";
@@ -191,15 +159,21 @@ blockquote .ltu-button {
 }
 
 
+// ALERTBOX
+// =================================================================================================================
+@import "components/alertbox";
+
+
+// TESTIMONIALS
+// ==================================================================================================================
+@import "components/testimonials";
+
+
+// BLOCKS
+// ==================================================================================================================
+@import "blocks/blocks";
+
+
 // MOSAIC
 // ==================================================================================================================
 @import "blocks/mosaic";
-
-
-<<<<<<< Updated upstream
-// Overrides (!important) !!!!!!!!!!!!!!!
-=======
-// OVERRIDES
-// ==================================================================================================================
->>>>>>> Stashed changes
-@import "ltu-overrides";

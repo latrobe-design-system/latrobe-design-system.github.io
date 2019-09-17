@@ -8,25 +8,21 @@
 // ==================================================================================================================
 
 // Setup
-<<<<<<< Updated upstream
 @import "fonts";
 @import "variables";
 @import "mixins";
 @import "icons";
 
-// Elements
-=======
+// Base
 @import "base/normalize";
 @import "base/variables";
 @import "base/mixins";
 @import "base/core";
-
 @import "base/fonts";
 @import "base/icons";
 
 // Elements
 @import "elements/headings.scss";
->>>>>>> Stashed changes
 @import "elements/buttons";
 
 // Components
