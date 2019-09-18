@@ -157,3 +157,7 @@ blockquote .ltu-button {
 // PROMOS
 // ==================================================================================================================
 @import "blocks/promo";
+
+.content-wrapper div img {
+    padding: 0!important;
+}
