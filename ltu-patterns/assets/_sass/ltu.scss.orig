@@ -1,10 +1,16 @@
+<<<<<<< Updated upstream
+@charset "UTF-8";
+@import "fonts";
+@import "variables";
+@import "mixins";
+/* pre design system */
+=======
 // ==================================================================================================================
-
+//
 // La Trobe University Legacy Styling
-
 // Overrides (!important tags) are used to override existing legacy styling on top of new DS styling.
 // See ds-overrides.scss for more
-
+//
 // ==================================================================================================================
 
 
@@ -13,11 +19,11 @@
 @import "base/fonts";
 @import "base/variables";
 @import "base/mixins";
-@import "base/icons";
 
 
 // LEGACY
 // ==================================================================================================================
+>>>>>>> Stashed changes
 @import "legacy/core";
 @import "legacy/styles";
 @import "legacy/buttons";
@@ -30,6 +36,16 @@
 @import "legacy/news-events";
 @import "legacy/contacts";
 @import "legacy/awesomeplete";
+<<<<<<< Updated upstream
+/* end pre design system */
+@import "icons";
+@import "elements/buttons";
+=======
+
+
+// ICONS
+// ==================================================================================================================
+@import "base/icons";
 
 
 // BUTTONS
@@ -75,25 +91,6 @@ blockquote .ltu-button {
 }
 
 
-// LOGO SHOWCASE
-// ==================================================================================================================
-@import "components/logo-showcase";
-
-.logo-showcase-logos {
-    margin: 0 auto 24px auto !important;
-}
-
-.logo-showcase-logo {
-    margin: 4px !important;
-
-    img {
-        float: none !important;
-        margin: 0 auto !important;
-        padding: 0 !important;
-    }
-}
-
-
 // CARDS
 // =================================================================================================================
 @import "components/cards";
@@ -123,9 +120,22 @@ blockquote .ltu-button {
 }
 
 
+// ALERTBOX
+// =================================================================================================================
+>>>>>>> Stashed changes
+@import "components/alertbox";
+
+
+// TESTIMONIALS
+// ==================================================================================================================
+@import "components/testimonials";
+
+
 // PROOFPOINTS
 // ==================================================================================================================
 @import "components/proofpoint";
+<<<<<<< Updated upstream
+=======
 
 .proofpont-icon {
     float: none !important;
@@ -146,35 +156,29 @@ blockquote .ltu-button {
 }
 
 
+// BLOCKS
+// ==================================================================================================================
+>>>>>>> Stashed changes
+@import "blocks/blocks";
+
+
 // BANNERS
 // ==================================================================================================================
 @import "blocks/banner";
-<<<<<<< HEAD
-@import "blocks/mosaic";
-@import "blocks/promo";
-=======
 
 .banner-box-ctas {
     margin-bottom: 0 !important;
 }
 
 
-// ALERTBOX
-// =================================================================================================================
-@import "components/alertbox";
-
-
-// TESTIMONIALS
-// ==================================================================================================================
-@import "components/testimonials";
-
-
-// BLOCKS
-// ==================================================================================================================
-@import "blocks/blocks";
-
-
 // MOSAIC
 // ==================================================================================================================
 @import "blocks/mosaic";
->>>>>>> dev
+<<<<<<< Updated upstream
+=======
+
+
+// OVERRIDES
+// ==================================================================================================================
+@import "ltu-overrides";
+>>>>>>> Stashed changes
