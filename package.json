@@ -1,0 +1,9 @@
+{
+    "scripts": {
+        "html-sketchapp-install": "html-sketchapp install",
+        "html-sketchapp": "html-sketchapp [...args]"
+    },
+    "devDependencies": {
+        "html-sketchapp-cli": "^0.6.2"
+    }
+}
