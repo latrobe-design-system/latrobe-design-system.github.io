@@ -7,18 +7,14 @@ info: This style guide has been created to help designers, developers and produc
 
 ## Four Guiding Principles
 
-### 1. Simple Build.
+### 1. Simple Build
 
-This style guide has been created ready for expansion and customisation, it provides a simple interface to browse patterns, and only requires Jekyll.
+This design system has been created to provide La Trobe University with a resource of living design patterns. The system aims to be cohesive, dynamic, reusable and maintable both in design and code.
 
-### 2. HTML First.
+### 2. Design for Flexibility
 
-The components created in this styleguide are built with HTML first - this process encourages developers to build progressively with the most versatile front-end development language.
+Using a design system ensures patterns adapt correctly to meet user needs, offering variation, and yet, providing design consistency and familiarity. It also allows us to build components that work well in multiple digital channels.
 
-### 3. Design for Flexibility.
-
-Using a design system ensures patterns adapt correctly to meet user needs, offering variation, and yet, providing design consistency and familiarity. It also allows us to build components that work well in multiple digital channels. 
-
-### 4. Reuseable Best Practices
+### 3. Reuseable Best Practices
 
 Design, develop, test, review, and repurpose patterns, code, and design. That results in a comprehensive collection of tried-and-tested assets that reflect industry best practices.
