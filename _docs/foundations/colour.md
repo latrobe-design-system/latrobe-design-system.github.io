@@ -1,6 +1,8 @@
 ---
-title: "Colour"
+title: "Colour Palette"
 ---
+
+Below are all the colours included in the style guide grouped by the file they reside in.
 
 {% include colours.html snippet="foundations/colour/primary-colours.html" %}
 
