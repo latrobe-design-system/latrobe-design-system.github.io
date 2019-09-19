@@ -1,0 +1,30 @@
+// ==================================================================================================================
+
+// La Trobe University Design System
+
+// Used to design, develop and test new and updated UI components.
+// This design system also acts as the specification for CMS integrators and developers.
+
+// ==================================================================================================================
+
+// Base
+@import "base/normalize";
+@import "base/variables";
+@import "base/mixins";
+@import "base/core";
+@import "base/fonts";
+@import "base/icons";
+
+// Elements
+@import "elements/headings.scss";
+@import "elements/buttons";
+
+// Components
+@import "components/alertbox";
+@import "components/cards";
+@import "components/proofpoint";
+
+// Blocks
+@import "blocks/blocks";
+@import "blocks/banner";
+@import "blocks/mosaic";
