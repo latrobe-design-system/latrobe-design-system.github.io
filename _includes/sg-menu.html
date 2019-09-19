@@ -1,14 +1,25 @@
 <div class="sg-menu">
-    <label for="sg-menu" class="sg-menu-toggle">Menu</label>
+    <!-- <label for="sg-menu" class="sg-menu-toggle">Menu</label> -->
 
-    La Trobe University design system
+    <!-- La Trobe University design system -->
     
-    {% if jekyll.environment == "stage" %}
-         : Staging Environment
-    {% endif %}
 
-    <input type="checkbox" id="sg-menu" />
+
+    <!-- <input type="checkbox" id="sg-menu" /> -->
     <nav class="sg-menu-list">
+        <img src="/sg-css/images/logo.svg">
+        
+        <div class="ds-heading">
+            <h3>Design System</h3>
+
+            {% if jekyll.environment == "production" %}
+                v1.01
+            {% elsif jekyll.environment == "stage" %}
+                UAT Testing
+            {% else %}
+                Local Environment
+            {% endif %}
+        </div>
 
         <ul>
             <li><a href="/"{%- if page.url == '/' -%} class="active"{%- endif -%}>Overview</a></li>
