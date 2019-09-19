@@ -7,17 +7,22 @@
 
 // ==================================================================================================================
 
+// Vendor
+@import "vendor/normalize";
+
 // Base
-@import "base/normalize";
 @import "base/variables";
 @import "base/mixins";
 @import "base/core";
 @import "base/fonts";
-@import "base/icons";
+
+// Foundations
+@import "foundations/icons";
+@import "foundations/typography.scss";
 
 // Elements
-@import "elements/headings.scss";
 @import "elements/buttons";
+@import "elements/forms";
 
 // Components
 @import "components/alertbox";

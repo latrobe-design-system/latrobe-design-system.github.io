@@ -8,14 +8,6 @@ html {
     box-sizing: inherit;
 }
 
-.color-box {
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-    vertical-align: middle;
-    border: 1px solid #eee;
-    margin-right: 4px;
-}
 .sg-2col {
     display: flex;
 }
@@ -58,29 +50,29 @@ html {
     padding: 4px;
 }
 
-.sg-sample {
-    position: relative;
-    border-top: 1px solid #905;
-    border-bottom: none;
-    padding: 2px 0 24px 0;
-    margin: 48px 0 0 0;
-}
-.sg-sample.dark {
-    background: #222;
-}
-.sg-sample::before {
-    content: "Sample";
-    font-size: 16px;
-    color: #905;
-    position: absolute;
-    top: -26px;
-}
-.sg-snippet-file {
-    position: absolute;
-    right: 0;
-    top: -26px;
-    color: #905;
-}
+// .sg-sample {
+//     position: relative;
+//     border-top: 1px solid #905;
+//     border-bottom: none;
+//     padding: 2px 0 24px 0;
+//     margin: 48px 0 0 0;
+// }
+// .sg-sample.dark {
+//     background: #222;
+// }
+// .sg-sample::before {
+//     content: "Sample";
+//     font-size: 16px;
+//     color: #905;
+//     position: absolute;
+//     top: -26px;
+// }
+// .sg-snippet-file {
+//     position: absolute;
+//     right: 0;
+//     top: -26px;
+//     color: #905;
+// }
 .sg-snippet-file::after {
     content: "";
     background: url('/ltu-patterns/assets/css/icons/feather/external-link.svg');
@@ -94,7 +86,6 @@ html {
 }
 .sg-snippet-iframe {
     width: 100%;
-    border: 1px solid #ddd;
     border-top-width: 0;
     overflow: hidden;
 }

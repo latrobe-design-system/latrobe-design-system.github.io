@@ -13,7 +13,6 @@
 @import "base/fonts";
 @import "base/variables";
 @import "base/mixins";
-@import "base/icons";
 
 
 // LEGACY
@@ -30,6 +29,11 @@
 @import "legacy/news-events";
 @import "legacy/contacts";
 @import "legacy/awesomeplete";
+
+
+// FOUNDATIONS
+// ==================================================================================================================
+@import "foundations/icons";
 
 
 // BUTTONS

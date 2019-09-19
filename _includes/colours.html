@@ -16,8 +16,6 @@
     {%- endif -%}
 {% endfor %}
 
-<div class="sg-sample button-primary">
-    <a class="sg-snippet-file" href="/ltu-patterns/html/{{ include.snippet }}" target="_blank" title="Open in new tab">Preview in new window</a>
-
-    <iframe style="background: {{ include.bgcolor | default: transparent }};" class="sg-snippet-iframe" id="{{ include.snippet | remove: ".html" }}" src="/ltu-patterns/html/{{ include.snippet }}" height="0px" frameborder="0" scrolling="no"></iframe>
+<div class="sg-sample">
+    <iframe class="sg-snippet-iframe" id="/ltu-patterns/html/{{ include.snippet }}" src="/ltu-patterns/html/{{ include.snippet }}" height="0px" frameborder="0" scrolling="no"></iframe>
 </div>
