@@ -18,10 +18,15 @@
     }
     float: left;
     overflow: hidden;
+    text-align: center;
 
     &:hover {
         .mosaic-tile-title {
             text-decoration: underline;
+        }
+        .mosaic-tile-image {
+            transform: scale(1.1);
+            transition: transform 1s ease;
         }
     }
 
@@ -101,6 +106,7 @@
     }
 
     .mosaic-tile-content {
+        text-align: left;
         position: absolute;
         top: 0;
         right: 0;
@@ -128,12 +134,6 @@
     .mosaic-tile-image {
         float: none !important;
         padding: 0 !important;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
         height: 100%;
     }
 }
