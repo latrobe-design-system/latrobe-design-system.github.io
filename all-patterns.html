@@ -1,0 +1,30 @@
+---
+title: "All Patterns"
+layout: "sample"
+---
+
+{%- for pattern in site.pages -%}
+    {%- if pattern.url contains "ltu-patterns/html" -%}
+        <div class="sg_pattern">
+            <div class="title">
+                <a class="permalink" href="#"><i class="icon" data-icon="link"></i></a>
+
+                <div class="header typo_eagle">
+                    <h3>{{ pattern.title }}</h3>
+                </div>
+
+                <div class="sg_label ready">
+                    {{ pattern.status }}
+                </div>
+
+                
+
+                <!-- {{ pattern.content | split: '>' | join: 'data-sketch-symbol="' | append: pattern.url | append: '">' }} -->
+
+                {% assign test = 'data-sketch-symbol="' | append: pattern.url | remove: '/ltu-patterns/html/' | remove: '.html' | append: '">' %}
+
+                {{ pattern.content | replace_first: '>', test }}
+            </div>
+        </div>
+    {%- endif -%}
+{%- endfor -%}
