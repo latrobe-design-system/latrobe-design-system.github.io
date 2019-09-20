@@ -173,3 +173,11 @@ blockquote .ltu-button {
 // MOSAIC
 // ==================================================================================================================
 @import "blocks/mosaic";
+
+.mosaic-tile {
+    margin: 0 !important;
+    .mosaic-tile-image {
+        float: none !important;
+        padding: 0 !important;
+    }
+}

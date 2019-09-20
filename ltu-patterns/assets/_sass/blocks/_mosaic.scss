@@ -7,7 +7,7 @@
 
 .mosaic-tile {
     box-sizing: border-box;
-    margin: 0 !important;
+    margin: 0;
     position: relative;
     width: 50%;
     max-width: 100%;
@@ -130,8 +130,7 @@
     }
 
     .mosaic-tile-image {
-        float: none !important;
-        padding: 0 !important;
+        padding: 0;
         position: absolute;
         margin: auto;
         top: 0;
