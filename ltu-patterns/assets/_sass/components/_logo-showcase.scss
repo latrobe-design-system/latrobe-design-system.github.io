@@ -1,5 +1,6 @@
 .logo-showcase-logos {
     list-style-type: none;
+    margin: 0 auto 24px auto;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
@@ -14,6 +15,7 @@
     }
 }
 .logo-showcase-logo {
+    margin: 4px;
     width: 200px;
     min-height: 100px;
     display: flex;
@@ -21,5 +23,7 @@
     justify-content: center;
     img {
         max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
     }
 }

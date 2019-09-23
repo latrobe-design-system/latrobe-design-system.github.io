@@ -12,17 +12,20 @@
     width: 60px;
     height: 60px;
     margin: 0 auto;
+    padding: 0 0 16px 0;
 }
 .proofpoint-title {
     color: $color-1;
     font-size: 28px;
     line-height: 32px;
+    margin: 0 0 16px 0;
 }
 .proofpoint-number {
     @include font-roboto-condensed-bold;
     color: $color-1;
     font-size: 40px;
     line-height: 1;
+    margin: 0 0 16px 0;
 }
 .proofpoint-text,
 .proofpoint-legacy-content p:first-child {
@@ -36,6 +39,7 @@
     font-size: 14px;
     line-height: 20px;
     color: $color-2a;
+    margin-top: auto;
 }
 
 /* proof point set */

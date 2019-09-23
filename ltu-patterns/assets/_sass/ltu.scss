@@ -10,6 +10,7 @@
 
 // SETUP
 // ==================================================================================================================
+@charset "UTF-8";
 @import "base/fonts";
 @import "base/variables";
 @import "base/mixins";
@@ -30,6 +31,7 @@
 @import "legacy/contacts";
 @import "legacy/awesomeplete";
 
+@import "base/icons";
 
 // FOUNDATIONS
 // ==================================================================================================================
@@ -78,10 +80,13 @@ blockquote .ltu-button {
     }
 }
 
+// ALERTBOX
+// =================================================================================================================
+@import "components/alertbox";
 
 // LOGO SHOWCASE
 // ==================================================================================================================
-@import "components/logo-showcase";
+/*@import "components/logo-showcase";
 
 .logo-showcase-logos {
     margin: 0 auto 24px auto !important;
@@ -95,7 +100,7 @@ blockquote .ltu-button {
         margin: 0 auto !important;
         padding: 0 !important;
     }
-}
+}*/
 
 
 // CARDS
@@ -105,25 +110,6 @@ blockquote .ltu-button {
 .card-img {
     float: none !important;
     padding: 0 !important;
-}
-
-
-// LOGO SHOWCASE
-// =================================================================================================================
-@import "components/logo-showcase";
-
-.logo-showcase-logos {
-    margin: 0 auto 24px auto !important;
-}
-
-.logo-showcase-logo {
-    margin: 4px !important;
-
-    img {
-        float: none !important;
-        margin: 0 auto !important;
-        padding: 0 !important;
-    }
 }
 
 
@@ -150,6 +136,11 @@ blockquote .ltu-button {
 }
 
 
+// BLOCKS
+// ==================================================================================================================
+@import "blocks/blocks";
+
+
 // BANNERS
 // ==================================================================================================================
 @import "blocks/banner";
@@ -159,21 +150,14 @@ blockquote .ltu-button {
 }
 
 
-// ALERTBOX
-// =================================================================================================================
-@import "components/alertbox";
-
-
-// TESTIMONIALS
-// ==================================================================================================================
-@import "components/testimonials";
-
-
-// BLOCKS
-// ==================================================================================================================
-@import "blocks/blocks";
-
-
 // MOSAIC
 // ==================================================================================================================
 @import "blocks/mosaic";
+
+.mosaic-tile {
+    margin: 0 !important;
+    .mosaic-tile-image {
+        float: none !important;
+        padding: 0 !important;
+    }
+}

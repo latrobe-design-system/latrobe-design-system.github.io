@@ -7,7 +7,7 @@
 
 .mosaic-tile {
     box-sizing: border-box;
-    margin: 0 !important;
+    margin: 0;
     position: relative;
     width: 50%;
     max-width: 100%;
@@ -18,10 +18,13 @@
     }
     float: left;
     overflow: hidden;
-
+    text-align: center;
     &:hover {
         .mosaic-tile-title {
             text-decoration: underline;
+        }
+        .mosaic-tile-image {
+            height: 105%;
         }
     }
 
@@ -101,6 +104,7 @@
     }
 
     .mosaic-tile-content {
+        text-align: left;
         position: absolute;
         top: 0;
         right: 0;
@@ -126,14 +130,16 @@
     }
 
     .mosaic-tile-image {
-        float: none !important;
-        padding: 0 !important;
+        padding: 0;
         position: absolute;
+        margin: auto;
         top: 0;
         right: 0;
         bottom: 0;
-        left: 0;
-        max-width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        transition: height 0.5s ease;
     }
 }
 

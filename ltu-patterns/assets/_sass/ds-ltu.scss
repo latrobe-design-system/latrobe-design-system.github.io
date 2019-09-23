@@ -7,22 +7,18 @@
 
 // ==================================================================================================================
 
-// Vendor
-@import "vendor/normalize";
-
+@charset "UTF-8";
 // Base
+@import "base/fonts";
+@import "base/normalize";
 @import "base/variables";
 @import "base/mixins";
 @import "base/core";
-@import "base/fonts";
-
-// Foundations
-@import "foundations/icons";
-@import "foundations/typography.scss";
+@import "base/icons";
 
 // Elements
+@import "elements/headings.scss";
 @import "elements/buttons";
-@import "elements/forms";
 
 // Components
 @import "components/alertbox";
