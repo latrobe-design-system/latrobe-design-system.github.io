@@ -1,6 +1,6 @@
 ---
 title: Primary
-layout: "default"
+layout: "sample-nowrap"
 colors:
     - name: La Trobe Red
       hex: "#ff0000"

@@ -1,6 +1,6 @@
 ---
 title: Accents
-layout: "default"
+layout: "sample-nowrap"
 colors:
     - name: Pantone Cool Gray 11
       hex: "#53565a"

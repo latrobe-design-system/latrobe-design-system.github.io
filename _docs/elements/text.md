@@ -2,8 +2,6 @@
 title: "Text"
 ---
 
-## Headings and paragraphs
-
 {% include sample-iframe.html snippet="elements/text/headings.html" %}
 
 ### Font styles
@@ -18,34 +16,20 @@ title: "Text"
 | H6              | RobotoCondensed Bold | 16px / 20px                              | 18px / 20px                             | Normal |
 | Everything else | Roboto Light         | 16px / 24px                              | 18px / 28px                             | 300    |
 
-## Lists
-
-### Ordered lists
 
 {% include sample-iframe.html snippet="elements/text/ordered_list.html" %}
 
-### Unordered lists
-
 {% include sample-iframe.html snippet="elements/text/unordered_list.html" %}
-
-### Double lists
 
 {% include sample-iframe.html snippet="elements/text/double_list.html" %}
 
-## Block quote
-
 {% include sample-iframe.html snippet="elements/text/blockquote.html" %}
-
-## Pull quote
 
 {% include sample-iframe.html snippet="elements/text/pull_quote.html" %}
 
-## Horizontal rule
-
 {% include sample-iframe.html snippet="elements/text/hr.html" %}
 
-## Inline text elements
-
-Inline text elements are used within headings, paragraphs and list items to markup and format words and phrases.
 
 {% include sample-iframe.html snippet="elements/text/inline.html" %}
+
+Inline text elements are used within headings, paragraphs and list items to markup and format words and phrases.
