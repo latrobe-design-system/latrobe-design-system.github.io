@@ -1,0 +1,31 @@
+---
+title: "Utility icons"
+layout: "sample-nowrap"
+status: "Live"
+---
+
+<style>
+
+.sg-icon-list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+.sg-icon-list li {
+    width: 100px;
+    margin: 40px;
+    text-align: center;
+}
+
+</style>
+
+<ul class="sg-icon-list">
+    {%- for image in site.static_files -%}
+        {%- if image.path contains 'ltu-patterns/assets/css/icons/feather/' -%}
+            <li>
+                <img style="width: 20px; height: 20px; margin: 12px;" src="{{ site.baseurl }}{{ image.path }}" alt="" class="img-thumbnail"><br>
+                {{ image.name | remove: ".svg"}}
+            </li>
+        {%- endif -%}
+    {%- endfor -%}
+</ul>
