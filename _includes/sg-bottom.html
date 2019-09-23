@@ -40,8 +40,30 @@ crossorigin="anonymous"></script>
                 scrollTop: $(this).parents('.sg_pattern').offset().top
             }, 500);
             } 
-        })
+        });
+
+        $('a[href^="#"]').click(function() {
+        var target = $(this.hash);
+        var hash = this.hash;
+        if (target.length == 0) target = $('a[name="' + this.hash.substr(1) + '"]');
+        if (target.length == 0) target = $('html');
+        console.log(target);
+        // If the Target element is collapsed; expand it...
+        if($(target).hasClass('collapsed')) {
+        $(target).nextUntil('h1').slideDown();
+        $(target).removeClass('collapsed');
+        } 
+        // Scroll to the element
+        $('html, body').animate({ scrollTop: target.offset().top }, 500, function (){
+            location.hash = hash;
+        });
+        return false;
+        });
     });
+
+
+
+
 </script>
 </body>
 

@@ -1,9 +1,9 @@
 {% for pattern in site.pages %}
     {%- if pattern.url contains include.snippet -%}
-        <div class="sg_pattern">
+        <div class="sg_pattern" id="{{ pattern.title | slugify }}">
             <div class="sg_header">
                 <div class="sg_title">
-                    <a class="permalink" href="#"><i class="icon" data-icon="link"></i></a>
+                    <a class="permalink" href="{{ pattern.title | slugify | prepend: '#' }}"><i class="icon" data-icon="link"></i></a>
 
                     <div class="header typo_eagle">
                         <h3>{{ pattern.title }}</h3>
@@ -15,9 +15,9 @@
                 </div>
 
                 <div class="sg_preview">
-                    <a href="javascript:void(0)" title="View Source Code" class="sg_helper_code button">Preview code</a>  
+                    <a href="javascript:void(0)" title="View Source Code" class="sg_helper_code button"></a>  
 
-                    <a class="sg-snippet-file" href="/ltu-patterns/html/{{ include.snippet }}" target="_blank" title="Open in new tab">Preview in new window</a>
+                    <a class="sg-snippet-file" href="/ltu-patterns/html/{{ include.snippet }}" target="_blank" title="Open in new tab"></a>
                 </div>
             </div>
 
