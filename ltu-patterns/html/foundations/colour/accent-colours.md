@@ -1,5 +1,5 @@
 ---
-title: Primary Colors
+title: Colours - Accents
 layout: "clean"
 colors:
     - name: Pantone Cool Gray 11
@@ -47,7 +47,7 @@ colors:
 <ul class="set">
     {% for item in page.colors %} 
         <li>
-            <div class="color" style="background:{{ item.hex }}"></div> 
+            <div class="color" style="background:{{ item.hex }}" data-sketch-color="{{ item.hex }}"></div> 
             
             <p><strong>{{ item.name }}</strong></p>
             

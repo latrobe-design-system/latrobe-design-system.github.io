@@ -1,5 +1,5 @@
 ---
-title: Primary Colors
+title: Colours - Primary
 layout: "clean"
 colors:
     - name: La Trobe Red
@@ -41,7 +41,7 @@ colors:
 <ul class="set">
     {% for item in page.colors %} 
         <li>
-            <div class="color" style="background:{{ item.hex }}"></div> 
+            <div class="color" style="background:{{ item.hex }}" data-sketch-color="{{ item.hex }}"></div> 
             
             <p><strong>{{ item.name }}</strong></p>
             
