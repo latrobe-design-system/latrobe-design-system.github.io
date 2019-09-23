@@ -10,10 +10,10 @@ h2+.sg_pattern {
     border-top: 0
 }
 
-h2:not(:first-child) {
-    margin-top: 6rem;
-    border-top: 1px solid #d0d0d0;
-    padding-top: 6rem;
+h2 {
+    margin-top: 4rem;
+    border-top: 1px solid rgba(24, 37, 56, 0.1);
+    padding-top: 4rem;
 }
 
 
@@ -36,11 +36,12 @@ h2:not(:first-child) {
     letter-spacing: 1px;
     padding: 2px 8px;
     margin: 0;
-    color: #000000;
+    color: #182538;
     text-transform: uppercase;
     background: $smoke;
     margin-left: 1rem;
-    border: 2px solid #ff0000;
+    border: 2px solid #182538;
+    border-radius: 500px;
     
     // &.planned {border: 2px solid $red; }
     // &.draft {border: 2px solid $amber; }

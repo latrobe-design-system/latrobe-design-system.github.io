@@ -1,9 +1,11 @@
 ---
-title: Maturity Scale
-info: The maturity scale is a way to indicate the level of robustness of any pattern in this style guide. New patterns should be released into the style guide following these rules, assess each pattern independently.
+title: Status Scale
+info: The status scale is a way to indicate the level of robustness of any pattern in this style guide. New patterns should be released into the style guide following these rules, assess each pattern independently.
 ---
 
 [//]: # "TODO: Needs rewriting in relation to La Trobe"
+
+## Status labels
 
 ### Planned
 - The user need has been identified, but the approach to solving the problem has not yet been decided.

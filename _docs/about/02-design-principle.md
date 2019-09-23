@@ -5,7 +5,7 @@ info: This style guide has been created to help designers, developers and produc
 
 [//]: # "TODO: Needs rewriting in relation to La Trobe"
 
-## Four Guiding Principles
+## Three Guiding Principles
 
 ### 1. Simple Build
 

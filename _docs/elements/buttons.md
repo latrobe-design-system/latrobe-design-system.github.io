@@ -1,8 +1,7 @@
 ---
 title: "Buttons"
+info: Buttons are used to help users perform common actions more easily and direct them through a workflow.
 ---
-
-Buttons are used to help users perform common actions more easily and direct them through a workflow.
 
 ## Button types
 
