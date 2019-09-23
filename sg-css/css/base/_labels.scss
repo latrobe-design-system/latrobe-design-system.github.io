@@ -1,4 +1,10 @@
-.sg_pattern .title {
+.sg_pattern .sg_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sg_pattern .sg_title {
     display: flex;
     align-items: center;
 }
