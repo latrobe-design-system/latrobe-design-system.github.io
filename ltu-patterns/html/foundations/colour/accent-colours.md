@@ -1,5 +1,5 @@
 ---
-title: Colours - Accents
+title: Accents
 layout: "clean"
 colors:
     - name: Pantone Cool Gray 11
@@ -31,11 +31,11 @@ colors:
     }
 
     .color {
-        width: 100%;
         height: 200px;
         color: white;
-        border: 1px solid whitesmoke;
+        border: 1px solid #ddd;
         margin-bottom: 1rem;
+        overflow: visible;
     }
 
     p {

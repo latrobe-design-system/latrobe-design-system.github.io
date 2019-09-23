@@ -1,5 +1,5 @@
 ---
-title: Colours - Primary
+title: Primary
 layout: "clean"
 colors:
     - name: La Trobe Red

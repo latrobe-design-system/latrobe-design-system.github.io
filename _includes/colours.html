@@ -1,15 +1,17 @@
 {% for pattern in site.pages %}
     {%- if pattern.url contains include.snippet -%}
-        <div class="sg_pattern">
-            <div class="title">
-                <a class="permalink" href="#"><i class="icon" data-icon="link"></i></a>
+        <div class="sg_pattern" id="{{ pattern.title | slugify }}">
+            <div class="sg_header">
+                <div class="sg_title">
+                    <a class="permalink" href="{{ pattern.title | slugify | prepend: '#' }}"><i class="icon" data-icon="link"></i></a>
 
-                <div class="header typo_eagle">
-                    <h3>{{ pattern.title }}</h3>
-                </div>
+                    <div class="header typo_eagle">
+                        <h3>{{ pattern.title }}</h3>
+                    </div>
 
-                <div class="sg_label ready">
-                    {{ pattern.status }}
+                    <div class="sg_label ready">
+                        {{ pattern.status }}
+                    </div>
                 </div>
             </div>
         </div>
@@ -17,5 +19,5 @@
 {% endfor %}
 
 <div class="sg-sample">
-    <iframe class="sg-snippet-iframe" id="/ltu-patterns/html/{{ include.snippet }}" src="/ltu-patterns/html/{{ include.snippet }}" height="0px" frameborder="0" scrolling="no"></iframe>
+    <iframe class="sg-snippet-iframe no-border" id="/ltu-patterns/html/{{ include.snippet }}" src="/ltu-patterns/html/{{ include.snippet }}" height="0px" frameborder="0" scrolling="no"></iframe>
 </div>
