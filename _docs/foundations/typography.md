@@ -4,34 +4,20 @@ title: "Typography"
 
 ## Fonts
 
-### Roboto Light
-
+{% include sample-iframe-only.html snippet="foundations/typography/roboto.html" ltulayout="home" %}
 [Roboto](https://fonts.google.com/specimen/Roboto) Light is the primary font used for body copy.
 
-{% include sample-iframe-only.html snippet="foundations/typography/roboto.html" ltulayout="home" %}
-
-### Roboto Medium
-
+{% include sample-iframe-only.html snippet="foundations/typography/roboto_medium.html" ltulayout="home" %}
 [Roboto](https://fonts.google.com/specimen/Roboto) Medium is used for bold body copy.
 
-{% include sample-iframe-only.html snippet="foundations/typography/roboto_medium.html" ltulayout="home" %}
-
-### Roboto Condensed Bold
-
+{% include sample-iframe-only.html snippet="foundations/typography/roboto_condensed_bold.html" ltulayout="home" %}
 [Roboto Condensed Bold](https://fonts.google.com/specimen/Roboto+Condensed) is used for headings and other specific treatments.
 
-{% include sample-iframe-only.html snippet="foundations/typography/roboto_condensed_bold.html" ltulayout="home" %}
-
-### Roboto Slab
-
+{% include sample-iframe-only.html snippet="foundations/typography/roboto_slab.html" ltulayout="home" %}
 [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab) so far unused.
 
-{% include sample-iframe-only.html snippet="foundations/typography/roboto_slab.html" ltulayout="home" %}
-
-### Brioni Light
-
-A tertiary font [Brioni Light](https://www.typotheque.com/fonts/brioni) is also available.
 {% include sample-iframe-only.html snippet="foundations/typography/brioni.html" ltulayout="home" %}
+A tertiary font [Brioni Light](https://www.typotheque.com/fonts/brioni) is also available.
 
 The main CSS file only makes use of it in 4 instances:
 

@@ -7,15 +7,15 @@
     height: 100%;
     min-height: 100%;
     overflow-y: scroll;
-    background: #f4f4f4;
 }
 
 .sg-menu-list {
-    background: #eee;
+    background: rgb(24, 37, 56);
     overflow-y: scroll;
     
     .ds-heading {
         padding: 20px;
+        color: white;
     
         * {
             margin: 0;
@@ -30,20 +30,29 @@
 }
 
 .sg-menu-list p {
-    padding: 10px 20px;
+    padding: 20px 20px 10px;
     font-size: 14px;
-    font-weight: bold;
-    color: #555;
+    font-weight: 500;
+    color: white;
     text-transform: uppercase;
-    background: #ddd;
+    border-top: 1px solid rgba(255,255,255, 0.15);
+    letter-spacing: 1px;
+    margin-bottom: 0;
+
+    &:first-child {
+        margin: 0;
+        border: none;
+        color: yellow;
+        padding-bottom: 0;
+    }
 }
 
 .sg-menu-list a {
     display: block;
     width: 100%;
-    color: #555;
+    color: rgba(255,255,255,0.6);
     text-decoration: none;
     padding: 10px 20px;
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 500;
 }

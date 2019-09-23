@@ -6,17 +6,17 @@
 
 
     <!-- <input type="checkbox" id="sg-menu" /> -->
-    <nav class="sg-menu-list">        
-        <div class="ds-heading">
-            <h3>Design System</h3>
-
-            {% if jekyll.environment == "production" %}
+    <nav class="sg-menu-list">  
+        {% if jekyll.environment == "production" %}
                 v1.01
-            {% elsif jekyll.environment == "stage" %}
-                UAT Testing
-            {% else %}
-                Local Environment
-            {% endif %}
+        {% elsif jekyll.environment == "stage" %}
+            <p>UAT Testing</p>
+        {% else %}
+            <p>Local Environment</p>
+        {% endif %}
+        
+        <div class="ds-heading">
+            <h3>La Trobe University Design System</h3>
         </div>
 
         <ul>

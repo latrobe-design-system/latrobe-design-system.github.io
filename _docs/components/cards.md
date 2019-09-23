@@ -7,14 +7,14 @@ The card component is used to provide a brief summary of content or a task, ofte
 
 {% include sample-iframe.html snippet="components/cards/card.html" bgcolor="#eee" %}
 
-{% include sample-iframe.html snippet="components/cards/card-linked.html" %}
+{% include sample-iframe.html snippet="components/cards/card-linked.html" bgcolor="#eee" %}
 
-{% include sample-iframe.html snippet="components/cards/card-linked-cta.html" %}
+{% include sample-iframe.html snippet="components/cards/card-linked-cta.html" bgcolor="#eee" %}
 
 ## Card with image
 
 {% include sample-iframe.html snippet="components/cards/card-image.html" bgcolor="#eee" %}
 
-{% include sample-iframe.html snippet="components/cards/card-image-linked.html" %}
+{% include sample-iframe.html snippet="components/cards/card-image-linked.html" bgcolor="#eee" %}
 
-{% include sample-iframe.html snippet="components/cards/card-image-linked-cta.html" %}
+{% include sample-iframe.html snippet="components/cards/card-image-linked-cta.html" bgcolor="#eee" %}
