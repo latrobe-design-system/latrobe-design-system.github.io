@@ -1,5 +1,5 @@
 ---
-title: "CTA Box"
+title: "Call to action"
 ---
 
-{% include sample-iframe.html snippet="blocks/call-to-action/cta-box" %}
+{% include sample-iframe.html snippet="blocks/call-to-action/questions" %}
