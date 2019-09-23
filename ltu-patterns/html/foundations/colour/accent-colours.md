@@ -1,6 +1,6 @@
 ---
 title: Accents
-layout: "clean"
+layout: "default"
 colors:
     - name: Pantone Cool Gray 11
       hex: "#53565a"

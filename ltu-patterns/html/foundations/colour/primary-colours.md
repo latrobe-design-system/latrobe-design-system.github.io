@@ -1,6 +1,6 @@
 ---
 title: Primary
-layout: "clean"
+layout: "default"
 colors:
     - name: La Trobe Red
       hex: "#ff0000"
