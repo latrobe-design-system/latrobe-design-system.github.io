@@ -25,9 +25,9 @@
             <li><a href="{{ site.baseurl }}/all-patterns">Sketch Exports</a></li>
         </ul>
 
-        <p>About</p>
+        <p>Getting started</p>
 
-        {%- assign about = site.docs | where: 'type', 'about' | sort: 'url' -%}
+        {%- assign about = site.docs | where: 'type', 'getting-started' | sort: 'url' -%}
         
         <ul>            
             {%- for pattern in about -%}
@@ -35,7 +35,17 @@
             {%- endfor -%}
         </ul>
 
-        <p>Foundations</p>
+        <p>Guidelines</p>
+
+        {%- assign guidelines = site.docs | where: 'type', 'guideline' | sort: 'url' -%}
+        
+        <ul>            
+            {%- for pattern in guidelines -%}
+                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+            {%- endfor -%}
+        </ul>
+
+        <!-- <p>Foundations</p>
 
         {%- assign foundations = site.docs | where: 'type', 'foundation' | sort: 'url' -%}
         
@@ -43,7 +53,7 @@
             {%- for pattern in foundations -%}
                 <li><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
             {%- endfor -%}
-        </ul>
+        </ul> -->
 
         <p>Elements</p>
 

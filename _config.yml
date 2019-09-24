@@ -34,10 +34,16 @@ defaults:
       layout: "default"
   -
     scope:
-      path: "_docs/about"
+      path: "_docs/guidelines"
     values:
       layout: doc
-      type: about
+      type: guideline
+  -
+    scope:
+      path: "_docs/getting-started"
+    values:
+      layout: doc
+      type: getting-started
   -
     scope:
       path: "_docs/components"
