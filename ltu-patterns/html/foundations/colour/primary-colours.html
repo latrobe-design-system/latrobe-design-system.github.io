@@ -1,6 +1,5 @@
 ---
 title: Primary
-layout: "sample-nowrap"
 status: "Live"
 colors:
     - name: La Trobe Red
@@ -40,14 +39,14 @@ colors:
 
 
 <ul class="set">
-    {% for item in page.colors %} 
+    {% for item in page.colors %}
         <li>
-            <div class="color" style="background:{{ item.hex }}" data-sketch-color="{{ item.hex }}"></div> 
-            
+            <div class="color" style="background:{{ item.hex }}" data-sketch-color="{{ item.hex }}"></div>
+
             <p><strong>{{ item.name }}</strong></p>
-            
+
             {% if item.hex %}<p>{{ item.hex }}</p>{% endif %}
-            
+
             {% if item.rgb %}<p>{{ item.rgb }}</p>{% endif %}
         </li>
     {% endfor %}

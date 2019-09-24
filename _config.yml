@@ -79,3 +79,14 @@ defaults:
       path: "ltu-patterns/html"
     values:
       status: Draft
+      layout: sample
+  -
+    scope:
+      path: "ltu-patterns/html/blocks"
+    values:
+      layout: sample-block
+  -
+    scope:
+      path: "ltu-patterns/html/templates"
+    values:
+      layout: sample-block
