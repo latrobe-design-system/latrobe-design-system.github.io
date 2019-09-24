@@ -21,8 +21,8 @@
                 </div>
             </div>
 
-            <div class="sg-sample button-primary">
-                <iframe style="background: {{ include.bgcolor | default: transparent }};" class="sg-snippet-iframe" id="{{ include.snippet | remove: ".html" }}" src="/ltu-patterns/html/{{ include.snippet }}" height="0px" frameborder="0" scrolling="no"></iframe>
+            <div class="sg-sample button-primary" style="background: {{ include.bgcolor | default: transparent }};">
+                <iframe class="sg-snippet-iframe" id="{{ include.snippet | remove: ".html" }}" src="/ltu-patterns/html/{{ include.snippet }}" height="0px" frameborder="0" scrolling="no"></iframe>
             </div>
                 
             <div class="sg_code">

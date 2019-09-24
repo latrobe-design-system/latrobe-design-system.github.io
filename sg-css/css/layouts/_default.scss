@@ -50,9 +50,13 @@ html {
     padding: 4px;
 }
 
+.sg-sample {
+    padding: 40px;
+    border: 1px solid #ddd;
+}
+
 .sg-snippet-iframe {
     width: 100%;
-    border: 1px solid #ddd;
     overflow: hidden;
 
     &.no-border {
