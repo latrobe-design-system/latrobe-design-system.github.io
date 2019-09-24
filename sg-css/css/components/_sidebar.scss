@@ -12,6 +12,7 @@
 .sg-menu-list {
     background: rgb(24, 37, 56);
     overflow-y: scroll;
+    padding-bottom: 4rem;
     
     .ds-heading {
         padding: 20px;
@@ -52,7 +53,7 @@
     width: 100%;
     color: rgba(255,255,255,0.6);
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 0px 20px;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 400;
 }

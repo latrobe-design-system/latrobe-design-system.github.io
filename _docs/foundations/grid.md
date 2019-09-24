@@ -1,5 +1,5 @@
 ---
-title: "Grid"
+title: "Grid System"
 ---
 
 Alignment is an important fundamental of design.
