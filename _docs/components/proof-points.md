@@ -1,5 +1,6 @@
 ---
 title: "Proofpoint"
+status: ready
 info:
 ---
 

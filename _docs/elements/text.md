@@ -1,5 +1,6 @@
 ---
 title: "Text"
+status: ready
 ---
 
 {% include sample-iframe.html snippet="elements/text/headings.html" %}

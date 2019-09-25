@@ -1,5 +1,6 @@
 ---
 title: About
+status: planned
 info: 
 nav: true
 ---

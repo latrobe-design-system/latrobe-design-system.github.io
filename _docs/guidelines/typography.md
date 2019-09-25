@@ -1,5 +1,6 @@
 ---
 title: "Typography"
+status: ready
 ---
 
 ## Fonts

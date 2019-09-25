@@ -1,5 +1,6 @@
 ---
 title: "Colour"
+status: ready
 ---
 
 Below are all the colours included in the style guide grouped by the file they reside in.

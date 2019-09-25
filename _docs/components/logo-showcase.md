@@ -1,5 +1,6 @@
 ---
 title: "Logo showcase"
+status: draft
 info: For displaying partner logos etc
 ---
 

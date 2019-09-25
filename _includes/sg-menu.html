@@ -1,4 +1,4 @@
-<div class="sg-menu">
+<div id="sg-menu" class="sg-menu">
     <!-- <label for="sg-menu" class="sg-menu-toggle">Menu</label> -->
 
     <!-- La Trobe University design system -->
@@ -10,29 +10,27 @@
         {% if jekyll.environment == "production" %}
                 v1.01
         {% elsif jekyll.environment == "stage" %}
-            <p>UAT Testing</p>
+            
         {% else %}
-            <p>Local Environment</p>
+            
         {% endif %}
         
         <div class="ds-heading">
-            <h3>La Trobe University Design System</h3>
+            <img src="{{ site.baseurl }}/sg-css/images/wedgetail-logo.svg">
         </div>
-
-        <ul>
-            <li><a href="/"{%- if page.url == '/' -%} class="active"{%- endif -%}>Overview</a></li>
-
-            <li><a href="{{ site.baseurl }}/all-patterns">Sketch Exports</a></li>
-        </ul>
 
         <p>Getting started</p>
 
         {%- assign about = site.docs | where: 'type', 'getting-started' | sort: 'url' -%}
         
-        <ul>            
+        <ul>
+            <li class="{{ page.status }}"><a href="/"{%- if page.url == '/' -%} class="active"{%- endif -%}>Overview</a></li>
+
             {%- for pattern in about -%}
-                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
             {%- endfor -%}
+
+            <li class="{{ page.status }}"><a href="{{ site.baseurl }}/all-patterns">Sketch Exports</a></li>
         </ul>
 
         <p>Guidelines</p>
@@ -41,7 +39,7 @@
         
         <ul>            
             {%- for pattern in guidelines -%}
-                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
             {%- endfor -%}
         </ul>
 
@@ -61,7 +59,7 @@
         
         <ul>            
             {%- for pattern in elements -%}
-                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
             {%- endfor -%}
         </ul>
 
@@ -71,7 +69,7 @@
         
         <ul>
             {%- for pattern in components -%}
-                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
             {%- endfor -%}
         </ul>
 
@@ -81,7 +79,7 @@
         
         <ul>
             {%- for pattern in blocks -%}
-                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
             {%- endfor -%}
         </ul>
 
@@ -91,7 +89,7 @@
         
         <ul>
             {%- for pattern in templates -%}
-                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
             {%- endfor -%}
         </ul>
     </nav>

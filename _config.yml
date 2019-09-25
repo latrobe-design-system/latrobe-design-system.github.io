@@ -78,7 +78,7 @@ defaults:
     scope:
       path: "ltu-patterns/html"
     values:
-      status: Draft
+      status: draft
       layout: sample
   -
     scope:

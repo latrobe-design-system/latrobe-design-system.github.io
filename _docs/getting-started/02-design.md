@@ -1,5 +1,6 @@
 ---
 title: Design
+status: planned
 info:
 ---
 
