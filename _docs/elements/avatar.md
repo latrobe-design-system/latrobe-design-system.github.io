@@ -1,5 +1,5 @@
 ---
 title: "Avatar"
-status: draft
+status: planned
 info:
 ---
