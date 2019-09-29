@@ -40,33 +40,25 @@ h2 {
     text-transform: uppercase;
     background: $smoke;
     margin-left: 1rem;
-    border-radius: 500px;
+    border-radius: 3px;
     line-height: 1;
 
-    .planned {
+    &.planned {
         background: red;
         color: $white;
     }
     
-    .draft {
+    &.draft {
         background: orange;
         color: $white;
-    
-        &:before {
-            content: "";
-            background: orange;
-            border-radius: 100%;
-            width: 8px;
-            height: 8px;
-        }
     }
     
-    .ready, .live {
+    &.ready, &.live {
         background: green;
         color: $white;
     }
     
-    .retired {
+    &.retired {
         background: grey;
         color: $white;
     }

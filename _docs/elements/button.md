@@ -4,7 +4,7 @@ status: ready
 info: Buttons are used to help users perform common actions more easily and direct them through a workflow.
 ---
 
-## Button types
+## Types
 
 **Link buttons:** use the `<a>` tag for buttons that direct the user to a new page, ie. for buttons that are links. They should also be used for buttons that default to a link when javascript fails or is switched off, eg. a play video button that opens a YouTube video in a modal or if JS fails takes vistor to the YouTube video page.</p>
 
@@ -12,35 +12,39 @@ info: Buttons are used to help users perform common actions more easily and dire
 
 **Form buttons:** use standard form buttons `<input type="">` in forms.
 
-## Button styles
+## Styles
 
-Buttons have an underline on hover in order to address [WCAG2.0 Criterion 1.4.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
+- Buttons have an underline on hover in order to address [WCAG2.0 Criterion 1.4.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
+- Buttons are sentence case for best readability.
 
-Buttons are sentence case for best readability.
+## Icons
+
+Any of the icons in the [icon set](/foundations/icons/) can be used with a button by including the class `<icon-[icon-name]>`. Where icon-name is the name listed on the [icons page](/foundations/icons/).
+
+To place the icon on the left also include the class `<icon-before>`
+
+
+{% include sample-iframe.html snippet="elements/buttons/primary_button.html" %}
 
 | Class                 | Font                 | Size / Line height \(< 1400px viewport\) | Size / Line height \(>1400px viewport\) | Weight |
 |-----------------------|----------------------|------------------------------------------|-----------------------------------------|--------|
 | btn                   | RobotoCondensed Bold | 16px / 24px                              | 18px / 28px                             | Normal |
-| btn\-secondary        | RobotoCondensed Bold | 16px / 24px                              | 18px / 28px                             | Normal |
-| btn\-light            | RobotoCondensed Bold | 16px / 24px                              | 18px / 28px                             | Normal |
-| btn\-secondary\-light | RobotoCondensed Bold | 16px / 24px                              | 18px / 28px                             | Normal |
-
-### Icons
-
-Any of the icons in the [icon set](/foundations/icons/) can be used with a button by including the class `<icon-[icon-name]>`. Where icon-name is the name listed on the [icons page](/foundations/icons/).
-
-To place the icon on the left also include the class `<icon-before>` See examples below.
-
-
-{% include sample-iframe.html snippet="elements/buttons/primary_button.html" %}
 
 The primary button style is used for primary actions. Only one of these types of buttons should be used in each view (ie block).
 
 {% include sample-iframe.html snippet="elements/buttons/secondary_button.html" %}
 
+| Class                 | Font                 | Size / Line height \(< 1400px viewport\) | Size / Line height \(>1400px viewport\) | Weight |
+|-----------------------|----------------------|------------------------------------------|-----------------------------------------|--------|
+| btn\-secondary        | RobotoCondensed Bold | 16px / 24px                              | 18px / 28px                             | Normal |
+
 The secondary button style is used for secondary actions. They are often used next to primary buttons or elsewhere on a page for secondary actions.
 
 {% include sample-iframe.html snippet="elements/buttons/light_button.html" %}
+
+| Class                 | Font                 | Size / Line height \(< 1400px viewport\) | Size / Line height \(>1400px viewport\) | Weight |
+|-----------------------|----------------------|------------------------------------------|-----------------------------------------|--------|
+| btn\-light            | RobotoCondensed Bold | 16px / 24px                              | 18px / 28px                             | Normal |
 
 Light buttons can be used on dark or image backgrounds.
 
