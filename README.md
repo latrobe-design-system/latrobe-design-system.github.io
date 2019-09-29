@@ -1,7 +1,8 @@
 # design-system
 ## This design system is under construction
 
-https://latrobe-design-system.github.io/
+Prod: https://latrobe-design-system.github.io/
+Dev: https://latrobe-design-system.netlify.com/
 
 ## Using Jekyll static generator
 To use this you must install
