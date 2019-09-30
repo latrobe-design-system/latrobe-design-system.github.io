@@ -1,11 +1,5 @@
 <div id="sg-menu" class="sg-menu">
-    <!-- <label for="sg-menu" class="sg-menu-toggle">Menu</label> -->
 
-    <!-- La Trobe University design system -->
-    
-
-
-    <!-- <input type="checkbox" id="sg-menu" /> -->
     {% if jekyll.environment == "production" %}
         <nav class="sg-menu-list">
     {% elsif jekyll.environment == "stage" %}
@@ -15,7 +9,9 @@
     {% endif %}
         
         <div class="ds-heading">
-            <img src="{{ site.baseurl }}/sg-css/images/wedgetail-logo.svg?v=2">
+            <a href="/">
+                <img src="{{ site.baseurl }}/sg-css/images/wedgetail-logo.svg?v=2">
+            </a>
 
             {% if jekyll.environment == "production" %}
                 <span class="logo-text">Design System</span>
