@@ -7,18 +7,23 @@
 
     <!-- <input type="checkbox" id="sg-menu" /> -->
     {% if jekyll.environment == "production" %}
-        <nav class="sg-menu-list">  
-            v1.01
+        <nav class="sg-menu-list">
     {% elsif jekyll.environment == "stage" %}
         <nav class="sg-menu-list">  
-            v1.01
     {% else %}
-        <nav class="sg-menu-list">  
-
+        <nav class="sg-menu-list sg-menu-list-local">  
     {% endif %}
         
         <div class="ds-heading">
             <img src="{{ site.baseurl }}/sg-css/images/wedgetail-logo.svg">
+
+            {% if jekyll.environment == "production" %}
+                <span class="version">v1.01</span>
+            {% elsif jekyll.environment == "stage" %}
+                <span class="version">dev-v1.01</span>
+            {% else %}
+                <span class="version">local-v1.01</span>
+            {% endif %}
         </div>
 
         <p>Getting started</p>
