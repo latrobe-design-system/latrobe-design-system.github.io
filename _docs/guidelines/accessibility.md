@@ -5,7 +5,7 @@ info: La Trobe University firmly believes that web and software experiences shou
 ---
 
 - [Wedgetail and accessibility](#wedgetail-and-accecssibility)
-- [Categories of disabilities](#categories-ofdisabilities)
+- [Categories of disabilities](#categories-of-disabilities)
 - [Global accessibility standards](#global-accessibility-standards)
 - [Tools](#tools)
 
@@ -15,7 +15,7 @@ Accessible design not only helps users with disabilities; it provides better use
 
 However, how you use Wedgtail also affects the accessibility of a product. Read this page to learn about accessibility in general. Then, while you’re working, use the role-specific Wedgetail accessibility guidelines to help you make products that anyone can use.
 
-## Categories of disabilities <a name="categories-ofdisabilities"></a>
+## Categories of disabilities <a name="categories-of-disabilities"></a>
 
 Disabilities can be thought of as a mismatch between one’s ability and one’s environment, and can be broken into three main types:
 
