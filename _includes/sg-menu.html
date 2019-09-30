@@ -16,14 +16,16 @@
         
         <div class="ds-heading">
             <img src="{{ site.baseurl }}/sg-css/images/wedgetail-logo.svg?v=2">
-            <span class="logo-text">Design System</span>
 
             {% if jekyll.environment == "production" %}
+                <span class="logo-text">Design System</span>
                 <span class="version">v1.01</span>
             {% elsif jekyll.environment == "stage" %}
-                <span class="version">dev-v1.01</span>
+                <span class="logo-text">Design System <span class="environment">Dev</span></span>
+                <span class="version">v1.01</span>
             {% else %}
-                <span class="version">local-v1.01</span>
+                <span class="logo-text">Design System <span class="environment">Local</span></span>
+                <span class="version">V1.01</span>
             {% endif %}
         </div>
 

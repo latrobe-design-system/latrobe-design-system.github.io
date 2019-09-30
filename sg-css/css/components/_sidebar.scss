@@ -38,6 +38,8 @@
         left: 50%;
         transform: translateX(-50%);
         bottom: 40px;
+        width: 100%;
+        text-align: center;
     }
 
     * {
@@ -58,6 +60,15 @@
         transform: translateX(-50%);
         bottom: 20px;
         opacity: 0.25;
+    }
+
+    .environment {
+        border: 1px solid rgba(255,255,255,0.25);
+        border-radius: 4px;
+        display: inline;
+        font-size: 10px;
+        padding: 2px 2px 2px 6px;
+        font-weight: 500;
     }
 }
 
