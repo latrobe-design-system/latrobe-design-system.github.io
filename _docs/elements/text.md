@@ -5,9 +5,9 @@ status: ready
 
 {% include sample-iframe.html snippet="elements/text/headings.html" %}
 
-### Font styles
+<!-- ### Font styles
 
-| Tag             | Font                 | Size / Line height \(< 1400px viewport\) | Size / Line height \(>1400px viewport\) | Weight |
+ | Tag             | Font                 | Size / Line height \(< 1400px viewport\) | Size / Line height \(>1400px viewport\) | Weight |
 |-----------------|----------------------|------------------------------------------|-----------------------------------------|--------|
 | H1              | RobotoCondensed Bold | 36px / 40px                              | 48px / 52px                             | Normal |
 | H2              | RobotoCondensed Bold | 32px / 36px                              | 32px / 36px                             | Normal |
@@ -15,7 +15,7 @@ status: ready
 | H4              | RobotoCondensed Bold | 22px / 28px                              | 24px / 28px                             | Normal |
 | H5              | RobotoCondensed Bold | 18px / 24px                              | 20px / 24px                             | Normal |
 | H6              | RobotoCondensed Bold | 16px / 20px                              | 18px / 20px                             | Normal |
-| Everything else | Roboto Light         | 16px / 24px                              | 18px / 28px                             | 300    |
+| Everything else | Roboto Light         | 16px / 24px                              | 18px / 28px                             | 300    | -->
 
 
 {% include sample-iframe.html snippet="elements/text/ordered_list.html" %}
