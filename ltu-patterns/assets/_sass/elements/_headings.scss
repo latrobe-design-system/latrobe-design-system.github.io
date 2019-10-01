@@ -1,5 +1,5 @@
 $text-base-size: 18px;
-$text-scale-ratio: 1.200;
+$text-scale-ratio: 1.250;
 
 $h6: $text-base-size;
 $h5: $h6 * $text-scale-ratio;
@@ -16,6 +16,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     @include font-roboto-condensed-bold;
+    margin-top: 0;
+    margin-bottom: $spacer;
 }
 
 h1 {

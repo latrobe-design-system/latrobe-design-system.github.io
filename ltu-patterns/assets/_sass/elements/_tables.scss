@@ -1,35 +1,24 @@
 table {
     border: none;
     width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-bottom: 1px solid #ccc;
 }
 
 table caption {
     @include font-roboto-condensed-bold;
-    background-color: #242424;
-    color: #fff;
-    font-size: 28px;
-    line-height: 32px;
-    margin-bottom: 1px;
-    padding: 16px 24px;
+    font-size: $h3;
+    padding: $spacer * 2;
     text-align: left;
 }
 
 table caption.subtle-right {
     background-color: #eee;
-    color: #333;
-    font-size: 16px;
-    line-height: inherit;
-    padding: 8px 24px;
-    text-align: right;
+    padding: $spacer $spacer * 2;
 }
 
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-td,
-th {
+td, th {
     vertical-align: top;
 }
 
@@ -38,34 +27,16 @@ th {
     background-color: #333;
     color: #fff;
     font-size: 18px;
-    padding: 12px;
+    padding: $spacer $spacer * 2;
     text-align: left;
-}
-
-th + th {
-    border-left: 1px solid #fff;
 }
 
 td {
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
     border-color: #ccc;
-    padding: 12px;
+    padding: $spacer * 2;
 }
-
-td:first-child,
-th:first-child {
-    border-left: none;
-    padding-left: 24px;
-}
-
-td:last-child,
-th:last-child {
-    border-right: none;
-    padding-right: 2.827%;
-}
-
-tr {}
 
 tr:nth-child(odd) {
     background-color: #eee;
@@ -77,13 +48,4 @@ tr:nth-child(even) {
 
 tr:hover {
     background-color: #ddd;
-}
-
-form tr,
-form tr:hover {
-    background-color: #fff!important;
-}
-
-form td {
-    border: none!important;
 }
