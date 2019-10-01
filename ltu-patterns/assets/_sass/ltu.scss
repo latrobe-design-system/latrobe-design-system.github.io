@@ -177,3 +177,15 @@ blockquote .ltu-button {
 .content-wrapper div img {
     padding: 0!important;
 }
+
+// TESTIMONIALS
+// ==================================================================================================================
+
+@import "components/testimonials";
+
+.testimonial-copy {
+    blockquote {
+        background: transparent;
+        color: $color-2;
+    }
+}

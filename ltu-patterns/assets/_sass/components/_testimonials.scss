@@ -10,7 +10,6 @@
 .testimonial-image {
     border-radius: 100%;
     overflow: hidden;
-    text-align: center;
     width: 120px;
     height: 120px;
     margin: 0 auto -60px auto;
@@ -27,10 +26,11 @@
 .testimonial-copy {
     border: solid 1px $color-3b;
     padding: 68px 20px 20px 20px;
+    background-color: white;
 
     blockquote {
-        background: transparent;
-        color: $color-2;
+        //background: transparent;
+        //color: $color-2;
         margin: 0 0 24px 0;
         padding: 0;
     }
@@ -87,6 +87,7 @@
         .testimonial-copy {
             border: 0px;
             padding-top: 20px;
+            background-color: transparent;
         }
     }
 }
@@ -108,6 +109,7 @@
         .testimonial-copy {
             border: 0px;
             padding-top: 20px;
+            background-color: transparent;
         }
     }
 }
