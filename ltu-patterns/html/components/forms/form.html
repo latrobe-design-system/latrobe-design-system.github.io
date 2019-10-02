@@ -1,0 +1,42 @@
+---
+title: "Form"
+status: draft
+---
+
+<form>
+    <fieldset>
+        <legend>Personal</legend>
+        
+        <div class="styled-form">
+            <p><label for="name">Name:</label> <input id="name" type="text"></p>
+            <p><label for="email">Email:</label> <input id="email" type="text"></p>
+        </div>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Sex</legend>
+        
+        <p>
+            <input id="male" type="radio"> <label for="male">Male</label><br>
+            <input id="female" type="radio"> <label for="female">Female</label>
+        </p>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Matrix</legend>
+        <p>How many times a day do you eat bananas?</p>
+
+        <p>
+            <input id="once" type="radio"> <label for="once">Once</label><br>
+            <input id="two-three" type="radio"> <label for="two-three">2-3</label><br>
+            <input id="four-five" type="radio"> <label for="four-five">4-5</label><br>
+            <input id="five-plus" type="radio"> <label for="five-plus">5+</label>
+        </p>
+
+        <p>Describe in detail, how satisfied you feel after a banana feast.</p>
+        
+        <textarea cols="40" rows="6"></textarea>
+    </fieldset>
+    
+    <p><input type="submit" value="Submit"></p>
+</form>
