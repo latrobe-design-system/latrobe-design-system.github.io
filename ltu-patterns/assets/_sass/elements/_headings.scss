@@ -1,12 +1,4 @@
 $text-base-size: 18px;
-$text-scale-ratio: 1.250;
-
-$h6: $text-base-size;
-$h5: $h6 * $text-scale-ratio;
-$h4: $h5 * $text-scale-ratio;
-$h3: $h4 * $text-scale-ratio;
-$h2: $h3 * $text-scale-ratio;
-$h1: $h2 * $text-scale-ratio;
 
 body {
     @include font-roboto-light;
@@ -14,33 +6,115 @@ body {
     line-height: 1.5;
 }
 
-h1, h2, h3, h4, h5, h6 {
+//
+// Paragraph text
+//
+
+p {
+    font-size: $text-base-size;
+}
+
+p.lead {
+    font-size: $text-base-size * 1.4;
+}
+
+p.small {
+    font-size: $text-base-size * 0.6;
+}
+
+//
+// Display headings
+//
+
+$display-heading-scale-ratio: 1.333;
+
+$display-6: $text-base-size;
+$display-5: $display-6 * $display-heading-scale-ratio;
+$display-4: $display-5 * $display-heading-scale-ratio;
+$display-3: $display-4 * $display-heading-scale-ratio;
+$display-2: $display-3 * $display-heading-scale-ratio;
+$display-1: $display-2 * $display-heading-scale-ratio;
+
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6 {
     @include font-roboto-condensed-bold;
     margin-top: 0;
     margin-bottom: $spacer;
 }
 
-h1 {
+.display-1 {
+    font-size: $display-1;
+}
+
+.display-2 {
+    font-size: $display-2;
+}
+
+.display-3 {
+    font-size: $display-3;
+}
+
+.display-4 {
+    font-size: $display-4;
+}
+
+.display-5 {
+    font-size: $display-5;
+}
+
+.display-6 {
+    font-size: $display-6;
+}
+
+
+//
+// Headings
+//
+
+$heading-scale-ratio: 1.2;
+
+$h6: $text-base-size;
+$h5: $h6 * $heading-scale-ratio;
+$h4: $h5 * $heading-scale-ratio;
+$h3: $h4 * $heading-scale-ratio;
+$h2: $h3 * $heading-scale-ratio;
+$h1: $h2 * $heading-scale-ratio;
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    margin-top: 0;
+    margin-bottom: $spacer;
+}
+
+h1, .h1 {
     font-size: $h1;
 }
 
-h2 {
+h2, .h2 {
     font-size: $h2;
 }
 
-h3 {
+h3, .h3 {
     font-size: $h3;
 }
 
-h4 {
+h4, .h4 {
     font-size: $h4;
 }
 
-h5 {
+h5, .h5 {
     font-size: $h5;
 }
 
-h6 {
+h6, .h6 {
     font-size: $h6;
 }
 

@@ -3,7 +3,11 @@ title: "Text"
 status: ready
 ---
 
+{% include sample-iframe.html snippet="elements/text/display-headings.html" %}
+
 {% include sample-iframe.html snippet="elements/text/headings.html" %}
+
+{% include sample-iframe.html snippet="elements/text/paragraph.html" %}
 
 <!-- ### Font styles
 
@@ -29,7 +33,6 @@ status: ready
 {% include sample-iframe.html snippet="elements/text/pull_quote.html" %}
 
 {% include sample-iframe.html snippet="elements/text/hr.html" %}
-
 
 {% include sample-iframe.html snippet="elements/text/inline.html" %}
 
