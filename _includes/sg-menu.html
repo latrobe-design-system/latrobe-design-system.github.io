@@ -33,7 +33,13 @@
             <li class="{{ page.status }}"><a href="/"{%- if page.url == '/' -%} class="active"{%- endif -%}>About Wedgetail</a></li>
 
             {%- for pattern in about -%}
-                <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+
+                {% if jekyll.environment == "stage" and pattern.status == 'ready'  %}
+                    <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                {% else %}
+                    <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                {% endif %}
+                
             {%- endfor -%}
         </ul>
 
@@ -43,19 +49,15 @@
         
         <ul>            
             {%- for pattern in guidelines -%}
-                <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+
+                {% if jekyll.environment == "stage" and pattern.status == 'ready'  %}
+                    <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                {% else %}
+                    <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                {% endif %}
+
             {%- endfor -%}
         </ul>
-
-        <!-- <p>Foundations</p>
-
-        {%- assign foundations = site.docs | where: 'type', 'foundation' | sort: 'url' -%}
-        
-        <ul>            
-            {%- for pattern in foundations -%}
-                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
-            {%- endfor -%}
-        </ul> -->
 
         <p>Elements</p>
 
@@ -63,7 +65,13 @@
         
         <ul>            
             {%- for pattern in elements -%}
-                <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+
+                {% if jekyll.environment == "stage" and pattern.status == 'ready'  %}
+                    <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                {% else %}
+                    <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                {% endif %}
+
             {%- endfor -%}
         </ul>
 
@@ -73,7 +81,13 @@
         
         <ul>
             {%- for pattern in components -%}
-                <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                
+                {% if jekyll.environment == "stage" and pattern.status == 'ready'  %}
+                    <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                {% else %}
+                    <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                {% endif %}
+
             {%- endfor -%}
         </ul>
 
@@ -83,7 +97,13 @@
         
         <ul>
             {%- for pattern in blocks -%}
-                <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                
+                {% if jekyll.environment == "stage" and pattern.status == 'ready'  %}
+                    <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                {% else %}
+                    <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                {% endif %}
+
             {%- endfor -%}
         </ul>
 
@@ -93,7 +113,13 @@
         
         <ul>
             {%- for pattern in templates -%}
-                <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                
+                {% if jekyll.environment == "stage" and pattern.status == 'ready'  %}
+                    <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                {% else %}
+                    <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                {% endif %}
+
             {%- endfor -%}
         </ul>
     </nav>
