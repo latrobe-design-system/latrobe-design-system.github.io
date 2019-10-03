@@ -1,0 +1,39 @@
+{
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "icon": "icon.png",
+  "commands": [
+    {
+      "name": "Import file(s)...",
+      "identifier": "importFiles",
+      "script": "__importFiles.js"
+    },
+    {
+      "name": "Paste",
+      "identifier": "paste",
+      "script": "__paste.js"
+    }
+  ],
+  "menu": {
+    "isRoot": true,
+    "title": "output",
+    "items": [
+      {
+        "title": "From *Almost* Sketch to Sketch",
+        "items": [
+          "importFiles",
+          "paste"
+        ]
+      }
+    ]
+  },
+  "version": "4.3.0",
+  "description": "HTML to Sketch",
+  "homepage": "https://github.com/brainly/html-sketchapp#readme",
+  "name": "asketch2sketch",
+  "identifier": "asketch2sketch",
+  "disableCocoaScriptPreprocessor": true,
+  "appcast": "https://raw.githubusercontent.com/brainly/html-sketchapp/master/.appcast.xml",
+  "author": "Brainly - Konrad Dzwinel",
+  "authorEmail": "kdzwinel@gmail.com"
+}
