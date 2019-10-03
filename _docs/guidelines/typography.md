@@ -1,6 +1,6 @@
 ---
 title: "Typography"
-status: ready
+status: draft
 info: Typography can help create clear hierarchies, organize information, and guide users through a product or experience.
 ---
 

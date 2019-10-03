@@ -1,6 +1,6 @@
 ---
 title: "Accessibility"
-status: ready
+status: draft
 info: La Trobe University firmly believes that web and software experiences should be accessible for everyone, regardless of abilities or impairments. Wedgetail is committed to following and complying with best practices when it comes to accessibility.
 ---
 
