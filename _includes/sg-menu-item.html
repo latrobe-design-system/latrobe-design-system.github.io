@@ -1,5 +1,9 @@
-{% if jekyll.environment == "stage" %}
+{% if jekyll.environment == "production" %}
     {% if pattern.status == 'ready' %}
+        <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+    {% endif %}
+{% elsif jekyll.environment == "stage" %}
+    {% if pattern.status == 'ready' and pattern.status == 'draft' %}
         <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
     {% endif %}
 {% else %}
