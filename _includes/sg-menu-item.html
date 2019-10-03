@@ -3,7 +3,7 @@
         <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
     {% endif %}
 {% elsif jekyll.environment == "stage" %}
-    {% if pattern.status == 'ready' and pattern.status == 'draft' %}
+    {% if pattern.status == 'ready' or pattern.status == 'draft' %}
         <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
     {% endif %}
 {% else %}

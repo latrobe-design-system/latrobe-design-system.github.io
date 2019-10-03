@@ -30,7 +30,7 @@
         {%- assign about = site.docs | where: 'type', 'getting-started' | sort: 'url' -%}
         
         <ul>
-            <li class="{{ page.status }}"><a href="/"{%- if page.url == '/' -%} class="active"{%- endif -%}>About Wedgetail</a></li>
+            <li><a href="/"{%- if page.url == '/' -%} class="active"{%- endif -%}>About Wedgetail</a></li>
 
             {%- for pattern in about -%}
                 {%- include sg-menu-item.html -%}
