@@ -33,13 +33,7 @@
             <li class="{{ page.status }}"><a href="/"{%- if page.url == '/' -%} class="active"{%- endif -%}>About Wedgetail</a></li>
 
             {%- for pattern in about -%}
-
-                {% if jekyll.environment == "stage" and pattern.status == 'ready'  %}
-                    <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
-                {% else %}
-                    <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
-                {% endif %}
-                
+                {%- include sg-menu-item.html -%}
             {%- endfor -%}
         </ul>
 
@@ -49,13 +43,7 @@
         
         <ul>            
             {%- for pattern in guidelines -%}
-
-                {% if jekyll.environment == "stage" and pattern.status == 'ready'  %}
-                    <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
-                {% else %}
-                    <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
-                {% endif %}
-
+                {%- include sg-menu-item.html -%}
             {%- endfor -%}
         </ul>
 
@@ -65,13 +53,7 @@
         
         <ul>            
             {%- for pattern in elements -%}
-
-                {% if jekyll.environment == "stage" and pattern.status == 'ready'  %}
-                    <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
-                {% else %}
-                    <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
-                {% endif %}
-
+                {%- include sg-menu-item.html -%}
             {%- endfor -%}
         </ul>
 
@@ -81,13 +63,7 @@
         
         <ul>
             {%- for pattern in components -%}
-                
-                {% if jekyll.environment == "stage" and pattern.status == 'ready'  %}
-                    <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
-                {% else %}
-                    <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
-                {% endif %}
-
+                {%- include sg-menu-item.html -%}
             {%- endfor -%}
         </ul>
 
@@ -97,13 +73,7 @@
         
         <ul>
             {%- for pattern in blocks -%}
-                
-                {% if jekyll.environment == "stage" and pattern.status == 'ready'  %}
-                    <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
-                {% else %}
-                    <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
-                {% endif %}
-
+                {%- include sg-menu-item.html -%}
             {%- endfor -%}
         </ul>
 
@@ -113,13 +83,7 @@
         
         <ul>
             {%- for pattern in templates -%}
-                
-                {% if jekyll.environment == "stage" and pattern.status == 'ready'  %}
-                    <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
-                {% else %}
-                    <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
-                {% endif %}
-
+                {%- include sg-menu-item.html -%}
             {%- endfor -%}
         </ul>
     </nav>
