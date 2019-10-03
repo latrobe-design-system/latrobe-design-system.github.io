@@ -1,16 +1,16 @@
-<div id="sg-menu" class="sg-menu">
+<div id="wedgetail-menu" class="wedgetail-menu">
 
     {% if jekyll.environment == "production" %}
-        <nav class="sg-menu-list">
+        <nav class="wedgetail-menu-list">
     {% elsif jekyll.environment == "stage" %}
-        <nav class="sg-menu-list sg-menu-list-local">
+        <nav class="wedgetail-menu-list wedgetail-menu-list-local">
     {% else %}
-        <nav class="sg-menu-list sg-menu-list-local">  
+        <nav class="wedgetail-menu-list wedgetail-menu-list-local">  
     {% endif %}
         
         <div class="ds-heading">
             <a href="/">
-                <img src="{{ site.baseurl }}/sg-css/images/wedgetail-logo.svg?v=2">
+                <img src="{{ site.baseurl }}/wedgetail/images/wedgetail-logo.svg?v=2">
             </a>
 
             {% if jekyll.environment == "production" %}

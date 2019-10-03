@@ -8,10 +8,10 @@ html {
     box-sizing: inherit;
 }
 
-.sg-2col {
+.wedgetail-2col {
     display: flex;
 }
-.sg-2col div {
+.wedgetail-2col div {
     flex-basis: 50%;
 }
 .vspace-example {
@@ -27,22 +27,22 @@ html {
     bottom: 0;
     background-image: url("spacing-example-grid.png");
 }
-.sg-rule {
+.wedgetail-rule {
     border: 1px solid lightgreen;
     padding: 16px;
 }
-.sg-rule::before {
+.wedgetail-rule::before {
     content: 'Rule';
     display: inline-block;
     background: #f4f4f4;
     margin-right: 12px;
     padding: 4px;
 }
-.sg-alert {
+.wedgetail-alert {
     border: 1px solid red;
     padding: 16px;
 }
-.sg-alert::before {
+.wedgetail-alert::before {
     content: 'Alert';
     display: inline-block;
     background: #f4f4f4;
@@ -50,11 +50,11 @@ html {
     padding: 4px;
 }
 
-.sg-sample {
+.wedgetail-sample {
     border: 1px solid #ddd;
 }
 
-.sg-snippet-iframe {
+.wedgetail-snippet-iframe {
     width: 100%;
     overflow: hidden;
 
@@ -64,12 +64,12 @@ html {
 }
 
 /* override prism styles */
-.sg-sample pre code[class*=language-] {
+.wedgetail-sample pre code[class*=language-] {
     white-space: pre-wrap;
     position: relative;
 }
 
-.sg-sample-header {
+.wedgetail-sample-header {
     height: 52px;
     background: #f4f4f4;
 }

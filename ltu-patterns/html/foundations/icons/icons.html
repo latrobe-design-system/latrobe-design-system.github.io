@@ -5,12 +5,12 @@ status: "Live"
 
 <style>
 
-.sg-icon-list {
+.wedgetail-icon-list {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
 }
-.sg-icon-list li {
+.wedgetail-icon-list li {
     width: 100px;
     margin: 40px;
     text-align: center;
@@ -18,7 +18,7 @@ status: "Live"
 
 </style>
 
-<ul class="sg-icon-list">
+<ul class="wedgetail-icon-list">
     {%- for image in site.static_files -%}
         {%- if image.path contains 'ltu-patterns/assets/css/icons/feather/' -%}
             <li>
