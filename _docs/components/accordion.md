@@ -1,5 +1,5 @@
 ---
 title: "Accordion"
-status: draft
+status: planned
 info:
 ---

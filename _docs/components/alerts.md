@@ -1,6 +1,6 @@
 ---
 title: "Alerts"
-status: draft
+status: ready
 info: 
 ---
 

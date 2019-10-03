@@ -1,5 +1,5 @@
 ---
 title: "Filtered List"
-status: draft
+status: planned
 info:
 ---

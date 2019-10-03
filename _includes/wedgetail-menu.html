@@ -30,10 +30,10 @@
         {%- assign about = site.docs | where: 'type', 'getting-started' | sort: 'url' -%}
         
         <ul>
-            <li class="{{ page.status }}"><a href="/"{%- if page.url == '/' -%} class="active"{%- endif -%}>About Wedgetail</a></li>
+            <li><a href="/"{%- if page.url == '/' -%} class="active"{%- endif -%}>About Wedgetail</a></li>
 
             {%- for pattern in about -%}
-                <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                {%- include sg-menu-item.html -%}
             {%- endfor -%}
         </ul>
 
@@ -43,19 +43,9 @@
         
         <ul>            
             {%- for pattern in guidelines -%}
-                <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                {%- include sg-menu-item.html -%}
             {%- endfor -%}
         </ul>
-
-        <!-- <p>Foundations</p>
-
-        {%- assign foundations = site.docs | where: 'type', 'foundation' | sort: 'url' -%}
-        
-        <ul>            
-            {%- for pattern in foundations -%}
-                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
-            {%- endfor -%}
-        </ul> -->
 
         <p>Elements</p>
 
@@ -63,7 +53,7 @@
         
         <ul>            
             {%- for pattern in elements -%}
-                <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                {%- include sg-menu-item.html -%}
             {%- endfor -%}
         </ul>
 
@@ -73,7 +63,7 @@
         
         <ul>
             {%- for pattern in components -%}
-                <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                {%- include sg-menu-item.html -%}
             {%- endfor -%}
         </ul>
 
@@ -83,7 +73,7 @@
         
         <ul>
             {%- for pattern in blocks -%}
-                <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                {%- include sg-menu-item.html -%}
             {%- endfor -%}
         </ul>
 
@@ -93,7 +83,7 @@
         
         <ul>
             {%- for pattern in templates -%}
-                <li class="{{ pattern.status }}"><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                {%- include sg-menu-item.html -%}
             {%- endfor -%}
         </ul>
     </nav>
