@@ -14,7 +14,7 @@ kramdown:
 ## Generates Pattern Styles
 ## Disable to prevent pattern styles from being generated.
 sass:
-    sass_dir: sg-css/css
+    sass_dir: sg-css/scss
 exclude:
     - build.sh
     - server.sh
