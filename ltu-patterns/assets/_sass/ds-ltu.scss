@@ -17,15 +17,19 @@
 @import "base/icons";
 
 // Elements
-@import "elements/headings.scss";
+@import "elements/headings";
 @import "elements/buttons";
+@import "elements/tables";
 
 // Components
 @import "components/alertbox";
+@import "components/logo-showcase";
 @import "components/cards";
 @import "components/proofpoint";
+@import "components/testimonials";
 
 // Blocks
 @import "blocks/blocks";
 @import "blocks/banner";
 @import "blocks/mosaic";
+@import "blocks/promo";

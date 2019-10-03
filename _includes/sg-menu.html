@@ -1,36 +1,49 @@
-<div class="sg-menu">
-    <label for="sg-menu" class="sg-menu-toggle">Menu</label>
+<div id="sg-menu" class="sg-menu">
 
-    La Trobe University design system
-    
-    {% if jekyll.environment == "stage" %}
-         : Staging Environment
+    {% if jekyll.environment == "production" %}
+        <nav class="sg-menu-list">
+    {% elsif jekyll.environment == "stage" %}
+        <nav class="sg-menu-list sg-menu-list-local">
+    {% else %}
+        <nav class="sg-menu-list sg-menu-list-local">  
     {% endif %}
-
-    <input type="checkbox" id="sg-menu" />
-    <nav class="sg-menu-list">
-
-        <ul>
-            <li><a href="/"{%- if page.url == '/' -%} class="active"{%- endif -%}>Overview</a></li>
-        </ul>
-
-        <p>About</p>
-
-        {%- assign about = site.docs | where: 'type', 'about' | sort: 'url' -%}
         
-        <ul>            
+        <div class="ds-heading">
+            <a href="/">
+                <img src="{{ site.baseurl }}/sg-css/images/wedgetail-logo.svg?v=2">
+            </a>
+
+            {% if jekyll.environment == "production" %}
+                <span class="logo-text">Design System</span>
+                <span class="version">v1.01</span>
+            {% elsif jekyll.environment == "stage" %}
+                <span class="logo-text">Design System <span class="environment">Dev</span></span>
+                <span class="version">v1.01</span>
+            {% else %}
+                <span class="logo-text">Design System <span class="environment">Local</span></span>
+                <span class="version">V1.01</span>
+            {% endif %}
+        </div>
+
+        <p>Getting started</p>
+
+        {%- assign about = site.docs | where: 'type', 'getting-started' | sort: 'url' -%}
+        
+        <ul>
+            <li><a href="/"{%- if page.url == '/' -%} class="active"{%- endif -%}>About Wedgetail</a></li>
+
             {%- for pattern in about -%}
-                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                {%- include sg-menu-item.html -%}
             {%- endfor -%}
         </ul>
 
-        <p>Foundations</p>
+        <p>Guidelines</p>
 
-        {%- assign foundations = site.docs | where: 'type', 'foundation' | sort: 'url' -%}
+        {%- assign guidelines = site.docs | where: 'type', 'guideline' | sort: 'url' -%}
         
         <ul>            
-            {%- for pattern in foundations -%}
-                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+            {%- for pattern in guidelines -%}
+                {%- include sg-menu-item.html -%}
             {%- endfor -%}
         </ul>
 
@@ -40,7 +53,7 @@
         
         <ul>            
             {%- for pattern in elements -%}
-                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                {%- include sg-menu-item.html -%}
             {%- endfor -%}
         </ul>
 
@@ -50,7 +63,7 @@
         
         <ul>
             {%- for pattern in components -%}
-                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                {%- include sg-menu-item.html -%}
             {%- endfor -%}
         </ul>
 
@@ -60,7 +73,7 @@
         
         <ul>
             {%- for pattern in blocks -%}
-                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                {%- include sg-menu-item.html -%}
             {%- endfor -%}
         </ul>
 
@@ -70,7 +83,7 @@
         
         <ul>
             {%- for pattern in templates -%}
-                <li><a href="{{ site.baseurl }}{{ pattern.url }}"{%- if doc.url == page.url -%} class="active"{%- endif -%}>{{ pattern.title }}</a></li>
+                {%- include sg-menu-item.html -%}
             {%- endfor -%}
         </ul>
     </nav>

@@ -1,8 +1,8 @@
 ---
 title: "Logo showcase"
+status: draft
+info: For displaying partner logos etc
 ---
-
-For displaying partner logos etc
 
 {% include sample-iframe.html snippet="components/logo-showcase/logo-showcase.html" %}
 

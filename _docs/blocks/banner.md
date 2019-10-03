@@ -1,11 +1,8 @@
 ---
 title: "Banners"
+status: ready
 ---
-
-## Banner box
 
 {% include sample-iframe.html snippet="blocks/banner/banner_box.html" %}
 
-## Banner promo
-
-{% include sample-iframe.html snippet="blocks/banner/banner_promo.html" %}
+<!-- {% include sample-iframe.html snippet="blocks/banner/banner_promo.html" %} -->

@@ -1,0 +1,116 @@
+
+.testimonial {
+    display: block;
+    color: $color-2;
+    text-decoration: none;
+    max-width: 800px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.testimonial-image {
+    border-radius: 100%;
+    overflow: hidden;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto -60px auto;
+    position: relative;
+
+    img {
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.testimonial-copy {
+    border: solid 1px $color-3b;
+    padding: 68px 20px 20px 20px;
+    background-color: white;
+
+    blockquote {
+        //background: transparent;
+        //color: $color-2;
+        margin: 0 0 24px 0;
+        padding: 0;
+    }
+
+    .testimonial-heading {
+        @include font-roboto-condensed-bold;
+        font-size: 18px;
+        font-style: initial;
+    }
+
+    .testimonial-subheading {
+        display: block;
+        @include font-roboto-light;
+        font-size: initial;
+    }
+
+    .testimonial-footer {
+        margin-top: 20px;
+    }
+
+    .testimonial-body {
+        border-bottom: 1px solid #CCCCCC;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .testimonial-cta {
+        margin-top: 20px;
+    }
+
+    .testimonial-summary {
+        margin-bottom: 0;
+    }
+
+    .testimonial-degree {
+        color: $color-1;
+    }
+
+}
+
+/* if only one exists */
+.testimonial:nth-last-child(1):first-child,
+.testimonial:nth-last-child(1):first-child ~ .testimonial {
+    @media(min-width: 600px){
+        display: block;
+
+        .testimonial-image {
+            width: 280px;
+            height: 280px;
+            margin: 0 0 20px 20px;
+            float: right;
+        }
+
+        .testimonial-copy {
+            border: 0px;
+            padding-top: 20px;
+            background-color: transparent;
+        }
+    }
+}
+
+/* if only two exist */
+.testimonial:nth-last-child(2):first-child,
+.testimonial:nth-last-child(2):first-child ~ .testimonial {
+
+    @media(min-width: 1200px){
+        display: block;
+
+        .testimonial-image {
+            width: 280px;
+            height: 280px;
+            margin: 0 0 20px 20px;
+            float: right;
+        }
+
+        .testimonial-copy {
+            border: 0px;
+            padding-top: 20px;
+            background-color: transparent;
+        }
+    }
+}

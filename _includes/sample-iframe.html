@@ -1,19 +1,39 @@
 {% for pattern in site.pages %}
     {%- if pattern.url contains include.snippet -%}
-        <strong>Status: {{ pattern.status }}</strong>
-    {%- endif -%}
-{% endfor %}
+        <div class="sg_pattern" id="{{ pattern.title | slugify }}">
+            <div class="sg_header">
+                <div class="sg_title">
+                    <a class="permalink" href="{{ pattern.title | slugify | prepend: '#' }}"><i class="icon" data-icon="link"></i></a>
 
-<div class="sg-sample button-primary">
-    <a class="sg-snippet-file" href="/ltu-patterns/html/{{ include.snippet }}" target="_blank" title="Open in new tab">Preview in new window</a>
+                    <div class="header typo_eagle">
+                        <h3>{{ pattern.title }}</h3>
+                    </div>
 
-    <iframe style="background: {{ include.bgcolor | default: transparent }};" class="sg-snippet-iframe" id="{{ include.snippet | remove: ".html" }}" src="/ltu-patterns/html/{{ include.snippet }}" height="0px" frameborder="0" scrolling="no"></iframe>
-</div>
+                    <div class="sg_label {{ pattern.status }}">
+                        {{ pattern.status }}
+                    </div>
+                </div>
 
-{% for pattern in site.pages %}
-    {%- if pattern.url contains include.snippet -%}
-        {%- highlight html -%}
-            {{ pattern.content }}
-        {%- endhighlight -%}
+                <div class="sg_preview">
+                    <a href="javascript:void(0)" title="View Source Code" class="sg_helper_code button"></a>  
+
+                    <a class="sg-snippet-file" href="/ltu-patterns/html/{{ include.snippet }}" target="_blank" title="Open in new tab"></a>
+                </div>
+            </div>
+
+            <div class="sg-sample button-primary" style="background: {{ include.bgcolor | default: transparent }};">
+                <iframe class="sg-snippet-iframe" id="{{ include.snippet | remove: ".html" }}" src="/ltu-patterns/html/{{ include.snippet }}" height="0px" frameborder="0" scrolling="no"></iframe>
+            </div>
+                
+            <div class="sg_code">
+                {% for pattern in site.pages %}
+                    {%- if pattern.url contains include.snippet -%}
+                        {%- highlight html -%}
+                            {{ pattern.content }}
+                        {%- endhighlight -%}
+                    {%- endif -%}
+                {% endfor %}
+            </div>
+        </div>
     {%- endif -%}
 {% endfor %}
