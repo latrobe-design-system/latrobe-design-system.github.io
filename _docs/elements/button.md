@@ -26,25 +26,25 @@ To place the icon on the left also include the class `<icon-before>`
 
 {% include sample-iframe.html snippet="elements/buttons/primary_button.html" %}
 
-| Class                 | Font                 | Size / Line height \(< 1400px viewport\) | Size / Line height \(>1400px viewport\) | Weight |
+<!-- | Class                 | Font                 | Size / Line height \(< 1400px viewport\) | Size / Line height \(>1400px viewport\) | Weight |
 |-----------------------|----------------------|------------------------------------------|-----------------------------------------|--------|
-| btn                   | RobotoCondensed Bold | 16px / 24px                              | 18px / 28px                             | Normal |
+| btn                   | RobotoCondensed Bold | 16px / 24px                              | 18px / 28px                             | Normal | -->
 
 The primary button style is used for primary actions. Only one of these types of buttons should be used in each view (ie block).
 
 {% include sample-iframe.html snippet="elements/buttons/secondary_button.html" %}
 
-| Class                 | Font                 | Size / Line height \(< 1400px viewport\) | Size / Line height \(>1400px viewport\) | Weight |
+<!-- | Class                 | Font                 | Size / Line height \(< 1400px viewport\) | Size / Line height \(>1400px viewport\) | Weight |
 |-----------------------|----------------------|------------------------------------------|-----------------------------------------|--------|
-| btn\-secondary        | RobotoCondensed Bold | 16px / 24px                              | 18px / 28px                             | Normal |
+| btn\-secondary        | RobotoCondensed Bold | 16px / 24px                              | 18px / 28px                             | Normal | -->
 
 The secondary button style is used for secondary actions. They are often used next to primary buttons or elsewhere on a page for secondary actions.
 
 {% include sample-iframe.html snippet="elements/buttons/light_button.html" %}
 
-| Class                 | Font                 | Size / Line height \(< 1400px viewport\) | Size / Line height \(>1400px viewport\) | Weight |
+<!-- | Class                 | Font                 | Size / Line height \(< 1400px viewport\) | Size / Line height \(>1400px viewport\) | Weight |
 |-----------------------|----------------------|------------------------------------------|-----------------------------------------|--------|
-| btn\-light            | RobotoCondensed Bold | 16px / 24px                              | 18px / 28px                             | Normal |
+| btn\-light            | RobotoCondensed Bold | 16px / 24px                              | 18px / 28px                             | Normal | -->
 
 Light buttons can be used on dark or image backgrounds.
 

@@ -1,10 +1,10 @@
-.sg_pattern {
+.wedgetail-pattern {
     position: relative;
     margin-top: 3rem;
     padding-top: 3rem;
 }
 
-h2+.sg_pattern {
+h2+.wedgetail-pattern {
     margin-top: 0;
     padding-top: 0;
     border-top: 0
@@ -17,19 +17,21 @@ h2 {
 }
 
 
-.sg_pattern .sg_header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.wedgetail-pattern {
+    .wedgetail-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .wedgetail-title {
+        display: flex;
+        align-items: center;
+    }
 }
 
-.sg_pattern .sg_title {
-    display: flex;
-    align-items: center;
-}
 
-// Maturity Label
-.sg_label {
+.wedgetail-label {
     display: inline;
     font-size: 12px;
     font-weight: 500;
@@ -44,26 +46,29 @@ h2 {
     line-height: 1;
 
     &.planned {
-        background: red;
+        background: $planned;
         color: $white;
     }
     
     &.draft {
-        background: orange;
+        background: $draft;
         color: $white;
     }
     
     &.ready, &.live {
-        background: green;
+        background: $ready;
         color: $white;
     }
     
     &.retired {
-        background: grey;
+        background: $retired;
         color: $white;
     }
 }
 
+.wedgetail-menu-list-local ul li a {
+    padding: 0px 0 0px 20px;
+}
 
 .wedgetail-menu-list-local {
     .planned,
@@ -87,24 +92,24 @@ h2 {
 
 .planned {
     &:before {
-        background: red;
+        background: $planned;
     }
 }
 
 .draft {
     &:before {
-        background: orange;
+        background: $draft;
     }
 }
 
 .ready {
     &:before {
-        background: green;
+        background: $ready;
     }
 }
 
 .retired {
     &:before {
-        background: grey;
+        background: $retired;
     }
 }
