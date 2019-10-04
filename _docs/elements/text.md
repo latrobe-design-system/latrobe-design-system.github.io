@@ -1,6 +1,6 @@
 ---
 title: "Text"
-status: ready
+status: draft
 ---
 
 {% include sample-iframe.html snippet="elements/text/display-headings.html" %}
