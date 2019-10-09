@@ -1,0 +1,64 @@
+.main-content .expander-trigger {
+    cursor: pointer;
+    margin: 0 0 1px;
+    position: relative;
+    -webkit-transition: background-color .3s ease-in-out;
+    transition: background-color .3s ease-in-out;
+    z-index: 1;
+}
+
+
+.expander-trigger button {
+    background: transparent;
+    border: none;
+    display: block;
+    font-family: "Roboto Condensed",Impact,"Franklin Gothic Bold",sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 12px 12px 12px 46px;
+    text-align: left;
+    transition: color .3s ease-in-out,text-indent .3s ease-in-out;
+    width: 100%;
+    position: relative;
+}
+
+.expander-trigger.plain svg {
+    left: 0;
+    top: 8px;
+}
+
+.expander .expander-trigger svg {
+    padding: 0;
+    position: absolute;
+    top: 0;
+    transition: transform .3s ease-in-out;
+}
+
+.expander-trigger.plain button {
+    padding: 20px 0 20px 54px;
+}
+
+.plain+.expander-content>div {
+    padding: 0 14px;
+}
+
+.expander-content.open {
+    overflow: hidden;
+    -webkit-transition: height .3s ease-in-out,visibility 0s 0s;
+    transition: height .3s ease-in-out,visibility 0s 0s;
+    visibility: visible;
+}
+
+.expander-content {
+    margin: 0;
+    overflow: hidden;
+    -webkit-transition: height .3s ease-in-out,visibility 0s .3s;
+    transition: height .3s ease-in-out,visibility 0s .3s;
+    visibility: hidden;
+}
+
+.expander-trigger.plain svg {
+    left: 0;
+    top: 8px;
+}

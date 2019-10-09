@@ -1,0 +1,69 @@
+ul.fake-tabs {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 0 10px;
+}
+
+.fake-tabs li {
+    background-color: #242424;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Roboto Condensed",Impact,"Franklin Gothic Bold",sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 0;
+    padding: 10px 24px;
+    position: relative;
+}
+
+.fake-tabs li.active-tab+li:before {
+    height: 100%;
+    margin-top: -10px;
+}
+
+.fake-tabs li+li:before {
+    border-left: 1px solid #fff;
+    content: "";
+    height: 20px;
+    margin: 4px 0 0 -25px;
+    position: absolute;
+}
+
+.fake-tabs .active-tab, .fake-tabs .active-tab:hover {
+    background-color: #e42312;
+    color: #fff;
+}
+
+.fake-tabs .active-tab:after {
+    bottom: -16px;
+    content: "▼";
+    color: #e42312;
+    display: inline-block;
+    left: 50%;
+    margin-left: -6px;
+    position: absolute;
+    transform: scale(1.8, 1);
+    -webkit-transform: scale(1.8, 1);
+    -moz-transform: scale(1.8, 1);
+    -ms-transform: scale(1.8, 1);
+    -o-transform: scale(1.8, 1);
+    z-index: 1;
+}
+
+.current-tab {
+    height: auto;
+    margin-top: -10px;
+    padding: 24px;
+    visibility: visible;
+}
+
+.tab-content {
+    background-color: #eee;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
