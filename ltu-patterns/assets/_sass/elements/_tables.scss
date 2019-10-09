@@ -7,8 +7,8 @@ table {
 }
 
 table caption {
-    @include font-roboto-condensed-bold;
     font-size: $h3;
+    font-weight: $heading-weight;
     padding: $spacer * 2;
     text-align: left;
 }
@@ -23,10 +23,9 @@ td, th {
 }
 
 th {
-    @include font-roboto-condensed-bold;
     background-color: #333;
     color: #fff;
-    font-size: 18px;
+    font-size: $text-base-size;
     padding: $spacer $spacer * 2;
     text-align: left;
 }
@@ -44,8 +43,4 @@ tr:nth-child(odd) {
 
 tr:nth-child(even) {
     background-color: #fff;
-}
-
-tr:hover {
-    background-color: #ddd;
 }
