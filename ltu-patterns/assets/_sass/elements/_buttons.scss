@@ -6,10 +6,10 @@ button.btn-box {
 }
 
 .btn {
-    @include font-roboto-condensed-bold;
     border: 0;
     box-sizing: border-box;
     font-size: 16px;
+    font-weight: 400;
     line-height: 24px;
     display: inline-block;
     padding: 12px 18px;
@@ -142,7 +142,6 @@ button.btn-box {
 }
 
 .btn-pill {
-    @include font-roboto-condensed-bold;
     border: 2px solid $color-2;
     box-sizing: border-box;
     font-size: 16px;

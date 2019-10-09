@@ -44,6 +44,8 @@ $display-1: $display-2 * $display-heading-scale-ratio;
     @include font-roboto-condensed-bold;
     margin-top: 0;
     margin-bottom: $spacer;
+    color: white;
+    line-height: 1.2;
 }
 
 .display-1 {

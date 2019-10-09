@@ -8,6 +8,7 @@
 // ==================================================================================================================
 
 @charset "UTF-8";
+
 // Base
 @import "base/fonts";
 @import "base/normalize";
@@ -20,6 +21,9 @@
 @import "elements/headings";
 @import "elements/buttons";
 @import "elements/tables";
+@import "elements/forms";
+
+@import "elements/checkbox";
 
 // Components
 @import "components/alertbox";
@@ -27,6 +31,8 @@
 @import "components/cards";
 @import "components/proofpoint";
 @import "components/testimonials";
+@import "components/tabs";
+@import "components/accordion";
 
 // Blocks
 @import "blocks/blocks";

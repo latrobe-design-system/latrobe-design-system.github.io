@@ -1,5 +1,7 @@
 ---
 title: "Accordion"
-status: planned
+status: draft
 info:
 ---
+
+{% include sample-iframe.html snippet="components/accordion/accordion.html" %}

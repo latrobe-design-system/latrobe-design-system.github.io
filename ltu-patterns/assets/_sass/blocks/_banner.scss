@@ -18,7 +18,6 @@
     color: $color-3c;
     border-bottom: 2px solid $color-3c;
     padding: 0 0 20px;
-    @include font-roboto-condensed-bold;
     font-size: 20px;
     line-height: 24px;
     text-transform: uppercase;
@@ -37,13 +36,12 @@
         background-size: cover;
         background-position: center;
         padding-top: 0;
-        min-height: 520px;
-        max-height: 52vh;
         position: relative;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: $spacer*2 0;
     }
 
     .banner-box-text {
