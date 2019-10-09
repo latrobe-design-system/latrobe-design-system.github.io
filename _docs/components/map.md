@@ -1,6 +1,6 @@
 ---
 title: "Map"
-status: planned
+status: draft
 info: 
 ---
 
