@@ -43,6 +43,7 @@ $display-1: $display-2 * $display-heading-scale-ratio;
 .display-5,
 .display-6 {
     @include font-roboto-condensed-bold;
+    font-weight: $bold-weight;
     margin-top: 0;
     margin-bottom: $spacer;
     color: white;
@@ -79,7 +80,6 @@ $display-1: $display-2 * $display-heading-scale-ratio;
 //
 
 $heading-scale-ratio: 1.2;
-$heading-weight: 700;
 
 $h6: $text-base-size;
 $h5: $h6 * $heading-scale-ratio;
@@ -96,7 +96,7 @@ h5, .h5,
 h6, .h6 {
     margin-top: 0;
     margin-bottom: $spacer;
-    font-weight: $heading-weight;
+    font-weight: $medium-weight;
 }
 
 h1, .h1 {
