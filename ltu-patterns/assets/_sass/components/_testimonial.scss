@@ -29,45 +29,8 @@
     padding: 68px 20px 20px 20px;
     background-color: white;
 
-    blockquote {
-        //background: transparent;
-        //color: $color-2;
-        margin: 0 0 24px 0;
-        padding: 0;
-    }
-
-    .testimonial-heading {
-        @include font-roboto-condensed-bold;
-        font-size: 18px;
-        font-style: initial;
-    }
-
-    .testimonial-subheading {
-        display: block;
-        @include font-roboto-light;
-        font-size: initial;
-    }
-
-    .testimonial-footer {
-        margin-top: 20px;
-    }
-
-    .testimonial-body {
-        border-bottom: 1px solid #CCCCCC;
-        padding: 0;
-        margin-bottom: 20px;
-    }
-
     .testimonial-cta {
         margin-top: 20px;
-    }
-
-    .testimonial-summary {
-        margin-bottom: 0;
-    }
-
-    .testimonial-degree {
-        color: $color-1;
     }
 
 }

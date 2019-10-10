@@ -25,7 +25,17 @@ strong {
     font-weight: 500;
 }
 
-blockquote {}
+blockquote {
+    @include font-roboto-slab;
+    margin: 0 0 24px 0;
+    padding: 0;
+    :first-child:before {
+        content: open-quote;
+    }
+    :last-child:after {
+        content: close-quote;
+    }
+}
 
 dfn {
     font-style: italic;
