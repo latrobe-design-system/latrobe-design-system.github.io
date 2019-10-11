@@ -31,6 +31,7 @@
 @import "legacy/contacts";
 @import "legacy/awesomeplete";
 
+@import "base/utility";
 @import "base/icons";
 
 
@@ -79,6 +80,9 @@ blockquote .ltu-button {
 // ALERTBOX
 // =================================================================================================================
 @import "components/alert";
+.alertbox {
+    color: $color-2 !important;
+}
 
 // LOGO SHOWCASE
 // ==================================================================================================================
@@ -151,11 +155,6 @@ blockquote .ltu-button {
 }
 
 
-// CALL TO ACTION
-// ==================================================================================================================
-@import "blocks/cta";
-
-
 // MOSAIC
 // ==================================================================================================================
 @import "blocks/mosaic";
@@ -169,15 +168,6 @@ blockquote .ltu-button {
 }
 
 
-// PROMO
-// ==================================================================================================================
-
-@import "blocks/promo";
-
-.content-wrapper div img {
-    padding: 0!important;
-}
-
 // TESTIMONIALS
 // ==================================================================================================================
 
@@ -187,5 +177,25 @@ blockquote .ltu-button {
     blockquote {
         background: transparent;
         color: $color-2;
+
+        @include font-roboto-slab-light;
+        margin: 0 0 24px 0;
+        padding: 0;
+        :first-child:before {
+            content: open-quote;
+        }
+        :last-child:after {
+            content: close-quote;
+        }
+    }
+
+    p.small {
+        font-size: 80% !important;
+        line-height: 1.5 !important;
     }
 }
+
+// RESPONSIVE VIDEO
+// ==================================================================================================================
+
+@import "components/video";
