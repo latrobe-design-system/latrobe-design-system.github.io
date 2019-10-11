@@ -18,7 +18,8 @@ p.lead {
     font-size: $text-base-size * 1.2;
 }
 
-p.small {
+p.small,
+small {
     font-size: $text-base-size * 0.8;
 }
 
@@ -121,4 +122,3 @@ h5, .h5 {
 h6, .h6 {
     font-size: $h6;
 }
-
