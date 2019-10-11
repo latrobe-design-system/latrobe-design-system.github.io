@@ -82,31 +82,36 @@
 }
 /* end */
 
-/* banner overlay */
-.banner-overlay {
-    position: absolute;
+/* overlay */
+.overlay {
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     top: 0;
     width: 100%;
-    z-index: 5;
+    z-index: 1000;
     background-color: rgba(black,0.8);
     display: none;
 }
 
-#banner-overlay-close {
+#overlay-close {
     position: absolute;
     bottom: 28px;
     right: 10px;
-    z-index: 6;
+    z-index: 10001;
     @media (min-width:768px) {
         top: 10px;
         bottom: auto;
     }
 }
 
-.banner-video-wrapper {
+body.overlay-open {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.video-wrapper {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -116,7 +121,7 @@
     max-width: 820px;
     margin: auto;
 
-    .banner-video-embed {
+    .video-embed {
         height: 0;
         overflow: hidden;
         padding-bottom: 56.25%;

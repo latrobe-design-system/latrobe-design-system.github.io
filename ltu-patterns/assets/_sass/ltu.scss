@@ -187,5 +187,20 @@ blockquote .ltu-button {
     blockquote {
         background: transparent;
         color: $color-2;
+
+        @include font-roboto-slab-light;
+        margin: 0 0 24px 0;
+        padding: 0;
+        :first-child:before {
+            content: open-quote;
+        }
+        :last-child:after {
+            content: close-quote;
+        }
+    }
+
+    p.small {
+        font-size: 80% !important;
+        line-height: 1.5 !important;
     }
 }
