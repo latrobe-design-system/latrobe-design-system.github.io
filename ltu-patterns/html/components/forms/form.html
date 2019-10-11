@@ -3,40 +3,44 @@ title: "Form"
 status: draft
 ---
 
-<form>
-    <fieldset>
-        <legend>Personal</legend>
-        
-        <div class="styled-form">
-            <p><label for="name">Name:</label> <input id="name" type="text"></p>
-            <p><label for="email">Email:</label> <input id="email" type="text"></p>
-        </div>
-    </fieldset>
-    
-    <fieldset>
-        <legend>Sex</legend>
-        
-        <p>
-            <input id="male" type="radio"> <label for="male">Male</label><br>
-            <input id="female" type="radio"> <label for="female">Female</label>
-        </p>
-    </fieldset>
-    
-    <fieldset>
-        <legend>Matrix</legend>
-        <p>How many times a day do you eat bananas?</p>
+<label class="label" for="givenname">Given name</label>
+<input class="input" id="givenname" name="givenname" type="text" autocorrect="off" autocomplete="given-name" placeholder="Timothy">
 
-        <p>
-            <input id="once" type="radio"> <label for="once">Once</label><br>
-            <input id="two-three" type="radio"> <label for="two-three">2-3</label><br>
-            <input id="four-five" type="radio"> <label for="four-five">4-5</label><br>
-            <input id="five-plus" type="radio"> <label for="five-plus">5+</label>
-        </p>
+<label class="label" for="country">Country</label>
+<select class="select" id="country" name="country" disabled>
+	<option value="germany">Germany</option>
+	<option value="france">France</option>
+</select>
 
-        <p>Describe in detail, how satisfied you feel after a banana feast.</p>
-        
-        <textarea cols="40" rows="6"></textarea>
-    </fieldset>
-    
-    <p><input type="submit" value="Submit"></p>
-</form>
+<label class="label" for="sex">Sex</label>
+<select class="select" id="sex" name="sex">
+	<option selected disabled>-</option>
+	<option value="male">Male</option>
+	<option value="female">Female</option>
+</select>
+
+<label class="label" for="file">File</label>
+<input class="input" id="file" name="file" type="file">
+
+<label class="label" for="message">Message</label>
+<textarea class="input" id="message" name="message" rows="8" cols="40"></textarea>
+
+<div class="control">
+	<input class="control__input" id="optionlong" type="radio" name="option" value="optionlong" checked>
+	<label class="control__label" for="optionlong">This is a option with a very long text to test if the control alignes centered when the text wraps</label>
+</div>
+
+<div class="control">
+	<input class="control__input" id="optionthree" type="radio" name="option" value="optionthree" disabled>
+	<label class="control__label" for="optionthree">Option Three</label>
+</div>
+
+<div class="control">
+	<input class="control__input" id="checkone" type="checkbox" name="checkone" value="checkone" checked>
+	<label class="control__label" for="checkone">Check One</label>
+</div>
+
+<div class="control">
+	<input class="control__input" id="checkfour" type="checkbox" name="checkfour" value="checkfour" checked disabled>
+	<label class="control__label" for="checkfour">Check Four</label>
+</div>
