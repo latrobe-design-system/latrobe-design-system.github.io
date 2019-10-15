@@ -1,26 +1,7 @@
-$text-base-size: 18px;
-
 body {
     @include font-roboto-light;
     font-size: $text-base-size;
     line-height: 1.5;
-}
-
-//
-// Paragraph text
-//
-
-p {
-    font-size: $text-base-size;
-}
-
-p.lead {
-    font-size: $text-base-size * 1.2;
-}
-
-p.small,
-small {
-    font-size: $text-base-size * 0.8;
 }
 
 //
@@ -95,8 +76,9 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
     margin-top: 0;
-    margin-bottom: $spacer;
+    margin-bottom: $spacer * 5;
     font-weight: $medium-weight;
+    max-width: 42em;
 }
 
 h1, .h1 {

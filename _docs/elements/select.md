@@ -1,6 +1,6 @@
 ---
 title: "Select"
-status: draft
+status: planned
 info:
 ---
 

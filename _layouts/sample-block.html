@@ -1,19 +1,20 @@
 <!doctype html>
 <html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>{{ page.title }}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{{ page.title }}</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="{{ site.url }}/ltu-patterns/assets/css/ds-ltu.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
+    </head>
 
-    <link rel="stylesheet" href="{{ site.url }}/ltu-patterns/assets/css/ds-ltu.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
+    <body class="La_Trobe_University {{ page.ltulayout }}">
+        {{ content }}
 
-</head>
-<body class="La_Trobe_University {{ page.ltulayout }}">
-    {{ content }}
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-<script src="{{ site.url }}/ltu-patterns/assets/js/banner-video.js"></script>
-</body>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script src="{{ site.url }}/ltu-patterns/assets/js/banner-video.js"></script>
+        <script src="{{ site.url }}/ltu-patterns/assets/js/tabs.js"></script>
+    </body>
 </html>
