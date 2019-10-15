@@ -1,6 +1,6 @@
 ---
 title: "Checkbox"
-status: draft
+status: planned
 info:
 ---
 

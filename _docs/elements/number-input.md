@@ -1,6 +1,6 @@
 ---
 title: "Number input"
-status: draft
+status: planned
 info:
 ---
 
