@@ -25,9 +25,7 @@
 }
 
 .testimonial-copy {
-    //border: solid 1px $color-3b;
     padding: 84px 20px 20px 20px;
-    background-color: white;
 
     .testimonial-cta {
         margin-top: 20px;
@@ -35,9 +33,36 @@
 
 }
 
+@media(min-width: 600px){
+
+    .testimonial-image {
+        width: 280px;
+        height: 280px;
+        margin: 0 0 20px 20px;
+        float: right;
+    }
+
+    .testimonial-copy {
+        padding-top: 20px;
+    }
+
+    .card-set .testimonial-image {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto -60px auto;
+        float: none;
+    }
+
+    .card-set .testimonial-copy {
+        padding: 84px 20px 20px 20px;
+    }
+}
+//
+
+
 /* if only one exists */
-.testimonial:nth-last-child(1):first-child,
-.testimonial:nth-last-child(1):first-child ~ .testimonial {
+.card-set .testimonial:nth-last-child(1):first-child,
+.card-set .testimonial:nth-last-child(1):first-child ~ .testimonial {
     @media(min-width: 600px){
         display: block;
 
@@ -51,14 +76,13 @@
         .testimonial-copy {
             border: 0px;
             padding-top: 20px;
-            background-color: transparent;
         }
     }
 }
 
 /* if only two exist */
-.testimonial:nth-last-child(2):first-child,
-.testimonial:nth-last-child(2):first-child ~ .testimonial {
+.card-set .testimonial:nth-last-child(2):first-child,
+.card-set .testimonial:nth-last-child(2):first-child ~ .testimonial {
 
     @media(min-width: 1200px){
         display: block;
@@ -73,7 +97,6 @@
         .testimonial-copy {
             border: 0px;
             padding-top: 20px;
-            background-color: transparent;
         }
     }
 }
