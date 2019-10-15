@@ -4,18 +4,23 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
     border-bottom: 1px solid #ccc;
+
+    @media(max-width: 768px){
+        width: 768px;
+        overflow-x: auto;
+    }
 }
 
 table caption {
     font-size: $h3;
     font-weight: $medium-weight;
-    padding: $spacer * 2;
+    padding: $spacer * 10;
     text-align: left;
 }
 
 table caption.subtle-right {
     background-color: #eee;
-    padding: $spacer $spacer * 2;
+    padding: $spacer $spacer * 10;
 }
 
 td, th {
@@ -26,7 +31,7 @@ th {
     background-color: #333;
     color: #fff;
     font-size: $text-base-size;
-    padding: $spacer $spacer * 2;
+    padding: $spacer*5 $spacer * 10;
     text-align: left;
 }
 
@@ -34,7 +39,7 @@ td {
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
     border-color: #ccc;
-    padding: $spacer * 2;
+    padding: $spacer * 10;
 }
 
 tr:nth-child(odd) {
