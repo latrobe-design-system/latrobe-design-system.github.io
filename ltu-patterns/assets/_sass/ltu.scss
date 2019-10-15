@@ -141,10 +141,18 @@ blockquote .ltu-button {
 
 @import "legacy/ds/testimonial";
 
+.testimonial-image {
+    img {
+        float: none !important;
+        padding: 0 !important;
+    }
+}
+
 .testimonial-copy {
     blockquote {
         background: transparent;
         color: $color-2;
+        overflow: auto;
 
         @include font-roboto-slab-light;
         margin: 0 0 24px 0;
@@ -154,6 +162,10 @@ blockquote .ltu-button {
         }
         :last-child:after {
             content: close-quote;
+        }
+
+        p {
+            margin: 0 0 24px 0 !important;
         }
     }
 
