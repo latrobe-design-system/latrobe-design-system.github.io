@@ -3,9 +3,6 @@ title: "Tabs"
 status: draft
 ---
 
-{% include sample-iframe.html snippet="components/tabs/tabs.html"%}
-
-
 ## Format
 
 ### Text
@@ -16,3 +13,7 @@ A maximum of six tabs may be displayed. This is to maintain an uncluttered UI an
 
 ### Order
 Tab order should be consistent across an experience. Tabs with related content should be grouped adjacent to each other.
+
+{% include sample-iframe.html snippet="components/tabs/tabs.html"%}
+
+{% include sample-iframe.html snippet="components/tabs/tabs-small.html"%}

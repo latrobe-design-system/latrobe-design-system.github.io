@@ -1,69 +1,44 @@
-ul.fake-tabs {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding: 0 0 10px;
+.tabs-nav {
+    list-style: none;
+    padding: 0;
+    overflow: auto;
 }
 
-.fake-tabs li {
-    background-color: #242424;
-    color: #fff;
-    cursor: pointer;
-    font-family: "Roboto Condensed",Impact,"Franklin Gothic Bold",sans-serif;
-    font-weight: 700;
-    font-size: 18px;
+.tabs-nav li {
+    float: left;
     margin-bottom: 0;
-    padding: 10px 24px;
-    position: relative;
+    margin-right: 16px;
 }
 
-.fake-tabs li.active-tab+li:before {
-    height: 100%;
-    margin-top: -10px;
+.tabs-nav-small {
+    .tabs-nav-item {
+        margin-right: 0;
+        display: inline-block;
+        padding: 12px;
+        font-weight: 500;
+        text-decoration: none;
+    }
 }
 
-.fake-tabs li+li:before {
-    border-left: 1px solid #fff;
-    content: "";
-    height: 20px;
-    margin: 4px 0 0 -25px;
-    position: absolute;
-}
+.tabs-small {
+    .tabs-nav {
+        border-bottom: 2px solid $color-2a;
+        margin-bottom: $spacer * 10;
+        display: block;
+    }
 
-.fake-tabs .active-tab, .fake-tabs .active-tab:hover {
-    background-color: #e42312;
-    color: #fff;
-}
+    .tab-item {
+        margin-right: 0;
+        font-weight: 500;
 
-.fake-tabs .active-tab:after {
-    bottom: -16px;
-    content: "▼";
-    color: #e42312;
-    display: inline-block;
-    left: 50%;
-    margin-left: -6px;
-    position: absolute;
-    transform: scale(1.8, 1);
-    -webkit-transform: scale(1.8, 1);
-    -moz-transform: scale(1.8, 1);
-    -ms-transform: scale(1.8, 1);
-    -o-transform: scale(1.8, 1);
-    z-index: 1;
-}
+        &.active {
+            border-bottom: 4px solid $color-2a;
+        }
 
-.current-tab {
-    height: auto;
-    margin-top: -10px;
-    padding: 24px;
-    visibility: visible;
-}
-
-.tab-content {
-    background-color: #eee;
-    clear: both;
-    height: 0;
-    overflow: hidden;
-    visibility: hidden;
+        a {
+            display: block;
+            padding: 0 12px 8px;
+            color: $color-2a;
+        }
+    }
 }
