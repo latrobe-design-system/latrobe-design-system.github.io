@@ -163,6 +163,10 @@ blockquote .ltu-button {
         :last-child:after {
             content: close-quote;
         }
+
+        p {
+            margin: 0 0 24px 0 !important;
+        }
     }
 
     p.small {
