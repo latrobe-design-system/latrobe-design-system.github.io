@@ -11,9 +11,9 @@
 // SETUP
 // ==================================================================================================================
 @charset "UTF-8";
-@import "base/fonts";
-@import "base/variables";
-@import "base/mixins";
+@import "legacy/ds/fonts";
+@import "legacy/ds/variables";
+@import "legacy/ds/mixins";
 
 
 // LEGACY
@@ -31,13 +31,16 @@
 @import "legacy/contacts";
 @import "legacy/awesomeplete";
 
-@import "base/utility";
-@import "base/icons";
+// UTILITY
+// ==================================================================================================================
+
+@import "legacy/ds/utility";
+@import "legacy/ds/icons";
 
 
 // BUTTONS
 // ==================================================================================================================
-@import "elements/buttons";
+@import "legacy/ds/buttons";
 
 /* legacy classes */
 .ltu-button,
@@ -79,10 +82,7 @@ blockquote .ltu-button {
 
 // ALERTBOX
 // =================================================================================================================
-@import "components/alert";
-.alertbox {
-    color: $color-2 !important;
-}
+@import "legacy/ds/alert";
 
 // LOGO SHOWCASE
 // ==================================================================================================================
@@ -105,7 +105,7 @@ blockquote .ltu-button {
 
 // CARDS
 // =================================================================================================================
-@import "components/cards";
+@import "legacy/ds/cards";
 
 .card-img {
     float: none !important;
@@ -115,7 +115,7 @@ blockquote .ltu-button {
 
 // PROOFPOINTS
 // ==================================================================================================================
-@import "components/proofpoint";
+@import "legacy/ds/proofpoint";
 
 .proofpont-icon {
     float: none !important;
@@ -136,42 +136,10 @@ blockquote .ltu-button {
 }
 
 
-// Testimonials
-// ==================================================================================================================
-@import "components/testimonial";
-
-
-// BLOCKS
-// ==================================================================================================================
-@import "blocks/blocks";
-
-
-// BANNERS
-// ==================================================================================================================
-@import "blocks/banner";
-
-.banner-box-ctas {
-    margin-bottom: 0 !important;
-}
-
-
-// MOSAIC
-// ==================================================================================================================
-@import "blocks/mosaic";
-
-.mosaic-tile {
-    margin: 0 !important;
-    .mosaic-tile-image {
-        float: none !important;
-        padding: 0 !important;
-    }
-}
-
-
 // TESTIMONIALS
 // ==================================================================================================================
 
-@import "components/testimonial";
+@import "legacy/ds/testimonial";
 
 .testimonial-copy {
     blockquote {
@@ -198,4 +166,31 @@ blockquote .ltu-button {
 // RESPONSIVE VIDEO
 // ==================================================================================================================
 
-@import "components/video";
+@import "legacy/ds/video";
+
+
+// BLOCKS
+// ==================================================================================================================
+@import "legacy/ds/blocks";
+
+
+// BANNERS
+// ==================================================================================================================
+@import "legacy/ds/banner";
+
+.banner-box-ctas {
+    margin-bottom: 0 !important;
+}
+
+
+// MOSAIC
+// ==================================================================================================================
+@import "legacy/ds/mosaic";
+
+.mosaic-tile {
+    margin: 0 !important;
+    .mosaic-tile-image {
+        float: none !important;
+        padding: 0 !important;
+    }
+}

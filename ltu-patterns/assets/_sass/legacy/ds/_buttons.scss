@@ -1,0 +1,232 @@
+button.btn,
+button.btn-box {
+    /* remove browser styling from button element */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.btn {
+    border: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    display: inline-block;
+    padding: 12px 18px;
+    margin-bottom: 4px;
+    text-decoration: none;
+    color: white;
+    background-color: $color-1;
+    border: 2px solid transparent;
+
+    &:visited {
+        color: white;
+    }
+
+    &:hover {
+        text-decoration: underline;
+        background-color: darken($color-1,5%);
+    }
+
+    &[class*="icon-"]{
+        padding-right: 44px;
+        &::after {
+            filter: $white;
+            margin: 0 12px;
+        }
+    }
+
+    &.icon-before {
+        padding-right: 18px;
+        padding-left: 44px;
+        &::after {
+            left: 0;
+            right: unset;
+        }
+    }
+
+    @media (min-width: 1400px) {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+.btn-light {
+    @extend .btn;
+    color: $color-1;
+    background-color: white;
+    &:visited {
+        color: $color-1;
+    }
+    &:hover {
+        text-decoration: underline;
+        background-color: darken(white,5%);
+    }
+    &[class*="icon-"]{
+        &::after {
+            filter: $red;
+        }
+    }
+}
+
+.btn-secondary {
+    @extend .btn;
+    color: $color-2;
+    background-color: transparent;
+    border: 2px solid $color-2;
+    padding: 12px 18px;
+    &:visited {
+        color: $color-2;
+    }
+    &:hover {
+        background-color: rgba(black,.15);
+        border: 2px solid $color-2;
+    }
+    &[class*="icon-"]::after {
+        filter: $near-black;
+    }
+}
+
+.btn-secondary-light {
+    @extend .btn-secondary;
+    color: white;
+    border: 2px solid white;
+    &:visited {
+        color: white;
+    }
+    &:hover {
+        background-color: rgba(black,.15);
+        border: 2px solid white;
+    }
+    &[class*="icon-"]::after {
+        filter: $white;
+    }
+}
+
+.btn-small {
+    @extend .btn;
+    padding: 4px 16px;
+
+    &[class*="icon-"]{
+        padding-right: 28px;
+        &::after {
+            margin: 0 5px;
+            width: 16px;
+        }
+    }
+
+    &.icon-before {
+        padding-right: 16px;
+        padding-left: 28px;
+
+        &::after {
+            left: 0;
+            right: unset;
+        }
+    }
+}
+
+.btn-secondary-small {
+    @extend .btn-small;
+    @extend .btn-secondary;
+}
+
+.btn-light-small {
+    @extend .btn-small;
+    @extend .btn-light;
+}
+
+.btn-secondary-light-small {
+    @extend .btn-small;
+    @extend .btn-secondary-light;
+}
+
+.btn-pill {
+    border: 2px solid $color-2;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: inherit;
+    display: inline-block;
+    padding: 4px 16px;
+    border-radius: 20px;
+    color: $color-2;
+    text-decoration: none;
+    background-color: white;
+    &:visited {
+        color: $color-2;
+    }
+    &:hover {
+        text-decoration: underline;
+        background-color: rgba(black,.15);
+    }
+    &.selected {
+        color: white;
+        background-color: $color-2;
+    }
+}
+
+.btn-pill-alt {
+    @extend .btn-pill;
+    border: 2px solid $color-1;
+    color: $color-1;
+    &:visited {
+        color: $color-1;
+    }
+    &:hover {
+        text-decoration: underline;
+        background-color: rgba($color-1,.15);
+    }
+    &.selected {
+        color: white;
+        background-color: $color-1;
+    }
+}
+
+.btn-round {
+    @extend .btn-pill;
+    background-color: transparent;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    text-align: center;
+    border-radius: 50%;
+    text-indent: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    &[class*="icon-"]::after {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        transform: none;
+    }
+}
+
+.btn-round-small {
+    @extend .btn-round;
+    width: 36px;
+    height: 36px;
+}
+
+.btn-round-light {
+    @extend .btn-round;
+    color: white;
+    border: 2px solid white;
+    &:visited {
+        color: white;
+    }
+    &:hover {
+        background-color: rgba(black,.15);
+        border: 2px solid white;
+    }
+    &[class*="icon-"]::after {
+        filter: $white;
+    }
+}
+
+.btn-round-light-small {
+    @extend .btn-round-light;
+    @extend .btn-round-small;
+}
