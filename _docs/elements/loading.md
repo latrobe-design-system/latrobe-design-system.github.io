@@ -1,6 +1,6 @@
 ---
 title: "Loaders"
-status: planned
+status: ready
 info:
 ---
 

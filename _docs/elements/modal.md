@@ -1,5 +1,7 @@
 ---
 title: "Modal"
-status: planned
+status: draft
 info:
 ---
+
+{% include sample-iframe.html snippet="elements/modal/modal.html" %}
