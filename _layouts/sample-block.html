@@ -10,11 +10,19 @@
         <link rel="stylesheet" href="{{ site.url }}/ltu-patterns/assets/css/ds-ltu.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
     </head>
 
-    <body class="La_Trobe_University {{ page.ltulayout }}">
-        {{ content }}
-        
+    <body>
+        <header id="header"></header>
+
+        <main>
+
+            {{ content }}
+
+        </main>
+
+        <footer id="footer"></footer>
+
         <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-        
+
         <script src="{{ site.url }}/ltu-patterns/assets/js/modal-video.js"></script>
 
         <script src="{{ site.url }}/ltu-patterns/assets/js/tabs.js"></script>

@@ -44,6 +44,8 @@
 .proofpoint-set {
     @include columns;
 }
+
+/* // TODO: remove and include as separate block module
 .proofpoint-set-text {
     box-sizing: border-box;
     max-width: 800px;
@@ -58,3 +60,4 @@
         }
     }
 }
+*/
