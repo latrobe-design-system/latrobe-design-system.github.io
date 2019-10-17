@@ -1,29 +1,30 @@
 <!doctype html>
 <html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>{{ page.title }}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{{ page.title }}</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="{{ site.url }}/ltu-patterns/assets/css/ds-ltu.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
+    </head>
 
-    <link rel="stylesheet" href="{{ site.url }}/ltu-patterns/assets/css/ds-ltu.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
+    <body class="La_Trobe_University {{ page.ltulayout }}">
+        <div class="ds-block-container" data-blockwidth="wide" data-bgcolor="{{ page.bgcolor }}">
+        {{ content }}
+        </div>
 
-</head>
-<body class="La_Trobe_University {{ page.ltulayout }}">
-    <div class="ds-block-container" data-blockwidth="wide" data-bgcolor="{{ page.bgcolor }}">
-    {{ content }}
-    </div>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script src="{{ site.url }}/ltu-patterns/assets/js/modal-video.js"></script>
 
-    <script src="{{ site.url }}/ltu-patterns/assets/js/modal-video.js"></script>
+        <script src="{{ site.url }}/ltu-patterns/assets/js/tabs.js"></script>
 
-    <script src="{{ site.url }}/ltu-patterns/assets/js/tabs.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="{{ site.url }}/ltu-patterns/assets/js/tooltip.js"></script>
 
-    <script src="{{ site.url }}/ltu-patterns/assets/js/tooltip.js"></script>
-</body>
+        <script src="{{ site.url }}/ltu-patterns/assets/js/accordion.js"></script>
+    </body>
 </html>

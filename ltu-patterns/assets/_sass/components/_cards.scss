@@ -32,7 +32,6 @@
 }
 
 .card-cta {
-    @include font-roboto-condensed-bold;
     @extend [class*="icon-"];
     color: $color-1;
 
@@ -117,7 +116,6 @@ a.card {
     color: white;
     background: $color-1;
     padding: 8px;
-    @include font-roboto-condensed-bold;
     font-size: 16px;
     line-height: 1;
 }

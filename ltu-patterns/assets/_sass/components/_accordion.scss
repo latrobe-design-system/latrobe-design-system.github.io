@@ -1,64 +1,126 @@
-.main-content .expander-trigger {
-    cursor: pointer;
-    margin: 0 0 1px;
-    position: relative;
-    -webkit-transition: background-color .3s ease-in-out;
-    transition: background-color .3s ease-in-out;
-    z-index: 1;
+.accordion {
+    border-bottom: 2px solid #CCCCCC;
 }
 
-
-.expander-trigger button {
-    background: transparent;
-    border: none;
+.accordion-trigger {
+    background: none;
     display: block;
-    font-family: "Roboto Condensed",Impact,"Franklin Gothic Bold",sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 24px;
-    padding: 12px 12px 12px 46px;
-    text-align: left;
-    transition: color .3s ease-in-out,text-indent .3s ease-in-out;
-    width: 100%;
-    position: relative;
-}
-
-.expander-trigger.plain svg {
-    left: 0;
-    top: 8px;
-}
-
-.expander .expander-trigger svg {
-    padding: 0;
-    position: absolute;
-    top: 0;
-    transition: transform .3s ease-in-out;
-}
-
-.expander-trigger.plain button {
-    padding: 20px 0 20px 54px;
-}
-
-.plain+.expander-content>div {
-    padding: 0 14px;
-}
-
-.expander-content.open {
-    overflow: hidden;
-    -webkit-transition: height .3s ease-in-out,visibility 0s 0s;
-    transition: height .3s ease-in-out,visibility 0s 0s;
-    visibility: visible;
-}
-
-.expander-content {
     margin: 0;
-    overflow: hidden;
-    -webkit-transition: height .3s ease-in-out,visibility 0s .3s;
-    transition: height .3s ease-in-out,visibility 0s .3s;
-    visibility: hidden;
+    padding: $spacer * 5;
+    position: relative;
+    text-align: left;
+    width: 100%;
+    border: 0;
+    padding: $spacer * 5;
+    color: $color-1;
+    border-top: 2px solid #CCCCCC;
 }
 
-.expander-trigger.plain svg {
-    left: 0;
-    top: 8px;
+.accordion-trigger {
+    .accordion-icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: $spacer * 5;
+    }
+
+    .icon-plus {
+        display: block;
+    }
+
+    .icon-minus {
+        display: none;
+    }
+
+    &.active {
+        .icon-minus {
+            display: block;
+        }
+
+        .icon-plus {
+            display: none;
+        }
+    }
 }
+
+.accordion-content {
+    display: none;
+    padding: 0 $spacer * 5;
+}
+
+.accordion-trigger.active {
+    display: block;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// OLD ACCORDION STYLING
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// .main-content .expander-trigger {
+//     cursor: pointer;
+//     margin: 0 0 1px;
+//     position: relative;
+//     -webkit-transition: background-color .3s ease-in-out;
+//     transition: background-color .3s ease-in-out;
+//     z-index: 1;
+// }
+
+
+// .expander-trigger button {
+//     background: transparent;
+//     border: none;
+//     display: block;
+//     font-family: "Roboto Condensed",Impact,"Franklin Gothic Bold",sans-serif;
+//     font-weight: 700;
+//     font-size: 18px;
+//     line-height: 24px;
+//     padding: 12px 12px 12px 46px;
+//     text-align: left;
+//     transition: color .3s ease-in-out,text-indent .3s ease-in-out;
+//     width: 100%;
+//     position: relative;
+// }
+
+// .expander-trigger.plain svg {
+//     left: 0;
+//     top: 8px;
+// }
+
+// .expander .expander-trigger svg {
+//     padding: 0;
+//     position: absolute;
+//     top: 0;
+//     transition: transform .3s ease-in-out;
+// }
+
+// .expander-trigger.plain button {
+//     padding: 20px 0 20px 54px;
+// }
+
+// .plain+.expander-content>div {
+//     padding: 0 14px;
+// }
+
+// .expander-content.open {
+//     overflow: hidden;
+//     -webkit-transition: height .3s ease-in-out,visibility 0s 0s;
+//     transition: height .3s ease-in-out,visibility 0s 0s;
+//     visibility: visible;
+// }
+
+// .expander-content {
+//     margin: 0;
+//     overflow: hidden;
+//     -webkit-transition: height .3s ease-in-out,visibility 0s .3s;
+//     transition: height .3s ease-in-out,visibility 0s .3s;
+//     visibility: hidden;
+// }
+
+// .expander-trigger.plain svg {
+//     left: 0;
+//     top: 8px;
+// }
