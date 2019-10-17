@@ -21,7 +21,6 @@
     margin: 0 0 16px 0;
 }
 .proofpoint-number {
-    @include font-roboto-condensed-bold;
     color: $color-1;
     font-size: 40px;
     line-height: 1;
@@ -29,7 +28,6 @@
 }
 .proofpoint-text,
 .proofpoint-legacy-content p:first-child {
-    @include font-roboto-condensed-bold;
     color: $color-3d;
     font-size: 20px;
     line-height: 28px;
