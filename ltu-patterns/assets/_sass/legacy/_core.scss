@@ -1590,6 +1590,7 @@ ul.mm4 li:before {
 .nav-out .nav-container {
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
+    box-shadow: none;
 }
 
 .js .nav-container {
