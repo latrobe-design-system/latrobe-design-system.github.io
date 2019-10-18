@@ -1,14 +1,45 @@
+//
+// Paragraph text
+//
 
-p,
-ul {
-    margin: 0 0 28px;
+p {
+    font-size: $text-base-size;
+    max-width: 42em;
+    margin-top: 0;
+    margin-bottom: $spacer * 5;
 }
-@media (min-width:1400px) {
-    p,
-    ul {
-        margin: 0 0 28px;
+
+p.lead {
+    font-size: $text-base-size * 1.2;
+}
+
+p.small,
+.tooltip,
+small {
+    font-size: $text-base-size * 0.8;
+}
+
+
+//
+// blockquote
+//
+
+blockquote {
+    @include font-roboto-slab-light;
+    margin: 0 0 24px 0;
+    padding: 0;
+    :first-child:before {
+        content: open-quote;
+    }
+    :last-child:after {
+        content: close-quote;
     }
 }
+
+
+//
+//
+//
 
 abbr,
 acronym {
@@ -24,8 +55,6 @@ b,
 strong {
     font-weight: 500;
 }
-
-blockquote {}
 
 dfn {
     font-style: italic;

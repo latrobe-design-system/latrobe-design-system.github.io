@@ -30,6 +30,8 @@ status: draft
 
 {% include sample-iframe.html snippet="elements/text/blockquote.html" %}
 
+{% include sample-iframe.html snippet="elements/text/blockquote-attribution.html" %}
+
 {% include sample-iframe.html snippet="elements/text/pull_quote.html" %}
 
 {% include sample-iframe.html snippet="elements/text/hr.html" %}

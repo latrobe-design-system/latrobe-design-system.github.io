@@ -32,3 +32,13 @@ body,
 html {
     height: 100%;
 }
+
+a,
+a:visited {
+    color: $color-1;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}

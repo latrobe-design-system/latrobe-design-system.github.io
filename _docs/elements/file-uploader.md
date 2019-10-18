@@ -1,6 +1,6 @@
 ---
 title: "File uploader"
-status: draft
+status: planned
 info:
 ---
 

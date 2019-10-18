@@ -1,6 +1,6 @@
 ---
 title: "Date picker"
-status: draft
+status: planned
 info:
 ---
 
