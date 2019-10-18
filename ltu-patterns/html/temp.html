@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="lt-ie9 lt-ie8 lt-ie7 ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="lt-ie9 lt-ie8 ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="lt-ie9 ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en" class="">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <MySource_AREA id_name="metadata" design_area="metadata" />
+
+    <meta property="og:url" content='<MySource_PRINT id_name="__global__" var="asset_url" />' />
+    <meta property="og:title" content='<MySource_PRINT id_name="__global__" var="asset_name" />' />
+    <meta property="og:description" content="<MySource_PRINT id_name='__global__' var='asset_metadata_description' />" />
+    <meta property="og:image" content='<MySource_PRINT id_name="__global__" var="asset_thumbnail_url^empty:https://www.latrobe.edu.au/_media/la-trobe-api/v5/img/latrobe-logo-og.png" />' />
+
+    <MySource_AREA id_name="standard_page_title" design_area="asset_lineage" print="no">
+        <MySource_DIVIDER>, </MySource_DIVIDER>
+        <mysource_print id_name="__global__" var="asset_name" />, <MySource_ASSET>
+            <MySource_PRINT var="asset_name" />
+        </MySource_ASSET>La Trobe University
+    </MySource_AREA>
+
+    <MySource_AREA id_name="print_page_title" design_area="show_if">
+        <MySource_SET name="condition" value="keyword_regexp" />
+        <MySource_SET name="condition_keyword" value="asset_metadata_override_page_title" />
+        <MySource_SET name="condition_keyword_match" value="^$" />
+        <MySource_THEN>
+            <title>
+                <MySource_PRINT id_name="standard_page_title" />
+            </title>
+        </MySource_THEN>
+        <MySource_ELSE>
+            <title>
+                <MySource_PRINT id_name="__global__" var="asset_metadata_override_page_title" />
+            </title>
+        </MySource_ELSE>
+    </MySource_AREA>
+
+    <MySource_AREA id_name="print_canonical_url" design_area="show_if">
+        <MySource_SET name="condition" value="keyword_regexp" />
+        <MySource_SET name="condition_keyword" value="asset_metadata_canonical_url" />
+        <MySource_SET name="condition_keyword_match" value="^$" />
+        <MySource_THEN></MySource_THEN>
+        <MySource_ELSE>
+            <link rel="canonical" href="<MySource_PRINT id_name=" __global__" var="asset_metadata_canonical_url" />" />
+        </MySource_ELSE>
+    </MySource_AREA>
+
+    <!-- <MySource_PRINT id_name="__global__" var="asset_assetid" /> -->
+
+    <script>document.documentElement.className += ' js';</script>
+
+    <!--<link href="/_media/la-trobe-api/v5/v5/default/ltu.css?v=%globals_asset_version:703119%" rel="stylesheet" media="screen" />-->
+    <link href="%globals_asset_url_with_hash:1037862:css/ltu.css%" rel="stylesheet" media="screen" />
+    <link href="/_media/la-trobe-api/v5/v5/default/print.css?v=%globals_asset_version:554839%" rel="stylesheet" media="print" />
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- end favicon -->
+
+    <!--[if lt IE 9]>
+<script src="/__data/assets/js_file/0006/576672/html5shiv.min.js"></script>
+<![endif]-->
+
+    <MySource_AREA id_name="head_custom_content" design_area="nest_content"></MySource_AREA>
+
+    <MySource_AREA id_name="adobedtm_head_script_tag" design_area="nest_content">
+        <MySource_SET name="type_codes" value="page" />
+    </MySource_AREA>
+
+</head>
+
+<body class="%globals_site_name^css_safe% <MySource_PRINT id_name=" __global__" var="asset_metadata_layout^empty:standard_page^replace:inside:standard_page^replace:AIPCA_new:standard_page^replace:awards:standard_page^replace:video_page:standard_page^replace:big_fat_idea:standard_page^replace:Events_Area_of_Study_Template:standard_page^replace:major_projects:standard_page^replace:regional_careers:standard_page^replace:Scholarships_new:standard_page" />
+<MySource_PRINT id_name="__global__" var="asset_metadata_hide_left_nav" />">
+
+<script>
+    var mobileBreakingPoint = 1023;
+
+    if (window.outerWidth <= mobileBreakingPoint) {
+        //collapseUniverse();
+        var b = document.body
+        b.className += ' nav-out';
+    }
+</script>
+
+<MySource_AREA id_name="analytics" design_area="nest_content">
+    <MySource_SET name="type_codes" value="page" />
+</MySource_AREA>
+
+<div class="wrapper <MySource_PRINT id_name=" __global__" var="asset_status_description^css_safe" /> a
+<MySource_PRINT id_name="__global__" var="asset_assetid" />">
+<!-- WRAP -->
+
+<!-- noindex-->
+
+<a id="skip" href="#bodyContent">Skip to content</a>
+
+<header id="header">
+    <!-- HEADER -->
+    <p id="gdpr"><span>This website <a href="/statements/privacy">uses cookies</a> to ensure you get a better experience.</span> <button id="gdpr-button">Allow Cookies</button></p>
+    <div class="header-top flex-wrapper">
+        <MySource_AREA id_name="nav_utility" design_area="nest_content"></MySource_AREA>
+        <div id="logo">
+            <a id="hamburger" class="hamburger" href="#nav-container">MENU</a>
+            <!-- Test if home page -->
+            <MySource_AREA id_name="if_home_page" design_area="show_if">
+                <MySource_SET name="condition" value="keyword_regexp" />
+                <MySource_SET name="condition_keyword" value="asset_assetid" />
+                <MySource_SET name="condition_keyword_match" value="549405" />
+                <MySource_THEN>
+                    <h1><img src="%globals_asset_href:719360%" alt="La Trobe University" height="80" width="239" /></h1>
+                    <script type="application/ld+json">
+                        {
+                            "@context": "http://schema.org",
+                            "@type": "Organization",
+                            "url": "https://www.latrobe.edu.au",
+                            "logo": "%globals_asset_href:719360%"
+                        }
+                    </script>
+                </MySource_THEN>
+                <MySource_ELSE><a href="/"><img src="%globals_asset_href:719360%" alt="La Trobe University" height="80" width="239" /></a></MySource_ELSE>
+            </MySource_AREA>
+        </div>
+    </div>
+
+    <nav id="nav-universes" class="nav-universes" role="navigation">
+        <MySource_AREA id_name="nav_universe" design_area="nest_content" />
+    </nav>
+    <input id="global-search-button" title="Search" type="checkbox" /><label for="global-search-button">Search</label>
+    <section class="global-search">
+        <div class="search-wrapper">
+            <form id="ltu-global-search" action="/search">
+                <h2 class="section-heading"><label for="LT_search_field">Search La Trobe</label></h2>
+                <p class="ltu-search-fields">
+                    <input type="hidden" value="Latrobe-search" name="collection">
+                    <input type="hidden" name="searchtype" value="global" />
+                    <input id="LT_search_field" type="search" name="query" placeholder="Keyword" autocomplete="off" /><button id="clear_LT_search_field" type="button"><img src="./?a=551677" alt="Clear" /></button><input id="ltu-search-submit" type="submit" value="Go" />
+                </p>
+            </form>
+        </div>
+    </section>
+</header>
+<!--/HEADER -->
+
+<!--endnoindex-->
+
+<main id="content" role="main">
+    <MySource_AREA id_name="body" design_area="body" />
+
+    <div class="clear"></div>
+</main><!-- End Content -->
+
+<!-- noindex-->
+
+<footer id="footer" role="contentinfo">
+    <img id="footer-watermark" src="/__data/assets/file/0012/796386/eagle.svg" alt="" />
+    <!-- Available fat footers -->
+    <MySource_AREA id_name="fat_footer_content" design_area="nest_content"></MySource_AREA>
+    <MySource_AREA id_name="alumni_fat_footer_content" design_area="nest_content"></MySource_AREA>
+    <MySource_AREA id_name="students_fat_footer_content" design_area="nest_content"></MySource_AREA>
+    <MySource_AREA id_name="staff_fat_footer_content" design_area="nest_content"></MySource_AREA>
+    <MySource_AREA id_name="researchers_fat_footer_content" design_area="nest_content"></MySource_AREA>
+    <MySource_AREA id_name="library_fat_footer_content" design_area="nest_content"></MySource_AREA>
+
+    <!-- Print universe footer -->
+    <MySource_AREA id_name="standard_footer" design_area="show_if">
+        <MySource_SET name="condition" value="keyword_regexp" />
+        <MySource_SET name="condition_keyword" value="globals_site_name^css_safe" />
+        <MySource_SET name="condition_keyword_match" value="La_Trobe_University" />
+        <MySource_THEN>
+            <MySource_PRINT id_name="fat_footer_content" />
+        </MySource_THEN>
+        <MySource_ELSE></MySource_ELSE>
+    </MySource_AREA>
+
+    <MySource_AREA id_name="alumni_footer" design_area="show_if">
+        <MySource_SET name="condition" value="keyword_regexp" />
+        <MySource_SET name="condition_keyword" value="globals_site_name^css_safe" />
+        <MySource_SET name="condition_keyword_match" value="Alumni" />
+        <MySource_THEN>
+            <MySource_PRINT id_name="alumni_fat_footer_content" />
+        </MySource_THEN>
+        <MySource_ELSE></MySource_ELSE>
+    </MySource_AREA>
+
+    <MySource_AREA id_name="students_footer" design_area="show_if">
+        <MySource_SET name="condition" value="keyword_regexp" />
+        <MySource_SET name="condition_keyword" value="globals_site_name^css_safe" />
+        <MySource_SET name="condition_keyword_match" value="Students" />
+        <MySource_THEN>
+            <MySource_PRINT id_name="students_fat_footer_content" />
+        </MySource_THEN>
+        <MySource_ELSE></MySource_ELSE>
+    </MySource_AREA>
+
+    <MySource_AREA id_name="staff_footer" design_area="show_if">
+        <MySource_SET name="condition" value="keyword_regexp" />
+        <MySource_SET name="condition_keyword" value="globals_site_name^css_safe" />
+        <MySource_SET name="condition_keyword_match" value="Staff" />
+        <MySource_THEN>
+            <MySource_PRINT id_name="staff_fat_footer_content" />
+        </MySource_THEN>
+        <MySource_ELSE></MySource_ELSE>
+    </MySource_AREA>
+
+    <MySource_AREA id_name="researchers_footer" design_area="show_if">
+        <MySource_SET name="condition" value="keyword_regexp" />
+        <MySource_SET name="condition_keyword" value="globals_site_name^css_safe" />
+        <MySource_SET name="condition_keyword_match" value="Researchers" />
+        <MySource_THEN>
+            <MySource_PRINT id_name="researchers_fat_footer_content" />
+        </MySource_THEN>
+        <MySource_ELSE></MySource_ELSE>
+    </MySource_AREA>
+
+    <MySource_AREA id_name="library_footer" design_area="show_if">
+        <MySource_SET name="condition" value="keyword_regexp" />
+        <MySource_SET name="condition_keyword" value="globals_site_name^css_safe" />
+        <MySource_SET name="condition_keyword_match" value="Library" />
+        <MySource_THEN>
+            <MySource_PRINT id_name="library_fat_footer_content" />
+        </MySource_THEN>
+        <MySource_ELSE></MySource_ELSE>
+    </MySource_AREA>
+
+    <MySource_AREA id_name="logged_in_owner" design_area="show_if">
+        <MySource_SET name="condition" value="logged_in" />
+        <MySource_THEN>
+
+            <script src="/_media/la-trobe-api/v5/api.js"></script><!--  JS API -->
+            <script src="/__data/assets/js_file/0003/579333/adminFooterEmailsjs.js"></script> <!-- adminFooterEmails -->
+
+            <div id="editors-wrap">
+                <p>Asset status: %asset_status_description%<br />
+                    Content is maintained by:<br />
+                    <span id="admin_emails"><a href='mailto:WebMarketing@latrobe.edu.au'>WebMarketing@latrobe.edu.au</a></span>
+                    <br />
+                    <!--a href="https://intranet.latrobe.edu.au/myict/form_web_publishing_account_update.php">Update your site details</a-->
+
+                </p>
+            </div>
+        </MySource_THEN>
+    </MySource_AREA>
+</footer>
+
+<script src="/_media/la-trobe-api/v5/v5/default/ltu.min.js?v=%globals_asset_version:703124%"></script>
+<MySource_AREA id_name="footer_custom_content" design_area="nest_content"></MySource_AREA>
+
+<!--endnoindex-->
+
+</div> <!-- WRAP -->
+
+<MySource_AREA id_name="adobedtm_footer_script_tag" design_area="nest_content">
+    <MySource_SET name="type_codes" value="page" />
+</MySource_AREA>
+
+</body>
+
+</html>
