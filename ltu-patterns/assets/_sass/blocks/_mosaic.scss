@@ -57,6 +57,9 @@
     }
 
     &[data-bg="image"] {
+        .mosaic-tile-content {
+            background: linear-gradient(to top, #242424, transparent 50%);
+        }
         .mosaic-tile-image {
             display: block;
         }
@@ -116,7 +119,7 @@
     }
 
     .mosaic-tile-title {
-        margin: 0 0 8% 0;
+        margin: 0 0 0 0;
         font-size: calc(16px + 6 * ((100vw - 320px) / 680));
         line-height: calc(20px + 6 * ((100vw - 320px) / 680));
         @media screen and (min-width: 1000px) {
@@ -153,6 +156,7 @@
     }
 
     .mosaic-tile-title {
+        margin: 0 0 8% 0;
         font-size: 24px;
         line-height: 28px;
         font-size: calc(24px + 6 * ((100vw - 320px) / 680));
