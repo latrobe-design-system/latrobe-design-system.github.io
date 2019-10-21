@@ -9,7 +9,7 @@ button.btn-box {
     border: 0;
     box-sizing: border-box;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 24px;
     display: inline-block;
     padding: 12px 18px;
@@ -142,6 +142,7 @@ button.btn-box {
 }
 
 .btn-pill {
+    font-weight: 500;
     border: 2px solid $color-2;
     box-sizing: border-box;
     font-size: 16px;
@@ -152,13 +153,16 @@ button.btn-box {
     color: $color-2;
     text-decoration: none;
     background-color: white;
+
     &:visited {
         color: $color-2;
     }
+
     &:hover {
         text-decoration: underline;
         background-color: rgba(black,.15);
     }
+
     &.selected {
         color: white;
         background-color: $color-2;

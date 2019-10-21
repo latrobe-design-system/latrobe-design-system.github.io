@@ -1,11 +1,10 @@
 .tabs-nav {
     list-style: none;
     padding: 0;
-    overflow: auto;
 }
 
 .tabs-nav li {
-    float: left;
+    display: inline-block;
     margin-bottom: 0;
     margin-right: 16px;
 }
@@ -41,4 +40,8 @@
             color: $color-2a;
         }
     }
+}
+
+.tab-item {
+    overflow: visible;
 }

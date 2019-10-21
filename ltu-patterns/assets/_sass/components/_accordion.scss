@@ -1,5 +1,16 @@
 .accordion {
-    border-bottom: 2px solid #CCCCCC;
+
+}
+
+.accordion-item {
+    border: 1px solid $color-2;
+    padding: 0;
+    margin: 0;
+}
+
+.accordion-item+.accordion-item {
+    border-top: 0;
+    margin-top: 0;
 }
 
 .accordion-trigger {
@@ -10,13 +21,29 @@
     position: relative;
     text-align: left;
     width: 100%;
-    border: 0;
+    border: none;
     padding: $spacer * 5;
     color: $color-1;
-    border-top: 2px solid #CCCCCC;
+    cursor: pointer;
+}
+
+.accordion-trigger:focus {
+    outline: 3px solid $color-1;
+    outline-offset: 2px;
+}
+
+.accordion-trigger:hover {
+    .accordion-title {
+        text-decoration: none;
+        color: $color-2;
+    }
 }
 
 .accordion-trigger {
+    .accordion-title {
+        text-decoration: underline;
+    }
+
     .accordion-icon {
         position: absolute;
         top: 50%;
@@ -45,7 +72,7 @@
 
 .accordion-content {
     display: none;
-    padding: 0 $spacer * 5;
+    padding: $spacer * 5 $spacer * 5 0;
 }
 
 .accordion-trigger.active {

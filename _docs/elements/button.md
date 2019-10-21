@@ -54,11 +54,3 @@ These buttons are used for filters. They have a `<selected>` class.
 **_Yet to look at restyling these_**
 
 Use `<input>` buttons in forms.
-
-## Legacy classes
-
-### Ltu buttons
-
-Buttons using `<a class="ltu-button">` have been aligned in style with secondary button.
-
-{% include sample-iframe.html snippet="elements/buttons/legacy_button.html" ltulayout="standard_page" %}
