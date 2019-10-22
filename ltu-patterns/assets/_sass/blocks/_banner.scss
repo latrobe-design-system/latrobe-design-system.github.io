@@ -1,3 +1,38 @@
+/* Banner for campaigns */
+
+.banner-campaign {
+    width: 100%;
+    display: flex;
+    padding-left: 12%;
+    align-items: center;
+    overflow: hidden;
+}
+
+.banner-campaign-text {
+    width: 60%;
+    padding-right: $spacer * 10;
+}
+
+.banner-campaign-angle {
+    transform: skew(-15deg);
+    width: 40%;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    right: -100px;
+}
+
+.banner-campaign-image {
+    background-size: cover;
+    background-position: center;
+    transform: skew(15deg);
+    position: absolute;
+    top: 0px;
+    left: -100px;
+    right: 0px;
+    bottom: 0px;
+}
+
 /* Banner for discipline page */
 .banner-box {
     position: relative;
