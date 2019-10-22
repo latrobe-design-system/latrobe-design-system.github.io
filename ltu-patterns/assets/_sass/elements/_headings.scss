@@ -7,24 +7,24 @@ html {
 }
 
 body {
-    @include font-roboto-regular;
+    @include font-roboto-light;
     line-height: 1.5;
     font-size: 1rem;
-    
+
 }
 
 //
 // Headings
 //
 
-$heading-scale-ratio: 1.2;
+$heading-scale-ratio: 1.333;
 
 $h6: 1rem;
-$h5: $h6 * $heading-scale-ratio;
+$h5: 1rem;
 $h4: $h5 * $heading-scale-ratio;
 $h3: $h4 * $heading-scale-ratio;
 $h2: $h3 * $heading-scale-ratio;
-$h1: $h2 * $heading-scale-ratio;
+$h1: $h2 * $heading-scale-ratio * $heading-scale-ratio;
 
 h1, .h1,
 h2, .h2,
@@ -36,6 +36,22 @@ h6, .h6 {
     margin-bottom: $spacer * 5;
     font-weight: $medium-weight;
     max-width: 42em;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4 {
+    line-height: 1.2;
+    max-width: 30em;
+}
+
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    margin-top: 2em;
 }
 
 h1, .h1 {
@@ -59,7 +75,16 @@ h5, .h5 {
 }
 
 h6, .h6 {
-    font-size: $h6;
+    font-size: $h6 * 0.8;
+    text-transform: uppercase;
+    /*letter-spacing: 1px;*/
+}
+
+h2 + h3,
+h3 + h4,
+h4 + h5,
+h5 + h6 {
+    //margin-top: 0;
 }
 
 
