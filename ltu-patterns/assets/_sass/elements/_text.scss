@@ -3,20 +3,19 @@
 //
 
 p {
-    font-size: $text-base-size;
     max-width: 42em;
     margin-top: 0;
     margin-bottom: $spacer * 5;
 }
 
 p.lead {
-    font-size: $text-base-size * 1.2;
+    font-size: 1.2rem;
 }
 
 p.small,
 .tooltip,
 small {
-    font-size: $text-base-size * 0.8;
+    font-size: 0.8rem;
 }
 
 
