@@ -1,60 +1,17 @@
+html {
+    font-size: 16px;
+
+    @media(min-width: 1400px){
+        font-size: 18px;
+    }
+}
+
 body {
     @include font-roboto-regular;
-    font-size: $text-base-size;
     line-height: 1.5;
+    font-size: 1rem;
+    
 }
-
-//
-// Display headings
-//
-
-$display-heading-scale-ratio: 1.333;
-
-$display-6: $text-base-size;
-$display-5: $display-6 * $display-heading-scale-ratio;
-$display-4: $display-5 * $display-heading-scale-ratio;
-$display-3: $display-4 * $display-heading-scale-ratio;
-$display-2: $display-3 * $display-heading-scale-ratio;
-$display-1: $display-2 * $display-heading-scale-ratio;
-
-.display-1,
-.display-2,
-.display-3,
-.display-4,
-.display-5,
-.display-6 {
-    @include font-roboto-condensed-bold;
-    font-weight: $bold-weight;
-    margin-top: 0;
-    margin-bottom: $spacer;
-    color: white;
-    line-height: 1.2;
-}
-
-.display-1 {
-    font-size: $display-1;
-}
-
-.display-2 {
-    font-size: $display-2;
-}
-
-.display-3 {
-    font-size: $display-3;
-}
-
-.display-4 {
-    font-size: $display-4;
-}
-
-.display-5 {
-    font-size: $display-5;
-}
-
-.display-6 {
-    font-size: $display-6;
-}
-
 
 //
 // Headings
@@ -62,7 +19,7 @@ $display-1: $display-2 * $display-heading-scale-ratio;
 
 $heading-scale-ratio: 1.2;
 
-$h6: $text-base-size;
+$h6: 1rem;
 $h5: $h6 * $heading-scale-ratio;
 $h4: $h5 * $heading-scale-ratio;
 $h3: $h4 * $heading-scale-ratio;
@@ -104,3 +61,55 @@ h5, .h5 {
 h6, .h6 {
     font-size: $h6;
 }
+
+
+//
+// Display headings
+//
+
+// $display-heading-scale-ratio: 1.333;
+
+// $display-6: $text-base-size;
+// $display-5: $display-6 * $display-heading-scale-ratio;
+// $display-4: $display-5 * $display-heading-scale-ratio;
+// $display-3: $display-4 * $display-heading-scale-ratio;
+// $display-2: $display-3 * $display-heading-scale-ratio;
+// $display-1: $display-2 * $display-heading-scale-ratio;
+
+// .display-1,
+// .display-2,
+// .display-3,
+// .display-4,
+// .display-5,
+// .display-6 {
+//     @include font-roboto-condensed-bold;
+//     font-weight: $bold-weight;
+//     margin-top: 0;
+//     margin-bottom: $spacer;
+//     color: white;
+//     line-height: 1.2;
+// }
+
+// .display-1 {
+//     font-size: $display-1;
+// }
+
+// .display-2 {
+//     font-size: $display-2;
+// }
+
+// .display-3 {
+//     font-size: $display-3;
+// }
+
+// .display-4 {
+//     font-size: $display-4;
+// }
+
+// .display-5 {
+//     font-size: $display-5;
+// }
+
+// .display-6 {
+//     font-size: $display-6;
+// }
