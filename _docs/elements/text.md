@@ -3,7 +3,7 @@ title: "Text"
 status: draft
 ---
 
-{% include sample-iframe.html snippet="elements/text/display-headings.html" %}
+<!-- {% include sample-iframe.html snippet="elements/text/display-headings.html" %} -->
 
 {% include sample-iframe.html snippet="elements/text/headings.html" %}
 

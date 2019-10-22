@@ -3,7 +3,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
-    border-bottom: 1px solid #ccc;
+    margin-bottom: $spacer * 10;
 
     @media(max-width: 768px){
         width: 768px;
@@ -29,13 +29,14 @@ td, th {
 
 th {
     background-color: white;
-    padding: $spacer*5 $spacer * 10;
+    padding: $spacer*5 $spacer * 8;
     text-align: left;
+    border-bottom: 2px solid $color-2a;
 }
 
 td {
-    border-right: 1px solid #CCCCCC;
-    padding: $spacer * 10;
+    border-right: 1px solid $color-3c;
+    padding: $spacer * 8;
 
     &:last-child {
         border-right: none;
@@ -43,15 +44,7 @@ td {
 }
 
 tr {
-    border-bottom: 1px solid #CCCCCC;
-
-    &:last-child {
-        border-bottom: none;
-    }
-}
-
-tr:nth-child(odd) {
-    background-color: #eee;
+    border-bottom: 1px solid $color-3c;
 }
 
 tr:nth-child(even) {
