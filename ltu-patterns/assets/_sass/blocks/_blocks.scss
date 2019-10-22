@@ -1,14 +1,3 @@
-main > article {
-    padding: 20px 0;
-    background: #fff;
-    margin: 128px 0 0 25%;
-}
-main > article > div {
-    margin: 0 20px;
-    @media (min-width: 640px) {
-        margin: 0 6%;
-    }
-}
 .ds-block-container {
     margin: 0;
     padding: 0;
@@ -86,10 +75,10 @@ main > article > div {
     text-align: center;
     margin: 0 0 24px 0;
     h2 {
-        margin: 0 0 8px 0;
+        margin: 0 auto 8px auto;
     }
     p {
-        margin: 0 0 24px 0;
+        margin: 0 auto 24px auto;
     }
 }
 .ds-block-container {
