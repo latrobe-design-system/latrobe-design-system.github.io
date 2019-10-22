@@ -28,18 +28,26 @@ td, th {
 }
 
 th {
-    background-color: #333;
-    color: #fff;
-    font-size: $text-base-size;
+    background-color: white;
     padding: $spacer*5 $spacer * 10;
     text-align: left;
 }
 
 td {
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
-    border-color: #ccc;
+    border-right: 1px solid #CCCCCC;
     padding: $spacer * 10;
+
+    &:last-child {
+        border-right: none;
+    }
+}
+
+tr {
+    border-bottom: 1px solid #CCCCCC;
+
+    &:last-child {
+        border-bottom: none;
+    }
 }
 
 tr:nth-child(odd) {
@@ -47,5 +55,5 @@ tr:nth-child(odd) {
 }
 
 tr:nth-child(even) {
-    background-color: #fff;
+    background-color: #fafafa;
 }
