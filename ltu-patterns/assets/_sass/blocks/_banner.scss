@@ -1,38 +1,99 @@
 //----------------------------------------------------------------------------------------------------------------------------------// 
+// Banner Hero
+//----------------------------------------------------------------------------------------------------------------------------------// 
+
+.banner-hero {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner-hero-image {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    background-position: center;
+}
+
+.banner-hero-text {
+    padding-left: 6%;
+
+    @media (min-width:768px) {
+        padding-left: 12%;
+        width: 60%;
+        color: white;
+        z-index: 1000;
+    }
+}
+
+.banner-hero-overlay {
+    @media (min-width:768px) {
+        width: 50%;
+        height: 100%;
+        background-image: linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0));
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 100;
+    }
+}
+
+//----------------------------------------------------------------------------------------------------------------------------------// 
 // Banner Campaigns
 //----------------------------------------------------------------------------------------------------------------------------------// 
 
 .banner-campaign {
     width: 100%;
-    display: flex;
-    padding-left: 12%;
-    align-items: center;
-    overflow: hidden;
+    padding: 0 6%;
+
+    @media (min-width:768px) {
+        display: flex;
+        align-items: center;
+        padding-left: 12%;
+        padding-right: 0;
+        overflow: hidden;
+    }
 }
 
 .banner-campaign-text {
-    width: 60%;
-    padding-right: $spacer * 10;
-}
+    @media (min-width:768px) {
+        width: 50%;
+        padding-right: $spacer * 10;
+        z-index: 2;
+    }
 
-.banner-campaign-angle {
-    transform: skew(-15deg);
-    width: 40%;
-    height: 600px;
-    position: relative;
-    overflow: hidden;
-    right: -100px;
+    @media (min-width:960px) {
+        width: 60%;
+    }
 }
 
 .banner-campaign-image {
-    background-size: cover;
-    background-position: center;
-    transform: skew(15deg);
-    position: absolute;
-    top: 0px;
-    left: -100px;
-    right: 0px;
-    bottom: 0px;
+    @media (min-width:768px) {
+        width: 50%;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        height: 800px;
+        z-index: 1;
+
+        &:after {
+            content: " ";
+            position: absolute;
+            display: block;
+            width: 215px;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transform-origin: top left;
+            background: white;
+            transform: skew(-15deg, 0deg);
+        }
+    }
+
+    @media (min-width:960px) {
+        width: 40%;
+    }
 }
 
 //----------------------------------------------------------------------------------------------------------------------------------// 
