@@ -4,8 +4,6 @@
 
 html {
     font-size: 16px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 
     @media(min-width: 1400px){
         font-size: 18px; // increase base font size for large displays
@@ -13,10 +11,12 @@ html {
 }
 
 body {
-    @include font-roboto-regular;
+    @include font-roboto-bold;
+    font-weight: normal;
     line-height: 1.5;
     font-size: 1rem;
-
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 //
