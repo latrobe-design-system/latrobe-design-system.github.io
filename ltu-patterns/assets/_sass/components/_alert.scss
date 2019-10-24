@@ -1,18 +1,28 @@
-//
-// Alert base
-//
+//----------------------------------------------------------------------------------------------------------------------------------// 
+// Alert Base
+//----------------------------------------------------------------------------------------------------------------------------------// 
 
 .alert {
-    border: 2px solid rgba($color-alt-3, 0.2);
+    border: 2px solid rgba($color-alt-3, 0.5);
     border-radius: 6px;
     padding: 12px 20px;
     margin: 32px auto;
     position: relative;
+    font-weight: 400;
+    padding: 12px 24px;
 }
 
-//
+.alert h4 {
+    margin-top: 0;
+}
+
+.alert p:last-child {
+    margin: 0;
+} 
+
+//----------------------------------------------------------------------------------------------------------------------------------// 
 // Alert colours
-//
+//----------------------------------------------------------------------------------------------------------------------------------// 
 
 .alert-primary {
     color: #004085;
@@ -53,7 +63,7 @@
 .alert-light {
     color: #818182;
     background-color: #fefefe;
-    border-color: #fdfdfe;
+    border-color: #cccccc;
 }
 
 .alert-dark {
@@ -62,29 +72,25 @@
     border-color: #c6c8ca;
 }
 
-//
-// Alertbox
-//
+//----------------------------------------------------------------------------------------------------------------------------------// 
+// Alert Box
+//----------------------------------------------------------------------------------------------------------------------------------// 
 
 .alertbox {
     @extend .alert;
     font-weight: $light-weight;
-    max-width: 700px;
 }
 
 .alertbox-heading {
     @include font-roboto-slab;
-    font-size: 24px;
-    font-weight: normal;
-    line-height: 28px;
+    font-size: $h3;
     margin: 0 0 24px 0;
     color: $color-alt-3;
 }
 
 .alertbox::before {
-    display: inline-block;
-    float: left;
     content: "";
+    display: inline-block;
     width: 32px;
     height: 32px;
     margin-right: 16px;
@@ -98,29 +104,30 @@
 @media(min-width: 768px){
     .alertbox {
         position: relative;
-        padding: 20px 80px;
+        padding: $spacer * 6 $spacer * 20;
     }
     .alertbox::before {
         display: block;
         position: absolute;
-        top: 18px;
-        left: 20px;
+        left: 24px;
+        top: 26px;
     }
 }
 
 
-//
-// Alert icons
-//
+//----------------------------------------------------------------------------------------------------------------------------------// 
+// Alert Icons
+//----------------------------------------------------------------------------------------------------------------------------------// 
 
 .alert .close {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: $spacer;
+    right: $spacer * 3;
     padding: 0;
     color: inherit;
     background-color: transparent;
     border: 0;
     line-height: 0;
+    cursor: pointer;
 }
