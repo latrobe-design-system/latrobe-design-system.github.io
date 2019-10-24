@@ -17,14 +17,14 @@ body {
 // Headings
 //
 
-$heading-scale-ratio: 1.333;
+$heading-scale-ratio: 1.25;
 
 $h6: 1rem;
 $h5: 1rem;
 $h4: $h5 * $heading-scale-ratio;
 $h3: $h4 * $heading-scale-ratio;
 $h2: $h3 * $heading-scale-ratio;
-$h1: $h2 * $heading-scale-ratio * $heading-scale-ratio;
+$h1: $h2 * $heading-scale-ratio;
 
 h1, .h1,
 h2, .h2,
@@ -56,6 +56,9 @@ h6, .h6 {
 
 h1, .h1 {
     font-size: $h1;
+    @media(min-width: 1024px){
+        font-size: $h1 * $heading-scale-ratio;
+    }
 }
 
 h2, .h2 {
@@ -77,6 +80,7 @@ h5, .h5 {
 h6, .h6 {
     font-size: $h6 * 0.8;
     text-transform: uppercase;
+    font-weight: 700;
     /*letter-spacing: 1px;*/
 }
 
