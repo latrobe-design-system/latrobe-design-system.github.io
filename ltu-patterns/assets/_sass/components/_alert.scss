@@ -73,7 +73,8 @@
 }
 
 .alertbox-heading {
-    @include font-roboto-slab;
+    font-family: $font-roboto-slab;
+    font-weight: $normal-weight;
     font-size: 24px;
     font-weight: normal;
     line-height: 28px;
@@ -117,7 +118,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: $spacer/2;
+    right: $spacer;
     padding: 0;
     color: inherit;
     background-color: transparent;

@@ -11,17 +11,21 @@
     </head>
 
     <body>
-        <header id="header"></header>
+        <header id="header" class="site-header"></header>
 
-        <main>
+        <main id="content">
 
-            <div class="ds-block-container" data-blockwidth="wide" data-bgcolor="{{ page.bgcolor }}">
-                {{ content }}
-            </div>
+            <article>
+
+                <div class="ds-block-container" data-blockwidth="wide" data-bgcolor="{{ page.bgcolor }}">
+                    {{ content }}
+                </div>
+
+            <article>
 
         </main>
 
-        <footer id="footer"></footer>
+        <footer id="footer" class="site-footer"></footer>
 
         <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
