@@ -15,15 +15,11 @@
 
         <main id="content">
 
-            {% if page.showLeftNav == 'yes' %}<nav id="nav-container" class="nav-container lv-6271" role="navigation"></nav>{% endif %}
+            <nav id="nav-container" class="nav-container lv-6271" role="navigation"></nav>
 
             <article class="page-content">
 
-                <div class="ds-block-container" data-blockwidth="wide" data-bgcolor="{{ page.bgcolor }}">
-                    <div class="ds-block-content">
-                        {{ content }}
-                    </div>
-                </div>
+                {{ content }}
 
             <article>
 
