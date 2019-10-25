@@ -1,4 +1,21 @@
 //
+// fonts
+//
+
+$font-roboto: "Roboto", "Franklin Gothic Medium", Tahoma, sans-serif;
+$font-roboto-slab: "Roboto Slab", serif;
+$font-roboto-condensed: "Roboto Condensed", Impact, "Franklin Gothic Bold", sans-serif;
+
+//
+// Weights
+//
+
+$light-weight:    300;
+$normal-weight:   400;
+$medium-weight:   500;
+$bold-weight:     700;
+
+//
 // Colour
 //
 
@@ -28,13 +45,3 @@ $teal: invert(49%) sepia(45%) saturate(3730%) hue-rotate(142deg) brightness(92%)
 //
 
 $spacer: 4px;
-
-
-//
-// Weights
-//
-
-$light-weight:    300;
-$normal-weight:   400;
-$medium-weight:   500;
-$bold-weight:     700;

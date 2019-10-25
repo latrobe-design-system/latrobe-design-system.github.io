@@ -73,7 +73,8 @@
 }
 
 .alertbox-heading {
-    @include font-roboto-slab;
+    font-family: $font-roboto-slab;
+    font-weight: $normal-weight;
     font-size: 24px;
     font-weight: normal;
     line-height: 28px;

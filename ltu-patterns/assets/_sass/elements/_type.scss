@@ -11,8 +11,8 @@ html {
 }
 
 body {
-    @include font-roboto-bold;
-    font-weight: normal;
+    font-family: $font-roboto;
+    font-weight: $normal-weight;
     line-height: 1.5;
     font-size: 1rem;
     -webkit-font-smoothing: antialiased;
@@ -38,9 +38,9 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
+    font-weight: $medium-weight;
     margin-top: 0;
     margin-bottom: $spacer * 5;
-    font-weight: $medium-weight;
     max-width: 42em;
 }
 
@@ -122,7 +122,8 @@ small {
 //
 
 blockquote {
-    @include font-roboto-slab-light;
+    font-family: $font-roboto-slab;
+    font-weight: $normal-weight;
     margin: 0 0 24px 0;
     padding: 0;
     :first-child:before {
