@@ -1,6 +1,6 @@
 ---
 title: "About Wedgetail"
-info: Wedgetail is La Trobe University's open-source design system for digital products and experiences. With the La Trobe Design Language as its foundation, the system consists of working code, design tools and resources, human interface guidelines, and a vibrant community of contributors.
+info: Wedgetail is La Trobe University's design system for digital products and experiences. With the La Trobe Design Language as its foundation, the system consists of working code, design tools and resources,  human interface guidelines, and a vibrant community of contributors.
 ---
 
 We use Wedgetail in our design/development process to design, develop and test new and updated UI components.

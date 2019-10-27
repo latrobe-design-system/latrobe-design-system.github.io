@@ -1,4 +1,15 @@
-.ds-block-container {
+.page-content > div,
+.page-content > section,
+.page-content > article {
+    margin: 0 20px;
+    @media (min-width: 640px) {
+        margin: 0 6%;
+    }
+    @media (min-width: 1600px) {
+        margin: 0 12%;
+    }
+}
+div.ds-block-container {
     margin: 0;
     padding: 0;
     &[data-bgcolor="grey"] {
@@ -31,8 +42,8 @@
         }
     }
 }
-.ds-block-container[data-blockwidth="narrow"],
-.ds-block-container[data-blockwidth="wide"] {
+div.ds-block-container[data-blockwidth="narrow"],
+div.ds-block-container[data-blockwidth="wide"] {
     padding: 40px 20px;
     &:not([data-bgcolor]),
     &[data-bgcolor=""] {
@@ -41,7 +52,7 @@
     }
 }
 @media (min-width: 640px) {
-    .ds-block-container {
+    div.ds-block-container {
         &:not([data-bgcolor]),
         &[data-bgcolor=""] {
             margin: 4% 0;
@@ -52,8 +63,8 @@
             padding: 0;
         }
     }
-    .ds-block-container[data-blockwidth="narrow"],
-    .ds-block-container[data-blockwidth="wide"] {
+    div.ds-block-container[data-blockwidth="narrow"],
+    div.ds-block-container[data-blockwidth="wide"] {
         padding: 4% 6%;
         &:not([data-bgcolor]),
         &[data-bgcolor=""] {
@@ -62,8 +73,8 @@
         }
     }
 }
-@media (min-width: 1024px) {
-    .ds-block-container[data-blockwidth="narrow"] {
+@media (min-width: 1600px) {
+    div.ds-block-container[data-blockwidth="narrow"] {
         padding: 4% 12%;
         &:not([data-bgcolor]),
         &[data-bgcolor=""] {
@@ -81,7 +92,7 @@
         margin: 0 auto 24px auto;
     }
 }
-.ds-block-container {
+div.ds-block-container {
     &:not([data-blockwidth]) .ds-block-header,
     &[data-blockwidth=""] .ds-block-header {
         padding: 4% 0 4px 0;
@@ -91,9 +102,15 @@
         }
     }
 }
-.ds-block-header[data-textalign="left"] {
+div.ds-block-header[data-textalign="left"] {
     text-align: left;
+    h2, p {
+        margin-left: 0;
+    }
 }
-.ds-block-header[data-textalign="right"] {
+div.ds-block-header[data-textalign="right"] {
     text-align: right;
+    h2, p {
+        margin-right: 0;
+    }
 }

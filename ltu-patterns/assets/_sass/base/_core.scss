@@ -6,20 +6,6 @@ html {
   box-sizing: inherit;
 }
 
-// html {
-//     @include font-roboto-light;
-//     height: 100%;
-//     line-height: 24px;
-//     -webkit-text-size-adjust: 100%;
-//     -ms-text-size-adjust: 100%;
-// }
-// @media (min-width:1400px) {
-//     html {
-//         font-size: 18px;
-//         line-height: 28px;
-//     }
-// }
-
 button,
 html,
 input,
@@ -41,4 +27,27 @@ a:visited {
 
 a:hover {
     text-decoration: none;
+}
+
+
+//
+// content layout
+//
+.page-content {
+    width: 100%;
+}
+
+@media (min-width:1024px) {
+    #content {
+        display: flex;
+        transition: transform .3s ease-in-out;
+    }
+    .nav-container {
+        flex: 1 0 25%;
+        max-width: 400px;
+        background: $color-2a;
+    }
+    .nav-container + .page-content {
+        flex: 1 0 75%;
+    }
 }
