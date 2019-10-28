@@ -108,9 +108,9 @@ button.btn-box {
     padding: 4px 16px;
 
     &[class*="icon-"]{
-        padding-right: 28px;
+        padding-right: 36px;
         &::after {
-            margin: 0 5px;
+            margin: 0 8px;
             width: 16px;
         }
     }
