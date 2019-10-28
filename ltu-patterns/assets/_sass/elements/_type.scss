@@ -40,7 +40,7 @@ h5, .h5,
 h6, .h6 {
     font-weight: $medium-weight;
     margin-top: 0;
-    margin-bottom: $spacer * 5;
+    margin-bottom: 0;
     max-width: 42em;
 }
 
@@ -58,6 +58,10 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
     margin-top: 2em;
+
+    &:empty {
+        margin: 0;
+    }
 }
 
 h1, .h1 {
@@ -102,8 +106,8 @@ h5 + h6 {
 
 p {
     max-width: 42em;
-    margin-top: 0;
-    margin-bottom: $spacer * 5;
+    margin-top: $spacer * 5;
+    margin-bottom: 0;
 }
 
 p.lead {
@@ -116,6 +120,16 @@ small {
     font-size: 0.8rem;
 }
 
+p:empty,
+li:empty {
+    margin: 0;
+}
+
+ul {
+    margin-top: $spacer * 5;
+    margin-bottom: 0;
+}
+
 
 //
 // blockquote
@@ -126,11 +140,18 @@ blockquote {
     font-weight: $normal-weight;
     margin: 0 0 24px 0;
     padding: 0;
-    :first-child:before {
+
+    quotes: "“" "”" "‘" "’";
+    p:first-child:before {
         content: open-quote;
     }
-    :last-child:after {
+    p:last-child:after {
         content: close-quote;
+    }
+
+    b,
+    strong {
+        font-weight: 700;
     }
 }
 
@@ -180,12 +201,9 @@ mark {
     font-weight: 500;
 }
 
-code,
-kbd,
-pre,
-samp {
-    font-family: monospace, serif;
-    font-size: 18px;
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em;
 }
 
 pre {
@@ -195,31 +213,13 @@ pre {
 }
 
 q {
-    quotes: none;
+    quotes: "“" "”" "‘" "’";;
 }
 
-q:after,
 q:before {
-    content: "";
-    content: none;
+    content: open-quote;
 }
 
-small {
-    font-size: 100%;
-}
-
-sub,
-sup {
-    font-size: 12px;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-}
-
-sup {
-    top: -0.5em;
-}
-
-sub {
-    bottom: -0.25em;
+q:after {
+    content: close-quote;
 }
