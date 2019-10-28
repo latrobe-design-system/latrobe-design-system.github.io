@@ -85,22 +85,22 @@ div.ds-block-container[data-blockwidth="wide"] {
 }
 .ds-block-header {
     text-align: center;
-    margin: 0 0 24px 0;
     h2 {
-        margin: 0 auto 8px auto;
+        margin: 0 auto;
     }
     p {
-        margin: 0 auto 24px auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    & + ul {
+        margin-top: 24px !important;
     }
 }
 div.ds-block-container {
     &:not([data-blockwidth]) .ds-block-header,
     &[data-blockwidth=""] .ds-block-header {
-        padding: 4% 0 4px 0;
+        padding: 4% 0 0 0;
         margin: 0;
-        p {
-            margin-bottom: 20px;
-        }
     }
 }
 .ds-block-header[data-textalign="left"] {
