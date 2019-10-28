@@ -1,91 +1,91 @@
-//
-// Alert base
-//
+//----------------------------------------------------------------------------------------------------------------------------------// 
+// Alert Base
+//----------------------------------------------------------------------------------------------------------------------------------// 
 
 .alert {
-    border: 2px solid rgba($color-alt-3, 0.2);
+    border: 2px solid rgba($color-alt-3, 1);
     border-radius: 6px;
     padding: 12px 20px;
-    margin: 32px auto;
+    margin-top: 32px;
+    margin-bottom: 32px;
     position: relative;
+    font-weight: 400;
+    padding: 12px 24px 12px 48px;
 }
 
-//
+//----------------------------------------------------------------------------------------------------------------------------------// 
 // Alert colours
-//
-
-.alert-primary {
-    color: #004085;
-    background-color: #cce5ff;
-    border-color: #b8daff;
-}
-
-.alert-secondary {
-    color: #383d41;
-    background-color: #e2e3e5;
-    border-color: #d6d8db;
-}
+//----------------------------------------------------------------------------------------------------------------------------------// 
 
 .alert-success {
-    color: #155724;
-    background-color: #d4edda;
-    border-color: #c3e6cb;
+    background-color: rgba($color-alt-3, 0.1);
+    border-color: rgba($color-alt-3, 0.33);
 }
 
 .alert-danger {
-    color: #721c24;
-    background-color: #f8d7da;
-    border-color: #f5c6cb;
-}
-
-.alert-warning {
-    color: #856404;
-    background-color: #fff3cd;
-    border-color: #ffeeba;
+    background-color: rgba($color-1, 0.1);
+    border-color: rgba($color-1, 0.33);
 }
 
 .alert-info {
-    color: #0c5460;
-    background-color: #d1ecf1;
-    border-color: #bee5eb;
+    background-color: rgba($color-alt-4, 0.1);
+    border-color: rgba($color-alt-4, 0.33);
 }
 
-.alert-light {
-    color: #818182;
-    background-color: #fefefe;
-    border-color: #fdfdfe;
+
+//----------------------------------------------------------------------------------------------------------------------------------// 
+// Alert page
+//----------------------------------------------------------------------------------------------------------------------------------// 
+
+.alert-page {
+    font-weight: 500;
+
+    &[class*="icon-"]::after {
+        left: 12px;
+    }
+    
+    p {
+        margin: 0;
+    }
 }
 
-.alert-dark {
-    color: #1b1e21;
-    background-color: #d6d8d9;
-    border-color: #c6c8ca;
+
+
+//----------------------------------------------------------------------------------------------------------------------------------// 
+// Alert Text Box
+//----------------------------------------------------------------------------------------------------------------------------------// 
+
+.alert-text-box {
+    width: max-content;
+    padding: 24px;
+
+    * {
+        margin-top: 0;
+    }
+
+    p:last-child {
+        margin-bottom: 0;
+    }
 }
 
-//
-// Alertbox
-//
+
+//----------------------------------------------------------------------------------------------------------------------------------// 
+// Alert Box
+//----------------------------------------------------------------------------------------------------------------------------------// 
 
 .alertbox {
     @extend .alert;
-    font-weight: $light-weight;
-    max-width: 700px;
+    width: max-content;
 }
 
 .alertbox-heading {
-    font-family: $font-roboto-slab;
-    font-weight: $normal-weight;
-    font-size: 24px;
-    font-weight: normal;
-    line-height: 28px;
+    font-size: $h3;
     margin: 0 0 24px 0;
-    color: $color-alt-3;
 }
 
 .alertbox::before {
-    display: inline-block;
-    float: left;
     content: "";
+    display: inline-block;
     width: 32px;
     height: 32px;
     margin-right: 16px;
@@ -93,35 +93,36 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
-    filter: $teal;
+    // filter: $teal;
 }
 
 @media(min-width: 768px){
     .alertbox {
         position: relative;
-        padding: 20px 80px;
+        padding: $spacer*6 $spacer*6 $spacer*6 $spacer*20;
     }
     .alertbox::before {
         display: block;
         position: absolute;
-        top: 18px;
-        left: 20px;
+        left: 24px;
+        top: 24px;
     }
 }
 
 
-//
-// Alert icons
-//
+//----------------------------------------------------------------------------------------------------------------------------------// 
+// Alert Icons
+//----------------------------------------------------------------------------------------------------------------------------------// 
 
 .alert .close {
     position: absolute;
-    top: 50%;
+    top: 24px;
     transform: translateY(-50%);
-    right: $spacer;
+    right: $spacer * 3;
     padding: 0;
     color: inherit;
     background-color: transparent;
     border: 0;
     line-height: 0;
+    cursor: pointer;
 }
