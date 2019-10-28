@@ -73,6 +73,7 @@ h1, .h1 {
 
 h2, .h2 {
     font-size: $h2;
+    max-width: 24em;
 }
 
 h3, .h3 {
@@ -136,23 +137,47 @@ ul {
 //
 
 blockquote {
+    -webkit-font-smoothing: initial;
+    -moz-osx-font-smoothing: initial;
     font-family: $font-roboto-slab;
-    font-weight: $normal-weight;
-    margin: 0 0 24px 0;
-    padding: 0;
+    font-size: $h4;
+    font-weight: $light-weight;
+    margin: 2em 0;
+    padding: 0 0 0 1em;
+    border-left: 2px solid $color-1;
+
+    @media(min-width: 768px){
+        font-size: $h3;
+    }
+
+    @media(min-width: 768px){
+        font-size: $h2;
+    }
 
     quotes: "“" "”" "‘" "’";
+
     p:first-child:before {
         content: open-quote;
     }
+
     p:last-child:after {
         content: close-quote;
     }
 
     b,
     strong {
-        font-weight: 700;
+        font-weight: 400;
     }
+}
+
+.blockquote-large {
+    font-size: $h1;
+    font-weight: $light-weight;
+}
+
+.blockquote-medium {
+    font-size: $h3;
+    //font-weight: $light-weight;
 }
 
 
