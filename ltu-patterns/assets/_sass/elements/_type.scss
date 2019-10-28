@@ -40,7 +40,7 @@ h5, .h5,
 h6, .h6 {
     font-weight: $medium-weight;
     margin-top: 0;
-    margin-bottom: $spacer * 5;
+    margin-bottom: 0;
     max-width: 42em;
 }
 
@@ -102,8 +102,8 @@ h5 + h6 {
 
 p {
     max-width: 42em;
-    margin-top: 0;
-    margin-bottom: $spacer * 5;
+    margin-top: $spacer * 5;
+    margin-bottom: 0;
 }
 
 p.lead {
