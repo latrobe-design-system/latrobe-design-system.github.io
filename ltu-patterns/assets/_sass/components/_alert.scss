@@ -3,74 +3,71 @@
 //----------------------------------------------------------------------------------------------------------------------------------// 
 
 .alert {
-    border: 2px solid rgba($color-alt-3, 0.5);
+    border: 2px solid rgba($color-alt-3, 1);
     border-radius: 6px;
     padding: 12px 20px;
-    margin: 32px auto;
+    margin-top: 32px;
+    margin-bottom: 32px;
     position: relative;
     font-weight: 400;
-    padding: 12px 24px;
+    padding: 12px 24px 12px 48px;
 }
-
-.alert h4 {
-    margin-top: 0;
-}
-
-.alert p:last-child {
-    margin: 0;
-} 
 
 //----------------------------------------------------------------------------------------------------------------------------------// 
 // Alert colours
 //----------------------------------------------------------------------------------------------------------------------------------// 
 
-.alert-primary {
-    color: #004085;
-    background-color: #cce5ff;
-    border-color: #b8daff;
-}
-
-.alert-secondary {
-    color: #383d41;
-    background-color: #e2e3e5;
-    border-color: #d6d8db;
-}
-
 .alert-success {
-    color: #155724;
-    background-color: #d4edda;
-    border-color: #c3e6cb;
+    background-color: rgba($color-alt-3, 0.1);
+    border-color: rgba($color-alt-3, 0.33);
 }
 
 .alert-danger {
-    color: #721c24;
-    background-color: #f8d7da;
-    border-color: #f5c6cb;
-}
-
-.alert-warning {
-    color: #856404;
-    background-color: #fff3cd;
-    border-color: #ffeeba;
+    background-color: rgba($color-1, 0.1);
+    border-color: rgba($color-1, 0.33);
 }
 
 .alert-info {
-    color: #0c5460;
-    background-color: #d1ecf1;
-    border-color: #bee5eb;
+    background-color: rgba($color-alt-4, 0.1);
+    border-color: rgba($color-alt-4, 0.33);
 }
 
-.alert-light {
-    color: #818182;
-    background-color: #fefefe;
-    border-color: #cccccc;
+
+//----------------------------------------------------------------------------------------------------------------------------------// 
+// Alert page
+//----------------------------------------------------------------------------------------------------------------------------------// 
+
+.alert-page {
+    font-weight: 500;
+
+    &[class*="icon-"]::after {
+        left: 12px;
+    }
+    
+    p {
+        margin: 0;
+    }
 }
 
-.alert-dark {
-    color: #1b1e21;
-    background-color: #d6d8d9;
-    border-color: #c6c8ca;
+
+
+//----------------------------------------------------------------------------------------------------------------------------------// 
+// Alert Text Box
+//----------------------------------------------------------------------------------------------------------------------------------// 
+
+.alert-text-box {
+    width: max-content;
+    padding: 24px;
+
+    * {
+        margin-top: 0;
+    }
+
+    p:last-child {
+        margin-bottom: 0;
+    }
 }
+
 
 //----------------------------------------------------------------------------------------------------------------------------------// 
 // Alert Box
@@ -78,14 +75,12 @@
 
 .alertbox {
     @extend .alert;
-    font-weight: $light-weight;
+    width: max-content;
 }
 
 .alertbox-heading {
-    @include font-roboto-slab;
     font-size: $h3;
     margin: 0 0 24px 0;
-    color: $color-alt-3;
 }
 
 .alertbox::before {
@@ -98,19 +93,19 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
-    filter: $teal;
+    // filter: $teal;
 }
 
 @media(min-width: 768px){
     .alertbox {
         position: relative;
-        padding: $spacer * 6 $spacer * 20;
+        padding: $spacer*6 $spacer*6 $spacer*6 $spacer*20;
     }
     .alertbox::before {
         display: block;
         position: absolute;
         left: 24px;
-        top: 26px;
+        top: 24px;
     }
 }
 
@@ -121,7 +116,7 @@
 
 .alert .close {
     position: absolute;
-    top: 50%;
+    top: 24px;
     transform: translateY(-50%);
     right: $spacer * 3;
     padding: 0;
