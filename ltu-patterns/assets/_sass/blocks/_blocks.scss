@@ -1,3 +1,4 @@
+// set margins for standard content containers
 .page-content > div,
 .page-content > section,
 .page-content > article {
@@ -102,13 +103,13 @@ div.ds-block-container {
         }
     }
 }
-div.ds-block-header[data-textalign="left"] {
+.ds-block-header[data-textalign="left"] {
     text-align: left;
     h2, p {
         margin-left: 0;
     }
 }
-div.ds-block-header[data-textalign="right"] {
+.ds-block-header[data-textalign="right"] {
     text-align: right;
     h2, p {
         margin-right: 0;
