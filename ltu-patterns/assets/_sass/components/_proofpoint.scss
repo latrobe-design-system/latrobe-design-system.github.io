@@ -12,32 +12,31 @@
     width: 60px;
     height: 60px;
     margin: 0 auto;
-    padding: 0 0 16px 0;
+    padding: 0;
 }
 .proofpoint-title {
     color: $color-1;
     font-size: 28px;
     line-height: 32px;
-    margin: 0 0 16px 0;
+    margin: 16px 0 0 0;
 }
 .proofpoint-number {
     color: $color-1;
     font-size: 40px;
     line-height: 1;
-    margin: 0 0 16px 0;
+    //margin: 0 0 16px 0;
 }
-.proofpoint-text,
-.proofpoint-legacy-content p:first-child {
+.proofpoint-text {
     color: $color-3d;
     font-size: 20px;
     line-height: 28px;
 }
-.proofpoint-footnote,
-.proofpoint-legacy-content p:first-child + p {
+.proofpoint-footnote {
     font-size: 14px;
     line-height: 20px;
     color: $color-2a;
     margin-top: auto;
+    padding-top: 16px;
 }
 
 /* proof point set */
