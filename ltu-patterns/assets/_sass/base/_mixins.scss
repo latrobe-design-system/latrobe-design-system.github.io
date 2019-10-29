@@ -23,7 +23,7 @@
         margin-right: 0;
         grid-template-columns: repeat($wrap, minmax($basis-width, 1fr));
         & > * {
-            margin: 0 0 16px 0;
+            margin: 16px 0 0 0;
         }
     }
 }
