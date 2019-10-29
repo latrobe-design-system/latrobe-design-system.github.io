@@ -28,6 +28,16 @@
 .testimonial-copy {
     padding: 84px 20px 20px 20px;
 
+    blockquote {
+        margin-top: 0;
+        padding-left: 0;
+        border-left: none;
+        p {
+            font-size: 1rem;
+            font-weight: $normal-weight;
+        }
+    }
+
     .testimonial-cta {
         margin-top: 20px;
     }

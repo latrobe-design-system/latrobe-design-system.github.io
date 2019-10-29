@@ -1,6 +1,5 @@
 .card {
     box-sizing: border-box;
-    background: white;
     width: 100%;
     max-width: 450px;
     padding: 0 0 24px;
@@ -42,6 +41,7 @@
 }
 /* link type */
 a.card {
+    background: white;
     display: block;
     color: $color-2;
     text-decoration: none;
