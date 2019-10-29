@@ -48,6 +48,17 @@ h6, .h6 {
     }
 }
 
+.ds-block-container {
+    h1, .h1,
+    h2, .h2,
+    h3, .h3,
+    h4, .h4,
+    h5, .h5,
+    h6, .h6 {
+        margin-top: 1em;
+    }
+}
+
 h1, .h1,
 h2, .h2,
 h3, .h3,
@@ -130,37 +141,47 @@ ul {
 //
 
 blockquote {
-    -webkit-font-smoothing: initial;
-    -moz-osx-font-smoothing: initial;
-    font-family: $font-roboto-slab;
-    font-size: $h4;
-    font-weight: $light-weight;
+
     margin: 2em 0;
     padding: 0 0 0 1em;
     border-left: 2px solid $color-1;
 
-    @media(min-width: 768px){
-        font-size: $h3;
-    }
+    p {
+        -webkit-font-smoothing: initial;
+        -moz-osx-font-smoothing: initial;
+        font-family: $font-roboto-slab;
+        font-size: $h4;
+        font-weight: $light-weight;
 
-    @media(min-width: 768px){
-        font-size: $h2;
+        @media(min-width: 768px){
+            font-size: $h3;
+        }
+
+        @media(min-width: 768px){
+            font-size: $h2;
+        }
+
+        b,
+        strong {
+            font-weight: 400;
+        }
+
     }
 
     quotes: "“" "”" "‘" "’";
 
-    p:first-child:before {
+    p:first-child::before {
         content: open-quote;
     }
 
-    p:last-child:after {
+    p:last-of-type::after {
         content: close-quote;
     }
 
-    b,
-    strong {
-        font-weight: 400;
+    footer {
+        margin-top: 1rem;
     }
+
 }
 
 .blockquote-large {

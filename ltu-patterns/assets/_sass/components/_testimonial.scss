@@ -32,8 +32,10 @@
         margin-top: 0;
         padding-left: 0;
         border-left: none;
-        font-size: 1rem;
-        font-weight: $normal-weight;
+        p {
+            font-size: 1rem;
+            font-weight: $normal-weight;
+        }
     }
 
     .testimonial-cta {
