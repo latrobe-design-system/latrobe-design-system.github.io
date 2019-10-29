@@ -142,9 +142,9 @@ ul {
 
 blockquote {
 
-    margin: 2em 0;
-    padding: 0 0 0 1em;
-    border-left: 2px solid $color-1;
+    margin: 4rem 0;
+    //padding: 0 0 0 24px;
+    //border-left: 2px solid $color-1;
 
     p {
         -webkit-font-smoothing: initial;
@@ -172,6 +172,11 @@ blockquote {
 
     p:first-child::before {
         content: open-quote;
+        position: relative;
+        top: -0.2rem;
+        font-size: 2em;
+        color: $color-1;
+        font-family: "Impact";
     }
 
     p:last-of-type::after {
@@ -182,6 +187,22 @@ blockquote {
         margin-top: 1rem;
     }
 
+}
+
+blockquote + .blockquote-attribution {
+    @extend .small;
+    margin-top: -3rem;
+    margin-bottom: 4rem;
+    //padding-left: 24px;
+
+    &:before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: $color-3c;
+        margin-bottom: 1rem;
+    }
 }
 
 .blockquote-large {
