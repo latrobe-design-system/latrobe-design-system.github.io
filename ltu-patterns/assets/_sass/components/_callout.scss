@@ -1,6 +1,5 @@
 .callout {
     border-left: 3px solid rgba($color-alt-3, 1);
-    padding: 12px 20px;
     margin-top: 32px;
     margin-bottom: 32px;
     position: relative;
@@ -42,7 +41,7 @@
 @media(min-width: 768px){
     .callout {
         position: relative;
-        padding: $spacer*6;
+        padding: 0 $spacer*6;
     }
     .callout::before {
         display: block;
