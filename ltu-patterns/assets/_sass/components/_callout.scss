@@ -41,7 +41,7 @@
 @media(min-width: 768px){
     .callout {
         position: relative;
-        padding: 0 $spacer*6;
+        padding: $spacer*6;
     }
     .callout::before {
         display: block;
