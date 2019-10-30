@@ -25,6 +25,10 @@ table caption.subtle-right {
 
 td, th {
     vertical-align: top;
+
+    > :first-child {
+        margin-top: 0;
+    }
 }
 
 th {

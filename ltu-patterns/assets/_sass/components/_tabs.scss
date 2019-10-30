@@ -1,6 +1,7 @@
 .tabs-nav {
     list-style: none;
     padding: 0;
+    margin-bottom: 24px;
 }
 
 .tabs-nav li {
@@ -16,6 +17,12 @@
         padding: 12px;
         font-weight: 500;
         text-decoration: none;
+    }
+}
+
+.tab-content {
+    > :first-child {
+        margin: 0;
     }
 }
 

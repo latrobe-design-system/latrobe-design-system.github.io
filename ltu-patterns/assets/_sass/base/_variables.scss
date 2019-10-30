@@ -1,23 +1,23 @@
-//
-// fonts
-//
+//----------------------------------------------------------------------------------------------------------------------------------// 
+// Fonts
+//----------------------------------------------------------------------------------------------------------------------------------// 
 
 $font-roboto: "Roboto", "Franklin Gothic Medium", Tahoma, sans-serif;
 $font-roboto-slab: "Roboto Slab", serif;
 $font-roboto-condensed: "Roboto Condensed", Impact, "Franklin Gothic Bold", sans-serif;
 
-//
+//----------------------------------------------------------------------------------------------------------------------------------// 
 // Weights
-//
+//----------------------------------------------------------------------------------------------------------------------------------// 
 
 $light-weight:    300;
 $normal-weight:   400;
 $medium-weight:   500;
 $bold-weight:     700;
 
-//
+//----------------------------------------------------------------------------------------------------------------------------------// 
 // Colour
-//
+//----------------------------------------------------------------------------------------------------------------------------------// 
 
 /* red shades */
 $color-1: #e2231b; /* primary red */
@@ -48,8 +48,21 @@ $red: invert(36%) sepia(31%) saturate(3720%) hue-rotate(337deg) brightness(81%) 
 $white: invert(100%) sepia(0%) saturate(2%) hue-rotate(132deg) brightness(113%) contrast(101%);
 $teal: invert(49%) sepia(45%) saturate(3730%) hue-rotate(142deg) brightness(92%) contrast(101%); /* #00aa98*/
 
-//
+//----------------------------------------------------------------------------------------------------------------------------------// 
 // Spacing
-//
+//----------------------------------------------------------------------------------------------------------------------------------// 
 
 $spacer: 4px;
+
+$space-unit: 4px;
+$space-xxxs: calc(0.25 * var($space-unit));
+$space-xxs:  calc(0.5 * var($space-unit));
+$space-xs:   calc(0.75 * var($space-unit));
+$space-sm:   calc(1 * var($space-unit));
+$space-md:   calc(1.25 * var($space-unit));
+$space-lg:   calc(1.5 * var($space-unit));
+$space-xl:   calc(1.75 * var($space-unit));
+$space-xxl:  calc(2 * var($space-unit));
+$space-xxxl: calc(2.5 * var($space-unit));
+
+$component-padding: $space-md;
