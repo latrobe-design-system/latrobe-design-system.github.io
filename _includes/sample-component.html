@@ -1,0 +1,5 @@
+{% for pattern in site.pages %}
+    {%- if pattern.url contains include.snippet -%}
+        {{ pattern.content }}
+    {%- endif -%}
+{% endfor %}
