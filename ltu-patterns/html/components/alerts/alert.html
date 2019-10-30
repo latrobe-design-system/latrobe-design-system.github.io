@@ -5,34 +5,6 @@ ltulayout: "standard_page"
 status: "draft"
 ---
 
-<div class="alert alert-page alert-success icon-check-circle icon-before" role="alert">
-  <p>This is a success alert—check it out!</p>
-
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-  </button>
-</div>
-  
-<div class="alert alert-page alert-danger icon-x-circle icon-before" role="alert">
-  This is a danger alert—check it out!
-
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-  </button>
-</div>
-
-<!-- <div class="alert alert-page alert-warning icon-alert-circle icon-before" role="alert">
-  This is a warning alert—check it out!
-
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-  </button>
-</div> -->
-
-<div class="alert alert-page alert-info icon-info icon-before" role="alert">
-  This is a info alert—check it out!
-
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-  </button>
-</div>
+{% include_relative alert-success.html %}
+{% include_relative alert-danger.html %}
+{% include_relative alert-info.html %}
