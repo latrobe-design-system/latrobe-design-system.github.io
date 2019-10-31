@@ -1,14 +1,18 @@
 .callout {
-    border-left: 3px solid rgba($color-alt-3, 1);
-    margin-top: 32px;
-    margin-bottom: 32px;
+    border-left: 4px solid rgba($color-alt-3, 1);
+    border-radius: 2px;
     position: relative;
     font-weight: 400;
     padding: 12px 24px;
     box-shadow: 0px 10px 20px $color-3a;
+    display: inline-block;
 
     > :first-child {
         margin: 0;
+    }
+
+    &--center {
+        border: none;
     }
 }
 
@@ -44,7 +48,7 @@
 @media(min-width: 768px){
     .callout {
         position: relative;
-        padding: $spacer*6;
+        padding: $spacer*8;
     }
     .callout::before {
         display: block;
