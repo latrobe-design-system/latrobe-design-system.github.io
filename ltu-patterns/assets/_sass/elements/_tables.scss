@@ -1,3 +1,7 @@
+.table-wrapper {
+    overflow: auto;
+}
+
 table {
     border: none;
     width: 100%;
@@ -16,6 +20,7 @@ table caption {
     font-weight: $medium-weight;
     padding: $spacer * 10;
     text-align: left;
+    background-color: $color-3a;
 }
 
 table caption.subtle-right {
@@ -39,7 +44,7 @@ th {
 }
 
 td {
-    border-right: 1px solid $color-3c;
+    border-right: 2px solid $color-3c;
     padding: $spacer * 8;
 
     &:last-child {
@@ -48,7 +53,7 @@ td {
 }
 
 tr {
-    border-bottom: 1px solid $color-3c;
+    border-bottom: 2px solid $color-3c;
 }
 
 tr:nth-child(even) {

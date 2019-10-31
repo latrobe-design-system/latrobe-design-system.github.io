@@ -1,5 +1,5 @@
 .accordion-item {
-    border: 1px solid $color-2;
+    border-bottom: 2px solid $color-3b;
     padding: 0;
     margin: 0;
 }
@@ -68,7 +68,11 @@
 
 .accordion-content {
     display: none;
-    padding: $spacer * 5 $spacer * 5 0;
+    padding: $spacer * 5;
+
+    > :first-child {
+        margin-top: 0;
+    }
 }
 
 .accordion-trigger.active {

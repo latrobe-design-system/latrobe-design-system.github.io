@@ -1,7 +1,6 @@
 .tabs-nav {
     list-style: none;
     padding: 0;
-    margin-bottom: 24px;
 }
 
 .tabs-nav li {
@@ -21,6 +20,9 @@
 }
 
 .tab-content {
+    background-color: $color-3a;
+
+    padding: $spacer * 10;
     > :first-child {
         margin: 0;
     }
@@ -28,9 +30,8 @@
 
 .tabs-small {
     .tabs-nav {
-        border-bottom: 2px solid $color-2a;
-        margin-bottom: $spacer * 10;
         display: block;
+        border-bottom: 2px solid $color-2a;
     }
 
     .tab-item {

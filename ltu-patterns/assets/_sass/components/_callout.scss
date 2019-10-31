@@ -5,8 +5,11 @@
     position: relative;
     font-weight: 400;
     padding: 12px 24px;
-    width: max-content;
-    background-color: $color-3a;
+    box-shadow: 0px 10px 20px $color-3a;
+
+    > :first-child {
+        margin: 0;
+    }
 }
 
 .icon-callout {
