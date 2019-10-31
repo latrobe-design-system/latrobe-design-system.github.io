@@ -167,18 +167,18 @@ blockquote {
         content: close-quote;
     }
 
-}
+    footer {
+        @extend small;
 
-.blockquote-attribution {
-    @extend small;
+        &:before {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: $color-3c;
+            margin: 1rem 0 0.8rem 0;
+        }
 
-    &:before {
-        content: "";
-        display: block;
-        width: 20px;
-        height: 2px;
-        background: $color-3c;
-        margin: 1rem 0 0.8rem 0;
     }
 
 }
