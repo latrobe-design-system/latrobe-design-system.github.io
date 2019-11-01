@@ -1,0 +1,31 @@
+.promotion {
+    margin: 40px;
+    overflow: hidden;
+    position: relative;
+}
+
+.promotion-text {
+    padding: 60px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.promotion-overlay {
+    background: rgba(255,255,255,0.8);
+    bottom: 0;
+    position: absolute;
+    top: 0;
+}
+
+.promotion-text,
+.promotion-overlay {
+    width: 100%;
+
+    @media(min-width: 768px) {
+        width: 50%;
+    }
+
+    @media(min-width: 1400px) {
+        width: 33.3%;
+    }
+}
