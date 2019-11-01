@@ -4,4 +4,4 @@ status: ready
 info:
 ---
 
-{% include sample-iframe.html snippet="components/proof-points/proof-points-basic.html"%}
+{% include sample-iframe.html snippet="proofpoint/src/html/proof-points-basic.html"%}

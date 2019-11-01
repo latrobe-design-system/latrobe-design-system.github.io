@@ -11,17 +11,48 @@
 @charset "UTF-8";
 
 // Base
-@import "base/fonts";
-@import "base/normalize";
-@import "base/variables";
-@import "base/mixins";
-@import "base/core";
-@import "base/icons";
-@import "base/utility";
+@import "../../packages/base/fonts";
+@import "../../packages/base/normalize";
+@import "../../packages/base/variables";
+@import "../../packages/base/mixins";
+@import "../../packages/base/core";
+@import "../../packages/base/icons";
+@import "../../packages/base/utility";
+
+// // Elements
+@import "../../packages/elements/type";
+// @import "elements/buttons";
+// @import "elements/tables";
+@import "../../packages/elements/forms";
+@import "../../packages/elements/checkbox";
+// //@import "elements/blockquote";
+// @import "elements/loader";
+// @import "elements/tooltip";
+@import "../../packages/elements/aside";
+
+// // Components
+// @import "components/alert";
+// @import "components/callout";
+// @import "components/logo-showcase";
+// @import "components/cards";
+// @import "components/proofpoint";
+// @import "components/testimonial";
+// @import "components/tabs";
+// @import "components/accordion";
+@import "../../packages/components/video";
+// @import "components/breadcrumb";
+
+// // Blocks
+// @import "blocks/blocks";
+// @import "blocks/banner";
+// @import "blocks/mosaic";
+// @import "../../packages/blocks/promo";
+// //
+
 
 // Packages
 @import "../../packages/accordion/src/scss/accordion";
-@import "../../packages/alerts/src/scss/alert";
+@import "../../packages/alert/src/scss/alert";
 @import "../../packages/banner/src/scss/banner";
 @import "../../packages/blockquote/src/scss/blockquote";
 @import "../../packages/blocks/src/scss/blocks";
@@ -44,33 +75,3 @@
 @import "../../packages/table/src/scss/table";
 @import "../../packages/testimonial/src/scss/testimonial";
 @import "../../packages/tooltip/src/scss/tooltip";
-
-// // Elements
-@import "elements/type";
-// @import "elements/buttons";
-// @import "elements/tables";
-@import "elements/forms";
-@import "elements/checkbox";
-// //@import "elements/blockquote";
-// @import "elements/loader";
-// @import "elements/tooltip";
-@import "elements/aside";
-
-// // Components
-// @import "components/alert";
-// @import "components/callout";
-// @import "components/logo-showcase";
-// @import "components/cards";
-// @import "components/proofpoint";
-// @import "components/testimonial";
-// @import "components/tabs";
-// @import "components/accordion";
-@import "components/video";
-// @import "components/breadcrumb";
-
-// // Blocks
-// @import "blocks/blocks";
-// @import "blocks/banner";
-// @import "blocks/mosaic";
-@import "blocks/promo";
-// //

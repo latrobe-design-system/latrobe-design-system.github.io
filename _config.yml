@@ -76,17 +76,17 @@ defaults:
       type: template
   -
     scope:
-      path: "ltu-patterns/html"
+      path: "ltu-patterns/packages"
     values:
       status: draft
       layout: sample
   -
     scope:
-      path: "ltu-patterns/html/blocks"
+      path: "ltu-patterns/packages/blocks"
     values:
       layout: sample-block
   -
     scope:
-      path: "ltu-patterns/html/templates"
+      path: "ltu-patterns/packages/templates"
     values:
       layout: sample-block
