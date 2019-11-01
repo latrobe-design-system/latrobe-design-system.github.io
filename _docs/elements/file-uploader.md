@@ -4,4 +4,4 @@ status: planned
 info:
 ---
 
-{% include sample-iframe.html snippet="elements/form-inputs/file-uploader.html" %}
+{% include sample-iframe.html snippet="control-inputs/src/html/file-uploader.html" %}

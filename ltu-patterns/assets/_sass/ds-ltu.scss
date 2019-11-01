@@ -10,47 +10,16 @@
 //
 @charset "UTF-8";
 
-// Base
-@import "../../packages/base/fonts";
-@import "../../packages/base/normalize";
-@import "../../packages/base/variables";
-@import "../../packages/base/mixins";
-@import "../../packages/base/core";
-@import "../../packages/base/icons";
-@import "../../packages/base/utility";
-
-// // Elements
-@import "../../packages/elements/type";
-// @import "elements/buttons";
-// @import "elements/tables";
-@import "../../packages/elements/forms";
-@import "../../packages/elements/checkbox";
-// //@import "elements/blockquote";
-// @import "elements/loader";
-// @import "elements/tooltip";
-@import "../../packages/elements/aside";
-
-// // Components
-// @import "components/alert";
-// @import "components/callout";
-// @import "components/logo-showcase";
-// @import "components/cards";
-// @import "components/proofpoint";
-// @import "components/testimonial";
-// @import "components/tabs";
-// @import "components/accordion";
-@import "../../packages/components/video";
-// @import "components/breadcrumb";
-
-// // Blocks
-// @import "blocks/blocks";
-// @import "blocks/banner";
-// @import "blocks/mosaic";
-// @import "../../packages/blocks/promo";
-// //
-
 
 // Packages
+@import "../../packages/core/src/scss/fonts";
+@import "../../packages/core/src/scss/normalize";
+@import "../../packages/core/src/scss/variables";
+@import "../../packages/core/src/scss/mixins";
+@import "../../packages/core/src/scss/core";
+@import "../../packages/core/src/scss/icons";
+@import "../../packages/core/src/scss/utility";
+
 @import "../../packages/accordion/src/scss/accordion";
 @import "../../packages/alert/src/scss/alert";
 @import "../../packages/banner/src/scss/banner";
@@ -60,8 +29,10 @@
 @import "../../packages/button/src/scss/button";
 @import "../../packages/callout/src/scss/callout";
 @import "../../packages/card/src/scss/card";
+@import "../../packages/control-inputs/src/scss/forms";
+@import "../../packages/control-inputs/src/scss/checkbox";
 @import "../../packages/columns/src/scss/columns";
-@import "../../packages/core/src/scss/core";
+@import "../../packages/columns/src/scss/aside";
 @import "../../packages/cta/src/scss/cta";
 @import "../../packages/link/src/scss/link";
 @import "../../packages/loader/src/scss/loader";

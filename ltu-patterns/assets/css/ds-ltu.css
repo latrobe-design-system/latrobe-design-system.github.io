@@ -1,9 +1,10 @@
-/* Error: Can't find stylesheet to import.
+/* Error: Undefined variable.
  *    ,
- * 26 | @import "../../packages/elements/forms";
- *    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ * 82 |     font-size: $h3;
+ *    |                ^^^
  *    '
- *   ltu-patterns/assets/_sass/ds-ltu.scss 26:9  root stylesheet */
+ *   ltu-patterns/packages/alert/src/scss/_alert.scss 82:16  @import
+ *   ltu-patterns/assets/_sass/ds-ltu.scss 24:9              root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a    \2577 \a 26 \2502  @import \"../../packages/elements/forms\";\a    \2502          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   ltu-patterns/assets/_sass/ds-ltu.scss 26:9  root stylesheet";
+  content: "Error: Undefined variable.\a    \2577 \a 82 \2502      font-size: $h3;\a    \2502                 ^^^\a    \2575 \a   ltu-patterns/packages/alert/src/scss/_alert.scss 82:16  @import\a   ltu-patterns/assets/_sass/ds-ltu.scss 24:9              root stylesheet";
 }
