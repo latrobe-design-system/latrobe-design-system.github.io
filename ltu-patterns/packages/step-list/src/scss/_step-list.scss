@@ -24,15 +24,12 @@
 }
 
 .step-list-item {
-  counter-increment: my-awesome-counter;
+  counter-increment: counter;
   position: relative;
-  min-height: 80px;
-  padding: 16px 0;
   border-bottom: 1px solid #E3E3E3;
   display: flex;
   align-items: center;
-  transition: opacity 0.3s ease;
-  z-index: 1;
+  padding: $spacer * 6 0;
 }
 
 .step-list-item:after {
@@ -46,8 +43,7 @@
 }
 
 .step-list-item:before {
-  content: counter(my-awesome-counter);
-  transition: color 0.3s ease, background 0.3s ease;
+  content: counter(counter);
   position: absolute;
   left: -70px;
   top: 50%;
@@ -55,7 +51,7 @@
   border-radius: 50%;
   height: 50px;
   width: 50px;
-  border: 1px solid #e2231b;
+  border: 2px solid #e2231b;
   color: #e2231b;
   background-color: #fff;
   text-align: center;
