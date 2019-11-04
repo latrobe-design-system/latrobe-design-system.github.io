@@ -28,7 +28,6 @@ collections:
     output: true
 
 
-
 ## Sets the default attributes for the Documentation and Pattern Files
 defaults:
   -
