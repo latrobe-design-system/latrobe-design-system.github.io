@@ -40,43 +40,36 @@ defaults:
     scope:
       path: "_docs/guidelines"
     values:
-      layout: doc
       type: guideline
   -
     scope:
       path: "_docs/getting-started"
     values:
-      layout: doc
       type: getting-started
   -
     scope:
       path: "_docs/components"
     values:
-      layout: doc
       type: component
   -
     scope:
       path: "_docs/foundations"
     values:
-      layout: doc
       type: foundation
   -
     scope:
       path: "_docs/elements"
     values:
-      layout: doc
       type: element
   -
     scope:
       path: "_docs/blocks"
     values:
-      layout: doc
       type: block
   -
     scope:
       path: "_docs/templates"
     values:
-      layout: doc
       type: template
   -
     scope:
