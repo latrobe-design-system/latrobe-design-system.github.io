@@ -1,7 +1,13 @@
 {% for pattern in site.pages %}
     {%- if pattern.url contains include.snippet -%}
-        <div class="ds-block-container" data-blockwidth="{{ include.blockWidth }}">
+        {% if include.container != 'false' %} 
+            <div class="ds-block-container" data-blockwidth="{{ include.blockWidth }}" data-bgcolor="{{ include.blockBackground }}">
+                <div class="ds-block-content" data-blockalign="{{ include.blockAlign }}">
+                    {{ pattern.content }}
+                </div>
+            </div>
+        {% else %}
             {{ pattern.content }}
-        </div>
+        {% endif f%}
     {%- endif -%}
 {% endfor %}
