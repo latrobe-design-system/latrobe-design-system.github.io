@@ -1,6 +1,6 @@
 {%- include snippet-top.html -%}
 
-{% for pattern in site.pages %}
+{% for pattern in site.ltu-patterns %}
     {%- if pattern.url contains include.snippet -%}
         {%- highlight html -%}
             {{ pattern.content }}

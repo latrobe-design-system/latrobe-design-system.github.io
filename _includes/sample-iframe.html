@@ -1,4 +1,4 @@
-{% for pattern in site.pages %}
+{% for pattern in site.ltu-patterns %}
     {%- if pattern.url contains include.snippet -%}
         <div class="wedgetail-pattern" id="{{ pattern.title | slugify }}">
             <div class="wedgetail-header">
@@ -15,7 +15,7 @@
                 </div>
 
                 <div class="wedgetail-preview">
-                    <a href="javascript:void(0)" title="View Source Code" class="wedgetail-helper-code button"></a>  
+                    <a href="javascript:void(0)" title="View Source Code" class="wedgetail-helper-code button"></a>
 
                     <a class="wedgetail-snippet-file" href="/ltu-patterns/packages/{{ include.snippet }}" target="_blank" title="Open in new tab"></a>
                 </div>
@@ -24,9 +24,9 @@
             <div class="wedgetail-sample button-primary" style="background: {{ include.bgcolor | default: transparent }};">
                 <iframe class="wedgetail-snippet-iframe" id="{{ include.snippet | remove: ".html" }}" src="/ltu-patterns/packages/{{ include.snippet }}" height="0px" frameborder="0" scrolling="no"></iframe>
             </div>
-                
+
             <div class="wedgetail-code">
-                {% for pattern in site.pages %}
+                {% for pattern in site.ltu-patterns %}
                     {%- if pattern.url contains include.snippet -%}
                         {%- highlight html -%}
                             {{ pattern.content }}

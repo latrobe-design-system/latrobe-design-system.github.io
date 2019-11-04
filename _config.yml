@@ -24,6 +24,10 @@ collections:
   docs:
     output: true
     permalink: /:path
+  ltu-patterns:
+    output: true
+
+
 
 ## Sets the default attributes for the Documentation and Pattern Files
 defaults:
@@ -76,17 +80,17 @@ defaults:
       type: template
   -
     scope:
-      path: "ltu-patterns/packages"
+      path: "_ltu-patterns/packages"
     values:
       status: draft
       layout: sample
   -
     scope:
-      path: "ltu-patterns/packages/blocks"
+      path: "_ltu-patterns/packages/blocks"
     values:
       layout: sample-block
   -
     scope:
-      path: "ltu-patterns/packages/templates"
+      path: "_ltu-patterns/packages/templates"
     values:
       layout: sample-block
