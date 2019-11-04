@@ -1,4 +1,19 @@
-{%- include wedgetail-top.html -%}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
+    <link rel="stylesheet" href="{{ site.url }}/wedgetail/css/styles.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
+</head>
+
+<body>
+    {%- include wedgetail-menu.html -%}
 
 <div class="ds-content-wrapper">
     <div class="ds-content">
@@ -13,4 +28,72 @@
     </div>
 </div>
 
-{%- include wedgetail-bottom.html -%}
+<script
+src="https://code.jquery.com/jquery-2.2.4.min.js"
+integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+<script>
+    /*
+     * iframe auto height
+     */
+    function setIframeHeight(iframe) {
+        if (iframe) {
+            var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+            if (iframeWin.document.body) {
+                iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+            }
+        }
+    };
+    $(window).load(function () {
+        $('iframe').each(function () {
+            var id = $(this).attr('id');
+            setIframeHeight(document.getElementById(id));
+        });
+    });
+    $(window).resize(function () {
+        $('iframe').each(function () {
+            var id = $(this).attr('id');
+            setIframeHeight(document.getElementById(id));
+        });
+    });
+
+    $(window).load(function () {
+        var codeButton = $('.wedgetail-helper-code.button');
+        codeButton.click(function(){
+            $(this).parents('.wedgetail-pattern').toggleClass('active');
+            $(this).parents('.wedgetail-pattern').children('.wedgetail-code').slideToggle();
+            // If the pattern is open don't scroll
+            if($(this).parents('.wedgetail-pattern').hasClass('active')) {
+            $('html, body').animate({
+                scrollTop: $(this).parents('.wedgetail-pattern').offset().top
+            }, 500);
+            }
+        });
+
+        $('a[href^="#"]').click(function() {
+            var target = $(this.hash);
+            var hash = this.hash;
+            if (target.length == 0) target = $('a[name="' + this.hash.substr(1) + '"]');
+            if (target.length == 0) target = $('html');
+            console.log(target);
+            // If the Target element is collapsed; expand it...
+            if($(target).hasClass('collapsed')) {
+            $(target).nextUntil('h1').slideDown();
+            $(target).removeClass('collapsed');
+            }
+            // Scroll to the element
+            $('html, body').animate({ scrollTop: target.offset().top }, 500, function (){
+                location.hash = hash;
+            });
+            return false;
+        });
+
+    });
+
+
+</script>
+</body>
+
+</html>
