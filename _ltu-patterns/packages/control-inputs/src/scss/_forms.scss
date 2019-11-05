@@ -1,5 +1,6 @@
 form {
-    width: 40em;
+    width: 100%;
+    max-width: 40em;
 }
 
 .form-group {
@@ -8,6 +9,10 @@ form {
 
 input {
     display: block;
+}
+
+.control-input {
+    padding-top: 12px;
 }
 
 legend {

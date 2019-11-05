@@ -1,54 +1,50 @@
-.checkbox input[type="checkbox"] {
+.radio input[type="radio"] {
     display: none;
 }
 
-.checkbox label {
+.radio label {
     position: relative;
+    display: inline-block;
     padding-left: $spacer * 8;
-    display: block;
 }
 
-.checkbox label::before,
-.checkbox label::after {
+.radio label::before,
+.radio label::after {
     position: absolute;
     content: "";
     display: inline-block;
 }
 
 /*Outer box of the fake checkbox*/
-.checkbox label::before{
+.radio label::before{
     height: 24px;
     width: 24px;
     border: 2px solid $color-3b;
-    border-radius: 2px;
+    border-radius: 50%;
     left: 0px;
-    top: 3px;
 }
 
 /*Checkmark of the fake checkbox*/
-.checkbox label::after {
-    height: 8px;
+.radio label::after {
+    height: 12px;
     width: 12px;
-    border-left: 3px solid;
-    border-bottom: 3px solid;
-    
-    transform: rotate(-45deg);
-    
+    background: $color-2;
+    border-radius: 50%;
     left: 6px;
-    top: 10px;
+    top: 6px;
 }
 
 /*Hide the checkmark by default*/
-.checkbox input[type="checkbox"] + label::after {
+.radio input[type="radio"] + label::after {
     content: none;
 }
 
 /*Unhide on the checked state*/
-.checkbox input[type="checkbox"]:checked + label::after {
+.radio input[type="radio"]:checked + label::after {
     content: "";
 }
 
 /*Adding focus styles on the outer-box of the fake checkbox*/
-.checkbox input[type="checkbox"]:focus + label::before {
+.radio input[type="radio"]:focus + label::before {
     border: 2px solid $color-2;
 }
