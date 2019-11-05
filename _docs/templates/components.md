@@ -1,5 +1,5 @@
 ---
-title: "Component Combos"
+title: "Components"
 status: draft
 ---
 

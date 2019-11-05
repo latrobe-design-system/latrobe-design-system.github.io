@@ -3,9 +3,21 @@
     border-radius: 2px;
     position: relative;
     font-weight: 400;
-    padding: 12px 24px;
+    padding: $spacer*8;
     box-shadow: 0px 10px 20px $color-3a;
     display: inline-block;
+
+    @media(min-width: 768px){
+        position: relative;
+        padding: $spacer*8;
+
+        &::before {
+            display: block;
+            position: absolute;
+            left: 24px;
+            top: 24px;
+        }
+    }
 
     > :first-child {
         margin: 0;
@@ -19,8 +31,15 @@
 .icon-callout {
     width: 32px;
     height: 32px;
-    margin-right: 24px;
-    float: left;
+    
+    @media(max-width: 768px){
+        margin-bottom: 24px;
+    }
+
+    @media(min-width: 768px){
+        float: left;
+        margin-right: 24px;
+    }
     
     svg {
         width: inherit;
@@ -41,19 +60,5 @@
 .callout-content {
     >:first-child {
         margin-top: 0 !important;
-    }
-}
-
-
-@media(min-width: 768px){
-    .callout {
-        position: relative;
-        padding: $spacer*8;
-    }
-    .callout::before {
-        display: block;
-        position: absolute;
-        left: 24px;
-        top: 24px;
     }
 }

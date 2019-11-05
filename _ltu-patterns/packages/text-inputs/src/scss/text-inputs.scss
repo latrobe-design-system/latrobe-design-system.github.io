@@ -1,0 +1,11 @@
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background-color: #fbfbfb;
+    border: 2px solid $color-3b;
+    resize: vertical;
+    border-radius: 2px;
+}

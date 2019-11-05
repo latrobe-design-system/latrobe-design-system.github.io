@@ -1,5 +1,5 @@
 ---
-title: "Sample"
+title: "Landing"
 status: draft
 ---
 

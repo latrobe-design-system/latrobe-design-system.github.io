@@ -60,7 +60,7 @@
 
 .banner-campaign-text {
     @media (max-width:1024px) {
-        padding: 0 6%;
+        padding: 6%;
     }
 
     @media (min-width:1024px) {
@@ -82,7 +82,6 @@
     width: 100%;
     position: relative;
     z-index: 1;
-    margin-bottom: $spacer * 10;
 
     @media (max-width:1024px) {
         height: 33.33vh;

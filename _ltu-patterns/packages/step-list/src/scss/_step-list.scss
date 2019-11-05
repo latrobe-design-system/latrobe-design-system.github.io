@@ -1,64 +1,70 @@
 .step-list-wrapper {
-  display: block;
+    display: block;
 }
 
 .step-list {
-  padding: 20px 0;
-}
+    padding: 20px 0;
+    counter-reset: my-awesome-counter;
+    width: 100%;
+    list-style: none;
+    padding: 0 0 0 70px;
+    position: relative;
 
-.step-list {
-  counter-reset: my-awesome-counter;
-  width: 100%;
-  list-style: none;
-  padding: 0 0 0 70px;
-  position: relative;
-}
-
-.step-list:before {
-  width: 1px;
-  height: calc(100% - 96px);
-  border-left: 1px dotted $color-2a;
-  position: absolute;
-  top: 48px;
-  left: 24px;
-  content: "";
-  z-index: -1;
+    &:before {
+        width: 1px;
+        height: calc(100% - 96px);
+        border-left: 1px dotted $color-2a;
+        position: absolute;
+        top: 48px;
+        left: 24px;
+        content: "";
+        z-index: -1;
+    }
 }
 
 .step-list-item {
-  counter-increment: my-awesome-counter;
-  position: relative;
-  min-height: 80px;
-  padding: 16px 0;
-  border-bottom: 1px solid $color-3a;
-  display: flex;
-  align-items: center;
-  width: 40em;
-}
+    counter-increment: my-awesome-counter;
+    position: relative;
+    min-height: 80px;
+    border-bottom: 1px solid $color-3a;
+    display: flex;
+    align-items: center;
+    width: 100%;
 
-.step-list-item:after {
-  content: "";
-  min-height: inherit;
-  font-size: 0;
-}
+    @media(min-width: 768px) {
+        width: 40em;
+        padding: 16px 0;
+    }
 
-.step-list-item:last-child {
-  border-bottom: none;
-}
+    &:after {
+        content: "";
+        min-height: inherit;
+        font-size: 0;
+    }
 
-.step-list-item:before {
-  content: counter(my-awesome-counter);
-  position: absolute;
-  left: -70px;
-  top: 50%;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  height: 48px;
-  width: 48px;
-  border: 2px solid $color-1;
-  color: $color-1;
-  background-color: white;
-  text-align: center;
-  font-weight: 700;
-  padding: 8px 0;
+    &:last-child {
+        border-bottom: none;
+    }
+
+    &:before {
+        content: counter(my-awesome-counter);
+        position: absolute;
+        left: -70px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        height: 44px;
+        width: 44px;
+        border: 2px solid $color-1;
+        color: $color-1;
+        background-color: white;
+        text-align: center;
+        font-weight: 700;
+        padding: 8px 0;
+
+        @media(min-width: 768px) {
+            width: 48px;
+            height: 48px;
+        }
+    }
 }

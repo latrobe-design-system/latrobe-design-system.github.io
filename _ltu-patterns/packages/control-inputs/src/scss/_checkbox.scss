@@ -5,7 +5,7 @@
 .checkbox label {
     position: relative;
     display: inline-block;
-    padding-left: $spacer * 1.5;
+    padding-left: $spacer * 8;
 }
 
 .checkbox label::before,
@@ -19,7 +19,8 @@
 .checkbox label::before{
     height: 24px;
     width: 24px;
-    border: 2px solid;
+    border: 2px solid $color-3b;
+    border-radius: 2px;
     left: 0px;
     top: 3px;
 }
@@ -49,5 +50,5 @@
 
 /*Adding focus styles on the outer-box of the fake checkbox*/
 .checkbox input[type="checkbox"]:focus + label::before {
-    outline: $color-1 auto 5px;
+    border: 2px solid $color-2;
 }
