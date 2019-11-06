@@ -2,6 +2,17 @@
     display: none;
 }
 
+.radio {
+    label {
+        padding-left: 20px;
+    }
+
+    input[type="radio"] {
+        position: absolute;
+        margin-left: 0px;
+    }
+}
+
 .radio label {
     position: relative;
     display: inline-block;

@@ -1,0 +1,48 @@
+form {
+    width: 100%;
+    max-width: 40em;
+}
+
+.form-group {
+    margin-top: 2em;
+}
+
+.control-input {
+    margin-top: 8px;
+}
+
+input {
+    display: block;
+}
+
+legend {
+    display: block;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: none;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background-color: #fbfbfb;
+    border: 2px solid $color-3b;
+    resize: vertical;
+    border-radius: 2px;
+    margin-top: 4px;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}

@@ -1,0 +1,16 @@
+.select {
+    position: relative;
+
+    &:after {
+        content: "";
+        background-image: url("icons/feather/chevron-down.svg");
+        background-position: center;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+}
