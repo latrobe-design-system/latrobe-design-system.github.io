@@ -1,0 +1,26 @@
+---
+title: "Valid and invalid states"
+status: draft
+text: Add a border around select boxes to indicate whether user input is valid or invalid.
+
+# Example content
+label: What option?
+---
+
+<label for="name">{{ page.label }}</label>
+
+<select class="text-input--valid">
+    <option value="option-1">Option 1</option>
+    <option value="option-2">Option 2</option>
+    <option value="option-3">Option 3</option>
+    <option value="option-4">Option 4</option>
+</select>
+
+<label for="name">{{ page.label }}</label>
+
+<select class="text-input--invalid">
+    <option value="option-1">Option 1</option>
+    <option value="option-2">Option 2</option>
+    <option value="option-3">Option 3</option>
+    <option value="option-4">Option 4</option>
+</select>

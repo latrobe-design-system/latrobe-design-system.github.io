@@ -1,15 +1,17 @@
 ---
 title: "Select"
 status: "draft"
+text: Select boxes (drop-down lists) allow users to select a value from a list.
+
+# Example content
+label: What option?
 ---
 
-<div class="form-group select">
-    <label for="name">Label</label>
-    
-    <select>
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
-    </select>
-</div>
+<label for="name">{{ page.label }}</label>
+
+<select>
+    <option value="option-1">Option 1</option>
+    <option value="option-2">Option 2</option>
+    <option value="option-3">Option 3</option>
+    <option value="option-4">Option 4</option>
+</select>

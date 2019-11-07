@@ -3,6 +3,11 @@ form {
     max-width: 40em;
 }
 
+label {
+    display: block;
+    margin-top: $spacer * 5;
+}
+
 input {
     display: block;
 }
@@ -50,4 +55,13 @@ select {
 
 .control-input {
     margin-top: 8px;
+    display: inline-block;
+
+    &--block {
+        display: block;
+    }
+
+    label {
+        margin-top: 0;
+    }
 }
