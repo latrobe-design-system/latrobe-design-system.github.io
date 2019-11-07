@@ -3,7 +3,7 @@
 //----------------------------------------------------------------------------------------------------------------------------------// 
 
 .alert {
-    border: 2px solid rgba($color-alt-3, 1);
+    border: 1px solid rgba($color-alt-3, 1);
     border-radius: 4px;
     padding: 12px 20px;
     margin-top: 32px;
@@ -130,4 +130,10 @@
     border: 0;
     line-height: 0;
     cursor: pointer;
+    opacity: 0.6;
+    transition: opacity .05s ease-in-out;
+
+    &:hover {
+        opacity: 1;
+    }
 }

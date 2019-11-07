@@ -1,0 +1,20 @@
+---
+title: "Disabled Inputs"
+status: draft
+text: Add a border around the control inputs to indicate valid or invalid selections.
+
+# Example content
+legend: Checkbox Group
+id: checkbox
+label: Item
+---
+
+<div class="form-group checkbox">
+    <div class="control-input">
+        <input type="checkbox" id="{{ page.id }}-1">
+
+        <label for="{{ page.id }}-1">
+            {{ page.label }}
+        </label>
+    </div>
+</div>

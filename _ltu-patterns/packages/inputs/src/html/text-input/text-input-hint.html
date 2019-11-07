@@ -9,8 +9,6 @@ placeholder: name@example.com
 hint: We will only use this to respond to your question
 ---
 
-<div class="form-group">
-    <label for="{{ page.id }}">{{ page.label }}</label>
-    <input type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="{{ page.placeholder }}"/>
-    <span class="hint-text" id="{{ page.id }}-hint">{{ page.hint }}</span>
-</div>
+<label for="{{ page.id }}">{{ page.label }}</label>
+<input type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="{{ page.placeholder }}"/>
+<span class="hint-text" id="{{ page.id }}-hint">{{ page.hint }}</span>

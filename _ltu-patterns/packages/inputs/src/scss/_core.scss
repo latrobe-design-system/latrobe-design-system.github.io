@@ -9,15 +9,14 @@ input {
 
 legend {
     display: block;
-    padding-left: 2px;
-    padding-right: 2px;
+    padding: 0;
     border: none;
 }
 
 fieldset {
     border: 0;
     padding: 0;
-    margin: 0;
+    margin: $spacer*5 0;
 }
 
 input,
@@ -31,6 +30,12 @@ textarea {
     resize: vertical;
     border-radius: 2px;
     margin-top: 4px;
+
+    &:focus {
+        outline: none;
+        border-color: #80bdff;
+        box-shadow: 0 0 0 4px rgba(0,123,255,.25);
+    }
 }
 
 select {

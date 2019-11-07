@@ -53,6 +53,19 @@ html {
 .wedgetail-sample {
     border: 1px solid #ddd;
     line-height: 0;
+    position: relative;
+}
+
+.wedgetail-text {
+    >:first-child {
+        margin-top: 0;
+    }
+}
+
+.wedgetail-preview {
+    position: absolute;
+    right: 0;
+    top: -40px;
 }
 
 .wedgetail-snippet-iframe {

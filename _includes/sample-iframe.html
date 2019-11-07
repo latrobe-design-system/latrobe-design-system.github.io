@@ -20,15 +20,20 @@
                         {{ pattern.status }}
                     </div>
                 </div>
+            </div>
 
+            {% if pattern.text %}
+                <div class="wedgetail-text">
+                    <p>{{ pattern.text }}</p>
+                </div>
+            {% endif %}
+
+            <div class="wedgetail-sample button-primary" style="background: {{ include.bgcolor | default: transparent }};">
                 <div class="wedgetail-preview">
                     <a href="javascript:void(0)" title="View Source Code" class="wedgetail-helper-code button"></a>
 
                     <a class="wedgetail-snippet-file" href="{{ path }}{{ include.snippet }}" target="_blank" title="Open in new tab"></a>
                 </div>
-            </div>
-
-            <div class="wedgetail-sample button-primary" style="background: {{ include.bgcolor | default: transparent }};">
 
                 <iframe class="wedgetail-snippet-iframe" id="{{ include.snippet | remove: ".html" }}" src="{{ path }}{{ include.snippet }}" height="0px" frameborder="0" scrolling="no"></iframe>
 
