@@ -1,10 +1,15 @@
 ---
 title: "Text Area"
 status: "draft"
+
+# Example content
+label: Message
+id: email
+placeholder: Enter your message
 ---
 
 <div class="form-group">
-    <label for="name">Label</label>
+    <label for="name">{{ page.label }}</label>
 
-    <textarea rows="8" placeholder="Placeholder Text"></textarea>
+    <textarea rows="8" placeholder="{{ page.placeholder }}"></textarea>
 </div>

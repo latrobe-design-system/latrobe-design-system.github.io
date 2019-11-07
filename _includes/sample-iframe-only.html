@@ -1,5 +1,12 @@
 {% for pattern in site.ltu-patterns %}
     {%- if pattern.url contains include.snippet -%}
+
+        {%- if page.type == 'template' -%}
+            {% assign path =  '/ltu-patterns/' -%}
+        {%- else -%}
+            {% assign path =  '/ltu-patterns/packages/' %}
+        {%- endif -%}
+
         <div class="wedgetail-pattern">
             <div class="wedgetail-header">
                 <div class="wedgetail-title">
@@ -16,7 +23,7 @@
             </div>
 
             <div class="wedgetail-sample">
-                <iframe style="background: {{ include.bgcolor | default: transparent }};" class="wedgetail-snippet-iframe" id="{{ include.snippet | remove: ".html" }}" src="/ltu-patterns/packages/{{ include.snippet }}" height="0px" frameborder="0" scrolling="no"></iframe>
+                <iframe style="background: {{ include.bgcolor | default: transparent }};" class="wedgetail-snippet-iframe" id="{{ path }}{{ include.snippet | remove: ".html" }}" src="{{ path }}{{ include.snippet }}" height="0px" frameborder="0" scrolling="no"></iframe>
             </div>
         </div>
     {%- endif -%}

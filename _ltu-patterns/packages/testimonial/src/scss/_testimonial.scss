@@ -58,22 +58,26 @@
         padding-top: 20px;
     }
 
-    .card-set .testimonial-image {
+    .testimonial-set .testimonial-image {
         width: 120px;
         height: 120px;
         margin: 0 auto -60px auto;
         float: none;
     }
 
-    .card-set .testimonial-copy {
+    .testimonial-set .testimonial-copy {
         padding: 84px 20px 20px 20px;
     }
 }
 
 
+.testimonial-set {
+    @extend .card-set;
+}
+
 /* if only one exists */
-.card-set .testimonial:nth-last-child(1):first-child,
-.card-set .testimonial:nth-last-child(1):first-child ~ .testimonial {
+.testimonial-set .testimonial:nth-last-child(1):first-child,
+.testimonial-set .testimonial:nth-last-child(1):first-child ~ .testimonial {
     @media(min-width: 600px){
         display: block;
 
@@ -92,8 +96,8 @@
 }
 
 /* if only two exist */
-.card-set .testimonial:nth-last-child(2):first-child,
-.card-set .testimonial:nth-last-child(2):first-child ~ .testimonial {
+.testimonial-set .testimonial:nth-last-child(2):first-child,
+.testimonial-set .testimonial:nth-last-child(2):first-child ~ .testimonial {
 
     @media(min-width: 1200px){
         display: block;

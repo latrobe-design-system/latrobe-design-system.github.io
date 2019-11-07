@@ -6,6 +6,8 @@ info: Provide contextual feedback messages for typical user actions with the han
 
 {% include sample-iframe.html snippet="alert/src/html/alert-success.html" %}
 
+{% include sample-iframe.html snippet="alert/src/html/alert-warning.html" %}
+
 {% include sample-iframe.html snippet="alert/src/html/alert-danger.html" %}
 
 {% include sample-iframe.html snippet="alert/src/html/alert-info.html" %}

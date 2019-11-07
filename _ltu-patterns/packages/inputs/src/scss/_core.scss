@@ -3,14 +3,6 @@ form {
     max-width: 40em;
 }
 
-.form-group {
-    margin-top: 2em;
-}
-
-.control-input {
-    margin-top: 8px;
-}
-
 input {
     display: block;
 }
@@ -34,7 +26,7 @@ textarea {
     display: block;
     width: 100%;
     padding: 16px;
-    background-color: #fbfbfb;
+    background-color: lighten($color-3b, 20%);
     border: 2px solid $color-3b;
     resize: vertical;
     border-radius: 2px;
@@ -45,4 +37,12 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+}
+
+.form-group {
+    margin-top: 2em;
+}
+
+.control-input {
+    margin-top: 8px;
 }

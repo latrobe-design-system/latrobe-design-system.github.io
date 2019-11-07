@@ -23,11 +23,13 @@ status: draft
 %}
 
 <!-- Testimonial Set -->
-{% include sample-component.html
-    snippet="packages/testimonial/src/html/testimonial-set.html"
-    blockWidth="narrow"
-    blockBackground="grey"
-%}
+<div class="testimonial-set">
+    {% include sample-component.html
+        snippet="packages/testimonial/src/html/testimonial-set.html"
+        blockWidth="narrow"
+        blockBackground="grey"
+    %}
+</div>
 
 <!-- Step List -->
 {% include sample-component.html
@@ -49,6 +51,15 @@ status: draft
     blockWidth="narrow"
     blockAlign="center"
 %}
+
+<!-- Testimonial Set One -->
+<div class="testimonial-set">
+    {% include sample-component.html
+        snippet="packages/testimonial/src/html/testimonial.html"
+        blockWidth="narrow"
+        blockAlign="center"
+    %}
+</div>
 
 <!-- Proofpoint Set -->
 {% include sample-component.html

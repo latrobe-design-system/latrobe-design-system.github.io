@@ -1,0 +1,14 @@
+---
+title: "Default"
+status: "draft"
+
+# Example content
+label: Email
+id: email
+placeholder: name@example.com
+---
+
+<div class="form-group">
+    <label for="{{ page.id }}">{{ page.label }}</label>
+    <input type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="{{ page.placeholder }}"/>
+</div>

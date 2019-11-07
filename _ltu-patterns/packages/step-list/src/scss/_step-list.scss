@@ -1,13 +1,14 @@
 .step-list-wrapper {
     display: block;
+    width: max-content;
+    margin: auto;
 }
 
 .step-list {
-    padding: 20px 0;
     counter-reset: my-awesome-counter;
     width: 100%;
     list-style: none;
-    padding: 0 0 0 70px;
+    padding-left: 80px;
     position: relative;
 
     &:before {
@@ -23,6 +24,12 @@
 }
 
 .step-list-item {
+    div {
+        >:first-child {
+            margin-top: 0;
+        }
+    }
+    
     counter-increment: my-awesome-counter;
     position: relative;
     min-height: 80px;
@@ -33,25 +40,15 @@
 
     @media(min-width: 768px) {
         width: 40em;
-        padding: 16px 0;
-    }
-
-    &:after {
-        content: "";
-        min-height: inherit;
-        font-size: 0;
-    }
-
-    &:last-child {
-        border-bottom: none;
+        padding-bottom: 40px;
+        margin-bottom: 40px;
     }
 
     &:before {
         content: counter(my-awesome-counter);
         position: absolute;
-        left: -70px;
-        top: 50%;
-        transform: translateY(-50%);
+        left: -80px;
+        top: 0;
         border-radius: 50%;
         height: 44px;
         width: 44px;
@@ -66,5 +63,15 @@
             width: 48px;
             height: 48px;
         }
+    }
+
+    &:after {
+        content: "";
+        min-height: inherit;
+        font-size: 0;
+    }
+
+    &:last-child {
+        border-bottom: none;
     }
 }
