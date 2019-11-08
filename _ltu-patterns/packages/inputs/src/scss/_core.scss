@@ -24,9 +24,7 @@ fieldset {
     margin: $spacer*5 0;
 }
 
-input,
-select,
-textarea {
+.text-input {
     display: block;
     width: 100%;
     padding: 16px;

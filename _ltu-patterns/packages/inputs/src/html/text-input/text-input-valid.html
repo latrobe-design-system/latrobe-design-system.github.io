@@ -1,5 +1,5 @@
 ---
-title: "Valid and invalid states"
+title: "Text input valid"
 status: draft
 text: Add a border to text inputs and text areas to indicate whether user input is valid (validates according to the elements settings) or invalid (does not validate according to the elements settings).
 
@@ -15,7 +15,3 @@ invalid: Invalid input
 <label for="{{ page.id }}">{{ page.label }}</label>
 <input type="text" class="text-input text-input--valid" id="{{ page.id }}" aria-invalid="true" aria-describedby="{{ page.id }}-valid-text" placeholder="{{ page.placeholder }}" />
 <span class="valid-text" id="{{ page.id }}-valid-text">{{ page.valid }}</span>
-
-<label for="text">{{ page.label }}</label>
-<input type="text" class="text-input text-input--invalid" id="{{ page.id }}" aria-invalid="true" aria-describedby="{{ page.id }}-invalid-text" placeholder="{{ page.placeholder }}" />
-<span class="invalid-text" id="{{ page.id }}-invalid-text">{{ page.invalid }}</span>
