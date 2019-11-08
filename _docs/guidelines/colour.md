@@ -8,9 +8,11 @@ info: Below are all the colours included in the style guide grouped by the file 
 - [Accents](#accents)
 - [How to apply colour](#how-to-apply-colour)
 
-{% include colours.html snippet="foundations/colour/primary-colours.html" %}
+{% include colours.html snippet="core/src/html/colour/primary-colours.html" %}
 
-{% include colours.html snippet="foundations/colour/accent-colours.html" %}
+{% include colours.html snippet="core/src/html/colour/accent-colours.html" %}
+
+{% include colours.html snippet="core/src/html/colour/brand-alts.html" %}
 
 ## How to apply colour <a name="how-to-apply-colour"></a>
 

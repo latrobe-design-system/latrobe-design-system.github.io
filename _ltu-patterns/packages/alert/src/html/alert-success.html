@@ -2,12 +2,25 @@
 title: "Success Alert"
 
 status: "draft"
+
+icon-check-circle: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+alert-heading: Heading
+alert-text: This is a success alert—check it out!
 ---
 
-<div class="alert alert-page alert-success icon-check-circle icon-before" role="alert">
-    <p>This is a success alert—check it out!</p>
+<div class="alert alert-page alert-success" role="alert">
+    <div class="alert-icon">
+        {{ page.icon-check-circle }}
+    </div>
+    
+    <div class="alert-text">
+        <p>{{ page.alert-text }}</p>
+    </div>
 
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+    <button class="alert-close" data-dismiss="alert" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
     </button>
 </div>
