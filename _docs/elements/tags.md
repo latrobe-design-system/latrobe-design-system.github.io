@@ -1,6 +1,6 @@
 ---
 title: "Tags"
-status: draft
+status: planned
 info:
 ---
 
