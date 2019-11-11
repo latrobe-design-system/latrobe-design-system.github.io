@@ -1,0 +1,115 @@
+form {
+    width: 100%;
+    max-width: 40em;
+}
+
+label {
+    display: block;
+}
+
+input {
+    display: block;
+}
+
+input:focus,
+input:focus + label::before,
+select:focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 2px rgba(0,123,255,.25);
+}
+
+legend {
+    display: block;
+    padding: 0;
+    border: none;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+}
+
+select {
+    appearance: none;
+}
+
+.form-group {
+    margin-top: 2em;
+}
+
+.control-input {
+    margin-top: 8px;
+    display: inline-block;
+
+    &--block {
+        display: block;
+    }
+
+    label {
+        margin-top: 0;
+    }
+}
+
+
+//
+// Form validation
+//
+
+.text-input {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background-color: lighten($color-3b, 20%);
+    border: 2px solid $color-3b;
+    resize: vertical;
+    border-radius: 2px;
+    margin-top: 4px;
+}
+
+.control-input,
+.text-input {    
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+    label::before {
+        height: 24px;
+        width: 24px;
+        border: 2px solid $color-3b;
+        border-radius: 2px;
+        left: 0px;
+        top: 3px;
+    }
+
+    &--invalid {
+        border-color: $color-1;
+
+        &:focus,
+        label::before {
+            border-color: $color-1;
+        }
+    }
+
+    &--valid {
+        border-color: $green;
+
+        &:focus,
+        label::before {
+            border-color: $green;
+        }
+    }
+}
+
+.invalid-text,
+.valid-text {
+    display: block;
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+.invalid-text {
+    color: $color-1;
+}
+
+.valid-text {
+    color: $green;
+}

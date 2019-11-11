@@ -1,8 +1,11 @@
 .radio input[type="radio"] {
-    display: none;
+    opacity: 0;
+    position: absolute;
 }
 
 .radio {
+    margin-right: 16px;
+
     label {
         padding-left: 20px;
         cursor: pointer;
@@ -31,9 +34,9 @@
 .radio label::before{
     height: 24px;
     width: 24px;
-    border: 2px solid $color-3b;
     border-radius: 50%;
     left: 0px;
+    top: 0;
 }
 
 /*Checkmark of the fake checkbox*/
@@ -54,9 +57,4 @@
 /*Unhide on the checked state*/
 .radio input[type="radio"]:checked + label::after {
     content: "";
-}
-
-/*Adding focus styles on the outer-box of the fake checkbox*/
-.radio input[type="radio"]:focus + label::before {
-    border: 2px solid $color-2;
 }

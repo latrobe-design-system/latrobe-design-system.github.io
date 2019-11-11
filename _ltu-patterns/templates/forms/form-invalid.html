@@ -11,25 +11,33 @@ status: draft
         %}
 
         <form>
-            {% include sample-component.html
-                snippet="packages/inputs/src/html/text-input/text-input-invalid.html"
-                container="false"
-            %}
+            <div class="form-group">
+                {% include sample-component.html
+                    snippet="packages/inputs/src/html/text-input/text-input-invalid.html"
+                    container="false"
+                %}
+            </div>
 
-            {% include sample-component.html
-                snippet="packages/inputs/src/html/text-input/text-input-invalid.html"
-                container="false"
-            %}
+            <div class="form-group">
+                {% include sample-component.html
+                    snippet="packages/inputs/src/html/checkbox/checkbox-group-invalid.html"
+                    container="false"
+                %}
+            </div>
 
-            {% include sample-component.html
-                snippet="packages/inputs/src/html/text-input/text-input-invalid.html"
-                container="false"
-            %}
+            <div class="form-group">
+                {% include sample-component.html
+                    snippet="packages/inputs/src/html/radio/radio-group-invalid.html"
+                    container="false"
+                %}
+            </div>
 
-            {% include sample-component.html
-                snippet="packages/button/src/html/form_button.html"
-                container="false"
-            %}
+            <div class="form-group">
+                {% include sample-component.html
+                    snippet="packages/button/src/html/form_button.html"
+                    container="false"
+                %}
+            </div>
         </form>
     </div>
 </div>
