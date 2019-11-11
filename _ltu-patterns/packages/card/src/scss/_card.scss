@@ -49,7 +49,7 @@ a.card {
         color: $color-2;
         text-decoration: none;
         cursor: pointer;
-        box-shadow: 0 5px 20px 0 rgba(0,0,0,0.2);
+        box-shadow: $shadow-2;
 
         .card-heading {
             color: $color-1;

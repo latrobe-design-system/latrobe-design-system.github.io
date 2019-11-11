@@ -59,9 +59,6 @@ $teal: invert(49%) sepia(45%) saturate(3730%) hue-rotate(142deg) brightness(92%)
 $spacer: 4px;
 
 $space-unit: 4px;
-$space-xxxs: calc(0.25 * var($space-unit));
-$space-xxs:  calc(0.5 * var($space-unit));
-$space-xs:   calc(0.75 * var($space-unit));
 $space-sm:   calc(1 * var($space-unit));
 $space-md:   calc(2 * var($space-unit));
 $space-lg:   calc(3 * var($space-unit));
@@ -70,3 +67,11 @@ $space-xxl:  calc(5 * var($space-unit));
 $space-xxxl: calc(10 * var($space-unit));
 
 $component-padding: $space-md;
+
+
+//----------------------------------------------------------------------------------------------------------------------------------// 
+// Box shadows
+//----------------------------------------------------------------------------------------------------------------------------------// 
+
+$shadow-1: 0px 10px 20px $color-3a;
+$shadow-2: 0px 10px 20px $color-3b;
