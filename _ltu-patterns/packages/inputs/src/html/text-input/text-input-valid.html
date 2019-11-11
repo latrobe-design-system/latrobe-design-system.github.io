@@ -13,5 +13,7 @@ invalid: Invalid input
 ---
 
 <label for="{{ page.id }}">{{ page.label }}</label>
+
 <input type="text" class="text-input text-input--valid" id="{{ page.id }}" aria-invalid="true" aria-describedby="{{ page.id }}-valid-text" placeholder="{{ page.placeholder }}" />
-<span class="valid-text" id="{{ page.id }}-valid-text">{{ page.valid }}</span>
+
+<span class="valid-text small-text" id="{{ page.id }}-valid-text">{{ page.valid }}</span>

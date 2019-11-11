@@ -1,6 +1,6 @@
 ---
 title: "Text input"
-status: planned
+status: draft
 ---
 
 {% include sample-iframe.html snippet="inputs/src/html/text-input/text-input.html" %}
