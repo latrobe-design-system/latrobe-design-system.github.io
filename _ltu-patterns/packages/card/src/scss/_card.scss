@@ -5,7 +5,7 @@
     padding: 0 0 24px;
     margin-top: 16px;
     margin-bottom: 16px;
-    transition: all 0.3s;
+    transition: all 0.3s ease-in-out;
 }
 
 .card-header {
@@ -46,10 +46,11 @@ a.card {
     border: solid 1px $color-3b;
 
     &:hover {
+        transform: translateY(-4px);
         color: $color-2;
         text-decoration: none;
         cursor: pointer;
-        box-shadow: $shadow-2;
+        // box-shadow: $shadow-2;
 
         .card-heading {
             color: $color-1;

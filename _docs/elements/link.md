@@ -1,6 +1,6 @@
 ---
 title: "Link"
-status: planned
+status: draft
 info:
 ---
 

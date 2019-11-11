@@ -30,10 +30,6 @@ fieldset {
     padding: 0;
 }
 
-select {
-    appearance: none;
-}
-
 .form-group {
     margin-top: 2em;
 }
@@ -56,7 +52,8 @@ select {
 // Form validation
 //
 
-.text-input {
+.text-input,
+.select {
     display: block;
     width: 100%;
     padding: 16px;
@@ -68,7 +65,8 @@ select {
 }
 
 .control-input,
-.text-input {    
+.text-input,
+.select {    
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
     label::before {
