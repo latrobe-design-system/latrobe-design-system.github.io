@@ -1,5 +1,5 @@
 .step-list-wrapper {
-    
+
 }
 
 .step-list {
@@ -23,7 +23,7 @@
     counter-increment: my-awesome-counter;
     position: relative;
     padding: 32px 0;
-    border-bottom: 1px solid $color-3a;
+    border-bottom: 2px solid $color-3a;
     display: flex;
     align-items: center;
     width: 100%;
@@ -58,12 +58,12 @@
         border-left: 2px dotted $color-3b;
         position: absolute;
         top: 0;
-        left: calc(-80px + 22px);
+        left: calc(-80px + 21px);
         content: "";
         z-index: -1;
 
         @media(min-width: 1440px) {
-            left: calc(-80px + 24px);
+            left: calc(-80px + 23px);
         }
     }
 
