@@ -7,6 +7,7 @@ text: "Inline checkbox options can sometimes be difficult to scan. Users may fin
 legend: Checkbox Group
 id: checkbox
 label: Item
+invalid: Please select at least one option
 ---
 
 <fieldset>
@@ -37,4 +38,6 @@ label: Item
             {{ page.label }}
         </label>
     </div>
+
+    <span class="invalid-text" id="{{ page.id }}-invalid-text">{{ page.invalid }}</span>
 </fieldset>

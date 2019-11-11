@@ -5,6 +5,7 @@ text: Add a border around select boxes to indicate whether user input is valid o
 
 # Example content
 label: What option?
+invalid: Please select and option
 ---
 
 <div class="form-group">
@@ -16,4 +17,6 @@ label: What option?
         <option value="option-3">Option 3</option>
         <option value="option-4">Option 4</option>
     </select>
+
+    <span class="invalid-text" id="{{ page.id }}-invalid-text">{{ page.invalid }}</span>
 </div>
