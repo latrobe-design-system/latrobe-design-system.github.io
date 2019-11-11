@@ -4,7 +4,7 @@
     position: relative;
     font-weight: 400;
     padding: $spacer*8;
-    box-shadow: 0px 10px 20px $color-3a;
+    box-shadow: $shadow-1;
     display: inline-block;
 
     @media(min-width: 768px){

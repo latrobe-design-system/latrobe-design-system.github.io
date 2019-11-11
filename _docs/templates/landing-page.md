@@ -3,4 +3,4 @@ title: "Landing"
 status: draft
 ---
 
-{% include sample-iframe.html snippet="templates/sample.html" %}
+{% include sample-iframe-only.html snippet="templates/sample.html" %}
