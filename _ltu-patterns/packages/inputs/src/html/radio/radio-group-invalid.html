@@ -7,6 +7,7 @@ text: Vertically stacked radio buttons.
 legend: Radio Group
 id: radio
 label: Item
+invalid: Please select an option
 ---
 
 <fieldset>
@@ -26,4 +27,6 @@ label: Item
         <input type="radio" name="radio" id="{{ page.id }}-3">
         <label for="{{ page.id }}-3">Item 3</label>
     </div>
+
+    <span class="invalid-text small-text" id="{{ page.id }}-invalid-text">{{ page.invalid }}</span>
 </fieldset>

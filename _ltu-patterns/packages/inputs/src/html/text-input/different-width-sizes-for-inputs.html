@@ -9,11 +9,17 @@ id: email
 placeholder: name@example.com
 ---
 
-<label for="{{ page.id }}">{{ page.label }}</label>
-<input type="text" class="text-input text-input--width-lg" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="{{ page.placeholder }}"/>
+<div class="form-group">
+    <label for="{{ page.id }}">{{ page.label }}</label>
+    <input type="text" class="text-input text-input--width-lg" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="{{ page.placeholder }}"/>
+</div>
 
-<label for="{{ page.id }}">{{ page.label }}</label>
-<input type="text" class="text-input text-input--width-md" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="{{ page.placeholder }}"/>
+<div class="form-group">
+    <label for="{{ page.id }}">{{ page.label }}</label>
+    <input type="text" class="text-input text-input--width-md" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="{{ page.placeholder }}"/>
+</div>
 
-<label for="{{ page.id }}">{{ page.label }}</label>
-<input type="text" class="text-input text-input--width-sm" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="{{ page.placeholder }}"/>
+<div class="form-group">
+    <label for="{{ page.id }}">{{ page.label }}</label>
+    <input type="text" class="text-input text-input--width-sm" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="{{ page.placeholder }}"/>
+</div>

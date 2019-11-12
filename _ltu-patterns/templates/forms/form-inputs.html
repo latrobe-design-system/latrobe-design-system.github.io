@@ -5,33 +5,32 @@ status: draft
 
 <div class="ds-block-container" data-blockwidth="narrow">
     <div class="ds-block-content" data-blockAlign="center">
+        {% include sample-component.html
+            snippet="packages/alert/src/html/alert-info/alert-info-with-content.html"
+            container="false"
+        %}
+
         <form>
             <div class="form-group">
                 {% include sample-component.html
-                    snippet="packages/inputs/src/html/text-input/text-input.html"
-                    container="false"
-                    label="Name"
-                %}
-            </div>
-
-            <div class="form-group">
-                {% include sample-component.html
-                    snippet="packages/inputs/src/html/misc/number-input.html"
+                    snippet="packages/form/src/html/text-input-hint.html"
                     container="false"
                 %}
             </div>
 
             <div class="form-group">
                 {% include sample-component.html
-                    snippet="packages/inputs/src/html/misc/date-picker.html"
+                    snippet="packages/inputs/src/html/text-input/date-picker.html"
                     container="false"
                     label="Date"
                 %}
             </div>
 
             <div class="form-group">
+                <label>Gender</label>
+
                 {% include sample-component.html
-                    snippet="packages/inputs/src/html/textarea/textarea.html"
+                    snippet="packages/inputs/src/html/radio/radio.html"
                     container="false"
                 %}
             </div>
@@ -60,6 +59,48 @@ status: draft
             <div class="form-group">
                 {% include sample-component.html
                     snippet="packages/inputs/src/html/select/select-input.html"
+                    container="false"
+                %}
+            </div>
+
+            <div class="form-group">
+                {% include sample-component.html
+                    snippet="packages/inputs/src/html/text-input/disabled-text-input.html"
+                    container="false"
+                %}
+            </div>
+
+            <div class="form-group">
+                {% include sample-component.html
+                    snippet="packages/inputs/src/html/text-input/textarea.html"
+                    container="false"
+                %}
+            </div>
+
+            <div class="form-group">
+                {% include sample-component.html
+                    snippet="packages/inputs/src/html/text-input/number-input.html"
+                    container="false"
+                %}
+            </div>
+
+            <div class="form-group">
+                {% include sample-component.html
+                    snippet="packages/inputs/src/html/text-input/text-input-large.html"
+                    container="false"
+                %}
+            </div>
+
+            <div class="form-group">
+                {% include sample-component.html
+                    snippet="packages/inputs/src/html/text-input/text-input-medium.html"
+                    container="false"
+                %}
+            </div>
+
+            <div class="form-group">
+                {% include sample-component.html
+                    snippet="packages/inputs/src/html/text-input/text-input-small.html"
                     container="false"
                 %}
             </div>

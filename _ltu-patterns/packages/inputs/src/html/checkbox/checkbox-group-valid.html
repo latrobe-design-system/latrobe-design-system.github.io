@@ -7,6 +7,7 @@ text: "Inline checkbox options can sometimes be difficult to scan. Users may fin
 legend: Checkbox Group
 id: checkbox
 label: Item
+valid: Successfully validated
 ---
 
 <fieldset>
@@ -37,4 +38,6 @@ label: Item
             {{ page.label }}
         </label>
     </div>
+
+    <span class="valid-text small-text" id="{{ page.id }}-valid-text">{{ page.valid }}</span>
 </fieldset>

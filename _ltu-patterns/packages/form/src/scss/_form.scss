@@ -13,10 +13,16 @@ input {
 
 input:focus,
 input:focus + label::before,
-select:focus {
+select:focus,
+textarea:focus {
     outline: none;
     border-color: #80bdff;
     box-shadow: 0 0 0 2px rgba(0,123,255,.25);
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 legend {
@@ -28,10 +34,6 @@ legend {
 fieldset {
     border: 0;
     padding: 0;
-}
-
-select {
-    appearance: none;
 }
 
 .form-group {
@@ -56,7 +58,8 @@ select {
 // Form validation
 //
 
-.text-input {
+.text-input,
+.select {
     display: block;
     width: 100%;
     padding: 16px;
@@ -68,7 +71,8 @@ select {
 }
 
 .control-input,
-.text-input {    
+.text-input,
+.select {    
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
     label::before {
@@ -92,9 +96,17 @@ select {
     &--valid {
         border-color: $green;
 
-        &:focus,
+        
         label::before {
             border-color: $green;
+        }
+    }
+
+    &:disabled {
+        background: $color-3a;
+
+        &::placeholder {
+            color: $color-3b;
         }
     }
 }
@@ -102,7 +114,7 @@ select {
 .invalid-text,
 .valid-text {
     display: block;
-    margin-top: 4px;
+    margin-top: 8px;
     font-weight: 500;
 }
 
