@@ -1,0 +1,13 @@
+---
+title: "Disabled text input"
+status: "draft"
+text: Disabled input elements are unusable and can not be clicked. This prevents a user from interacting with the input element until another action is complete. Disabled input elements in a form will not be submitted.
+
+# Example content
+label: Email
+id: email
+placeholder: name@example.com
+---
+
+<label for="{{ page.id }}">{{ page.label }}</label>
+<input type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="{{ page.placeholder }}" disabled/>

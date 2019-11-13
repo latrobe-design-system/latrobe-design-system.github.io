@@ -3,4 +3,4 @@ title: "Mosaic"
 status: ready
 ---
 
-{% include sample-iframe.html snippet="blocks/mosaic/mosaic.html" %}
+{% include sample-iframe.html snippet="mosaic/src/html/mosaic.html" %}

@@ -1,0 +1,31 @@
+---
+title: "Promotion"
+
+
+# snippet content
+img: https://www.latrobe.edu.au/edit-homepage/promo-feature/generic/lims.jpg/1680.jpg
+imgalt:
+label: Thinking about changing your life?
+link: https://www.latrobe.edu.au/courses/apply-direct?view=campaign
+tagline: Apply now for Semester 2 2019
+buttontext: Discover more
+---
+
+<div id="promo-feature" class="banner P-item">
+    <img class="bannerImg" src="{{ page.img }}" alt="{{ page.imgalt }}" />
+    <div class="gradient"></div>
+    <div class="banner-text">
+        <p class="label">{{ page.label }}</p>
+        <h2><a href="{{ page.link }}">{{ page.tagline }}</a></h2>
+        <p class="cta"><a class="ltu-button light" href="{{ page.link }}">{{ page.buttontext }}</a></p>
+    </div>
+    <script>
+        var promoFeature =
+        {
+            'theme':'',
+            'subtheme':'',
+            'title':'{{ page.tagline }}'
+        }
+        createJSON('banner-text',promoFeature);
+    </script>
+</div>

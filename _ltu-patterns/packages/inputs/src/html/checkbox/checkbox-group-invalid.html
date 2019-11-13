@@ -1,0 +1,43 @@
+---
+title: "Checkbox Block"
+status: "draft"
+text: "Inline checkbox options can sometimes be difficult to scan. Users may find it challenging to determine with which label the checkbox option corresponds: the one before the checkbox or the one after. Vertical positioning of checkbox, with one choice per line, eliminates this potential cause for confusion."
+
+# Example content
+legend: Checkbox Group
+id: checkbox
+label: Item
+invalid: Please select at least one option
+---
+
+<fieldset>
+    <legend>
+        {{ page.legend }}
+    </legend> 
+
+    <div class="control-input control-input--invalid control-input--block checkbox">
+        <input type="checkbox" id="{{ page.id }}-1">
+
+        <label for="{{ page.id }}-1">
+            {{ page.label }}
+        </label>
+    </div>
+
+    <div class="control-input control-input--invalid control-input--block checkbox">
+        <input type="checkbox" id="{{ page.id }}-2">
+
+        <label for="{{ page.id }}-2">
+            {{ page.label }}
+        </label>
+    </div>
+
+    <div class="control-input control-input--invalid control-input--block checkbox">
+        <input type="checkbox" id="{{ page.id }}-3">
+
+        <label for="{{ page.id }}-3">
+            {{ page.label }}
+        </label>
+    </div>
+
+    <span class="invalid-text small-text" id="{{ page.id }}-invalid-text">{{ page.invalid }}</span>
+</fieldset>

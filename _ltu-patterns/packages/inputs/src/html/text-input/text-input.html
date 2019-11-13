@@ -1,0 +1,13 @@
+---
+title: "Default"
+status: "draft"
+text: The default text inputs do not have a width applied to them.
+
+# Example content
+label: Email
+id: email
+placeholder: name@example.com
+---
+
+<label for="{{ page.id }}">{{ page.label }}</label>
+<input type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="{{ page.placeholder }}"/>

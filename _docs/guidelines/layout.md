@@ -8,6 +8,12 @@ info: It’s fundamental to everything we design. The 4x grid is the geometric f
 - [Alignment](#alignment)
 - [Sizing scale](#sizing-scale)
 
+
+
+## Containers
+
+All block containers are wrapped with a 12% margin for larger displays and 6% for smaller displays.
+
 ## 4x grid fundamentals <a name="4x-grid-fundamentals"></a>
 
 All spacing on the site is to be in 4px increments: font-size, line-height, margins, padding

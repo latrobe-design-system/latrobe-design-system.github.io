@@ -5,8 +5,7 @@ info: Icons are visual symbols used to represent ideas, objects, or actions. The
 ---
 
 - [Designing with icons](#designing-with-icons)
-
-{% include sample-iframe-only.html snippet="foundations/icons/icons.html" %}
+- [Utility icons](#utility-icons)
 
 ## Designing with icons <a name="designing-with-icons"></a>
 
@@ -26,4 +25,6 @@ Icons are always a solid, monochromatic color and need to pass the same color co
 
 When used next to text, icons should be center-aligned.
 
-### Developing with icons
+<a name="utility-icons"></a>
+
+{% include sample-iframe-only.html snippet="foundations/icons/icons.html" %}

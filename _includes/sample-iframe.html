@@ -1,5 +1,12 @@
-{% for pattern in site.pages %}
+{% for pattern in site.ltu-patterns %}
     {%- if pattern.url contains include.snippet -%}
+
+        {%- if page.type == 'template' -%}
+            {% assign path =  '/ltu-patterns/' -%}
+        {%- else -%}
+            {% assign path =  '/ltu-patterns/packages/' %}
+        {%- endif -%}
+
         <div class="wedgetail-pattern" id="{{ pattern.title | slugify }}">
             <div class="wedgetail-header">
                 <div class="wedgetail-title">
@@ -13,20 +20,26 @@
                         {{ pattern.status }}
                     </div>
                 </div>
-
-                <div class="wedgetail-preview">
-                    <a href="javascript:void(0)" title="View Source Code" class="wedgetail-helper-code button"></a>  
-
-                    <a class="wedgetail-snippet-file" href="/ltu-patterns/html/{{ include.snippet }}" target="_blank" title="Open in new tab"></a>
-                </div>
             </div>
+
+            {% if pattern.text %}
+                <div class="wedgetail-text">
+                    <p>{{ pattern.text }}</p>
+                </div>
+            {% endif %}
 
             <div class="wedgetail-sample button-primary" style="background: {{ include.bgcolor | default: transparent }};">
-                <iframe class="wedgetail-snippet-iframe" id="{{ include.snippet | remove: ".html" }}" src="/ltu-patterns/html/{{ include.snippet }}" height="0px" frameborder="0" scrolling="no"></iframe>
+                <div class="wedgetail-preview">
+                    <a href="javascript:void(0)" title="View Source Code" class="wedgetail-helper-code button"></a>
+
+                    <a class="wedgetail-snippet-file" href="{{ path }}{{ include.snippet }}" target="_blank" title="Open in new tab"></a>
+                </div>
+
+                <iframe class="wedgetail-snippet-iframe" id="{{ include.snippet | remove: ".html" }}" src="{{ path }}{{ include.snippet }}" height="0px" frameborder="0" scrolling="no"></iframe>
             </div>
-                
+
             <div class="wedgetail-code">
-                {% for pattern in site.pages %}
+                {% for pattern in site.ltu-patterns %}
                     {%- if pattern.url contains include.snippet -%}
                         {%- highlight html -%}
                             {{ pattern.content }}

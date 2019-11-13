@@ -24,6 +24,9 @@ collections:
   docs:
     output: true
     permalink: /:path
+  ltu-patterns:
+    output: true
+
 
 ## Sets the default attributes for the Documentation and Pattern Files
 defaults:
@@ -36,57 +39,51 @@ defaults:
     scope:
       path: "_docs/guidelines"
     values:
-      layout: doc
       type: guideline
   -
     scope:
       path: "_docs/getting-started"
     values:
-      layout: doc
       type: getting-started
   -
     scope:
       path: "_docs/components"
     values:
-      layout: doc
       type: component
   -
     scope:
       path: "_docs/foundations"
     values:
-      layout: doc
       type: foundation
   -
     scope:
       path: "_docs/elements"
     values:
-      layout: doc
       type: element
   -
     scope:
       path: "_docs/blocks"
     values:
-      layout: doc
       type: block
   -
     scope:
       path: "_docs/templates"
     values:
-      layout: doc
       type: template
   -
     scope:
-      path: "ltu-patterns/html"
+      path: "_ltu-patterns/packages"
     values:
       status: draft
       layout: sample
   -
     scope:
-      path: "ltu-patterns/html/blocks"
+      path: "_ltu-patterns/packages/blocks"
     values:
       layout: sample-block
   -
     scope:
-      path: "ltu-patterns/html/templates"
+      path: "_ltu-patterns/templates"
     values:
       layout: sample-block
+      type: template

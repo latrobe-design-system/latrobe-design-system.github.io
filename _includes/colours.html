@@ -1,7 +1,7 @@
-{% for pattern in site.pages %}
+{% for pattern in site.ltu-patterns %}
     {%- if pattern.url contains include.snippet -%}
         <div class="wedgetail-pattern" id="{{ pattern.title | slugify }}">
-            <div class="wedgetail-heade">
+            <div class="wedgetail-header">
                 <div class="wedgetail-title">
                     <a class="permalink" href="{{ pattern.title | slugify | prepend: '#' }}"><i class="icon" data-icon="link"></i></a>
 
@@ -14,10 +14,10 @@
                     </div>
                 </div>
             </div>
+
+            <div class="wedgetail-sample">
+                <iframe class="wedgetail-snippet-iframe no-border" id="/ltu-patterns/packages/{{ include.snippet }}" src="/ltu-patterns/packages/{{ include.snippet }}" height="0px" frameborder="0" scrolling="no"></iframe>
+            </div>
         </div>
     {%- endif -%}
 {% endfor %}
-
-<div class="wedgetail-sample">
-    <iframe class="wedgetail-snippet-iframe no-border" id="/ltu-patterns/html/{{ include.snippet }}" src="/ltu-patterns/html/{{ include.snippet }}" height="0px" frameborder="0" scrolling="no"></iframe>
-</div>

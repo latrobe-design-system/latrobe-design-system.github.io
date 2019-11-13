@@ -37,6 +37,16 @@
             {%- endfor -%}
         </ul>
 
+        <p>Templates</p>
+
+        {%- assign templates = site.docs | where: 'type', 'template' | sort: 'url' -%}
+        
+        <ul>
+            {%- for pattern in templates -%}
+                {%- include wedgetail-menu-item.html -%}
+            {%- endfor -%}
+        </ul>
+
         <p>Guidelines</p>
 
         {%- assign guidelines = site.docs | where: 'type', 'guideline' | sort: 'url' -%}
@@ -73,16 +83,6 @@
         
         <ul>
             {%- for pattern in blocks -%}
-                {%- include wedgetail-menu-item.html -%}
-            {%- endfor -%}
-        </ul>
-
-        <p>Templates</p>
-
-        {%- assign templates = site.docs | where: 'type', 'template' | sort: 'url' -%}
-        
-        <ul>
-            {%- for pattern in templates -%}
                 {%- include wedgetail-menu-item.html -%}
             {%- endfor -%}
         </ul>

@@ -1,0 +1,22 @@
+---
+title: "Valid state"
+status: draft
+text: Add a border around select boxes to indicate whether user input is valid or invalid.
+
+# Example content
+label: What option?
+valid: Successfully validated
+---
+
+<div class="form-group">
+    <label for="name">{{ page.label }}</label>
+
+    <select class="select select--valid">
+        <option value="option-1">Option 1</option>
+        <option value="option-2">Option 2</option>
+        <option value="option-3">Option 3</option>
+        <option value="option-4">Option 4</option>
+    </select>
+
+    <span class="valid-text small-text" id="{{ page.id }}-valid-text">{{ page.valid }}</span>
+</div>

@@ -4,4 +4,4 @@ status: ready
 info:
 ---
 
-{% include sample-iframe.html snippet="elements/loaders/loader-a.html" %}
+{% include sample-iframe.html snippet="loader/src/html/loader-a.html" %}

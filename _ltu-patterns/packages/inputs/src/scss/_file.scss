@@ -1,0 +1,36 @@
+input[type="file"] {
+    width: auto;
+
+    &:focus {
+        box-shadow: none;
+
+        &::before {
+            outline: none;
+            border-color: #80bdff;
+            box-shadow: 0 0 0 2px rgba(0,123,255,.25);
+        }
+    }
+}
+
+.custom-file-input {
+    color: transparent;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.custom-file-input::before {
+    content: 'Choose file';
+    @extend .btn-secondary-small;
+    cursor: pointer;
+    margin-left: 2px;
+}
+
+.custom-file-input:hover::before {
+    border-color: black;
+}
+
+.custom-file-input:active {
+    outline: 0;
+}

@@ -1,0 +1,16 @@
+{% for pattern in site.ltu-patterns %}
+    {%- if pattern.url contains include.snippet -%}
+
+        {%- if include.container != 'false' -%}
+            <div class="ds-block-container" data-blockwidth="{{ include.blockWidth }}" data-bgcolor="{{ include.blockBackground }}">
+                <div class="ds-block-content" data-blockalign="{{ include.blockAlign }}">
+                    {{ pattern.content }}
+                </div>
+            </div>
+
+        {%- else -%}
+            {{ pattern.content }}
+        {%- endif -%}
+
+    {%- endif -%}
+{% endfor %}

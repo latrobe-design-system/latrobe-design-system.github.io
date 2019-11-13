@@ -3,4 +3,4 @@ title: "Card set"
 status: ready
 ---
 
-{% include sample-iframe.html snippet="blocks/card-set/card-set.html" %}
+{% include sample-iframe.html snippet="card/src/html/card-set.html" %}

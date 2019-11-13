@@ -1,0 +1,22 @@
+---
+title: "Success Alert"
+status: "draft"
+text: The success page alert is used for notifying the user that a task is fully completed.
+
+icon-check-circle: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+
+alert-default-text: Your application is complete, and your documentation is in review
+alert-heading: Your application is complete, and your documentation is in review
+alert-text: It may take 2-3 work days for uploaded documents to be reviewed. If your documents are rejected, it will appear as "Rejected" in the list below. We will advise the reason over email and what you need to do to ensure the documents are accepted.
+
+---
+
+<div class="alert alert-page alert-success" role="alert">
+    <div class="alert-icon">
+        {{ page.icon-check-circle }}
+    </div>
+    
+    <div class="alert-text">
+        <p>{{ page.alert-default-text }}</p>
+    </div>
+</div>

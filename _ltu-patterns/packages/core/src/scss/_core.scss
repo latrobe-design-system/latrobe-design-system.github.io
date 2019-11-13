@@ -1,0 +1,53 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+button,
+html,
+input,
+select,
+textarea {
+    color: #242424;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+a,
+a:visited {
+    color: $color-1;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+//
+// content layout
+//
+.page-content {
+    width: 100%;
+}
+
+@media (min-width:1024px) {
+    #content {
+        display: flex;
+        transition: transform .3s ease-in-out;
+    }
+    .nav-container {
+        flex: 1 0 25%;
+        max-width: 400px;
+        background: $color-2a;
+    }
+    .nav-container + .page-content {
+        flex: 1 0 75%;
+    }
+}

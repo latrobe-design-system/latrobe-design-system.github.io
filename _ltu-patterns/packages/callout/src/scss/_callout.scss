@@ -1,0 +1,68 @@
+.callout {
+    border-left: 4px solid rgba($color-alt-3, 1);
+    border-radius: 2px;
+    position: relative;
+    font-weight: 400;
+    padding: $spacer*8;
+    box-shadow: $shadow-1;
+    display: flex;
+
+    @media(min-width: 768px){
+        position: relative;
+        padding: $spacer*8;
+
+        &::before {
+            display: block;
+            position: absolute;
+            left: 24px;
+            top: 24px;
+        }
+    }
+
+    > :first-child {
+        margin: 0;
+    }
+
+    &--center {
+        border: none;
+    }
+}
+
+.callout-icon {
+    padding-right: 24px;
+    
+    @media(max-width: 768px){
+        margin-bottom: 24px;
+    }
+
+    @media(min-width: 768px){
+        float: left;
+        margin-right: 24px;
+    }
+    
+    svg {
+        width: 32px;
+        height: 32px;
+        stroke: $color-alt-3;
+    }
+}
+
+.callout-heading {
+    font-size: $h3;
+    color: rgba($color-alt-3, 1);
+    margin-top: 0;
+}
+
+.callout-text {
+    align-self: stretch;
+
+    >:first-child {
+        margin: 0;
+    }
+}
+
+.callout-content {
+    >:first-child {
+        margin-top: 0 !important;
+    }
+}

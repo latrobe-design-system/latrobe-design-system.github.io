@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" href="{{ site.url }}/ltu-patterns/assets/css/ds-ltu.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
+        <link rel="stylesheet" href="{{ site.url }}/ltu-patterns/css/ds-ltu.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
     </head>
 
     <body>
@@ -15,7 +15,9 @@
 
         <main id="content">
 
-            <article>
+            {% if page.showLeftNav == 'yes' %}<nav id="nav-container" class="nav-container lv-6271" role="navigation"></nav>{% endif %}
+
+            <article class="page-content">
 
                 <div class="ds-block-container" data-blockwidth="wide" data-bgcolor="{{ page.bgcolor }}">
                     <div class="ds-block-content">
@@ -31,16 +33,17 @@
 
         <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 
-        <script src="{{ site.url }}/ltu-patterns/assets/js/scroll-links.js"></script>
+        <script src="{{ site.url }}/ltu-patterns/packages/link/src/js/scroll-links.js"></script>
 
-        <script src="{{ site.url }}/ltu-patterns/assets/js/modal-video.js"></script>
+        <script src="{{ site.url }}/ltu-patterns/packages/modal/src/js/modal-video.js"></script>
 
-        <script src="{{ site.url }}/ltu-patterns/assets/js/tabs.js"></script>
+        <script src="{{ site.url }}/ltu-patterns/packages/tab/src/js/tab.js"></script>
 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-        <script src="{{ site.url }}/ltu-patterns/assets/js/tooltip.js"></script>
+        <script src="{{ site.url }}/ltu-patterns/packages/tooltip/src/js/tooltip.js"></script>
 
-        <script src="{{ site.url }}/ltu-patterns/assets/js/accordion.js"></script>
+        <script src="{{ site.url }}/ltu-patterns/packages/accordion/src/js/accordion.js"></script>
+
     </body>
 </html>

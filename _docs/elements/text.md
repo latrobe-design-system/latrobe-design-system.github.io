@@ -5,9 +5,9 @@ status: draft
 
 <!-- {% include sample-iframe.html snippet="elements/text/display-headings.html" %} -->
 
-{% include sample-iframe.html snippet="elements/text/headings.html" %}
+{% include sample-iframe.html snippet="text/src/html/headings.html" %}
 
-{% include sample-iframe.html snippet="elements/text/paragraph.html" %}
+{% include sample-iframe.html snippet="text/src/html/paragraph.html" %}
 
 <!-- ### Font styles
 
@@ -22,20 +22,20 @@ status: draft
 | Everything else | Roboto Light         | 16px / 24px                              | 18px / 28px                             | 300    | -->
 
 
-{% include sample-iframe.html snippet="elements/text/ordered_list.html" %}
+{% include sample-iframe.html snippet="text/src/html/ordered_list.html" %}
 
-{% include sample-iframe.html snippet="elements/text/unordered_list.html" %}
+{% include sample-iframe.html snippet="text/src/html/unordered_list.html" %}
 
-{% include sample-iframe.html snippet="elements/text/double_list.html" %}
+{% include sample-iframe.html snippet="text/src/html/double_list.html" %}
 
-{% include sample-iframe.html snippet="elements/text/blockquote.html" %}
+{% include sample-iframe.html snippet="text/src/html/blockquote.html" %}
 
-{% include sample-iframe.html snippet="elements/text/blockquote-attribution.html" %}
+{% include sample-iframe.html snippet="text/src/html/blockquote-attribution.html" %}
 
-{% include sample-iframe.html snippet="elements/text/pull_quote.html" %}
+{% include sample-iframe.html snippet="text/src/html/pull_quote.html" %}
 
-{% include sample-iframe.html snippet="elements/text/hr.html" %}
+{% include sample-iframe.html snippet="text/src/html/hr.html" %}
 
-{% include sample-iframe.html snippet="elements/text/inline.html" %}
+{% include sample-iframe.html snippet="text/src/html/inline.html" %}
 
 Inline text elements are used within headings, paragraphs and list items to markup and format words and phrases.
