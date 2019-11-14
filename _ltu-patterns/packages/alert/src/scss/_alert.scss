@@ -6,8 +6,6 @@
     border: 2px solid rgba($color-alt-3, 1);
     border-radius: 4px;
     padding: 12px 20px;
-    margin-top: 32px;
-    margin-bottom: 32px;
     position: relative;
     font-weight: 400;
     padding: 16px;
@@ -60,7 +58,11 @@
 
 .alert-page {
     display: flex;
-    padding: 24px;
+    padding: $spacer * 4;
+
+    @media(min-width: 768px){
+        padding: $spacer * 6;
+    }
 
     &[class*="icon-"]::after {
         left: 12px;
@@ -68,7 +70,10 @@
 }
 
 .alert-text {
-    padding-right: 80px;
+    
+    @media(min-width: 768px){
+        padding-right: 80px;
+    }
 
     >:first-child {
         margin-top: 0;
@@ -80,9 +85,13 @@
 }
 
 .alert-icon {
-    padding-right: 24px;
+    padding-right: $spacer * 4;
     vertical-align: top;
-    height: 24px;
+    height: $spacer * 6;
+
+    @media(min-width: 768px){
+        padding-right: $spacer * 6;
+    }
 
     svg {
         width: 24px;
@@ -98,7 +107,7 @@
 
 .alert-text-box {
     width: max-content;
-    padding: 24px;
+    padding: $spacer * 6;
 
     * {
         margin-top: 0;
@@ -159,7 +168,7 @@
     position: absolute;
     top: 0px;
     right: 0px;
-    padding: 24px;
+    padding: $spacer * 4;
     color: inherit;
     background-color: transparent;
     border: 0;
@@ -167,6 +176,10 @@
     cursor: pointer;
     opacity: 0.6;
     transition: opacity .05s ease-in-out;
+
+    @media(min-width: 768px){
+        padding: $spacer * 6;
+    }
 
     &:hover {
         opacity: 1;

@@ -6,19 +6,21 @@ status: draft
 <div class="ds-block-container" data-blockwidth="narrow">
     <div class="ds-block-content" data-blockAlign="center">
         <form>
-            {% include sample-component.html
-                snippet="packages/callout/src/html/callout.html"
-                container="false"
-            %}
-
             <div class="form-group">
+                {% include sample-component.html
+                    snippet="packages/callout/src/html/callout-small.html"
+                    container="false"
+                %}
+            </div>
+
+            <div class="form-group" data-columns="half">
                 {% include sample-component.html
                     snippet="packages/form/src/html/text-input-hint.html"
                     container="false"
                 %}
             </div>
 
-            <div class="form-group">
+            <div class="form-group" data-columns="third">
                 {% include sample-component.html
                     snippet="packages/inputs/src/html/text-input/date-picker.html"
                     container="false"
@@ -35,10 +37,12 @@ status: draft
                 %}
             </div>
 
-            {% include sample-component.html
-                snippet="packages/alert/src/html/alert-info/alert-info.html"
-                container="false"
-            %}
+            <div class="form-group">
+                {% include sample-component.html
+                    snippet="packages/alert/src/html/alert-info/alert-info.html"
+                    container="false"
+                %}
+            </div>
 
             <div class="form-group">
                 {% include sample-component.html
@@ -56,19 +60,19 @@ status: draft
 
             <div class="form-group">
                 {% include sample-component.html
-                    snippet="packages/inputs/src/html/misc/file-uploader.html"
+                    snippet="packages/inputs/src/html/text-input/file-uploader.html"
                     container="false"
                 %}
             </div>
 
-            <div class="form-group">
+            <div class="form-group" data-columns="half" data-inline>
                 {% include sample-component.html
-                    snippet="packages/inputs/src/html/select/select-input.html"
+                    snippet="packages/select/src/html/select.html"
                     container="false"
                 %}
             </div>
 
-            <div class="form-group">
+            <div class="form-group" data-columns="half" data-inline>
                 {% include sample-component.html
                     snippet="packages/inputs/src/html/text-input/disabled-text-input.html"
                     container="false"
@@ -82,30 +86,30 @@ status: draft
                 %}
             </div>
 
-            <div class="form-group">
+            <div class="form-group" data-columns="half">
                 {% include sample-component.html
                     snippet="packages/inputs/src/html/text-input/number-input.html"
                     container="false"
                 %}
             </div>
 
-            <div class="form-group">
+            <div class="form-group" data-columns="third">
                 {% include sample-component.html
-                    snippet="packages/inputs/src/html/text-input/text-input-large.html"
+                    snippet="packages/inputs/src/tests/text-input-address.html"
                     container="false"
                 %}
             </div>
 
-            <div class="form-group">
+            <div class="form-group" data-columns="quarter">
                 {% include sample-component.html
-                    snippet="packages/inputs/src/html/text-input/text-input-medium.html"
+                    snippet="packages/inputs/src/tests/text-input-phone.html"
                     container="false"
                 %}
             </div>
 
-            <div class="form-group">
+            <div class="form-group" data-columns="sixth">
                 {% include sample-component.html
-                    snippet="packages/inputs/src/html/text-input/text-input-small.html"
+                    snippet="packages/inputs/src/tests/text-input-postcode.html"
                     container="false"
                 %}
             </div>

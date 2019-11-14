@@ -3,13 +3,13 @@
     border-radius: 2px;
     position: relative;
     font-weight: 400;
-    padding: $spacer*8;
+    padding: $spacer * 4;
     box-shadow: $shadow-1;
     display: flex;
 
     @media(min-width: 768px){
         position: relative;
-        padding: $spacer*8;
+        padding: $spacer * 8;
 
         &::before {
             display: block;
@@ -29,7 +29,7 @@
 }
 
 .callout-icon {
-    padding-right: 24px;
+    padding-right: 16px;
     
     @media(max-width: 768px){
         margin-bottom: 24px;
@@ -38,12 +38,18 @@
     @media(min-width: 768px){
         float: left;
         margin-right: 24px;
+        padding-right: 24px;
     }
-    
+
     svg {
-        width: 32px;
-        height: 32px;
+        width: 24px;
+        height: 24px;
         stroke: $color-alt-3;
+
+        @media(min-width: 768px){
+            width: 30px;
+            height: 30px;
+        }
     }
 }
 
