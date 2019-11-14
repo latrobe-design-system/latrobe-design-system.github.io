@@ -9,7 +9,5 @@ id: mobile
 placeholder: 0400 000 000
 ---
 
-<div class="form-group">
-    <label for="{{ page.id }}">{{ page.label }}</label>
-    <input type="text" class="text-input text-input--width-md" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="{{ page.placeholder }}"/>
-</div>
+<label for="{{ page.id }}">{{ page.label }}</label>
+<input type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="{{ page.placeholder }}"/>

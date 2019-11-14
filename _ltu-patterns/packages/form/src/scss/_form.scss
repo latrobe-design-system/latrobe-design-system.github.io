@@ -2,6 +2,19 @@ form {
     width: 100%;
     max-width: 40em;
     margin: auto;
+    
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: $spacer * 4;
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(12, 1fr);
+        grid-column-gap: $spacer * 2;
+    }
+
+    >:first-child {
+        margin-top: 0;
+    }
 }
 
 label {
@@ -40,7 +53,52 @@ fieldset {
 }
 
 .form-group {
-    margin-top: 2em;
+    margin-top: 1.5em;
+    grid-column: span 12;
+
+    @media (min-width: 768px) {
+        margin-top: 2em;
+    }
+}
+
+.form-group[data-columns="half"] {
+    grid-column: 1 / span 6;
+
+    @media (max-width: 768px) {
+        grid-column: 1 / span 12;
+    }
+}
+
+.form-group[data-columns="third"] {
+    grid-column: 1 / span 4;
+
+    @media (max-width: 768px) {
+        grid-column: 1 / span 12;
+    }
+}
+
+.form-group[data-columns="quarter"] {
+    grid-column: 1 / span 3;
+
+    @media (max-width: 768px) {
+        grid-column: 1 / span 12;
+    }
+}
+
+.form-group[data-columns="sixth"] {
+    grid-column: 1 / span 2;
+
+    @media (max-width: 768px) {
+        grid-column: 1 / span 6;
+    }
+}
+
+.form-group[data-inline] {
+    grid-column-start: auto;
+
+    @media (max-width: 768px) {
+        grid-column-start: 1;
+    }
 }
 
 .control-input {
