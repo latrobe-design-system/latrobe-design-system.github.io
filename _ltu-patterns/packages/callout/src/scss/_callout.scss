@@ -5,7 +5,7 @@
     font-weight: 400;
     padding: $spacer*8;
     box-shadow: $shadow-1;
-    display: inline-block;
+    display: flex;
 
     @media(min-width: 768px){
         position: relative;
@@ -28,9 +28,8 @@
     }
 }
 
-.icon-callout {
-    width: 32px;
-    height: 32px;
+.callout-icon {
+    padding-right: 24px;
     
     @media(max-width: 768px){
         margin-bottom: 24px;
@@ -42,7 +41,8 @@
     }
     
     svg {
-        width: inherit;
+        width: 32px;
+        height: 32px;
         stroke: $color-alt-3;
     }
 }
@@ -55,6 +55,10 @@
 
 .callout-text {
     align-self: stretch;
+
+    >:first-child {
+        margin: 0;
+    }
 }
 
 .callout-content {
