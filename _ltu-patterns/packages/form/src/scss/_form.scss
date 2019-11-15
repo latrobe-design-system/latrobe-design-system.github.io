@@ -35,6 +35,10 @@ textarea:focus {
     box-shadow: 0 0 0 2px rgba(0,123,255,.25);
 }
 
+input[type='date'], input[type='time'] {
+    -webkit-appearance: none;
+}
+
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
