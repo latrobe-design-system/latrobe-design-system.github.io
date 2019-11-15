@@ -24,6 +24,7 @@ label {
 
 input {
     display: block;
+    -webkit-appearance: none; // IOS remove default styling
 }
 
 input:focus,
@@ -36,11 +37,11 @@ textarea:focus {
 }
 
 input[type='date'], input[type='time'] {
-    -webkit-appearance: none;
+    -webkit-appearance: none; // IOS remove default styling
 }
 
 input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+    -webkit-appearance: none; // IOS remove default styling
     margin: 0;
 }
 
