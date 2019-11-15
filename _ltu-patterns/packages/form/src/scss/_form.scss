@@ -147,6 +147,11 @@ fieldset {
 // Form validation
 //
 
+.req {
+    color: $color-1;
+    padding-left: 4px;
+}
+
 .text-input,
 .select,
 .sq-form-field {
