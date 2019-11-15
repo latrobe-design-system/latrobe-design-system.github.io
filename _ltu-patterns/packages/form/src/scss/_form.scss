@@ -61,7 +61,12 @@ fieldset {
     }
 }
 
-.form-group[data-columns="half"] {
+
+//
+// Form group columns
+//
+
+.form-group[data-cols="half"] {
     grid-column: 1 / span 6;
 
     @media (max-width: 768px) {
@@ -69,7 +74,7 @@ fieldset {
     }
 }
 
-.form-group[data-columns="third"] {
+.form-group[data-cols="third"] {
     grid-column: 1 / span 4;
 
     @media (max-width: 768px) {
@@ -77,7 +82,7 @@ fieldset {
     }
 }
 
-.form-group[data-columns="quarter"] {
+.form-group[data-cols="quarter"] {
     grid-column: 1 / span 3;
 
     @media (max-width: 768px) {
@@ -85,7 +90,7 @@ fieldset {
     }
 }
 
-.form-group[data-columns="sixth"] {
+.form-group[data-cols="sixth"] {
     grid-column: 1 / span 2;
 
     @media (max-width: 768px) {
@@ -98,6 +103,27 @@ fieldset {
 
     @media (max-width: 768px) {
         grid-column-start: 1;
+    }
+}
+
+
+//
+// Control columns
+//
+
+.control-group {
+    margin-top: 8px;
+
+    &>:first-child {
+        margin-top: 0;
+    }
+}
+
+.control-group[data-cols="4"] {
+    columns: 4;
+    
+    @media (max-width: 768px) {
+        columns: 2;
     }
 }
 

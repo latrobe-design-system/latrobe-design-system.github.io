@@ -22,9 +22,9 @@ input[type="file"] {
 
 .custom-file-input::before {
     content: 'Choose file';
-    @extend .btn-secondary-small;
+    @extend .btn-secondary;
     cursor: pointer;
-    margin-left: 2px;
+    width: auto;
 }
 
 .custom-file-input:hover::before {

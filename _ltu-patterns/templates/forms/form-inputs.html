@@ -13,14 +13,14 @@ status: draft
                 %}
             </div>
 
-            <div class="form-group" data-columns="half">
+            <div class="form-group" data-cols="half">
                 {% include sample-component.html
                     snippet="packages/form/src/html/text-input-hint.html"
                     container="false"
                 %}
             </div>
 
-            <div class="form-group" data-columns="third">
+            <div class="form-group" data-cols="third">
                 {% include sample-component.html
                     snippet="packages/inputs/src/html/text-input/date-picker.html"
                     container="false"
@@ -44,9 +44,16 @@ status: draft
                 %}
             </div>
 
-            <div class="form-group">
+            <div class="form-group" data-cols="quarter">
                 {% include sample-component.html
                     snippet="packages/inputs/src/html/checkbox/checkbox-group.html"
+                    container="false"
+                %}
+            </div>
+
+            <div class="form-group">
+                {% include sample-component.html
+                    snippet="packages/inputs/src/html/checkbox/checkbox-group-4col.html"
                     container="false"
                 %}
             </div>
@@ -60,19 +67,26 @@ status: draft
 
             <div class="form-group">
                 {% include sample-component.html
-                    snippet="packages/inputs/src/html/text-input/file-uploader.html"
+                    snippet="packages/inputs/src/html/radio/radio-group-4col.html"
                     container="false"
                 %}
             </div>
 
-            <div class="form-group" data-columns="half" data-inline>
+            <div class="form-group">
+                {% include sample-component.html
+                    snippet="packages/inputs/src/html/file/file-uploader.html"
+                    container="false"
+                %}
+            </div>
+
+            <div class="form-group" data-cols="half" data-inline>
                 {% include sample-component.html
                     snippet="packages/select/src/html/select.html"
                     container="false"
                 %}
             </div>
 
-            <div class="form-group" data-columns="half" data-inline>
+            <div class="form-group" data-cols="half" data-inline>
                 {% include sample-component.html
                     snippet="packages/inputs/src/html/text-input/disabled-text-input.html"
                     container="false"
@@ -86,28 +100,28 @@ status: draft
                 %}
             </div>
 
-            <div class="form-group" data-columns="half">
+            <div class="form-group" data-cols="half">
                 {% include sample-component.html
                     snippet="packages/inputs/src/html/text-input/number-input.html"
                     container="false"
                 %}
             </div>
 
-            <div class="form-group" data-columns="third">
+            <div class="form-group" data-cols="third">
                 {% include sample-component.html
                     snippet="packages/inputs/src/tests/text-input-address.html"
                     container="false"
                 %}
             </div>
 
-            <div class="form-group" data-columns="quarter">
+            <div class="form-group" data-cols="quarter">
                 {% include sample-component.html
                     snippet="packages/inputs/src/tests/text-input-phone.html"
                     container="false"
                 %}
             </div>
 
-            <div class="form-group" data-columns="sixth">
+            <div class="form-group" data-cols="sixth">
                 {% include sample-component.html
                     snippet="packages/inputs/src/tests/text-input-postcode.html"
                     container="false"
