@@ -9,7 +9,7 @@ status: draft
 
         <form>
 
-            <div class="form-group" data-cols="12">
+            <div class="form-group" data-cols="6">
                 <label for="name">I am</label>
 
                 <select class="select">
@@ -21,19 +21,7 @@ status: draft
                 </select>
             </div>
 
-            <div class="form-group" data-cols="12">
-                <label for="name">I want to study</label>
-
-                <select class="select">
-                    <option value="--">--</option>
-                    <option value="option-1">Option 1</option>
-                    <option value="option-2">Option 2</option>
-                    <option value="option-3">Option 3</option>
-                    <option value="option-4">Option 4</option>
-                </select>
-            </div>
-
-            <div class="form-group" data-cols="12">
+            <div class="form-group" data-cols="6" data-inline>
                 <label for="name">I'm interested in</label>
 
                 <select class="select">
@@ -45,8 +33,20 @@ status: draft
                 </select>
             </div>
 
-            <div class="form-group" data-cols="12">
-                <label for="name">Location</label>
+            <div class="form-group" data-cols="6">
+                <label for="name">I want to study</label>
+
+                <select class="select">
+                    <option value="--">--</option>
+                    <option value="option-1">Option 1</option>
+                    <option value="option-2">Option 2</option>
+                    <option value="option-3">Option 3</option>
+                    <option value="option-4">Option 4</option>
+                </select>
+            </div>
+
+            <div class="form-group" data-cols="6" data-inline>
+                <label for="name">Study Location</label>
 
                 <select class="select">
                     <option value="--">--</option>
@@ -80,13 +80,20 @@ status: draft
                     <input type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="0000" required/>
                 </div>
 
+                <div class="form-group" data-cols="3" data-inline>
+                    <label for="{{ page.id }}">Postal code<abbr class="req" title="required">*</abbr></label>
+                    <input type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="0000" required/>
+                </div>
+
                 <div class="form-group">
                     <label for="name">Message<abbr class="req" title="required">*</abbr></label>
                     <textarea class="text-input" rows="8" placeholder="Enter your message" required></textarea>
                 </div>
             </fieldset>
-
-            <input type="button" value="Send">
+            
+            <div class="form-group" data-cols="12">
+                <input type="button" value="Send">
+            </div>
         </form>
     </div>
 </div>
