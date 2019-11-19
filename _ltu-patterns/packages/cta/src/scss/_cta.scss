@@ -1,5 +1,8 @@
 .cta {
+    @include columns;
     text-align: center;
+    max-width: 1440px;
+    margin: auto;
 
     * {
         max-width: 100%;
@@ -12,71 +15,6 @@
     }
 }
 
-.cta-content {
-    display: flex;
+.cta-item {
+    color: white;
 }
-
-// .cta-box {
-//     @media (min-width: 960px) {
-//         display: flex;
-//     }
-// }
-
-// .cta-content {
-//     background-color: #eee;
-//     display: block;
-//     padding: 24px;
-
-//     ul {
-//         padding-left: 20px;
-//         margin: 0;
-//     }
-
-//     @media (min-width: 960px) {
-//         width: 75%;
-//         padding: 48px;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: center;
-
-//         ul {
-//             padding-left: 40px;
-
-//             li {
-//                 &:last-child {
-//                     margin-bottom: 0;
-//                 }
-//             }
-//         }
-//     }
-// }
-
-// .cta-heading {
-//     display: block;
-//     background-color: #242424;
-//     color: #fff;
-//     padding: 20px;
-
-//     @media (min-width: 960px) {
-//         padding: 40px;
-//         width: 33.3%;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: center;
-//         text-align: center;
-//         position: relative;
-        
-//         &:after {
-//             content: "";
-//             right: -15px;
-//             position: absolute;
-//             top: 50%;
-//             transform: translateY(-50%);
-//             width: 0; 
-//             height: 0; 
-//             border-top: 15px solid transparent;
-//             border-bottom: 15px solid transparent;
-//             border-left: 15px solid #242424;
-//         }
-//     }
-// }
