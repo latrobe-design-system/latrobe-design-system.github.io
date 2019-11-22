@@ -82,12 +82,14 @@ div.ds-block {
     }
     &[data-bgcolor="black"] {
         background: $color-2;
+        
         .ds-block-header {
             color: white;
         }
     }
     &[data-bgcolor="red"] {
         background-color: $color-1;
+
         .ds-block-header {
             color: white;
         }
@@ -95,6 +97,7 @@ div.ds-block {
     &[data-bgcolor="black-nodes"] {
         background-color: $color-2;
         background-image: url("img/bg-nodes.svg");
+
         .ds-block-header {
             color: white;
         }
@@ -102,6 +105,7 @@ div.ds-block {
     &[data-bgcolor="red-nodes"] {
         background-color: $color-1;
         background-image: url("img/bg-nodes.svg");
+
         .ds-block-header {
             color: white;
         }
