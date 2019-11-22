@@ -2,8 +2,8 @@
     {%- if pattern.url contains include.snippet -%}
 
         {%- if include.container != 'false' -%}
-            <div class="ds-block" data-bgcolor="{{ include.blockBackground }}">
-                <div class="ds-block-wrapper" data-blockwidth="{{ include.blockWidth }}" data-blockalign="{{ include.blockAlign }}">
+            <div class="ds-block" data-bgcolor="{{ include.blockBackground }}" data-blockwidth="{{ include.blockWidth }}">
+                <div class="ds-block-wrapper" data-blockalign="{{ include.blockAlign }}">
                     {{ pattern.content }}
                 </div>
             </div>

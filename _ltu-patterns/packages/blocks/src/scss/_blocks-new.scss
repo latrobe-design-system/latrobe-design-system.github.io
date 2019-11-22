@@ -51,87 +51,101 @@ div.ds-block {
 
 }
 
-
 div.ds-block-wrapper {
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
 // if block-width set
 div.ds-block-wrapper[data-blockwidth] {
-    padding: 40px 20px;
+    padding: 0 20px;
+    margin: 40px 0;
 }
 
-// if no background color
-div.ds-block:not([data-bgcolor]),
-div.ds-block[data-bgcolor=""] {
-    // and block-width set
-    div.ds-block-wrapper[data-blockwidth] {
-        padding: 0 20px;
-        margin: 40px 0;
+// if block background color set
+div.ds-block[data-bgcolor] {
+    // and block-width set, not empty and not full-width
+    div.ds-block-wrapper[data-blockwidth=""] {
+        padding: 40px 20px;
+        margin: 0;
     }
 }
 
 @media (min-width: 640px) {
 
-    // if block-width set
-    div.ds-block-wrapper[data-blockwidth] {
-        padding: 4% 6%;
+    // if block-width set, not empty and not full-width
+    div.ds-block-wrapper:not([data-blockwidth=""]),
+    div.ds-block-wrapper:not([data-blockwidth="full-width"]) {
+        padding: 0 20px;
+        margin: 4% 0;
     }
 
-    // if no background color
-    div.ds-block:not([data-bgcolor]),
-    div.ds-block[data-bgcolor=""] {
-        // and block-width set
-        div.ds-block-wrapper[data-blockwidth] {
-            padding: 0 6%;
-            margin: 4% 0;
+    // if block background color set, not empty
+    div.ds-block:not([data-bgcolor=""]) {
+        // and block-width set, not empty and not full-width
+        div.ds-block-wrapper:not([data-blockwidth=""]),
+        div.ds-block-wrapper:not([data-blockwidth="full-width"]) {
+            padding: 4% 20px;
+            margin: 0;
         }
     }
 
 }
 
-@media (min-width: 1440px) {
-
-    // if block-width set
+@media (min-width: 1064px) {
+    // if block-width narrow
     div.ds-block-wrapper[data-blockwidth="narrow"] {
-        padding: 4% 18%;
+        max-width: 1024px;
+        padding: 0;
+        margin: 4% auto;
     }
 
-    // if no background color
-    div.ds-block:not([data-bgcolor]),
-    div.ds-block[data-bgcolor=""] {
-        // and block-width set
+    // if block background color set, not empty
+    div.ds-block:not([data-bgcolor=""]) {
+        // and block-width narrow
         div.ds-block-wrapper[data-blockwidth="narrow"] {
-            padding: 0 18%;
+            padding: 4%;
+            margin: 0 auto;
         }
     }
-
 }
 
+@media (min-width: 1480px) {
 
-@media (min-width: 1600px) {
-
-    // if block-width set
-    div.ds-block-wrapper[data-blockwidth="default"] {
-        padding: 4% 12%;
+    // if block-width normal
+    div.ds-block-wrapper[data-blockwidth="normal"] {
+        max-width: 1440px;
+        padding: 0;
+        margin: 4% auto;
     }
 
-    // if no background color
-    div.ds-block:not([data-bgcolor]),
+    // if block background color set, not empty
+    div.ds-block:not([data-bgcolor=""]) {
+        // and block-width normal
+        div.ds-block-wrapper[data-blockwidth="normal"] {
+            padding: 4%;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (min-width: 1640px) {
+
+    // if block-width normal
+    div.ds-block-wrapper[data-blockwidth="wide"] {
+        max-width: 1600px;
+        padding: 0;
+        margin: 4% auto;
+    }
+
+    // if block background color set, not empty
     div.ds-block[data-bgcolor=""] {
-        // and block-width set
-        div.ds-block-wrapper[data-blockwidth="default"] {
-            padding: 0 12%;
+        // and block-width normal
+        div.ds-block-wrapper[data-blockwidth="wide"] {
+            padding: 4%;
+            margin: 0 auto;
         }
     }
-
-}
-
-// if block width empty make sure margin and padding always 0
-div.ds-block-wrapper[data-blockwidth=""] {
-    margin: 0 !important;
-    padding: 0 !important;
 }
 
 .ds-block-header {
@@ -153,6 +167,7 @@ div.ds-block-wrapper[data-blockwidth=""] {
 }
 
 div.ds-block {
+    // full width blocks header
     div.ds-block-wrapper:not([data-blockwidth]) .ds-block-header,
     div.ds-block-wrapper[data-blockwidth=""] .ds-block-header {
         padding: 4% 0 0 0;
