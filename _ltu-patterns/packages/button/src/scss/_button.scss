@@ -25,6 +25,11 @@ button.btn-box {
         color: white;
     }
 
+    &.disabled {
+        opacity: 0.25;
+        pointer-events: none;
+    }
+
     &:hover {
         text-decoration: underline;
         background-color: darken($color-1,5%);
