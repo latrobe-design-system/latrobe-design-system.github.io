@@ -7,7 +7,7 @@ icon-x-circle: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" vi
 
 alert-default-text: There was a problem with your application submission
 alert-heading: There was a problem with your application submission
-alert-text: <ul><li><a href="#">Full name must not be empty</a></li><li><a href="#">Email must not be empty</a></li><li><a href="#">Description must not be empty</li></ul>
+alert-text: <ul><li><a href="#">Full name must not be empty</a></li><li><a href="#">Email must not be empty</a></li><li><a href="#">Description must not be empty</a></li></ul>
 ---
 
 <div class="alert alert-page alert-error" role="alert">
@@ -17,33 +17,5 @@ alert-text: <ul><li><a href="#">Full name must not be empty</a></li><li><a href=
     
     <div class="alert-text">
         <p>{{ page.alert-default-text }}</p>
-    </div>
-</div>
-
-<div class="alert alert-page alert-error" role="alert">
-    <div class="alert-icon">
-        {{ page.icon-x-circle }}
-    </div>
-    
-    <div class="alert-text">
-        <p>{{ page.alert-default-text }}</p>
-    </div>
-
-    <button class="alert-close" data-dismiss="alert" aria-label="Close">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-    </button>
-</div>
-
-<div class="alert alert-page alert-error" role="alert">
-    <div class="alert-icon">
-        {{ page.icon-x-circle }}
-    </div>
-    
-    <div class="alert-text">
-        <h3 class="h4">{{ page.alert-heading }}</h3>
-        <p>{{ page.alert-text }}</p>
     </div>
 </div>

@@ -7,8 +7,10 @@
 }
 
 .cta-alternate {
-    display: flex;
-    flex-direction: column;
+    @include columns;
+
+    // display: flex;
+    // flex-direction: column;
 
     >:first-child {
         margin-top: 0;
@@ -37,7 +39,7 @@
 
     @include bp-up(lg) {
         flex-grow: 0;
-        flex-basis: 50%;
+        flex-basis: 33.3%;
         
         >:first-child {
             margin-top: 0;
