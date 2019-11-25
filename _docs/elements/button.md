@@ -27,9 +27,12 @@ To place the icon on the left also include the class `icon-before`
 {% include sample-iframe.html snippet="button/src/html/primary_button.html" %}
 The primary button style is used for primary actions. Only one of these types of buttons should be used in each view (ie block).
 
+{% include sample-iframe.html snippet="button/src/html/primary_button_disabled.html" %}
+
 {% include sample-iframe.html snippet="button/src/html/secondary_button.html" %}
 The secondary button style is used for secondary actions. They are often used next to primary buttons or elsewhere on a page for secondary actions.
 
+{% include sample-iframe.html snippet="button/src/html/secondary_button_disabled.html" %}
 
 {% include sample-iframe.html snippet="button/src/html/light_button.html" %}
 Light buttons can be used on dark or image backgrounds.

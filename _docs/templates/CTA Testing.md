@@ -3,4 +3,4 @@ title: "CTA Testing"
 status: draft
 ---
 
-{% include sample-iframe-only.html snippet="templates/ctas.html" %}
+{% include sample-iframe.html snippet="templates/ctas.html" %}

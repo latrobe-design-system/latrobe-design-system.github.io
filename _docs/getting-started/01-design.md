@@ -17,7 +17,7 @@ info: Rapidly build beautiful and accessible experiences. The Wedgetail kit cont
 
 **2. Install [html-sketchapp](https://github.com/html-sketchapp/html-sketchapp/releases/)**
 
-**3. Download [Wedgetail 1.01](sketch/page.asketch.kson)**
+**3. Download [Wedgetail 1.01](sketch/page.asketch.json)**
 
 **4. Import Wedgetail files into Sketch**
 
