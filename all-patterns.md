@@ -347,16 +347,6 @@ layout: "sample"
             
             {{ pattern.content | replace_first: '>', sketch }}
         {%- endif -%}
-
-
-
-
-
-
-
-
-
-
     </div>
 
 {%- endfor -%}
