@@ -68,7 +68,11 @@
 
         padding-right: $spacer * 10;
         z-index: 2;
-        padding: $spacer * 20 0;
+        padding: $spacer * 30 0;
+    }
+
+    h1 {
+        @extend .h1-fluid;
     }
 
     > :first-child {

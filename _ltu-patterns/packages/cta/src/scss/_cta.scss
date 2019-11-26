@@ -1,4 +1,6 @@
 .cta {
+    margin-top: 4%;
+    
     @include columns();
 
     @include bp-up(xl) {

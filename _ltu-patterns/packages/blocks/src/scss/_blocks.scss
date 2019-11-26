@@ -81,7 +81,17 @@ div.ds-block {
         background-color: $color-3a;
     }
     &[data-bgcolor="black"] {
-        background: $color-2;
+        background: #242428;
+        color: white;
+
+        a {
+            text-decoration: underline;
+            color: white;
+        }
+
+        .btn {
+            text-decoration: none;
+        }
         
         .ds-block-header {
             color: white;
@@ -114,7 +124,7 @@ div.ds-block {
 
 .ds-block-header {
     text-align: center;
-    margin-bottom: 4%;
+    // margin-bottom: 4%;
 
     > * {
         margin-left: auto;

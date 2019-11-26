@@ -137,6 +137,19 @@ ul {
 }
 
 
+
+//
+// Fluid Headings
+//
+
+.h1-fluid {
+    @media (min-width: 1024px) {
+        font-size: calc(64px + (72 - 64) * ((100vw - 1024px) / (1920 - 1024)));
+    }
+}
+
+
+
 //
 // blockquote
 //
