@@ -80,143 +80,41 @@
 }
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// CSS accordion
+//
 
-// OLD ACCORDION STYLING
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-// .main-content .expander-trigger {
-//     cursor: pointer;
-//     margin: 0 0 1px;
-//     position: relative;
-//     -webkit-transition: background-color .3s ease-in-out;
-//     transition: background-color .3s ease-in-out;
-//     z-index: 1;
-// }
-
-
-// .expander-trigger button {
-//     background: transparent;
-//     border: none;
-//     display: block;
-//     font-family: "Roboto Condensed",Impact,"Franklin Gothic Bold",sans-serif;
-//     font-weight: 700;
-//     font-size: 18px;
-//     line-height: 24px;
-//     padding: 12px 12px 12px 46px;
-//     text-align: left;
-//     transition: color .3s ease-in-out,text-indent .3s ease-in-out;
-//     width: 100%;
-//     position: relative;
-// }
-
-// .expander-trigger.plain svg {
-//     left: 0;
-//     top: 8px;
-// }
-
-// .expander .expander-trigger svg {
-//     padding: 0;
-//     position: absolute;
-//     top: 0;
-//     transition: transform .3s ease-in-out;
-// }
-
-// .expander-trigger.plain button {
-//     padding: 20px 0 20px 54px;
-// }
-
-// .plain+.expander-content>div {
-//     padding: 0 14px;
-// }
-
-// .expander-content.open {
-//     overflow: hidden;
-//     -webkit-transition: height .3s ease-in-out,visibility 0s 0s;
-//     transition: height .3s ease-in-out,visibility 0s 0s;
-//     visibility: visible;
-// }
-
-// .expander-content {
-//     margin: 0;
-//     overflow: hidden;
-//     -webkit-transition: height .3s ease-in-out,visibility 0s .3s;
-//     transition: height .3s ease-in-out,visibility 0s .3s;
-//     visibility: hidden;
-// }
-
-// .expander-trigger.plain svg {
-//     left: 0;
-//     top: 8px;
-// }
-
-
-
-
-$midnight: #2c3e50;
-$clouds: #ecf0f1;
-
-/* Accordion styles */
 .accordion-tabs {
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 4px -2px rgba(0,0,0,0.5);
-}
-.accordion-tab {
-  width: 100%;
-  color: white;
-  overflow: hidden;
-  &-label {
-    display: flex;
-    justify-content: space-between;
-    padding: 1em;
-    background: $midnight;
-    font-weight: bold;
-    cursor: pointer;
-    /* Icon */
-    &:hover {
-      background: darken($midnight, 10%);
-    }
-    &::after {
-      content: "\276F";
-      width: 1em;
-      height: 1em;
-      text-align: center;
-      transition: all .35s;
-    }
-  }
-  &-content {
-    max-height: 0;
-    padding: 0 1em;
-    color: $midnight;
-    background: white;
-    transition: all .35s;
-  }
-  &-close {
-    display: flex;
-    justify-content: flex-end;
-    padding: 1em;
-    font-size: 0.75em;
-    background: $midnight;
-    cursor: pointer;
-    &:hover {
-      background: darken($midnight, 10%);
-    }
-  }
+    overflow: hidden;
 }
 
-// :checked
-input:checked {
-  + .accordion-tab-label {
-    background: darken($midnight, 10%);
-    &::after {
-      transform: rotate(90deg);
+.accordion-tab {
+    border-bottom: 2px solid $color-3b;
+    width: 100%;
+    overflow: hidden;
+
+    &-label {
+        display: flex;
+        justify-content: space-between;
+        padding: 1em;
+        cursor: pointer;
     }
-  }
-  ~ .accordion-tab-content {
-    max-height: 100vh;
-    padding: 1em;
-  }
+
+    &-content {
+        padding: 1em;
+        max-height: 0;
+    }
+
+    &-close {
+        display: flex;
+        justify-content: flex-end;
+        cursor: pointer;
+    }
+}
+
+input:checked {
+    ~ .accordion-tab-content {
+        max-height: 100vh;
+    }
+
 }
