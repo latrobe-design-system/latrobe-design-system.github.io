@@ -18,7 +18,6 @@
     text-align: left;
     width: 100%;
     border: none;
-    padding: $spacer * 5;
     color: $color-1;
     cursor: pointer;
 }
@@ -37,38 +36,27 @@
 
 .accordion-trigger {
     .accordion-title {
-        text-decoration: underline;
-    }
+        @extend [class*="icon-"];
+        @extend .icon-before;
 
-    .accordion-icon {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: $spacer * 5;
-    }
-
-    .icon-plus {
-        display: block;
-    }
-
-    .icon-minus {
-        display: none;
+        &::after {
+            @extend .icon-plus;
+        }
     }
 
     &.active {
-        .icon-minus {
-            display: block;
-        }
-
-        .icon-plus {
-            display: none;
+        .accordion-title {
+            &::after {
+                @extend .icon-minus;
+            }
         }
     }
 }
 
+
 .accordion-content {
     display: none;
-    padding: $spacer * 5;
+    padding: 24px;
 
     > :first-child {
         margin-top: 0;
@@ -89,32 +77,53 @@
 }
 
 .accordion-tab {
-    border-bottom: 2px solid $color-3b;
     width: 100%;
+    border-bottom: 2px solid $color-3b;
     overflow: hidden;
 
+    input {
+        &:focus {
+            + .accordion-tab-label {
+                border: 2px solid #80bdff;
+            }
+        }
+    }
+
     &-label {
-        display: flex;
-        justify-content: space-between;
-        padding: 1em;
+        padding: 20px;
         cursor: pointer;
+    }
+
+    &-title {
+        @extend [class*="icon-"];
+        @extend .icon-before;
+
+        &::after {
+            @extend .icon-plus;
+        }
     }
 
     &-content {
-        padding: 1em;
         max-height: 0;
-    }
+        padding: 0 24px;
 
-    &-close {
-        display: flex;
-        justify-content: flex-end;
-        cursor: pointer;
+        > :first-child {
+            margin-top: 0;
+        }
     }
 }
 
 input:checked {
     ~ .accordion-tab-content {
         max-height: 100vh;
+        padding: 24px;
     }
 
+    ~ .accordion-tab {
+        &-title {
+            &::after {
+                @extend .icon-minus;
+            }
+        }
+    }
 }
