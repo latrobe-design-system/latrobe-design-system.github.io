@@ -5,9 +5,15 @@ status: draft
 
 <!-- {% include sample-iframe.html snippet="elements/text/display-headings.html" %} -->
 
+## Paragraphs
+
 {% include sample-iframe.html snippet="text/src/html/headings.html" %}
 
 {% include sample-iframe.html snippet="text/src/html/paragraph.html" %}
+
+{% include sample-iframe.html snippet="text/src/html/paragraph-small.html" %}
+
+{% include sample-iframe.html snippet="text/src/html/paragraph-lead.html" %}
 
 <!-- ### Font styles
 
@@ -27,12 +33,6 @@ status: draft
 {% include sample-iframe.html snippet="text/src/html/unordered_list.html" %}
 
 {% include sample-iframe.html snippet="text/src/html/double_list.html" %}
-
-{% include sample-iframe.html snippet="text/src/html/blockquote.html" %}
-
-{% include sample-iframe.html snippet="text/src/html/blockquote-attribution.html" %}
-
-{% include sample-iframe.html snippet="text/src/html/pull_quote.html" %}
 
 {% include sample-iframe.html snippet="text/src/html/hr.html" %}
 

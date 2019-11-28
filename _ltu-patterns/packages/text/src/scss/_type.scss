@@ -120,14 +120,13 @@ p.lead {
 }
 
 p.small,
-small,
-.small-text {
+small {
     font-size: 0.8rem;
 }
 
 p:empty,
 li:empty {
-    margin: 0;
+    display: none;
 }
 
 ol,
@@ -276,7 +275,7 @@ pre {
 }
 
 q {
-    quotes: "“" "”" "‘" "’";;
+    quotes: "‘" "’" "“" "”" ;
 }
 
 q:before {
