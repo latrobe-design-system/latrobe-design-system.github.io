@@ -16,7 +16,7 @@ textarea {
 
 body,
 html {
-    height: 100%;
+    /*height: 100%;*/
 }
 
 a,
@@ -37,6 +37,10 @@ a:hover {
     width: 100%;
 }
 
+#content {
+    position: relative;
+}
+
 @media (min-width:1024px) {
     #content {
         display: flex;
@@ -45,7 +49,7 @@ a:hover {
     .nav-container {
         flex: 1 0 25%;
         max-width: 400px;
-        background: $color-2a;
+        background: $color-3a;
     }
     .nav-container + .page-content {
         flex: 1 0 75%;

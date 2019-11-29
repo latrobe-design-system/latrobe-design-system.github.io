@@ -14,6 +14,22 @@
         max-width: 1440px;
     }
 }
+// if left hand nav is present
+.nav-container+.page-content {
+    > div:not(.ds-block),
+    > section,
+    > article {
+        @media (min-width: 1600px) {
+            padding: 0 6%;
+            margin: 4% 0;
+        }
+        @media (min-width: 2048px) {
+            padding: 0;
+            margin: 4% auto;
+            max-width: 1440px;
+        }
+    }
+}
 
 div.ds-block {
     padding: 40px 20px;
