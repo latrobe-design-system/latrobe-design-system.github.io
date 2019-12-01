@@ -8,15 +8,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <link rel="stylesheet" href="{{ site.url }}/ltu-patterns/css/ds-ltu.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
+        <link rel="stylesheet" href="{{ site.url }}/ltu-patterns/css/ltu-legacy.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
     </head>
 
-    <body>
-        
+    <body class="nav-out">
+
         <a id="skip" class="btn" href="#content">Skip to content</a>
 
-        <header id="header" class="site-header">
-
-        </header>
+{% include ltu-header.html %}
 
         <main id="content">
 
@@ -24,11 +23,7 @@
 
             <article class="page-content">
 
-                <div class="ds-block" data-bgcolor="{{ page.bgcolor }}" data-blockwidth="{{ page.width }}">
-                    <div class="ds-block-wrapper">
-                        {{ content }}
-                    </div>
-                </div>
+            {{ content }}
 
             </article>
 
@@ -37,6 +32,8 @@
         <footer id="footer" class="site-footer"></footer>
 
 {% include js.html %}
+
+    <script src="{{ site.url }}/ltu-patterns/js/ltu-legacy.js"></script>
 
     </body>
 </html>

@@ -21,13 +21,14 @@
 @import "core/src/scss/utility";
 @import "core/src/scss/skip-link";
 @import "core/src/scss/layout";
+@import "core/src/scss/helpers";
 
 @import "text/src/scss/type";
 @import "accordion/src/scss/accordion";
 @import "alert/src/scss/alert";
 @import "banner/src/scss/banner";
 @import "blockquote/src/scss/blockquote";
-@import "blocks/src/scss/blocks";//
+@import "blocks/src/scss/blocks";
 @import "breadcrumb/src/scss/breadcrumb";
 @import "button/src/scss/button";
 @import "callout/src/scss/callout";

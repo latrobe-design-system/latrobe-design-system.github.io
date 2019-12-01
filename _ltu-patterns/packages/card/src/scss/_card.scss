@@ -33,13 +33,9 @@
 }
 
 .card-cta {
-    @extend [class*="icon-"];
+    @extend .icon-chevron-right;
+    @extend .icon-red;
     color: $color-1;
-
-    &::after {
-        @extend .icon-chevron-right;
-        filter: $red;
-    }
 }
 /* link type */
 a.card {
