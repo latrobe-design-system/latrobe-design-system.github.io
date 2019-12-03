@@ -1,26 +1,18 @@
 ---
-title: Design
-status: draft
+title: Design assets in sketch
+status: planned
 info: Rapidly build beautiful and accessible experiences. The Wedgetail kit contains all resources you need to get started.
 ---
 
-1. Get the kit
-2. Start designing
-3. Anatomy
+To design with Wedgetail you must have the most recent version of Sketch installed.
 
+1. Install Sketch
 
-## Get the kit
+2. Install [html-sketchapp](https://github.com/html-sketchapp/html-sketchapp/releases/)
 
-### To design with Wedgetail you must have the most recent version of Sketch installed.
+3. Download [Wedgetail 1.01](sketch/page.asketch.json)
 
-**1. Install Sketch**
-
-**2. Install [html-sketchapp](https://github.com/html-sketchapp/html-sketchapp/releases/)**
-
-**3. Download [Wedgetail 1.01](sketch/page.asketch.json)**
-
-**4. Import Wedgetail files into Sketch**
-
+4. Import Wedgetail files into Sketch
 
 ## Start designing
 
