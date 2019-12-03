@@ -3,12 +3,15 @@ body {
     font-weight: 400;
     font-size: 18px;
     line-height: 1.8;
+    color: lighten(#182538, 10%);
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
-    color: #182538;
+    color: #182538; 
+    width: 42em;
 }
+
 
 h1 {
     font-size: 68px;
@@ -33,7 +36,7 @@ h5 {
 }
 
 p, li {
-    max-width: 800px;
+    width: 42em;
 }
 
 p.intro {
@@ -42,4 +45,20 @@ p.intro {
 
 figure {
     margin: 0;
+}
+
+
+/* override prism styles */
+
+:not(pre)>code[class*=language-], pre[class*=language-] {
+    background-color: lighten(#182538, 80%);
+    font-size: 16px;
+    padding: 5px;
+    text-shadow: none;
+    color: #182538;
+}
+
+code[class*=language-], pre[class*=language-] {
+    padding: 40px;
+    text-shadow: none;
 }

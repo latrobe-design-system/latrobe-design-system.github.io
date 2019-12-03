@@ -22,6 +22,10 @@ h2 {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        h3 {
+            width: auto;
+        }
     }
 
     .wedgetail-title {
