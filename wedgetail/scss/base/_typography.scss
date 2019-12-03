@@ -16,6 +16,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: 68px;
     font-weight: 700;
+    width: auto;
 }
 
 h2 {
@@ -58,7 +59,7 @@ figure {
     color: #182538;
 }
 
-code[class*=language-], pre[class*=language-] {
+pre[class*=language-] {
     padding: 40px;
     text-shadow: none;
 }
