@@ -1,5 +1,5 @@
 ---
-title: Development environment
+title: Coding standards
 status: planned
 info: This is how we design and develop using the design system.
 ---

@@ -41,3 +41,5 @@ For now we will be keeping it simple and not using any components. However, we w
 ### Can we build this component in a way that other products can benefit from it in the future?
 
 Yes, we will be focusing on keeping this simple so we can share it with others.
+
+## Submitting your component pull request

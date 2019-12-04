@@ -1,5 +1,5 @@
 ---
-title: Starter kit
+title: Installation and setup
 status: planned
 info:
 ---
@@ -33,3 +33,13 @@ This set up allows you to modify the variables in the design system file from th
 The docs folder contains all the files required to publish a website. The index.html file references the main.css file and script.min.js assets to generate the page. We name the folder docs because GitHub pages uses the docs folder to host static websites.
 
 To start using other components you can copy paste the HTML code snippets from the documentation into the index.html or other html file that you may have created.
+
+## Packages required for local development
+
+Now that we are set up we can install additional packages:
+
+- browser-sync, local development server that reloads the browser when a file changes
+- node-sass, compiles SASS files into CSS files
+- on-change, watches for changes to the files
+- postcss-cli, library for transforming styles, used by autoprefixer
+- autoprefixer, adds vendor prefixes to the CSS file automatically
