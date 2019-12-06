@@ -56,25 +56,15 @@ div.ds-block {
         // for blocks with background color
         padding-left: 4%;
         padding-right: 4%;
+        padding-top: 4%;
+        padding-bottom: 4%;
         margin: 0;
         // for blocks without background color
         &:not([data-bgcolor]),
         &[data-bgcolor=""] {
-            //padding: 0 40px;
+            padding-top: 0px;
+            padding-bottom: 0px;
             margin: 4% 0
-        }
-
-        // reset for medium, wide and full-width
-        &[data-blockwidth="medium"],
-        &[data-blockwidth="wide"] {
-            // for blocks with background color
-            padding-left: 4%;
-            padding-right: 4%;
-            // for blocks without background color
-            &:not([data-bgcolor]),
-            &[data-bgcolor=""] {
-                padding: 0 40px;
-            }
         }
         &[data-blockwidth="full-width"]{
             padding: 0;
