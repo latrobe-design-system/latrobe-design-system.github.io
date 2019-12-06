@@ -1,0 +1,8 @@
+---
+title: "Icons"
+---
+Hi
+{% assign icon_files = site.ltu-patterns %}
+{% for image in icon_files %}
+    .icon-{{ image.path }}
+{% endfor %}

@@ -55,6 +55,28 @@
         padding-left: 12%;
         padding-right: 0;
         overflow: hidden;
+
+        &--left {
+            padding-left: 0;
+            padding-right: 12%;
+            flex-direction: row-reverse;
+    
+            .banner-campaign-image {
+                left: 0;
+                right: initial;
+    
+                &:after {
+                    right: 0;
+                    left: initial;
+                    transform: skew(15deg, 0deg);
+                }
+            }
+
+            .banner-campaign-text {
+                padding-left: $spacer * 40;
+                padding-right: 0;
+            }
+        }
     }
 }
 
@@ -66,7 +88,7 @@
     @media (min-width:1024px) {
         width: 50%;
 
-        padding-right: $spacer * 10;
+        padding-right: $spacer * 40;
         z-index: 2;
         padding: $spacer * 30 0;
     }
@@ -111,6 +133,7 @@
             background: white;
             transform: skew(-15deg, 0deg);
         }
+
     }
 }
 

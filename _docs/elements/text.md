@@ -7,7 +7,7 @@ status: draft
 
 ## Paragraphs
 
-{% include sample-iframe.html snippet="text/src/html/headings.html" %}
+{% include sample-iframe.html snippet="text/src/html/heading.html" %}
 
 {% include sample-iframe.html snippet="text/src/html/paragraph.html" %}
 
