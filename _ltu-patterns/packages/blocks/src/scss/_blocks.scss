@@ -22,7 +22,8 @@ div.ds-block {
      // for blocks without background color
     &:not([data-bgcolor]),
     &[data-bgcolor=""] {
-        //padding: 0 40px;
+        padding-top: 0px;
+        padding-bottom: 0px;
         margin: 40px 0;
     }
     .ds-block-wrapper {
