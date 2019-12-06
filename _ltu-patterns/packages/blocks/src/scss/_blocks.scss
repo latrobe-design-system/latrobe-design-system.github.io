@@ -3,42 +3,26 @@
 .page-content > section,
 .page-content > article {
     padding: 0 20px;
-    margin: 0;
+    margin: 40px auto;
+    max-width: 1104px; // 1024 + 80 (padding)
+    @media (min-width: 640px) {
+        padding: 0 40px;
+    }
     @media (min-width: 1000px) {
-        margin: 4% 0;
-    }
-    @media (min-width: 1064px) {
-        padding: 0;
         margin: 4% auto;
-        max-width: 1024px;
-    }
-}
-// if left hand nav is present
-.nav-container+.page-content {
-    > div:not(.ds-block),
-    > section,
-    > article {
-        @media (min-width: 1600px) {
-            padding: 0 6%;
-            margin: 4% 0;
-        }
-        @media (min-width: 2048px) {
-            padding: 0;
-            margin: 4% auto;
-            max-width: 1440px;
-        }
     }
 }
 
 div.ds-block {
     max-width: 100%;
      // for blocks with background color
-    padding: 40px 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     margin: 0;
      // for blocks without background color
     &:not([data-bgcolor]),
     &[data-bgcolor=""] {
-        padding: 0 20px;
+        //padding: 0 40px;
         margin: 40px 0;
     }
     .ds-block-wrapper {
@@ -65,25 +49,30 @@ div.ds-block {
         }
     }
 }
-@media (min-width: 1064px) {
+
+@media (min-width: 1000px) {
     div.ds-block {
         // for blocks with background color
-        padding: 4% 0;
+        padding-left: 4%;
+        padding-right: 4%;
         margin: 0;
         // for blocks without background color
         &:not([data-bgcolor]),
         &[data-bgcolor=""] {
-            padding: 0;
+            //padding: 0 40px;
             margin: 4% 0
         }
+
+        // reset for medium, wide and full-width
         &[data-blockwidth="medium"],
         &[data-blockwidth="wide"] {
             // for blocks with background color
-            padding: 4% 20px;
+            padding-left: 4%;
+            padding-right: 4%;
             // for blocks without background color
             &:not([data-bgcolor]),
             &[data-bgcolor=""] {
-                padding: 0 20px;
+                padding: 0 40px;
             }
         }
         &[data-blockwidth="full-width"]{
@@ -92,6 +81,7 @@ div.ds-block {
         }
     }
 }
+
 // background color options
 div.ds-block {
     &[data-bgcolor="grey"] {
@@ -148,9 +138,9 @@ div.ds-block {
         margin-right: auto;
     }
 
-    > *:first-child {
+    /*> *:first-child {
         margin-top: 0;
-    }
+    }*/
 }
 
 .ds-block-header[data-textalign="left"] {
