@@ -556,7 +556,8 @@ ul.nav-utility-dropdown li {
     }
 
     #global-search-button + label {
-        bottom: 48px;
+        /*bottom: 48px;*/
+        top: 0;
     }
 
     .Alumni #global-search-button + label,

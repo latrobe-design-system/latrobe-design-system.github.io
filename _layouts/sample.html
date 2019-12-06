@@ -11,7 +11,7 @@
     </head>
 
     <body>
-        
+
         <a id="skip" class="btn" href="#content">Skip to content</a>
 
         <header id="header" class="site-header">
@@ -20,7 +20,20 @@
 
         <main id="content">
 
-            {% if page.showLeftNav == 'yes' %}<nav id="nav-container" class="nav-container lv-6271" role="navigation"></nav>{% endif %}
+            {% if page.showLeftNav == 'yes' %}
+            <!--noindex-->
+            <nav id="nav-container" class="nav-container lv-6271" role="navigation">
+                <ul class="local-nav parent">
+                    <li class="hide-nav"><button title="Hide navigation panel"></button></li>
+                    <li class="root"><a href="https://www.latrobe.edu.au/courses">Courses</a>
+                        <ul class="level-one">
+                            <li class="current"><a href="https://www.latrobe.edu.au/courses/study-arts-social-sciences-and-communications">Arts, social sciences and communications</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!--endnoindex-->
+            {% endif %}
 
             <article class="page-content">
 
