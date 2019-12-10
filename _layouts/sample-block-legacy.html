@@ -11,15 +11,18 @@
         <link rel="stylesheet" href="{{ site.url }}/ltu-patterns/css/ltu-legacy.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
     </head>
 
-    <body class="nav-out">
+    <body>
 
+        <!--noindex-->
         <a id="skip" class="btn" href="#content">Skip to content</a>
-
 {% include ltu-header.html %}
+        <!--end noindex-->
 
         <main id="content">
 
-            {% if page.showLeftNav == 'yes' %}<nav id="nav-container" class="nav-container lv-6271" role="navigation"></nav>{% endif %}
+            <!--noindex-->
+{% include ltu-nav.html %}
+            <!--end noindex-->
 
             <article class="page-content">
 
@@ -29,7 +32,9 @@
 
         </main>
 
-        <footer id="footer" class="site-footer"></footer>
+        <!--noindex-->
+{% include ltu-footer.html %}
+        <!--end noindex-->
 
 {% include js.html %}
 
