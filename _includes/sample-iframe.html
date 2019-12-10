@@ -30,7 +30,9 @@
 
             <div class="wedgetail-sample button-primary" style="background: {{ include.bgcolor | default: transparent }};">
                 <div class="wedgetail-preview">
-                    <a href="javascript:void(0)" title="View Source Code" class="wedgetail-helper-code button"></a>
+                    {%- if page.type != 'template' -%}
+                        <a href="javascript:void(0)" title="View Source Code" class="wedgetail-helper-code button"></a>
+                    {%- endif -%}
 
                     <a class="wedgetail-snippet-file" href="{{ path }}{{ include.snippet }}" target="_blank" title="Open in new tab"></a>
                 </div>

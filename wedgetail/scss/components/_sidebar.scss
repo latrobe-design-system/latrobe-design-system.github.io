@@ -87,6 +87,7 @@
     border-top: 1px solid rgba(255,255,255, 0.15);
     letter-spacing: 2px;
     margin-bottom: 0;
+    width: auto;
 
     &:first-child {
         margin: 0;
@@ -98,6 +99,7 @@
 
 .wedgetail-menu-list li {
     margin-left: 20px;
+    width: auto;
 }
 
 .wedgetail-menu-list ul li a {

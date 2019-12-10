@@ -2,76 +2,76 @@
 // Fonts
 //----------------------------------------------------------------------------------------------------------------------------------// 
 
-$font-roboto: "Roboto", "Franklin Gothic Medium", Tahoma, sans-serif;
-$font-roboto-slab: "Roboto Slab", serif;
-$font-roboto-condensed: "Roboto Condensed", Impact, "Franklin Gothic Bold", sans-serif;
+$font-roboto: "Roboto", "Franklin Gothic Medium", Tahoma, sans-serif !default;
+$font-roboto-slab: "Roboto Slab", serif !default;
+$font-roboto-condensed: "Roboto Condensed", Impact, "Franklin Gothic Bold", sans-serif !default;
 
 //----------------------------------------------------------------------------------------------------------------------------------// 
 // Weights
 //----------------------------------------------------------------------------------------------------------------------------------// 
 
-$light-weight:    300;
-$normal-weight:   400;
-$medium-weight:   500;
-$bold-weight:     700;
+$light-weight:    300 !default;
+$normal-weight:   400 !default;
+$medium-weight:   500 !default;
+$bold-weight:     700 !default;
 
 //----------------------------------------------------------------------------------------------------------------------------------// 
 // Colour
 //----------------------------------------------------------------------------------------------------------------------------------// 
 
 /* red shades */
-$color-1: #e2231b; /* primary red */
+$color-1: #e2231b !default; /* primary red */
 
 /* grey shades */
-$color-2: #242424; /* near black */
-$color-2a: #414141; /* charcoal */
-$color-3a: #eee;
-$color-3b: #ccc;
-$color-3c: #999;
-$color-3d: #6C6C6C; /* accesible version of brand color #75787B; */
+$color-2: #242424 !default; /* near black */
+$color-2a: #414141 !default; /* charcoal */
+$color-3a: #eee !default;
+$color-3b: #ccc !default;
+$color-3c: #999 !default;
+$color-3d: #6C6C6C !default; /* accesible version of brand color #75787B; */
 
 /* brand alt sets */
-$color-alt-1: rgb(73, 48, 172);
-$color-alt-2: rgb(255, 151, 0);
-$color-alt-3: rgb(0, 170, 152);
-$color-alt-4: rgb(0, 92, 148);
-$color-alt-5: rgb(255, 122, 0);
-$color-alt-6: rgb(120, 60, 188);
-$color-alt-7: rgb(214, 0, 110);
-$color-alt-8: rgb(112, 87, 28);
-$color-alt-9: rgb(0, 79, 89);
+$color-alt-1: rgb(73, 48, 172) !default;
+$color-alt-2: rgb(255, 151, 0) !default;
+$color-alt-3: rgb(0, 170, 152) !default;
+$color-alt-4: rgb(0, 92, 148) !default;
+$color-alt-5: rgb(255, 122, 0) !default;
+$color-alt-6: rgb(120, 60, 188) !default;
+$color-alt-7: rgb(214, 0, 110) !default;
+$color-alt-8: rgb(112, 87, 28) !default;
+$color-alt-9: rgb(0, 79, 89) !default;
 
 /* Form colours */
 
-$green: #28a745;
+$green: #28a745 !default;
 
 /* svg icon filters - changes black to color - https://codepen.io/sosuke/pen/Pjoqqp */
-$near-black: invert(7%) sepia(53%) saturate(0%) hue-rotate(173deg) brightness(107%) contrast(86%); /* #242424 */
-$charcoal: invert(24%) sepia(1%) saturate(0%) hue-rotate(118deg) brightness(92%) contrast(89%); /* #414141 */
-$red: invert(36%) sepia(31%) saturate(3720%) hue-rotate(337deg) brightness(81%) contrast(124%); /* #e2231b */
-$white: invert(100%) sepia(0%) saturate(2%) hue-rotate(132deg) brightness(113%) contrast(101%);
-$teal: invert(49%) sepia(45%) saturate(3730%) hue-rotate(142deg) brightness(92%) contrast(101%); /* #00aa98*/
+$near-black: invert(7%) sepia(53%) saturate(0%) hue-rotate(173deg) brightness(107%) contrast(86%) !default; /* #242424 */
+$charcoal: invert(24%) sepia(1%) saturate(0%) hue-rotate(118deg) brightness(92%) contrast(89%) !default; /* #414141 */
+$red: invert(36%) sepia(31%) saturate(3720%) hue-rotate(337deg) brightness(81%) contrast(124%) !default; /* #e2231b */
+$white: invert(100%) sepia(0%) saturate(2%) hue-rotate(132deg) brightness(113%) contrast(101%) !default;
+$teal: invert(49%) sepia(45%) saturate(3730%) hue-rotate(142deg) brightness(92%) contrast(101%) !default; /* #00aa98*/
 
 //----------------------------------------------------------------------------------------------------------------------------------// 
 // Spacing
 //----------------------------------------------------------------------------------------------------------------------------------// 
 
-$spacer: 4px;
+$spacer: 4px !default;
 
-$space-unit: 4px;
-$space-sm:   calc(1 * var($space-unit));
-$space-md:   calc(2 * var($space-unit));
-$space-lg:   calc(3 * var($space-unit));
-$space-xl:   calc(4 * var($space-unit));
-$space-xxl:  calc(5 * var($space-unit));
-$space-xxxl: calc(10 * var($space-unit));
+$space-unit: 4px !default;
+$space-sm:   calc(1 * var($space-unit)) !default;
+$space-md:   calc(2 * var($space-unit)) !default;
+$space-lg:   calc(3 * var($space-unit)) !default;
+$space-xl:   calc(4 * var($space-unit)) !default;
+$space-xxl:  calc(5 * var($space-unit)) !default;
+$space-xxxl: calc(10 * var($space-unit)) !default;
 
-$component-padding: $space-md;
+$component-padding: $space-md !default;
 
 
 //----------------------------------------------------------------------------------------------------------------------------------// 
 // Box shadows
 //----------------------------------------------------------------------------------------------------------------------------------// 
 
-$shadow-1: 0px 10px 20px $color-3a;
-$shadow-2: 0px 10px 20px $color-3b;
+$shadow-1: 0px 10px 20px $color-3a !default;
+$shadow-2: 0px 10px 20px $color-3b !default;

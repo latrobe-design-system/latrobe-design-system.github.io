@@ -1,20 +1,6 @@
 form {
     width: 100%;
-    max-width: 40em;
-    margin: auto;
-    
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: $spacer * 4;
-
-    @media (max-width: 768px) {
-        grid-template-columns: repeat(12, 1fr);
-        grid-column-gap: $spacer * 2;
-    }
-
-    >:first-child {
-        margin-top: 0;
-    }
+    @extend .grid-12-col;
 }
 
 label {
@@ -22,8 +8,14 @@ label {
     font-weight: 500;
 }
 
-input {
+label abbr[title] {
+    border-bottom: 0;
+}
+
+input,
+textarea {
     display: block;
+    -webkit-appearance: none; // IOS remove default styling
 }
 
 input:focus,
@@ -36,7 +28,7 @@ textarea:focus {
 }
 
 input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+    -webkit-appearance: none; // IOS remove default styling
     margin: 0;
 }
 
@@ -45,11 +37,25 @@ legend {
     padding: 0;
     border: none;
     font-weight: 500;
+    margin-top: 0;
 }
 
 fieldset {
     border: 0;
     padding: 0;
+    display: contents;
+}
+
+
+
+legend {
+    margin-top: 1.5em;
+    grid-column: 1/span 12;
+    @extend h4;
+
+    @media (min-width: 768px) {
+        margin-top: 2em;
+    }
 }
 
 .form-group {
@@ -61,43 +67,24 @@ fieldset {
     }
 }
 
-.form-group[data-columns="half"] {
-    grid-column: 1 / span 6;
 
-    @media (max-width: 768px) {
-        grid-column: 1 / span 12;
+//
+// Control columns
+//
+
+.control-group {
+    margin-top: 8px;
+
+    &>:first-child {
+        margin-top: 0;
     }
 }
 
-.form-group[data-columns="third"] {
-    grid-column: 1 / span 4;
-
+.control-group[data-cols="4"] {
+    columns: 4;
+    
     @media (max-width: 768px) {
-        grid-column: 1 / span 12;
-    }
-}
-
-.form-group[data-columns="quarter"] {
-    grid-column: 1 / span 3;
-
-    @media (max-width: 768px) {
-        grid-column: 1 / span 12;
-    }
-}
-
-.form-group[data-columns="sixth"] {
-    grid-column: 1 / span 2;
-
-    @media (max-width: 768px) {
-        grid-column: 1 / span 6;
-    }
-}
-
-.form-group[data-inline] {
-    grid-column-start: auto;
-
-    @media (max-width: 768px) {
-        grid-column-start: 1;
+        columns: 2;
     }
 }
 
@@ -118,6 +105,11 @@ fieldset {
 //
 // Form validation
 //
+
+.req {
+    color: $color-1;
+    padding-left: 4px;
+}
 
 .text-input,
 .select,

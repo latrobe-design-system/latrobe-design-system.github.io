@@ -8,7 +8,7 @@
         flex-grow: 1;
         flex-shrink: 0;
         flex-basis: $basis-width;
-        margin-right: 32px;
+        margin: 0 2rem 1rem 0;
     }
     @media(max-width: 1280px) {
         flex-wrap: wrap;
@@ -23,7 +23,45 @@
         margin-right: 0;
         grid-template-columns: repeat($wrap, minmax($basis-width, 1fr));
         & > * {
-            margin: 16px 0 0 0;
+            margin: 0 0 1rem 0;
         }
+    }
+}
+
+// Media standard breakpoints
+
+@mixin bp-up($point) {
+    @if $point == xl {
+        @media (min-width: 1280px) { @content; }
+    }
+
+    @else if $point == lg {
+        @media (min-width: 992px) { @content; }
+    }
+
+    @else if $point == md {
+        @media (min-width: 768px)  { @content; }
+    }
+
+    @else if $point == sm {
+        @media (min-width: 576px)  { @content; }
+    }
+}
+
+@mixin bp-down($point) {
+    @if $point == xl {
+        @media (max-width: 1280px) { @content; }
+    }
+
+    @else if $point == lg {
+        @media (max-width: 992px) { @content; }
+    }
+
+    @else if $point == md {
+        @media (max-width: 768px)  { @content; }
+    }
+
+    @else if $point == sm {
+        @media (max-width: 576px)  { @content; }
     }
 }

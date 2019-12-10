@@ -1,0 +1,14 @@
+---
+title: "Hint Text"
+status: "draft"
+
+# Example content
+label: Email
+id: email
+placeholder: name@example.com
+hint: We will only use this to respond to your question
+---
+
+<label for="{{ page.id }}">{{ page.label }}</label>
+<input type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="{{ page.placeholder }}"/>
+<span class="hint-text small-text" id="{{ page.id }}-hint">{{ page.hint }}</span>

@@ -3,4 +3,4 @@ title: "Default"
 status: draft
 ---
 
-{% include sample-iframe-only.html snippet="templates/text.html" %}
+{% include sample-iframe.html snippet="templates/text.html" %}

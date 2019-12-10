@@ -10,7 +10,7 @@
 //
 @charset "UTF-8";
 //
-
+//
 // Packages
 @import "core/src/scss/fonts";
 @import "core/src/scss/normalize";
@@ -19,6 +19,9 @@
 @import "core/src/scss/core";
 @import "core/src/scss/icons";
 @import "core/src/scss/utility";
+@import "core/src/scss/skip-link";
+@import "core/src/scss/layout";
+@import "core/src/scss/helpers";
 
 @import "text/src/scss/type";
 @import "accordion/src/scss/accordion";

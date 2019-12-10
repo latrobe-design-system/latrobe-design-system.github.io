@@ -41,14 +41,14 @@ h6, .h6 {
     font-weight: $medium-weight;
     margin-top: 2em;
     margin-bottom: 0;
-    max-width: 42em;
+    max-width: 42em; // readable line length 80 characters https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html
 
     &:empty {
         margin: 0;
     }
 }
 
-.ds-block {
+/*.ds-block {
     h1, .h1,
     h2, .h2,
     h3, .h3,
@@ -57,14 +57,14 @@ h6, .h6 {
     h6, .h6 {
         margin-top: 1em;
     }
-}
+}*/
 
 h1, .h1,
 h2, .h2,
 h3, .h3,
 h4, .h4 {
     line-height: 1.2;
-    max-width: 30em;
+    max-width: 30em; // readable line length 80 characters https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html
 }
 
 h1, .h1 {
@@ -77,7 +77,7 @@ h1, .h1 {
 
 h2, .h2 {
     font-size: $h2;
-    max-width: 24em;
+    max-width: 24em; // readable line length 80 characters https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html
 }
 
 h3, .h3 {
@@ -110,7 +110,7 @@ h5 + h6 {
 //
 
 p {
-    max-width: 42em;
+    max-width: 42em; // readable line length 80 characters https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html
     margin-top: $spacer * 5;
     margin-bottom: 0;
 }
@@ -120,14 +120,13 @@ p.lead {
 }
 
 p.small,
-small,
-.small-text {
+small {
     font-size: 0.8rem;
 }
 
 p:empty,
 li:empty {
-    margin: 0;
+    display: none;
 }
 
 ol,
@@ -135,6 +134,19 @@ ul {
     margin-top: $spacer * 5;
     margin-bottom: 0;
 }
+
+
+
+//
+// Fluid Headings
+//
+
+.h1-fluid {
+    @media (min-width: 1024px) {
+        font-size: calc(64px + (72 - 64) * ((100vw - 1024px) / (1920 - 1024)));
+    }
+}
+
 
 
 //
@@ -263,7 +275,7 @@ pre {
 }
 
 q {
-    quotes: "“" "”" "‘" "’";;
+    quotes: "‘" "’" "“" "”" ;
 }
 
 q:before {

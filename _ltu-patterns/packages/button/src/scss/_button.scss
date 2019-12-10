@@ -14,7 +14,7 @@ button.btn-box {
     line-height: 24px;
     display: inline-block;
     padding: 12px 18px;
-    margin-top: 4px;
+    margin: 4px 0;
     text-decoration: none;
     color: white;
     background-color: $color-1;
@@ -23,6 +23,11 @@ button.btn-box {
 
     &:visited {
         color: white;
+    }
+
+    &.disabled {
+        opacity: 0.25;
+        pointer-events: none;
     }
 
     &:hover {
@@ -240,5 +245,4 @@ button.btn-box {
 input[type="button"] {
     @extend .btn;
     cursor: pointer;
-    margin-top: 20px;
 }

@@ -18,7 +18,6 @@
     text-align: left;
     width: 100%;
     border: none;
-    padding: $spacer * 5;
     color: $color-1;
     cursor: pointer;
 }
@@ -37,38 +36,27 @@
 
 .accordion-trigger {
     .accordion-title {
-        text-decoration: underline;
-    }
+        @extend [class*="icon-"];
+        @extend .icon-before;
 
-    .accordion-icon {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: $spacer * 5;
-    }
-
-    .icon-plus {
-        display: block;
-    }
-
-    .icon-minus {
-        display: none;
+        &::after {
+            @extend .icon-plus;
+        }
     }
 
     &.active {
-        .icon-minus {
-            display: block;
-        }
-
-        .icon-plus {
-            display: none;
+        .accordion-title {
+            &::after {
+                @extend .icon-minus;
+            }
         }
     }
 }
 
+
 .accordion-content {
     display: none;
-    padding: $spacer * 5;
+    padding: 24px;
 
     > :first-child {
         margin-top: 0;
@@ -80,74 +68,67 @@
 }
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// CSS accordion
+//
 
-// OLD ACCORDION STYLING
+.accordion-tabs {
+    overflow: hidden;
+}
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.accordion-tab {
+    width: 100%;
+    border-bottom: 2px solid $color-3b;
+    overflow: hidden;
+    position: relative;
 
+    input {
+        width: 100%;
+        height: 100%;
+        position: absolute;
 
-// .main-content .expander-trigger {
-//     cursor: pointer;
-//     margin: 0 0 1px;
-//     position: relative;
-//     -webkit-transition: background-color .3s ease-in-out;
-//     transition: background-color .3s ease-in-out;
-//     z-index: 1;
-// }
+        &:focus {
+            outline: none;
+            border-color: #80bdff;
+            box-shadow: inset 0 0 0 2px rgba(0,123,255,.25);
+        }
+    }
 
+    &-label {
+        padding: 20px;
+        cursor: pointer;
+    }
 
-// .expander-trigger button {
-//     background: transparent;
-//     border: none;
-//     display: block;
-//     font-family: "Roboto Condensed",Impact,"Franklin Gothic Bold",sans-serif;
-//     font-weight: 700;
-//     font-size: 18px;
-//     line-height: 24px;
-//     padding: 12px 12px 12px 46px;
-//     text-align: left;
-//     transition: color .3s ease-in-out,text-indent .3s ease-in-out;
-//     width: 100%;
-//     position: relative;
-// }
+    &-title {
+        @extend [class*="icon-"];
+        @extend .icon-before;
 
-// .expander-trigger.plain svg {
-//     left: 0;
-//     top: 8px;
-// }
+        &::after {
+            @extend .icon-plus;
+        }
+    }
 
-// .expander .expander-trigger svg {
-//     padding: 0;
-//     position: absolute;
-//     top: 0;
-//     transition: transform .3s ease-in-out;
-// }
+    &-content {
+        max-height: 0;
+        padding: 0 24px;
 
-// .expander-trigger.plain button {
-//     padding: 20px 0 20px 54px;
-// }
+        > :first-child {
+            margin-top: 0;
+        }
+    }
+}
 
-// .plain+.expander-content>div {
-//     padding: 0 14px;
-// }
+input:checked {
+    ~ .accordion-tab-content {
+        max-height: 100vh;
+        padding: 24px;
+    }
 
-// .expander-content.open {
-//     overflow: hidden;
-//     -webkit-transition: height .3s ease-in-out,visibility 0s 0s;
-//     transition: height .3s ease-in-out,visibility 0s 0s;
-//     visibility: visible;
-// }
-
-// .expander-content {
-//     margin: 0;
-//     overflow: hidden;
-//     -webkit-transition: height .3s ease-in-out,visibility 0s .3s;
-//     transition: height .3s ease-in-out,visibility 0s .3s;
-//     visibility: hidden;
-// }
-
-// .expander-trigger.plain svg {
-//     left: 0;
-//     top: 8px;
-// }
+    ~ .accordion-tab {
+        &-title {
+            &::after {
+                @extend .icon-minus;
+            }
+        }
+    }
+}
