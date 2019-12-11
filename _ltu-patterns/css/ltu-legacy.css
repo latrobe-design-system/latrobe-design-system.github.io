@@ -74,6 +74,9 @@
      line-height: 20px;
      padding: 10px 16px;
  }
+ .header-top {
+     height: 80px;
+ }
  /* end DS Adjustments */
 
 /* HEADER */
@@ -596,6 +599,10 @@ ul.nav-utility-dropdown li {
     #global-search-button + label {
         /*bottom: 48px;*/
         top: 0;
+    }
+
+    #gdpr ~ #global-search-button + label {
+        top: 50px;
     }
 
     .Alumni #global-search-button + label,
