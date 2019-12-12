@@ -25,14 +25,12 @@
             {% endif %}
         </div>
 
-        <p>Getting started</p>
+        <p>Guidelines</p>
 
-        {%- assign about = site.docs | where: 'type', 'getting-started' | sort: 'url' -%}
+        {%- assign guidelines = site.docs | where: 'type', 'guideline' | sort: 'url' -%}
         
-        <ul>
-            <li><a href="/"{%- if page.url == '/' -%} class="active"{%- endif -%}>About Wedgetail</a></li>
-
-            {%- for pattern in about -%}
+        <ul>            
+            {%- for pattern in guidelines -%}
                 {%- include wedgetail-menu-item.html -%}
             {%- endfor -%}
         </ul>
@@ -47,22 +45,12 @@
             {%- endfor -%}
         </ul>
 
-        <p>Guidelines</p>
+        <p>Blocks</p>
 
-        {%- assign guidelines = site.docs | where: 'type', 'guideline' | sort: 'url' -%}
+        {%- assign blocks = site.docs | where: 'type', 'block' | sort: 'url' -%}
         
-        <ul>            
-            {%- for pattern in guidelines -%}
-                {%- include wedgetail-menu-item.html -%}
-            {%- endfor -%}
-        </ul>
-
-        <p>Elements</p>
-
-        {%- assign elements = site.docs | where: 'type', 'element' | sort: 'url' -%}
-        
-        <ul>            
-            {%- for pattern in elements -%}
+        <ul>
+            {%- for pattern in blocks -%}
                 {%- include wedgetail-menu-item.html -%}
             {%- endfor -%}
         </ul>
@@ -77,12 +65,12 @@
             {%- endfor -%}
         </ul>
 
-        <p>Blocks</p>
+        <p>Elements</p>
 
-        {%- assign blocks = site.docs | where: 'type', 'block' | sort: 'url' -%}
+        {%- assign elements = site.docs | where: 'type', 'element' | sort: 'url' -%}
         
-        <ul>
-            {%- for pattern in blocks -%}
+        <ul>            
+            {%- for pattern in elements -%}
                 {%- include wedgetail-menu-item.html -%}
             {%- endfor -%}
         </ul>

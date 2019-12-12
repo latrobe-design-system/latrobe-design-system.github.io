@@ -1,39 +1,46 @@
 <!doctype html>
 <html class="no-js" lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>{{ page.title }}</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" href="{{ site.url }}/ltu-patterns/css/ds-ltu.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
-        <link rel="stylesheet" href="{{ site.url }}/ltu-patterns/css/ltu-legacy.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <body class="nav-out">
+    <link rel="stylesheet" href="{{ site.url }}/ltu-patterns/css/main.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
+    <link rel="stylesheet" href="{{ site.url }}/ltu-patterns/css/ltu-legacy.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
+</head>
 
-        <a id="skip" class="btn" href="#content">Skip to content</a>
+<body>
 
+<!--noindex-->
+<a id="skip" class="btn" href="#content">Skip to content</a>
 {% include ltu-header.html %}
+<!--end noindex-->
 
-        <main id="content">
+<main id="content">
 
-            {% if page.showLeftNav == 'yes' %}<nav id="nav-container" class="nav-container lv-6271" role="navigation"></nav>{% endif %}
+    <!--noindex-->
+{% include ltu-nav.html %}
+    <!--end noindex-->
 
-            <article class="page-content">
+    <article class="page-content">
 
-            {{ content }}
+    {{ content }}
 
-            </article>
+    </article>
 
-        </main>
+</main>
 
-        <footer id="footer" class="site-footer"></footer>
+    <!--noindex-->
+{% include ltu-footer.html %}
+    <!--end noindex-->
 
 {% include js.html %}
 
-    <script src="{{ site.url }}/ltu-patterns/js/ltu-legacy.js"></script>
+<script src="{{ site.url }}/ltu-patterns/js/ltu-legacy.js"></script>
 
-    </body>
+</body>
+
 </html>

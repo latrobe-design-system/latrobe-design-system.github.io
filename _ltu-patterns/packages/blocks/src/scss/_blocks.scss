@@ -3,58 +3,41 @@
 .page-content > section,
 .page-content > article {
     padding: 0 20px;
-    margin: 40px 0;
+    margin: 40px auto;
+    max-width: 1104px; // 1024 + 80 (padding)
+    @media (min-width: 640px) {
+        padding: 0 40px;
+    }
     @media (min-width: 1000px) {
-        padding: 0 6%;
-        margin: 4% 0;
-    }
-    @media (min-width: 1600px) {
-        padding: 0;
         margin: 4% auto;
-        max-width: 1440px;
-    }
-}
-// if left hand nav is present
-.nav-container+.page-content {
-    > div:not(.ds-block),
-    > section,
-    > article {
-        @media (min-width: 1600px) {
-            padding: 0 6%;
-            margin: 4% 0;
-        }
-        @media (min-width: 2048px) {
-            padding: 0;
-            margin: 4% auto;
-            max-width: 1440px;
-        }
     }
 }
 
 div.ds-block {
-    padding: 40px 20px;
-    margin: 0;
     max-width: 100%;
-
+     // for blocks with background color
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: 0;
+     // for blocks without background color
     &:not([data-bgcolor]),
     &[data-bgcolor=""] {
-        padding: 0 20px;
+        padding-top: 0px;
+        padding-bottom: 0px;
         margin: 40px 0;
     }
     .ds-block-wrapper {
-        max-width: 1440px;
+        max-width: 1024px;
         margin: 0 auto;
     }
-    &[data-blockwidth="narrow"] {
+    &[data-blockwidth="medium"] {
         .ds-block-wrapper {
-            max-width: 1024px;
-            margin: 0 auto;
+            max-width: 1280px;
         }
     }
     &[data-blockwidth="wide"] {
         .ds-block-wrapper {
             max-width: 1600px;
-            margin: 0 auto;
         }
     }
     &[data-blockwidth="full-width"]{
@@ -66,27 +49,31 @@ div.ds-block {
             padding: 0;
         }
     }
+
+    // remove top spacing of every first-child
+    *:first-child {
+        margin-top: 0;
+    }
 }
+
 @media (min-width: 1000px) {
     div.ds-block {
-        padding: 4% 6%;
+        // for blocks with background color
+        padding-left: 4%;
+        padding-right: 4%;
+        padding-top: 4%;
+        padding-bottom: 4%;
+        margin: 0;
+        // for blocks without background color
         &:not([data-bgcolor]),
         &[data-bgcolor=""] {
-            padding: 0 6%;
-            margin: 4% 0;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            margin: 4% 0
         }
         &[data-blockwidth="full-width"]{
             padding: 0;
             margin: 0;
-        }
-    }
-}
-@media (min-width: 1600px) {
-    div.ds-block[data-blockwidth="narrow"] {
-        padding: 4% 12%;
-        &:not([data-bgcolor]),
-        &[data-bgcolor=""] {
-            padding: 0 12%;
         }
     }
 }
@@ -139,16 +126,11 @@ div.ds-block {
 }
 
 .ds-block-header {
-    margin-bottom: 2%;
-
+    margin-bottom: 3%;
     text-align: center;
     > * {
         margin-left: auto;
         margin-right: auto;
-    }
-
-    > *:first-child {
-        margin-top: 0;
     }
 }
 

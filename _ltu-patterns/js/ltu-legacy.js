@@ -1,3 +1,41 @@
+/*
+ *  This javascript is for leggacy header, nav and footer functions
+ */
+
+
+/*** from legacy parse file v5 #543334 ***/
+// Set nav-out class on load if mobile viewport
+var mobileBreakingPoint = 1024;
+if(window.outerWidth <= mobileBreakingPoint){
+    //collapseUniverse();
+    var b = document.body
+    b.className += ' nav-out';
+}
+
+/*** from behaviours.js #703156  ***/
+// set nav-out on window resize
+var resizeTimer,
+    windowWidth = $(window).width();
+
+$(window).on('resize', function(e) {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+        // Call functions here
+
+        // Only fire on horizontal resize
+        if ($(window).width() != windowWidth) {
+            // Adjust global nav
+            if ($(window).width() <= mobileBreakingPoint) {
+                $('body').addClass('nav-out');
+            } else {
+                $('body').removeClass('nav-out');
+            }
+        }
+        windowWidth = $(window).width();
+
+    }, 250);
+});
+
 /*** global.js #815086 -- excerpt only ***/
 
 // Toggle mobile nav
@@ -6,9 +44,9 @@ document.querySelector('#hamburger').addEventListener('click', function(event){
     event.preventDefault();
 });
 // Toggle desktop nav
-/*document.querySelector('.hide-nav button').addEventListener('click', function(){
+document.querySelector('.hide-nav button').addEventListener('click', function(){
     document.body.classList.toggle('nav-out');
-});*/
+});
 
 /* Add class to current mega-menu */
 var loc = window.location.pathname.split('/');
@@ -139,4 +177,34 @@ if (!gdprState) {
 }
 if (gdprState == 'hide') {
     gdprButton.parentNode.outerHTML = '';
+}
+
+/*** local-nav.js  #796337 ***/
+var triggers = document.querySelectorAll('.level-two, .level-three');
+for (i = 0; i < triggers.length; i++) {
+    var item = triggers[i];
+    item.insertAdjacentHTML('beforeBegin','<button aria-expanded="false"><img src="https://www.latrobe.edu.au/__data/assets/file/0005/745196/plus-dark.svg" alt="collapsed" /></button>');
+    if (item.parentElement.classList.contains('current')){
+        triggers[0].previousElementSibling.setAttribute('aria-expanded','true');
+        item.classList.add('open');
+        item.previousElementSibling.firstElementChild.setAttribute('src','https://www.latrobe.edu.au/__data/assets/file/0004/745195/minus-dark.svg');
+        item.previousElementSibling.previousElementSibling.classList.add('open-parent');
+        //item.parentElement.parentElement.insertBefore(item.parentElement, item.parentElement.parentElement.children[0]);
+    }
+    item.previousElementSibling.addEventListener('click',function(e){
+        e.target.previousElementSibling.classList.toggle('open-parent');
+        if (e.target.nextElementSibling.classList.contains('open')) {
+            e.target.setAttribute('aria-expanded','false');
+            e.target.nextElementSibling.classList.remove('open');
+            e.target.nextElementSibling.classList.add('closed');
+            e.target.firstElementChild.setAttribute('src','https://www.latrobe.edu.au/__data/assets/file/0005/745196/plus-dark.svg');
+            e.target.firstElementChild.setAttribute('alt','collapsed');
+        } else {
+            e.target.setAttribute('aria-expanded','true');
+            e.target.firstElementChild.setAttribute('src','https://www.latrobe.edu.au/__data/assets/file/0004/745195/minus-dark.svg');
+            e.target.firstElementChild.setAttribute('alt','expanded');
+            e.target.nextElementSibling.classList.add('open');
+            e.target.nextElementSibling.classList.remove('closed');
+        }
+    },false);
 }

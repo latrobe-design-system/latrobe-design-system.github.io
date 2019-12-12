@@ -1,5 +1,5 @@
 ---
-title: "Cards"
+title: "Card"
 status: ready
 info: The card component is used to provide a brief summary of content or a task, often with a link to more detail. Cards are frequently displayed alongside other cards in a [card set](/blocks/card-set/) to group related content or tasks.
 ---

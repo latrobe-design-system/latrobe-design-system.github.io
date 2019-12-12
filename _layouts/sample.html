@@ -7,20 +7,29 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" href="{{ site.url }}/ltu-patterns/css/ds-ltu.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
+        <link rel="stylesheet" href="{{ site.url }}/ltu-patterns/css/main.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
     </head>
 
     <body>
-        
+
         <a id="skip" class="btn" href="#content">Skip to content</a>
-
-        <header id="header" class="site-header">
-
-        </header>
 
         <main id="content">
 
-            {% if page.showLeftNav == 'yes' %}<nav id="nav-container" class="nav-container lv-6271" role="navigation"></nav>{% endif %}
+            {% if page.showLeftNav == 'yes' %}
+            <!--noindex-->
+            <nav id="nav-container" class="nav-container lv-6271" role="navigation">
+                <ul class="local-nav parent">
+                    <li class="hide-nav"><button title="Hide navigation panel"></button></li>
+                    <li class="root"><a href="https://www.latrobe.edu.au/courses">Courses</a>
+                        <ul class="level-one">
+                            <li class="current"><a href="https://www.latrobe.edu.au/courses/study-arts-social-sciences-and-communications">Arts, social sciences and communications</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!--endnoindex-->
+            {% endif %}
 
             <article class="page-content">
 
@@ -33,8 +42,6 @@
             </article>
 
         </main>
-
-        <footer id="footer" class="site-footer"></footer>
 
 {% include js.html %}
 
