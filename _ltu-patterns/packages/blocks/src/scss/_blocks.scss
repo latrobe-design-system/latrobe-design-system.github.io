@@ -51,9 +51,9 @@ div.ds-block {
     }
 
     // remove top spacing of every first-child
-    *:first-child {
-        margin-top: 0;
-    }
+    // *:first-child {
+    //     margin-top: 0;
+    // }
 }
 
 @media (min-width: 1000px) {
@@ -126,8 +126,8 @@ div.ds-block {
 }
 
 .ds-block-header {
-    margin-bottom: 3%;
     text-align: center;
+    
     > * {
         margin-left: auto;
         margin-right: auto;

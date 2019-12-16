@@ -19,10 +19,6 @@
         }
     }
 
-    > :first-child {
-        margin: 0;
-    }
-
     &--center {
         border: none;
     }
@@ -37,8 +33,7 @@
 
     @media(min-width: 768px){
         float: left;
-        margin-right: 24px;
-        padding-right: 24px;
+        padding-right: 32px;
     }
 
     svg {
@@ -56,19 +51,9 @@
 .callout-heading {
     font-size: $h3;
     color: rgba($color-alt-3, 1);
-    margin-top: 0;
 }
 
 .callout-text {
     align-self: stretch;
-
-    >:first-child {
-        margin: 0;
-    }
-}
-
-.callout-content {
-    >:first-child {
-        margin-top: 0 !important;
-    }
+    margin-top: 0;
 }

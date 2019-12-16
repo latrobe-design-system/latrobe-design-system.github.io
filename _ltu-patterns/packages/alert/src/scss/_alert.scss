@@ -70,13 +70,10 @@
 }
 
 .alert-text {
+    margin-top: 0;
     
     @media(min-width: 768px){
         padding-right: 80px;
-    }
-
-    >:first-child {
-        margin-top: 0;
     }
 
     >:only-child {
