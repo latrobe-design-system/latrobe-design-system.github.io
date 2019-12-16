@@ -1,9 +1,17 @@
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
-*, *:before, *:after {
-  box-sizing: inherit;
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.page-content {
+    * + * {
+        margin-top: 1.5em;
+    }
 }
 
 button,
