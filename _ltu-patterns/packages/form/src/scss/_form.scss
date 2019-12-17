@@ -49,22 +49,23 @@ fieldset {
 
 
 legend {
-    margin-top: 1.5em;
+    margin-top: 0;
     grid-column: 1/span 12;
     @extend h4;
 
     @media (min-width: 768px) {
-        margin-top: 2em;
+        margin-top: 0;
+        
     }
 }
 
 .form-group {
-    margin-top: 1.5em;
+    // margin-top: 1.5em;
     grid-column: span 12;
 
-    @media (min-width: 768px) {
-        margin-top: 2em;
-    }
+    // @media (min-width: 768px) {
+    //     margin-top: 2em;
+    // }
 }
 
 
@@ -84,8 +85,11 @@ legend {
     }
 }
 
-.control-input {
+* + .control-input {
     margin-top: 8px;
+}
+
+.control-input {
     display: inline-block;
 
     &--block {

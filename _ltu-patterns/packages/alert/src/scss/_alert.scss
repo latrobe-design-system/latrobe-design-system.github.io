@@ -61,7 +61,7 @@
     padding: $spacer * 4;
 
     @media(min-width: 768px){
-        padding: $spacer * 6;
+        padding: $spacer * 7;
     }
 
     &[class*="icon-"]::after {
@@ -105,10 +105,6 @@
 .alert-text-box {
     width: max-content;
     padding: $spacer * 6;
-
-    * {
-        margin-top: 0;
-    }
 
     p:last-child {
         margin-bottom: 0;
@@ -162,6 +158,7 @@
 //----------------------------------------------------------------------------------------------------------------------------------// 
 
 .alert .alert-close {
+    margin: 0;
     position: absolute;
     top: 0px;
     right: 0px;
