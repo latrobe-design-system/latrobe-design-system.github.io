@@ -24,7 +24,12 @@
             text-decoration: underline;
         }
         .mosaic-tile-image {
-            height: 105%;
+            // height: 105%;
+            transform: scale(1.05);
+        }
+
+        .mosaic-tile-content-footer {
+            padding-left: 4px;
         }
     }
 
@@ -116,6 +121,7 @@
         padding: 10%;
         display: flex;
         flex-direction: column;
+        margin: 0;
     }
 
     .mosaic-tile-title {
@@ -130,6 +136,8 @@
 
     .mosaic-tile-content-footer {
         margin-top: auto;
+        padding-left: 0;
+        transition: padding 0.25s ease;
     }
 
     .mosaic-tile-image {
@@ -139,10 +147,10 @@
         top: 0;
         right: 0;
         bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 0;
+        // transform: translateX(-50%);
         height: 100%;
-        transition: height 0.5s ease;
+        transition: transform 0.25s ease;
     }
 }
 
@@ -156,7 +164,6 @@
     }
 
     .mosaic-tile-title {
-        margin: 0 0 8% 0;
         font-size: 24px;
         line-height: 28px;
         font-size: calc(24px + 6 * ((100vw - 320px) / 680));
