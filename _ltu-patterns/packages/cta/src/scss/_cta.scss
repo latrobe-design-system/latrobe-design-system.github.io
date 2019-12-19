@@ -14,10 +14,6 @@
     // display: flex;
     // flex-direction: column;
 
-    >:first-child {
-        margin-top: 0;
-    }
-
     @include bp-down(xl) {
         align-items: center;
     }
@@ -31,10 +27,6 @@
 
 
 .cta-heading {
-    >:first-child {
-        margin-top: 0;
-    }
-
     @include bp-down(xl) {
         text-align: center;
     }
@@ -42,10 +34,6 @@
     @include bp-up(lg) {
         flex-grow: 0;
         flex-basis: 33.3%;
-        
-        >:first-child {
-            margin-top: 0;
-        }
     }
 }
 
@@ -65,15 +53,10 @@
 }
 
 .cta-item {
-    >:first-child {
-        margin-top: 0;
-    }
-
-    margin-top: 4%;
-
     @include bp-up(lg) {
         width: 100%;
         margin-left: 40px;
+        margin-bottom: 0;
 
         &:first-child {
             margin-left: 0;;
@@ -88,7 +71,9 @@
         }
     }
 }
+
 .cta-footer {
     border-top: 1px solid grey;
     margin-top: 4%;
+    padding-top: 4%;
 }

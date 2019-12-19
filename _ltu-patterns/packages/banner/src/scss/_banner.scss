@@ -82,15 +82,20 @@
 
 .banner-campaign-text {
     @media (max-width:1024px) {
-        padding: 6%;
+        padding-left: 6%;
+        padding-right: 6%;
+        margin-bottom: 4%;
     }
 
     @media (min-width:1024px) {
         width: 50%;
-
-        padding-right: $spacer * 40;
         z-index: 2;
-        padding: $spacer * 30 0;
+        padding-top: $spacer * 30;
+        padding-bottom: $spacer * 30;
+    }
+
+    @media (min-width:1200px) {
+        padding-right: $spacer * 40;
     }
 
     h1 {
@@ -125,7 +130,7 @@
             content: " ";
             position: absolute;
             display: block;
-            width: 215px;
+            width: 250px;
             height: 100%;
             top: 0;
             left: 0;

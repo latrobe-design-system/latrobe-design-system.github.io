@@ -39,25 +39,12 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
     font-weight: $medium-weight;
-    margin-top: 2em;
-    margin-bottom: 0;
     max-width: 42em; // readable line length 80 characters https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html
 
     &:empty {
         margin: 0;
     }
 }
-
-/*.ds-block {
-    h1, .h1,
-    h2, .h2,
-    h3, .h3,
-    h4, .h4,
-    h5, .h5,
-    h6, .h6 {
-        margin-top: 1em;
-    }
-}*/
 
 h1, .h1,
 h2, .h2,
@@ -69,7 +56,6 @@ h4, .h4 {
 
 h1, .h1 {
     font-size: $h1;
-    margin-top: 1em;
     @media(min-width: 1024px){
         font-size: $h1 * $heading-scale-ratio; // step up h1 size by one scale point
     }
@@ -98,12 +84,48 @@ h6, .h6 {
     font-weight: $bold-weight;
 }
 
-h2 + h3,
-h3 + h4,
-h4 + h5,
-h5 + h6 {
-    //margin-top: 0;
+
+
+.page-content {
+    * + * {
+        @media (max-width: 768px) {
+            margin-top: 1em;
+        }
+
+        @media (min-width: 768px) {
+            margin-top: 4%;
+        }
+    }
+
+    * + h1 {
+        margin-top: 1.5em;
+    }
+
+    * + h2 {
+        margin-top: 1.5em;
+    }
+
+    * + h3 {
+        margin-top: 1.25em;
+    }
+
+    * + h4 {
+        margin-top: 1.25em;
+    }
+
+    * + h5 {
+        margin-top: 1.25em;
+    }
+
+    * + h6 {
+        margin-top: 1.25em;
+    }
+
+    * + p {
+        margin-top: 1em;
+    }
 }
+
 
 //
 // Body copy
@@ -111,7 +133,7 @@ h5 + h6 {
 
 p {
     max-width: 42em; // readable line length 80 characters https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html
-    margin-top: $spacer * 5;
+    // margin-top: $spacer * 5;
     margin-bottom: 0;
 }
 
