@@ -85,16 +85,13 @@ h6, .h6 {
 }
 
 
+// Lobotomised Owl technique
+// Allows not having to reset first child elements with a margin of 0
+// https://designsystem.gov.au/get-started/spacing-between-components/
 
 .page-content {
     * + * {
-        @media (max-width: 768px) {
-            margin-top: 1em;
-        }
-
-        @media (min-width: 768px) {
-            margin-top: 4%;
-        }
+        margin-top: 2em;
     }
 
     * + h1 {
@@ -156,7 +153,6 @@ ul {
     margin-top: $spacer * 5;
     margin-bottom: 0;
 }
-
 
 
 //
