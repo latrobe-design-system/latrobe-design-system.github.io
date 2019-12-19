@@ -5,7 +5,10 @@
 .media-item {
     display: flex;
     justify-content: flex-start;
-    margin-bottom: $spacer * 10;
+}
+
+* + li.media-item {
+    margin-top: 2em;
 }
 
 .media-img {
