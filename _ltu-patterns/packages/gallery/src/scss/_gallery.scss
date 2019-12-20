@@ -12,11 +12,19 @@
 
 .image-gallery-grid {
     display: grid;
-    grid-gap: $spacer * 5;
+    grid-gap: $spacer * 4;
+
+    @include bp-down(xl) {
+        grid-gap: $spacer * 2;
+    }
+
+    @include bp-down(sm) {
+        grid-gap: $spacer;
+    }
 
     .image {
-        background-image: url(https://via.placeholder.com/1600x900);
-        background-color: red;
+        position: relative;
+        background-image: url(https://picsum.photos/1920/1920);
         background-position: center;
         background-size: cover;
         width: 100%;
@@ -25,11 +33,19 @@
         grid-row: span 3;
         padding-top: 100%;
 
+        @include bp-down(sm) {
+            grid-column: span 6;
+        }
+
         &:nth-of-type(15n+1),
         &:nth-of-type(15n+7) {
             grid-column: span 12;
             grid-row: span 6;
             padding-top: 50%;
+
+            @include bp-down(sm) {
+                padding-top: 75%;
+            }
         }
 
         &:nth-of-type(15n+2),
@@ -37,6 +53,11 @@
             grid-column: span 6;
             grid-row: span 6;
 
+            @include bp-down(sm) {
+                grid-column: span 12;
+                grid-row: span 3;
+                padding-top: 50%;
+            }
         }
 
         &:nth-of-type(15n+13),
@@ -45,6 +66,17 @@
             grid-column: span 4;
             grid-row: span 4;
         }
+    }
+
+    .image-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 100;
+        width: 100%;
+        padding: $spacer * 4;
+        background: rgba(0,0,0,0.5);
+        color: white;
     }
 }
 
