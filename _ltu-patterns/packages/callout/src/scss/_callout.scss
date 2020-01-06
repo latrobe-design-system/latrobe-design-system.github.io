@@ -24,7 +24,7 @@
     }
 }
 
-.callout-icon {
+.callout__icon {
     padding-right: 16px;
     
     @media(max-width: 768px){
@@ -48,12 +48,12 @@
     }
 }
 
-.callout-heading {
+.callout__heading {
     font-size: $h3;
     color: rgba($color-alt-3, 1);
 }
 
-.callout-text {
+.callout__text {
     align-self: stretch;
     margin-top: 0;
 }
