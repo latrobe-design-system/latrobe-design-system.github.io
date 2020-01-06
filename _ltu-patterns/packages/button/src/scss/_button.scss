@@ -5,7 +5,8 @@ button.btn-box {
     -moz-appearance: none;
 }
 
-.btn {
+.btn,
+.btn-primary {
     border: 0;
     box-sizing: border-box;
     border-radius: 2px;
@@ -58,17 +59,20 @@ button.btn-box {
     }
 }
 
-.btn-light {
+.btn--light {
     @extend .btn;
     color: $color-1;
     background-color: white;
+
     &:visited {
         color: $color-1;
     }
+
     &:hover {
         text-decoration: underline;
         background-color: darken(white,5%);
     }
+
     &[class*="icon-"]{
         &::after {
             filter: $red;
@@ -76,41 +80,47 @@ button.btn-box {
     }
 }
 
-.btn-secondary {
+.btn--secondary {
     @extend .btn;
     color: $color-2;
     background-color: transparent;
     border: 2px solid $color-2;
     padding: 12px 18px;
+
     &:visited {
         color: $color-2;
     }
+
     &:hover {
         background-color: rgba(black,.15);
         border: 2px solid $color-2;
     }
+
     &[class*="icon-"]::after {
         filter: $near-black;
     }
 }
 
-.btn-secondary-light {
-    @extend .btn-secondary;
+.btn--secondary-light {
+    @extend .btn--secondary;
     color: white;
     border: 2px solid white;
+
     &:visited {
         color: white;
     }
+
     &:hover {
         background-color: rgba(black,.15);
         border: 2px solid white;
     }
+
     &[class*="icon-"]::after {
         filter: $white;
     }
 }
 
-.btn-small {
+.btn--small {
     @extend .btn;
     padding: 4px 16px;
 
@@ -133,22 +143,22 @@ button.btn-box {
     }
 }
 
-.btn-secondary-small {
-    @extend .btn-small;
-    @extend .btn-secondary;
+.btn--secondary-small {
+    @extend .btn--small;
+    @extend .btn--secondary;
 }
 
-.btn-light-small {
-    @extend .btn-small;
-    @extend .btn-light;
+.btn--light-small {
+    @extend .btn--small;
+    @extend .btn--light;
 }
 
-.btn-secondary-light-small {
-    @extend .btn-small;
-    @extend .btn-secondary-light;
+.btn--secondary-light-small {
+    @extend .btn--small;
+    @extend .btn--secondary-light;
 }
 
-.btn-pill {
+.btn--pill {
     font-weight: 500;
     border: 2px solid $color-2;
     box-sizing: border-box;
@@ -176,25 +186,28 @@ button.btn-box {
     }
 }
 
-.btn-pill-alt {
-    @extend .btn-pill;
+.btn--pill-alt {
+    @extend .btn--pill;
     border: 2px solid $color-1;
     color: $color-1;
+
     &:visited {
         color: $color-1;
     }
+
     &:hover {
         text-decoration: underline;
         background-color: rgba($color-1,.15);
     }
+
     &.selected {
         color: white;
         background-color: $color-1;
     }
 }
 
-.btn-round {
-    @extend .btn-pill;
+.btn--round {
+    @extend .btn--pill;
     background-color: transparent;
     width: 48px;
     height: 48px;
@@ -215,14 +228,14 @@ button.btn-box {
     }
 }
 
-.btn-round-small {
-    @extend .btn-round;
+.btn--round-small {
+    @extend .btn--round;
     width: 36px;
     height: 36px;
 }
 
-.btn-round-light {
-    @extend .btn-round;
+.btn--round-light {
+    @extend .btn--round;
     color: white;
     border: 2px solid white;
     &:visited {
@@ -237,9 +250,9 @@ button.btn-box {
     }
 }
 
-.btn-round-light-small {
-    @extend .btn-round-light;
-    @extend .btn-round-small;
+.btn--round-light-small {
+    @extend .btn--round-light;
+    @extend .btn--round-small;
 }
 
 input[type="button"] {
