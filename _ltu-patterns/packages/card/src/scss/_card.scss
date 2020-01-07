@@ -2,38 +2,33 @@
     box-sizing: border-box;
     width: 100%;
     max-width: 450px;
-    padding: 0 0 24px;
     margin-top: 16px;
     margin-bottom: 16px;
     transition: all 0.3s ease-in-out;
 }
 
-.card-header {
+.card__header {
     position: relative;
 }
 
-.card-img {
+.card__img {
     width: 100%;
     display: block;
 }
 
-.card-body {
-    padding: 0 24px;
+.card__body {
+    padding: 24px;
 }
 
-.card-body > *:first-child {
-    margin-top: 24px;
-}
-
-.card-heading {
+.card__heading {
     font-size: $h4;
 }
 
-.card-footer {
-    padding: 0 20px;
+.card__footer {
+    padding: 0 24px 24px;
 }
 
-.card-cta {
+.card__link {
     @extend .icon-chevron-right;
     @extend .icon-red;
     color: $color-1;
@@ -53,24 +48,25 @@ a.card {
         cursor: pointer;
         // box-shadow: $shadow-2;
 
-        .card-heading {
+        .card__heading {
             color: $color-1;
             text-decoration: underline;
         }
 
-        .card-cta {
+        .card__link {
             text-decoration: underline;
         }
     }
 }
 
-.card-save {
+.card__save {
     width: 40px;
     height: 40px;
     position: absolute;
     right: 0;
     margin-top: -40px;
     background-color: white;
+
     /* .save-course-icon class used by my courses save JS */
     .save-course-icon + label {
         text-indent: 100%;
@@ -108,7 +104,7 @@ a.card {
     }
 }
 
-.card-tag {
+.card__tag {
     display: inline-block;
     position: absolute;
     top: 0;
@@ -120,12 +116,14 @@ a.card {
     line-height: 1;
 }
 
-.card-tag-alt {
-    @extend .card-tag;
+.card__tag-alt {
+    @extend .card__tag;
+
     background: $color-alt-3;
 }
+
 /* course card specifics */
-.card-course {
+.card__course {
     @extend .card;
 
     li,
@@ -138,15 +136,16 @@ a.card {
         margin-top: 48px;
     }
 }
+
 /* layouts */
 .card-set {
     @include columns-grid;
-}
 
-* + .card-set {
-    margin-top: 4em;
-}
+    &--left {
+        @include columns-grid($alignment: left, $wrap: auto-fill);
+    }
 
-.card-set-left {
-    @include columns-grid($alignment: left, $wrap: auto-fill);
+    & + * {
+        margin-top: 4em;
+    }
 }
