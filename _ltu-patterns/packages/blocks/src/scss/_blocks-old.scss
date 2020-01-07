@@ -1,0 +1,148 @@
+// set margins for standard content containers
+.page-content > div,
+.page-content > section,
+.page-content > article {
+    padding: 0 20px;
+    margin: 40px auto;
+    max-width: 1104px; // 1024 + 80 (padding)
+    @media (min-width: 640px) {
+        padding: 0 40px;
+    }
+    @media (min-width: 1000px) {
+        margin: 4% auto;
+    }
+}
+
+div.ds-block {
+    max-width: 100%;
+     // for blocks with background color
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: 0;
+     // for blocks without background color
+    &:not([data-bgcolor]),
+    &[data-bgcolor=""] {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin: 40px 0;
+    }
+    .ds-block-wrapper {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+    &[data-blockwidth="medium"] {
+        .ds-block-wrapper {
+            max-width: 1280px;
+        }
+    }
+    &[data-blockwidth="wide"] {
+        .ds-block-wrapper {
+            max-width: 1600px;
+        }
+    }
+    &[data-blockwidth="full-width"]{
+        padding: 0;
+        margin: 0;
+        .ds-block-wrapper {
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    div.ds-block {
+        // for blocks with background color
+        padding-left: 4%;
+        padding-right: 4%;
+        padding-top: 4%;
+        padding-bottom: 4%;
+        margin: 0;
+        // for blocks without background color
+        &:not([data-bgcolor]),
+        &[data-bgcolor=""] {
+            padding-top: 0px;
+            padding-bottom: 0px;
+            margin: 4% 0
+        }
+        &[data-blockwidth="full-width"]{
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
+
+// background color options
+div.ds-block {
+    &[data-bgcolor="grey"] {
+        background-color: $color-3a;
+    }
+    &[data-bgcolor="black"] {
+        background: #242428;
+        color: white;
+
+        a {
+            text-decoration: underline;
+            color: white;
+        }
+
+        .btn {
+            text-decoration: none;
+        }
+
+        .ds-block-header {
+            color: white;
+        }
+    }
+    &[data-bgcolor="red"] {
+        background-color: $color-1;
+
+        .ds-block-header {
+            color: white;
+        }
+    }
+    &[data-bgcolor="black-nodes"] {
+        background-color: $color-2;
+        background-image: url("img/bg-nodes.svg");
+
+        .ds-block-header {
+            color: white;
+        }
+    }
+    &[data-bgcolor="red-nodes"] {
+        background-color: $color-1;
+        background-image: url("img/bg-nodes.svg");
+
+        .ds-block-header {
+            color: white;
+        }
+    }
+}
+
+.ds-block-header {
+    text-align: center;
+
+    > * {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.ds-block-header[data-textalign="left"] {
+
+    text-align: left;
+    > * {
+        margin-left: 0;
+        margin-right: auto;
+    }
+}
+
+.ds-block-header[data-textalign="right"] {
+
+    text-align: right;
+    > * {
+        margin-left: auto;
+        margin-right: 0;
+    }
+}

@@ -9,7 +9,7 @@
     margin-bottom: 16px;
 }
 
-.testimonial-image {
+.testimonial__image {
     border-radius: 100%;
     overflow: hidden;
     width: 120px;
@@ -25,7 +25,7 @@
     }
 }
 
-.testimonial-copy {
+.testimonial__copy {
     padding: 84px 20px 20px 20px;
 
     blockquote {
@@ -39,7 +39,7 @@
         }
     }
 
-    .testimonial-cta {
+    .testimonial__cta {
         margin-top: 20px;
     }
 
@@ -47,25 +47,25 @@
 
 @media(min-width: 600px){
 
-    .testimonial-image {
+    .testimonial__image {
         width: 280px;
         height: 280px;
         margin: 0 0 20px 20px;
         float: right;
     }
 
-    .testimonial-copy {
+    .testimonial__copy {
         padding-top: 20px;
     }
 
-    .testimonial-set .testimonial-image {
+    .testimonial-set .testimonial__image {
         width: 120px;
         height: 120px;
         margin: 0 auto -60px auto;
         float: none;
     }
 
-    .testimonial-set .testimonial-copy {
+    .testimonial-set .testimonial__copy {
         padding: 84px 20px 20px 20px;
     }
 }
@@ -81,14 +81,14 @@
     @media(min-width: 600px){
         display: block;
 
-        .testimonial-image {
+        .testimonial__image {
             width: 280px;
             height: 280px;
             margin: 0 0 20px 20px;
             float: right;
         }
 
-        .testimonial-copy {
+        .testimonial__copy {
             border: 0px;
             padding-top: 20px;
         }
@@ -102,14 +102,14 @@
     @media(min-width: 1200px){
         display: block;
 
-        .testimonial-image {
+        .testimonial__image {
             width: 280px;
             height: 280px;
             margin: 0 0 20px 20px;
             float: right;
         }
 
-        .testimonial-copy {
+        .testimonial__copy {
             border: 0px;
             padding-top: 20px;
         }
