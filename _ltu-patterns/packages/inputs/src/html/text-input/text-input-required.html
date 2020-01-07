@@ -9,5 +9,7 @@ id: email
 placeholder: name@example.com
 ---
 
-<label for="{{ page.id }}">{{ page.label }}<abbr class="req" title="required">*</abbr></label>
-<input type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="{{ page.placeholder }}" required/>
+<div class="ds-form-group">
+    <label class="ds-label" for="{{ page.id }}">{{ page.label }}<abbr class="req" title="required">*</abbr></label>
+    <input class="ds-text-input" type="text" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="{{ page.placeholder }}" required/>
+</div>

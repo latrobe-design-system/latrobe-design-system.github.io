@@ -12,8 +12,8 @@ valid: Succesfully validated
 invalid: Invalid input
 ---
 
-<label for="{{ page.id }}">{{ page.label }}</label>
-
-<input type="text" class="text-input text-input--valid" id="{{ page.id }}" aria-invalid="true" aria-describedby="{{ page.id }}-valid-text" placeholder="{{ page.placeholder }}" />
-
-<span class="valid-text small-text" id="{{ page.id }}-valid-text">{{ page.valid }}</span>
+<div class="ds-form-group">
+    <label class="ds-label" for="{{ page.id }}">{{ page.label }}</label>
+    <input class="ds-text-input" type="text" class="text-input text-input--valid" id="{{ page.id }}" aria-invalid="true" aria-describedby="{{ page.id }}-valid-text" placeholder="{{ page.placeholder }}" />
+    <span class="ds-hint ds-hint--valid small-text" id="{{ page.id }}-valid-text">{{ page.valid }}</span>
+</div>
