@@ -40,6 +40,7 @@ h5, .h5,
 h6, .h6 {
     font-weight: $medium-weight;
     max-width: 42em; // readable line length 80 characters https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html
+    margin: 0;
 
     &:empty {
         margin: 0;
@@ -94,7 +95,6 @@ h6, .h6 {
     //     margin-top: 1em;
     // }
 
-    * + h1,
     * + h2,
     * + h3,
     * + h4,
@@ -119,7 +119,6 @@ h6, .h6 {
 
 p {
     max-width: 42em; // readable line length 80 characters https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html
-    // margin-top: $spacer * 5;
     margin-bottom: 0;
 }
 

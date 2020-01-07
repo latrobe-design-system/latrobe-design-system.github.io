@@ -22,7 +22,7 @@ input[type="file"] {
 
 .custom-file-input::before {
     content: 'Choose file';
-    @extend .btn-secondary;
+    @extend .btn--secondary;
     cursor: pointer;
     width: auto;
 }
