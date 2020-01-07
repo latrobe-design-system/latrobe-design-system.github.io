@@ -1,42 +1,38 @@
-.checkbox input[type="checkbox"] {
+.ds-control-input__input[type="checkbox"] {
     opacity: 0;
     position: absolute;
-}
 
-.checkbox label {
-    position: relative;
-    padding-left: $spacer * 8;
-    display: block;
-    cursor: pointer;
-    font-weight: 400;
-}
+    & + label {
+        position: relative;
+        padding-left: $spacer * 8;
+        display: block;
+        cursor: pointer;
+        font-weight: 400;
+        
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            display: inline-block;
+        }
 
-.checkbox label::before,
-.checkbox label::after {
-    position: absolute;
-    content: "";
-    display: inline-block;
-}
+        /*Checkmark of the fake checkbox*/
+        &::after {
+            height: 8px;
+            width: 12px;
+            border-left: 3px solid;
+            border-bottom: 3px solid;
+            transform: rotate(-45deg);
+            left: 6px;
+            top: 7px;
 
-/*Checkmark of the fake checkbox*/
-.checkbox label::after {
-    height: 8px;
-    width: 12px;
-    border-left: 3px solid;
-    border-bottom: 3px solid;
-    
-    transform: rotate(-45deg);
-    
-    left: 6px;
-    top: 7px;
-}
+            /*Hide the checkmark by default*/
+            content: none;
+        }
+    }
 
-/*Hide the checkmark by default*/
-.checkbox input[type="checkbox"] + label::after {
-    content: none;
-}
-
-/*Unhide on the checked state*/
-.checkbox input[type="checkbox"]:checked + label::after {
-    content: "";
+    /*Unhide on the checked state*/
+    &:checked + label::after {
+        content: "";
+    }
 }

@@ -10,34 +10,36 @@ label: Item
 valid: Successfully validated
 ---
 
-<fieldset>
-    <legend>
-        {{ page.legend }}
-    </legend> 
+<form class="form-group">
+    <fieldset class="ds-fieldset">
+        <legend class="ds-fieldset__legend">
+            {{ page.legend }}
+        </legend> 
 
-    <div class="control-input control-input--valid control-input--block checkbox">
-        <input type="checkbox" id="{{ page.id }}-1">
+        <div class="ds-control-input ds-control-input--valid ds-control-input--block">
+            <input class="ds-control-input__input" type="checkbox" id="{{ page.id }}-1">
 
-        <label for="{{ page.id }}-1">
-            {{ page.label }}
-        </label>
-    </div>
+            <label class="ds-control-input__label" for="{{ page.id }}-1">
+                {{ page.label }}
+            </label>
+        </div>
 
-    <div class="control-input control-input--valid control-input--block checkbox">
-        <input type="checkbox" id="{{ page.id }}-2">
+        <div class="ds-control-input ds-control-input--valid ds-control-input--block">
+            <input class="ds-control-input__input" type="checkbox" id="{{ page.id }}-2">
 
-        <label for="{{ page.id }}-2">
-            {{ page.label }}
-        </label>
-    </div>
+            <label class="ds-control-input__label" for="{{ page.id }}-2">
+                {{ page.label }}
+            </label>
+        </div>
 
-    <div class="control-input control-input--valid control-input--block checkbox">
-        <input type="checkbox" id="{{ page.id }}-3">
+        <div class="ds-control-input ds-control-input--valid ds-control-input--block">
+            <input class="ds-control-input__input" type="checkbox" id="{{ page.id }}-3">
 
-        <label for="{{ page.id }}-3">
-            {{ page.label }}
-        </label>
-    </div>
+            <label class="ds-control-input__label" for="{{ page.id }}-3">
+                {{ page.label }}
+            </label>
+        </div>
 
-    <span class="valid-text small-text" id="{{ page.id }}-valid-text">{{ page.valid }}</span>
-</fieldset>
+        <span class="valid-text small-text" id="{{ page.id }}-valid-text">{{ page.valid }}</span>
+    </fieldset>
+</form>

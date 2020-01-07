@@ -10,23 +10,27 @@ label: Item
 invalid: Please select an option
 ---
 
-<fieldset>
-    <legend>{{ page.legend }}</legend> 
+<form class="ds-form-group">
+    <fieldset class="ds-fieldset">
+        <legend class="ds-fieldset__legend">
+            {{ page.legend }}
+        </legend>
 
-    <div class="control-input control-input--invalid control-input--block radio">
-        <input type="radio" name="radio" id="{{ page.id }}-1" checked>
-        <label for="{{ page.id }}-1">Item 1</label>
-    </div>
+        <div class="ds-control-input ds-control-input--invalid ds-control-input--block">
+            <input class="ds-control-input__input" type="radio" name="radio" id="{{ page.id }}-1" checked>
+            <label class="ds-control-input__label" for="{{ page.id }}-1">Item 1</label>
+        </div>
 
-    <div class="control-input control-input--invalid control-input--block radio">
-        <input type="radio" name="radio" id="{{ page.id }}-2">
-        <label for="{{ page.id }}-2">Item 2</label>
-    </div>
+        <div class="ds-control-input ds-control-input--invalid ds-control-input--block">
+            <input class="ds-control-input__input" type="radio" name="radio" id="{{ page.id }}-2">
+            <label class="ds-control-input__label" for="{{ page.id }}-2">Item 2</label>
+        </div>
 
-    <div class="control-input control-input--invalid control-input--block radio">
-        <input type="radio" name="radio" id="{{ page.id }}-3">
-        <label for="{{ page.id }}-3">Item 3</label>
-    </div>
+        <div class="ds-control-input ds-control-input--invalid ds-control-input--block">
+            <input class="ds-control-input__input" type="radio" name="radio" id="{{ page.id }}-3">
+            <label class="ds-control-input__label" for="{{ page.id }}-3">Item 3</label>
+        </div>
 
-    <span class="invalid-text small-text" id="{{ page.id }}-invalid-text">{{ page.invalid }}</span>
-</fieldset>
+        <span class="valid-text small-text" id="{{ page.id }}-valid-text">{{ page.invalid }}</span>
+    </fieldset>
+</form>
