@@ -15,7 +15,9 @@ valid: Sucessfully validated
         <legend class="ds-fieldset__legend">
             {{ page.legend }}
         </legend>
+    </fieldset>
 
+    <div class="ds-control-input-group">
         <div class="ds-control-input ds-control-input--valid ds-control-input--block">
             <input class="ds-control-input__input" type="radio" name="radio" id="{{ page.id }}-1" checked>
             <label class="ds-control-input__label" for="{{ page.id }}-1">Item 1</label>
@@ -31,6 +33,6 @@ valid: Sucessfully validated
             <label class="ds-control-input__label" for="{{ page.id }}-3">Item 3</label>
         </div>
 
-        <span class="valid-text small-text" id="{{ page.id }}-valid-text">{{ page.valid }}</span>
-    </fieldset>
+        <span class="ds-hint ds-hint--valid small-text" id="{{ page.id }}-valid-text">{{ page.valid }}</span>
+    </div>
 </form>

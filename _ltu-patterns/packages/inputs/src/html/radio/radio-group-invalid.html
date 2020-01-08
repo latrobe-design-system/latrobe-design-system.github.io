@@ -15,7 +15,9 @@ invalid: Please select an option
         <legend class="ds-fieldset__legend">
             {{ page.legend }}
         </legend>
+    </fieldset>
 
+    <div class="ds-control-input-group">
         <div class="ds-control-input ds-control-input--invalid ds-control-input--block">
             <input class="ds-control-input__input" type="radio" name="radio" id="{{ page.id }}-1" checked>
             <label class="ds-control-input__label" for="{{ page.id }}-1">Item 1</label>
@@ -31,6 +33,6 @@ invalid: Please select an option
             <label class="ds-control-input__label" for="{{ page.id }}-3">Item 3</label>
         </div>
 
-        <span class="valid-text small-text" id="{{ page.id }}-valid-text">{{ page.invalid }}</span>
-    </fieldset>
+        <span class="ds-hint ds-hint--invalid small-text" id="{{ page.id }}-valid-text">{{ page.invalid }}</span>
+    </div>
 </form>

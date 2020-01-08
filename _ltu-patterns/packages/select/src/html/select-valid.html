@@ -8,15 +8,15 @@ label: What option?
 valid: Successfully validated
 ---
 
-<div class="form-group">
-    <label for="name">{{ page.label }}</label>
+<div class="ds-form-group">
+    <label class="ds-label" for="name">{{ page.label }}</label>
 
-    <select class="select select--valid">
+    <select class="ds-select ds-select--valid">
         <option value="option-1">Option 1</option>
         <option value="option-2">Option 2</option>
         <option value="option-3">Option 3</option>
         <option value="option-4">Option 4</option>
     </select>
 
-    <span class="valid-text small-text" id="{{ page.id }}-valid-text">{{ page.valid }}</span>
+    <span class="ds-hint ds-hint--valid small-text" id="{{ page.id }}-valid-text">{{ page.valid }}</span>
 </div>

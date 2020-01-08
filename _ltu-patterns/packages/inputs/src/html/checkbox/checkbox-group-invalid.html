@@ -15,6 +15,9 @@ invalid: Please select at least one option
         <legend class="ds-fieldset__legend">
             {{ page.legend }}
         </legend>
+    </fieldset>
+
+    <div class="ds-control-input-group">
 
         <div class="ds-control-input ds-control-input--invalid ds-control-input--block">
             <input class="ds-control-input__input" type="checkbox" id="{{ page.id }}-1">
@@ -40,6 +43,6 @@ invalid: Please select at least one option
             </label>
         </div>
 
-        <span class="invalid-text small-text" id="{{ page.id }}-invalid-text">{{ page.invalid }}</span>
-    </fieldset>
+        <span class="ds-hint ds-hint--invalid small-text" id="{{ page.id }}-invalid-text">{{ page.invalid }}</span>
+    </div>
 </form>
