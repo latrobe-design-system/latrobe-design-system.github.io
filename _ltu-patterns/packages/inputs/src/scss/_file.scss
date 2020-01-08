@@ -12,25 +12,25 @@ input[type="file"] {
     }
 }
 
-.custom-file-input {
+.ds-custom-file-input {
     color: transparent;
 }
 
-.custom-file-input::-webkit-file-upload-button {
+.ds-custom-file-input::-webkit-file-upload-button {
     visibility: hidden;
 }
 
-.custom-file-input::before {
+.ds-custom-file-input::before {
     content: 'Choose file';
     @extend .btn--secondary;
     cursor: pointer;
     width: auto;
 }
 
-.custom-file-input:hover::before {
+.ds-custom-file-input:hover::before {
     border-color: black;
 }
 
-.custom-file-input:active {
+.ds-custom-file-input:active {
     outline: 0;
 }

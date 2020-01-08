@@ -6,19 +6,15 @@ status: draft
 <div class="ds-block">
     <div class="ds-block-wrapper" data-blockwidth="narrow">
         <form>
-            <div class="form-group" data-cols="12">
-                {% include sample-component.html
-                    snippet="packages/inputs/src/html/text-input/text-input-required.html"
-                    container="false"
-                %}
-            </div>
-
-            <div class="form-group" data-cols="11">
-                {% include sample-component.html
-                    snippet="packages/inputs/src/html/text-input/text-input-required.html"
-                    container="false"
-                %}
-            </div>
+            {% include sample-component.html
+                snippet="packages/inputs/src/html/text-input/text-input-required.html"
+                container="false"
+            %}
+            
+            {% include sample-component.html
+                snippet="packages/inputs/src/html/text-input/text-input-required.html"
+                container="false"
+            %}
 
             <div class="form-group" data-cols="10">
                 {% include sample-component.html
