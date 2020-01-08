@@ -55,11 +55,11 @@ legend {
 
 .ds-fieldset {
     &__legend {
-        margin: 1.5em 0;
+        margin-bottom: 1.5em;
         grid-column: span 12;
     
         @media (min-width: 768px) {
-            margin: 2em 0;
+            margin-bottom: 2em;
         }
     }
 }

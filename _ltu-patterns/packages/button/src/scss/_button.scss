@@ -1,12 +1,12 @@
-button.btn,
-button.btn-box {
+button.ds-btn,
+button.ds-btn-box {
     /* remove browser styling from button element */
     -webkit-appearance: none;
     -moz-appearance: none;
 }
 
-.btn,
-.btn-primary {
+.ds-btn,
+.ds-btn-primary {
     border: 0;
     box-sizing: border-box;
     border-radius: 2px;
@@ -59,7 +59,7 @@ button.btn-box {
     }
 }
 
-.btn--light {
+.ds-btn--light {
     @extend .btn;
     color: $color-1;
     background-color: white;
@@ -80,7 +80,7 @@ button.btn-box {
     }
 }
 
-.btn--secondary {
+.ds-btn--secondary {
     @extend .btn;
     color: $color-2;
     background-color: transparent;
@@ -101,7 +101,7 @@ button.btn-box {
     }
 }
 
-.btn--secondary-light {
+.ds-btn--secondary-light {
     @extend .btn--secondary;
     color: white;
     border: 2px solid white;
@@ -120,7 +120,7 @@ button.btn-box {
     }
 }
 
-.btn--small {
+.ds-btn--small {
     @extend .btn;
     padding: 4px 16px;
 
@@ -143,22 +143,22 @@ button.btn-box {
     }
 }
 
-.btn--secondary-small {
+.ds-btn--secondary-small {
     @extend .btn--small;
     @extend .btn--secondary;
 }
 
-.btn--light-small {
+.ds-btn--light-small {
     @extend .btn--small;
     @extend .btn--light;
 }
 
-.btn--secondary-light-small {
+.ds-btn--secondary-light-small {
     @extend .btn--small;
     @extend .btn--secondary-light;
 }
 
-.btn--pill {
+.ds-btn--pill {
     font-weight: 500;
     border: 2px solid $color-2;
     box-sizing: border-box;
@@ -186,7 +186,7 @@ button.btn-box {
     }
 }
 
-.btn--pill-alt {
+.ds-btn--pill-alt {
     @extend .btn--pill;
     border: 2px solid $color-1;
     color: $color-1;
@@ -206,7 +206,7 @@ button.btn-box {
     }
 }
 
-.btn--round {
+.ds-btn--round {
     @extend .btn--pill;
     background-color: transparent;
     width: 48px;
@@ -228,13 +228,13 @@ button.btn-box {
     }
 }
 
-.btn--round-small {
+.ds-btn--round-small {
     @extend .btn--round;
     width: 36px;
     height: 36px;
 }
 
-.btn--round-light {
+.ds-btn--round-light {
     @extend .btn--round;
     color: white;
     border: 2px solid white;
@@ -250,7 +250,7 @@ button.btn-box {
     }
 }
 
-.btn--round-light-small {
+.ds-btn--round-light-small {
     @extend .btn--round-light;
     @extend .btn--round-small;
 }

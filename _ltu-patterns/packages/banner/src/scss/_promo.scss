@@ -1,24 +1,24 @@
-.promotion {
+.ds-promotion {
     margin: 40px;
     overflow: hidden;
     position: relative;
 }
 
-.promotion-text {
+.ds-promotion-text {
     padding: 60px;
     box-sizing: border-box;
     position: relative;
 }
 
-.promotion-overlay {
+.ds-promotion-overlay {
     background: rgba(255,255,255,0.8);
     bottom: 0;
     position: absolute;
     top: 0;
 }
 
-.promotion-text,
-.promotion-overlay {
+.ds-promotion-text,
+.ds-promotion-overlay {
     width: 100%;
 
     @media(min-width: 768px) {

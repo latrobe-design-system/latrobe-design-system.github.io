@@ -1,4 +1,4 @@
-.alert {
+.ds-alert {
     border: 2px solid rgba($color-alt-3, 1);
     border-radius: 4px;
     position: relative;
@@ -19,7 +19,7 @@
     }
 }
 
-.alert--success {
+.ds-alert--success {
     background-color: mix(#52c41a, white, 5%);
     border-color: #52c41a;
 
@@ -28,7 +28,7 @@
     }
 }
 
-.alert--error {
+.ds-alert--error {
     background-color: rgba($color-1, 0.05);
     border-color: rgba($color-1, 1);
 
@@ -37,7 +37,7 @@
     }
 }
 
-.alert--warning {
+.ds-alert--warning {
     background-color: rgba($color-alt-2, 0.05);
     border-color: rgba($color-alt-2, 1);
 
@@ -46,7 +46,7 @@
     }
 }
 
-.alert--info {
+.ds-alert--info {
     background-color: rgba($color-alt-3, 0.05);
     border-color: rgba($color-alt-3, 1);
 
@@ -55,7 +55,7 @@
     }
 }
 
-.alert__text {
+.ds-alert__text {
     margin-top: 0;
     
     @media(min-width: 768px){
@@ -67,7 +67,7 @@
     }
 }
 
-.alert__icon {
+.ds-alert__icon {
     padding-right: $spacer * 4;
     vertical-align: top;
     height: $spacer * 6;
@@ -82,7 +82,7 @@
     }
 }
 
-.alert__close {
+.ds-alert__close {
     margin: 0;
     position: absolute;
     top: 0px;

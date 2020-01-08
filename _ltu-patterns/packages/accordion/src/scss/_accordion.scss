@@ -1,15 +1,15 @@
-.accordion__item {
+.ds-accordion__item {
     border-bottom: 2px solid $color-3b;
     padding: 0;
     margin: 0;
 }
 
-.accordion__item + .accordion__item {
+.ds-accordion__item + .ds-accordion__item {
     border-top: 0;
     margin-top: 0;
 }
 
-.accordion__trigger {
+.ds-accordion__trigger {
     background: none;
     display: block;
     margin: 0;
@@ -22,23 +22,23 @@
     cursor: pointer;
 
     &:hover {
-        .accordion__title {
+        .ds-accordion__title {
             text-decoration: none;
             color: $color-2;
         }
     }
 
-    &.accordion__trigger--active {
+    &.ds-accordion__trigger--active {
         display: block;
 
-        .accordion__title {
+        .ds-accordion__title {
             &::after {
                 @extend .icon-minus;
             }
         }
     }
 
-    .accordion__title {
+    .ds-accordion__title {
         // @extend [class*="icon-"];
         @extend .icon-before;
 
@@ -49,7 +49,7 @@
 }
 
 
-.accordion__content {
+.ds-accordion__content {
     display: none;
     padding: 24px;
     margin-top: 0;

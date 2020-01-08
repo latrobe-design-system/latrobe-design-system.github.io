@@ -1,4 +1,4 @@
-.cta {
+.ds-cta {
     margin-top: 4%;
     
     @include columns();
@@ -8,7 +8,7 @@
     }
 }
 
-.cta--alternate {
+.ds-cta--alternate {
     @include columns;
 
     // display: flex;
@@ -26,7 +26,7 @@
 }
 
 
-.cta__heading {
+.ds-cta__heading {
     @include bp-down(xl) {
         text-align: center;
     }
@@ -37,7 +37,7 @@
     }
 }
 
-.cta__item-group {
+.ds-cta__item-group {
     display: flex;
     flex-direction: column;
 
@@ -52,7 +52,7 @@
     }
 }
 
-.cta__item {
+.ds-cta__item {
     @include bp-up(lg) {
         width: 100%;
         margin-left: 40px;
@@ -72,7 +72,7 @@
     }
 }
 
-.cta__footer {
+.ds-cta__footer {
     border-top: 1px solid grey;
     margin-top: 4%;
     padding-top: 4%;

@@ -1,4 +1,4 @@
-.callout {
+.ds-callout {
     border-left: 4px solid rgba($color-alt-3, 1);
     border-radius: 2px;
     position: relative;
@@ -24,7 +24,7 @@
     }
 }
 
-.callout__icon {
+.ds-callout__icon {
     padding-right: 16px;
     
     @media(max-width: 768px){
@@ -48,12 +48,12 @@
     }
 }
 
-.callout__heading {
+.ds-callout__heading {
     font-size: $h3;
     color: rgba($color-alt-3, 1);
 }
 
-.callout__text {
+.ds-callout__text {
     align-self: stretch;
     margin-top: 0;
 }

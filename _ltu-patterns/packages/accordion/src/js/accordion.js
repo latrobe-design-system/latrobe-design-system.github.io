@@ -1,5 +1,5 @@
-$( ".accordion__trigger" ).click(function() {
-    $(this).toggleClass("accordion__trigger--active");
+$( ".ds-accordion__trigger" ).click(function() {
+    $(this).toggleClass("ds-accordion__trigger--active");
 
     if ($(this).attr('aria-expanded') == 'true') {
         $(this).attr( 'aria-expanded', 'false');
@@ -7,5 +7,5 @@ $( ".accordion__trigger" ).click(function() {
         $(this).attr( 'aria-expanded', 'true');
     }
 
-    $(this).next(".accordion__content").slideToggle( "accordion__trigger--active" );
+    $(this).next(".ds-accordion__content").slideToggle( "ds-accordion__trigger--active" );
 });
