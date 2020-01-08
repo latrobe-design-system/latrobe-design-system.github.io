@@ -32,52 +32,61 @@ input[type="number"]::-webkit-inner-spin-button {
     margin: 0;
 }
 
-legend {
-    display: block;
-    padding: 0;
-    border: none;
-    font-weight: 500;
-    margin-top: 0;
-}
-
 fieldset {
     border: 0;
     padding: 0;
     display: contents;
 }
 
-
-
 legend {
+    width: 100%;
+    display: block;
+    padding: 0;
+    border: none;
+    font-weight: 500;
     margin-top: 0;
     grid-column: 1/span 12;
     @extend h4;
 
     @media (min-width: 768px) {
         margin-top: 0;
-        
     }
 }
 
-.form-group {
-    margin-top: 1.5em;
-    grid-column: span 12;
+.ds-fieldset {
+    &__legend {
+        margin: 1.5em 0;
+        grid-column: span 12;
+    
+        @media (min-width: 768px) {
+            margin: 2em 0;
+        }
+    }
+}
 
-    @media (min-width: 768px) {
+.ds-form,
+.ds-fieldset,
+.ds-form-group {
+    & + * {
+        margin-top: 1.5em;
+        grid-column: span 12;
+    
+        @media (min-width: 768px) {
+            margin-top: 2em;
+        }
+    }
+}
+
+.ds-form-group[data-cols="6"] {
+    margin-top: 0;
+
+    &:nth-of-type(3n+3),
+    &:nth-of-type(4n+4) {
         margin-top: 2em;
     }
 }
 
-
-//
-// Control columns
-//
-
-.control-group {
-    margin-top: 8px;
-}
-
-.control-group[data-cols="4"] {
+.ds-form-group[data-cols="4"] {
     columns: 4;
     
     @media (max-width: 768px) {
@@ -85,21 +94,44 @@ legend {
     }
 }
 
-* + .control-input {
+.ds-form-group {
+    &--inline {
+        display: dis;
+    }
+}
+
+//
+// Control columns
+//
+
+.ds-control-input-group {
     margin-top: 8px;
 }
 
-.control-input {
+.ds-control-input__group[data-cols="4"] {
+    columns: 4;
+    
+    @media (max-width: 768px) {
+        columns: 2;
+    }
+}
+
+.ds-control-input {
     display: inline-block;
 
     &--block {
         display: block;
+
+        & + * {
+            margin-top: 8px;
+        }
     }
 
-    label {
-        margin-top: 0;
+    &--inline {
+        margin-right: 16px;
     }
 }
+
 
 
 //
@@ -111,9 +143,11 @@ legend {
     padding-left: 4px;
 }
 
-.text-input,
-.select,
-.sq-form-field {
+.ds-text-input,
+.ds-number-input,
+.ds-date-input,
+.ds-select,
+.ds-sq-form-field {
     display: block;
     width: 100%;
     padding: 16px;
@@ -124,10 +158,10 @@ legend {
     margin-top: 4px;
 }
 
-.control-input,
-.text-input,
-.select,
-.sq-form-field {    
+.ds-control-input,
+.ds-text-input,
+.ds-select,
+.ds-sq-form-field {    
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
     label::before {
@@ -165,17 +199,17 @@ legend {
     }
 }
 
-.invalid-text,
-.valid-text {
+.ds-hint {
     display: block;
     margin-top: 8px;
     font-weight: 500;
+
+    &--invalid {
+        color: $color-1;
+    }
+
+    &--valid{
+        color: $green;
+    }
 }
 
-.invalid-text {
-    color: $color-1;
-}
-
-.valid-text {
-    color: $green;
-}

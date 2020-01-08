@@ -7,11 +7,11 @@ status: draft
     <div class="ds-block-wrapper" data-blockwidth="narrow">
         <h2>Want to study with us? Enquire here.</h2>
 
-        <form>
-            <div class="form-group" data-cols="6">
-                <label for="name">I am</label>
+        <form class="ds-form">
+            <div class="ds-form-group" data-cols="6">
+                <label class="ds-label" for="name">I am</label>
 
-                <select class="select"> 
+                <select class="ds-select"> 
                     <option value="">--</option>
                     <option value="65">Year 9</option>
                     <option value="66">Year 10</option>
@@ -47,10 +47,10 @@ status: draft
                 </select>
             </div>
 
-            <div class="form-group" data-cols="6">
-                <label for="name">I'm interested in</label>
+            <div class="ds-form-group" data-cols="6">
+                <label class="ds-label" for="name">I'm interested in</label>
 
-                <select class="select"> 
+                <select class="ds-select"> 
                     <option value="">--</option>
                     <option value="57" selected="true">Any</option>
                     <option value="58">Undergraduate (your first degree)</option>
@@ -60,10 +60,10 @@ status: draft
                 </select>
             </div>
 
-            <div class="form-group" data-cols="6">
-                <label for="name">I want to study</label>
+            <div class="ds-form-group" data-cols="6">
+                <label class="ds-label" for="name">I want to study</label>
 
-                <select class="select"> 
+                <select class="ds-select"> 
                     <option value="">--</option>
                     <option value="4118" selected="true">Any</option>
                     <option value="23">Arts and communications</option>
@@ -79,10 +79,10 @@ status: draft
                 </select>
             </div>
 
-            <div class="form-group" data-cols="6">
-                <label for="name">Study Location</label>
+            <div class="ds-form-group" data-cols="6">
+                <label class="ds-label" for="name">Study Location</label>
 
-                <select class="select">
+                <select class="ds-select">
                     <option value="">--</option>
                     <option value="1" selected="true">Any</option>
                     <option value="3">Albury-Wodonga</option>
@@ -97,37 +97,37 @@ status: draft
                 </select>
             </div>
 
-            <fieldset>
-                <legend data-cols="12">Personal details</legend>
+            <fieldset class="ds-fieldset">
+                <legend class="ds-fieldset__legend" data-cols="12">Personal details</legend>
 
-                <div class="form-group" data-cols="6">
-                    <label for="{{ page.id }}">First name<abbr class="req" title="required">*</abbr></label>
-                    <input type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="John" required/>
+                <div class="ds-form-group" data-cols="6">
+                    <label class="ds-label" for="{{ page.id }}">First name<abbr class="req" title="required">*</abbr></label>
+                    <input class="ds-text-input" type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="John" required/>
                 </div>
 
-                <div class="form-group" data-cols="6">
-                    <label for="{{ page.id }}">Last name<abbr class="req" title="required">*</abbr></label>
-                    <input type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="Appleseed" required/>
+                <div class="ds-form-group" data-cols="6">
+                    <label class="ds-label" for="{{ page.id }}">Last name<abbr class="req" title="required">*</abbr></label>
+                    <input class="ds-text-input" type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="Appleseed" required/>
                 </div>
 
-                <div class="form-group" data-cols="6">
-                    <label for="{{ page.id }}">Email<abbr class="req" title="required">*</abbr></label>
-                    <input type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="john@appleseed.com" required/>
+                <div class="ds-form-group" data-cols="6">
+                    <label class="ds-label" for="{{ page.id }}">Email<abbr class="req" title="required">*</abbr></label>
+                    <input class="ds-text-input" type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="john@appleseed.com" required/>
                 </div>
                 
-                <div class="form-group" data-cols="3">
-                    <label for="{{ page.id }}">Postal code<abbr class="req" title="required">*</abbr></label>
-                    <input type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="0000" required/>
+                <div class="ds-form-group" data-cols="3">
+                    <label class="ds-label" for="{{ page.id }}">Postal code<abbr class="req" title="required">*</abbr></label>
+                    <input class="ds-text-input" type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="0000" required/>
                 </div>
 
-                <div class="form-group">
-                    <label for="name">Message<abbr class="req" title="required">*</abbr></label>
-                    <textarea class="text-input" rows="8" placeholder="Enter your message" required></textarea>
+                <div class="ds-form-group">
+                    <label class="ds-label" for="name">Message<abbr class="req" title="required">*</abbr></label>
+                    <textarea class="ds-text-input" rows="8" placeholder="Enter your message" required></textarea>
                 </div>
             </fieldset>
             
-            <div class="form-group" data-cols="12">
-                <input type="button" value="Send">
+            <div class="ds-form-group" data-cols="12">
+                <input class="btn" type="button" value="Send">
             </div>
         </form>
     </div>
