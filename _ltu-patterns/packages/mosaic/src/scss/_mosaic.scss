@@ -5,11 +5,11 @@
     list-style-type: none;
 }
 
-li.ds-mosaic-tile {
+li.ds-mosaic__tile {
     margin: 0;
 }
 
-.ds-mosaic-tile {
+.ds-mosaic__tile {
     box-sizing: border-box;
     margin: 0;
     position: relative;
@@ -24,16 +24,17 @@ li.ds-mosaic-tile {
     float: left;
     overflow: hidden;
     text-align: center;
+
     &:hover {
-        .ds-mosaic-tile-title {
+        .ds-mosaic__tile-title {
             text-decoration: underline;
         }
-        .ds-mosaic-tile-image {
+        .ds-mosaic__tile-image {
             // height: 105%;
             transform: scale(1.05);
         }
 
-        .ds-mosaic-tile-content-footer {
+        .ds-mosaic__tile-content-footer {
             padding-left: 4px;
         }
     }
@@ -52,8 +53,8 @@ li.ds-mosaic-tile {
     &[data-bg="red"] {
         color: white;
 
-        .ds-mosaic-tile-content-footer a,
-        .ds-mosaic-tile-content-footer a:visited {
+        .ds-mosaic__tile-content-footer a,
+        .ds-mosaic__tile-content-footer a:visited {
             color: white;
         }
     }
@@ -67,14 +68,14 @@ li.ds-mosaic-tile {
     }
 
     &[data-bg="image"] {
-        .ds-mosaic-tile-content {
+        .ds-mosaic__tile-content {
             background: linear-gradient(to top, #242424, transparent 50%);
         }
-        .ds-mosaic-tile-image {
+        .ds-mosaic__tile-image {
             display: block;
         }
 
-        .ds-mosaic-tile-title {
+        .ds-mosaic__tile-title {
             margin-top: auto;
             color: white;
             font-size: 20px;
@@ -87,23 +88,23 @@ li.ds-mosaic-tile {
             }
         }
 
-        .ds-mosaic-tile-content-footer,
-        .ds-mosaic-tile-description {
+        .ds-mosaic__tile-content-footer,
+        .ds-mosaic__tile-description {
             display: none;
         }
     }
 
-    .ds-mosaic-tile-wrapper {
+    .ds-mosaic__tile-wrapper {
         position: absolute;
         width: 100%;
         height: 100%;
     }
 
-    .ds-mosaic-tile-image {
+    .ds-mosaic__tile-image {
         display: none;
     }
 
-    .ds-mosaic-tile-link {
+    .ds-mosaic__tile-link {
         display: block;
         position: absolute;
         top: 0;
@@ -116,7 +117,7 @@ li.ds-mosaic-tile {
         cursor: pointer;
     }
 
-    .ds-mosaic-tile-content {
+    .ds-mosaic__tile-content {
         text-align: left;
         position: absolute;
         top: 0;
@@ -129,7 +130,7 @@ li.ds-mosaic-tile {
         margin: 0;
     }
 
-    .ds-mosaic-tile-title {
+    .ds-mosaic__tile-title {
         margin: 0 0 0 0;
         font-size: calc(16px + 6 * ((100vw - 320px) / 680));
         line-height: calc(20px + 6 * ((100vw - 320px) / 680));
@@ -139,13 +140,13 @@ li.ds-mosaic-tile {
         }
     }
 
-    .ds-mosaic-tile--footer {
+    .ds-mosaic__tile-content-footer {
         margin-top: auto;
         padding-left: 0;
         transition: padding 0.25s ease;
     }
 
-    .ds-mosaic-tile-image {
+    .ds-mosaic__tile-image {
         padding: 0;
         position: absolute;
         margin: auto;
@@ -159,8 +160,8 @@ li.ds-mosaic-tile {
     }
 }
 
-.ds-mosaic-tile-primary {
-    @extend .ds-mosaic-tile;
+.ds-mosaic__tile--primary {
+    @extend .ds-mosaic__tile;
     width: 100%;
     min-width: 270px;
     @media(min-width: 500px) {
@@ -168,7 +169,7 @@ li.ds-mosaic-tile {
         min-width: 400px;
     }
 
-    .ds-mosaic-tile-title {
+    .ds-mosaic__tile-title {
         font-size: 24px;
         line-height: 28px;
         font-size: calc(24px + 6 * ((100vw - 320px) / 680));
@@ -190,14 +191,16 @@ li.ds-mosaic-tile {
         }
     }
 
-    .ds-mosaic-tile,
-    .ds-mosaic-tile-primary {
+    .ds-mosaic__tile,
+    .ds-mosaic__tile-primary {
         min-width: 100%;
         width: 100%;
     }
 
-    .ds-mosaic-tile-primary {
+    .ds-mosaic__tile--primary {
         grid-column: span 2;
         grid-row: span 2;
     }
 }
+
+
