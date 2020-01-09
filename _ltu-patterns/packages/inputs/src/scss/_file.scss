@@ -22,7 +22,7 @@ input[type="file"] {
 
 .ds-custom-file-input::before {
     content: 'Choose file';
-    @extend .btn--secondary;
+    @extend .ds-btn--secondary;
     cursor: pointer;
     width: auto;
 }

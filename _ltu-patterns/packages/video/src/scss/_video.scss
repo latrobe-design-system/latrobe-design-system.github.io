@@ -1,5 +1,5 @@
 // Responsive video
-.video-wrapper {
+.ds-video-wrapper {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -9,7 +9,7 @@
     max-width: 820px;
     margin: auto;
 
-    .video-embed {
+    .ds-video-embed {
         height: 0;
         overflow: hidden;
         padding-bottom: 56.25%;

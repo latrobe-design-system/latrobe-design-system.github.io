@@ -1,16 +1,16 @@
-.media-list {
+.ds-media-list {
 
 }
 
-.media-item {
+.ds-media-item {
     display: flex;
     justify-content: flex-start;
 }
 
-* + li.media-item {
+* + li.ds-media-item {
     margin-top: 2em;
 }
 
-.media-img {
+.ds-media-img {
     margin-right: $spacer * 10;
 }

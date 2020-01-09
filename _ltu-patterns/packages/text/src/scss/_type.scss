@@ -122,11 +122,11 @@ p {
     margin-bottom: 0;
 }
 
-p.lead {
+p.ds-lead {
     font-size: 1.2rem;
 }
 
-p.small,
+p.ds-small,
 small {
     font-size: 0.8rem;
 }
@@ -201,7 +201,7 @@ blockquote {
 
 }
 
-.blockquote-feature {
+.ds-blockquote-feature {
 
     border-left: 4px solid $color-1;
     padding-left: 24px;

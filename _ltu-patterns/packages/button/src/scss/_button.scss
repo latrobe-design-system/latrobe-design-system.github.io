@@ -102,7 +102,7 @@ button.ds-btn-box {
 }
 
 .ds-btn--secondary-light {
-    @extend .btn--secondary;
+    @extend .ds-btn--secondary;
     color: white;
     border: 2px solid white;
 
@@ -144,18 +144,18 @@ button.ds-btn-box {
 }
 
 .ds-btn--secondary-small {
-    @extend .btn--small;
-    @extend .btn--secondary;
+    @extend .ds-btn--small;
+    @extend .ds-btn--secondary;
 }
 
 .ds-btn--light-small {
-    @extend .btn--small;
-    @extend .btn--light;
+    @extend .ds-btn--small;
+    @extend .ds-btn--light;
 }
 
 .ds-btn--secondary-light-small {
-    @extend .btn--small;
-    @extend .btn--secondary-light;
+    @extend .ds-btn--small;
+    @extend .ds-btn--secondary-light;
 }
 
 .ds-btn--pill {
@@ -187,7 +187,7 @@ button.ds-btn-box {
 }
 
 .ds-btn--pill-alt {
-    @extend .btn--pill;
+    @extend .ds-btn--pill;
     border: 2px solid $color-1;
     color: $color-1;
 
@@ -207,7 +207,7 @@ button.ds-btn-box {
 }
 
 .ds-btn--round {
-    @extend .btn--pill;
+    @extend .ds-btn--pill;
     background-color: transparent;
     width: 48px;
     height: 48px;
@@ -229,13 +229,13 @@ button.ds-btn-box {
 }
 
 .ds-btn--round-small {
-    @extend .btn--round;
+    @extend .ds-btn--round;
     width: 36px;
     height: 36px;
 }
 
 .ds-btn--round-light {
-    @extend .btn--round;
+    @extend .ds-btn--round;
     color: white;
     border: 2px solid white;
     &:visited {
@@ -251,11 +251,11 @@ button.ds-btn-box {
 }
 
 .ds-btn--round-light-small {
-    @extend .btn--round-light;
-    @extend .btn--round-small;
+    @extend .ds-btn--round-light;
+    @extend .ds-btn--round-small;
 }
 
 input[type="button"] {
-    @extend .btn;
+    @extend .ds-btn;
     cursor: pointer;
 }

@@ -1,5 +1,5 @@
 
-.testimonial {
+.ds-testimonial {
     display: block;
     color: $color-2;
     text-decoration: none;
@@ -9,7 +9,7 @@
     margin-bottom: 16px;
 }
 
-.testimonial__image {
+.ds-testimonial__image {
     border-radius: 100%;
     overflow: hidden;
     width: 120px;
@@ -25,7 +25,7 @@
     }
 }
 
-.testimonial__copy {
+.ds-testimonial__copy {
     padding: 84px 20px 20px 20px;
 
     blockquote {
@@ -39,7 +39,7 @@
         }
     }
 
-    .testimonial__cta {
+    .ds-testimonial__cta {
         margin-top: 20px;
     }
 
@@ -47,48 +47,48 @@
 
 @media(min-width: 600px){
 
-    .testimonial__image {
+    .ds-testimonial__image {
         width: 280px;
         height: 280px;
         margin: 0 0 20px 20px;
         float: right;
     }
 
-    .testimonial__copy {
+    .ds-testimonial__copy {
         padding-top: 20px;
     }
 
-    .testimonial-set .testimonial__image {
+    .ds-testimonial-set .ds-testimonial__image {
         width: 120px;
         height: 120px;
         margin: 0 auto -60px auto;
         float: none;
     }
 
-    .testimonial-set .testimonial__copy {
+    .ds-testimonial-set .ds-testimonial__copy {
         padding: 84px 20px 20px 20px;
     }
 }
 
 
-.testimonial-set {
-    @extend .card-set;
+.ds-testimonial-set {
+    @extend .ds-card-set;
 }
 
 /* if only one exists */
-.testimonial-set .testimonial:nth-last-child(1):first-child,
-.testimonial-set .testimonial:nth-last-child(1):first-child ~ .testimonial {
+.ds-testimonial-set .ds-testimonial:nth-last-child(1):first-child,
+.ds-testimonial-set .ds-testimonial:nth-last-child(1):first-child ~ .ds-testimonial {
     @media(min-width: 600px){
         display: block;
 
-        .testimonial__image {
+        .ds-testimonial__image {
             width: 280px;
             height: 280px;
             margin: 0 0 20px 20px;
             float: right;
         }
 
-        .testimonial__copy {
+        .ds-testimonial__copy {
             border: 0px;
             padding-top: 20px;
         }
@@ -96,20 +96,20 @@
 }
 
 /* if only two exist */
-.testimonial-set .testimonial:nth-last-child(2):first-child,
-.testimonial-set .testimonial:nth-last-child(2):first-child ~ .testimonial {
+.ds-testimonial-set .ds-testimonial:nth-last-child(2):first-child,
+.ds-testimonial-set .ds-testimonial:nth-last-child(2):first-child ~ .ds-testimonial {
 
     @media(min-width: 1200px){
         display: block;
 
-        .testimonial__image {
+        .ds-testimonial__image {
             width: 280px;
             height: 280px;
             margin: 0 0 20px 20px;
             float: right;
         }
 
-        .testimonial__copy {
+        .ds-testimonial__copy {
             border: 0px;
             padding-top: 20px;
         }

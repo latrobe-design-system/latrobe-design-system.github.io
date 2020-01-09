@@ -1,16 +1,16 @@
-.tabs-nav {
+.ds-tabs-nav {
     list-style: none;
     padding: 0;
 }
 
-.tabs-nav li {
+.ds-tabs-nav li {
     display: inline-block;
     margin-bottom: 0;
     margin-right: 16px;
 }
 
-.tabs-nav-small {
-    .tabs-nav-item {
+.ds-tabs-nav-small {
+    .ds-tabs-nav-item {
         margin-right: 0;
         display: inline-block;
         padding: 12px;
@@ -19,7 +19,7 @@
     }
 }
 
-.tab-content {
+.ds-tab-content {
     background-color: $color-3a;
 
     padding: $spacer * 10;
@@ -32,13 +32,13 @@
     }
 }
 
-.tabs-small {
-    .tabs-nav {
+.ds-tabs-small {
+    .ds-tabs-nav {
         display: block;
         border-bottom: 2px solid $color-2a;
     }
 
-    .tab-item {
+    .ds-tab-item {
         margin-right: 0;
         font-weight: 500;
 
@@ -54,6 +54,6 @@
     }
 }
 
-.tab-item {
+.ds-tab-item {
     overflow: visible;
 }
