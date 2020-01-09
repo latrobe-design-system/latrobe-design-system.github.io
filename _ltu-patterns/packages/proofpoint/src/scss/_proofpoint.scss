@@ -7,30 +7,34 @@
     margin-top: 32px;
     margin-bottom: 0;
 }
-.proofpont-icon {
+
+.ds-proofpont-icon {
     display: block;
     width: 60px;
     height: 60px;
     margin: 0 auto;
     padding: 0;
 }
+
 .ds-proofpoint-title {
     color: $color-1;
     font-size: 28px;
     line-height: 32px;
     margin: 16px 0 0 0;
 }
+
 .ds-proofpoint-number {
     color: $color-1;
     font-size: 40px;
     line-height: 1;
-    //margin: 0 0 16px 0;
 }
+
 .ds-proofpoint-text {
     color: $color-3d;
     font-size: 20px;
     line-height: 28px;
 }
+
 .ds-proofpoint-footnote {
     font-size: 14px;
     line-height: 20px;

@@ -125,7 +125,7 @@ div.ds-block {
     margin: 0 auto;
 }
 
-.ds-block__header {
+.ds-block-header {
     text-align: center;
 
     > * {
@@ -133,6 +133,10 @@ div.ds-block {
         margin-right: auto;
     }
 
+
+    &--center-align {
+        text-align: center;
+    }
 
     &--left-align {
 
