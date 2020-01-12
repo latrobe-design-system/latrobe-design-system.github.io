@@ -28,6 +28,10 @@ div.ds-block {
         margin: 4% 0;
     }
 
+    .ds-block__wrapper > * + * {
+        margin-top: 2em;
+    }
+
     // block width options
     &--medium {
         .ds-block__wrapper {

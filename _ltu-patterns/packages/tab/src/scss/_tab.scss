@@ -1,59 +1,56 @@
+.ds-tabs {
+    &--small {
+        .ds-tabs-nav {
+            display: block;
+            border-bottom: 2px solid $color-2a;
+        }
+    
+        .ds-tabs-nav__tab {
+            margin-right: 0;
+            font-weight: 500;
+    
+            &.active {
+                border-bottom: 4px solid $color-2a;
+            }
+    
+            a {
+                display: block;
+                padding: 0 12px 8px;
+                color: $color-2a;
+            }
+        }
+    }
+}
+
+
 .ds-tabs-nav {
     list-style: none;
     padding: 0;
-}
 
-.ds-tabs-nav li {
-    display: inline-block;
-    margin-bottom: 0;
-    margin-right: 16px;
-}
-
-.ds-tabs-nav-small {
-    .ds-tabs-nav-item {
+    &__tab {
         margin-right: 0;
         display: inline-block;
         padding: 12px;
         font-weight: 500;
         text-decoration: none;
+        display: inline-block;
+        margin-bottom: 0;
+        margin-right: 16px;
+        overflow: visible;
     }
 }
 
 .ds-tab-content {
-    background-color: $color-3a;
+    &__body {
+        background-color: $color-3a;
 
-    padding: $spacer * 10;
-    > :first-child {
-        margin: 0;
-    }
-
-    @media (min-width:1024px) {
-        padding: $spacer * 20;
-    }
-}
-
-.ds-tabs-small {
-    .ds-tabs-nav {
-        display: block;
-        border-bottom: 2px solid $color-2a;
-    }
-
-    .ds-tab-item {
-        margin-right: 0;
-        font-weight: 500;
-
-        &.active {
-            border-bottom: 4px solid $color-2a;
+        padding: $spacer * 10;
+        > :first-child {
+            margin: 0;
         }
 
-        a {
-            display: block;
-            padding: 0 12px 8px;
-            color: $color-2a;
+        @media (min-width:1024px) {
+            padding: $spacer * 20;
         }
     }
-}
-
-.ds-tab-item {
-    overflow: visible;
 }

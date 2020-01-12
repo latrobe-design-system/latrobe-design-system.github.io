@@ -9,7 +9,7 @@ $('body').on('click', 'a[data-youtube]', function(e) {
     // add an attribute to the clicked link to enable return of focus on overlay close
     $(target).attr('data-returnfocus', 'yes');
     // create overlay
-    var dialog = '<div role="dialog" aria-modal="true" class="overlay"><button id="overlay-close" class="btn-round-light icon-x">Close</button><div class="video-wrapper"><div class="video-embed"><iframe id="vid-'+videoId+'" width="560" height="315" type="text/html" src="https://www.youtube.com/embed/'+videoId+'?rel=0&amp;autoplay=1" frameborder="0" allowfullscreen></iframe></div></div></div>';
+    var dialog = '<div role="dialog" aria-modal="true" class="overlay"><button id="overlay-close" class="ds-btn--round-light icon-x">Close</button><div class="video-wrapper"><div class="video-embed"><iframe id="vid-'+videoId+'" width="560" height="315" type="text/html" src="https://www.youtube.com/embed/'+videoId+'?rel=0&amp;autoplay=1" frameborder="0" allowfullscreen></iframe></div></div></div>';
     // append overlay to page and add overlay-open class to body to stop scroll
     $('body').append(dialog).addClass('overlay-open');
     // fade in overlay change focus to overlay close button
