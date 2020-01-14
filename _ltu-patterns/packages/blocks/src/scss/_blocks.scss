@@ -124,6 +124,10 @@ div.ds-block {
     }
 }
 
+div.ds-block--grey + div.ds-block--grey {
+    padding-top: 0;
+}
+
 .ds-block__wrapper {
     max-width: 1024px;
     margin: 0 auto;
