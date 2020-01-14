@@ -31,8 +31,11 @@ div.ds-block {
     .ds-block__wrapper > * + * {
         margin-top: 2em;
     }
+}
 
-    // block width options
+// block width modifiers .ds-block--[medium|wide|full-width]
+div.ds-block {
+
     &--medium {
         .ds-block__wrapper {
             max-width: 1280px;
@@ -54,6 +57,10 @@ div.ds-block {
             padding: 0;
         }
     }
+}
+
+// block background color modifiers .ds-block--grey
+div.ds-block {
 
     &--grey {
         background-color: $color-3a;
@@ -103,7 +110,6 @@ div.ds-block {
         }
     }
 
-    // background color options
     &--grey,
     &--black,
     &--red,
@@ -124,7 +130,28 @@ div.ds-block {
     }
 }
 
+// adjust spacing between adjancent grey blocks
 div.ds-block--grey + div.ds-block--grey {
+    padding-top: 0;
+}
+
+// adjust spacing between adjancent black blocks
+div.ds-block--black + div.ds-block--black {
+    padding-top: 0;
+}
+
+// adjust spacing between adjancent red blocks
+div.ds-block--red + div.ds-block--red {
+    padding-top: 0;
+}
+
+// adjust spacing between adjancent black-nodes blocks
+div.ds-block--black-nodes + div.ds-block--black-nodes {
+    padding-top: 0;
+}
+
+// adjust spacing between adjancent red-nodes blocks
+div.ds-block--red-nodes + div.ds-block--red-nodes {
     padding-top: 0;
 }
 
