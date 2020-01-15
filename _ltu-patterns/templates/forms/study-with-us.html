@@ -5,9 +5,11 @@ status: draft
 
 <div class="ds-block">
     <div class="ds-block-wrapper" data-blockwidth="narrow">
-        <h2>Want to study with us? Enquire here.</h2>
-
         <form class="ds-form">
+            <fieldset class="ds-fieldset">
+                <legend class="ds-fieldset__legend" data-cols="12">Want to study with us? Enquire here.</legend>
+            </fieldset>
+
             <div class="ds-form-group" data-cols="6">
                 <label class="ds-label" for="name">I am</label>
 
@@ -99,33 +101,33 @@ status: draft
 
             <fieldset class="ds-fieldset">
                 <legend class="ds-fieldset__legend" data-cols="12">Personal details</legend>
-
-                <div class="ds-form-group" data-cols="6">
-                    <label class="ds-label" for="{{ page.id }}">First name<abbr class="req" title="required">*</abbr></label>
-                    <input class="ds-text-input" type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="John" required/>
-                </div>
-
-                <div class="ds-form-group" data-cols="6">
-                    <label class="ds-label" for="{{ page.id }}">Last name<abbr class="req" title="required">*</abbr></label>
-                    <input class="ds-text-input" type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="Appleseed" required/>
-                </div>
-
-                <div class="ds-form-group" data-cols="6">
-                    <label class="ds-label" for="{{ page.id }}">Email<abbr class="req" title="required">*</abbr></label>
-                    <input class="ds-text-input" type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="john@appleseed.com" required/>
-                </div>
-                
-                <div class="ds-form-group" data-cols="3">
-                    <label class="ds-label" for="{{ page.id }}">Postal code<abbr class="req" title="required">*</abbr></label>
-                    <input class="ds-text-input" type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="0000" required/>
-                </div>
-
-                <div class="ds-form-group">
-                    <label class="ds-label" for="name">Message<abbr class="req" title="required">*</abbr></label>
-                    <textarea class="ds-text-input" rows="8" placeholder="Enter your message" required></textarea>
-                </div>
             </fieldset>
+
+            <div class="ds-form-group" data-cols="6">
+                <label class="ds-label" for="{{ page.id }}">First name<abbr class="req" title="required">*</abbr></label>
+                <input class="ds-text-input" type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="John" required/>
+            </div>
+
+            <div class="ds-form-group" data-cols="6">
+                <label class="ds-label" for="{{ page.id }}">Last name<abbr class="req" title="required">*</abbr></label>
+                <input class="ds-text-input" type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="Appleseed" required/>
+            </div>
+
+            <div class="ds-form-group" data-cols="6">
+                <label class="ds-label" for="{{ page.id }}">Email<abbr class="req" title="required">*</abbr></label>
+                <input class="ds-text-input" type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="john@appleseed.com" required/>
+            </div>
             
+            <div class="ds-form-group" data-cols="3">
+                <label class="ds-label" for="{{ page.id }}">Postal code<abbr class="req" title="required">*</abbr></label>
+                <input class="ds-text-input" type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="0000" required/>
+            </div>
+
+            <div class="ds-form-group">
+                <label class="ds-label" for="name">Message<abbr class="req" title="required">*</abbr></label>
+                <textarea class="ds-text-input" rows="8" placeholder="Enter your message" required></textarea>
+            </div>
+
             <div class="ds-form-group" data-cols="12">
                 <input class="btn" type="button" value="Send">
             </div>

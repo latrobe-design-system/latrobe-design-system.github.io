@@ -1,4 +1,4 @@
-.logo-showcase-logos {
+.ds-logo-showcase-logos {
     list-style-type: none;
     margin: 0 auto 24px auto;
     padding: 0;
@@ -14,13 +14,14 @@
         max-width: 4*208px;
     }
 }
-.logo-showcase-logo {
+.ds-logo-showcase-logo {
     margin: 4px;
     width: 200px;
     min-height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     img {
         max-width: 100%;
         margin: 0 auto;

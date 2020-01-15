@@ -6,23 +6,22 @@
     @include bp-up(xl) {
         text-align: center;
     }
-}
-
-.ds-cta--alternate {
-    @include columns;
-
-    // display: flex;
-    // flex-direction: column;
-
-    @include bp-down(xl) {
-        align-items: center;
+    &--alternate {
+        @include columns;
+    
+        // display: flex;
+        // flex-direction: column;
+    
+        @include bp-down(xl) {
+            align-items: center;
+        }
+    
+        @include bp-up(xl) {
+            flex-direction: row;
+        }
+    
+        justify-content: space-between;
     }
-
-    @include bp-up(xl) {
-        flex-direction: row;
-    }
-
-    justify-content: space-between;
 }
 
 

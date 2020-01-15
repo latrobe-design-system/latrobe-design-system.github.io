@@ -55,19 +55,17 @@ legend {
 
 .ds-fieldset {
     &__legend {
-        margin-bottom: 1.5em;
+        margin-bottom: 0;
         grid-column: span 12;
-    
-        @media (min-width: 768px) {
-            margin-bottom: 2em;
-        }
     }
 }
 
 .ds-form,
 .ds-fieldset,
-.ds-form-group {
+.ds-form-group,
+.ds-control-input-group {
     & + * {
+        display: block;
         margin-top: 1.5em;
         grid-column: span 12;
     
@@ -77,16 +75,16 @@ legend {
     }
 }
 
-.ds-form-group[data-cols="6"] {
-    margin-top: 0;
+// .ds-form-group[data-cols="6"] {
+//     margin-top: 0;
 
-    &:nth-of-type(3n+3),
-    &:nth-of-type(4n+4) {
-        margin-top: 2em;
-    }
-}
+//     &:nth-of-type(3n+3),
+//     &:nth-of-type(4n+4) {
+//         margin-top: 2em;
+//     }
+// }
 
-.ds-form-group[data-cols="4"] {
+.ds-control-input-group[data-cols="12"] {
     columns: 4;
     
     @media (max-width: 768px) {
