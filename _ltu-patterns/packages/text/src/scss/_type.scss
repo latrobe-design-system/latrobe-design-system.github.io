@@ -90,18 +90,16 @@ h6, .h6 {
 // Allows not having to reset first child elements with a margin of 0
 // https://designsystem.gov.au/get-started/spacing-between-components/
 
-.page-content {
-    // * + * {
-    //     margin-top: 1em;
-    // }
+.ds-page-content {
+     * + * {
+         margin-top: 1rem;
+     }
 
     * + h2,
     * + h3,
     * + h4,
     * + h5,
-    * + h6,
-    * + ul,
-    * + img {
+    * + h6 {
         margin-top: 2em;
     }
 
