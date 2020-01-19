@@ -7,7 +7,7 @@
      position: relative;
  }
 
- .page-content {
+ .ds-page-content {
      width: 100%;
      position: relative;
      -webkit-transition: flex 0.3s ease-in-out;
@@ -26,13 +26,13 @@
          max-width: 400px;
          background: $color-3a;
      }
-     .nav-container + .page-content {
+     .nav-container + .ds-page-content {
          flex: 1 0 75%;
      }
      .nav-out #content {
          transform: translateX(-25%);
      }
-     .nav-out .page-content {
+     .nav-out .ds-page-content {
          flex: 1 0 100%;
      }
  }
