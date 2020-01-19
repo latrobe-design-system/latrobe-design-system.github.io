@@ -53,11 +53,9 @@ legend {
     }
 }
 
-.ds-fieldset {
-    &__legend {
-        margin-bottom: 0;
-        grid-column: span 12;
-    }
+.ds-legend {
+    margin-bottom: 0;
+    grid-column: span 12;
 }
 
 .ds-form,
