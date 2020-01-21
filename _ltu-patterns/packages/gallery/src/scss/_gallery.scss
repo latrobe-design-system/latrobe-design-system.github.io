@@ -12,6 +12,7 @@
 
     &__image {
         position: relative;
+        background-color: #333333;
         background-image: url(https://picsum.photos/1920/1920);
         background-position: center;
         background-size: cover;
@@ -63,8 +64,9 @@
         z-index: 100;
         width: 100%;
         padding: $spacer * 4;
-        background: rgba(0,0,0,0.5);
         color: white;
+        background: linear-gradient(transparent, #242424);
+
     }
 }
 
