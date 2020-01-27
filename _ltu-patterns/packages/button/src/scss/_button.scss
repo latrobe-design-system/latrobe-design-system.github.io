@@ -60,7 +60,7 @@ button.ds-btn-box {
 }
 
 .ds-btn--light {
-    @extend .btn;
+    @extend .ds-btn;
     color: $color-1;
     background-color: white;
 
@@ -81,7 +81,7 @@ button.ds-btn-box {
 }
 
 .ds-btn--secondary {
-    @extend .btn;
+    @extend .ds-btn;
     color: $color-2;
     background-color: transparent;
     border: 2px solid $color-2;
@@ -121,7 +121,7 @@ button.ds-btn-box {
 }
 
 .ds-btn--small {
-    @extend .btn;
+    @extend .ds-btn;
     padding: 4px 16px;
 
     &[class*="icon-"]{
