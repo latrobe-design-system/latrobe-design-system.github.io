@@ -70,68 +70,6 @@ legend {
 // }
 
 
-.ds-grid {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin-right: -24px;
-
-    & > * {
-        width: calc(100% - 24px);
-        margin-right: 24px;
-    }
-}
-
-.ds-grid {
-    &__col-12 {
-        width: calc(100% - 24px);
-    }
-
-    &__col-11 {
-        width: calc(11/12 * 100% - 24px);
-    }
-
-    &__col-10 {
-        width: calc(10/12 * 100% - 24px);
-    }
-
-    &__col-9 {
-        width: calc(9/12 * 100% - 24px);
-    }
-
-    &__col-8 {
-        width: calc(8/12 * 100% - 24px);
-    }
-
-    &__col-7 {
-        width: calc(7/12 * 100% - 24px);
-    }
-
-    &__col-6 {
-        width: calc(6/12 * 100% - 24px);
-    }
-
-    &__col-5 {
-        width: calc(5/12 * 100% - 24px);
-    }
-
-    &__col-4 {
-        width: calc(4/12 * 100% - 24px);
-    }
-
-    &__col-3 {
-        width: calc(3/12 * 100% - 24px);
-    }
-
-    &__col-2 {
-        width: calc(2/12 * 100% - 24px);
-    }
-
-    &__col-1 {
-        width: calc(1/12 * 100% - 24px);
-    }
-}
-
 // .ds-form-group[data-cols="6"] {
 //     margin-top: 0;
 
@@ -159,9 +97,6 @@ legend {
 // Control columns
 //
 
-.ds-control-input-group {
-    margin-top: 8px;
-}
 
 // .ds-control-input__group.ds-col-4 {
 //     columns: 4;
@@ -176,10 +111,6 @@ legend {
 
     &--block {
         display: block;
-
-        & + * {
-            margin-top: 8px;
-        }
     }
 
     &--inline {

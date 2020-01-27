@@ -72,6 +72,8 @@ When used next to text, icons should be center-aligned.
 
 ## Layout
 
+{% include sample-iframe.html snippet="core/src/html/grid/grid.html" %}
+
 ## Containers
 
 All block containers are wrapped with a 12% margin for larger displays and 6% for smaller displays.

@@ -1,4 +1,4 @@
-.step-list {
+.ds-step-list {
     counter-reset: my-awesome-counter;
     width: 100%;
     max-width: calc(42rem + 80px);
@@ -7,7 +7,7 @@
     position: relative;
 }
 
-.step-list-item {
+.ds-step-list-item {
     margin: 0;
 
     div {
@@ -16,7 +16,7 @@
         }
     }
 }
-.step-list-item {
+.ds-step-list-item {
     counter-increment: my-awesome-counter;
     position: relative;
     padding: 32px 0;

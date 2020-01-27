@@ -102,7 +102,7 @@ status: draft
             </fieldset>
 
             <fieldset class="ds-fieldset">
-                <div class="ds-grid-layout">
+                <div class="ds-grid">
                     <legend class="ds-legend ds-grid__col-12">Personal details</legend>
 
 
@@ -121,6 +121,11 @@ status: draft
                         <input class="ds-text-input" type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="john@appleseed.com" required/>
                     </div>
                     
+                    <div class="ds-form-group ds-grid__col-3">
+                        <label class="ds-label" for="{{ page.id }}">Postal address in Australia<abbr class="req" title="required">*</abbr></label>
+                        <input class="ds-text-input" type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="0000" required/>
+                    </div>
+
                     <div class="ds-form-group ds-grid__col-3">
                         <label class="ds-label" for="{{ page.id }}">Postal code<abbr class="req" title="required">*</abbr></label>
                         <input class="ds-text-input" type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="0000" required/>
