@@ -39,7 +39,7 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
     font-weight: $medium-weight;
-    max-width: 42em; // readable line length 80 characters https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html
+    max-width: 42em; // readable line length < 80 characters https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html
     margin: 0;
 
     &:empty {
@@ -52,7 +52,7 @@ h2, .h2,
 h3, .h3,
 h4, .h4 {
     line-height: 1.2;
-    max-width: 30em; // readable line length 80 characters https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html
+    max-width: 30em; // readable line length < 80 characters https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html
 }
 
 h1, .h1 {
@@ -64,7 +64,7 @@ h1, .h1 {
 
 h2, .h2 {
     font-size: $h2;
-    max-width: 24em; // readable line length 80 characters https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html
+    max-width: 24em; // readable line length < 80 characters https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html
 }
 
 h3, .h3 {
@@ -86,6 +86,35 @@ h6, .h6 {
 }
 
 
+//
+// Body copy
+//
+
+p {
+    max-width: 42em; // readable line length 80 characters https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html
+    margin: 0;
+}
+
+p.ds-lead {
+    font-size: 1.2rem;
+}
+
+p.ds-small,
+small {
+    font-size: 0.8rem;
+}
+
+p:empty,
+li:empty {
+    display: none;
+}
+
+ol,
+ul,
+li {
+    margin: 0;
+}
+
 // Lobotomised Owl technique
 // Allows not having to reset first child elements with a margin of 0
 // https://designsystem.gov.au/get-started/spacing-between-components/
@@ -104,42 +133,12 @@ h6, .h6 {
     }
 
     * + p,
+    * + ol,
     * + ul,
     * + li {
         margin-top: 1em;
     }
 }
-
-
-//
-// Body copy
-//
-
-p {
-    max-width: 42em; // readable line length 80 characters https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html
-    margin-bottom: 0;
-}
-
-p.ds-lead {
-    font-size: 1.2rem;
-}
-
-p.ds-small,
-small {
-    font-size: 0.8rem;
-}
-
-p:empty,
-li:empty {
-    display: none;
-}
-
-ol,
-ul {
-    margin-top: $spacer * 5;
-    margin-bottom: 0;
-}
-
 
 //
 // Fluid Headings
@@ -150,7 +149,6 @@ ul {
         font-size: calc(64px + (72 - 64) * ((100vw - 1024px) / (1920 - 1024)));
     }
 }
-
 
 
 //
