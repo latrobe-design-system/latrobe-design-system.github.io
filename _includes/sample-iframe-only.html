@@ -1,7 +1,7 @@
 {% for pattern in site.ltu-patterns %}
     {%- if pattern.url contains include.snippet -%}
 
-        {%- if page.type == 'template' -%}
+        {%- if page.type == 'example' -%}
             {% assign path =  '/ltu-patterns/' -%}
         {%- else -%}
             {% assign path =  '/ltu-patterns/packages/' %}
