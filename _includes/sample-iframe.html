@@ -1,7 +1,7 @@
 {% for pattern in site.ltu-patterns %}
     {%- if pattern.url contains include.snippet -%}
 
-        {%- if page.type == 'template' -%}
+        {%- if page.type == 'example' -%}
             {% assign path =  '/ltu-patterns/' -%}
         {%- else -%}
             {% assign path =  '/ltu-patterns/packages/' %}
@@ -30,7 +30,7 @@
 
             <div class="wedgetail-sample button-primary" style="background: {{ include.bgcolor | default: transparent }};">
                 <div class="wedgetail-preview">
-                    {%- if page.type != 'template' -%}
+                    {%- if page.type != 'example' -%}
                         <a href="javascript:void(0)" title="View Source Code" class="wedgetail-helper-code button"></a>
                     {%- endif -%}
 

@@ -81,4 +81,4 @@ defaults:
       path: "_ltu-patterns/templates"
     values:
       layout: sample-block
-      type: template
+      type: example

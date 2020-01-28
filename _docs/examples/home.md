@@ -3,4 +3,4 @@ title: "Home"
 status: draft
 ---
 
-{% include sample-iframe.html snippet="templates/home.html" %}
+{% include sample-iframe.html snippet="examples/home.html" %}
