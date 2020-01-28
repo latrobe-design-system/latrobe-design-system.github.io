@@ -49,10 +49,10 @@
 
     &:after {
         width: 1px;
-        height: 100%;
+        height: calc(100% + 32px);
         border-left: 2px dotted $color-3b;
         position: absolute;
-        top: 0;
+        top: 32px;
         left: calc(-80px + 21px);
         content: "";
         z-index: -1;
@@ -62,17 +62,10 @@
         }
     }
 
-    &:first-child {
-        &:after {
-            top: 20px;
-            height: calc(100% - 20px);
-        }
-    }
-
     &:last-child {
         border-bottom: none;
         &:after {
-            height: 20px;
+            display: none;
         }
     }
 }
