@@ -12,26 +12,25 @@
 
 .wedgetail-menu-list {
     padding-bottom: 4rem;
-    padding-left: 20px;
 
     &__heading {
-        padding: 20px 20px 10px 0px;
+        padding: 20px 20px 10px 20px;
         color: white;
         font-weight: 400;
         letter-spacing: 2px;
         text-transform: uppercase;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         font-size: 11px;
         border-bottom: 1px solid rgba(255,255,255, 0.15);
 
         + .wedgetail-menu-list__sub-heading {
             border-top: none;
-            padding-top: 0;
+            padding-top: 5px;
         }
     }
 
     &__sub-heading {
-        padding: 20px 20px 10px;
+        padding: 15px 20px 10px;
         font-size: 11px;
         font-weight: 400;
         color: rgba(255,255,255,0.5);
