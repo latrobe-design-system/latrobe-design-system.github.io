@@ -12,6 +12,42 @@
 
 .wedgetail-menu-list {
     padding-bottom: 4rem;
+    padding-left: 20px;
+
+    &__heading {
+        padding: 20px 20px 10px 0px;
+        color: white;
+        font-weight: 400;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        font-size: 11px;
+        border-bottom: 1px solid rgba(255,255,255, 0.15);
+
+        + .wedgetail-menu-list__sub-heading {
+            border-top: none;
+            padding-top: 0;
+        }
+    }
+
+    &__sub-heading {
+        padding: 20px 20px 10px;
+        font-size: 11px;
+        font-weight: 400;
+        color: rgba(255,255,255,0.5);
+        text-transform: uppercase;
+        border-top: 1px solid rgba(255,255,255, 0.15);
+        letter-spacing: 2px;
+        margin-bottom: 0;
+        width: auto;
+    
+        &:first-child {
+            margin: 0;
+            border: none;
+            color: yellow;
+            padding-bottom: 0;
+        }
+    }
 }
 
 .ds-heading {
@@ -76,25 +112,6 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
-}
-
-.wedgetail-menu-list p {
-    padding: 20px 20px 10px;
-    font-size: 11px;
-    font-weight: 400;
-    color: white;
-    text-transform: uppercase;
-    border-top: 1px solid rgba(255,255,255, 0.15);
-    letter-spacing: 2px;
-    margin-bottom: 0;
-    width: auto;
-
-    &:first-child {
-        margin: 0;
-        border: none;
-        color: yellow;
-        padding-bottom: 0;
-    }
 }
 
 .wedgetail-menu-list li {

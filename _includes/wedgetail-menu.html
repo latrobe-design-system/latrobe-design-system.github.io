@@ -25,7 +25,7 @@
             {% endif %}
         </div>
 
-        <p>Guidelines</p>
+        <p class="wedgetail-menu-list__heading">Guidelines</p>
 
         {%- assign x = site.docs | where: 'type', 'guideline' | sort: 'url' -%}
         
@@ -35,17 +35,7 @@
             {%- endfor -%}
         </ul>
 
-        <p>Examples</p>
-
-        {%- assign x = site.docs | where: 'type', 'example' | sort: 'url' -%}
-        
-        <ul>
-            {%- for pattern in x -%}
-                {%- include wedgetail-menu-item.html -%}
-            {%- endfor -%}
-        </ul>
-
-        <p>Foundation</p>
+        <p class="wedgetail-menu-list__heading">Foundation</p>
 
         {%- assign x = site.docs | where: 'type', 'foundations' | sort: 'url' -%}
         
@@ -55,7 +45,9 @@
             {%- endfor -%}
         </ul>
 
-        <p>Forms</p>
+        <p class='wedgetail-menu-list__heading'>Components</p>
+
+        <p class="wedgetail-menu-list__sub-heading">Forms</p>
 
         {%- assign x = site.docs | where: 'type', 'ds-forms' | sort: 'url' -%}
         
@@ -65,7 +57,7 @@
             {%- endfor -%}
         </ul>
 
-        <p>Navigation</p>
+        <p class="wedgetail-menu-list__sub-heading">Navigation</p>
 
         {%- assign x = site.docs | where: 'type', 'ds-navigation' | sort: 'url' -%}
         
@@ -75,9 +67,19 @@
             {%- endfor -%}
         </ul>
 
-        <p>Content</p>
+        <p class="wedgetail-menu-list__sub-heading">Content</p>
 
         {%- assign x = site.docs | where: 'type', 'ds-content' | sort: 'url' -%}
+        
+        <ul>
+            {%- for pattern in x -%}
+                {%- include wedgetail-menu-item.html -%}
+            {%- endfor -%}
+        </ul>
+
+        <p class="wedgetail-menu-list__heading">Example Pages</p>
+
+        {%- assign x = site.docs | where: 'type', 'example' | sort: 'url' -%}
         
         <ul>
             {%- for pattern in x -%}
