@@ -27,50 +27,60 @@
 
         <p>Guidelines</p>
 
-        {%- assign guidelines = site.docs | where: 'type', 'guideline' | sort: 'url' -%}
+        {%- assign x = site.docs | where: 'type', 'guideline' | sort: 'url' -%}
         
         <ul>            
-            {%- for pattern in guidelines -%}
+            {%- for pattern in x -%}
                 {%- include wedgetail-menu-item.html -%}
             {%- endfor -%}
         </ul>
 
         <p>Examples</p>
 
-        {%- assign examples = site.docs | where: 'type', 'example' | sort: 'url' -%}
+        {%- assign x = site.docs | where: 'type', 'example' | sort: 'url' -%}
         
         <ul>
-            {%- for pattern in examples -%}
+            {%- for pattern in x -%}
                 {%- include wedgetail-menu-item.html -%}
             {%- endfor -%}
         </ul>
 
         <p>Foundation</p>
 
-        {%- assign foundation = site.docs | where: 'type', 'foundations' | sort: 'url' -%}
+        {%- assign x = site.docs | where: 'type', 'foundations' | sort: 'url' -%}
         
         <ul>
-            {%- for pattern in foundation -%}
+            {%- for pattern in x -%}
                 {%- include wedgetail-menu-item.html -%}
             {%- endfor -%}
         </ul>
 
-        <p>Components</p>
+        <p>Forms</p>
 
-        {%- assign components = site.docs | where: 'type', 'component' | sort: 'url' -%}
+        {%- assign x = site.docs | where: 'type', 'ds-forms' | sort: 'url' -%}
         
         <ul>
-            {%- for pattern in components -%}
+            {%- for pattern in x -%}
                 {%- include wedgetail-menu-item.html -%}
             {%- endfor -%}
         </ul>
 
-        <p>Elements</p>
+        <p>Navigation</p>
 
-        {%- assign elements = site.docs | where: 'type', 'element' | sort: 'url' -%}
+        {%- assign x = site.docs | where: 'type', 'ds-navigation' | sort: 'url' -%}
         
-        <ul>            
-            {%- for pattern in elements -%}
+        <ul>
+            {%- for pattern in x -%}
+                {%- include wedgetail-menu-item.html -%}
+            {%- endfor -%}
+        </ul>
+
+        <p>Content</p>
+
+        {%- assign x = site.docs | where: 'type', 'ds-content' | sort: 'url' -%}
+        
+        <ul>
+            {%- for pattern in x -%}
                 {%- include wedgetail-menu-item.html -%}
             {%- endfor -%}
         </ul>

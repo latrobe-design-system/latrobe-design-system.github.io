@@ -52,6 +52,16 @@ defaults:
       type: component
   -
     scope:
+      path: "_docs/forms"
+    values:
+      type: ds-forms
+  -
+    scope:
+      path: "_docs/content"
+    values:
+      type: ds-content
+  -
+    scope:
       path: "_docs/foundation"
     values:
       type: foundations
@@ -60,6 +70,11 @@ defaults:
       path: "_docs/elements"
     values:
       type: element
+  -
+    scope:
+      path: "_docs/navigation"
+    values:
+      type: ds-navigation
   -
     scope:
       path: "_docs/examples"
