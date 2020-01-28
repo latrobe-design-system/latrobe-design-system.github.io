@@ -1,5 +1,5 @@
 ---
-title: "Default"
+title: "Body"
 status: draft
 ---
 

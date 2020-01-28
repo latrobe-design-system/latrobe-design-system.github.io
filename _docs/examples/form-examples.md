@@ -1,5 +1,5 @@
 ---
-title: "Form Examples"
+title: "Forms"
 status: draft
 ---
 
