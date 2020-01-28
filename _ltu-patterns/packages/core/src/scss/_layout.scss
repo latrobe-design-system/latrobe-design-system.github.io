@@ -3,7 +3,14 @@
     flex-wrap: wrap;
     flex-direction: row;
     margin-right: -24px;
-    margin-top: 0;
+    margin-top: 0 !important;
+
+    &--example {
+        * {
+            background: lighten(#182538, 75%);
+            height: 100px;
+        }
+    }
 
     & > * {
         width: calc(100% - 24px);

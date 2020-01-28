@@ -52,9 +52,9 @@ defaults:
       type: component
   -
     scope:
-      path: "_docs/foundations"
+      path: "_docs/foundation"
     values:
-      type: foundation
+      type: foundations
   -
     scope:
       path: "_docs/elements"
@@ -62,14 +62,9 @@ defaults:
       type: element
   -
     scope:
-      path: "_docs/blocks"
+      path: "_docs/examples"
     values:
-      type: block
-  -
-    scope:
-      path: "_docs/templates"
-    values:
-      type: template
+      type: example
   -
     scope:
       path: "_ltu-patterns/packages"
