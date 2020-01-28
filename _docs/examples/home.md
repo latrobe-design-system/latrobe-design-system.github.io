@@ -1,6 +1,6 @@
 ---
-title: "Home"
+title: "Home templates"
 status: draft
 ---
 
-{% include sample-iframe.html snippet="examples/home.html" %}
+{% include sample-iframe.html snippet="templates/home-page.html" %}
