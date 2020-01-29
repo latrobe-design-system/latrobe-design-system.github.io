@@ -95,5 +95,5 @@ defaults:
     scope:
       path: "_ltu-patterns/templates"
     values:
-      layout: sample-block
+      layout: sample
       type: example
