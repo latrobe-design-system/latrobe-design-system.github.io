@@ -83,11 +83,6 @@ defaults:
       layout: sample
   -
     scope:
-      path: "_ltu-patterns/packages/blocks"
-    values:
-      layout: sample-block
-  -
-    scope:
       path: "_ltu-patterns/templates"
     values:
       layout: sample

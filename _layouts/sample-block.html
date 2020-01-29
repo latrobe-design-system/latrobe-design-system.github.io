@@ -1,35 +1,49 @@
 <!doctype html>
 <html class="no-js" lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>{{ page.title }}</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" href="{{ site.url }}/ltu-patterns/css/main.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <body>
+    <link rel="stylesheet" href="{{ site.url }}/ltu-patterns/css/main.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
+    <link rel="stylesheet" href="{{ site.url }}/ltu-patterns/css/ltu-legacy.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
+</head>
 
-        <a id="skip" class="btn" href="#content">Skip to content</a>
+<body>
 
+    <!--noindex-->
+    <a id="skip" class="ds-btn" href="#content">Skip to content</a>
+    {% if page.showHeader == 'yes' %}{% include ltu-header.html %}{% endif %}
+    <!--end noindex-->
 
-        <main id="content">
+    <main id="content">
 
-            {% if page.showLeftNav == 'yes' %}<nav id="nav-container" class="nav-container lv-6271" role="navigation"></nav>{% endif %}
+        {% if page.showLeftNav == 'yes' %}{% include ltu-nav.html %}{% endif %}
 
-            <article class="ds-page-content">
+        <article class="ds-page-content">
 
-            {{ content }}
+        {% if page.type == 'example' %}
+        {{ content }}
+        {% else %}
+        <div class="ds-block ds-block--{{ page.bgcolor }} ds-block--{{ page.width }}">
+            <div class="ds-block__wrapper">
+                {{ content }}
+            </div>
+        </div>
+        {% endif %}
 
-            </article>
+        </article>
 
-        </main>
+    </main>
 
-        
+    <!--noindex-->
+    {% if page.showFooter == 'yes' %}{% include ltu-footer.html %}{% endif %}
+    <!--end noindex-->
 
-{% include js.html %}
+    {% include js.html %}
 
     </body>
 </html>
