@@ -27,7 +27,7 @@
 
         <p class="wedgetail-menu-list__heading">Guidelines</p>
 
-        {%- assign x = site.docs | where: 'type', 'ds-guidelines' | sort: 'url' -%}
+        {%- assign x = site.docs | where: 'type', 'guideline' | sort: 'url' -%}
         
         <ul>            
             {%- for pattern in x -%}
@@ -37,7 +37,7 @@
 
         <p class="wedgetail-menu-list__heading">Foundation</p>
 
-        {%- assign x = site.docs | where: 'type', 'ds-foundation' | sort: 'url' -%}
+        {%- assign x = site.docs | where: 'type', 'foundation' | sort: 'url' -%}
         
         <ul>
             {%- for pattern in x -%}
@@ -49,7 +49,7 @@
 
         <p class="wedgetail-menu-list__sub-heading">Forms</p>
 
-        {%- assign x = site.docs | where: 'type', 'ds-forms' | sort: 'url' -%}
+        {%- assign x = site.docs | where: 'type', 'form' | sort: 'url' -%}
         
         <ul>
             {%- for pattern in x -%}
@@ -59,7 +59,7 @@
 
         <p class="wedgetail-menu-list__sub-heading">Navigation</p>
 
-        {%- assign x = site.docs | where: 'type', 'ds-navigation' | sort: 'url' -%}
+        {%- assign x = site.docs | where: 'type', 'navigation' | sort: 'url' -%}
         
         <ul>
             {%- for pattern in x -%}
@@ -69,7 +69,7 @@
 
         <p class="wedgetail-menu-list__sub-heading">Content</p>
 
-        {%- assign x = site.docs | where: 'type', 'ds-content' | sort: 'url' -%}
+        {%- assign x = site.docs | where: 'type', 'content' | sort: 'url' -%}
         
         <ul>
             {%- for pattern in x -%}
@@ -79,7 +79,7 @@
 
         <p class="wedgetail-menu-list__heading">Example Pages</p>
 
-        {%- assign x = site.docs | where: 'type', 'ds-examples' | sort: 'url' -%}
+        {%- assign x = site.docs | where: 'type', 'example' | sort: 'url' -%}
         
         <ul>
             {%- for pattern in x -%}

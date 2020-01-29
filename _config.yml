@@ -39,27 +39,27 @@ defaults:
     scope:
       path: "_docs/guidelines"
     values:
-      type: ds-guidelines
+      type: guideline
   -
     scope:
       path: "_docs/getting-started"
     values:
-      type: ds-getting-started
+      type: getting-started
   -
     scope:
       path: "_docs/forms"
     values:
-      type: ds-forms
+      type: form
   -
     scope:
       path: "_docs/content"
     values:
-      type: ds-content
+      type: 'content'
   -
     scope:
       path: "_docs/foundation"
     values:
-      type: ds-foundation
+      type: foundation
   -
     scope:
       path: "_docs/elements"
@@ -69,12 +69,12 @@ defaults:
     scope:
       path: "_docs/navigation"
     values:
-      type: ds-navigation
+      type: navigation
   -
     scope:
       path: "_docs/examples"
     values:
-      type: ds-examples
+      type: example
   -
     scope:
       path: "_ltu-patterns/packages"
