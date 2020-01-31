@@ -1,3 +1,9 @@
+---
+javascript: true
+---
+/**
+ * Accordion
+ */
 $( ".ds-accordion__trigger" ).click(function() {
     $(this).toggleClass("ds-accordion__trigger--active");
 

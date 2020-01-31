@@ -43,7 +43,12 @@
     {% if page.showFooter == 'yes' %}{% include ltu-footer.html %}{% endif %}
     <!--end noindex-->
 
-    {% include js.html %}
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+
+    <script src="{{ site.url }}/ltu-patterns/js/ds-ltu.js"></script>
 
     </body>
 </html>

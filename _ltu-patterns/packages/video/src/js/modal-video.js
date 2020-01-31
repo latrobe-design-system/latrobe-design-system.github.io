@@ -1,5 +1,8 @@
-/*
- * youtube modal video
+---
+javascript: true
+---
+/**
+ * YouTube modal video
  */
 $('body').on('click', 'a[data-youtube]', function(e) {
     e.preventDefault();

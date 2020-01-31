@@ -1,4 +1,9 @@
-// smooth scroll for jump links
+---
+javascript: true
+---
+/**
+ * Smooth scroll for jump links
+ */
 $('a.scroll-link[href*="#"]')
     // Remove links that don't actually link to anything
     .not('[href="#"]')

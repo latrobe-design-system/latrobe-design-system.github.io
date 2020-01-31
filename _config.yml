@@ -14,7 +14,8 @@ kramdown:
 ## Generates Pattern Styles
 ## Disable to prevent pattern styles from being generated.
 sass:
-    sass_dir: wedgetail/scss
+    sass_dir: _sass
+
 exclude:
     - build.sh
     - server.sh
@@ -34,47 +35,53 @@ defaults:
     scope:
       path: "" # an empty string here means all files in the project
     values:
-      layout: "default"
+      layout: "wedgetail"
   -
     scope:
       path: "_docs/guidelines"
     values:
-      type: guideline
+      parentmenu: guideline
   -
     scope:
       path: "_docs/getting-started"
     values:
-      type: getting-started
+      parentmenu: getting-started
   -
     scope:
       path: "_docs/forms"
     values:
-      type: form
+      parentmenu: form
   -
     scope:
       path: "_docs/content"
     values:
-      type: 'content'
+      parentmenu: 'content'
   -
     scope:
       path: "_docs/foundation"
     values:
-      type: foundation
+      parentmenu: foundation
   -
     scope:
       path: "_docs/elements"
     values:
-      type: element
+      parentmenu: element
   -
     scope:
       path: "_docs/navigation"
     values:
-      type: navigation
+      parentmenu: navigation
   -
     scope:
       path: "_docs/examples"
     values:
       type: example
+      parentmenu: example
+  -
+    scope:
+      path: "_ltu-patterns"
+    values:
+      layout: blank
   -
     scope:
       path: "_ltu-patterns/packages"
@@ -85,5 +92,5 @@ defaults:
     scope:
       path: "_ltu-patterns/templates"
     values:
-      layout: sample
       type: example
+      layout: sample

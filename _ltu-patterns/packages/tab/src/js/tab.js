@@ -1,4 +1,9 @@
-// show first content by default
+---
+javascript: true
+---
+/**
+ * Tabs
+ */
 $('.ds-tabs-nav li:first-child').addClass('active');
 $('.ds-tab-content__body').hide();
 $('.ds-tab-content__body:first').show();
@@ -13,4 +18,3 @@ $('.ds-tabs-nav__tab').click(function(){
     $(activeTab).fadeIn();
     return false;
 });
-

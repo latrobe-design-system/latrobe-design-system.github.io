@@ -37,7 +37,7 @@
                     <a class="wedgetail-snippet-file" href="{{ path }}{{ include.snippet }}" target="_blank" title="Open in new tab"></a>
                 </div>
 
-                <iframe class="wedgetail-snippet-iframe" id="{{ include.snippet | remove: ".html" }}" src="{{ path }}{{ include.snippet }}" height="0px" frameborder="0" scrolling="no"></iframe>
+                <iframe class="wedgetail-snippet-iframe" id="{{ include.snippet | remove: ".html" | replace: "/", "-" }}" src="{{ path }}{{ include.snippet }}" height="0px" frameborder="0" scrolling="no"></iframe>
             </div>
 
             <div class="wedgetail-code">
