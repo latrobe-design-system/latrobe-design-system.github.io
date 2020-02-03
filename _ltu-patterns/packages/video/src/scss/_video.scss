@@ -1,17 +1,4 @@
 // Responsive video
-.ds-modal {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    right: 0;
-    width: 100%;
-    max-width: 1280px;
-    max-height: 90vh;
-    margin: auto;
-    overflow-y: scroll;
-}
-
 .ds-video {
     height: 0;
     overflow: hidden;

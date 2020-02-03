@@ -1,0 +1,25 @@
+.ds-modal {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 1280px;
+    max-height: 90vh;
+    margin: auto;
+    overflow-y: scroll;
+}
+
+.ds-modal-content {
+    display: none;
+    background-color: #fff;
+    padding: $spacer * 8;
+}
+
+// when loaded into modal
+.ds-modal {
+    .ds-modal-content {
+        display: block;
+    }
+}
