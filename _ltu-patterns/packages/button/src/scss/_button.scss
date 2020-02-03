@@ -21,6 +21,7 @@ button.ds-btn-box {
     background-color: $color-1;
     border: 2px solid transparent;
     transition: background-color 0.05s ease-in-out;
+    cursor: pointer;
 
     &:visited {
         color: white;
@@ -170,6 +171,7 @@ button.ds-btn-box {
     color: $color-2;
     text-decoration: none;
     background-color: white;
+    cursor: pointer;
 
     &:visited {
         color: $color-2;

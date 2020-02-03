@@ -157,7 +157,7 @@ li.ds-mosaic__tile {
         left: 0;
         // transform: translateX(-50%);
         height: 100%;
-        transition: transform 0.25s ease;
+        transition: transform 0.25s ease-in-out;
     }
 }
 
@@ -189,7 +189,7 @@ li.ds-mosaic__tile {
         grid-template-columns: repeat(auto-fill, minmax(135px,20%));
         &::after,
         &::before {
-            display: none;
+            display: none; /* stop clearfix interfering with grid layout */
         }
     }
 
