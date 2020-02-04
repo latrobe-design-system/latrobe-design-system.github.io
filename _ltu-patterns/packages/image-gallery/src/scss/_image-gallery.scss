@@ -49,6 +49,13 @@
             display: none;
         }
 
+        figcaption {
+            max-width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
     }
 
     .ds-image-gallery__image:first-child {
