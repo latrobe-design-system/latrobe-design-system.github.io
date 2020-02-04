@@ -119,7 +119,8 @@ li {
 // Allows not having to reset first child elements with a margin of 0
 // https://designsystem.gov.au/get-started/spacing-between-components/
 
-.ds-page-content {
+.ds-page-content,
+.ds-modal {
      * + * {
          margin-top: 1rem;
      }

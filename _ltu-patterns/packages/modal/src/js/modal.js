@@ -11,14 +11,16 @@ function openModal(target, content, maxWidth='1280px'){
     // add an attribute to the clicked link to enable return of focus on overlay close
     $(target).attr('data-returnfocus', 'yes');
     // create overlay
-    var dialog = '<div role="dialog" aria-modal="true" class="overlay"><button id="overlay-close" class="ds-btn--round-light icon-x">Close</button><div class="ds-modal">'+content+'</div></div>';
+    var dialog = '<div role="dialog" aria-modal="true" class="overlay"><div class="ds-modal">'+content+'</div><button id="overlay-close" class="ds-btn--round-light icon-x">Close</button></div>';
     // append overlay to page and add overlay-open class to body to stop scroll
     $('body').append(dialog).addClass('overlay-open');
     // set max width of modal
     $('.ds-modal').css('max-width', maxWidth);
     // fade in overlay change focus to overlay close button
     $('.overlay[role="dialog"]').fadeIn(function(){
-        $('#overlay-close').focus();
+        //$('#overlay-close').focus();
+        // find first focusable element and set focus
+        $(this).find('button:visible, [href]:visible, input:visible, select:visible, textarea:visible, [tabindex]:not([tabindex="-1"]):visible').eq(0).focus();
     });
 }
 // handler for modal close button
