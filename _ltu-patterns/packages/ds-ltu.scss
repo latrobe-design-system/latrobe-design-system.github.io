@@ -7,7 +7,7 @@
 
 // ==================================================================================================================
 
-//
+////
 @charset "UTF-8";
 //
 // Packages
@@ -20,7 +20,8 @@
 @import "core/src/scss/utility";
 @import "core/src/scss/skip-link";
 @import "core/src/scss/blocks";
-@import "core/src/scss/layout";
+@import "core/src/scss/grid";
+@import "core/src/scss/columns";
 @import "core/src/scss/helpers";
 
 @import "text/src/scss/text";
@@ -32,8 +33,6 @@
 @import "button/src/scss/button";
 @import "callout/src/scss/callout";
 @import "card/src/scss/card";
-@import "columns/src/scss/columns";
-@import "columns/src/scss/aside";
 @import "block-header/src/scss/block-header";
 @import "form/src/scss/form";
 @import "inputs/src/scss/form";
