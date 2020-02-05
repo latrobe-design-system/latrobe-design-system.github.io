@@ -45,10 +45,28 @@ $('body').on('click keydown', '#overlay-close, .overlay[role="dialog"]', functio
  *  Click handler for standard modal
  */
 $('body').on('click', '[data-modal-content]', function(e) {
+    // prevent default click action
     e.preventDefault();
+
+    // get object that was clicked
     var target = e.target;
+
     // get the modal content id from the clicked button
     var modalContentId = $(target).attr('data-modal-content');
+
+    // get requested modal width
+    var modalWidth = $(target).attr('data-modal-width');
+    if (modalWidth == "medium") {
+        maxWidth = "1024px";
+    } else if (modalWidth == "large") {
+        maxWidth = "1280px";
+    } else {
+        maxWidth = "800px";
+    }
+
+    //create the modal
     var modalContent = $('<div/>').append($('#'+modalContentId).clone()).html();
-    openModal(target, modalContent, '800px');
+
+    // show the modal
+    openModal(target, modalContent, maxWidth);
 });
