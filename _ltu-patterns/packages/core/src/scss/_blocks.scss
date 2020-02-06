@@ -28,14 +28,6 @@ div.ds-block {
         margin: 4% 0;
     }
 
-    /*
-    .ds-block__wrapper > * + * {
-        margin-top: 2em;
-    }
-
-    .ds-block__wrapper > *:first-child {
-        margin-top: 0;
-    } */
 }
 
 // block width modifiers .ds-block--[medium|wide|full-width]
@@ -167,7 +159,7 @@ div.ds-block--red-nodes + div.ds-block--red-nodes {
 
 .ds-block-header {
     text-align: center;
-    margin-bottom: 4vw;
+    margin-bottom: 4%;
 
     > * {
         margin-left: auto;

@@ -41,13 +41,13 @@ a.ds-card {
     color: $color-2;
     text-decoration: none;
     border: solid 1px $color-3b;
+    box-shadow: $shadow-2;
 
     &:hover {
         transform: translateY(-4px);
         color: $color-2;
         text-decoration: none;
         cursor: pointer;
-        // box-shadow: $shadow-2;
 
         .ds-card__heading {
             color: $color-1;
@@ -126,7 +126,7 @@ a.ds-card {
 /* course card specifics */
 .ds-card__course {
     @extend .ds-card;
-    
+
 
     li,
     p {
