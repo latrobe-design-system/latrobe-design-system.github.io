@@ -1,5 +1,5 @@
 /*
- *  This is legacy CSS for site header, footer and navagation - this can be removed after refactor of these elements in design system way
+ *  This is legacy CSS for site header, footer, navagation and breadcrumb - this can be removed after refactor of these elements in design system way
  */
 
  /* DS Adjustments */
@@ -7,7 +7,7 @@
      position: relative;
  }
 
- .ds-page-content {
+ .ds-page-content-wrapper {
      width: 100%;
      position: relative;
      -webkit-transition: flex 0.3s ease-in-out;
@@ -26,13 +26,13 @@
          max-width: 400px;
          background: $color-3a;
      }
-     .nav-container + .ds-page-content {
+     .nav-container + .ds-page-content-wrapper {
          flex: 1 0 75%;
      }
      .nav-out #content {
          transform: translateX(-25%);
      }
-     .nav-out .ds-page-content {
+     .nav-out .ds-page-content-wrapper {
          flex: 1 0 100%;
      }
  }
@@ -978,6 +978,10 @@ ul.mm4 li:before {
     margin: 20px 20px 0 0;
     padding: 10px 20px;
 }
+
+/* Breadcrumbs */
+.breadcrumbs {background:transparent url(https://www.latrobe.edu.au/__data/assets/image/0003/12864/dotted-line.gif) repeat-x 0 bottom; color:#E87722; font-size:16px; line-height:20px; margin: 20px 60px; padding:0 0 20px 0;}
+.breadcrumbs a:last-of-type {color:#000; cursor:test; pointer-events:none; text-decoration:none;}
 
 /* Local Navigation */
 .nav-container {

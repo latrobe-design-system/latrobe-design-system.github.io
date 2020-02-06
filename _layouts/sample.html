@@ -14,33 +14,49 @@
 
 <body>
 
+{% if page.showLeftNav == 'yes' %}<script>
+var mobileBreakingPoint = 1023;
+
+if(window.outerWidth <= mobileBreakingPoint){
+    //collapseUniverse();
+    var b = document.body
+    b.className += ' nav-out';
+}
+</script>{% endif %}
+
     <!--noindex-->
     <a id="skip" class="ds-btn" href="#content">Skip to content</a>
-    {% if page.showHeader == 'yes' %}{% include ltu-header.html %}{% endif %}
+    {% if page.showHeader == 'yes' %}{% include legacy-ltu-nav/ltu-header.html %}{% endif %}
     <!--end noindex-->
 
     <main id="content">
 
-        {% if page.showLeftNav == 'yes' %}{% include ltu-nav.html %}{% endif %}
+        {% if page.showLeftNav == 'yes' %}{% include legacy-ltu-nav/ltu-nav.html %}{% endif %}
 
-        <article class="ds-page-content">
+        <div class="ds-page-content-wrapper">
 
-        {% if page.type == 'example' %}
-        {{ content }}
-        {% else %}
-        <div class="ds-block ds-block--{{ page.bgcolor }} ds-block--{{ page.width }}">
-            <div class="ds-block__wrapper">
+            {% if page.showBreadcrumb == 'yes' %}{% include legacy-ltu-nav/ltu-breadcrumb.html %}{% endif %}
+
+            <article class="ds-page-content">
+
+                {% if page.type == 'example' %}
                 {{ content }}
-            </div>
-        </div>
-        {% endif %}
+                {% else %}
+                <div class="ds-block ds-block--{{ page.bgcolor }} ds-block--{{ page.width }}">
+                    <div class="ds-block__wrapper">
+                        {{ content }}
+                    </div>
+                </div>
+                {% endif %}
 
-        </article>
+            </article>
+
+        </div>
 
     </main>
 
     <!--noindex-->
-    {% if page.showFooter == 'yes' %}{% include ltu-footer.html %}{% endif %}
+    {% if page.showFooter == 'yes' %}{% include legacy-ltu-nav/ltu-footer.html %}{% endif %}
     <!--end noindex-->
 
     <script
@@ -48,7 +64,8 @@
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"></script>
 
-    <script src="{{ site.url }}/ltu-patterns/js/ds-ltu.js"></script>
+    <script src="{{ site.url }}/ltu-patterns/js/ds-ltu.js?v={{ site.time | date: '%Y%m%d%H%M%S' }}"></script>
 
+    <script src="https://www.latrobe.edu.au/__data/assets/js_file_folder/0004/1078573/ltu-legacy.js?v={{ site.time | date: '%Y%m%d%H%M%S' }}"></script>
     </body>
 </html>
