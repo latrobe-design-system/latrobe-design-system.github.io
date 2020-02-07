@@ -94,3 +94,8 @@ defaults:
     values:
       type: example
       layout: sample
+  -
+    scope:
+      path: "_ltu-patterns/css/icons"
+    values:
+      icon: true

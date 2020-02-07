@@ -27,7 +27,7 @@
 
         <p class="wedgetail-menu-list__heading">Guidelines</p>
 
-        {%- assign x = site.docs | where: 'parentmenu', 'guideline' | sort: 'url' -%}
+        {%- assign x = site.docs | where: 'parentmenu', 'guideline' | sort: 'menu' -%}
 
         <ul>
             {%- for pattern in x -%}

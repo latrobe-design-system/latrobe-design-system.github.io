@@ -1,4 +1,6 @@
 ---
+menu: 7
+
 title: "Content"
 status: planned
 info: Content design can make or break an online experience. Always strive for writing that is clear, concise, and on-brand.

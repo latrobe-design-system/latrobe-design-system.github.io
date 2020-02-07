@@ -21,3 +21,7 @@ info: The card component is used to provide a brief summary of content or a task
 ## Card Set
 
 {% include sample-iframe.html snippet="card/src/html/card-set.html" %}
+
+## Course card
+
+{% include sample-iframe.html snippet="card/src/html/card-course.html" %}

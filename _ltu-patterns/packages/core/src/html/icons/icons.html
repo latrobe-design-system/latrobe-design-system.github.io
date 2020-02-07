@@ -27,4 +27,9 @@ status: "Live"
             </li>
         {%- endif -%}
     {%- endfor -%}
+
+    {% assign icon_files = site.static_files | where: "icon", true %}
+    {% for icon in icone_files %}
+        {{ icon.path }}
+    {% endfor %}
 </ul>
