@@ -4,7 +4,7 @@ status: draft
 info: For displaying partner logos etc
 ---
 
-{% include sample-iframe.html snippet="logo-showcase/src/html/logo-showcase.html" %}
+{% include sample-iframe.html snippet="logo-showcase/snippets/logo-showcase.html" %}
 
 ## Settings
 
@@ -12,4 +12,4 @@ info: For displaying partner logos etc
 
 ## Use within a block
 
-{% include sample-iframe.html snippet="logo-showcase/src/html/logo-showcase-block.html" %}
+{% include sample-iframe.html snippet="logo-showcase/snippets/logo-showcase-block.html" %}

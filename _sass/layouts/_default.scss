@@ -68,7 +68,15 @@ html {
     top: -40px;
 }
 
+.wedgetail-snippet-iframe-wrapper {
+    svg {
+        display: block;
+        margin: 16px auto;
+    }
+}
+
 .wedgetail-snippet-iframe {
+    display: none;
     width: 100%;
     overflow: hidden;
 

@@ -23,24 +23,24 @@ Any of the icons in the [icon set](/foundations/icons/) can be used with a butto
 
 To place the icon on the left also include the class `icon-before`
 
-{% include sample-iframe.html snippet="button/src/html/primary_button.html" %}
+{% include sample-iframe.html snippet="button/snippets/primary_button.html" %}
 
-{% include sample-iframe.html snippet="button/src/html/primary_button_disabled.html" %}
+{% include sample-iframe.html snippet="button/snippets/primary_button_disabled.html" %}
 
-{% include sample-iframe.html snippet="button/src/html/secondary_button.html" %}
+{% include sample-iframe.html snippet="button/snippets/secondary_button.html" %}
 
-{% include sample-iframe.html snippet="button/src/html/secondary_button_disabled.html" %}
+{% include sample-iframe.html snippet="button/snippets/secondary_button_disabled.html" %}
 
-{% include sample-iframe.html snippet="button/src/html/light_button.html" %}
+{% include sample-iframe.html snippet="button/snippets/light_button.html" %}
 
-{% include sample-iframe.html snippet="button/src/html/filter_button.html" %}
+{% include sample-iframe.html snippet="button/snippets/filter_button.html" %}
 
-{% include sample-iframe.html snippet="button/src/html/round_button.html" %}
+{% include sample-iframe.html snippet="button/snippets/round_button.html" %}
 
-{% include sample-iframe.html snippet="button/src/html/small_button.html" %}
+{% include sample-iframe.html snippet="button/snippets/small_button.html" %}
 
-{% include sample-iframe.html snippet="button/src/html/small_icon_button.html" %}
+{% include sample-iframe.html snippet="button/snippets/small_icon_button.html" %}
 
 ## Form buttons
 
-{% include sample-iframe.html snippet="button/src/html/form_button.html" %}
+{% include sample-iframe.html snippet="button/snippets/form_button.html" %}

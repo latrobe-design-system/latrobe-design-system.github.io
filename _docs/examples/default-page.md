@@ -1,6 +1,6 @@
 ---
-title: "Body"
+title: "Standard content page"
 status: draft
 ---
 
-{% include sample-iframe.html snippet="templates/standard-content-page.html" %}
+{% include sample-iframe.html snippet="standard-content-page.html" %}

@@ -18,7 +18,7 @@ There are 4 possible maximum widths of content within a block:
 
 The background of a block is white by default. Use the modifier `ds-block--grey` to give the block a grey background. 
 
-{% include sample-code-only.html snippet="core/src/html/block/block.html" %}
+{% include sample-code-only.html snippet="core/snippets/block/block.html" %}
 
 ## 4x grid fundamentals <a name="4x-grid-fundamentals"></a>
 
@@ -34,4 +34,4 @@ Our typography vertical spacing is based on 4px increments.
 
 By adopting 4px increments for all vertical and horizontal spacings we can achieve a well aligned harmonious UI without working to a hard grid.
 
-{% include sample-iframe.html snippet="core/src/html/grid/grid.html" %}
+{% include sample-iframe.html snippet="core/snippets/grid/grid.html" %}

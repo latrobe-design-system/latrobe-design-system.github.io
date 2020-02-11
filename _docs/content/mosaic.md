@@ -4,4 +4,4 @@ status: draft
 info: 
 ---
 
-{% include sample-iframe.html snippet="mosaic/src/html/mosaic.html"%}
+{% include sample-iframe.html snippet="mosaic/snippets/mosaic.html"%}

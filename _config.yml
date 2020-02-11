@@ -79,23 +79,18 @@ defaults:
       parentmenu: example
   -
     scope:
-      path: "_ltu-patterns"
+      path: "_ltu-patterns/dist"
     values:
       layout: blank
   -
     scope:
-      path: "_ltu-patterns/packages"
+      path: "_ltu-patterns/src"
     values:
       status: draft
       layout: sample
   -
     scope:
-      path: "_ltu-patterns/templates"
+      path: "_ltu-patterns/tests"
     values:
       type: example
       layout: sample
-  -
-    scope:
-      path: "_ltu-patterns/css/icons"
-    values:
-      icon: true

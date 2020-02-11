@@ -4,4 +4,4 @@ status: draft
 info:
 ---
 
-{% include sample-iframe.html snippet="link/src/html/link.html" %}
+{% include sample-iframe.html snippet="link/snippets/link.html" %}

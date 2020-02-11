@@ -1,6 +1,6 @@
 ---
-title: "Landing templates"
+title: "Discipline page"
 status: draft
 ---
 
-{% include sample-iframe.html snippet="templates/discipline-page.html" %}
+{% include sample-iframe.html snippet="discipline-page.html" %}

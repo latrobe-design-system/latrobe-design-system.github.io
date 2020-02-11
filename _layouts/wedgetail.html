@@ -29,9 +29,9 @@
 </div>
 
 <script
-src="https://code.jquery.com/jquery-2.2.4.min.js"
-integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-crossorigin="anonymous"></script>
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
 
 <script>
@@ -46,20 +46,31 @@ crossorigin="anonymous"></script>
             }
         }
     };
-    $(window).load(function () {
+    /*$(window).on( "load", function() {
         $('iframe').each(function () {
-            var id = $(this).attr('id');
-            setIframeHeight(document.getElementById(id));
+            var iframeId = $(this).attr('id');
+            console.log(iframeId);
+            setIframeHeight(document.getElementById(iframeId));
         });
-    });
+    });*/
     $(window).resize(function () {
         $('iframe').each(function () {
-            var id = $(this).attr('id');
-            setIframeHeight(document.getElementById(id));
+            var iframeId = $(this).attr('id');
+            console.log(iframeId);
+            setIframeHeight(this);
         });
     });
 
-    $(window).load(function () {
+    $('iframe').on( "load", function(){
+        $(this).prev().hide(); // hide loading svg
+        $(this).fadeIn(); // show iframe once content loaded
+        setIframeHeight(this);
+    });
+
+    /*
+     * click handler for show code
+     */
+    $(document).ready(function() {
         var codeButton = $('.wedgetail-helper-code.button');
         codeButton.click(function(){
             $(this).parents('.wedgetail-pattern').toggleClass('active');
