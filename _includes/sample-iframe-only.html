@@ -1,10 +1,10 @@
 {% for pattern in site.ltu-patterns %}
     {%- if pattern.url contains include.snippet -%}
 
-        {%- if page.type == 'template' -%}
-            {% assign path =  '/ltu-patterns/' -%}
+        {%- if page.type == 'example' -%}
+            {% assign path =  '/ltu-patterns/tests/' -%}
         {%- else -%}
-            {% assign path =  '/ltu-patterns/packages/' %}
+            {% assign path =  '/ltu-patterns/src/' %}
         {%- endif -%}
 
         <div class="wedgetail-pattern">

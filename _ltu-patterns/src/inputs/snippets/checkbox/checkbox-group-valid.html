@@ -1,0 +1,47 @@
+---
+title: "Checkbox Block"
+status: "draft"
+text: "Inline checkbox options can sometimes be difficult to scan. Users may find it challenging to determine with which label the checkbox option corresponds: the one before the checkbox or the one after. Vertical positioning of checkbox, with one choice per line, eliminates this potential cause for confusion."
+
+# Example content
+legend: Checkbox Group
+id: checkbox
+label: Item
+valid: Successfully validated
+---
+
+<form class="ds-form-group">
+    <fieldset class="ds-fieldset">
+        <legend class="ds-legend">
+            {{ page.legend }}
+        </legend> 
+    </fieldset>
+
+    <div class="ds-control-input-group">
+        <div class="ds-control-input ds-control-input--valid ds-control-input--block">
+            <input class="ds-control-input__input" type="checkbox" id="{{ page.id }}-1">
+
+            <label class="ds-control-input__label" for="{{ page.id }}-1">
+                {{ page.label }}
+            </label>
+        </div>
+
+        <div class="ds-control-input ds-control-input--valid ds-control-input--block">
+            <input class="ds-control-input__input" type="checkbox" id="{{ page.id }}-2">
+
+            <label class="ds-control-input__label" for="{{ page.id }}-2">
+                {{ page.label }}
+            </label>
+        </div>
+
+        <div class="ds-control-input ds-control-input--valid ds-control-input--block">
+            <input class="ds-control-input__input" type="checkbox" id="{{ page.id }}-3">
+
+            <label class="ds-control-input__label" for="{{ page.id }}-3">
+                {{ page.label }}
+            </label>
+        </div>
+
+        <span class="ds-hint ds-hint--valid small-text" id="{{ page.id }}-valid-text">{{ page.valid }}</span>
+    </div>
+</form>

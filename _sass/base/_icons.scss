@@ -1,0 +1,35 @@
+.wedgetail-helper-code::after {
+    content: "";
+    background: url('icons/feather/code.svg');
+    background-size: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: 1rem;
+}
+
+i.icon {
+    content: "";
+    background: url('icons/feather/link.svg');
+    background-size: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.5rem;
+    margin-left: -1.75rem;
+    opacity: 0.25;
+}
+
+.wedgetail-snippet-file::after {
+    content: "";
+    background: url('icons/feather/external-link.svg');
+    background-size: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #905;
+    margin-left: 1rem;
+}

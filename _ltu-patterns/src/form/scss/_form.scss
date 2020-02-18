@@ -1,0 +1,201 @@
+form {
+    width: 100%;
+}
+
+label {
+    display: block;
+    font-weight: 500;
+}
+
+label abbr[title] {
+    border-bottom: 0;
+}
+
+input,
+textarea {
+    display: block;
+    -webkit-appearance: none; // IOS remove default styling
+}
+
+input:focus,
+input:focus + label::before,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 2px rgba(0,123,255,.25);
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none; // IOS remove default styling
+    margin: 0;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+    // display: contents;
+}
+
+legend {
+    padding: 0;
+    border: none;
+    font-weight: 500;
+    margin-top: 0;
+
+    @media (min-width: 768px) {
+        margin-top: 0;
+    }
+}
+
+
+    // @supports(display: grid) {
+    //     grid-column: span 12;
+    // }
+
+
+// .ds-form,
+// .ds-fieldset,
+// .ds-form-group,
+// .ds-control-input-group {
+//     & + * {
+//         display: block;
+//         margin-top: 1.5em;
+//         grid-column: span 12;
+    
+//         @media (min-width: 768px) {
+//             margin-top: 2em;
+//         }
+//     }
+// }
+
+
+// .ds-form-group[data-cols="6"] {
+//     margin-top: 0;
+
+//     &:nth-of-type(3n+3),
+//     &:nth-of-type(4n+4) {
+//         margin-top: 2em;
+//     }
+// }
+
+// .ds-control-input-group.ds-col-12 {
+//     columns: 4;
+    
+//     @media (max-width: 768px) {
+//         columns: 2;
+//     }
+// }
+
+// .ds-form-group {
+//     &--inline {
+//         display: dis;
+//     }
+// }
+
+//
+// Control columns
+//
+
+
+// .ds-control-input__group.ds-col-4 {
+//     columns: 4;
+    
+//     @media (max-width: 768px) {
+//         columns: 2;
+//     }
+// }
+
+.ds-control-input {
+    display: inline-block;
+
+    &--block {
+        display: block;
+    }
+
+    &--inline {
+        margin-right: 16px;
+    }
+}
+
+
+
+//
+// Form validation
+//
+
+.req {
+    color: $color-1;
+    padding-left: 4px;
+}
+
+.ds-text-input,
+.ds-number-input,
+.ds-date-input,
+.ds-select,
+.ds-sq-form-field {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background-color: lighten($color-3b, 20%);
+    border: 2px solid $color-3b;
+    resize: vertical;
+    border-radius: 2px;
+    margin-top: 4px;
+}
+
+.ds-control-input,
+.ds-text-input,
+.ds-select,
+.ds-sq-form-field {    
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+    label::before {
+        height: 24px;
+        width: 24px;
+        border: 2px solid $color-3b;
+        border-radius: 2px;
+        left: 0px;
+        // top: 3px;
+    }
+
+    &--invalid {
+        border-color: $color-1;
+
+        label::before {
+            border-color: $color-1;
+        }
+    }
+
+    &--valid {
+        border-color: $green;
+
+        
+        label::before {
+            border-color: $green;
+        }
+    }
+
+    &:disabled {
+        background: $color-3a;
+
+        &::placeholder {
+            color: $color-3b;
+        }
+    }
+}
+
+.ds-hint {
+    display: block;
+    margin-top: 8px;
+    font-weight: 500;
+
+    &--invalid {
+        color: $color-1;
+    }
+
+    &--valid{
+        color: $green;
+    }
+}
+

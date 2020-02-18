@@ -14,7 +14,8 @@ kramdown:
 ## Generates Pattern Styles
 ## Disable to prevent pattern styles from being generated.
 sass:
-    sass_dir: wedgetail/scss
+    sass_dir: _sass
+
 exclude:
     - build.sh
     - server.sh
@@ -34,56 +35,62 @@ defaults:
     scope:
       path: "" # an empty string here means all files in the project
     values:
-      layout: "default"
+      layout: "wedgetail"
   -
     scope:
       path: "_docs/guidelines"
     values:
-      type: guideline
+      parentmenu: guideline
   -
     scope:
       path: "_docs/getting-started"
     values:
-      type: getting-started
+      parentmenu: getting-started
   -
     scope:
-      path: "_docs/components"
+      path: "_docs/forms"
     values:
-      type: component
+      parentmenu: form
   -
     scope:
-      path: "_docs/foundations"
+      path: "_docs/content"
     values:
-      type: foundation
+      parentmenu: 'content'
+  -
+    scope:
+      path: "_docs/foundation"
+    values:
+      parentmenu: foundation
   -
     scope:
       path: "_docs/elements"
     values:
-      type: element
+      parentmenu: element
   -
     scope:
-      path: "_docs/blocks"
+      path: "_docs/navigation"
     values:
-      type: block
+      parentmenu: navigation
   -
     scope:
-      path: "_docs/templates"
+      path: "_docs/examples"
     values:
-      type: template
+      type: example
+      parentmenu: example
   -
     scope:
-      path: "_ltu-patterns/packages"
+      path: "_ltu-patterns/dist"
+    values:
+      layout: blank
+  -
+    scope:
+      path: "_ltu-patterns/src"
     values:
       status: draft
       layout: sample
   -
     scope:
-      path: "_ltu-patterns/packages/blocks"
+      path: "_ltu-patterns/tests"
     values:
-      layout: sample-block
-  -
-    scope:
-      path: "_ltu-patterns/templates"
-    values:
-      layout: sample-block
-      type: template
+      type: example
+      layout: sample

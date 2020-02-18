@@ -5,12 +5,12 @@
     {% elsif jekyll.environment == "stage" %}
         <nav class="wedgetail-menu-list wedgetail-menu-list-local">
     {% else %}
-        <nav class="wedgetail-menu-list wedgetail-menu-list-local">  
+        <nav class="wedgetail-menu-list wedgetail-menu-list-local">
     {% endif %}
-        
-        <div class="ds-heading">
+
+        <div class="wedgetail-heading">
             <a href="/">
-                <img src="{{ site.baseurl }}/wedgetail/images/wedgetail-logo.svg?v=2">
+                <img src="{{ site.baseurl }}/images/wedgetail-logo.svg?v=2">
             </a>
 
             {% if jekyll.environment == "production" %}
@@ -25,52 +25,64 @@
             {% endif %}
         </div>
 
-        <p>Guidelines</p>
+        <p class="wedgetail-menu-list__heading">Guidelines</p>
 
-        {%- assign guidelines = site.docs | where: 'type', 'guideline' | sort: 'url' -%}
-        
-        <ul>            
-            {%- for pattern in guidelines -%}
-                {%- include wedgetail-menu-item.html -%}
-            {%- endfor -%}
-        </ul>
+        {%- assign x = site.docs | where: 'parentmenu', 'guideline' | sort: 'menu' -%}
 
-        <p>Templates</p>
-
-        {%- assign templates = site.docs | where: 'type', 'template' | sort: 'url' -%}
-        
         <ul>
-            {%- for pattern in templates -%}
+            {%- for pattern in x -%}
                 {%- include wedgetail-menu-item.html -%}
             {%- endfor -%}
         </ul>
 
-        <p>Blocks</p>
+        <p class="wedgetail-menu-list__heading">Foundation</p>
 
-        {%- assign blocks = site.docs | where: 'type', 'block' | sort: 'url' -%}
-        
+        {%- assign x = site.docs | where: 'parentmenu', 'foundation' | sort: 'url' -%}
+
         <ul>
-            {%- for pattern in blocks -%}
+            {%- for pattern in x -%}
                 {%- include wedgetail-menu-item.html -%}
             {%- endfor -%}
         </ul>
 
-        <p>Components</p>
+        <p class='wedgetail-menu-list__heading'>Components</p>
 
-        {%- assign components = site.docs | where: 'type', 'component' | sort: 'url' -%}
-        
+        <p class="wedgetail-menu-list__sub-heading">Forms</p>
+
+        {%- assign x = site.docs | where: 'parentmenu', 'form' | sort: 'url' -%}
+
         <ul>
-            {%- for pattern in components -%}
+            {%- for pattern in x -%}
                 {%- include wedgetail-menu-item.html -%}
             {%- endfor -%}
         </ul>
 
-        <p>Elements</p>
+        <p class="wedgetail-menu-list__sub-heading">Navigation</p>
 
-        {%- assign elements = site.docs | where: 'type', 'element' | sort: 'url' -%}
-        
-        <ul>            
-            {%- for pattern in elements -%}
+        {%- assign x = site.docs | where: 'parentmenu', 'navigation' | sort: 'url' -%}
+
+        <ul>
+            {%- for pattern in x -%}
+                {%- include wedgetail-menu-item.html -%}
+            {%- endfor -%}
+        </ul>
+
+        <p class="wedgetail-menu-list__sub-heading">Content</p>
+
+        {%- assign x = site.docs | where: 'parentmenu', 'content' | sort: 'url' -%}
+
+        <ul>
+            {%- for pattern in x -%}
+                {%- include wedgetail-menu-item.html -%}
+            {%- endfor -%}
+        </ul>
+
+        <p class="wedgetail-menu-list__heading">Example Pages</p>
+
+        {%- assign x = site.docs | where: 'parentmenu', 'example' | sort: 'url' -%}
+
+        <ul>
+            {%- for pattern in x -%}
                 {%- include wedgetail-menu-item.html -%}
             {%- endfor -%}
         </ul>

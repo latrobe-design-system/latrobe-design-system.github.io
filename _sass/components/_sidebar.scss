@@ -1,0 +1,128 @@
+.wedgetail-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 300px;
+    height: 100%;
+    min-height: 100%;
+    overflow-y: scroll;
+    background: rgb(24, 37, 56);
+}
+
+.wedgetail-menu-list {
+    padding-bottom: 4rem;
+
+    &__heading {
+        padding: 20px 20px 10px 20px;
+        color: white;
+        font-weight: 400;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        font-size: 11px;
+        border-bottom: 1px solid rgba(255,255,255, 0.15);
+
+        + .wedgetail-menu-list__sub-heading {
+            border-top: none;
+            padding-top: 5px;
+        }
+    }
+
+    &__sub-heading {
+        padding: 15px 20px 10px;
+        font-size: 11px;
+        font-weight: 400;
+        color: rgba(255,255,255,0.5);
+        text-transform: uppercase;
+        border-top: 1px solid rgba(255,255,255, 0.15);
+        letter-spacing: 2px;
+        margin-bottom: 0;
+        width: auto;
+
+        &:first-child {
+            margin: 0;
+            border: none;
+            color: yellow;
+            padding-bottom: 0;
+        }
+    }
+}
+
+.wedgetail-heading {
+    line-height: 0;
+    padding: 60px 20px 70px 20px;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: auto;
+        margin: auto;
+        padding: 0 30px;
+    }
+
+    .logo-text {
+        color: white;
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 300;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 40px;
+        width: 100%;
+        text-align: center;
+    }
+
+    * {
+        margin: 0;
+        color: white;
+    }
+
+    .version {
+        color: white;
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 400;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 20px;
+        opacity: 0.25;
+    }
+
+    .environment {
+        border: 1px solid rgba(255,255,255,0.25);
+        border-radius: 4px;
+        display: inline;
+        font-size: 10px;
+        padding: 2px 2px 2px 6px;
+        font-weight: 500;
+    }
+}
+
+.wedgetail-menu-list ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.wedgetail-menu-list li {
+    margin-left: 20px;
+    width: auto;
+}
+
+.wedgetail-menu-list ul li a {
+    display: block;
+    width: 100%;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+}

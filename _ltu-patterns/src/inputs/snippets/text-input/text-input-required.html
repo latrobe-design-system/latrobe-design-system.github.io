@@ -1,0 +1,16 @@
+---
+title: "Default"
+status: "draft"
+text: The default text inputs do not have a width applied to them.
+
+# Example content
+label: Email
+id: email
+placeholder: name@example.com
+
+---
+
+<div class="ds-form-group">
+    <label class="ds-label" for="{{ page.id }}">{{ page.label }}<abbr class="req" title="required">*</abbr></label>
+    <input class="ds-text-input" type="text" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="{{ page.placeholder }}" required/>
+</div>

@@ -1,4 +1,4 @@
-# design-system
+# Wedgetail Design System
 
 ## This design system is under construction
 

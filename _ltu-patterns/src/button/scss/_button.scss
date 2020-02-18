@@ -1,0 +1,263 @@
+button.ds-btn,
+button.ds-btn-box {
+    /* remove browser styling from button element */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.ds-btn,
+.ds-btn-primary {
+    border: 0;
+    box-sizing: border-box;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    display: inline-block;
+    padding: 12px 18px;
+    margin: 4px 0;
+    text-decoration: none;
+    color: white;
+    background-color: $color-1;
+    border: 2px solid transparent;
+    transition: background-color 0.05s ease-in-out;
+    cursor: pointer;
+
+    &:visited {
+        color: white;
+    }
+
+    &.disabled {
+        opacity: 0.25;
+        pointer-events: none;
+    }
+
+    &:hover {
+        text-decoration: underline;
+        background-color: darken($color-1,5%);
+    }
+
+    &[class*="icon-"]{
+        padding-right: 44px;
+        &::after {
+            filter: $white;
+            margin: 0 12px;
+        }
+    }
+
+    &.icon-before {
+        padding-right: 18px;
+        padding-left: 44px;
+        &::after {
+            left: 0;
+            right: unset;
+        }
+    }
+
+    @media (min-width: 1400px) {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+.ds-btn--light {
+    @extend .ds-btn;
+    color: $color-1;
+    background-color: white;
+
+    &:visited {
+        color: $color-1;
+    }
+
+    &:hover {
+        text-decoration: underline;
+        background-color: darken(white,5%);
+    }
+
+    &[class*="icon-"]{
+        &::after {
+            filter: $red;
+        }
+    }
+}
+
+.ds-btn--secondary {
+    @extend .ds-btn;
+    color: $color-2;
+    background-color: transparent;
+    border: 2px solid $color-2;
+    padding: 12px 18px;
+
+    &:visited {
+        color: $color-2;
+    }
+
+    &:hover {
+        background-color: rgba(black,.15);
+        border: 2px solid $color-2;
+    }
+
+    &[class*="icon-"]::after {
+        filter: $near-black;
+    }
+}
+
+.ds-btn--secondary-light {
+    @extend .ds-btn--secondary;
+    color: white;
+    border: 2px solid white;
+
+    &:visited {
+        color: white;
+    }
+
+    &:hover {
+        background-color: rgba(black,.15);
+        border: 2px solid white;
+    }
+
+    &[class*="icon-"]::after {
+        filter: $white;
+    }
+}
+
+.ds-btn--small {
+    @extend .ds-btn;
+    padding: 4px 16px;
+
+    &[class*="icon-"]{
+        padding-right: 36px;
+        &::after {
+            margin: 0 8px;
+            width: 16px;
+        }
+    }
+
+    &.icon-before {
+        padding-right: 16px;
+        padding-left: 28px;
+
+        &::after {
+            left: 0;
+            right: unset;
+        }
+    }
+}
+
+.ds-btn--secondary-small {
+    @extend .ds-btn--small;
+    @extend .ds-btn--secondary;
+}
+
+.ds-btn--light-small {
+    @extend .ds-btn--small;
+    @extend .ds-btn--light;
+}
+
+.ds-btn--secondary-light-small {
+    @extend .ds-btn--small;
+    @extend .ds-btn--secondary-light;
+}
+
+.ds-btn--pill {
+    font-weight: 500;
+    border: 2px solid $color-2;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: inherit;
+    display: inline-block;
+    padding: 4px 16px;
+    border-radius: 20px;
+    color: $color-2;
+    text-decoration: none;
+    background-color: white;
+    cursor: pointer;
+
+    &:visited {
+        color: $color-2;
+    }
+
+    &:hover {
+        text-decoration: underline;
+        background-color: rgba(black,.15);
+    }
+
+    &.selected {
+        color: white;
+        background-color: $color-2;
+    }
+}
+
+.ds-btn--pill-alt {
+    @extend .ds-btn--pill;
+    border: 2px solid $color-1;
+    color: $color-1;
+
+    &:visited {
+        color: $color-1;
+    }
+
+    &:hover {
+        text-decoration: underline;
+        background-color: rgba($color-1,.15);
+    }
+
+    &.selected {
+        color: white;
+        background-color: $color-1;
+    }
+}
+
+.ds-btn--round {
+    @extend .ds-btn--pill;
+    background-color: transparent;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    text-align: center;
+    border-radius: 50%;
+    text-indent: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    &[class*="icon-"]::after {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        transform: none;
+    }
+}
+
+.ds-btn--round-small {
+    @extend .ds-btn--round;
+    width: 36px;
+    height: 36px;
+}
+
+.ds-btn--round-light {
+    @extend .ds-btn--round;
+    color: white;
+    border: 2px solid white;
+    &:visited {
+        color: white;
+    }
+    &:hover {
+        background-color: rgba(black,.15);
+        border: 2px solid white;
+    }
+    &[class*="icon-"]::after {
+        filter: $white;
+    }
+}
+
+.ds-btn--round-light-small {
+    @extend .ds-btn--round-light;
+    @extend .ds-btn--round-small;
+}
+
+input[type="button"] {
+    @extend .ds-btn;
+    cursor: pointer;
+}

@@ -1,0 +1,13 @@
+table {
+    display: table;
+    border-collapse: collapse;
+    border-spacing: 0;
+    //width: 100%;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+th, td {
+    text-align: left;
+    border: 1px solid #ddd;
+    padding: 4px 8px;
+}

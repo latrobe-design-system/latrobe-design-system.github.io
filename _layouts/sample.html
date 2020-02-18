@@ -1,49 +1,74 @@
 <!doctype html>
 <html class="no-js" lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>{{ page.title }}</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" href="{{ site.url }}/ltu-patterns/css/main.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <body>
+    <link rel="stylesheet" href="{{ site.url }}/ltu-patterns/dist/css/main.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
+    <link rel="stylesheet" href="{{ site.url }}/ltu-patterns/dist/css/ltu-legacy.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
+</head>
 
-        <a id="skip" class="btn" href="#content">Skip to content</a>
+<body>
 
-        <main id="content">
+{% if page.showLeftNav == 'yes' %}<script>
+var mobileBreakingPoint = 1023;
 
-            {% if page.showLeftNav == 'yes' %}
-            <!--noindex-->
-            <nav id="nav-container" class="nav-container lv-6271" role="navigation">
-                <ul class="local-nav parent">
-                    <li class="hide-nav"><button title="Hide navigation panel"></button></li>
-                    <li class="root"><a href="https://www.latrobe.edu.au/courses">Courses</a>
-                        <ul class="level-one">
-                            <li class="current"><a href="https://www.latrobe.edu.au/courses/study-arts-social-sciences-and-communications">Arts, social sciences and communications</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <!--endnoindex-->
-            {% endif %}
+if(window.outerWidth <= mobileBreakingPoint){
+    //collapseUniverse();
+    var b = document.body
+    b.className += ' nav-out';
+}
+</script>{% endif %}
 
-            <article class="page-content">
+    <!--noindex-->
+    <a id="skip" class="ds-btn" href="#content">Skip to content</a>
+    {% if page.showHeader == 'yes' %}{% include legacy-ltu-nav/ltu-header.html %}{% endif %}
+    <!--end noindex-->
 
-                <div class="ds-block" data-bgcolor="{{ page.bgcolor }}" data-blockwidth="{{ page.width }}">
-                    <div class="ds-block-wrapper">
+    <main id="content">
+
+        {% if page.showLeftNav == 'yes' %}{% include legacy-ltu-nav/ltu-nav.html %}{% endif %}
+
+        <div class="ds-page-content-wrapper">
+
+            {% if page.showBreadcrumb == 'yes' %}{% include legacy-ltu-nav/ltu-breadcrumb.html %}{% endif %}
+
+            <article class="ds-page-content">
+
+                {% if page.type == 'example' %}
+                {{ content }}
+                {% else %}
+                <div class="ds-block ds-block--{{ page.bgcolor }} ds-block--{{ page.width }}">
+                    <div class="ds-block__wrapper">
                         {{ content }}
                     </div>
                 </div>
+                {% endif %}
 
             </article>
 
-        </main>
+        </div>
 
-{% include js.html %}
+    </main>
 
+    <!--noindex-->
+    {% if page.showFooter == 'yes' %}{% include legacy-ltu-nav/ltu-footer.html %}{% endif %}
+    <!--end noindex-->
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+
+    <script src="{{ site.url }}/ltu-patterns/dist/js/ds-ltu.js?v={{ site.time | date: '%Y%m%d%H%M%S' }}"></script>
+
+    {% if page.showHeader == 'yes' %}
+    <!-- include ltu legacy code for nav sample -->
+    <script src="https://www.latrobe.edu.au/__data/assets/js_file_folder/0004/1078573/ltu-legacy.js?v={{ site.time | date: '%Y%m%d%H%M%S' }}"></script>
+    {% endif %}
     </body>
 </html>

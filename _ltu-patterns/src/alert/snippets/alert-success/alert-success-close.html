@@ -1,0 +1,26 @@
+---
+title: "Success Alert"
+
+status: "draft"
+
+icon-check-circle: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+alert-heading: Heading
+alert-text: It may take 2-3 work days for uploaded documents to be reviewed. If your documents are rejected, it will appear as "Rejected" in the list below. We will advise the reason over email and what you need to do to ensure the documents are accepted.
+---
+
+<div class="ds-alert ds-alert--success" role="alert">
+    <div class="ds-alert__icon">
+        {{ page.icon-check-circle }}
+    </div>
+    
+    <div class="ds-alert__text">
+        <p>{{ page.alert-text }}</p>
+    </div>
+
+    <button class="ds-alert__close" data-dismiss="alert" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+    </button>
+</div>

@@ -1,0 +1,192 @@
+// set margins for standard content containers
+.ds-page-content > div,
+.ds-page-content > section,
+.ds-page-content > article {
+    padding: 0 20px;
+    margin: 40px auto;
+    max-width: 1104px; // 1024 + 80 (padding)
+
+    @media (min-width: 640px) {
+        padding: 0 40px;
+    }
+
+    @media (min-width: 1000px) {
+        margin: 4% auto;
+    }
+}
+
+div.ds-block {
+    max-width: 100%;
+
+    // for blocks without background color
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 40px 0;
+
+    @media (min-width: 1000px) {
+        // for blocks without background color
+        margin: 4% 0;
+    }
+
+}
+
+// block width modifiers .ds-block--[medium|wide|full-width]
+div.ds-block {
+
+    &--medium {
+        .ds-block__wrapper {
+            max-width: 1280px;
+        }
+    }
+
+    &--wide {
+        .ds-block__wrapper {
+            max-width: 1600px;
+        }
+    }
+
+    &--full-width {
+        padding: 0;
+        margin: 0;
+        .ds-block__wrapper {
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+
+// block background color modifiers .ds-block--grey
+div.ds-block {
+
+    &--grey {
+        background-color: $color-3a;
+    }
+
+    &--black {
+        background: #242428;
+        color: white;
+
+        a {
+            text-decoration: underline;
+            color: white;
+        }
+
+        .btn {
+            text-decoration: none;
+        }
+
+        .ds-block__header {
+            color: white;
+        }
+    }
+
+    &--red {
+        background-color: $color-1;
+
+        .ds-block__header {
+            color: white;
+        }
+    }
+
+    &--black-nodes {
+        background-color: $color-2;
+        background-image: url("img/bg-nodes.svg");
+
+        .ds-block__header {
+            color: white;
+        }
+    }
+
+    &--red-nodes {
+        background-color: $color-1;
+        background-image: url("img/bg-nodes.svg");
+
+        .ds-block__header {
+            color: white;
+        }
+    }
+
+    &--grey,
+    &--black,
+    &--red,
+    &--black-nodes,
+    &--red-nodes {
+        // for blocks with background color
+        padding-top: 40px;
+        padding-bottom: 40px;
+        margin: 0;
+
+        @media (min-width: 1000px) {
+            padding-left: 4%;
+            padding-right: 4%;
+            padding-top: 4%;
+            padding-bottom: 4%;
+            margin: 0;
+        }
+    }
+}
+
+// adjust spacing between adjancent grey blocks
+div.ds-block--grey + div.ds-block--grey {
+    padding-top: 0;
+}
+
+// adjust spacing between adjancent black blocks
+div.ds-block--black + div.ds-block--black {
+    padding-top: 0;
+}
+
+// adjust spacing between adjancent red blocks
+div.ds-block--red + div.ds-block--red {
+    padding-top: 0;
+}
+
+// adjust spacing between adjancent black-nodes blocks
+div.ds-block--black-nodes + div.ds-block--black-nodes {
+    padding-top: 0;
+}
+
+// adjust spacing between adjancent red-nodes blocks
+div.ds-block--red-nodes + div.ds-block--red-nodes {
+    padding-top: 0;
+}
+
+.ds-block__wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.ds-block-header {
+    text-align: center;
+    margin-bottom: 4%;
+
+    > * {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    &--center-align {
+        text-align: center;
+    }
+
+    &--left-align {
+
+        text-align: left;
+        > * {
+            margin-left: 0;
+            margin-right: auto;
+        }
+    }
+
+    &--right-align {
+
+        text-align: right;
+        > * {
+            margin-left: auto;
+            margin-right: 0;
+        }
+    }
+
+}

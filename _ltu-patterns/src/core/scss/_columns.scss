@@ -1,0 +1,12 @@
+.ds-columns {
+    columns: 280px 2;
+    column-gap: 32px;
+
+    &--3cols {
+        column-count: 3;
+    }
+
+    &--4cols {
+        column-count: 4;
+    }
+}

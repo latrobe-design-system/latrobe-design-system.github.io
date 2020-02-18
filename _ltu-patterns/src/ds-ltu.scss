@@ -1,0 +1,56 @@
+// ==================================================================================================================
+
+// La Trobe University Design System
+
+// Used to design, develop and test new and updated UI components.
+// This design system also acts as the specification for CMS integrators and developers.
+
+// ==================================================================================================================
+
+////
+@charset "UTF-8";
+//
+// Packages
+@import "core/scss/fonts";
+@import "core/scss/normalize";
+@import "core/scss/variables";
+@import "core/scss/mixins";
+@import "core/scss/core";
+@import "core/scss/icons";
+@import "core/scss/utility";
+@import "core/scss/skip-link";
+@import "core/scss/blocks";
+@import "core/scss/grid";
+@import "core/scss/columns";
+@import "core/scss/helpers";
+
+@import "text/scss/text";
+@import "accordion/scss/accordion";
+@import "alert/scss/alert";
+@import "banner/scss/banner";
+@import "blockquote/scss/blockquote";
+@import "breadcrumb/scss/breadcrumb";
+@import "button/scss/button";
+@import "callout/scss/callout";
+@import "card/scss/card";
+@import "block-header/scss/block-header";
+@import "form/scss/form";
+@import "inputs/scss/form";
+@import "image-gallery/scss/image-gallery";
+@import "link/scss/link";
+@import "loader/scss/loader";
+@import "logo-showcase/scss/logo-showcase";
+@import "map/scss/map";
+@import "media/scss/media";
+@import "modal/scss/modal";
+@import "mosaic/scss/mosaic";
+@import "pagination/scss/pagination";
+@import "proofpoint/scss/proofpoint";
+@import "section-header/scss/section-header";
+@import "select/scss/select";
+@import "step-list/scss/step-list";
+@import "tab/scss/tab";
+@import "table/scss/table";
+@import "testimonial/scss/testimonial";
+@import "tooltip/scss/tooltip";
+@import "video/scss/video";

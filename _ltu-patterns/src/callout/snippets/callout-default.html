@@ -1,0 +1,32 @@
+---
+title: "Default"
+status: "draft"
+text: "The default callout is designed to be used when drawing extra attention to content that has been updated or a call to action that now needs to take place."
+
+# Example content
+heading: Make an informed choice
+body: Our one-on-one consultations are designed to hone in on your objectives and provide practical guidance about your study options
+linkUrl: https://www.latrobe.edu.au/study/one-on-one-consultations/undergraduate
+linkText: Book one-on-one
+placeholder: name@example.com
+---
+
+<div class="ds-callout">
+    <div class="ds-callout__icon icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12" y2="8"></line>
+        </svg>
+    </div>
+
+    <div class="ds-callout__text">
+        <h2 class="ds-callout__heading">
+            {{ page.heading }}
+        </h2>
+
+        <p>{{ page.body }}</p>
+
+        <p><a class="ds-btn btn-small icon-users" id="" href="{{ page.linkUrl }}">{{ page.linkText }}</a></p>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+---
+title: "Valid and invalid states"
+status: draft
+text: Add a border to text inputs and text areas to indicate whether user input is valid (validates according to the elements settings) or invalid (does not validate according to the elements settings).
+
+# Example content
+legend: Checkbox Group
+id: checkbox
+label: Email
+placeholder: name@example.com
+valid: Valid input
+invalid: Invalid input
+---
+
+<div class="ds-form-group">
+    <label class="ds-label" for="{{ page.id }}">{{ page.label }}</label>
+    <input class="ds-text-input ds-text-input--valid" type="text" id="{{ page.id }}" aria-invalid="false" aria-describedby="{{ page.id }}-valid-text" placeholder="{{ page.placeholder }}" />
+    <span class="ds-hint ds-hint--valid small-text" id="{{ page.id }}-valid-text">{{ page.valid }}</span>
+</div>
+
+<div class="ds-form-group">
+    <label class="ds-label" for="{{ page.id }}">{{ page.label }}</label>
+    <input class="ds-text-input ds-text-input--invalid" type="text" id="{{ page.id }}" aria-invalid="true" aria-describedby="{{ page.id }}-invalid-text" placeholder="{{ page.placeholder }}" />
+    <span class="ds-hint ds-hint--invalid small-text" id="{{ page.id }}-invalid-text">{{ page.invalid }}</span>
+</div>
