@@ -87,10 +87,10 @@ defaults:
       path: "_ltu-patterns/src"
     values:
       status: draft
-      layout: sample
+      layout: snippet
   -
     scope:
       path: "_ltu-patterns/tests"
     values:
       type: example
-      layout: sample
+      layout: snippet

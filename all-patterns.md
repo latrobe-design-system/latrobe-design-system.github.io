@@ -1,7 +1,7 @@
 ---
 title: "Sketch pattern exports"
 status: draft
-layout: "sample"
+layout: "snippet"
 ---
 
 {%- for pattern in site.ltu-patterns -%}
