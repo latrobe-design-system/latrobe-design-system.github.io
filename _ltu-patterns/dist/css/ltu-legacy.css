@@ -79,6 +79,7 @@
  }
  /* end DS Adjustments */
 
+/** excerpt from core.css #703152 **/
 /* HEADER */
 #header {
     background-color: #fff;
@@ -115,58 +116,6 @@
 
     .La_Trobe_University #header {
         box-shadow: none;
-    }
-}
-
-#gdpr {
-    align-items: center;
-    background-color: #ddd;
-    box-shadow: 0 0 8px rgba(0,0,0,0.5);
-    display: flex;
-    font-size: 16px;
-    justify-content: center;
-    line-height: 20px;
-    margin: 20px;
-    padding: 20px;
-    position: fixed;
-    z-index: 1000;
-}
-
-#gdpr button {
-    font-size: 16px;
-    padding: 6px 14px;
-    line-height: 1;
-    border: 1px solid #999;
-    margin: 0 0 0 10px;
-    background-color: #fff;
-    opacity: 1;
-
-    /* AJP */
-    font-weight: 500;
-}
-
-#gdpr button:focus,
-#gdpr button:hover {
-    opacity: 0.5;
-}
-
-#gdpr button:active {
-    background: #e42312;
-    opacity: 1;
-}
-@media (min-width:768px) {
-    #gdpr {
-        box-shadow: none;
-        margin: 0;
-        padding: 10px 20px;
-        position: relative;
-    }
-}
-@media (min-width:1024px) {
-    .LP2 #gdpr,
-    .home #gdpr {
-        display: block;
-        text-align: center;
     }
 }
 
@@ -980,9 +929,21 @@ ul.mm4 li:before {
 }
 
 /* Breadcrumbs */
-.breadcrumbs {background:transparent url(https://www.latrobe.edu.au/__data/assets/image/0003/12864/dotted-line.gif) repeat-x 0 bottom; color:#E87722; font-size:16px; line-height:20px; margin: 20px 60px; padding:0 0 20px 0;}
-.breadcrumbs a:last-of-type {color:#000; cursor:test; pointer-events:none; text-decoration:none;}
+.breadcrumbs {
+    background: transparent url(https://www.latrobe.edu.au/__data/assets/image/0003/12864/dotted-line.gif) repeat-x 0 bottom;
+    color: #E87722;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 60px;/*20px 60px;*/
+    padding: padding 20px 0;/*0 0 20px 0;*/
+}
 
+.breadcrumbs a:last-of-type {
+    color: #000;
+    cursor: test;
+    pointer-events: none;
+    text-decoration: none;
+}
 /* Local Navigation */
 .nav-container {
     background-color: #f7f7f7;
@@ -998,7 +959,7 @@ ul.mm4 li:before {
     transition: transform 0.3s ease-in-out;
     width: 100%;
     width: calc(100vw - 48px);
-    z-index: 10;
+    z-index: 1000/*10;*/
 }
 
 .nav-out .nav-container {
@@ -1849,6 +1810,59 @@ li.hide-nav {
 
 .lt-ie9 .feature-mini {
     zoom: 1;
+}
+
+/** excerpt from styles.css #703153 **/
+#gdpr {
+    align-items: center;
+    background-color: #ddd;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    display: flex;
+    font-size: 16px;
+    justify-content: center;
+    line-height: 20px;
+    margin: 20px;
+    padding: 20px;
+    position: fixed;
+    z-index: 1000;
+}
+
+#gdpr button {
+    font-size: 16px;
+    padding: 6px 14px;
+    line-height: 1;
+    border: 1px solid #999;
+    margin: 0 0 0 10px;
+    background-color: #fff;
+    opacity: 1;
+
+    /* AJP */
+    font-weight: 500;
+}
+
+#gdpr button:focus,
+#gdpr button:hover {
+    opacity: 0.5;
+}
+
+#gdpr button:active {
+    background: #e42312;
+    opacity: 1;
+}
+@media (min-width:768px) {
+    #gdpr {
+        box-shadow: none;
+        margin: 0;
+        padding: 10px 20px;
+        position: relative;
+    }
+}
+@media (min-width:1024px) {
+    .LP2 #gdpr,
+    .home #gdpr {
+        display: block;
+        text-align: center;
+    }
 }
 
 /* Social media - Content secondary only */
