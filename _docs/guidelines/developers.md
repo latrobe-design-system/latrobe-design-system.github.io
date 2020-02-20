@@ -6,12 +6,23 @@ title: "Developers"
 info: "How to use the design system to create and update components"
 ---
 
-##Installation and setup
+## Design system developers
 
-This design system is
+These instructions are for the Design System development team.
+
+### Requirements
+
+* Git Client: https://git-scm.com/downloads
+* Jekyll: https://jekyllrb.com/
+* Sass: https://sass-lang.com/
+
+### Installation and setup
+
+1. Use your Git Client to Clone the design system repository: https://github.com/latrobe-design-system/latrobe-design-system.github.io
+2. 
 
 
-## Using Jekyll static generator
+### Using Jekyll static generator
 
 To add or modify components you will require jekyll on your machine
 Jekyll: https://jekyllrb.com/docs/installation/
