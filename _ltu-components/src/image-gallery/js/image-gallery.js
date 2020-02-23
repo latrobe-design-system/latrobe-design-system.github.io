@@ -4,7 +4,7 @@ javascript: true
 /**
  * Click handler for image gallery - opens all images in a modal
  *
- * @requires /_ltu-patterns/src/modal/js/modal.js
+ * @requires /_ltu-components/src/modal/js/modal.js
  */
 jQuery(document).ready(function($) {
  	//do jQuery stuff when DOM is ready

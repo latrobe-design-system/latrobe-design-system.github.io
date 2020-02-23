@@ -1,4 +1,4 @@
-{% for pattern in site.ltu-patterns %}
+{% for pattern in site.ltu-components %}
     {%- if pattern.url contains include.snippet -%}
         {%- if include.container != 'false' -%}
             <div class="ds-block ds-block--{{ include.blockBackground }} ds-block--{{ include.blockWidth }}">
