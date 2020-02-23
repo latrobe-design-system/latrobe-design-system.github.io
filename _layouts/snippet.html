@@ -8,8 +8,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="{{ site.url }}/ltu-patterns/dist/css/main.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
-    <link rel="stylesheet" href="{{ site.url }}/ltu-patterns/dist/css/ltu-legacy.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
+    <link rel="stylesheet" href="{{ site.url }}/ltu-components/dist/css/main.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
+    <link rel="stylesheet" href="{{ site.url }}/ltu-components/dist/css/ltu-legacy.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
 </head>
 
 <body>
@@ -68,7 +68,8 @@ if(window.outerWidth <= mobileBreakingPoint){
 
     {% if page.showHeader == 'yes' %}
     <!-- include ltu legacy code for nav sample -->
-    <script src="https://www.latrobe.edu.au/__data/assets/js_file_folder/0004/1078573/ltu-legacy.js?v={{ site.time | date: '%Y%m%d%H%M%S' }}"></script>
+    <!-- <script src="https://www.latrobe.edu.au/__data/assets/js_file_folder/0004/1078573/ltu-legacy.js?v={{ site.time | date: '%Y%m%d%H%M%S' }}"></script>-->
+    <script src="{{ site.url }}/ltu-components/dist/js/ltu-legacy.js?v={{ site.time | date: '%Y%m%d%H%M%S' }}"></script>
     {% endif %}
     </body>
 </html>

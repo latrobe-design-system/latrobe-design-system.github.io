@@ -25,7 +25,7 @@ collections:
   docs:
     output: true
     permalink: /:path
-  ltu-patterns:
+  ltu-components:
     output: true
 
 
@@ -79,18 +79,18 @@ defaults:
       parentmenu: example
   -
     scope:
-      path: "_ltu-patterns/dist"
+      path: "_ltu-components/dist"
     values:
       layout: blank
   -
     scope:
-      path: "_ltu-patterns/src"
+      path: "_ltu-components/src"
     values:
       status: draft
       layout: snippet
   -
     scope:
-      path: "_ltu-patterns/tests"
+      path: "_ltu-components/tests"
     values:
       type: example
       layout: snippet

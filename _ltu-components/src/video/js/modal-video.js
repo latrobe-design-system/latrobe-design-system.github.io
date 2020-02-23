@@ -4,7 +4,7 @@ javascript: true
 /**
  * YouTube modal video
  *
- * @requires: /ltu-patterns/src/modal/js/modal.js
+ * @requires: /ltu-components/src/modal/js/modal.js
  */
 jQuery(document).ready(function($) {
      //do jQuery stuff when DOM is ready
