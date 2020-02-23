@@ -52,7 +52,7 @@ The patterns below are the best practice way to modify and change the components
 
 ### Set up
 
-It is recommended to not touch the generated ds-ltu.scss and import it into a main.scss file. You can import the ds-ltu.scss in the main.scss file like so:
+It is recommended to not touch the generated ds-ltu.scss and import it into a ds-ltu.scss file. You can import the ds-ltu.scss in the ds-ltu.scss file like so:
 
 `@import "./ds-ltu.scss";`
 
