@@ -2,7 +2,7 @@
 
 #compile CSS for website
 echo -e "\033[0;32mCompile sass...\033[0m"
-sass --style=compressed _ltu-components/src/main.scss:_ltu-components/dist/css/main.css
+sass --style=compressed _ltu-components/src/ds-ltu.scss:_ltu-components/dist/css/ds-ltu.css
 
 #build site
 echo -e "\033[0;32mBuilding site...\033[0m"
