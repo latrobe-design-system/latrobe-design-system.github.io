@@ -1,6 +1,3 @@
----
-javascript: true
----
 /**
  * Accordion
  */

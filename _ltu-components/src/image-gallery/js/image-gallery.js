@@ -1,6 +1,3 @@
----
-javascript: true
----
 /**
  * Click handler for image gallery - opens all images in a modal
  *

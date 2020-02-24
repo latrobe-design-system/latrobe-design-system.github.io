@@ -1,0 +1,38 @@
+{
+  "name": "latrobe-design-system",
+  "version": "1.0.0",
+  "description": "## This design system is under construction",
+  "main": "gulpfile.js",
+  "scripts": {
+    "preinstall": "bundle install --path vendor/bundle",
+    "start": "bundle exec gulp",
+    "stage": "bundle exec gulp --jekyllEnv='stage'",
+    "production": "bundle exec gulp --jekyllEnv='production'",
+    "build": "bundle exec gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/latrobe-design-system/latrobe-design-system.github.io.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/latrobe-design-system/latrobe-design-system.github.io/issues"
+  },
+  "homepage": "https://github.com/latrobe-design-system/latrobe-design-system.github.io#readme",
+  "devDependencies": {
+    "@rollup/plugin-buble": "^0.21.1",
+    "@rollup/plugin-multi-entry": "^3.0.0",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "browser-sync": "^2.26.7",
+    "cross-spawn": "^7.0.1",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "rollup": "^1.31.1",
+    "rollup-plugin-uglify": "^6.0.4",
+    "sass": "^1.25.0"
+  },
+  "dependencies": {}
+}
