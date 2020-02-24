@@ -11,7 +11,7 @@ module.exports = {
   scripts: {
     src: './_ltu-components/src/**/*.js',
     dests: [
-      './_site/js/ds-ltu.js',
+      './_site/ltu-components/dist/js/ds-ltu.js',
       './_ltu-components/dist/js/ds-ltu.js',
     ]
   },
