@@ -19,6 +19,12 @@ sass:
 exclude:
     - build.sh
     - server.sh
+    - gulpfile.js
+    - build.config.js
+    - package.json
+    - package-lock.json
+    - node_module
+    - vendor
 
 ## Outputs the navigation collections
 collections:

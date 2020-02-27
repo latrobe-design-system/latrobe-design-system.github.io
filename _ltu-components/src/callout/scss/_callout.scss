@@ -6,6 +6,10 @@
     padding: $spacer * 4;
     box-shadow: $shadow-1;
     display: flex;
+    
+    /* align text with default text */
+    max-width: 1216px;
+    margin: 0 auto;
 
     @media(min-width: 768px){
         position: relative;
@@ -26,7 +30,7 @@
 
 .ds-callout__icon {
     padding-right: 16px;
-    
+
     @media(max-width: 768px){
         margin-bottom: 24px;
     }
