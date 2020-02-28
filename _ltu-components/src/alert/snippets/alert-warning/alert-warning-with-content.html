@@ -2,21 +2,15 @@
 title: "Warning Alert With Content"
 status: "draft"
 text: Use warning page alerts to tell the user something urgent. Only use an alert if the information will help the user avoid a problem.
-
-icon-alert-circle: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-circle"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12" y2="16"></line></svg>
-
-alert-default-text: Browser out of date
-alert-heading: Browser out of date
-alert-text: Your web browser is out of date
 ---
 
 <div class="ds-alert ds-alert--warning" role="alert">
     <div class="ds-alert__icon">
-        {{ page.icon-alert-circle }}
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-circle"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12" y2="16"></line></svg>
     </div>
-    
+
     <div class="ds-alert__text">
-        <h3 class="h4">{{ page.alert-heading }}</h3>
-        <p>{{ page.alert-text }}</p>
+        <h3 class="h4">Browser out of date</h3>
+        <p>Your web browser is out of date</p>
     </div>
 </div>

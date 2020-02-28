@@ -29,8 +29,8 @@
 }
 
 .ds-card__link-text {
-    @extend .icon-chevron-right;
-    @extend .icon-red;
+    @extend .ds-icon-chevron-right;
+    @extend .ds-icon--red;
     color: $color-1;
 }
 

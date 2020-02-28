@@ -1,9 +1,17 @@
 ---
 title: "Accordion"
-status: draft
-info:
+status: ready
+info: Accordions help users see only the content they need. Accordions expand and collapse sections of content.
 ---
+
+Accordions should be used sparingly!
+
+## Accessibilty
+
+Accordion has been built in accordance with https://www.w3.org/TR/wai-aria-practices-1.1/#accordion
+
+## Patterns
 
 {% include sample-iframe.html snippet="accordion/snippets/accordion.html" %}
 
-{% include sample-iframe.html snippet="accordion/snippets/accordion-css.html" %}
+{% include sample-iframe.html snippet="accordion/snippets/accordion-numbered.html" %}

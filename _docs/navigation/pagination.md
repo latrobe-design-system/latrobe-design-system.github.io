@@ -1,6 +1,6 @@
 ---
 title: "Pagination"
-status: draft
+status: planned
 ---
 
 {% include sample-iframe.html snippet="pagination/snippets/pagination.html"%}

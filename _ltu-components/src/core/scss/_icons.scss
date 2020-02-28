@@ -10,8 +10,8 @@
         content: "";
         display: inline-block;
         vertical-align: middle;
-        width: 20px;
-        height: 20px;
+        width: 1em;
+        height: 1em;
         margin: 0 4px;
         background-repeat: no-repeat;
         background-size: 100%;
@@ -20,21 +20,21 @@
     }
 }
 
-.icon-red {
+.ds-icon--red {
 
     &::after {
         filter: $red;
     }
 }
 
-.icon-white {
+.ds-icon--white {
 
     &::after {
         filter: $white;
     }
 }
 
-.icon-before {
+.ds-icon--before {
     padding-right: inherit;
     padding-left: 32px;
 
@@ -44,7 +44,9 @@
     }
 }
 
-.icon-activity {
+/* icons */
+
+.ds-icon-activity {
     @extend %icon;
 
     &::after {
@@ -52,7 +54,7 @@
     }
 }
 
-.icon-airplay {
+.ds-icon-airplay {
     @extend %icon;
 
     &::after {
@@ -60,7 +62,7 @@
     }
 }
 
-.icon-alert-circle {
+.ds-icon-alert-circle {
     @extend %icon;
 
     &::after {
@@ -68,7 +70,7 @@
     }
 }
 
-.icon-alert-octagon {
+.ds-icon-alert-octagon {
     @extend %icon;
 
     &::after {
@@ -76,7 +78,7 @@
     }
 }
 
-.icon-alert-triangle {
+.ds-icon-alert-triangle {
     @extend %icon;
 
     &::after {
@@ -84,7 +86,7 @@
     }
 }
 
-.icon-align-center {
+.ds-icon-align-center {
     @extend %icon;
 
     &::after {
@@ -92,7 +94,7 @@
     }
 }
 
-.icon-align-justify {
+.ds-icon-align-justify {
     @extend %icon;
 
     &::after {
@@ -100,7 +102,7 @@
     }
 }
 
-.icon-align-left {
+.ds-icon-align-left {
     @extend %icon;
 
     &::after {
@@ -108,7 +110,7 @@
     }
 }
 
-.icon-align-right {
+.ds-icon-align-right {
     @extend %icon;
 
     &::after {
@@ -116,7 +118,7 @@
     }
 }
 
-.icon-anchor {
+.ds-icon-anchor {
     @extend %icon;
 
     &::after {
@@ -124,7 +126,7 @@
     }
 }
 
-.icon-aperture {
+.ds-icon-aperture {
     @extend %icon;
 
     &::after {
@@ -132,7 +134,7 @@
     }
 }
 
-.icon-archive {
+.ds-icon-archive {
     @extend %icon;
 
     &::after {
@@ -140,7 +142,7 @@
     }
 }
 
-.icon-arrow-down-circle {
+.ds-icon-arrow-down-circle {
     @extend %icon;
 
     &::after {
@@ -148,7 +150,7 @@
     }
 }
 
-.icon-arrow-down-left {
+.ds-icon-arrow-down-left {
     @extend %icon;
 
     &::after {
@@ -156,7 +158,7 @@
     }
 }
 
-.icon-arrow-down-right {
+.ds-icon-arrow-down-right {
     @extend %icon;
 
     &::after {
@@ -164,7 +166,7 @@
     }
 }
 
-.icon-arrow-down {
+.ds-icon-arrow-down {
     @extend %icon;
 
     &::after {
@@ -172,7 +174,7 @@
     }
 }
 
-.icon-arrow-left-circle {
+.ds-icon-arrow-left-circle {
     @extend %icon;
 
     &::after {
@@ -180,7 +182,7 @@
     }
 }
 
-.icon-arrow-left {
+.ds-icon-arrow-left {
     @extend %icon;
 
     &::after {
@@ -188,7 +190,7 @@
     }
 }
 
-.icon-arrow-right-circle {
+.ds-icon-arrow-right-circle {
     @extend %icon;
 
     &::after {
@@ -196,7 +198,7 @@
     }
 }
 
-.icon-arrow-right {
+.ds-icon-arrow-right {
     @extend %icon;
 
     &::after {
@@ -204,7 +206,7 @@
     }
 }
 
-.icon-arrow-up-circle {
+.ds-icon-arrow-up-circle {
     @extend %icon;
 
     &::after {
@@ -212,7 +214,7 @@
     }
 }
 
-.icon-arrow-up-left {
+.ds-icon-arrow-up-left {
     @extend %icon;
 
     &::after {
@@ -220,7 +222,7 @@
     }
 }
 
-.icon-arrow-up-right {
+.ds-icon-arrow-up-right {
     @extend %icon;
 
     &::after {
@@ -228,7 +230,7 @@
     }
 }
 
-.icon-arrow-up {
+.ds-icon-arrow-up {
     @extend %icon;
 
     &::after {
@@ -236,7 +238,7 @@
     }
 }
 
-.icon-at-sign {
+.ds-icon-at-sign {
     @extend %icon;
 
     &::after {
@@ -244,7 +246,7 @@
     }
 }
 
-.icon-award {
+.ds-icon-award {
     @extend %icon;
 
     &::after {
@@ -252,7 +254,7 @@
     }
 }
 
-.icon-bar-chart-2 {
+.ds-icon-bar-chart-2 {
     @extend %icon;
 
     &::after {
@@ -260,7 +262,7 @@
     }
 }
 
-.icon-bar-chart {
+.ds-icon-bar-chart {
     @extend %icon;
 
     &::after {
@@ -268,7 +270,7 @@
     }
 }
 
-.icon-battery-charging {
+.ds-icon-battery-charging {
     @extend %icon;
 
     &::after {
@@ -276,7 +278,7 @@
     }
 }
 
-.icon-battery {
+.ds-icon-battery {
     @extend %icon;
 
     &::after {
@@ -284,7 +286,7 @@
     }
 }
 
-.icon-bell-off {
+.ds-icon-bell-off {
     @extend %icon;
 
     &::after {
@@ -292,7 +294,7 @@
     }
 }
 
-.icon-bell {
+.ds-icon-bell {
     @extend %icon;
 
     &::after {
@@ -300,7 +302,7 @@
     }
 }
 
-.icon-bluetooth {
+.ds-icon-bluetooth {
     @extend %icon;
 
     &::after {
@@ -308,7 +310,7 @@
     }
 }
 
-.icon-bold {
+.ds-icon-bold {
     @extend %icon;
 
     &::after {
@@ -316,7 +318,7 @@
     }
 }
 
-.icon-book-open {
+.ds-icon-book-open {
     @extend %icon;
 
     &::after {
@@ -324,7 +326,7 @@
     }
 }
 
-.icon-book {
+.ds-icon-book {
     @extend %icon;
 
     &::after {
@@ -332,7 +334,7 @@
     }
 }
 
-.icon-bookmark {
+.ds-icon-bookmark {
     @extend %icon;
 
     &::after {
@@ -340,7 +342,7 @@
     }
 }
 
-.icon-box {
+.ds-icon-box {
     @extend %icon;
 
     &::after {
@@ -348,7 +350,7 @@
     }
 }
 
-.icon-briefcase {
+.ds-icon-briefcase {
     @extend %icon;
 
     &::after {
@@ -356,7 +358,7 @@
     }
 }
 
-.icon-calendar {
+.ds-icon-calendar {
     @extend %icon;
 
     &::after {
@@ -364,7 +366,7 @@
     }
 }
 
-.icon-camera-off {
+.ds-icon-camera-off {
     @extend %icon;
 
     &::after {
@@ -372,7 +374,7 @@
     }
 }
 
-.icon-camera {
+.ds-icon-camera {
     @extend %icon;
 
     &::after {
@@ -380,7 +382,7 @@
     }
 }
 
-.icon-cast {
+.ds-icon-cast {
     @extend %icon;
 
     &::after {
@@ -388,7 +390,7 @@
     }
 }
 
-.icon-check-circle {
+.ds-icon-check-circle {
     @extend %icon;
 
     &::after {
@@ -396,7 +398,7 @@
     }
 }
 
-.icon-check-square {
+.ds-icon-check-square {
     @extend %icon;
 
     &::after {
@@ -404,7 +406,7 @@
     }
 }
 
-.icon-check {
+.ds-icon-check {
     @extend %icon;
 
     &::after {
@@ -412,7 +414,7 @@
     }
 }
 
-.icon-chevron-down {
+.ds-icon-chevron-down {
     @extend %icon;
 
     &::after {
@@ -420,7 +422,7 @@
     }
 }
 
-.icon-chevron-left {
+.ds-icon-chevron-left {
     @extend %icon;
 
     &::after {
@@ -428,7 +430,7 @@
     }
 }
 
-.icon-chevron-right {
+.ds-icon-chevron-right {
     @extend %icon;
 
     &::after {
@@ -436,7 +438,7 @@
     }
 }
 
-.icon-chevron-up {
+.ds-icon-chevron-up {
     @extend %icon;
 
     &::after {
@@ -444,7 +446,7 @@
     }
 }
 
-.icon-chevrons-down {
+.ds-icon-chevrons-down {
     @extend %icon;
 
     &::after {
@@ -452,7 +454,7 @@
     }
 }
 
-.icon-chevrons-left {
+.ds-icon-chevrons-left {
     @extend %icon;
 
     &::after {
@@ -460,7 +462,7 @@
     }
 }
 
-.icon-chevrons-right {
+.ds-icon-chevrons-right {
     @extend %icon;
 
     &::after {
@@ -468,7 +470,7 @@
     }
 }
 
-.icon-chevrons-up {
+.ds-icon-chevrons-up {
     @extend %icon;
 
     &::after {
@@ -476,7 +478,7 @@
     }
 }
 
-.icon-chrome {
+.ds-icon-chrome {
     @extend %icon;
 
     &::after {
@@ -484,7 +486,7 @@
     }
 }
 
-.icon-circle {
+.ds-icon-circle {
     @extend %icon;
 
     &::after {
@@ -492,7 +494,7 @@
     }
 }
 
-.icon-clipboard {
+.ds-icon-clipboard {
     @extend %icon;
 
     &::after {
@@ -500,7 +502,7 @@
     }
 }
 
-.icon-clock {
+.ds-icon-clock {
     @extend %icon;
 
     &::after {
@@ -508,7 +510,7 @@
     }
 }
 
-.icon-cloud-drizzle {
+.ds-icon-cloud-drizzle {
     @extend %icon;
 
     &::after {
@@ -516,7 +518,7 @@
     }
 }
 
-.icon-cloud-lightning {
+.ds-icon-cloud-lightning {
     @extend %icon;
 
     &::after {
@@ -524,7 +526,7 @@
     }
 }
 
-.icon-cloud-off {
+.ds-icon-cloud-off {
     @extend %icon;
 
     &::after {
@@ -532,7 +534,7 @@
     }
 }
 
-.icon-cloud-rain {
+.ds-icon-cloud-rain {
     @extend %icon;
 
     &::after {
@@ -540,7 +542,7 @@
     }
 }
 
-.icon-cloud-snow {
+.ds-icon-cloud-snow {
     @extend %icon;
 
     &::after {
@@ -548,7 +550,7 @@
     }
 }
 
-.icon-cloud {
+.ds-icon-cloud {
     @extend %icon;
 
     &::after {
@@ -556,7 +558,7 @@
     }
 }
 
-.icon-code {
+.ds-icon-code {
     @extend %icon;
 
     &::after {
@@ -564,7 +566,7 @@
     }
 }
 
-.icon-codepen {
+.ds-icon-codepen {
     @extend %icon;
 
     &::after {
@@ -572,7 +574,7 @@
     }
 }
 
-.icon-codesandbox {
+.ds-icon-codesandbox {
     @extend %icon;
 
     &::after {
@@ -580,7 +582,7 @@
     }
 }
 
-.icon-coffee {
+.ds-icon-coffee {
     @extend %icon;
 
     &::after {
@@ -588,7 +590,7 @@
     }
 }
 
-.icon-columns {
+.ds-icon-columns {
     @extend %icon;
 
     &::after {
@@ -596,7 +598,7 @@
     }
 }
 
-.icon-command {
+.ds-icon-command {
     @extend %icon;
 
     &::after {
@@ -604,7 +606,7 @@
     }
 }
 
-.icon-compass {
+.ds-icon-compass {
     @extend %icon;
 
     &::after {
@@ -612,7 +614,7 @@
     }
 }
 
-.icon-copy {
+.ds-icon-copy {
     @extend %icon;
 
     &::after {
@@ -620,7 +622,7 @@
     }
 }
 
-.icon-corner-down-left {
+.ds-icon-corner-down-left {
     @extend %icon;
 
     &::after {
@@ -628,7 +630,7 @@
     }
 }
 
-.icon-corner-down-right {
+.ds-icon-corner-down-right {
     @extend %icon;
 
     &::after {
@@ -636,7 +638,7 @@
     }
 }
 
-.icon-corner-left-down {
+.ds-icon-corner-left-down {
     @extend %icon;
 
     &::after {
@@ -644,7 +646,7 @@
     }
 }
 
-.icon-corner-left-up {
+.ds-icon-corner-left-up {
     @extend %icon;
 
     &::after {
@@ -652,7 +654,7 @@
     }
 }
 
-.icon-corner-right-down {
+.ds-icon-corner-right-down {
     @extend %icon;
 
     &::after {
@@ -660,7 +662,7 @@
     }
 }
 
-.icon-corner-right-up {
+.ds-icon-corner-right-up {
     @extend %icon;
 
     &::after {
@@ -668,7 +670,7 @@
     }
 }
 
-.icon-corner-up-left {
+.ds-icon-corner-up-left {
     @extend %icon;
 
     &::after {
@@ -676,7 +678,7 @@
     }
 }
 
-.icon-corner-up-right {
+.ds-icon-corner-up-right {
     @extend %icon;
 
     &::after {
@@ -684,7 +686,7 @@
     }
 }
 
-.icon-cpu {
+.ds-icon-cpu {
     @extend %icon;
 
     &::after {
@@ -692,7 +694,7 @@
     }
 }
 
-.icon-credit-card {
+.ds-icon-credit-card {
     @extend %icon;
 
     &::after {
@@ -700,7 +702,7 @@
     }
 }
 
-.icon-crop {
+.ds-icon-crop {
     @extend %icon;
 
     &::after {
@@ -708,7 +710,7 @@
     }
 }
 
-.icon-crosshair {
+.ds-icon-crosshair {
     @extend %icon;
 
     &::after {
@@ -716,7 +718,7 @@
     }
 }
 
-.icon-database {
+.ds-icon-database {
     @extend %icon;
 
     &::after {
@@ -724,7 +726,7 @@
     }
 }
 
-.icon-delete {
+.ds-icon-delete {
     @extend %icon;
 
     &::after {
@@ -732,7 +734,7 @@
     }
 }
 
-.icon-disc {
+.ds-icon-disc {
     @extend %icon;
 
     &::after {
@@ -740,7 +742,7 @@
     }
 }
 
-.icon-dollar-sign {
+.ds-icon-dollar-sign {
     @extend %icon;
 
     &::after {
@@ -748,7 +750,7 @@
     }
 }
 
-.icon-download-cloud {
+.ds-icon-download-cloud {
     @extend %icon;
 
     &::after {
@@ -756,7 +758,7 @@
     }
 }
 
-.icon-download {
+.ds-icon-download {
     @extend %icon;
 
     &::after {
@@ -764,7 +766,7 @@
     }
 }
 
-.icon-droplet {
+.ds-icon-droplet {
     @extend %icon;
 
     &::after {
@@ -772,7 +774,7 @@
     }
 }
 
-.icon-edit-2 {
+.ds-icon-edit-2 {
     @extend %icon;
 
     &::after {
@@ -780,7 +782,7 @@
     }
 }
 
-.icon-edit-3 {
+.ds-icon-edit-3 {
     @extend %icon;
 
     &::after {
@@ -788,7 +790,7 @@
     }
 }
 
-.icon-edit {
+.ds-icon-edit {
     @extend %icon;
 
     &::after {
@@ -796,7 +798,7 @@
     }
 }
 
-.icon-external-link {
+.ds-icon-external-link {
     @extend %icon;
 
     &::after {
@@ -804,7 +806,7 @@
     }
 }
 
-.icon-eye-off {
+.ds-icon-eye-off {
     @extend %icon;
 
     &::after {
@@ -812,7 +814,7 @@
     }
 }
 
-.icon-eye {
+.ds-icon-eye {
     @extend %icon;
 
     &::after {
@@ -820,7 +822,7 @@
     }
 }
 
-.icon-facebook {
+.ds-icon-facebook {
     @extend %icon;
 
     &::after {
@@ -828,7 +830,7 @@
     }
 }
 
-.icon-fast-forward {
+.ds-icon-fast-forward {
     @extend %icon;
 
     &::after {
@@ -836,7 +838,7 @@
     }
 }
 
-.icon-feather {
+.ds-icon-feather {
     @extend %icon;
 
     &::after {
@@ -844,7 +846,7 @@
     }
 }
 
-.icon-figma {
+.ds-icon-figma {
     @extend %icon;
 
     &::after {
@@ -852,7 +854,7 @@
     }
 }
 
-.icon-file-minus {
+.ds-icon-file-minus {
     @extend %icon;
 
     &::after {
@@ -860,7 +862,7 @@
     }
 }
 
-.icon-file-plus {
+.ds-icon-file-plus {
     @extend %icon;
 
     &::after {
@@ -868,7 +870,7 @@
     }
 }
 
-.icon-file-text {
+.ds-icon-file-text {
     @extend %icon;
 
     &::after {
@@ -876,7 +878,7 @@
     }
 }
 
-.icon-file {
+.ds-icon-file {
     @extend %icon;
 
     &::after {
@@ -884,7 +886,7 @@
     }
 }
 
-.icon-film {
+.ds-icon-film {
     @extend %icon;
 
     &::after {
@@ -892,7 +894,7 @@
     }
 }
 
-.icon-filter {
+.ds-icon-filter {
     @extend %icon;
 
     &::after {
@@ -900,7 +902,7 @@
     }
 }
 
-.icon-flag {
+.ds-icon-flag {
     @extend %icon;
 
     &::after {
@@ -908,7 +910,7 @@
     }
 }
 
-.icon-folder-minus {
+.ds-icon-folder-minus {
     @extend %icon;
 
     &::after {
@@ -916,7 +918,7 @@
     }
 }
 
-.icon-folder-plus {
+.ds-icon-folder-plus {
     @extend %icon;
 
     &::after {
@@ -924,7 +926,7 @@
     }
 }
 
-.icon-folder {
+.ds-icon-folder {
     @extend %icon;
 
     &::after {
@@ -932,7 +934,7 @@
     }
 }
 
-.icon-frown {
+.ds-icon-frown {
     @extend %icon;
 
     &::after {
@@ -940,7 +942,7 @@
     }
 }
 
-.icon-gift {
+.ds-icon-gift {
     @extend %icon;
 
     &::after {
@@ -948,7 +950,7 @@
     }
 }
 
-.icon-git-branch {
+.ds-icon-git-branch {
     @extend %icon;
 
     &::after {
@@ -956,7 +958,7 @@
     }
 }
 
-.icon-git-commit {
+.ds-icon-git-commit {
     @extend %icon;
 
     &::after {
@@ -964,7 +966,7 @@
     }
 }
 
-.icon-git-merge {
+.ds-icon-git-merge {
     @extend %icon;
 
     &::after {
@@ -972,7 +974,7 @@
     }
 }
 
-.icon-git-pull-request {
+.ds-icon-git-pull-request {
     @extend %icon;
 
     &::after {
@@ -980,7 +982,7 @@
     }
 }
 
-.icon-github {
+.ds-icon-github {
     @extend %icon;
 
     &::after {
@@ -988,7 +990,7 @@
     }
 }
 
-.icon-gitlab {
+.ds-icon-gitlab {
     @extend %icon;
 
     &::after {
@@ -996,7 +998,7 @@
     }
 }
 
-.icon-globe {
+.ds-icon-globe {
     @extend %icon;
 
     &::after {
@@ -1004,7 +1006,7 @@
     }
 }
 
-.icon-grid {
+.ds-icon-grid {
     @extend %icon;
 
     &::after {
@@ -1012,7 +1014,7 @@
     }
 }
 
-.icon-hard-drive {
+.ds-icon-hard-drive {
     @extend %icon;
 
     &::after {
@@ -1020,7 +1022,7 @@
     }
 }
 
-.icon-hash {
+.ds-icon-hash {
     @extend %icon;
 
     &::after {
@@ -1028,7 +1030,7 @@
     }
 }
 
-.icon-headphones {
+.ds-icon-headphones {
     @extend %icon;
 
     &::after {
@@ -1036,7 +1038,7 @@
     }
 }
 
-.icon-heart {
+.ds-icon-heart {
     @extend %icon;
 
     &::after {
@@ -1044,7 +1046,7 @@
     }
 }
 
-.icon-help-circle {
+.ds-icon-help-circle {
     @extend %icon;
 
     &::after {
@@ -1052,7 +1054,7 @@
     }
 }
 
-.icon-hexagon {
+.ds-icon-hexagon {
     @extend %icon;
 
     &::after {
@@ -1060,7 +1062,7 @@
     }
 }
 
-.icon-home {
+.ds-icon-home {
     @extend %icon;
 
     &::after {
@@ -1068,7 +1070,7 @@
     }
 }
 
-.icon-image {
+.ds-icon-image {
     @extend %icon;
 
     &::after {
@@ -1076,7 +1078,7 @@
     }
 }
 
-.icon-inbox {
+.ds-icon-inbox {
     @extend %icon;
 
     &::after {
@@ -1084,7 +1086,7 @@
     }
 }
 
-.icon-info {
+.ds-icon-info {
     @extend %icon;
 
     &::after {
@@ -1092,7 +1094,7 @@
     }
 }
 
-.icon-instagram {
+.ds-icon-instagram {
     @extend %icon;
 
     &::after {
@@ -1100,7 +1102,7 @@
     }
 }
 
-.icon-italic {
+.ds-icon-italic {
     @extend %icon;
 
     &::after {
@@ -1108,7 +1110,7 @@
     }
 }
 
-.icon-key {
+.ds-icon-key {
     @extend %icon;
 
     &::after {
@@ -1116,7 +1118,7 @@
     }
 }
 
-.icon-layers {
+.ds-icon-layers {
     @extend %icon;
 
     &::after {
@@ -1124,7 +1126,7 @@
     }
 }
 
-.icon-layout {
+.ds-icon-layout {
     @extend %icon;
 
     &::after {
@@ -1132,7 +1134,7 @@
     }
 }
 
-.icon-life-buoy {
+.ds-icon-life-buoy {
     @extend %icon;
 
     &::after {
@@ -1140,7 +1142,7 @@
     }
 }
 
-.icon-link-2 {
+.ds-icon-link-2 {
     @extend %icon;
 
     &::after {
@@ -1148,7 +1150,7 @@
     }
 }
 
-.icon-link {
+.ds-icon-link {
     @extend %icon;
 
     &::after {
@@ -1156,7 +1158,7 @@
     }
 }
 
-.icon-linkedin {
+.ds-icon-linkedin {
     @extend %icon;
 
     &::after {
@@ -1164,7 +1166,7 @@
     }
 }
 
-.icon-list {
+.ds-icon-list {
     @extend %icon;
 
     &::after {
@@ -1172,7 +1174,7 @@
     }
 }
 
-.icon-loader {
+.ds-icon-loader {
     @extend %icon;
 
     &::after {
@@ -1180,7 +1182,7 @@
     }
 }
 
-.icon-lock {
+.ds-icon-lock {
     @extend %icon;
 
     &::after {
@@ -1188,7 +1190,7 @@
     }
 }
 
-.icon-log-in {
+.ds-icon-log-in {
     @extend %icon;
 
     &::after {
@@ -1196,7 +1198,7 @@
     }
 }
 
-.icon-log-out {
+.ds-icon-log-out {
     @extend %icon;
 
     &::after {
@@ -1204,7 +1206,7 @@
     }
 }
 
-.icon-mail {
+.ds-icon-mail {
     @extend %icon;
 
     &::after {
@@ -1212,7 +1214,7 @@
     }
 }
 
-.icon-map-pin {
+.ds-icon-map-pin {
     @extend %icon;
 
     &::after {
@@ -1220,7 +1222,7 @@
     }
 }
 
-.icon-map {
+.ds-icon-map {
     @extend %icon;
 
     &::after {
@@ -1228,7 +1230,7 @@
     }
 }
 
-.icon-maximize-2 {
+.ds-icon-maximize-2 {
     @extend %icon;
 
     &::after {
@@ -1236,7 +1238,7 @@
     }
 }
 
-.icon-maximize {
+.ds-icon-maximize {
     @extend %icon;
 
     &::after {
@@ -1244,7 +1246,7 @@
     }
 }
 
-.icon-meh {
+.ds-icon-meh {
     @extend %icon;
 
     &::after {
@@ -1252,7 +1254,7 @@
     }
 }
 
-.icon-menu {
+.ds-icon-menu {
     @extend %icon;
 
     &::after {
@@ -1260,7 +1262,7 @@
     }
 }
 
-.icon-message-circle {
+.ds-icon-message-circle {
     @extend %icon;
 
     &::after {
@@ -1268,7 +1270,7 @@
     }
 }
 
-.icon-message-square {
+.ds-icon-message-square {
     @extend %icon;
 
     &::after {
@@ -1276,7 +1278,7 @@
     }
 }
 
-.icon-mic-off {
+.ds-icon-mic-off {
     @extend %icon;
 
     &::after {
@@ -1284,7 +1286,7 @@
     }
 }
 
-.icon-mic {
+.ds-icon-mic {
     @extend %icon;
 
     &::after {
@@ -1292,7 +1294,7 @@
     }
 }
 
-.icon-minimize-2 {
+.ds-icon-minimize-2 {
     @extend %icon;
 
     &::after {
@@ -1300,7 +1302,7 @@
     }
 }
 
-.icon-minimize {
+.ds-icon-minimize {
     @extend %icon;
 
     &::after {
@@ -1308,7 +1310,7 @@
     }
 }
 
-.icon-minus-circle {
+.ds-icon-minus-circle {
     @extend %icon;
 
     &::after {
@@ -1316,7 +1318,7 @@
     }
 }
 
-.icon-minus-square {
+.ds-icon-minus-square {
     @extend %icon;
 
     &::after {
@@ -1324,7 +1326,7 @@
     }
 }
 
-.icon-minus {
+.ds-icon-minus {
     @extend %icon;
 
     &::after {
@@ -1332,7 +1334,7 @@
     }
 }
 
-.icon-monitor {
+.ds-icon-monitor {
     @extend %icon;
 
     &::after {
@@ -1340,7 +1342,7 @@
     }
 }
 
-.icon-moon {
+.ds-icon-moon {
     @extend %icon;
 
     &::after {
@@ -1348,7 +1350,7 @@
     }
 }
 
-.icon-more-horizontal {
+.ds-icon-more-horizontal {
     @extend %icon;
 
     &::after {
@@ -1356,7 +1358,7 @@
     }
 }
 
-.icon-more-vertical {
+.ds-icon-more-vertical {
     @extend %icon;
 
     &::after {
@@ -1364,7 +1366,7 @@
     }
 }
 
-.icon-mouse-pointer {
+.ds-icon-mouse-pointer {
     @extend %icon;
 
     &::after {
@@ -1372,7 +1374,7 @@
     }
 }
 
-.icon-move {
+.ds-icon-move {
     @extend %icon;
 
     &::after {
@@ -1380,7 +1382,7 @@
     }
 }
 
-.icon-music {
+.ds-icon-music {
     @extend %icon;
 
     &::after {
@@ -1388,7 +1390,7 @@
     }
 }
 
-.icon-navigation-2 {
+.ds-icon-navigation-2 {
     @extend %icon;
 
     &::after {
@@ -1396,7 +1398,7 @@
     }
 }
 
-.icon-navigation {
+.ds-icon-navigation {
     @extend %icon;
 
     &::after {
@@ -1404,7 +1406,7 @@
     }
 }
 
-.icon-octagon {
+.ds-icon-octagon {
     @extend %icon;
 
     &::after {
@@ -1412,7 +1414,7 @@
     }
 }
 
-.icon-package {
+.ds-icon-package {
     @extend %icon;
 
     &::after {
@@ -1420,7 +1422,7 @@
     }
 }
 
-.icon-paperclip {
+.ds-icon-paperclip {
     @extend %icon;
 
     &::after {
@@ -1428,7 +1430,7 @@
     }
 }
 
-.icon-pause-circle {
+.ds-icon-pause-circle {
     @extend %icon;
 
     &::after {
@@ -1436,7 +1438,7 @@
     }
 }
 
-.icon-pause {
+.ds-icon-pause {
     @extend %icon;
 
     &::after {
@@ -1444,7 +1446,7 @@
     }
 }
 
-.icon-pen-tool {
+.ds-icon-pen-tool {
     @extend %icon;
 
     &::after {
@@ -1452,7 +1454,7 @@
     }
 }
 
-.icon-percent {
+.ds-icon-percent {
     @extend %icon;
 
     &::after {
@@ -1460,7 +1462,7 @@
     }
 }
 
-.icon-phone-call {
+.ds-icon-phone-call {
     @extend %icon;
 
     &::after {
@@ -1468,7 +1470,7 @@
     }
 }
 
-.icon-phone-forwarded {
+.ds-icon-phone-forwarded {
     @extend %icon;
 
     &::after {
@@ -1476,7 +1478,7 @@
     }
 }
 
-.icon-phone-incoming {
+.ds-icon-phone-incoming {
     @extend %icon;
 
     &::after {
@@ -1484,7 +1486,7 @@
     }
 }
 
-.icon-phone-missed {
+.ds-icon-phone-missed {
     @extend %icon;
 
     &::after {
@@ -1492,7 +1494,7 @@
     }
 }
 
-.icon-phone-off {
+.ds-icon-phone-off {
     @extend %icon;
 
     &::after {
@@ -1500,7 +1502,7 @@
     }
 }
 
-.icon-phone-outgoing {
+.ds-icon-phone-outgoing {
     @extend %icon;
 
     &::after {
@@ -1508,7 +1510,7 @@
     }
 }
 
-.icon-phone {
+.ds-icon-phone {
     @extend %icon;
 
     &::after {
@@ -1516,7 +1518,7 @@
     }
 }
 
-.icon-pie-chart {
+.ds-icon-pie-chart {
     @extend %icon;
 
     &::after {
@@ -1524,7 +1526,7 @@
     }
 }
 
-.icon-play-circle {
+.ds-icon-play-circle {
     @extend %icon;
 
     &::after {
@@ -1532,7 +1534,7 @@
     }
 }
 
-.icon-play {
+.ds-icon-play {
     @extend %icon;
 
     &::after {
@@ -1540,7 +1542,7 @@
     }
 }
 
-.icon-plus-circle {
+.ds-icon-plus-circle {
     @extend %icon;
 
     &::after {
@@ -1548,7 +1550,7 @@
     }
 }
 
-.icon-plus-square {
+.ds-icon-plus-square {
     @extend %icon;
 
     &::after {
@@ -1556,7 +1558,7 @@
     }
 }
 
-.icon-plus {
+.ds-icon-plus {
     @extend %icon;
 
     &::after {
@@ -1564,7 +1566,7 @@
     }
 }
 
-.icon-pocket {
+.ds-icon-pocket {
     @extend %icon;
 
     &::after {
@@ -1572,7 +1574,7 @@
     }
 }
 
-.icon-power {
+.ds-icon-power {
     @extend %icon;
 
     &::after {
@@ -1580,7 +1582,7 @@
     }
 }
 
-.icon-printer {
+.ds-icon-printer {
     @extend %icon;
 
     &::after {
@@ -1588,7 +1590,7 @@
     }
 }
 
-.icon-radio {
+.ds-icon-radio {
     @extend %icon;
 
     &::after {
@@ -1596,7 +1598,7 @@
     }
 }
 
-.icon-refresh-ccw {
+.ds-icon-refresh-ccw {
     @extend %icon;
 
     &::after {
@@ -1604,7 +1606,7 @@
     }
 }
 
-.icon-refresh-cw {
+.ds-icon-refresh-cw {
     @extend %icon;
 
     &::after {
@@ -1612,7 +1614,7 @@
     }
 }
 
-.icon-repeat {
+.ds-icon-repeat {
     @extend %icon;
 
     &::after {
@@ -1620,7 +1622,7 @@
     }
 }
 
-.icon-rewind {
+.ds-icon-rewind {
     @extend %icon;
 
     &::after {
@@ -1628,7 +1630,7 @@
     }
 }
 
-.icon-rotate-ccw {
+.ds-icon-rotate-ccw {
     @extend %icon;
 
     &::after {
@@ -1636,7 +1638,7 @@
     }
 }
 
-.icon-rotate-cw {
+.ds-icon-rotate-cw {
     @extend %icon;
 
     &::after {
@@ -1644,7 +1646,7 @@
     }
 }
 
-.icon-rss {
+.ds-icon-rss {
     @extend %icon;
 
     &::after {
@@ -1652,7 +1654,7 @@
     }
 }
 
-.icon-save {
+.ds-icon-save {
     @extend %icon;
 
     &::after {
@@ -1660,7 +1662,7 @@
     }
 }
 
-.icon-scissors {
+.ds-icon-scissors {
     @extend %icon;
 
     &::after {
@@ -1668,7 +1670,7 @@
     }
 }
 
-.icon-search {
+.ds-icon-search {
     @extend %icon;
 
     &::after {
@@ -1676,7 +1678,7 @@
     }
 }
 
-.icon-send {
+.ds-icon-send {
     @extend %icon;
 
     &::after {
@@ -1684,7 +1686,7 @@
     }
 }
 
-.icon-server {
+.ds-icon-server {
     @extend %icon;
 
     &::after {
@@ -1692,7 +1694,7 @@
     }
 }
 
-.icon-settings {
+.ds-icon-settings {
     @extend %icon;
 
     &::after {
@@ -1700,7 +1702,7 @@
     }
 }
 
-.icon-share-2 {
+.ds-icon-share-2 {
     @extend %icon;
 
     &::after {
@@ -1708,7 +1710,7 @@
     }
 }
 
-.icon-share {
+.ds-icon-share {
     @extend %icon;
 
     &::after {
@@ -1716,7 +1718,7 @@
     }
 }
 
-.icon-shield-off {
+.ds-icon-shield-off {
     @extend %icon;
 
     &::after {
@@ -1724,7 +1726,7 @@
     }
 }
 
-.icon-shield {
+.ds-icon-shield {
     @extend %icon;
 
     &::after {
@@ -1732,7 +1734,7 @@
     }
 }
 
-.icon-shopping-bag {
+.ds-icon-shopping-bag {
     @extend %icon;
 
     &::after {
@@ -1740,7 +1742,7 @@
     }
 }
 
-.icon-shopping-cart {
+.ds-icon-shopping-cart {
     @extend %icon;
 
     &::after {
@@ -1748,7 +1750,7 @@
     }
 }
 
-.icon-shuffle {
+.ds-icon-shuffle {
     @extend %icon;
 
     &::after {
@@ -1756,7 +1758,7 @@
     }
 }
 
-.icon-sidebar {
+.ds-icon-sidebar {
     @extend %icon;
 
     &::after {
@@ -1764,7 +1766,7 @@
     }
 }
 
-.icon-skip-back {
+.ds-icon-skip-back {
     @extend %icon;
 
     &::after {
@@ -1772,7 +1774,7 @@
     }
 }
 
-.icon-skip-forward {
+.ds-icon-skip-forward {
     @extend %icon;
 
     &::after {
@@ -1780,7 +1782,7 @@
     }
 }
 
-.icon-slack {
+.ds-icon-slack {
     @extend %icon;
 
     &::after {
@@ -1788,7 +1790,7 @@
     }
 }
 
-.icon-slash {
+.ds-icon-slash {
     @extend %icon;
 
     &::after {
@@ -1796,7 +1798,7 @@
     }
 }
 
-.icon-sliders {
+.ds-icon-sliders {
     @extend %icon;
 
     &::after {
@@ -1804,7 +1806,7 @@
     }
 }
 
-.icon-smartphone {
+.ds-icon-smartphone {
     @extend %icon;
 
     &::after {
@@ -1812,7 +1814,7 @@
     }
 }
 
-.icon-smile {
+.ds-icon-smile {
     @extend %icon;
 
     &::after {
@@ -1820,7 +1822,7 @@
     }
 }
 
-.icon-speaker {
+.ds-icon-speaker {
     @extend %icon;
 
     &::after {
@@ -1828,7 +1830,7 @@
     }
 }
 
-.icon-square {
+.ds-icon-square {
     @extend %icon;
 
     &::after {
@@ -1836,7 +1838,7 @@
     }
 }
 
-.icon-star {
+.ds-icon-star {
     @extend %icon;
 
     &::after {
@@ -1844,7 +1846,7 @@
     }
 }
 
-.icon-stop-circle {
+.ds-icon-stop-circle {
     @extend %icon;
 
     &::after {
@@ -1852,7 +1854,7 @@
     }
 }
 
-.icon-sun {
+.ds-icon-sun {
     @extend %icon;
 
     &::after {
@@ -1860,7 +1862,7 @@
     }
 }
 
-.icon-sunrise {
+.ds-icon-sunrise {
     @extend %icon;
 
     &::after {
@@ -1868,7 +1870,7 @@
     }
 }
 
-.icon-sunset {
+.ds-icon-sunset {
     @extend %icon;
 
     &::after {
@@ -1876,7 +1878,7 @@
     }
 }
 
-.icon-tablet {
+.ds-icon-tablet {
     @extend %icon;
 
     &::after {
@@ -1884,7 +1886,7 @@
     }
 }
 
-.icon-tag {
+.ds-icon-tag {
     @extend %icon;
 
     &::after {
@@ -1892,7 +1894,7 @@
     }
 }
 
-.icon-target {
+.ds-icon-target {
     @extend %icon;
 
     &::after {
@@ -1900,7 +1902,7 @@
     }
 }
 
-.icon-terminal {
+.ds-icon-terminal {
     @extend %icon;
 
     &::after {
@@ -1908,7 +1910,7 @@
     }
 }
 
-.icon-thermometer {
+.ds-icon-thermometer {
     @extend %icon;
 
     &::after {
@@ -1916,7 +1918,7 @@
     }
 }
 
-.icon-thumbs-down {
+.ds-icon-thumbs-down {
     @extend %icon;
 
     &::after {
@@ -1924,7 +1926,7 @@
     }
 }
 
-.icon-thumbs-up {
+.ds-icon-thumbs-up {
     @extend %icon;
 
     &::after {
@@ -1932,7 +1934,7 @@
     }
 }
 
-.icon-toggle-left {
+.ds-icon-toggle-left {
     @extend %icon;
 
     &::after {
@@ -1940,7 +1942,7 @@
     }
 }
 
-.icon-toggle-right {
+.ds-icon-toggle-right {
     @extend %icon;
 
     &::after {
@@ -1948,7 +1950,7 @@
     }
 }
 
-.icon-trash-2 {
+.ds-icon-trash-2 {
     @extend %icon;
 
     &::after {
@@ -1956,7 +1958,7 @@
     }
 }
 
-.icon-trash {
+.ds-icon-trash {
     @extend %icon;
 
     &::after {
@@ -1964,7 +1966,7 @@
     }
 }
 
-.icon-trello {
+.ds-icon-trello {
     @extend %icon;
 
     &::after {
@@ -1972,7 +1974,7 @@
     }
 }
 
-.icon-trending-down {
+.ds-icon-trending-down {
     @extend %icon;
 
     &::after {
@@ -1980,7 +1982,7 @@
     }
 }
 
-.icon-trending-up {
+.ds-icon-trending-up {
     @extend %icon;
 
     &::after {
@@ -1988,7 +1990,7 @@
     }
 }
 
-.icon-triangle {
+.ds-icon-triangle {
     @extend %icon;
 
     &::after {
@@ -1996,7 +1998,7 @@
     }
 }
 
-.icon-truck {
+.ds-icon-truck {
     @extend %icon;
 
     &::after {
@@ -2004,7 +2006,7 @@
     }
 }
 
-.icon-tv {
+.ds-icon-tv {
     @extend %icon;
 
     &::after {
@@ -2012,7 +2014,7 @@
     }
 }
 
-.icon-twitter {
+.ds-icon-twitter {
     @extend %icon;
 
     &::after {
@@ -2020,7 +2022,7 @@
     }
 }
 
-.icon-type {
+.ds-icon-type {
     @extend %icon;
 
     &::after {
@@ -2028,7 +2030,7 @@
     }
 }
 
-.icon-umbrella {
+.ds-icon-umbrella {
     @extend %icon;
 
     &::after {
@@ -2036,7 +2038,7 @@
     }
 }
 
-.icon-underline {
+.ds-icon-underline {
     @extend %icon;
 
     &::after {
@@ -2044,7 +2046,7 @@
     }
 }
 
-.icon-unlock {
+.ds-icon-unlock {
     @extend %icon;
 
     &::after {
@@ -2052,7 +2054,7 @@
     }
 }
 
-.icon-upload-cloud {
+.ds-icon-upload-cloud {
     @extend %icon;
 
     &::after {
@@ -2060,7 +2062,7 @@
     }
 }
 
-.icon-upload {
+.ds-icon-upload {
     @extend %icon;
 
     &::after {
@@ -2068,7 +2070,7 @@
     }
 }
 
-.icon-user-check {
+.ds-icon-user-check {
     @extend %icon;
 
     &::after {
@@ -2076,7 +2078,7 @@
     }
 }
 
-.icon-user-minus {
+.ds-icon-user-minus {
     @extend %icon;
 
     &::after {
@@ -2084,7 +2086,7 @@
     }
 }
 
-.icon-user-plus {
+.ds-icon-user-plus {
     @extend %icon;
 
     &::after {
@@ -2092,7 +2094,7 @@
     }
 }
 
-.icon-user-x {
+.ds-icon-user-x {
     @extend %icon;
 
     &::after {
@@ -2100,7 +2102,7 @@
     }
 }
 
-.icon-user {
+.ds-icon-user {
     @extend %icon;
 
     &::after {
@@ -2108,7 +2110,7 @@
     }
 }
 
-.icon-users {
+.ds-icon-users {
     @extend %icon;
 
     &::after {
@@ -2116,7 +2118,7 @@
     }
 }
 
-.icon-video-off {
+.ds-icon-video-off {
     @extend %icon;
 
     &::after {
@@ -2124,7 +2126,7 @@
     }
 }
 
-.icon-video {
+.ds-icon-video {
     @extend %icon;
 
     &::after {
@@ -2132,7 +2134,7 @@
     }
 }
 
-.icon-voicemail {
+.ds-icon-voicemail {
     @extend %icon;
 
     &::after {
@@ -2140,7 +2142,7 @@
     }
 }
 
-.icon-volume-1 {
+.ds-icon-volume-1 {
     @extend %icon;
 
     &::after {
@@ -2148,7 +2150,7 @@
     }
 }
 
-.icon-volume-2 {
+.ds-icon-volume-2 {
     @extend %icon;
 
     &::after {
@@ -2156,7 +2158,7 @@
     }
 }
 
-.icon-volume-x {
+.ds-icon-volume-x {
     @extend %icon;
 
     &::after {
@@ -2164,7 +2166,7 @@
     }
 }
 
-.icon-volume {
+.ds-icon-volume {
     @extend %icon;
 
     &::after {
@@ -2172,7 +2174,7 @@
     }
 }
 
-.icon-watch {
+.ds-icon-watch {
     @extend %icon;
 
     &::after {
@@ -2180,7 +2182,7 @@
     }
 }
 
-.icon-wifi-off {
+.ds-icon-wifi-off {
     @extend %icon;
 
     &::after {
@@ -2188,7 +2190,7 @@
     }
 }
 
-.icon-wifi {
+.ds-icon-wifi {
     @extend %icon;
 
     &::after {
@@ -2196,7 +2198,7 @@
     }
 }
 
-.icon-wind {
+.ds-icon-wind {
     @extend %icon;
 
     &::after {
@@ -2204,7 +2206,7 @@
     }
 }
 
-.icon-x-circle {
+.ds-icon-x-circle {
     @extend %icon;
 
     &::after {
@@ -2212,7 +2214,7 @@
     }
 }
 
-.icon-x-octagon {
+.ds-icon-x-octagon {
     @extend %icon;
 
     &::after {
@@ -2220,7 +2222,7 @@
     }
 }
 
-.icon-x-square {
+.ds-icon-x-square {
     @extend %icon;
 
     &::after {
@@ -2228,7 +2230,7 @@
     }
 }
 
-.icon-x {
+.ds-icon-x {
     @extend %icon;
 
     &::after {
@@ -2236,7 +2238,7 @@
     }
 }
 
-.icon-youtube {
+.ds-icon-youtube {
     @extend %icon;
 
     &::after {
@@ -2244,7 +2246,7 @@
     }
 }
 
-.icon-zap-off {
+.ds-icon-zap-off {
     @extend %icon;
 
     &::after {
@@ -2252,7 +2254,7 @@
     }
 }
 
-.icon-zap {
+.ds-icon-zap {
     @extend %icon;
 
     &::after {
@@ -2260,7 +2262,7 @@
     }
 }
 
-.icon-zoom-in {
+.ds-icon-zoom-in {
     @extend %icon;
 
     &::after {
@@ -2268,7 +2270,7 @@
     }
 }
 
-.icon-zoom-out {
+.ds-icon-zoom-out {
     @extend %icon;
 
     &::after {

@@ -2,6 +2,12 @@
     border-bottom: 2px solid $color-3b;
     padding: 0;
     margin: 0;
+
+    & > {
+        h2, h3, h4, h5, h6, p, li {
+            max-width: 100%;
+        }
+    }
 }
 
 .ds-accordion__item + .ds-accordion__item {
@@ -10,10 +16,12 @@
 }
 
 .ds-accordion__trigger {
+    @extend .ds-icon--before;
+    @extend .ds-icon-plus;
     background: none;
     display: block;
     margin: 0;
-    padding: $spacer * 5;
+    padding: $spacer * 5 $spacer * 10;
     position: relative;
     text-align: left;
     width: 100%;
@@ -22,6 +30,7 @@
     cursor: pointer;
 
     &:hover {
+        background: $color-3a;
         .ds-accordion__title {
             text-decoration: none;
             color: $color-2;
@@ -30,22 +39,10 @@
 
     &.ds-accordion__trigger--active {
         display: block;
+        @extend .ds-icon-minus;
 
-        .ds-accordion__title {
-            &::after {
-                @extend .icon-minus;
-            }
-        }
     }
 
-    .ds-accordion__title {
-        // @extend [class*="icon-"];
-        @extend .icon-before;
-
-        &::after {
-            @extend .icon-plus;
-        }
-    }
 }
 
 
@@ -53,4 +50,16 @@
     display: none;
     padding: 24px;
     margin-top: 0;
+}
+
+/* this class when added to .ds-accordion adds numbers to accordion titles */
+.ds-accordion--numbered {
+    counter-reset: section;
+    .ds-accordion__title::before {
+        counter-increment: section;
+        content: counter(section) ": ";
+        margin-left: $spacer * 3;
+        margin-right: $spacer * 2;
+        color: $color-2;
+    }
 }
