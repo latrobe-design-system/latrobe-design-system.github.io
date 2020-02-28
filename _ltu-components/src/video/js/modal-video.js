@@ -1,6 +1,3 @@
----
-javascript: true
----
 /**
  * YouTube modal video
  *

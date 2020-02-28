@@ -1,6 +1,3 @@
----
-javascript: true
----
 /**
  *  Modal
  *  @param: target - element clicked to open modal.

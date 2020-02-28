@@ -8,5 +8,3 @@ Callouts are an excerpt of text or an article that has been pulled out and used 
 {% include sample-iframe.html snippet="callout/snippets/callout-default.html" blockWidth="full-width" %}
 
 {% include sample-iframe.html snippet="callout/snippets/callout-small.html" %}
-
-{% include sample-iframe.html snippet="callout/snippets/callout-noline.html" %}

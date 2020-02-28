@@ -13,8 +13,8 @@ kramdown:
 
 ## Generates Pattern Styles
 ## Disable to prevent pattern styles from being generated.
-sass:
-    sass_dir: _sass
+# sass:
+#     sass_dir: _sass
 
 exclude:
     - build.sh

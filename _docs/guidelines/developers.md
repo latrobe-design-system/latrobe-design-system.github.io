@@ -19,7 +19,7 @@ These instructions are for the Design System development team.
 ### Installation and setup
 
 1. Use your Git Client to Clone the design system repository: https://github.com/latrobe-design-system/latrobe-design-system.github.io
-2. 
+2.
 
 
 ### Using Jekyll static generator
@@ -38,3 +38,7 @@ Open terminal at folder and run: ./server.sh
 Commit code and push to GitHub
 
 GitHub will build and serve site
+
+npm install
+npm run preinstall
+npm run start
