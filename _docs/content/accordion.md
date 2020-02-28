@@ -4,7 +4,7 @@ status: ready
 info: Accordions help users see only the content they need. Accordions expand and collapse sections of content.
 ---
 
-Accordions should be used sparingly!
+Accordions should be used sparingly! Content should only be hidden for good reason. When there is a lot 
 
 ## Accessibilty
 
