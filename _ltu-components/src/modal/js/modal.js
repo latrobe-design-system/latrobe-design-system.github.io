@@ -5,7 +5,7 @@
  *  @param: maxWidth - sets a max width for the modal
  */
 
- function openModal(target, content, maxWidth='1280px'){
+window.openModal = function openModal(target, content, maxWidth='1280px'){
      // add an attribute to the clicked link to enable return of focus on overlay close
      $(target).attr('data-returnfocus', 'yes');
      // create overlay
@@ -60,6 +60,7 @@
 
         // get requested modal width
         var modalWidth = $(target).attr('data-modal-width');
+        var maxWidth;
         if (modalWidth == "medium") {
             maxWidth = "1024px";
         } else if (modalWidth == "large") {
