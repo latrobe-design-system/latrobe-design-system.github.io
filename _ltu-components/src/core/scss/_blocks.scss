@@ -3,7 +3,8 @@
 .ds-page-content > section,
 .ds-page-content > article {
     padding: 0 20px;
-    margin: 40px auto;
+    margin: 0 auto;
+    /*margin: 40px auto;*/
     max-width: 1104px; // 1024 + 80 (padding)
 
     @media (min-width: 640px) {
@@ -11,7 +12,7 @@
     }
 
     @media (min-width: 1000px) {
-        margin: 4% auto;
+        /*margin: 4% auto;*/
     }
 }
 
