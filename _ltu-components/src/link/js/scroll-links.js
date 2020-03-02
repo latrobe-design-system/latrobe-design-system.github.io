@@ -1,6 +1,3 @@
----
-javascript: true
----
 /**
  * Smooth scroll for jump links
  */

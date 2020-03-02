@@ -2,21 +2,15 @@
 title: "Error Alert With Content"
 status: "draft"
 text: The error page alert should be used with form validation errors or other errors which will block the user from completing their task.
-
-icon-x-circle: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
-
-alert-default-text: There was a problem with your application submission
-alert-heading: There was a problem with your application submission
-alert-text: <ul><li><a href="#">Full name must not be empty</a></li><li><a href="#">Email must not be empty</a></li><li><a href="#">Description must not be empty</a></li></ul>
 ---
 
 <div class="ds-alert ds-alert--error" role="alert">
     <div class="ds-alert__icon">
-        {{ page.icon-x-circle }}
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
     </div>
-    
+
     <div class="ds-alert__text">
-        <h3 class="h4">{{ page.alert-heading }}</h3>
-        <p>{{ page.alert-text }}</p>
+        <h3 class="h4">There was a problem with your application submission</h3>
+        <ul><li><a href="#">Full name must not be empty</a></li><li><a href="#">Email must not be empty</a></li><li><a href="#">Description must not be empty</a></li></ul>
     </div>
 </div>

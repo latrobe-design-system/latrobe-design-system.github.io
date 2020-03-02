@@ -1,6 +1,3 @@
----
-javascript: true
----
 /**
  *  Modal
  *  @param: target - element clicked to open modal.
@@ -8,11 +5,11 @@ javascript: true
  *  @param: maxWidth - sets a max width for the modal
  */
 
- function openModal(target, content, maxWidth='1280px'){
+window.openModal = function openModal(target, content, maxWidth='1280px'){
      // add an attribute to the clicked link to enable return of focus on overlay close
      $(target).attr('data-returnfocus', 'yes');
      // create overlay
-     var dialog = '<div role="dialog" aria-modal="true" class="overlay"><div class="ds-modal">'+content+'</div><button id="overlay-close" class="ds-btn--round-light icon-x">Close</button></div>';
+     var dialog = '<div role="dialog" aria-modal="true" class="overlay"><div class="ds-modal">'+content+'</div><button id="overlay-close" class="ds-btn--round-light ds-icon-x">Close</button></div>';
      // append overlay to page and add overlay-open class to body to stop scroll
      $('body').append(dialog).addClass('overlay-open');
      // set max width of modal
@@ -63,6 +60,7 @@ javascript: true
 
         // get requested modal width
         var modalWidth = $(target).attr('data-modal-width');
+        var maxWidth;
         if (modalWidth == "medium") {
             maxWidth = "1024px";
         } else if (modalWidth == "large") {

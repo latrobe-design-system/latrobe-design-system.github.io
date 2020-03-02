@@ -1,8 +1,7 @@
----
-javascript: true
----
 /**
  * Accordion
+ *
+ * TODO: add up/down and home/end keyboard controls https://www.w3.org/TR/wai-aria-practices-1.1/examples/accordion/accordion.html
  */
 jQuery(document).ready(function($) {
  	//do jQuery stuff when DOM is ready
@@ -15,6 +14,6 @@ jQuery(document).ready(function($) {
             $(this).attr( 'aria-expanded', 'true');
         }
 
-        $(this).next(".ds-accordion__content").slideToggle( "ds-accordion__trigger--active" );
+        $(this).parent().next(".ds-accordion__content").slideToggle( "ds-accordion__trigger--active" );
     });
 });
