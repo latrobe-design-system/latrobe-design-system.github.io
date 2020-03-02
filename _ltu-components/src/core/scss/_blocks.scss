@@ -30,6 +30,14 @@ div.ds-block {
 
 }
 
+// blocks within blocks act like headings
+div.ds-block div.ds-block {
+    margin: 0;
+}
+div.ds-block * + div.ds-block {
+    margin-top: 2rem;
+}
+
 // block width modifiers .ds-block--[medium|wide|full-width]
 div.ds-block {
 
