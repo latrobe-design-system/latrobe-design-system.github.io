@@ -5,8 +5,16 @@
  */
 jQuery(document).ready(function($) {
  	//do jQuery stuff when DOM is ready
+
+    // show all default open accordions
+    $( ".ds-accordion__trigger" ).each(function() {
+        if($(this).attr('aria-expanded') == 'true') {
+            $(this).parent().next(".ds-accordion__content").show();
+        }
+    });
+
+    // click handler for accordions
     $( ".ds-accordion__trigger" ).click(function() {
-        $(this).toggleClass("ds-accordion__trigger--active");
 
         if ($(this).attr('aria-expanded') == 'true') {
             $(this).attr( 'aria-expanded', 'false');
@@ -14,6 +22,6 @@ jQuery(document).ready(function($) {
             $(this).attr( 'aria-expanded', 'true');
         }
 
-        $(this).parent().next(".ds-accordion__content").slideToggle( "ds-accordion__trigger--active" );
+        $(this).parent().next(".ds-accordion__content").slideToggle();
     });
 });
