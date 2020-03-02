@@ -122,9 +122,9 @@ li {
 
 .ds-page-content,
 .ds-modal {
-     * + * {
-         margin-top: 1rem;
-     }
+    * + * {
+        margin-top: 1rem;
+    }
 
     * + h2,
     * + h3,
@@ -142,6 +142,31 @@ li {
     }
 
     * + blockquote {
+        margin-top: 4rem;
+    }
+}
+
+/* for standard WYSIWYG containers give margin back to first child */
+.ds-page-content > div:not(.ds-block),
+.ds-page-content > section:not(.ds-block),
+.ds-page-content > article:not(.ds-block) {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 2em;
+    }
+
+    h1,
+    p,
+    ol,
+    ul,
+    li {
+        margin-top: 1em;
+    }
+
+    blockquote {
         margin-top: 4rem;
     }
 }
