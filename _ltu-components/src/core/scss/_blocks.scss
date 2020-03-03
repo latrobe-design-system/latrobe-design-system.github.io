@@ -1,18 +1,21 @@
+.ds-page-content {
+    margin: 0 0 40px 0;
+
+    @media (min-width: 1000px) {
+        margin: 0 0 4% 0;
+    }
+}
+
 // set margins for standard content containers
 .ds-page-content > div,
 .ds-page-content > section,
 .ds-page-content > article {
     padding: 0 20px;
     margin: 0 auto;
-    /*margin: 40px auto;*/
     max-width: 1104px; // 1024 + 80 (padding)
 
     @media (min-width: 640px) {
         padding: 0 40px;
-    }
-
-    @media (min-width: 1000px) {
-        /*margin: 4% auto;*/
     }
 }
 
@@ -28,7 +31,6 @@ div.ds-block {
         // for blocks without background color
         margin: 4% 0;
     }
-
 }
 
 // blocks within blocks act like headings
