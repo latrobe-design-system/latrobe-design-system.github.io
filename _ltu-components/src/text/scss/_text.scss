@@ -116,6 +116,12 @@ li {
     margin: 0;
 }
 
+/* margins for WYSIWYG text align center to cater for line-length restriction */
+[style="text-align: center"] {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 // Lobotomised Owl technique
 // Allows not having to reset first child elements with a margin of 0
 // https://designsystem.gov.au/get-started/spacing-between-components/
