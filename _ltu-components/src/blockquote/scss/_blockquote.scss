@@ -30,8 +30,8 @@ blockquote {
         &:before {
             content: "";
             display: block;
-            width: 20px;
-            height: 2px;
+            width: $spacer * 5;
+            height: $spacer / 2;
             background: $color-3c;
             margin: 1rem 0 0.8rem 0;
         }
@@ -42,8 +42,8 @@ blockquote {
 
 .ds-blockquote--feature {
 
-    border-left: 4px solid $color-1;
-    padding-left: 24px;
+    border-left: $spacer solid $color-1;
+    padding-left: $spacer * 6;
     margin: 4rem 0;
 
     & > p {

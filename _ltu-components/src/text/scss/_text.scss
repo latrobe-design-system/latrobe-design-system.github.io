@@ -128,11 +128,33 @@ li {
 // Lobotomised Owl technique
 // Allows not having to reset first child elements with a margin of 0
 // https://designsystem.gov.au/get-started/spacing-between-components/
-
 .ds-page-content,
 .ds-modal {
-    * + * {
-        margin-top: 1rem;
+    // specifying block elements only otherwise firefox will add margins to inline elements as well
+    * + address,
+    * + article,
+    * + aside,
+    * + details,
+    * + dialog,
+    * + dd,
+    * + div,
+    * + dl,
+    * + dt,
+    * + fieldset,
+    * + figcaption,
+    * + figure,
+    * + footer,
+    * + form,
+    * + h1,
+    * + header,
+    * + hgroup,
+    * + hr,
+    * + main,
+    * + nav,
+    * + pre,
+    * + section,
+    * + table {
+        margin-top: 1rem; // based on base font size
     }
 
     * + h2,
@@ -140,18 +162,18 @@ li {
     * + h4,
     * + h5,
     * + h6 {
-        margin-top: 2em;
+        margin-top: 2em; // based on element size
     }
 
     * + p,
     * + ol,
     * + ul,
     * + li {
-        margin-top: 1em;
+        margin-top: 1em; // based on element size
     }
 
     * + blockquote {
-        margin-top: 4rem;
+        margin-top: 4rem; // based on element size
     }
 }
 
