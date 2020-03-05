@@ -130,30 +130,7 @@ li {
 // https://designsystem.gov.au/get-started/spacing-between-components/
 .ds-page-content,
 .ds-modal {
-    // specifying block elements only otherwise firefox will add margins to inline elements as well
-    * + address,
-    * + article,
-    * + aside,
-    * + details,
-    * + dialog,
-    * + dd,
-    * + div,
-    * + dl,
-    * + dt,
-    * + fieldset,
-    * + figcaption,
-    * + figure,
-    * + footer,
-    * + form,
-    * + h1,
-    * + header,
-    * + hgroup,
-    * + hr,
-    * + main,
-    * + nav,
-    * + pre,
-    * + section,
-    * + table {
+    * + * {
         margin-top: 1rem; // based on base font size
     }
 
@@ -174,6 +151,10 @@ li {
 
     * + blockquote {
         margin-top: 4rem; // based on element size
+    }
+
+    * + br {
+        margin-top: 0; // firefox fix 
     }
 }
 
