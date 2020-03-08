@@ -1,5 +1,5 @@
 /*
- *  This javascript is for leggacy header, nav and footer functions
+ *  This javascript is for legacy header, nav and footer functions
  */
 
 
@@ -12,7 +12,7 @@ if(window.outerWidth <= mobileBreakingPoint){
     b.className += ' nav-out';
 }
 
-/*** from behaviours.js #703156  ***/
+/*** behaviours.js #703156  -- EXCERPT ONLY ***/
 // set nav-out on window resize
 var resizeTimer,
     windowWidth = $(window).width();
@@ -36,7 +36,7 @@ $(window).on('resize', function(e) {
     }, 250);
 });
 
-/*** global.js #815086 -- excerpt only ***/
+/*** global.js #815086 -- EXCERPT ONLY ***/
 
 // Toggle mobile nav
 document.querySelector('#hamburger').addEventListener('click', function(event){
@@ -208,3 +208,29 @@ for (i = 0; i < triggers.length; i++) {
         }
     },false);
 }
+
+/*** my-saved-courses.js #846697  ***/
+// My saved courses
+var savedCourseList = [];
+var storedCourses = localStorage.getItem('savedCourses');
+var saveToggle = document.querySelector('#save-course-icon');
+var mySavedCourses = document.querySelector('#my-saved-courses');
+var favCount = document.querySelector('#favourite-count');
+// Add localStorage values to array
+if (storedCourses) {
+    var num = storedCourses.split(',');
+    for (var n = 0; n < num.length; n++) {
+        savedCourseList.push(parseInt(num[n]));
+    }
+    incrimentCourseCount();
+};
+// Update the counter for number of saved courses
+function incrimentCourseCount(){
+    favCount.parentNode.setAttribute('href','/courses/my-saved-courses?favourites='+savedCourseList);
+    favCount.textContent = savedCourseList.length;
+    // If no saved courses, hide counter and delete localStorage
+    if (savedCourseList.length == 0) {
+        mySavedCourses.classList.add('hidden');
+        localStorage.removeItem('savedCourses');
+    } else mySavedCourses.classList.remove('hidden');
+};
