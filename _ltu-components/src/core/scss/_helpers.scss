@@ -11,6 +11,12 @@
   display: none !important;
 }
 
+@media(min-width:1024px) {
+    .hide-on-desktop {
+        display: none !important;
+    }
+}
+
 /*
  * Hide only visually, but have it available for screen readers:
  * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
@@ -79,6 +85,7 @@
 .clearfix:after {
   clear: both;
 }
+
 
 /* ltu legacy class names */
 .off-screen,
