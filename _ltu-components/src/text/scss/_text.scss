@@ -149,12 +149,13 @@ li {
         margin-top: 1em; // based on element size
     }
 
-    * + blockquote {
+    * + blockquote,
+    * + table {
         margin-top: 4rem; // based on element size
     }
 
     * + br {
-        margin-top: 0; // firefox fix 
+        margin-top: 0; // firefox fix
     }
 }
 
