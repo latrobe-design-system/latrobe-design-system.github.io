@@ -1,5 +1,6 @@
 .ds-table-wrapper {
-    overflow: auto;
+    //responsive tables - scroll when
+    overflow-x: auto;
 }
 
 table {
@@ -7,20 +8,19 @@ table {
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
-    margin-bottom: $spacer * 10;
+}
 
-    @media(max-width: 768px){
-        width: 768px;
-        overflow-x: auto;
-    }
+thead {
+    border-top: 2px solid $color-3a;
 }
 
 table caption {
-    font-size: $h3;
+    font-size: $h4;
     font-weight: $medium;
-    padding: $spacer * 10;
+    padding: $spacer * 4 $spacer * 8;
     text-align: left;
     background-color: $color-3a;
+    border-top: 2px solid $color-3a;
 }
 
 table caption.subtle-right {
@@ -30,18 +30,21 @@ table caption.subtle-right {
 
 td, th {
     vertical-align: top;
+    padding: $spacer*7;
 }
 
 th {
     background-color: white;
-    padding: $spacer*5 $spacer * 8;
     text-align: left;
-    border-bottom: 2px solid $color-2a;
+    border-bottom: 2px solid $color-3a;
+}
+
+tbody th:first-child {
+    border-right: 2px solid $color-3a;
 }
 
 td {
-    border-right: 2px solid $color-3c;
-    padding: $spacer * 8;
+    border-right: 2px solid $color-3a;
 
     &:last-child {
         border-right: none;
@@ -49,9 +52,18 @@ td {
 }
 
 tr {
-    border-bottom: 2px solid $color-3c;
+    border-bottom: 2px solid $color-3a;
 }
 
-tr:nth-child(even) {
-    background-color: #fafafa;
+// jquery tablesorter styles
+.tablesorter .header {
+    background-image: url("icons/feather/chevron-down.svg");
+    background-position: center right 4px;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    cursor: pointer;
+}
+
+.tablesorter .header:hover {
+    background-color: $color-3;
 }
