@@ -138,8 +138,7 @@ li {
     * + h3,
     * + h4,
     * + h5,
-    * + h6,
-    * + .ds-table-wrapper {
+    * + h6 {
         margin-top: 2em; // based on element size
     }
 
@@ -151,7 +150,8 @@ li {
     }
 
     * + blockquote,
-    * + table {
+    * + table,
+    * + .ds-table-wrapper {
         margin-top: 4rem; // based on element size
     }
 
