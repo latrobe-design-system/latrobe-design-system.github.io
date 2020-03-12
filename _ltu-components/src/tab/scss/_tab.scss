@@ -5,6 +5,7 @@
     white-space: nowrap;
     overflow-x: scroll;
     scrollbar-width: none;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
 .ds-tabs-nav__tab {
