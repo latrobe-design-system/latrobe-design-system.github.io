@@ -10,17 +10,11 @@ table {
     border-spacing: 0;
 }
 
-thead {
-    border-top: 2px solid $color-3a;
-}
-
 table caption {
     font-size: $h4;
     font-weight: $medium;
     padding: $spacer * 4 $spacer * 8;
     text-align: left;
-    background-color: $color-3a;
-    border-top: 2px solid $color-3a;
 }
 
 table caption.subtle-right {
@@ -52,6 +46,7 @@ td {
 }
 
 tr {
+    border-top: 2px solid $color-3a;
     border-bottom: 2px solid $color-3a;
 }
 
