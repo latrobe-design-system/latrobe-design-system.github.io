@@ -5,11 +5,12 @@
  *  @param: maxWidth - sets a max width for the modal
  */
 
+// make function available globally
 window.openModal = function openModal(target, content, maxWidth='1280px'){
      // add an attribute to the clicked link to enable return of focus on overlay close
      $(target).attr('data-returnfocus', 'yes');
      // create overlay
-     var dialog = '<div role="dialog" aria-modal="true" class="overlay"><div class="ds-modal">'+content+'</div><button id="overlay-close" class="ds-btn--round-light ds-icon-x">Close</button></div>';
+     var dialog = '<div role="dialog" aria-modal="true" class="overlay"><div class="ds-modal">'+content+'</div><button id="overlay-close" class="ds-btn-round-light ds-icon-x">Close</button></div>';
      // append overlay to page and add overlay-open class to body to stop scroll
      $('body').append(dialog).addClass('overlay-open');
      // set max width of modal

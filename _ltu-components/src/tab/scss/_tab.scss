@@ -1,56 +1,58 @@
-.ds-tabs {
-    &--small {
-        .ds-tabs-nav {
-            display: block;
-            border-bottom: 2px solid $color-2a;
-        }
-    
-        .ds-tabs-nav__tab {
-            margin-right: 0;
-            font-weight: 500;
-    
-            &.active {
-                border-bottom: 4px solid $color-2a;
-            }
-    
-            a {
-                display: block;
-                padding: 0 12px 8px;
-                color: $color-2a;
-            }
-        }
-    }
-}
-
-
 .ds-tabs-nav {
-    list-style: none;
-    padding: 0;
+    display: block;
+    border-bottom: 2px solid $color-2a;
+    /* scroll on mobile when too wide */
+    white-space: nowrap;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
 
-    &__tab {
-        margin-right: 0;
-        display: inline-block;
-        padding: 12px;
-        font-weight: 500;
-        text-decoration: none;
-        display: inline-block;
-        margin-bottom: 0;
-        margin-right: 16px;
-        overflow: visible;
+.ds-tabs-nav__tab {
+    @extend .ds-btn-link;
+    font-weight: 500;
+    position: relative;
+    padding: $spacer * 4;
+    top: 2px;
+
+    &[aria-selected="true"]::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        display: block;
+        border-bottom: 4px solid $color-2a;
     }
 }
 
-.ds-tab-content {
-    &__body {
-        background-color: $color-3a;
-
-        padding: $spacer * 10;
-        > :first-child {
-            margin: 0;
+.ds-tabs-nav.ds-tabs-nav--pills {
+    border-bottom: none;
+    .ds-tabs-nav__tab {
+        @extend .ds-btn-pill;
+        margin-right: $spacer * 2;
+        &[aria-selected="true"] {
+            @extend .ds-btn-pill--selected
         }
+        &[aria-selected="true"]::after {
+            display: none;
+        }
+    }
+}
 
-        @media (min-width:1024px) {
-            padding: $spacer * 20;
+.ds-tabs-content {
+    margin-top: 2rem;
+}
+
+.ds-tabs--boxed {
+    .ds-tab-content {
+        &__body {
+            background-color: $color-3a;
+            padding: $spacer * 10;
+            margin: 0 !important;
+            /* override lobotomised owl */
+            @media (min-width:1024px) {
+                padding: $spacer * 20;
+            }
         }
     }
 }
