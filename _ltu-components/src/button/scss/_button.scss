@@ -1,10 +1,10 @@
-button.ds-btn,
-button.ds-btn-box {
+button.ds-btn {
     /* remove browser styling from button element */
     -webkit-appearance: none;
     -moz-appearance: none;
 }
 
+/* primary button */
 .ds-btn,
 .ds-btn-primary {
     border: 0;
@@ -27,7 +27,7 @@ button.ds-btn-box {
         color: white;
     }
 
-    &.disabled {
+    &.ds-btn--disabled {
         opacity: 0.25;
         pointer-events: none;
     }
@@ -60,8 +60,9 @@ button.ds-btn-box {
     }
 }
 
-.ds-btn--light {
-    @extend .ds-btn;
+/* primary button modifiers */
+.ds-btn--light,
+.ds-btn-primary--light {
     color: $color-1;
     background-color: white;
 
@@ -81,7 +82,8 @@ button.ds-btn-box {
     }
 }
 
-.ds-btn--secondary {
+/* secondary button */
+.ds-btn-secondary {
     @extend .ds-btn;
     color: $color-2;
     background-color: transparent;
@@ -102,8 +104,8 @@ button.ds-btn-box {
     }
 }
 
-.ds-btn--secondary-light {
-    @extend .ds-btn--secondary;
+/* secondary button modifiers*/
+.ds-btn-secondary--light {
     color: white;
     border: 2px solid white;
 
@@ -121,8 +123,25 @@ button.ds-btn-box {
     }
 }
 
-.ds-btn--small {
-    @extend .ds-btn;
+/* link button - looks like a link (for button tag) */
+.ds-btn-link {
+    padding: 0;
+    margin: 0;
+    color: $color-1;
+    background: none;
+    text-decoration: underline;
+    border: 0;
+    border-radius: 0px;
+
+    &:hover {
+        background: none;
+        text-decoration: none;
+    }
+}
+
+/* common button modifiers*/
+.ds-btn--small,
+.ds-btn-secondary--small {
     padding: 4px 16px;
 
     &[class*="icon-"]{
@@ -144,22 +163,9 @@ button.ds-btn-box {
     }
 }
 
-.ds-btn--secondary-small {
-    @extend .ds-btn--small;
-    @extend .ds-btn--secondary;
-}
-
-.ds-btn--light-small {
-    @extend .ds-btn--small;
-    @extend .ds-btn--light;
-}
-
-.ds-btn--secondary-light-small {
-    @extend .ds-btn--small;
-    @extend .ds-btn--secondary-light;
-}
-
-.ds-btn--pill {
+/* pill button */
+.ds-btn-pill {
+    @extend .ds-btn-secondary;
     font-weight: 500;
     border: 2px solid $color-2;
     box-sizing: border-box;
@@ -181,35 +187,17 @@ button.ds-btn-box {
         text-decoration: underline;
         background-color: rgba(black,.15);
     }
-
-    &.selected {
-        color: white;
-        background-color: $color-2;
-    }
 }
 
-.ds-btn--pill-alt {
-    @extend .ds-btn--pill;
-    border: 2px solid $color-1;
-    color: $color-1;
-
-    &:visited {
-        color: $color-1;
-    }
-
-    &:hover {
-        text-decoration: underline;
-        background-color: rgba($color-1,.15);
-    }
-
-    &.selected {
-        color: white;
-        background-color: $color-1;
-    }
+/* pill button modifiers */
+.ds-btn-pill--selected {
+    color: white;
+    background-color: $color-2;
 }
 
-.ds-btn--round {
-    @extend .ds-btn--pill;
+/* round button */
+.ds-btn-round {
+    @extend .ds-btn-pill;
     background-color: transparent;
     width: 48px;
     height: 48px;
@@ -219,6 +207,9 @@ button.ds-btn-box {
     text-indent: 100%;
     overflow: hidden;
     white-space: nowrap;
+    &[class*="icon-"] {
+        padding: 0;
+    }
     &[class*="icon-"]::after {
         position: absolute;
         right: 0;
@@ -230,14 +221,13 @@ button.ds-btn-box {
     }
 }
 
-.ds-btn--round-small {
-    @extend .ds-btn--round;
+/* round button modifiers */
+.ds-btn-round--small {
     width: 36px;
     height: 36px;
 }
 
-.ds-btn--round-light {
-    @extend .ds-btn--round;
+.ds-btn-round--light {
     color: white;
     border: 2px solid white;
     &:visited {
@@ -252,11 +242,8 @@ button.ds-btn-box {
     }
 }
 
-.ds-btn--round-light-small {
-    @extend .ds-btn--round-light;
-    @extend .ds-btn--round-small;
-}
 
+/* form button */
 input[type="button"] {
     @extend .ds-btn;
     cursor: pointer;
