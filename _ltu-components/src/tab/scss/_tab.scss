@@ -4,8 +4,12 @@
     /* scroll on mobile when too wide */
     white-space: nowrap;
     overflow-x: scroll;
+    /* hide scrollbar */
     scrollbar-width: none;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
 }
 
 .ds-tabs-nav__tab {
