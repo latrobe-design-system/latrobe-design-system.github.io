@@ -9,6 +9,7 @@
 
 .ds-tabs-nav__tab {
     @extend .ds-btn-link;
+    cursor: pointer;
     font-weight: 500;
     position: relative;
     padding: $spacer * 4;
