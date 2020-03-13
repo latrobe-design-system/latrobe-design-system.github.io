@@ -29,7 +29,12 @@ div.ds-block {
 
     @media (min-width: 1000px) {
         // for blocks without background color
-        margin: 6% 0;
+        margin: 4% 0;
+    }
+
+    @media (min-width: 2000px) {
+        // for blocks without background color
+        margin: 80px 0;
     }
 }
 
@@ -131,9 +136,14 @@ div.ds-block {
         @media (min-width: 1000px) {
             padding-left: 4%;
             padding-right: 4%;
-            padding-top: 6%;
-            padding-bottom: 6%;
+            padding-top: 4%;
+            padding-bottom: 4%;
             margin: 0;
+        }
+
+        @media (min-width: 2000px) {
+            padding-top: 80px;
+            padding-bottom: 80px;
         }
     }
 }
