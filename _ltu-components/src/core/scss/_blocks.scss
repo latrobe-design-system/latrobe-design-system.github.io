@@ -1,8 +1,8 @@
 .ds-page-content {
-    margin: 0 0 40px 0;
+    //margin: 0 0 40px 0;
 
     @media (min-width: 1000px) {
-        margin: 0 0 4% 0;
+        //margin: 0 0 4% 0;
     }
 }
 
@@ -171,6 +171,25 @@ div.ds-block--black-nodes + div.ds-block--black-nodes {
 // adjust spacing between adjancent red-nodes blocks
 div.ds-block--red-nodes + div.ds-block--red-nodes {
     padding-top: 0;
+}
+
+.ds-page-content > div:not(.ds-block),
+.ds-page-content > section:not(.ds-block),
+.ds-page-content > article:not(.ds-block) {
+    //adjust spacing between text div and footer if last child
+    &:lastchild {
+        margin-bottom: 4%;
+    }
+    //adjust spacing between text div and background colour divs
+    + {
+        div.ds-block--grey,
+        div.ds-block--black,
+        div.ds-block--red,
+        div.ds-block--black-nodes,
+        div.ds-block--red-nodes {
+            margin-top: 4%;
+        }
+    }
 }
 
 .ds-block__wrapper {
