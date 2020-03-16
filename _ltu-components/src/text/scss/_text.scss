@@ -111,10 +111,10 @@ li:empty {
 }
 
 ol,
-ul,
-li {
+ul {
     margin: 0;
 }
+
 
 /* margins for WYSIWYG text align center and right to cater for line-length restriction */
 [style*="text-align: center"] {
@@ -144,9 +144,12 @@ li {
 
     * + p,
     * + ol,
-    * + ul,
-    * + li {
+    * + ul {
         margin-top: 1em; // based on element size
+    }
+
+    * + li {
+        margin-top: 0.5em; // based on element size
     }
 
     * + blockquote,
@@ -164,7 +167,7 @@ li {
 .ds-page-content > div:not(.ds-block),
 .ds-page-content > section:not(.ds-block),
 .ds-page-content > article:not(.ds-block) {
-    > {
+    //> {
         h1 {
             margin: $spacer * 8 0;
         }
@@ -178,15 +181,19 @@ li {
 
         p,
         ol,
-        ul,
-        li {
+        ul {
             margin-top: 1em;
+        }
+
+        li {
+            margin-top: 0.5em;
         }
 
         blockquote {
             margin-top: 4rem;
         }
-    }
+    //}
+
 }
 
 //
