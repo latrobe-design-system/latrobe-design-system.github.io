@@ -96,8 +96,26 @@ p {
     margin: 0;
 }
 
-p.ds-lead {
+/* lead paragraph */
+.ds-lead {
+    position: relative;
     font-size: 1.2rem;
+    padding-top: 40px;
+    &::before {
+        content: "";
+        display: block;
+        width: 32px;
+        height: 32px;
+        background-image: url("icons/latrobe-chevron-RGB.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    @media(min-width: 768px) {
+        padding-right: 32px;
+    }
 }
 
 p.ds-small,

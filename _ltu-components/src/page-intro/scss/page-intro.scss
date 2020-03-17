@@ -1,0 +1,14 @@
+.ds-page-intro {
+    display: flex;
+    flex-direction: column-reverse;
+    @media(min-width: 768px) {
+        flex-direction: row;
+        align-items: center;
+
+        .ds-page-intro__image {
+            min-height: 260px;
+            max-height: 260px;
+        }
+    }
+
+}

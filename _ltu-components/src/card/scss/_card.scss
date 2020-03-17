@@ -54,17 +54,17 @@
     text-decoration: none;
     border: solid 1px $color-3b;
 
+    .ds-card__heading {
+        color: $color-1;
+        text-decoration: underline;
+    }
+
     &:hover {
         transform: translateY(-4px);
         color: $color-2;
         text-decoration: none;
         cursor: pointer;
         box-shadow: $shadow-2;
-
-        .ds-card__heading {
-            color: $color-1;
-            text-decoration: underline;
-        }
 
         .ds-card__link {
             text-decoration: underline;

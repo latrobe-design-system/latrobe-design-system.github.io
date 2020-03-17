@@ -57,7 +57,7 @@ $teal: invert(49%) sepia(45%) saturate(3730%) hue-rotate(142deg) brightness(92%)
 // Spacing
 //----------------------------------------------------------------------------------------------------------------------------------//
 
-$spacer: 4px !default;
+$spacer: 0.25rem !default; /* 4px */
 
 $space-unit: 4px !default;
 $space-sm:   calc(1 * var($space-unit)) !default;
