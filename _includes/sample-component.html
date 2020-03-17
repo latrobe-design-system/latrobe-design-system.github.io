@@ -1,14 +1,19 @@
 {% for pattern in site.ltu-components %}
     {%- if pattern.url contains include.snippet -%}
-        {%- if include.container != 'false' -%}
-            <div class="ds-block ds-block--{{ include.blockBackground }} ds-block--{{ include.blockWidth }}">
+        {% if include.container == 'false' %}
+            <div>
+            {{ pattern.content }}
+            </div>
+        {% elsif pattern.type == 'block' %}
+            <div class="ds-block ds-block--{{ pattern.width }} ds-block--{{ include.blockBackground }}">
                 <div class="ds-block__wrapper">
-                    {{ pattern.content }}
+                {{ pattern.content }}
                 </div>
             </div>
-
-        {%- else -%}
+        {% else %}
+            <div>
             {{ pattern.content }}
-        {%- endif -%}
+            </div>
+        {% endif %}
     {%- endif -%}
 {% endfor %}

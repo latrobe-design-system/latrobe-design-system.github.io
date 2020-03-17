@@ -12,7 +12,11 @@ showBreadcrumb: "yes"
     <h1>h1 Heading Lorem ipsum dolor sit amet</h1>
 </div>
 
-<!-- Success Alert -->
+{% include sample-component.html
+    snippet="ltu-components/src/page-intro/snippets/page-intro.html"
+    contiainer="false"
+%}
+
 {% include sample-component.html
     snippet="ltu-components/src/callout/snippets/callout-default.html"
 %}
@@ -54,6 +58,7 @@ showBreadcrumb: "yes"
 
 {% include sample-component.html
     snippet="ltu-components/src/accordion/snippets/accordion.html"
+    blockBackground="grey"
 %}
 
 {% include sample-component.html

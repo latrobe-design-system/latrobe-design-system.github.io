@@ -30,8 +30,6 @@ status: draft
 
 {% include sample-iframe.html snippet="text/snippets/unordered_list.html" %}
 
-{% include sample-iframe.html snippet="text/snippets/double_list.html" %}
-
 {% include sample-iframe.html snippet="text/snippets/hr.html" %}
 
 {% include sample-iframe.html snippet="text/snippets/inline.html" %}
