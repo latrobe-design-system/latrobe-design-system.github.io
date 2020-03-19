@@ -1,11 +1,3 @@
-.ds-page-content {
-    //margin-bottom: 40px;
-
-    @media (min-width: 1000px) {
-        //margin-bottom: 4%;
-    }
-}
-
 // set margins for standard content containers
 .ds-page-content > div,
 .ds-page-content > section,
@@ -44,6 +36,12 @@ div.ds-block div.ds-block {
 }
 div.ds-block * + div.ds-block {
     margin-top: 2rem;
+}
+
+// .ds-block__wrapper wraps block content
+.ds-block__wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
 }
 
 // block width modifiers .ds-block--[medium|wide|full-width]
@@ -194,30 +192,24 @@ div.ds-block--red-nodes + div.ds-block--red-nodes {
     }
 }
 
-.ds-block__wrapper {
+
+
+.ds-block__header {
+    text-align: left;
     max-width: 1024px;
     margin: 0 auto;
-}
-
-.ds-block-header {
-    text-align: center;
-    margin-bottom: 4%;
 
     > * {
-        margin-left: auto;
+        margin-left: 0;
         margin-right: auto;
     }
 
 
     &--center-align {
         text-align: center;
-    }
 
-    &--left-align {
-
-        text-align: left;
-        > * {
-            margin-left: 0;
+        > * {    
+            margin-left: auto;
             margin-right: auto;
         }
     }
