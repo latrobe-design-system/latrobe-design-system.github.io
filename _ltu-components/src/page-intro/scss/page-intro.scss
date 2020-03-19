@@ -3,7 +3,7 @@
     flex-direction: column-reverse;
     @media(min-width: 768px) {
         flex-direction: row;
-        align-items: center;
+        align-items: flex-start;
 
         .ds-page-intro__image {
             min-height: 260px;

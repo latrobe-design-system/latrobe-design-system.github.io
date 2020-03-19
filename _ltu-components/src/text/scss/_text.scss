@@ -185,7 +185,7 @@ ul {
 .ds-page-content > div:not(.ds-block),
 .ds-page-content > section:not(.ds-block),
 .ds-page-content > article:not(.ds-block) {
-    //> {
+    > {
         h1 {
             margin: $spacer * 8 0;
         }
@@ -210,7 +210,7 @@ ul {
         blockquote {
             margin-top: 4rem;
         }
-    //}
+    }
 
 }
 

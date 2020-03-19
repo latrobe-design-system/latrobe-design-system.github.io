@@ -6,7 +6,7 @@ module.exports = {
     './_(includes|layouts)/**/*.html',
     './_ltu-components/src/**/*.html',
     './_docs/**/*.md',
-    './all-components.md',
+    './all-patterns.md',
   ],
   scripts: {
     src: './_ltu-components/src/**/*.js',

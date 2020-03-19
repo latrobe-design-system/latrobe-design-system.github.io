@@ -1,9 +1,10 @@
 // @include these for flex or grid with flex fallback columns
 // optionally pass base width
-@mixin columns($basis-width: 260px, $alignment: center) {
+// note: basis with of 232 with 32px gutter allows for up to four columns in the standard 1024 content container
+@mixin columns($basis-width: 232px, $alignment: center) {
     display: flex;
     justify-content: $alignment;
-    margin-right: -32px;
+    margin-right: -$spacer*8; /* 2rem/32px */
     & > * {
         flex-grow: 1;
         flex-shrink: 0;
@@ -14,12 +15,12 @@
         flex-wrap: wrap;
     }
 }
-@mixin columns-grid($basis-width: 260px, $alignment: center, $wrap: auto-fit) {
+@mixin columns-grid($basis-width: 232px, $alignment: center, $wrap: auto-fit) {
     @include columns($basis-width, $alignment); /* flex fallback */
     @supports(display: grid) {
         display: grid;
         justify-items: $alignment;
-        grid-column-gap: 32px;
+        grid-column-gap: $spacer*8; /* 2rem/32px */
         margin-right: 0;
         grid-template-columns: repeat($wrap, minmax($basis-width, 1fr));
         & > * {
