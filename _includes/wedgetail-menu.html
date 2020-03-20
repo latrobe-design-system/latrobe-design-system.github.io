@@ -47,15 +47,6 @@
 
         <p class='wedgetail-menu-list__heading'>Components</p>
 
-        <p class="wedgetail-menu-list__sub-heading">Forms</p>
-
-        {%- assign x = site.docs | where: 'parentmenu', 'form' | sort: 'url' -%}
-
-        <ul>
-            {%- for pattern in x -%}
-                {%- include wedgetail-menu-item.html -%}
-            {%- endfor -%}
-        </ul>
 
         <p class="wedgetail-menu-list__sub-heading">Navigation</p>
 
@@ -70,6 +61,16 @@
         <p class="wedgetail-menu-list__sub-heading">Content</p>
 
         {%- assign x = site.docs | where: 'parentmenu', 'content' | sort: 'url' -%}
+
+        <ul>
+            {%- for pattern in x -%}
+                {%- include wedgetail-menu-item.html -%}
+            {%- endfor -%}
+        </ul>
+
+        <p class="wedgetail-menu-list__sub-heading">Forms</p>
+
+        {%- assign x = site.docs | where: 'parentmenu', 'form' | sort: 'url' -%}
 
         <ul>
             {%- for pattern in x -%}

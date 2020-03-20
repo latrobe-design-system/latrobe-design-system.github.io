@@ -3,16 +3,14 @@
 // note: basis with of 232 with 32px gutter allows for up to four columns in the standard 1024 content container
 @mixin columns($basis-width: 232px, $alignment: center) {
     display: flex;
+    flex-wrap: wrap;
     justify-content: $alignment;
     margin-right: -$spacer*8; /* 2rem/32px */
     & > * {
         flex-grow: 1;
         flex-shrink: 0;
         flex-basis: $basis-width;
-        margin: 0 2rem 1rem 0;
-    }
-    @media(max-width: 1280px) {
-        flex-wrap: wrap;
+        margin: 1rem 2rem 0 0;
     }
 }
 @mixin columns-grid($basis-width: 232px, $alignment: center, $wrap: auto-fit) {
@@ -24,7 +22,7 @@
         margin-right: 0;
         grid-template-columns: repeat($wrap, minmax($basis-width, 1fr));
         & > * {
-            margin: 0 0 1rem 0;
+            margin: 1rem 0 0 0;
         }
     }
 }
