@@ -1,12 +1,9 @@
 .ds-card {
     position: relative;
-
-    box-sizing: border-box;
     width: 100%;
     max-width: 450px;
-    margin-top: 16px;
-    margin-bottom: 16px;
     transition: all 0.3s ease-in-out;
+    background: #fff;
 }
 
 .ds-card__header {
@@ -202,13 +199,5 @@
 
 /* layouts */
 .ds-card-set {
-    @include columns-grid;
-
-    &--left {
-        @include columns-grid($alignment: left, $wrap: auto-fill);
-    }
-
-    & + * {
-        margin-top: 4em;
-    }
+    @include columns-grid($alignment: left, $wrap: auto-fill);
 }
