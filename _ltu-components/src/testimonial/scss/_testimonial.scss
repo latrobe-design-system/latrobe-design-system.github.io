@@ -71,7 +71,7 @@
 
 
 .ds-testimonial-set {
-    @extend .ds-card-set;
+    @include columns-grid($alignment: center);
 }
 
 /* if only one exists */

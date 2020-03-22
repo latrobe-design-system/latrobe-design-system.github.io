@@ -38,5 +38,5 @@
 
 /* proof point set */
 .ds-proofpoint-set {
-    @include columns;
+    @include columns($alignment: center);
 }
