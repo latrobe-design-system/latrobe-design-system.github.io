@@ -199,5 +199,5 @@
 
 /* layouts */
 .ds-card-set {
-    @include columns-grid($alignment: left, $wrap: auto-fill);
+    @include columns-grid();
 }
