@@ -12,7 +12,7 @@
 }
 
 div.ds-block {
-    clear: both;
+    clear: both; /* inase there is a float above */
 
     max-width: 100%;
 
@@ -20,16 +20,7 @@ div.ds-block {
     padding-top: 0px;
     padding-bottom: 0px;
     margin: 40px 0;
-
-    @media (min-width: 1000px) {
-        // for blocks without background color
-        margin: 4% 0;
-    }
-
-    @media (min-width: 2000px) {
-        // for blocks without background color
-        margin: 80px 0;
-    }
+    margin: $h2*2 0; // blocks have same top-bottom spacing as h2
 }
 
 // blocks within blocks act like headings
@@ -129,21 +120,14 @@ div.ds-block {
     &--black-nodes,
     &--red-nodes {
         // for blocks with background color
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: $h2*1.5;  // bg color blocks have slightly smaller top spacing than h2
+        padding-bottom: $h2*2;  // bg color blocks have same bottom spacing of h2
         margin: 0;
 
         @media (min-width: 1000px) {
             padding-left: 4%;
             padding-right: 4%;
-            padding-top: 4%;
-            padding-bottom: 4%;
             margin: 0;
-        }
-
-        @media (min-width: 2000px) {
-            padding-top: 80px;
-            padding-bottom: 80px;
         }
     }
 }
@@ -179,7 +163,7 @@ div.ds-block--red-nodes + div.ds-block--red-nodes {
     > article:not(.ds-block) {
         //adjust spacing between text div and footer if last child
         &:last-child {
-            margin-bottom: 4%;
+            margin-bottom: $h2*2;  // blocks have same top-bottom spacing as h2
         }
         //adjust spacing between text div and background colour divs
         + {
@@ -188,7 +172,7 @@ div.ds-block--red-nodes + div.ds-block--red-nodes {
             div.ds-block--red,
             div.ds-block--black-nodes,
             div.ds-block--red-nodes {
-                margin-top: 4%;
+                margin-top: $h2*2;  // blocks have same top-bottom spacing as h2
             }
         }
     }
