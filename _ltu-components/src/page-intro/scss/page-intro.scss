@@ -1,14 +1,21 @@
 .ds-page-intro {
     display: flex;
     flex-direction: column-reverse;
+    margin-top: 1rem !important; /* override lobotomised owl */
+    .ds-page-intro__content {
+        margin-top: 1rem !important; /* override lobotomised owl */
+    }
+    .ds-page-intro__image {
+        margin-top: 0 !important; /* override lobotomised owl */
+        align-self: flex-start;
+    }
     @media(min-width: 768px) {
         flex-direction: row;
-        align-items: flex-start;
-
         .ds-page-intro__image {
+            margin-top: 0 !important; /* override lobotomised owl */
+            
             min-height: 260px;
             max-height: 260px;
         }
     }
-
 }
