@@ -6,6 +6,10 @@
     & > * {
         max-width: 100%;
     }
+
+    button:focus {
+        outline-offset: -2px;
+    }
 }
 
 .ds-accordion__trigger {

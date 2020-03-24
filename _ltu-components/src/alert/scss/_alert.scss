@@ -23,7 +23,7 @@
     background-color: mix(#52c41a, white, 5%);
     border-color: #52c41a;
 
-    svg * {
+    svg {
         color: #52c41a;
     }
 }
@@ -32,7 +32,7 @@
     background-color: rgba($color-1, 0.05);
     border-color: rgba($color-1, 1);
 
-    svg * {
+    svg {
         color: rgba($color-1, 1);
     }
 }
@@ -41,7 +41,7 @@
     background-color: rgba($color-alt-2, 0.05);
     border-color: rgba($color-alt-2, 1);
 
-    svg * {
+    svg {
         color: rgba($color-alt-2, 1);
     }
 }
@@ -50,7 +50,7 @@
     background-color: rgba($color-alt-3, 0.05);
     border-color: rgba($color-alt-3, 1);
 
-    svg * {
+    svg {
         color: rgba($color-alt-3, 1);
     }
 }

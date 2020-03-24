@@ -17,13 +17,9 @@ textarea {
     -webkit-appearance: none; // IOS remove default styling
 }
 
-input:focus,
-input:focus + label::before,
-select:focus,
-textarea:focus {
-    outline: none;
-    border-color: #80bdff;
-    box-shadow: 0 0 0 2px rgba(0,123,255,.25);
+
+input:focus + label::before {
+    @extend :focus;
 }
 
 input[type="number"]::-webkit-inner-spin-button {
