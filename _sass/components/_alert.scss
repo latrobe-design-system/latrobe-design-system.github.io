@@ -1,0 +1,26 @@
+.alert {
+    color: #242424;
+    display: flex;
+    padding: 16px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: red;
+    background-color: rgba(red,0.3);
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 1.8em;
+        height: 1.8em;
+        background-image: url(icons/feather/alert-circle.svg);
+        background-repeat: no-repeat;
+        background-size: 1em 1em;
+        background-position: left center;
+    }
+}
+.alert--info {
+    border-color: lightblue;
+    background-color: rgba(lightblue,0.3);
+    &::before {
+        background-image: url(icons/feather/info.svg);
+    }
+}

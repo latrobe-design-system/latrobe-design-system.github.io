@@ -1,14 +1,17 @@
 ---
 title: "Accordion"
 status: ready
-info: Accordions help users see only the content they need. Accordions expand and collapse sections of content.
+ 
 ---
+Accordions help users see only the content they need. Accordions expand and collapse sections of content.
+{: .intro}
 
-Accordions should be used sparingly! Content should only be hidden for good reason.
+Accordions should be used sparingly! Content should only be hidden for well considered reasons.
+{: .alert .alert--info}
 
-Accordions are good when content is selective i.e. there may be many sections under a give topic but only a few sections apply to a given individual at a time.
-
-Accordions can also be used to provide a process overview with the detail of each step hidden. See the [numbered accordion example](#accordion-numbered) below.
+Accordions are good for:
+* **Selective content:** i.e. there may be many sections under a given topic but only a few sections apply to a given individual at a time.
+* **Complex process overviews:** with the detail of each step hidden. See the [numbered accordion example](#accordion-numbered) below.
 
 ## Accessibilty
 
