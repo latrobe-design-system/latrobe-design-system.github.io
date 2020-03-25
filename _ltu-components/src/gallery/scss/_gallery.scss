@@ -1,13 +1,13 @@
 .ds-image-grid {
     display: grid;
-    grid-gap: $spacer * 4;
+    grid-gap: $space-unit * 4;
 
     @include bp-down(xl) {
-        grid-gap: $spacer * 2;
+        grid-gap: $space-unit * 2;
     }
 
     @include bp-down(sm) {
-        grid-gap: $spacer;
+        grid-gap: $space-unit;
     }
 
     &__image {
@@ -63,7 +63,7 @@
         left: 0;
         z-index: 100;
         width: 100%;
-        padding: $spacer * 4;
+        padding: $space-unit * 4;
         color: white;
         background: linear-gradient(transparent, #242424);
 

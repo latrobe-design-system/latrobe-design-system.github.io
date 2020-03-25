@@ -1,3 +1,6 @@
+// depenencies
+@use "config";
+
 // set margins for standard content containers
 .ds-page-content > div,
 .ds-page-content > section,
@@ -20,7 +23,7 @@ div.ds-block {
     padding-top: 0px;
     padding-bottom: 0px;
     margin: 40px 0;
-    margin: $h2*2 0; // blocks have same top-bottom spacing as h2
+    margin: config.$h2*2 0; // blocks have same top-bottom spacing as h2
 }
 
 // blocks within blocks act like headings
@@ -67,7 +70,7 @@ div.ds-block {
 div.ds-block {
 
     &--grey {
-        background-color: $color-3a;
+        background-color: config.$color-3a;
     }
 
     &--black {
@@ -89,7 +92,7 @@ div.ds-block {
     }
 
     &--red {
-        background-color: $color-1;
+        background-color: config.$color-1;
 
         .ds-block__header {
             color: white;
@@ -97,7 +100,7 @@ div.ds-block {
     }
 
     &--black-nodes {
-        background-color: $color-2;
+        background-color: config.$color-2;
         background-image: url("img/bg-nodes.svg");
 
         .ds-block__header {
@@ -106,7 +109,7 @@ div.ds-block {
     }
 
     &--red-nodes {
-        background-color: $color-1;
+        background-color: config.$color-1;
         background-image: url("img/bg-nodes.svg");
 
         .ds-block__header {
@@ -120,8 +123,8 @@ div.ds-block {
     &--black-nodes,
     &--red-nodes {
         // for blocks with background color
-        padding-top: $h2*1.5;  // bg color blocks have slightly smaller top spacing than h2
-        padding-bottom: $h2*2;  // bg color blocks have same bottom spacing of h2
+        padding-top: config.$h2*1.5;  // bg color blocks have slightly smaller top spacing than h2
+        padding-bottom: config.$h2*2;  // bg color blocks have same bottom spacing of h2
         margin: 0;
 
         @media (min-width: 1000px) {
@@ -163,7 +166,7 @@ div.ds-block--red-nodes + div.ds-block--red-nodes {
     > article:not(.ds-block) {
         //adjust spacing between text div and footer if last child
         &:last-child {
-            margin-bottom: $h2*2;  // blocks have same top-bottom spacing as h2
+            margin-bottom: config.$h2*2;  // blocks have same top-bottom spacing as h2
         }
         //adjust spacing between text div and background colour divs
         + {
@@ -172,7 +175,7 @@ div.ds-block--red-nodes + div.ds-block--red-nodes {
             div.ds-block--red,
             div.ds-block--black-nodes,
             div.ds-block--red-nodes {
-                margin-top: $h2*2;  // blocks have same top-bottom spacing as h2
+                margin-top: config.$h2*2;  // blocks have same top-bottom spacing as h2
             }
         }
     }

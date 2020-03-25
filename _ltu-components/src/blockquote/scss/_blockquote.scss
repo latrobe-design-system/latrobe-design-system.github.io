@@ -1,11 +1,15 @@
+// depenencies
+@use "config";
+@use "text/scss/text";
+
 blockquote {
     margin: 4rem 0;
 
     & > p {
         -webkit-font-smoothing: initial;
         -moz-osx-font-smoothing: initial;
-        font-size: $h4;
-        font-family: $font-roboto-slab;
+        font-size: config.$h4;
+        font-family: config.$font-roboto-slab;
         font-weight: 400;
         b,
         strong {
@@ -30,9 +34,9 @@ blockquote {
         &:before {
             content: "";
             display: block;
-            width: $spacer * 5;
-            height: $spacer / 2;
-            background: $color-3c;
+            width: config.$space-unit * 5;
+            height: config.$space-unit / 2;
+            background: config.$color-3c;
             margin: 1rem 0 0.8rem 0;
         }
 
@@ -42,20 +46,20 @@ blockquote {
 
 .ds-blockquote--feature {
 
-    border-left: $spacer solid $color-1;
-    padding-left: $spacer * 6;
+    border-left: config.$space-unit solid config.$color-1;
+    padding-left: config.$space-unit * 6;
     margin: 4rem 0;
 
     & > p {
-        font-size: $h3;
-        font-weight: $light-weight;
+        font-size: config.$h3;
+        font-weight: config.$light-weight;
 
         @media(min-width: 768px){
-            font-size: $h2;
+            font-size: config.$h2;
         }
 
         @media(min-width: 1440px){
-            font-size: $h1;
+            font-size: config.$h1;
         }
 
     }

@@ -1,22 +1,25 @@
+// depenencies
+@use "config";
+
 .ds-cta {
     margin-top: 4%;
     
-    @include columns();
+    @include config.columns();
 
-    @include bp-up(xl) {
+    @include config.bp-up(xl) {
         text-align: center;
     }
     &--alternate {
-        @include columns;
+        @include config.columns;
     
         // display: flex;
         // flex-direction: column;
     
-        @include bp-down(xl) {
+        @include config.bp-down(xl) {
             align-items: center;
         }
     
-        @include bp-up(xl) {
+        @include config.bp-up(xl) {
             flex-direction: row;
         }
     
@@ -26,11 +29,11 @@
 
 
 .ds-cta__heading {
-    @include bp-down(xl) {
+    @include config.bp-down(xl) {
         text-align: center;
     }
 
-    @include bp-up(lg) {
+    @include config.bp-up(lg) {
         flex-grow: 0;
         flex-basis: 33.3%;
     }
@@ -40,19 +43,19 @@
     display: flex;
     flex-direction: column;
 
-    @include bp-up(sm) {
+    @include config.bp-up(sm) {
         flex-grow: 0;
         flex-basis: 25%;
     }
 
-    @include bp-up(lg) {
+    @include config.bp-up(lg) {
         flex-direction: row;
         flex-grow: 1;
     }
 }
 
 .ds-cta__item {
-    @include bp-up(lg) {
+    @include config.bp-up(lg) {
         width: 100%;
         margin-left: 40px;
         margin-bottom: 0;
@@ -62,7 +65,7 @@
         }
     }
 
-    @include bp-up(xl) {
+    @include config.bp-up(xl) {
         margin-top: 0;
 
         &:first-child {

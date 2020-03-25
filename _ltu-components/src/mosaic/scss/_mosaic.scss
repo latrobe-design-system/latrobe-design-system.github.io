@@ -1,3 +1,7 @@
+// depenencies
+@use "config";
+@use "core/scss/helpers";
+
 .ds-mosaic {
     @extend .clearfix;
     box-sizing: border-box;
@@ -48,7 +52,7 @@ li.ds-mosaic__tile {
     }
 
     &[data-bg="grey"] {
-        background-color: $color-3a;
+        background-color: config.$color-3a;
     }
     &[data-bg="black"],
     &[data-bg="red"] {
@@ -61,11 +65,11 @@ li.ds-mosaic__tile {
     }
 
     &[data-bg="black"] {
-        background-color: $color-2;
+        background-color: config.$color-2;
     }
 
     &[data-bg="red"] {
-        background-color: $color-1;
+        background-color: config.$color-1;
     }
 
     &[data-bg="image"] {

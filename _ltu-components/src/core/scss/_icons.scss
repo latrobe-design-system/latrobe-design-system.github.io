@@ -1,3 +1,6 @@
+//dependencies
+@use "variables";
+
 %icon {
     display: inline-block;
     position: relative;
@@ -17,21 +20,21 @@
         background-repeat: no-repeat;
         background-size: 100%;
         background-position: center;
-        filter: $near-black;
+        filter: variables.$near-black;
     }
 }
 
 .ds-icon--red {
 
     &::after {
-        filter: $red;
+        filter: variables.$red;
     }
 }
 
 .ds-icon--white {
 
     &::after {
-        filter: $white;
+        filter: variables.$white;
     }
 }
 

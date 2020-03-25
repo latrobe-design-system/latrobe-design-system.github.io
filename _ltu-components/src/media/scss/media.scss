@@ -1,3 +1,6 @@
+// depenencies
+@use "config";
+
 .ds-media-list {
 
 }
@@ -12,5 +15,5 @@
 }
 
 .ds-media-img {
-    margin-right: $spacer * 10;
+    margin-right: config.$space-unit * 10;
 }

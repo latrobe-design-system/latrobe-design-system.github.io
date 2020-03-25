@@ -1,3 +1,8 @@
+// depenencies
+@use "config";
+@use "core/scss/icons";
+@use "button/scss/button";
+
 input[type="file"] {
     width: auto;
 

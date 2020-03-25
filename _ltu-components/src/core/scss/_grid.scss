@@ -1,3 +1,6 @@
+// depenencies
+@use "config";
+
 .ds-grid {
     display: flex;
     flex-wrap: wrap;
@@ -23,13 +26,13 @@
         }
     }
 
-    @include bp-up(sm) {
+    @include config.bp-up(sm) {
         &__col-3 {
             width: calc(6/12 * 100% - 32px);
         }
     }
 
-    @include bp-up(lg) {
+    @include config.bp-up(lg) {
         &__col-12 {
             width: calc(100% - 32px);
         }
@@ -88,7 +91,7 @@
         margin-right: 0;
     }
 
-    @include bp-up(sm) {
+    @include config.bp-up(sm) {
         .ds-grid {
             &__col-3 {
                 width: calc(6/12 * 100%);
@@ -96,7 +99,7 @@
         }
     }
 
-    @include bp-up(lg) {
+    @include config.bp-up(lg) {
         .ds-grid {
             &__col-12 {
                 width: calc(100%);

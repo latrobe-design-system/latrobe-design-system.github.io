@@ -1,3 +1,6 @@
+// depenencies
+@use "config";
+
 //
 // Typography
 //
@@ -13,25 +16,12 @@ html {
 }
 
 body {
-    font-family: $font-roboto;
-    font-weight: $regular;
+    font-family: config.$font-roboto;
+    font-weight: config.$regular;
     font-size: 1rem;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
-//
-// Headings
-//
-
-$heading-scale-ratio: 1.25; // Major third
-
-$h6: 0.8rem;
-$h5: 1rem;
-$h4: $h5 * $heading-scale-ratio;
-$h3: $h4 * $heading-scale-ratio;
-$h2: $h3 * $heading-scale-ratio;
-$h1: $h2 * $heading-scale-ratio;
 
 h1, .h1,
 h2, .h2,
@@ -39,7 +29,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-    font-weight: $medium;
+    font-weight: config.$medium;
     max-width: 42em; // readable line length < 80 characters https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html
     margin: 0;
 
@@ -57,33 +47,33 @@ h4, .h4 {
 }
 
 h1, .h1 {
-    font-size: $h1;
+    font-size: config.$h1;
     @media(min-width: 1024px){
-        font-size: $h1 * $heading-scale-ratio; // step up h1 size by one scale point
+        font-size: config.$h1 * config.$heading-scale-ratio; // step up h1 size by one scale point
     }
 }
 
 h2, .h2 {
-    font-size: $h2;
+    font-size: config.$h2;
     max-width: 24em; // readable line length < 80 characters https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html
 }
 
 h3, .h3 {
-    font-size: $h3;
+    font-size: config.$h3;
 }
 
 h4, .h4 {
-    font-size: $h4;
+    font-size: config.$h4;
 }
 
 h5, .h5 {
-    font-size: $h5;
+    font-size: config.$h5;
 }
 
 h6, .h6 {
-    font-size: $h6;
+    font-size: config.$h6;
     text-transform: uppercase;
-    font-weight: $black;
+    font-weight: config.$black;
 }
 
 
@@ -187,7 +177,7 @@ ul {
 .ds-page-content > article:not(.ds-block) {
     > {
         h1 {
-            margin: $spacer * 8 0;
+            margin: config.$space-unit * 8 0;
         }
         h2,
         h3,

@@ -1,3 +1,6 @@
+// depenencies
+@use "config";
+
 .ds-step-list {
     counter-reset: my-awesome-counter;
     width: 100%;
@@ -20,7 +23,7 @@
     counter-increment: my-awesome-counter;
     position: relative;
     padding: 32px 0;
-    border-bottom: 2px solid $color-3a;
+    border-bottom: 2px solid config.$color-3a;
     width: 100%;
     max-width: 42em;
 
@@ -30,7 +33,7 @@
         position: absolute;
         left: -80px;
         top: 22px;
-        color: $color-1;
+        color: config.$color-1;
         background-color: white;
         height: 44px;
         width: 44px;
@@ -38,7 +41,7 @@
         line-height: 44px;
         text-align: center;
         border-radius: 50%;
-        box-shadow: 0 0 0 2px $color-1;
+        box-shadow: 0 0 0 2px config.$color-1;
 
         @media(min-width: 1440px) {
             width: 48px;
@@ -50,7 +53,7 @@
     &:after {
         width: 1px;
         height: calc(100% + 32px);
-        border-left: 2px dotted $color-3b;
+        border-left: 2px dotted config.$color-3b;
         position: absolute;
         top: 32px;
         left: calc(-80px + 21px);

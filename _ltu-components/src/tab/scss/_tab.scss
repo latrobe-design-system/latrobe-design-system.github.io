@@ -1,6 +1,10 @@
+// depenencies
+@use "config";
+@use "button/scss/button";
+
 .ds-tabs-nav {
     display: block;
-    border-bottom: 2px solid $color-2;
+    border-bottom: 2px solid config.$color-2;
     /* scroll on mobile when too wide */
     white-space: nowrap;
     overflow-x: scroll;
@@ -17,12 +21,12 @@
     cursor: pointer;
     font-weight: 500;
     position: relative;
-    padding: $spacer * 4;
+    padding: config.$space-unit * 4;
     top: 2px;
     left: 0px;
 
     &[aria-selected="true"] {
-        color: $color-2;
+        color: config.$color-2;
         text-decoration: none;
     }
 
@@ -34,7 +38,7 @@
         right: 0;
         bottom: 0;
         display: block;
-        border-bottom: 6px solid $color-2a;
+        border-bottom: 6px solid config.$color-2a;
     }
 }
 
@@ -42,7 +46,7 @@
     border-bottom: none;
     .ds-tabs-nav__tab {
         @extend .ds-btn-pill;
-        margin-right: $spacer * 2;
+        margin-right: config.$space-unit * 2;
         &[aria-selected="true"] {
             @extend .ds-btn-pill--selected
         }
@@ -59,12 +63,12 @@
 .ds-tabs--boxed {
     .ds-tab-content {
         &__body {
-            background-color: $color-3a;
-            padding: $spacer * 10;
+            background-color: config.$color-3a;
+            padding: config.$space-unit * 10;
             margin: 0 !important;
             /* override lobotomised owl */
             @media (min-width:1024px) {
-                padding: $spacer * 20;
+                padding: config.$space-unit * 20;
             }
         }
     }

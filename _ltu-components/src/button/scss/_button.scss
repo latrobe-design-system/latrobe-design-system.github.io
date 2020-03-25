@@ -1,3 +1,6 @@
+// depenencies
+@use "config";
+
 button.ds-btn {
     /* remove browser styling from button element */
     -webkit-appearance: none;
@@ -18,7 +21,7 @@ button.ds-btn {
     margin: 4px 0;
     text-decoration: none;
     color: white;
-    background-color: $color-1;
+    background-color: config.$color-1;
     border: 2px solid transparent;
     transition: background-color 0.05s ease-in-out;
     cursor: pointer;
@@ -34,13 +37,13 @@ button.ds-btn {
 
     &:hover {
         text-decoration: underline;
-        background-color: darken($color-1,5%);
+        background-color: darken(config.$color-1,5%);
     }
 
     &[class*="icon-"]{
         padding-right: 44px;
         &::after {
-            filter: $white;
+            filter: config.$white;
             margin: 0 12px;
         }
     }
@@ -63,11 +66,11 @@ button.ds-btn {
 /* primary button modifiers */
 .ds-btn--light,
 .ds-btn-primary--light {
-    color: $color-1;
+    color: config.$color-1;
     background-color: white;
 
     &:visited {
-        color: $color-1;
+        color: config.$color-1;
     }
 
     &:hover {
@@ -77,7 +80,7 @@ button.ds-btn {
 
     &[class*="icon-"]{
         &::after {
-            filter: $red;
+            filter: config.$red;
         }
     }
 }
@@ -85,22 +88,22 @@ button.ds-btn {
 /* secondary button */
 .ds-btn-secondary {
     @extend .ds-btn;
-    color: $color-2;
+    color: config.$color-2;
     background-color: transparent;
-    border: 2px solid $color-2;
+    border: 2px solid config.$color-2;
     padding: 12px 18px;
 
     &:visited {
-        color: $color-2;
+        color: config.$color-2;
     }
 
     &:hover {
         background-color: rgba(black,.15);
-        border: 2px solid $color-2;
+        border: 2px solid config.$color-2;
     }
 
     &[class*="icon-"]::after {
-        filter: $near-black;
+        filter: config.$near-black;
     }
 }
 
@@ -119,7 +122,7 @@ button.ds-btn {
     }
 
     &[class*="icon-"]::after {
-        filter: $white;
+        filter: config.$white;
     }
 }
 
@@ -127,7 +130,7 @@ button.ds-btn {
 .ds-btn-link {
     padding: 0;
     margin: 0;
-    color: $color-1;
+    color: config.$color-1;
     background: none;
     text-decoration: underline;
     border: 0;
@@ -167,20 +170,20 @@ button.ds-btn {
 .ds-btn-pill {
     @extend .ds-btn-secondary;
     font-weight: 500;
-    border: 2px solid $color-2;
+    border: 2px solid config.$color-2;
     box-sizing: border-box;
     font-size: 16px;
     line-height: inherit;
     display: inline-block;
     padding: 4px 16px;
     border-radius: 20px;
-    color: $color-2;
+    color: config.$color-2;
     text-decoration: none;
     background-color: white;
     cursor: pointer;
 
     &:visited {
-        color: $color-2;
+        color: config.$color-2;
     }
 
     &:hover {
@@ -192,7 +195,7 @@ button.ds-btn {
 /* pill button modifiers */
 .ds-btn-pill--selected {
     color: white;
-    background-color: $color-2;
+    background-color: config.$color-2;
 }
 
 /* round button */
@@ -238,7 +241,7 @@ button.ds-btn {
         border: 2px solid white;
     }
     &[class*="icon-"]::after {
-        filter: $white;
+        filter: config.$white;
     }
 }
 

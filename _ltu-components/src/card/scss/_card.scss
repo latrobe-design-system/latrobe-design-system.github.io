@@ -1,3 +1,7 @@
+// depenencies
+@use "config";
+@use "core/scss/icons";
+
 .ds-card {
     position: relative;
     width: 100%;
@@ -22,13 +26,13 @@
 }
 
 .ds-card__heading {
-    font-size: $h4;
+    font-size: config.$h4;
 }
 
 .ds-card__link-text {
     @extend .ds-icon-chevron-right;
     @extend .ds-icon--red;
-    color: $color-1;
+    color: config.$color-1;
 }
 
 /* link type card */
@@ -47,21 +51,21 @@
 
     background: white;
     display: block;
-    color: $color-2;
+    color: config.$color-2;
     text-decoration: none;
-    border: solid 1px $color-3b;
+    border: solid 1px config.$color-3b;
 
     .ds-card__heading {
-        color: $color-1;
+        color: config.$color-1;
         text-decoration: underline;
     }
 
     &:hover {
         transform: translateY(-4px);
-        color: $color-2;
+        color: config.$color-2;
         text-decoration: none;
         cursor: pointer;
-        box-shadow: $shadow-2;
+        box-shadow: config.$shadow-2;
 
         .ds-card__link {
             text-decoration: underline;
@@ -96,7 +100,7 @@
         cursor: pointer;
 
         &:hover {
-            background-color: $color-3a;
+            background-color: config.$color-3a;
         }
 
         &::before {
@@ -118,7 +122,7 @@
     .save-course-icon:checked + label::before {
         content: "";
         background-image: url("icons/feather-fill/heart.svg");
-        filter: $red;
+        filter: config.$red;
     }
 
     .save-course-icon:focus {
@@ -171,7 +175,7 @@
             cursor: pointer;
 
             &:hover {
-                background-color: $color-3a;
+                background-color: config.$color-3a;
 
             }
         }
@@ -184,7 +188,7 @@
     top: 0;
     left: 0;
     color: white;
-    background: $color-1;
+    background: config.$color-1;
     margin: 0; /* override lobotomised owl */
     padding: 8px;
     font-size: 16px;
@@ -194,10 +198,10 @@
 .ds-card__tag-alt {
     @extend .ds-card__tag;
 
-    background: $color-alt-3;
+    background: config.$color-alt-3;
 }
 
 /* layouts */
 .ds-card-set {
-    @include columns-grid();
+    @include config.columns-grid();
 }
