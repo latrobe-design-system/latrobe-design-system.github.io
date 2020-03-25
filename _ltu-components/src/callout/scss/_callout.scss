@@ -1,10 +1,13 @@
+// depenencies
+@use "config";
+
 .ds-callout {
-    /*border-left: 4px solid rgba($color-alt-3, 1);*/
+    /*border-left: 4px solid rgba(config.$color-alt-3, 1);*/
     border-radius: 2px;
     position: relative;
     font-weight: 400;
-    padding: $spacer * 4;
-    box-shadow: $shadow-1;
+    padding: config.$space-unit * 4;
+    box-shadow: config.$shadow-1;
     display: flex;
 
     /* align text with default text */
@@ -13,44 +16,44 @@
 
     @media(min-width: 768px){
         position: relative;
-        padding: $spacer * 8;
+        padding: config.$space-unit * 8;
 
         &::before {
             display: block;
             position: absolute;
-            left: $spacer * 6;
-            top: $spacer * 6;
+            left: config.$space-unit * 6;
+            top: config.$space-unit * 6;
         }
     }
 }
 
 .ds-callout__icon {
-    padding-right: $spacer * 3;
+    padding-right: config.$space-unit * 3;
 
     @media(max-width: 768px){
-        margin-bottom: $spacer * 6;
+        margin-bottom: config.$space-unit * 6;
     }
 
     @media(min-width: 768px){
         float: left;
-        padding-right: $spacer * 6;
+        padding-right: config.$space-unit * 6;
     }
 
     svg {
-        width: $spacer * 6;
-        height: $spacer * 6;
-        stroke: $color-alt-3;
+        width: config.$space-unit * 6;
+        height: config.$space-unit * 6;
+        stroke: config.$color-alt-3;
 
         @media(min-width: 768px){
-            width: $spacer * 7;
-            height: $spacer * 7;
+            width: config.$space-unit * 7;
+            height: config.$space-unit * 7;
         }
     }
 }
 
 .ds-callout__heading {
-    font-size: $h3;
-    color: rgba($color-alt-3, 1);
+    font-size: config.$h3;
+    color: rgba(config.$color-alt-3, 1);
 }
 
 .ds-callout__text {

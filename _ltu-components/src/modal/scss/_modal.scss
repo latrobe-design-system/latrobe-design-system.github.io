@@ -1,3 +1,6 @@
+// depenencies
+@use "config";
+
 .ds-modal {
     position: absolute;
     top: 50%;
@@ -14,7 +17,7 @@
 .ds-modal-content {
     display: none;
     background-color: #fff;
-    padding: $spacer * 8;
+    padding: config.$space-unit * 8;
 }
 
 // when loaded into modal

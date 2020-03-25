@@ -1,10 +1,13 @@
+// depenencies
+@use "config";
+
 .ds-proofpoint {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     max-width: 400px;
     text-align: center;
-    margin-top: $spacer*8; /* 2rem/32px */
+    margin-top: config.$space-unit*8; /* 2rem/32px */
     margin-bottom: 0;
 }
 
@@ -17,7 +20,7 @@
 }
 
 .ds-proofpoint__title {
-    color: $color-1;
+    color: config.$color-1;
     font-size: 28px;
     line-height: 32px;
 }
@@ -31,12 +34,12 @@
 .ds-proofpoint__footnote {
     font-size: 14/16*1rem;
     line-height: 20/16;
-    color: $color-2a;
+    color: config.$color-2a;
     margin-top: auto;
-    padding-top: $spacer*4; /* 1rem/16px */
+    padding-top: config.$space-unit*4; /* 1rem/16px */
 }
 
 /* proof point set */
 .ds-proofpoint-set {
-    @include columns($alignment: center);
+    @include config.columns($alignment: center);
 }

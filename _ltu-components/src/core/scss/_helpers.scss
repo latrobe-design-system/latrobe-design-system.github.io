@@ -77,12 +77,11 @@
  */
 
 .clearfix:before,
-.clearfix:after {
+.clearfix::after {
   content: " ";
   display: table;
 }
-
-.clearfix:after {
+.clearfix::after {
   clear: both;
 }
 

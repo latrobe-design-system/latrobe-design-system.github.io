@@ -1,5 +1,9 @@
+// depenencies
+@use "config";
+@use "core/scss/icons";
+
 .ds-accordion__item {
-    border-bottom: 2px solid $color-3b;
+    border-bottom: 2px solid config.$color-3b;
     padding: 0;
     margin: 0;
 
@@ -18,19 +22,19 @@
     background: none;
     display: block;
     margin: 0;
-    padding: $spacer * 5 $spacer * 10;
+    padding: config.spunits(5) config.spunits(10);
     position: relative;
     text-align: left;
     width: 100%;
     border: none;
-    color: $color-1;
+    color: config.$color-1;
     cursor: pointer;
 
     &:hover {
-        background: $color-3;
+        background: config.$color-3;
         .ds-accordion__title {
             text-decoration: none;
-            color: $color-2;
+            color: config.$color-2;
         }
     }
 
@@ -42,7 +46,7 @@
 
 .ds-accordion__content {
     display: none;
-    padding: $spacer * 6 0;
+    padding: config.spunits(5) 0;
     margin-top: 0;
 }
 
@@ -52,8 +56,7 @@
     .ds-accordion__title::before {
         counter-increment: section;
         content: counter(section) ": ";
-        margin-left: $spacer * 3;
-        margin-right: $spacer * 2;
-        color: $color-2;
+        margin-right: config.spunits(2);
+        color: config.$color-2;
     }
 }

@@ -22,13 +22,13 @@
 .ds-tab-content {
     background-color: $color-3a;
 
-    padding: $spacer * 10;
+    padding: $space-unit * 10;
     > :first-child {
         margin: 0;
     }
 
     @media (min-width:1024px) {
-        padding: $spacer * 20;
+        padding: $space-unit * 20;
     }
 }
 

@@ -1,13 +1,16 @@
+// depenencies
+@use "config";
+
 .ds-alert {
-    border: 2px solid rgba($color-alt-3, 1);
+    border: 2px solid rgba(config.$color-alt-3, 1);
     border-radius: 4px;
     position: relative;
     font-weight: 400;
     display: flex;
-    padding: $spacer * 4;
+    padding: config.$space-unit * 4;
 
     @media(min-width: 768px){
-        padding: $spacer * 7;
+        padding: config.$space-unit * 7;
     }
 
     &[class*="icon-"]::after {
@@ -29,29 +32,29 @@
 }
 
 .ds-alert--error {
-    background-color: rgba($color-1, 0.05);
-    border-color: rgba($color-1, 1);
+    background-color: rgba(config.$color-1, 0.05);
+    border-color: rgba(config.$color-1, 1);
 
     svg {
-        color: rgba($color-1, 1);
+        color: rgba(config.$color-1, 1);
     }
 }
 
 .ds-alert--warning {
-    background-color: rgba($color-alt-2, 0.05);
-    border-color: rgba($color-alt-2, 1);
+    background-color: rgba(config.$color-alt-2, 0.05);
+    border-color: rgba(config.$color-alt-2, 1);
 
     svg {
-        color: rgba($color-alt-2, 1);
+        color: rgba(config.$color-alt-2, 1);
     }
 }
 
 .ds-alert--info {
-    background-color: rgba($color-alt-3, 0.05);
-    border-color: rgba($color-alt-3, 1);
+    background-color: rgba(config.$color-alt-3, 0.05);
+    border-color: rgba(config.$color-alt-3, 1);
 
     svg {
-        color: rgba($color-alt-3, 1);
+        color: rgba(config.$color-alt-3, 1);
     }
 }
 
@@ -68,12 +71,12 @@
 }
 
 .ds-alert__icon {
-    padding-right: $spacer * 4;
+    padding-right: config.$space-unit * 4;
     vertical-align: top;
-    height: $spacer * 6;
+    height: config.$space-unit * 6;
 
     @media(min-width: 768px){
-        padding-right: $spacer * 6;
+        padding-right: config.$space-unit * 6;
     }
 
     svg {
@@ -87,7 +90,7 @@
     position: absolute;
     top: 0px;
     right: 0px;
-    padding: $spacer * 4;
+    padding: config.$space-unit * 4;
     color: inherit;
     background-color: transparent;
     border: 0;
@@ -97,7 +100,7 @@
     transition: opacity .05s ease-in-out;
 
     @media(min-width: 768px){
-        padding: $spacer * 6;
+        padding: config.$space-unit * 6;
     }
 
     &:hover {

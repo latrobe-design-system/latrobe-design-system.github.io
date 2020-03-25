@@ -1,3 +1,6 @@
+// depenencies
+@use "variables";
+
 // @include these for flex or grid with flex fallback columns
 // optionally pass base width
 // note: basis with of 232 with 32px gutter allows for up to four columns in the standard 1024 content container
@@ -5,7 +8,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: $alignment;
-    margin-right: -$spacer*8; /* 2rem/32px */
+    margin-right: -(variables.$space-unit*8); /* 2rem/32px */
     & > * {
         flex-grow: 1;
         flex-shrink: 0;
@@ -18,7 +21,7 @@
     @supports(display: grid) {
         display: grid;
         justify-items: $alignment;
-        grid-column-gap: $spacer*8; /* 2rem/32px */
+        grid-column-gap: variables.$space-unit*8; /* 2rem/32px */
         margin-right: 0;
         grid-template-columns: repeat($wrap, minmax($basis-width, 1fr));
         & > * {
@@ -28,7 +31,6 @@
 }
 
 // Media standard breakpoints
-
 @mixin bp-up($point) {
     @if $point == xl {
         @media (min-width: 1280px) { @content; }

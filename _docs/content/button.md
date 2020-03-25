@@ -31,7 +31,7 @@ To place the icon on the left also include the class `icon-before`
 
 {% include sample-iframe.html snippet="button/snippets/secondary_button_disabled.html" %}
 
-{% include sample-iframe.html snippet="button/snippets/light_button.html" %}
+{% include sample-iframe.html snippet="button/snippets/light_button.html" bgcolor="#242424" %}
 
 {% include sample-iframe.html snippet="button/snippets/filter_button.html" %}
 

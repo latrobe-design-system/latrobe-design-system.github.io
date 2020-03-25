@@ -1,3 +1,7 @@
+// depenencies
+@use "config";
+@use "core/scss/helpers";
+
 /* styles when shown in modal */
 .ds-image-gallery__images {
     /* remove ul styles */
@@ -17,7 +21,7 @@
         color: #fff;
         padding: 8px 16px;
         text-align: center;
-        background-color: rgba($color-2a, 0.6);
+        background-color: rgba(config.$color-2a, 0.6);
         z-index: 1;
     }
 }
@@ -28,7 +32,7 @@
 
     .ds-image-gallery__images {
         @extend .clearfix;
-        background-color: $color-2;
+        background-color: config.$color-2;
     }
 
     .ds-image-gallery__image {
@@ -113,7 +117,7 @@
         bottom: 0;
         z-index: 1;
         padding: 4px;
-        background-color: rgba($color-2a, 0.9);
+        background-color: rgba(config.$color-2a, 0.9);
 
         button {
             /* override round button */

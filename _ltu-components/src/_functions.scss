@@ -1,0 +1,10 @@
+// depenencies
+@use "variables";
+
+/*
+ * Return a multiple of base space unit
+ * Use this for paddings and margins
+ */
+@function spunits($number) {
+    @return variables.$space-unit*$number;
+}

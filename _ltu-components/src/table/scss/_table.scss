@@ -1,3 +1,6 @@
+// depenencies
+@use "config";
+
 .ds-table-wrapper {
     //responsive tables - scroll when
     overflow-x: auto;
@@ -11,34 +14,34 @@ table {
 }
 
 table caption {
-    font-size: $h4;
-    font-weight: $medium;
-    padding: $spacer * 4 $spacer * 8;
+    font-size: config.$h4;
+    font-weight: config.$medium;
+    padding: config.$space-unit * 4 config.$space-unit * 8;
     text-align: left;
 }
 
 table caption.subtle-right {
     background-color: #eee;
-    padding: $spacer $spacer * 10;
+    padding: config.$space-unit config.$space-unit * 10;
 }
 
 td, th {
     vertical-align: top;
-    padding: $spacer*7;
+    padding: config.$space-unit*7;
 }
 
 th {
     background-color: white;
     text-align: left;
-    border-bottom: 2px solid $color-3a;
+    border-bottom: 2px solid config.$color-3a;
 }
 
 tbody th:first-child {
-    border-right: 2px solid $color-3a;
+    border-right: 2px solid config.$color-3a;
 }
 
 td {
-    border-right: 2px solid $color-3a;
+    border-right: 2px solid config.$color-3a;
 
     &:last-child {
         border-right: none;
@@ -46,8 +49,8 @@ td {
 }
 
 tr {
-    border-top: 2px solid $color-3a;
-    border-bottom: 2px solid $color-3a;
+    border-top: 2px solid config.$color-3a;
+    border-bottom: 2px solid config.$color-3a;
 }
 
 // jquery tablesorter styles
@@ -60,5 +63,5 @@ tr {
 }
 
 .tablesorter .header:hover {
-    background-color: $color-3;
+    background-color: config.$color-3;
 }
