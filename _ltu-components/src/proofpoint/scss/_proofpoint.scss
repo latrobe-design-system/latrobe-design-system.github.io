@@ -19,6 +19,12 @@
     padding: 0;
 }
 
+.ds-proofpoint__body {
+    >*:first-child {
+        margin-top: 1em;
+    }
+}
+
 .ds-proofpoint__title {
     color: config.$color-1;
     font-size: 28px;

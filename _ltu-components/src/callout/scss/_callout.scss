@@ -12,7 +12,7 @@
 
     /* align text with default text */
     max-width: 1200px;
-    margin: 0 auto;
+    margin: config.spunits(8) auto;
 
     @media(min-width: 768px){
         position: relative;
@@ -59,4 +59,8 @@
 .ds-callout__text {
     align-self: stretch;
     margin-top: 0;
+
+    *:first-child {
+        margin-top: 0;
+    }
 }

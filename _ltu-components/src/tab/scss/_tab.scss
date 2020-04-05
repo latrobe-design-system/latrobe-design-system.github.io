@@ -2,6 +2,10 @@
 @use "config";
 @use "button/scss/button";
 
+.ds-tabs {
+    margin: 2rem 0;
+}
+
 .ds-tabs-nav {
     display: block;
     border-bottom: 2px solid config.$color-2;
@@ -40,6 +44,10 @@
         display: block;
         border-bottom: 6px solid config.$color-2a;
     }
+
+    &:focus {
+        outline-offset: -2px;
+    }
 }
 
 .ds-tabs-nav.ds-tabs-nav--pills {
@@ -60,11 +68,17 @@
     margin-top: 2rem;
 }
 
+.ds-tab-content__body {
+    >*:first-child {
+        margin-top: 0;
+    }
+}
+
 .ds-tabs--boxed {
     .ds-tab-content {
         &__body {
             background-color: config.$color-3a;
-            padding: config.$space-unit * 10;
+            padding: config.spunits(8);
             margin: 0 !important;
             /* override lobotomised owl */
             @media (min-width:1024px) {

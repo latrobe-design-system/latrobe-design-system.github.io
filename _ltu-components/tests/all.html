@@ -1,0 +1,16 @@
+---
+title: "All"
+status: draft
+
+showLeftNav: "yes"
+---
+
+{%- for pattern in site.ltu-components -%}
+    {%- if pattern.type == "block" -%}
+    {% include sample-component.html
+        snippet="ltu-components/tests/all.html"
+        blockWidth=""
+        blockBackground=""
+    %}
+    {%- endif -%}
+{%- endfor -%}

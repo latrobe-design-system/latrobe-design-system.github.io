@@ -3,22 +3,7 @@ title: Layout
 status: draft
 ---
 
-## Blocks
 
-Each section of content on a page is contained within a block. Blocks provide consistent vertical spacing between content and centre content horizontally.
-
-There are 4 possible maximum widths of content within a block:
-
-| | Max width | Modifier |
-|---|---|---|
-| Default | 1024px | |
-| Medium | 1280px | ds-block--medium |
-| Wide | 1600px | ds-block--wide |
-| Full width | 100% | ds-block--full-width |
-
-The background of a block is white by default. Use the modifier `ds-block--grey` to give the block a grey background. 
-
-{% include sample-code-only.html snippet="core/snippets/block/block.html" %}
 
 ## 4x grid fundamentals <a name="4x-grid-fundamentals"></a>
 
