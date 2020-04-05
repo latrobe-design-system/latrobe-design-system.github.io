@@ -47,6 +47,15 @@
 
         <p class='wedgetail-menu-list__heading'>Components</p>
 
+        <p class="wedgetail-menu-list__sub-heading">Layout</p>
+
+        {%- assign x = site.docs | where: 'parentmenu', 'layout' | sort: 'url' -%}
+
+        <ul>
+            {%- for pattern in x -%}
+                {%- include wedgetail-menu-item.html -%}
+            {%- endfor -%}
+        </ul>
 
         <p class="wedgetail-menu-list__sub-heading">Navigation</p>
 

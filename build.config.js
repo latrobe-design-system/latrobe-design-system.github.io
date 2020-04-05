@@ -31,6 +31,14 @@ module.exports = {
       entryPoint: './_sass/styles.scss',
       dest: './_site/css'
     },
+    ltuLegacy: {
+      src: './_ltu-components/src/ltu-legacy.scss',
+      entryPoint: './_ltu-components/src/ltu-legacy.scss',
+      dests: [
+        './_ltu-components/dist/css',
+        './_site/ltu-components/dist/css',
+      ]
+    },
   },
   browserSync: {
     open: true,

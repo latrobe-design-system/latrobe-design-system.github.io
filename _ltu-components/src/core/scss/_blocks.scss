@@ -22,16 +22,16 @@ div.ds-block {
     // for blocks without background color
     padding-top: 0px;
     padding-bottom: 0px;
-    margin: 40px 0;
-    margin: config.$h2*2 0; // blocks have same top-bottom spacing as h2
+    //margin: 40px 0;
+    //margin: config.$h2*2 0; // blocks have same top-bottom spacing as h2
 }
 
 // blocks within blocks act like headings
 div.ds-block div.ds-block {
-    margin: 0;
+    //margin: 0;
 }
 div.ds-block * + div.ds-block {
-    margin-top: 2rem;
+    //margin-top: 2rem;
 }
 
 // .ds-block__wrapper wraps block content
@@ -40,7 +40,7 @@ div.ds-block * + div.ds-block {
     margin: 0 auto;
 }
 
-// block width modifiers .ds-block--[medium|wide|full-width]
+// block width modifiers: usage .ds-block--[medium|wide|full-width]
 div.ds-block {
 
     &--medium {
@@ -66,14 +66,14 @@ div.ds-block {
     }
 }
 
-// block background color modifiers .ds-block--grey
+// block background color modifiers: usage .ds-block--[grey]
 div.ds-block {
 
-    &--grey {
+    &--bg-grey {
         background-color: config.$color-3a;
     }
 
-    &--black {
+    &--bg-black {
         background: #242428;
         color: white;
 
@@ -91,7 +91,7 @@ div.ds-block {
         }
     }
 
-    &--red {
+    &--bg-red {
         background-color: config.$color-1;
 
         .ds-block__header {
@@ -99,7 +99,7 @@ div.ds-block {
         }
     }
 
-    &--black-nodes {
+    &--bg-black-nodes {
         background-color: config.$color-2;
         background-image: url("img/bg-nodes.svg");
 
@@ -108,7 +108,7 @@ div.ds-block {
         }
     }
 
-    &--red-nodes {
+    &--bg-red-nodes {
         background-color: config.$color-1;
         background-image: url("img/bg-nodes.svg");
 
@@ -117,14 +117,14 @@ div.ds-block {
         }
     }
 
-    &--grey,
-    &--black,
-    &--red,
-    &--black-nodes,
-    &--red-nodes {
+    &--bg-grey,
+    &--bg-black,
+    &--bg-red,
+    &--bg-black-nodes,
+    &--bg-red-nodes {
         // for blocks with background color
-        padding-top: config.$h2*1.5;  // bg color blocks have slightly smaller top spacing than h2
-        padding-bottom: config.$h2*2;  // bg color blocks have same bottom spacing of h2
+        padding-top: config.$h2*2;  // bg color blocks have same top spacing as h2
+        padding-bottom: config.$h2*2;  // bg color blocks have same bottom spacing as h2
         margin: 0;
 
         @media (min-width: 1000px) {
@@ -136,46 +136,44 @@ div.ds-block {
 }
 
 // adjust spacing between adjancent grey blocks
-div.ds-block--grey + div.ds-block--grey {
+div.ds-block--bg-grey + div.ds-block--bg-grey {
     padding-top: 0;
 }
 
 // adjust spacing between adjancent black blocks
-div.ds-block--black + div.ds-block--black {
+div.ds-block--bg-black + div.ds-block--bg-black {
     padding-top: 0;
 }
 
 // adjust spacing between adjancent red blocks
-div.ds-block--red + div.ds-block--red {
+div.ds-block--bg-red + div.ds-block--bg-red {
     padding-top: 0;
 }
 
 // adjust spacing between adjancent black-nodes blocks
-div.ds-block--black-nodes + div.ds-block--black-nodes {
+div.ds-block--bg-black-nodes + div.ds-block--bg-black-nodes {
     padding-top: 0;
 }
 
 // adjust spacing between adjancent red-nodes blocks
-div.ds-block--red-nodes + div.ds-block--red-nodes {
+div.ds-block--bg-red-nodes + div.ds-block--bg-red-nodes {
     padding-top: 0;
 }
 
 .ds-page-content {
-    > div:not(.ds-block),
-    > section:not(.ds-block),
-    > article:not(.ds-block) {
-        //adjust spacing between text div and footer if last child
-        &:last-child {
-            margin-bottom: config.$h2*2;  // blocks have same top-bottom spacing as h2
-        }
-        //adjust spacing between text div and background colour divs
-        + {
-            div.ds-block--grey,
-            div.ds-block--black,
-            div.ds-block--red,
-            div.ds-block--black-nodes,
-            div.ds-block--red-nodes {
-                margin-top: config.$h2*2;  // blocks have same top-bottom spacing as h2
+    > { 
+        div:not([class*=" ds-block--bg-"]),
+        section,
+        article {
+            // add bottom margin to last child if no bg color
+            &:last-child {
+                margin-bottom: config.$h2*2;  // blocks have same top-bottom spacing as h2
+            }
+            //adjust spacing between no color bg div and colour bg divs
+            + {
+                div[class*=" ds-block--bg-"] {
+                    margin-top: config.$h2*2;  // blocks have same top-bottom spacing as h2
+                }
             }
         }
     }
@@ -203,5 +201,10 @@ div.ds-block--red-nodes + div.ds-block--red-nodes {
             margin-right: 0;
         }
     }
+}
 
+div[class*=" ds-block--bg-"] {
+    .ds-block__header *:first-child {
+        margin-top: 0;
+    }
 }

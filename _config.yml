@@ -59,6 +59,11 @@ defaults:
       parentmenu: form
   -
     scope:
+      path: "_docs/layout"
+    values:
+      parentmenu: 'layout'
+  -
+    scope:
       path: "_docs/content"
     values:
       parentmenu: 'content'

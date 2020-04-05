@@ -14,8 +14,9 @@ const config = require('./build.config')
 
 const clean = () => del([
   ...config.scripts.dests.map(d => d+'*'),
-  config.styles.site.dest + '/main.css*',
-  config.styles.ltuPatterns.dest + '/styles.css*'
+  config.styles.site.dest + '/styles.css*',
+  config.styles.ltuPatterns.dest + '/ds-ltu.css*',
+  config.styles.ltuLegacy.dest + '/ltu-legacy.css*'
 ])
 
 const server = browserSync.create()
@@ -31,40 +32,55 @@ function reload() {
 
 async function siteStyles () {
 
-  await gulp.src(config.styles.site.entryPoint)
-  .pipe(sourcemaps.init())
-  .pipe(
-    sass({
+  gulp.src(config.styles.site.entryPoint)
+    .pipe(sourcemaps.init())
+    .pipe(sass({
       outputStyle: 'compressed',
     })
-    .on('error', function (error) {
-      console.error(`siteStyles.sass: ${error.messageFormatted}`)
-      this.emit('end')
-    })
-  )
-  .pipe(sourcemaps.write('./'))
-  .pipe(gulp.dest(config.styles.site.dest))
-  .pipe(server.stream({match: '**/*.css'}))
+      .on('error', function (error) {
+        console.error(`siteStyles.sass: ${error.messageFormatted}`)
+        this.emit('end')
+      }))
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest(config.styles.site.dest))
+    .pipe(server.stream({ match: '**/*.css' }))
 
 }
 
 async function ltuPatternsStyles () {
 
-  await gulp.src(config.styles.ltuPatterns.entryPoint)
-  .pipe(sourcemaps.init())
-  .pipe(
-    sass({
+  gulp.src(config.styles.ltuPatterns.entryPoint)
+    .pipe(sourcemaps.init())
+    .pipe(sass({
       outputStyle: 'compressed',
     }).on('error', function (error) {
       console.error(`ltuPatternsStyles.sass: ${error.messageFormatted}`)
       this.emit('end')
+    }))
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest(config.styles.ltuPatterns.dests[0]))
+    .pipe(gulp.dest(config.styles.ltuPatterns.dests[1]))
+    .pipe(gulp.src(config.styles.ltuPatterns.dests.filter(dest => dest.startsWith('./_site/'))))
+    .pipe(server.stream({ match: '**/*.css' }))
+
+}
+
+async function ltuLegacyStyles () {
+
+  gulp.src(config.styles.ltuLegacy.entryPoint)
+    .pipe(sourcemaps.init())
+    .pipe(sass({
+      outputStyle: 'compressed',
     })
-  )
-  .pipe(sourcemaps.write('./'))
-  .pipe(gulp.dest(config.styles.ltuPatterns.dests[0]))
-  .pipe(gulp.dest(config.styles.ltuPatterns.dests[1]))
-  .pipe(gulp.src(config.styles.ltuPatterns.dests.filter(dest => dest.startsWith('./_site/'))))
-  .pipe(server.stream({match: '**/*.css'}))
+      .on('error', function (error) {
+        console.error(`ltuLegacyStyles.sass: ${error.messageFormatted}`)
+        this.emit('end')
+      }))
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest(config.styles.ltuLegacy.dests[0]))
+    .pipe(gulp.dest(config.styles.ltuLegacy.dests[1]))
+    .pipe(gulp.src(config.styles.ltuLegacy.dests.filter(dest => dest.startsWith('./_site/'))))
+    .pipe(server.stream({ match: '**/*.css' }))
 
 }
 
@@ -88,7 +104,7 @@ async function scripts () {
     }))
   )
 
-  await gulp.src(config.scripts.dests.filter(dest => dest.startsWith('./_site/')))
+  gulp.src(config.scripts.dests.filter(dest => dest.startsWith('./_site/')))
     .pipe(server.stream())
 }
 
@@ -115,6 +131,7 @@ function watch (done) {
 
   gulp.watch(config.styles.site.src, siteStyles)
   gulp.watch(config.styles.ltuPatterns.src, ltuPatternsStyles)
+  gulp.watch(config.styles.ltuLegacy.src, ltuLegacyStyles)
   gulp.watch(config.scripts.src, scripts)
   gulp.watch(config.views, jekyllBuild)
 
@@ -124,6 +141,7 @@ function watch (done) {
 
 exports.siteStyles = siteStyles
 exports.ltuPatternsStyles = ltuPatternsStyles
+exports.ltuLegacyStyles = ltuLegacyStyles
 exports.scripts = scripts
-exports.build = gulp.series(clean, jekyllBuild, gulp.parallel(siteStyles, ltuPatternsStyles, scripts))
+exports.build = gulp.series(clean, jekyllBuild, gulp.parallel(siteStyles, ltuPatternsStyles, ltuLegacyStyles, scripts))
 exports.default = gulp.series(exports.build, watch, serve)

@@ -3,7 +3,7 @@
         {% if include.container == 'false' %}
             {{ pattern.content }}
         {% elsif pattern.type == 'block' %}
-            <div class="ds-block ds-block--{{ pattern.width }} ds-block--{{ include.blockBackground }}">
+            <div class="ds-block {% if pattern.width %}ds-block--{{ pattern.width }}{% endif %} {% if include.blockBackground %}ds-block--{{ include.blockBackground }}{% endif %}">
                 <div class="ds-block__wrapper">
                 {{ pattern.content }}
                 </div>

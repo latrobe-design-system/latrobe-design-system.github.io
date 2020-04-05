@@ -8,12 +8,15 @@
 .ds-media-item {
     display: flex;
     justify-content: flex-start;
+    margin-top: 2rem;
 }
 
-* + li.ds-media-item {
-    margin-top: 2em;
-}
-
-.ds-media-img {
+.ds-media-item__img {
     margin-right: config.$space-unit * 10;
+}
+
+.ds-media-item__body {
+    >*:first-child {
+        margin-top: 0;
+    }
 }

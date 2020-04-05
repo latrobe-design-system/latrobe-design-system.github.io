@@ -8,6 +8,7 @@
     font-weight: 400;
     display: flex;
     padding: config.$space-unit * 4;
+    margin-top: config.spunits(4);
 
     @media(min-width: 768px){
         padding: config.$space-unit * 7;
@@ -15,10 +16,6 @@
 
     &[class*="icon-"]::after {
         left: 12px;
-    }
-
-    & + * {
-        margin-top: 1em;
     }
 }
 
@@ -63,6 +60,10 @@
 
     @media(min-width: 768px){
         padding-right: 80px;
+    }
+
+    *:first-child {
+        margin-top: 0;
     }
 
     >:only-child {
