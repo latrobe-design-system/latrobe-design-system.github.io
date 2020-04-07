@@ -5,11 +5,6 @@
 - Prod: https://latrobe-design-system.github.io/
 - Dev: https://latrobe-design-system.netlify.com/
 
-## Using Jekyll static generator
-To use this you must install
-Jekyll: https://jekyllrb.com/docs/installation/
-Sass: https://sass-lang.com/install
-
 ## Local development
 ### Install
 1. Install Ruby (if required) and Jekyll https://jekyllrb.com/docs/installation/
