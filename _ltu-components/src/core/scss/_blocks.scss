@@ -201,6 +201,10 @@ div.ds-block--bg-red-nodes + div.ds-block--bg-red-nodes {
             margin-right: 0;
         }
     }
+
+    &--hard-left-align {
+        max-width: 100%;
+    }
 }
 
 div[class*=" ds-block--bg-"] {
