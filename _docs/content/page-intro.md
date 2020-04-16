@@ -1,6 +1,6 @@
 ---
 title: "Page intro"
-status: planned
+status: draft
 info: Provides for intro text and image
 ---
 

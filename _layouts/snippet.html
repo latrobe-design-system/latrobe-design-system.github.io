@@ -41,14 +41,10 @@ if(window.outerWidth <= mobileBreakingPoint){
 
                 {% if page.type == 'example' %}
                 {{ content }}
-                {% elsif page.type == 'block' %}
-                <div class="ds-block ds-block--{{ page.width }}">
-                    <div class="ds-block__wrapper">
-                            {{ content }}
-                    </div>
-                </div>
+                {% elsif page.type == 'block' %}            
+                {{ content }}
                 {%else%}
-                <div style="margin-top: 4%;">
+                <div style="margin-top: 3rem;">
                     {{ content }}
                 </div>
                 {% endif %}

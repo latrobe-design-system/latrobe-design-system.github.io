@@ -22,16 +22,6 @@ div.ds-block {
     // for blocks without background color
     padding-top: 0px;
     padding-bottom: 0px;
-    //margin: 40px 0;
-    //margin: config.$h2*2 0; // blocks have same top-bottom spacing as h2
-}
-
-// blocks within blocks act like headings
-div.ds-block div.ds-block {
-    //margin: 0;
-}
-div.ds-block * + div.ds-block {
-    //margin-top: 2rem;
 }
 
 // .ds-block__wrapper wraps block content
