@@ -29,6 +29,7 @@
 /* styles when wrapped in gallery container */
 .ds-image-gallery {
     position: relative;
+    margin-top: 1rem;
 
     .ds-image-gallery__images {
         @extend .clearfix;
