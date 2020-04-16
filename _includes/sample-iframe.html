@@ -46,15 +46,7 @@
                 {% for pattern in site.ltu-components %}
                     {%- if pattern.url contains include.snippet -%}
                         {%- highlight html -%}
-                        {% if pattern.type == 'block' %}
-<div class="ds-block{% if pattern.width %} ds-block--{{ pattern.width }}{% endif %}{% if include.blockBackground %} ds-block--{{ include.blockBackground }}{% endif %}">
-    <div class="ds-block__wrapper">
 {{ pattern.content }}
-    </div>
-</div>
-                        {% else %}
-                            {{ pattern.content }}
-                        {% endif %}
                         {%- endhighlight -%}
                     {%- endif -%}
                 {% endfor %}

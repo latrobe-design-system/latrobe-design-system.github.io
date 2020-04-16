@@ -33,3 +33,5 @@ status: draft
 {% include sample-iframe.html snippet="text/snippets/hr.html" %}
 
 {% include sample-iframe.html snippet="text/snippets/inline.html" %}
+
+{% include sample-iframe.html snippet="text/snippets/column-list.html" %}
