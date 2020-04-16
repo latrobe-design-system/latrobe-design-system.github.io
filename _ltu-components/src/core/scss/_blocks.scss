@@ -1,7 +1,7 @@
 // depenencies
 @use "config";
 
-// set margins for standard content containers
+// set margins for standard content containers - because can't set a default class for squiz matrix CMS content containers
 .ds-page-content > div,
 .ds-page-content > section,
 .ds-page-content > article {
@@ -208,6 +208,7 @@ div.ds-block--bg-red-nodes + div.ds-block--bg-red-nodes {
 }
 
 div[class*=" ds-block--bg-"] {
+    .ds-block__wrapper *:first-child,
     .ds-block__header *:first-child {
         margin-top: 0;
     }
