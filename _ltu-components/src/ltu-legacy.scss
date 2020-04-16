@@ -180,10 +180,12 @@
             max-width: 300%;
         }
 
+        /* moved below outside #header
+        
         .nav-out .nav-utility {
             -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
-        }
+        }*/
     }
 
     .nav-utility > ul li {
@@ -350,20 +352,20 @@
         margin: -2px 0 0 -8px;
     }
 
-    .nav-out #favourite-count {
+    /*.nav-out #favourite-count {
         pointer-events: none;
         left: 16px;
         position: absolute;
         top: 158px;
-    }
+    }*/
     @media (min-width:1024px) {
         #my-saved-courses {
             display: inline-block;
         }
 
-        .nav-out #favourite-count {
+        /*.nav-out #favourite-count {
             position: static;
-        }
+        }*/
     }
 
     #hamburger {
@@ -405,23 +407,23 @@
         width: 48px;
     }
 
-    .nav-out #hamburger {
+    /*.nav-out #hamburger {
         background-color: #242424;
     }
 
     .nav-out #hamburger:after {
         -webkit-transform: rotateZ(45deg) scale(0);
         transform: rotateZ(45deg) scale(0);
-    }
+    }*/
     @media (min-width:1024px) {
         #hamburger {
             visibility: hidden;
         }
     }
 
-    .nav-out #hamburger {
+    /*.nav-out #hamburger {
         left: 0;
-    }
+    }*/
 
     #logo {
         height: 80px;
@@ -956,6 +958,42 @@
         float: left;
         margin: 20px 20px 0 0;
         padding: 10px 20px;
+    }
+
+}
+
+.nav-out #header {
+
+    @media (max-width:1023px) {
+
+    .nav-utility {
+            -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+        }
+    }
+
+    #favourite-count {
+        pointer-events: none;
+        left: 16px;
+        position: absolute;
+        top: 158px;
+    }
+
+    @media (min-width:1024px) {
+
+        .#favourite-count {
+            position: static;
+        }
+    }
+
+    #hamburger {
+        background-color: #242424;
+        left: 0;
+    }
+
+    #hamburger:after {
+        -webkit-transform: rotateZ(45deg) scale(0);
+        transform: rotateZ(45deg) scale(0);
     }
 
 }
