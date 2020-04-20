@@ -5,25 +5,18 @@ status: ready
 type: block
 width: medium
 ---
+<div class="ds-block ds-block--wide">
+    <div class="ds-block__wrapper">
 
-<div class="ds-testimonial-set">
-    {% include sample-component.html
-        snippet="testimonial/snippets/testimonial-woman.html"
-        container="false"
-    %}
+        <div class="ds-testimonial-set">
+            {% include_relative testimonial-woman.html %}
 
-    {% include sample-component.html
-        snippet="testimonial/snippets/testimonial-man.html"
-        container="false"
-    %}
+            {% include_relative testimonial-man.html %}
 
-    {% include sample-component.html
-        snippet="testimonial/snippets/testimonial-woman.html"
-        container="false"
-    %}
+            {% include_relative testimonial-woman.html %}
 
-    {% include sample-component.html
-        snippet="testimonial/snippets/testimonial-man.html"
-        container="false"
-    %}
+            {% include_relative testimonial-man.html %}
+        </div>
+
+    </div>
 </div>

@@ -1,0 +1,85 @@
+
+/* pill button */
+.ds-btn-pill {
+    /* remove browser styling from button element */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    font-weight: 500;
+    border: 2px solid config.$color-2;
+    box-sizing: border-box;
+    font-size: 16px;
+    //line-height: inherit;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 8px 16px;
+    margin: 4px 0;
+    border-radius: 20px;
+    color: config.$color-2;
+    text-decoration: none;
+    background-color: white;
+    transition: background-color 0.05s ease-in-out;
+    cursor: pointer;
+
+    &:visited {
+        color: config.$color-2;
+    }
+
+    &[disabled] {
+        opacity: 0.25;
+        pointer-events: none;
+    }
+
+    &:hover {
+        background-color: rgba(black,.15);
+        border: 2px solid config.$color-2;
+        text-decoration: underline;
+    }
+
+    &[class*="icon-"]{
+        padding-right: 32px;
+        &::after {
+            margin: 0 12px;
+        }
+    }
+
+    &.ds-icon--before {
+        padding-right: 18px;
+        padding-left: 32px;
+        &::after {
+            left: 0;
+            right: unset;
+        }
+    }
+
+    /* pill button modifiers */
+    &.ds-btn--small {
+        padding: 4px 12px;
+    }
+
+    &.ds-btn--light {
+        color: white;
+        background-color: transparent;
+        border: 2px solid white;
+        &:visited {
+            color: white;
+        }
+        &:hover {
+            background-color: rgba(black,.15);
+            border: 2px solid white;
+        }
+        &[class*="icon-"]::after {
+            filter: config.$white;
+        }
+    }
+
+    &.ds-btn-pill--selected {
+        color: white;
+        background-color: config.$color-2;
+
+        &:hover {
+            color: white;
+            background-color: lighten(config.$color-2,25%);
+        }
+    }
+}
