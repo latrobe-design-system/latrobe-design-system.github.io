@@ -17,5 +17,3 @@ Tab order should be consistent across an experience. Tabs with related content s
 {% include sample-iframe.html snippet="tab/snippets/tabs.html"%}
 
 {% include sample-iframe.html snippet="tab/snippets/tabs-boxed.html"%}
-
-{% include sample-iframe.html snippet="tab/snippets/tabs-pill-nav.html"%}

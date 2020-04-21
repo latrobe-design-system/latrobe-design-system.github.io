@@ -3,18 +3,17 @@
 
 .ds-testimonial {
     display: block;
-    color: config.$color-2;
-    text-decoration: none;
     width: 100%;
-    max-width: 1024px;
+    max-width: 400px;
+    margin-top: 1rem;
 }
 
 .ds-testimonial__image {
     border-radius: 100%;
     overflow: hidden;
-    width: 120px;
-    height: 120px;
-    margin: 0 auto -60px auto;
+    width: config.spunits(30); /*120px*/
+    height: config.spunits(30); /*120px*/
+    margin: 0 auto 0 auto;
     position: relative;
 
     img {
@@ -26,11 +25,10 @@
 }
 
 .ds-testimonial__copy {
-    padding: 84px 0px 20px 0px;
-
+    padding: config.spunits(2) 0px config.spunits(5) 0px;
+    
     blockquote {
-        margin-top: 0;
-        margin-bottom: 2rem;
+        margin: 1em 0 0 0;
         padding-left: 0;
         border-left: none;
         & > p {
@@ -40,86 +38,64 @@
     }
 
     .ds-testimonial__cta {
-        margin-top: 20px;
+        margin-top: config.spunits(5); /*20px*/;
     }
 
 }
-
-@media(min-width: 600px){
-
-    .ds-testimonial__image {
-        width: 280px;
-        height: 280px;
-        margin: 0 0 20px 20px;
-        float: right;
-    }
-
-    .ds-testimonial__copy {
-        margin-top: 0 !important; /* override lobotomised owl */
-        padding-top: 20px;
-    }
-
-    .ds-testimonial-set .ds-testimonial__image {
-        width: 120px;
-        height: 120px;
-        margin: 0 auto -60px auto;
-        float: none;
-    }
-
-    .ds-testimonial-set .ds-testimonial__copy {
-        padding: 84px 20px 20px 20px;
-    }
-}
-
 
 .ds-testimonial-set {
     @include config.columns-grid($alignment: center);
-}
 
-/* if only one exists */
-.ds-testimonial-set .ds-testimonial:nth-last-child(1):first-child,
-.ds-testimonial-set .ds-testimonial:nth-last-child(1):first-child ~ .ds-testimonial {
-    @media(min-width: 600px){
-        display: block;
-
-        .ds-testimonial__image {
-            width: 280px;
-            height: 280px;
-            margin: 0 0 20px 20px;
-            float: right;
-        }
-
-        .ds-testimonial__copy {
-            border: 0px;
-            padding-top: 20px;
-        }
-    }
-    @media(min-width: 1024px){
-        .ds-testimonial__image {
-            width: 360px;
-            height: 360px;
-        }
+    .ds-testimonial {
+        max-width: 1024px;
     }
 
-}
 
-/* if only two exist */
-.ds-testimonial-set .ds-testimonial:nth-last-child(2):first-child,
-.ds-testimonial-set .ds-testimonial:nth-last-child(2):first-child ~ .ds-testimonial {
+    /* if only one exists in set */
+    .ds-testimonial:nth-last-child(1):first-child,
+    .ds-testimonial:nth-last-child(1):first-child ~ .ds-testimonial {
+        @media(min-width: 600px){
 
-    @media(min-width: 1200px){
-        display: block;
+            .ds-testimonial__image {
+                width: config.spunits(70); /*280px*/;
+                height: config.spunits(70); /*280px*/;
+                margin: 0 0 config.spunits(5) config.spunits(5); /*0 0 20px 20px;*/
+                float: right;
+            }
 
-        .ds-testimonial__image {
-            width: 280px;
-            height: 280px;
-            margin: 0 0 20px 20px;
-            float: right;
+            .ds-testimonial__copy {
+                padding-top: config.spunits(5);
+            }
+
+        }
+        @media(min-width: 1024px){
+            .ds-testimonial__image {
+                width: config.spunits(90); /*360px*/;
+                height: config.spunits(90); /*360px*/;
+            }
         }
 
-        .ds-testimonial__copy {
-            border: 0px;
-            padding-top: 20px;
+    }
+
+    /* if only two exist */
+    .ds-testimonial:nth-last-child(2):first-child,
+    .ds-testimonial:nth-last-child(2):first-child ~ .ds-testimonial {
+
+        @media(min-width: 1200px){
+
+            .ds-testimonial__image {
+                width: config.spunits(70); /*280px*/;
+                height: config.spunits(70); /*280px*/;
+                margin: 0 0 20px 20px;
+                float: right;
+            }
+
+            .ds-testimonial__copy {
+                border: 0px;
+                padding-top: 20px;
+            }
+
         }
     }
+
 }

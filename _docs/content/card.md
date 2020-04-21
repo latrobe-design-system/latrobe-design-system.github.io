@@ -6,17 +6,9 @@ info: The card component is used to provide a brief summary of content or a task
 
 {% include sample-iframe.html snippet="card/snippets/card.html" bgcolor="#eee" %}
 
-{% include sample-iframe.html snippet="card/snippets/card-linked.html" bgcolor="#eee" %}
-
-{% include sample-iframe.html snippet="card/snippets/card-linked-cta.html" bgcolor="#eee" %}
-
 ## Card with image
 
 {% include sample-iframe.html snippet="card/snippets/card-image.html" bgcolor="#eee" %}
-
-{% include sample-iframe.html snippet="card/snippets/card-image-linked.html" bgcolor="#eee" %}
-
-{% include sample-iframe.html snippet="card/snippets/card-image-linked-cta.html" bgcolor="#eee" %}
 
 ## Card Set
 

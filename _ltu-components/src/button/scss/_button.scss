@@ -1,49 +1,49 @@
 // depenencies
 @use "config";
 
-button.ds-btn {
+/* base button */
+.ds-btn {
     /* remove browser styling from button element */
     -webkit-appearance: none;
     -moz-appearance: none;
-}
 
-/* primary button */
-.ds-btn,
-.ds-btn-primary {
-    border: 0;
-    box-sizing: border-box;
+    //border: 0;
     border-radius: 2px;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
-    line-height: 24px;
+    line-height: 1.5;
+    vertical-align: middle;
     display: inline-block;
-    padding: 12px 18px;
-    margin: 4px 0;
+    padding: config.$space-unit * 3 18px; //18px (not 20px) because of 2px border
+    margin: config.$space-unit 0;
     text-decoration: none;
-    color: white;
-    background-color: config.$color-1;
+    color: config.$color-2;
+    background-color: config.$color-3a;
     border: 2px solid transparent;
     transition: background-color 0.05s ease-in-out;
     cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
     &:visited {
-        color: white;
+        color: config.$color-2;
     }
 
-    &.ds-btn--disabled {
+    &[disabled] {
         opacity: 0.25;
         pointer-events: none;
     }
 
     &:hover {
         text-decoration: underline;
-        background-color: darken(config.$color-1,5%);
+        //background-color: darken(config.$color-3a,5%);
+        //opacity: 0.8;
+        transform: translateY(-4px);
+        box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
     }
 
     &[class*="icon-"]{
         padding-right: 44px;
         &::after {
-            filter: config.$white;
             margin: 0 12px;
         }
     }
@@ -57,30 +57,79 @@ button.ds-btn {
         }
     }
 
-    @media (min-width: 1400px) {
-        font-size: 18px;
-        line-height: 28px;
+    /*
+    * Button modifiers
+    */
+
+    /* light button modifier */
+    &.ds-btn--light {
+        background-color: white;
+
+        &:hover {
+            //text-decoration: underline;
+            //background-color: darken(white,5%);
+        }
     }
+
+    /* small modifier */
+    &.ds-btn--small {
+        padding: 4px 16px;
+
+        &[class*="icon-"]{
+            padding-right: 36px;
+            &::after {
+                margin: 0 8px;
+                width: 16px;
+            }
+        }
+
+        &.ds-icon--before {
+            padding-right: 16px;
+            padding-left: 28px;
+
+            &::after {
+                left: 0;
+                right: unset;
+            }
+        }
+    }
+
+
 }
 
-/* primary button modifiers */
-.ds-btn--light,
-.ds-btn-primary--light {
-    color: config.$color-1;
-    background-color: white;
+/* primary button */
+.ds-btn-primary {
+    @extend .ds-btn;
+    color: white;
+    background-color: config.$color-1;
 
     &:visited {
-        color: config.$color-1;
+        color: white;
     }
 
     &:hover {
         text-decoration: underline;
-        background-color: darken(white,5%);
+        //background-color: darken(config.$color-1,5%);
     }
 
     &[class*="icon-"]{
         &::after {
-            filter: config.$red;
+            filter: config.$white;
+        }
+    }
+
+    &.ds-btn--light {
+        color: config.$color-1;
+        background-color: white;
+
+        &:visited {
+            color: config.$color-1;
+        }
+
+        &[class*="icon-"]{
+            &::after {
+                filter: config.$red;
+            }
         }
     }
 }
@@ -91,43 +140,46 @@ button.ds-btn {
     color: config.$color-2;
     background-color: transparent;
     border: 2px solid config.$color-2;
-    padding: 12px 18px;
 
     &:visited {
         color: config.$color-2;
     }
 
     &:hover {
-        background-color: rgba(black,.15);
-        border: 2px solid config.$color-2;
+        //background-color: rgba(black,.15);
+        //border: 2px solid config.$color-2;
     }
 
     &[class*="icon-"]::after {
         filter: config.$near-black;
     }
-}
 
-/* secondary button modifiers*/
-.ds-btn-secondary--light {
-    color: white;
-    border: 2px solid white;
-
-    &:visited {
+    /* secondary and light button modifier */
+    &.ds-btn--light {
         color: white;
-    }
-
-    &:hover {
-        background-color: rgba(black,.15);
+        background-color: transparent;
         border: 2px solid white;
-    }
 
-    &[class*="icon-"]::after {
-        filter: config.$white;
+        &:visited {
+            color: white;
+        }
+
+        &:hover {
+            //background-color: rgba(black,.15);
+            //border: 2px solid white;
+        }
+
+        &[class*="icon-"]::after {
+            filter: config.$white;
+        }
     }
 }
+
+
 
 /* link button - looks like a link (for button tag) */
 .ds-btn-link {
+    @extend .ds-btn;
     padding: 0;
     margin: 0;
     color: config.$color-1;
@@ -137,117 +189,89 @@ button.ds-btn {
     border-radius: 0px;
 
     &:hover {
+        opacity: 1;
         background: none;
         text-decoration: none;
+        box-shadow: none;
+        transform: none;
     }
-}
-
-/* common button modifiers*/
-.ds-btn--small,
-.ds-btn-secondary--small {
-    padding: 4px 16px;
 
     &[class*="icon-"]{
-        padding-right: 36px;
+        padding-right: 32px;
+        filter: config.$red;
         &::after {
-            margin: 0 8px;
-            width: 16px;
+            margin: 0 4px;
         }
     }
 
     &.ds-icon--before {
-        padding-right: 16px;
-        padding-left: 28px;
-
-        &::after {
-            left: 0;
-            right: unset;
-        }
+        padding-right: inherit;
+        padding-left: 32px;
     }
 }
 
-/* pill button */
-.ds-btn-pill {
-    @extend .ds-btn-secondary;
-    font-weight: 500;
-    border: 2px solid config.$color-2;
-    box-sizing: border-box;
-    font-size: 16px;
-    line-height: inherit;
-    display: inline-block;
-    padding: 4px 16px;
-    border-radius: 20px;
-    color: config.$color-2;
-    text-decoration: none;
-    background-color: white;
-    cursor: pointer;
-
-    &:visited {
-        color: config.$color-2;
-    }
-
-    &:hover {
-        text-decoration: underline;
-        background-color: rgba(black,.15);
-    }
+input[type="button"],
+input[type="reset"] {
+    @extend .ds-btn;
 }
-
-/* pill button modifiers */
-.ds-btn-pill--selected {
-    color: white;
-    background-color: config.$color-2;
+input[type="submit"] {
+    @extend .ds-btn-primary;
 }
 
 /* round button */
 .ds-btn-round {
-    @extend .ds-btn-pill;
+    @extend .ds-btn;
+    
+    border: 2px solid config.$color-2;
+    border-radius: 50%;
     background-color: transparent;
     width: 48px;
     height: 48px;
     padding: 0;
     text-align: center;
-    border-radius: 50%;
-    text-indent: 100%;
     overflow: hidden;
     white-space: nowrap;
-    &[class*="icon-"] {
+
+    &[class*="icon-"]{
         padding: 0;
+        text-indent: 100%;
+        
+        &::after {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            transform: none;
+        }
+        
+        &.ds-btn--small {
+            padding: 0;
+            &::after {
+                margin: auto;
+            }
+        }
     }
-    &[class*="icon-"]::after {
-        position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        margin: auto;
-        transform: none;
+
+    /* round button modifiers */
+    &.ds-btn--small {
+        padding: 0;
+        width: 36px;
+        height: 36px;
     }
-}
 
-/* round button modifiers */
-.ds-btn-round--small {
-    width: 36px;
-    height: 36px;
-}
-
-.ds-btn-round--light {
-    color: white;
-    border: 2px solid white;
-    &:visited {
+    &.ds-btn--light {
         color: white;
-    }
-    &:hover {
-        background-color: rgba(black,.15);
         border: 2px solid white;
+        background-color: transparent;
+        
+        &:visited {
+            color: white;
+        }
+        
+        &[class*="icon-"]::after {
+            filter: config.$white;
+        }
     }
-    &[class*="icon-"]::after {
-        filter: config.$white;
-    }
-}
-
-
-/* form button */
-input[type="button"] {
-    @extend .ds-btn;
-    cursor: pointer;
 }

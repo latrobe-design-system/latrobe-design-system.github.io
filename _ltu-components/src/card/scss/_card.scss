@@ -5,7 +5,7 @@
 .ds-card {
     position: relative;
     width: 100%;
-    max-width: 450px;
+    max-width: 620px;
     transition: all 0.3s ease-in-out;
     background: #fff;
 
@@ -59,20 +59,14 @@
         overflow: hidden;
     }
 
-    .ds-card__heading {
-        color: config.$color-1;
-        text-decoration: underline;
-    }
-
     &:hover {
         transform: translateY(-4px);
-        color: config.$color-2;
-        text-decoration: none;
         cursor: pointer;
         box-shadow: config.$shadow-2;
 
         .ds-card__heading {
-            text-decoration: none;
+            color: config.$color-1;
+            text-decoration: underline;
         }
     }
 }
@@ -209,4 +203,8 @@
 .ds-card-set {
     @include config.columns-grid();
     margin-top: 1rem;
+
+    &.ds-card-set--left-align {
+        justify-items: left;
+    }
 }
