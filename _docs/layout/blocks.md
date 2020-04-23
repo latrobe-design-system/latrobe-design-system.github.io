@@ -27,4 +27,6 @@ The background of a block is white by default.
 
 Use the modifier `ds-block--grey` to give the block a grey background. 
 
-{% include sample-code-only.html snippet="tests/snippets/block/block.html" %}
+{% include sample-code-only.html snippet="core/snippets/block/block.html" %}
+
+{% include sample-iframe-only.html snippet="tests/blocks.html" %}

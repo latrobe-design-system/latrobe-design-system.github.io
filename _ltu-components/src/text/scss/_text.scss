@@ -126,6 +126,7 @@ ul {
     &.ds-list--two-col,
     &.ds-list--three-col,
     &.ds-list--four-col {
+        max-width: 42rem;
         @media(min-width: 600px) {
             columns: 2;
         }
@@ -145,11 +146,16 @@ ul {
     }
 }
 
+li {
+    max-width: 42em; // readable line length 80 characters https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html
+}
+
 // for squiz content template
 div.ds-list {
     &--two-col,
     &--three-col,
     &--four-col {
+        max-width: 62rem;
         @media(min-width: 600px) {
             > ul, 
             > ol {
