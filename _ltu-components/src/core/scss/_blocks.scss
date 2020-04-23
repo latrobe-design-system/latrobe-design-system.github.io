@@ -7,7 +7,7 @@
 .ds-page-content > article {
     padding: 0 20px;
     margin: 0 auto;
-    max-width: 1104px; // 1024 + 80 (padding)
+    max-width: 1280px + 80px; // 1280 + 80 (padding)
 
     @media (min-width: 640px) {
         padding: 0 40px;
@@ -26,18 +26,12 @@ div.ds-block {
 
 // .ds-block__wrapper wraps block content
 .ds-block__wrapper {
-    max-width: 1024px;
+    max-width: 1280px;
     margin: 0 auto;
 }
 
 // block width modifiers: usage .ds-block--[medium|wide|full-width]
 div.ds-block {
-
-    &--medium {
-        .ds-block__wrapper {
-            max-width: 1280px;
-        }
-    }
 
     &--wide {
         .ds-block__wrapper {
@@ -128,26 +122,31 @@ div.ds-block {
 // adjust spacing between adjancent grey blocks
 div.ds-block--bg-grey + div.ds-block--bg-grey {
     padding-top: 0;
+    margin-top: -3rem;
 }
 
 // adjust spacing between adjancent black blocks
 div.ds-block--bg-black + div.ds-block--bg-black {
     padding-top: 0;
+    margin-top: -3rem;
 }
 
 // adjust spacing between adjancent red blocks
 div.ds-block--bg-red + div.ds-block--bg-red {
     padding-top: 0;
+    margin-top: -3rem;
 }
 
 // adjust spacing between adjancent black-nodes blocks
 div.ds-block--bg-black-nodes + div.ds-block--bg-black-nodes {
     padding-top: 0;
+    margin-top: -3rem;
 }
 
 // adjust spacing between adjancent red-nodes blocks
 div.ds-block--bg-red-nodes + div.ds-block--bg-red-nodes {
     padding-top: 0;
+    margin-top: -3rem;
 }
 
 .ds-page-content {
@@ -171,7 +170,7 @@ div.ds-block--bg-red-nodes + div.ds-block--bg-red-nodes {
 
 .ds-block__header {
     text-align: left;
-    max-width: 1024px;
+    max-width: 1280px;
     margin: 0 auto;
 
     &--center-align {
@@ -192,18 +191,6 @@ div.ds-block--bg-red-nodes + div.ds-block--bg-red-nodes {
         }
     }
 
-    &--hard-left-align {
-        max-width: 100%;
-    }
-
-    &--hard-right-align {
-        max-width: 100%;
-        text-align: right;
-        > * {
-            margin-left: auto;
-            margin-right: 0;
-        }
-    }
 }
 
 div[class*=" ds-block--bg-"] {
