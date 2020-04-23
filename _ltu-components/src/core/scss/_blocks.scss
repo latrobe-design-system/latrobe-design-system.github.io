@@ -113,8 +113,8 @@ div.ds-block {
     &--bg-black-nodes,
     &--bg-red-nodes {
         // for blocks with background color
-        padding-top: config.$h2*2;  // bg color blocks have same top spacing as h2
-        padding-bottom: config.$h2*2;  // bg color blocks have same bottom spacing as h2
+        padding-top: 3rem;  
+        padding-bottom: 3rem;
         margin: 0;
 
         @media (min-width: 1000px) {
@@ -157,12 +157,12 @@ div.ds-block--bg-red-nodes + div.ds-block--bg-red-nodes {
         article {
             // add bottom margin to last child if no bg color
             &:last-child {
-                margin-bottom: config.$h2*2;  // blocks have same top-bottom spacing as h2
+                margin-bottom: 3rem;  // blocks have same top-bottom spacing as h2
             }
             //adjust spacing between no color bg div and colour bg divs
             + {
                 div[class*=" ds-block--bg-"] {
-                    margin-top: config.$h2*2;  // blocks have same top-bottom spacing as h2
+                    margin-top: 3rem;  // blocks have same top-bottom spacing as h2
                 }
             }
         }
@@ -194,6 +194,15 @@ div.ds-block--bg-red-nodes + div.ds-block--bg-red-nodes {
 
     &--hard-left-align {
         max-width: 100%;
+    }
+
+    &--hard-right-align {
+        max-width: 100%;
+        text-align: right;
+        > * {
+            margin-left: auto;
+            margin-right: 0;
+        }
     }
 }
 
