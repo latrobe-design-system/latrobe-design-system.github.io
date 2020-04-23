@@ -5,6 +5,7 @@ module.exports = {
   views: [
     './_(includes|layouts)/**/*.html',
     './_ltu-components/src/**/*.html',
+    './_ltu-components/tests/**/*.html',
     './_docs/**/*.md',
     './all-patterns.md',
   ],
