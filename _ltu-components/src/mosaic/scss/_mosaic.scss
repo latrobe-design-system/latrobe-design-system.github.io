@@ -4,39 +4,33 @@
 
 .ds-mosaic {
     @extend .clearfix;
-    box-sizing: border-box;
     margin: 1rem 0 0 0;
     padding: 0;
     list-style-type: none;
 }
 
-li.ds-mosaic__tile {
-    margin: 0;
-}
-
 .ds-mosaic__tile {
-    box-sizing: border-box;
+    margin: 0;
     margin: 0;
     position: relative;
     width: 50%;
     max-width: 100%;
-    min-width: 135px;
-
+    min-width: 136px;
+    float: left;
+    overflow: hidden;
+    text-align: center;
     @media(min-width: 500px) {
         width: 20%;
         min-width: 200px;
     }
-    float: left;
-    overflow: hidden;
-    text-align: center;
 
     &:hover {
         .ds-mosaic__tile-title {
             text-decoration: underline;
         }
+
         .ds-mosaic__tile-image {
             height: 105%;
-            //transform: scale(1.05);
         }
 
         .ds-mosaic__tile-content-footer {
@@ -51,119 +45,72 @@ li.ds-mosaic__tile {
         padding-bottom: 100%;
     }
 
-    &[data-bg="grey"] {
-        background-color: config.$color-3a;
+}
+
+.ds-mosaic__tile-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.ds-mosaic__tile-image {
+    display: none;
+}
+
+.ds-mosaic__tile-link {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-indent: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.ds-mosaic__tile-content {
+    text-align: left;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.ds-mosaic__tile-title {
+    margin: 0 0 0 0;
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+    line-height: calc(20px + 6 * ((100vw - 320px) / 680));
+    @media screen and (min-width: 1000px) {
+        font-size: 24px;
+        line-height: 32px;
     }
-    &[data-bg="black"],
-    &[data-bg="red"] {
-        color: white;
+}
 
-        .ds-mosaic__tile-content-footer a,
-        .ds-mosaic__tile-content-footer a:visited {
-            color: white;
-        }
-    }
+.ds-mosaic__tile-content-footer {
+    margin-top: auto;
+    padding-left: 0;
+    transition: padding 0.25s ease;
+}
 
-    &[data-bg="black"] {
-        background-color: config.$color-2;
-    }
-
-    &[data-bg="red"] {
-        background-color: config.$color-1;
-    }
-
-    &[data-bg="image"] {
-        .ds-mosaic__tile-content {
-            background: linear-gradient(to top, #242424, transparent 50%);
-        }
-        .ds-mosaic__tile-image {
-            display: block;
-        }
-
-        .ds-mosaic__tile-title {
-            margin-top: auto;
-            color: white;
-            font-size: 20px;
-            line-height: 24px;
-            font-size: calc(16px + 6 * ((100vw - 320px) / 680));
-            line-height: calc(20px + 6 * ((100vw - 320px) / 680));
-            @media screen and (min-width: 1000px) {
-                font-size: 20px;
-                line-height: 24px;
-            }
-        }
-
-        .ds-mosaic__tile-content-footer,
-        .ds-mosaic__tile-description {
-            display: none;
-        }
-    }
-
-    .ds-mosaic__tile-wrapper {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-    }
-
-    .ds-mosaic__tile-image {
-        display: none;
-    }
-
-    .ds-mosaic__tile-link {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        text-indent: 100%;
-        overflow: hidden;
-        white-space: nowrap;
-        cursor: pointer;
-    }
-
-    .ds-mosaic__tile-content {
-        text-align: left;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        padding: 10%;
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-    }
-
-    .ds-mosaic__tile-title {
-        margin: 0 0 0 0;
-        font-size: calc(16px + 6 * ((100vw - 320px) / 680));
-        line-height: calc(20px + 6 * ((100vw - 320px) / 680));
-        @media screen and (min-width: 1000px) {
-            font-size: 24px;
-            line-height: 32px;
-        }
-    }
-
-    .ds-mosaic__tile-content-footer {
-        margin-top: auto;
-        padding-left: 0;
-        transition: padding 0.25s ease;
-    }
-
-    .ds-mosaic__tile-image {
-        max-width: none;
-        padding: 0;
-        position: absolute;
-        margin: auto;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 100%;
-        transition: height 0.25s ease-in-out;
-    }
+.ds-mosaic__tile-image {
+    max-width: none;
+    padding: 0;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    transition: height 0.25s ease-in-out;
 }
 
 .ds-mosaic__tile--primary {
@@ -187,11 +134,64 @@ li.ds-mosaic__tile {
     }
 }
 
+.ds-mosaic__tile--grey {
+    background-color: config.$color-3a;
+}
+
+.ds-mosaic__tile--black,
+.ds-mosaic__tile--red {
+    color: white;
+
+    .ds-mosaic__tile-content-footer a,
+    .ds-mosaic__tile-content-footer a:visited {
+        color: white;
+    }
+    
+}
+
+.ds-mosaic__tile--black {
+    background-color: config.$color-2;
+}
+
+.ds-mosaic__tile--red {
+    background-color: config.$color-1;
+}
+
+.ds-mosaic__tile--image {
+
+    .ds-mosaic__tile-content {
+        background: linear-gradient(to top, #242424, transparent 50%);
+    }
+
+    .ds-mosaic__tile-image {
+        display: block;
+    }
+
+    .ds-mosaic__tile-title {
+        margin-top: auto;
+        color: white;
+        font-size: 20px;
+        line-height: 24px;
+        font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+        line-height: calc(20px + 6 * ((100vw - 320px) / 680));
+        @media screen and (min-width: 1000px) {
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+
+    .ds-mosaic__tile-content-footer,
+    .ds-mosaic__tile-description {
+        display: none;
+    }
+}
+
 @supports(display:grid) {
+
     .ds-mosaic {
         overflow-x: scroll;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(135px,20%));
+        grid-template-columns: repeat(auto-fill, minmax(136px,20%));
         &::after,
         &::before {
             display: none; /* stop clearfix interfering with grid layout */
@@ -199,7 +199,7 @@ li.ds-mosaic__tile {
     }
 
     .ds-mosaic__tile,
-    .ds-mosaic__tile-primary {
+    .ds-mosaic__tile--primary {
         min-width: 100%;
         width: 100%;
     }
@@ -208,4 +208,5 @@ li.ds-mosaic__tile {
         grid-column: span 2;
         grid-row: span 2;
     }
+
 }
