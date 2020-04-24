@@ -30,10 +30,12 @@
 .ds-image-gallery {
     position: relative;
     margin-top: 1rem;
+    max-width: 1024px;
 
     .ds-image-gallery__images {
         @extend .clearfix;
         background-color: config.$color-2;
+        margin-top: 0;
     }
 
     .ds-image-gallery__image {
