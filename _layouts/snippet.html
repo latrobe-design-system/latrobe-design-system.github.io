@@ -25,31 +25,35 @@ if(window.outerWidth <= mobileBreakingPoint){
 </script>{% endif %}
 
     <!--noindex-->
-    <a id="skip" class="ds-btn" href="#content">Skip to content</a>
+    <a id="skip" class="ds-btn-primary" href="#content">Skip to content</a>
     {% if page.showHeader == 'yes' %}{% include legacy-ltu-nav/ltu-header.html %}{% endif %}
     <!--end noindex-->
 
     <main id="content">
 
-        {% if page.showLeftNav == 'yes' %}{% include legacy-ltu-nav/ltu-nav.html %}{% endif %}
+        <div class="ds-main-wrapper">
 
-        <div class="ds-page-content-wrapper">
+            {% if page.showLeftNav == 'yes' %}{% include legacy-ltu-nav/ltu-nav.html %}{% endif %}
 
-            {% if page.showBreadcrumb == 'yes' %}{% include legacy-ltu-nav/ltu-breadcrumb.html %}{% endif %}
+            <div class="ds-page-content-wrapper">
 
-            <article class="ds-page-content">
+                {% if page.showBreadcrumb == 'yes' %}{% include legacy-ltu-nav/ltu-breadcrumb.html %}{% endif %}
 
-                {% if page.type == 'example' %}
-                {{ content }}
-                {% elsif page.type == 'block' %}            
-                {{ content }}
-                {%else%}
-                <div style="margin-top: 3rem;">
+                <article class="ds-page-content">
+
+                    {% if page.type == 'example' %}
                     {{ content }}
-                </div>
-                {% endif %}
+                    {% elsif page.type == 'block' %}            
+                    {{ content }}
+                    {%else%}
+                    <div style="margin-top: 3rem;">
+                        {{ content }}
+                    </div>
+                    {% endif %}
 
-            </article>
+                </article>
+
+            </div>
 
         </div>
 
