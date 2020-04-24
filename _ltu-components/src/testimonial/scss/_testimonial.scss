@@ -65,6 +65,11 @@
 
             .ds-testimonial__copy {
                 padding-top: config.spunits(5);
+                blockquote {
+                    & > p {
+                        font-size: config.$h4;
+                    }
+                }
             }
 
         }
