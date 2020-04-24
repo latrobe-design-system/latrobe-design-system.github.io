@@ -35,8 +35,8 @@ li.ds-mosaic__tile {
             text-decoration: underline;
         }
         .ds-mosaic__tile-image {
-            // height: 105%;
-            transform: scale(1.05);
+            height: 105%;
+            //transform: scale(1.05);
         }
 
         .ds-mosaic__tile-content-footer {
@@ -152,16 +152,17 @@ li.ds-mosaic__tile {
     }
 
     .ds-mosaic__tile-image {
+        max-width: none;
         padding: 0;
         position: absolute;
         margin: auto;
         top: 0;
         right: 0;
         bottom: 0;
-        left: 0;
-        // transform: translateX(-50%);
+        left: 50%;
+        transform: translateX(-50%);
         height: 100%;
-        transition: transform 0.25s ease-in-out;
+        transition: height 0.25s ease-in-out;
     }
 }
 
