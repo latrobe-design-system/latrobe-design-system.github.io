@@ -7,6 +7,7 @@
 }
 
 .ds-tabs-nav {
+    max-width: 1024px;
     display: block;
     border-bottom: 2px solid config.$color-2;
     /* scroll on mobile when too wide */
