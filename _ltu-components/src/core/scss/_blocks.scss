@@ -159,7 +159,7 @@ div.ds-block--bg-red-nodes + div.ds-block--bg-red-nodes {
                 div[class*=" ds-block--bg-"] {
                     margin-top: 4rem;  // blocks have same top-bottom spacing as h2
                     padding-top: 4rem;
-                    .ds-block__wrapper *:first-child {
+                    .ds-block__wrapper >*:first-child {
                         margin-top: 0;
                     }
                 }
