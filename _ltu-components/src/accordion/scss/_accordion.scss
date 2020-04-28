@@ -4,6 +4,7 @@
 
 .ds-accordion {
     padding: 0;
+    border-bottom: 2px solid config.$color-3b;
 
     & > * {
         max-width: 100%;
@@ -12,13 +13,6 @@
 
     button:focus {
         outline-offset: -2px;
-    }
-
-    &:after {
-        content: "";
-        display: block;
-        max-width: 1024px;
-        border-bottom: 2px solid config.$color-3b;
     }
 }
 
@@ -32,7 +26,6 @@
     position: relative;
     text-align: left;
     width: 100%;
-    max-width: 1024px;
     border: none;
     color: config.$color-1;
     cursor: pointer;
@@ -53,10 +46,21 @@
 
 .ds-accordion__content {
     display: none;
-    padding: config.spunits(5) 0 config.spunits(5) config.spunits(10);
+    padding: config.spunits(5) 0 config.spunits(5) 0;
     margin-top: 0;
 
     & *:first-child {
         margin-top: 0;
     }
+
+    // everythin inside aligns with title
+    * {
+        margin-left: config.spunits(10);
+    }
+    // except for nested blocks and tables
+    .ds-block,
+    .table-wrapper {
+        margin-left: 0;
+    }
+
 }
