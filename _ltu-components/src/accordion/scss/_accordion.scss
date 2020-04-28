@@ -3,13 +3,6 @@
 @use "core/scss/icons";
 
 .ds-accordion {
-    margin-top: 1rem !important; //important needed here to overide wrapper first child rule
-}
-.ds-accordion + .ds-accordion {
-    margin-top: 0 !important;
-}
-
-.ds-accordion {
     padding: 0;
 
     & > * {

@@ -11,18 +11,17 @@ html {
     box-sizing: inherit;
 }
 
+body,
+html {
+    scroll-behavior: smooth;
+}
+
 button,
 html,
 input,
 select,
 textarea {
     color: #242424;
-}
-
-body,
-html {
-    /*height: 100%;*/
-    scroll-behavior: smooth;
 }
 
 a,
@@ -52,7 +51,7 @@ img {
 
 /* make anchor clear sticky header on scroll */
 @media (min-width: 1024px) {
-    .ds-page-content [id]{
-        scroll-margin-top: 180px;
+    html, body {
+        scroll-padding-top: 180px;
     }
 }
