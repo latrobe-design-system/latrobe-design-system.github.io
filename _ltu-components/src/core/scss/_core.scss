@@ -51,7 +51,7 @@ img {
 
 /* make anchor clear sticky header on scroll */
 @media (min-width: 1024px) {
-    html, body {
-        scroll-padding-top: 180px;
+    html {
+        scroll-padding-top: 160px;
     }
 }

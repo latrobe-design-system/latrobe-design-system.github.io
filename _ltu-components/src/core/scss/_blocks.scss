@@ -51,6 +51,14 @@ div.ds-block {
 }
 
 // block background color modifiers: usage .ds-block--[grey]
+
+div[class*=" ds-block--bg-"] {
+    // for blocks with background color
+    padding-top: 3rem;  
+    padding-bottom: 3rem;
+    margin: 0;
+}
+
 div.ds-block {
 
     &--bg-grey {
@@ -100,52 +108,35 @@ div.ds-block {
             color: white;
         }
     }
-
-    &--bg-grey,
-    &--bg-black,
-    &--bg-red,
-    &--bg-black-nodes,
-    &--bg-red-nodes {
-        // for blocks with background color
-        padding-top: 3rem;  
-        padding-bottom: 3rem;
-        margin: 0;
-
-        @media (min-width: 1000px) {
-            padding-left: 4%;
-            padding-right: 4%;
-            margin: 0;
-        }
-    }
 }
 
 // adjust spacing between adjancent grey blocks
 div.ds-block--bg-grey + div.ds-block--bg-grey {
-    padding-top: 0;
+    //padding-top: 0;
     margin-top: -3rem;
 }
 
 // adjust spacing between adjancent black blocks
 div.ds-block--bg-black + div.ds-block--bg-black {
-    padding-top: 0;
+    //padding-top: 0;
     margin-top: -3rem;
 }
 
 // adjust spacing between adjancent red blocks
 div.ds-block--bg-red + div.ds-block--bg-red {
-    padding-top: 0;
+    //padding-top: 0;
     margin-top: -3rem;
 }
 
 // adjust spacing between adjancent black-nodes blocks
 div.ds-block--bg-black-nodes + div.ds-block--bg-black-nodes {
-    padding-top: 0;
+    //padding-top: 0;
     margin-top: -3rem;
 }
 
 // adjust spacing between adjancent red-nodes blocks
 div.ds-block--bg-red-nodes + div.ds-block--bg-red-nodes {
-    padding-top: 0;
+    //padding-top: 0;
     margin-top: -3rem;
 }
 
@@ -161,6 +152,20 @@ div.ds-block--bg-red-nodes + div.ds-block--bg-red-nodes {
             //adjust spacing between no color bg div and colour bg divs
             + {
                 div[class*=" ds-block--bg-"] {
+                    margin-top: 3rem;  // blocks have same top-bottom spacing as h2
+                }
+            }
+        }
+        div[class*=" ds-block--bg-"] {
+            // no bottom margin for bg-color block if last on page
+            &:last-child {
+                margin-bottom: 0;  // blocks have same top-bottom spacing as h2
+            }
+            //adjust spacing between no color bg div and colour bg divs
+            + {
+                div:not([class*=" ds-block--bg-"]),
+                section,
+                article {
                     margin-top: 3rem;  // blocks have same top-bottom spacing as h2
                 }
             }
