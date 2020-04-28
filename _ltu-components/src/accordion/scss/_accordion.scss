@@ -54,7 +54,7 @@
     }
 
     // everythin inside aligns with title
-    * {
+    > * {
         margin-left: config.spunits(10);
     }
     // except for nested blocks and tables
