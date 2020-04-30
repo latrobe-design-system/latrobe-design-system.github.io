@@ -161,7 +161,7 @@ div.ds-block--bg-red-nodes + div.ds-block--bg-red-nodes {
                     padding-top: 4rem;
                     
                     .ds-block__wrapper,
-                    .ds-block__wrapper [id^="content_container"] {
+                    .ds-block__wrapper div[id^="content_container"] {
                          >*:first-child {
                             margin-top: 0;
                          }
