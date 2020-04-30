@@ -160,11 +160,16 @@ div.ds-block--bg-red-nodes + div.ds-block--bg-red-nodes {
                     margin-top: 4rem;
                     padding-top: 4rem;
                     
-                    .ds-block__wrapper,
-                    .ds-block__wrapper > div[id*="content_container"] {
-                         > *:first-child {
+                    .ds-block__wrapper {
+                         > :first-child {
                             margin-top: 0;
                          }
+                    }
+
+                    .ds-block__wrapper [id^="content_container"]:first-child {
+                        > :first-child {
+                           margin-top: 0;
+                        }
                     }
                     // .ds-block__wrapper [id^="content_container"] is to cater for squiz standard content wrapping behaivour
                 }
