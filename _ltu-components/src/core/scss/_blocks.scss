@@ -152,30 +152,35 @@ div.ds-block--bg-red-nodes + div.ds-block--bg-red-nodes {
         article {
             // add bottom margin to last child of page if no bg color
             &:last-child {
-                margin-bottom: 4rem;  // blocks have same top-bottom spacing as h2
+                margin-bottom: 4rem;
             }
             // adjust margin and padding bg block following not bg block
             + {
                 div[class*=" ds-block--bg-"] {
-                    margin-top: 4rem;  // blocks have same top-bottom spacing as h2
+                    margin-top: 4rem;
                     padding-top: 4rem;
-                    .ds-block__wrapper >*:first-child {
-                        margin-top: 0;
+                    
+                    .ds-block__wrapper,
+                    .ds-block__wrapper [id^="content_container"] {
+                         >*:first-child {
+                            margin-top: 0;
+                         }
                     }
+                    // .ds-block__wrapper [id^="content_container"] is to cater for squiz standard content wrapping behaivour
                 }
             }
         }
         div[class*=" ds-block--bg-"] {
             // no bottom margin for last child of page if has bg-color
             &:last-child {
-                margin-bottom: 0;  // blocks have same top-bottom spacing as h2
+                margin-bottom: 0;
             }
             // adjust margin and padding not bg block following bg block
             + {
                 div:not([class*=" ds-block--bg-"]),
                 section,
                 article {
-                    margin-top: 4rem;  // blocks have same top-bottom spacing as h2
+                    margin-top: 4rem;
                 }
             }
         }
