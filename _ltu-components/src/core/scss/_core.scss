@@ -52,14 +52,15 @@ img {
 
 /* squiz places images in p tags therefore max-width limited by p max-width so need to break this */
 p img {
-    max-width: calc(75vw - 80px);
+    max-width: calc(100vw - 80px);
     position: relative;
 
     // when nav showing
     @media (min-width: 1024px) {
-        p img {
             max-width: calc(75vw - 80px);
-        }
+    }
+    @media (min-width: 1760px) {
+        max-width: 1280px;
     }
 }
 
