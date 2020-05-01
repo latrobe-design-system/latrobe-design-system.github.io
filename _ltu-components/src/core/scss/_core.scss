@@ -47,6 +47,20 @@ button:-moz-focusring,
 /* responsive images */
 img {
     max-width: 100%;
+    height: auto;
+}
+
+/* squiz places images in p tags therefore max-width limited by p max-width so need to break this */
+p img {
+    max-width: calc(75vw - 80px);
+    position: relative;
+
+    // when nav showing
+    @media (min-width: 1024px) {
+        p img {
+            max-width: calc(75vw - 80px);
+        }
+    }
 }
 
 /* make anchor clear sticky header on scroll */
