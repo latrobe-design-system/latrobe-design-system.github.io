@@ -50,11 +50,12 @@ img {
     height: auto;
 }
 
-/* squiz places images in p tags therefore max-width limited by p max-width so need to break this */
+/* 
+ * squiz places images in p tags therefore max-width limited by p max-width so need to break this 
+ * TODO: update this when nav layout changes
+ */
 p img {
-    max-width: calc(100vw - 40px);
-    position: relative;
-
+    
     @media (min-width: 640px) {
         max-width: calc(100vw - 80px);
     }
