@@ -2,15 +2,14 @@
 title: "All"
 status: draft
 
-showLeftNav: "yes"
+showLeftNav: "no"
 ---
 
 {%- for pattern in site.ltu-components -%}
     {%- if pattern.type == "block" -%}
+    {% assign url = pattern.path | remove_first: "world" %}
     {% include sample-component.html
-        snippet="ltu-components/tests/all.html"
-        blockWidth=""
-        blockBackground=""
+        snippet="url"
     %}
     {%- endif -%}
 {%- endfor -%}
