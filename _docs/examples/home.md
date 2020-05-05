@@ -1,6 +1,6 @@
 ---
 title: "Home templates"
-status: draft
+status: ready
 ---
 
 {% include sample-iframe.html snippet="home-page.html" %}
