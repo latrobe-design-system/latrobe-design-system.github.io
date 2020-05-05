@@ -1,6 +1,6 @@
 ---
 title: "Banners"
-status: draft
+status: ready
 ---
 
 {% include sample-iframe.html snippet="banner/snippets/hero.html" %}
