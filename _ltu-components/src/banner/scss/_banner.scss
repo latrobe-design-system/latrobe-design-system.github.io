@@ -6,6 +6,141 @@
 // Banner Hero
 //----------------------------------------------------------------------------------------------------------------------------------//
 
+.ds-hero {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.ds-hero__content {
+    position: relative;
+
+    @media(min-width: 768px) {
+        padding: config.spunits(10) 0;
+
+        // red triangle top left
+        &::before {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            border-left: 196px solid transparent;
+            border-right: 196px solid transparent;
+            border-top: 148px solid #e2231b;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: -196px;
+        }
+    }
+}
+.ds-hero__text {
+    max-width: 800px;
+    min-height: 400px;
+    padding: config.spunits(8) config.spunits(7) config.spunits(8) config.spunits(10);
+    background-color: white;
+    position: relative;
+    z-index: 1;
+    
+    // button group always at bottom
+    display: flex;
+    flex-direction: column;
+    .ds-hero__button-group {
+        padding-top: 1rem;
+        margin-top: auto;
+    }
+
+    > :first-child { margin-top: 0; }
+
+    h1 {
+        margin-bottom: 0;
+    }
+    h2 {
+        margin-top: 1rem;
+        font-size: config.$h3;
+    }
+
+    // latrobe chevron
+    &::before {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-image: url("icons/latrobe-chevron-RGB.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    @media(min-width: 768px) {
+        width: 2 / 3 * 100%;
+    }
+}
+
+.ds-hero__image {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%; /* 16:9 */
+
+    img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        bottom: 0;
+    }
+
+    // white triangle bottom left
+    &::before {
+        content: "";
+        display: block;
+        width: 0; 
+        height: 0; 
+        border-right: config.spunits(6) solid transparent;
+        border-bottom: config.spunits(4) solid #fff;
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+    }
+
+    // white triangle bottom right
+    &::after {
+        content: "";
+        display: block;
+        width: 0; 
+        height: 0; 
+        border-left: config.spunits(35) solid transparent;
+        border-right: 0px solid transparent;
+        border-bottom: config.spunits(13) solid #fff;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    @media(min-width: 768px) {
+        position: absolute;
+        padding-bottom: 0;
+        
+        // white triangle bottom left
+        &::before {
+            border-right: config.spunits(13) solid transparent;
+            border-bottom: config.spunits(10) solid #fff;
+        }
+
+        // white triangle bottom right
+        &::after {
+            border-left: config.spunits(70) solid transparent;
+            border-right: 0px solid transparent;
+            border-bottom: config.spunits(30) solid #fff;
+        }
+    }
+}
+
+
+/* old for deleteions
+
 .ds-banner-hero {
     width: 100%;
     overflow: hidden;
