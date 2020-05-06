@@ -32,15 +32,15 @@ td, th {
 
 th {
     text-align: left;
-    border-bottom: 2px solid config.$color-3a;
+    border-bottom: 2px solid config.$color-3b;
 }
 
 tbody th:first-child {
-    border-right: 2px solid config.$color-3a;
+    border-right: 2px solid config.$color-3b;
 }
 
 td {
-    border-right: 2px solid config.$color-3a;
+    border-right: 2px solid config.$color-3b;
 
     &:last-child {
         border-right: none;
@@ -48,8 +48,8 @@ td {
 }
 
 tr {
-    border-top: 2px solid config.$color-3a;
-    border-bottom: 2px solid config.$color-3a;
+    border-top: 2px solid config.$color-3b;
+    border-bottom: 2px solid config.$color-3b;
 }
 
 // jquery tablesorter styles

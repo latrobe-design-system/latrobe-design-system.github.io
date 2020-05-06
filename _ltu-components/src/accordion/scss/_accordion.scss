@@ -27,14 +27,16 @@
     text-align: left;
     width: 100%;
     border: none;
-    color: config.$color-1;
+    color: config.$color-2;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 
     &:hover {
+        @extend .ds-icon--red;
         background: config.$color-3;
         .ds-accordion__title {
-            text-decoration: none;
-            color: config.$color-2;
+            text-decoration: underline;
+            color: config.$color-1;
         }
     }
 
