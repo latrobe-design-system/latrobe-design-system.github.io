@@ -1,5 +1,6 @@
 // depenencies
 @use "config";
+@use "core/scss/icons";
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
@@ -32,6 +33,11 @@ a:visited {
 
 a:hover {
     text-decoration: none;
+}
+
+a:not([href*="latrobe.edu.au"]):not([class*="ds-btn"]) {
+    @extend .ds-icon-external-link;
+    @extend .ds-icon--red;
 }
 
 :focus,

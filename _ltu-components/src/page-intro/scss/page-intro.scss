@@ -1,7 +1,8 @@
+@use "config";
 .ds-page-intro {
     display: flex;
     flex-direction: column-reverse;
-    margin-top: config.spunit(4);
+    margin-top: config.spunits(4);
     .ds-page-intro__content {
         & > :first-child {
             margin-top: 0;
