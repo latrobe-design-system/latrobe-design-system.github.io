@@ -35,9 +35,11 @@ a:hover {
     text-decoration: none;
 }
 
-a:not([href*="latrobe.edu.au"]):not([class*="ds-btn"]) {
-    @extend .ds-icon-external-link;
-    @extend .ds-icon--red;
+.ds-page-content {
+    a:not([href*="latrobe.edu.au"]):not([class*="ds-btn"]):not([href^='#']):not([href^='/']) {
+        @extend .ds-icon-external-link;
+        @extend .ds-icon--red;
+    }
 }
 
 :focus,
