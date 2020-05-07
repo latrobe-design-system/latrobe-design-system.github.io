@@ -1,22 +1,22 @@
 .ds-page-intro {
-    /*max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;*/
     display: flex;
     flex-direction: column-reverse;
-    margin-top: 1rem !important; /* override lobotomised owl */
+    margin-top: config.spunit(4);
     .ds-page-intro__content {
-        margin-top: 1rem !important; /* override lobotomised owl */
+        & > :first-child {
+            margin-top: 0;
+        }
     }
     .ds-page-intro__image {
-        margin-top: 0 !important; /* override lobotomised owl */
+        margin-top: 0;
         align-self: flex-start;
     }
     @media(min-width: 768px) {
         flex-direction: row;
+        flex-direction: row;
+        align-items: center;
         .ds-page-intro__image {
-            margin-top: 0 !important; /* override lobotomised owl */
-            
+            margin-top: 0;
             min-height: 260px;
             max-height: 260px;
         }
