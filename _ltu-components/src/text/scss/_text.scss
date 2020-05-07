@@ -90,6 +90,7 @@ p {
 p.ds-lead {
     position: relative;
     font-size: 1.2rem;
+    margin-bottom: config.spunits(8);
     &::before {
         content: "";
         display: block;
