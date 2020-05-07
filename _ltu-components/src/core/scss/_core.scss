@@ -35,11 +35,10 @@ a:hover {
     text-decoration: none;
 }
 
-.ds-page-content {
-    a[href^="http"]:not([href*="latrobe.edu.au"]):not([class*="ds-btn"]):not([href^='#']):not([href^='/']) {
-        @extend .ds-icon-external-link;
-        @extend .ds-icon--red;
-    }
+// show external link icon for external links
+a[href^="http"]:not([href*="latrobe.edu.au"]):not([class*="ds-btn"]):not([href^='#']):not([href^='/']) {
+    @extend .ds-icon-external-link;
+    @extend .ds-icon--red;
 }
 
 :focus,
