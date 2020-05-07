@@ -197,7 +197,7 @@
     }
 
     &[class*="icon-"]{
-        padding-right: 32px;
+        padding-right: 28px;
         filter: config.$red;
         &::after {
             margin: 0 4px;
@@ -206,7 +206,7 @@
 
     &.ds-icon--before {
         padding-right: inherit;
-        padding-left: 32px;
+        padding-left: 28px;
     }
 }
 
