@@ -1,7 +1,5 @@
 @use "config";
 .ds-page-intro {
-    display: flex;
-    flex-direction: column-reverse;
     margin-top: config.spunits(4);
     .ds-page-intro__content {
         & > :first-child {
@@ -9,17 +7,18 @@
         }
     }
     .ds-page-intro__image {
-        margin-top: 0;
-        align-self: flex-start;
+        margin: 0 0 1rem 0;
     }
-    @media(min-width: 768px) {
-        flex-direction: row;
-        flex-direction: row;
-        align-items: center;
+    @media(min-width: 1024px) {
         .ds-page-intro__image {
-            margin-top: 0;
-            min-height: 260px;
-            max-height: 260px;
+            width: 30%;
+            height: auto;
+            max-width: 460px;
+            clear: both;
+            float: right;
+            margin: 0 0 1rem 2rem;
+            //min-height: 260px;
+            //max-height: 260px;
         }
     }
 }
