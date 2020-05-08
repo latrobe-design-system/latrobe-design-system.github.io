@@ -37,9 +37,11 @@ a:hover {
 
 //add external link icon to external links
 .ds-page-content {
-    a[href^="http"]:not([href*="latrobe.edu.au"]):not([class*="ds-btn"]):not([href^='#']):not([href^='/']) {
-        @extend .ds-icon-external-link;
-        @extend .ds-icon--red;
+    a[href^="http"] {
+        &:not([href*="latrobe.edu.au"]):not([class*="ds-btn"]):not([href^='#']):not([href^='/']):not(.ds-card__link) {
+            @extend .ds-icon-external-link;
+            @extend .ds-icon--red;
+        }
     }
 }
 
