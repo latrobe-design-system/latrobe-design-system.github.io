@@ -1,0 +1,26 @@
+// depenencies
+@use "config";
+
+.ds-column-layout {
+    @include config.columns-grid($alignment: left);
+    //margin-top: 1rem;
+}
+
+.ds-column-layout__column {
+    padding: config.spunits(6) 0 config.spunits(6) 0;
+    > :first-child { margin-top: 0; }
+}
+
+.ds-column-layout__column--bg-grey,
+.ds-column-layout__column--bordered {
+    padding: config.spunits(6);
+    > :first-child { margin-top: 0; }
+}
+
+.ds-column-layout__column--bg-grey {
+    background-color: config.$color-3a;
+}
+
+.ds-column-layout__column--bordered {
+    border: 1px solid config.$color-3b;
+}
