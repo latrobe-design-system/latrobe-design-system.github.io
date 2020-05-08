@@ -4,7 +4,7 @@
 %icon {
     display: inline-block;
     position: relative;
-    padding-right: 32px;
+    padding-right: 28px;
 
     &::after {
         position: absolute;
@@ -40,7 +40,7 @@
 
 .ds-icon--before {
     padding-right: inherit;
-    padding-left: 32px;
+    padding-left: 28px;
 
     &::after {
         left: 0;

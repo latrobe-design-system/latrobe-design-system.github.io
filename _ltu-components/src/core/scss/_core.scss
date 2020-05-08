@@ -1,5 +1,6 @@
 // depenencies
 @use "config";
+@use "core/scss/icons";
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
@@ -34,6 +35,16 @@ a:hover {
     text-decoration: none;
 }
 
+//add external link icon to external links
+.ds-page-content {
+    a[href^="http"] {
+        &:not([href*="latrobe.edu.au"]):not([class*="ds-btn"]):not([href^='#']):not([href^='/']):not(.ds-card__link) {
+            @extend .ds-icon-external-link;
+            @extend .ds-icon--red;
+        }
+    }
+}
+
 :focus,
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
@@ -50,21 +61,31 @@ img {
     height: auto;
 }
 
+.ds-image-right {
+    margin: 0 0 1rem 0;
+}
+@media(min-width: 1024px) {
+    .ds-image-right{
+        width: 36%;
+        height: auto;
+        max-width: 460px;
+        clear: both;
+        float: right;
+        margin: 0 0 1rem 2rem;
+    }
+}
+
 /* 
  * squiz places images in p tags therefore max-width limited by p max-width so need to break this 
  * TODO: update this when nav layout changes
  */
-p img {
-    
-    @media (min-width: 640px) {
-        max-width: calc(100vw - 80px);
-    }
-    // when nav showing
-    @media (min-width: 1024px) {
-            max-width: calc(75vw - 80px);
-    }
-    @media (min-width: 1760px) {
-        max-width: 1280px;
+.ds-page-content > div:not(.ds-block),
+.ds-page-content > section,
+.ds-page-content > article {
+    p, h2, h3, h4, h5, h6 { 
+        img {
+            margin-top: 0 !important;
+        }
     }
 }
 

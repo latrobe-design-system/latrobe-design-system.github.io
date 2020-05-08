@@ -1,24 +1,22 @@
+@use "config";
 .ds-page-intro {
-    /*max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;*/
-    display: flex;
-    flex-direction: column-reverse;
-    margin-top: 1rem !important; /* override lobotomised owl */
+    margin-top: config.spunits(4);
     .ds-page-intro__content {
-        margin-top: 1rem !important; /* override lobotomised owl */
+        & > :first-child {
+            margin-top: 0;
+        }
     }
     .ds-page-intro__image {
-        margin-top: 0 !important; /* override lobotomised owl */
-        align-self: flex-start;
+        margin: 0 0 1rem 0;
     }
-    @media(min-width: 768px) {
-        flex-direction: row;
+    @media(min-width: 1024px) {
         .ds-page-intro__image {
-            margin-top: 0 !important; /* override lobotomised owl */
-            
-            min-height: 260px;
-            max-height: 260px;
+            width: 30%;
+            height: auto;
+            max-width: 460px;
+            clear: both;
+            float: right;
+            margin: 0 0 1rem 2rem;
         }
     }
 }

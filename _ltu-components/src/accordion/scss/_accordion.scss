@@ -1,18 +1,34 @@
 // depenencies
 @use "config";
 @use "core/scss/icons";
-
 .ds-accordion {
+    margin-top: 1rem;
+    & + .ds-accordion {
+        margin-top: 0;
+    }
     padding: 0;
     border-bottom: 2px solid config.$color-3b;
-
-    & > * {
+    &>* {
         max-width: 100%;
         margin-top: 0;
     }
-
     button:focus {
         outline-offset: -2px;
+    }
+    // reduce accordion font size down one scale
+    h2 {
+        font-size: config.$h3;
+    }
+    h3 {
+        font-size: config.$h4;
+    }
+    h4 {
+        font-size: config.$h5;
+    }
+    h6 {
+        .ds-accordion__trigger {
+            font-weight: inherit;
+        }
     }
 }
 
@@ -30,7 +46,6 @@
     color: config.$color-2;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-
     &:hover {
         @extend .ds-icon--red;
         background: config.$color-3;
@@ -39,24 +54,20 @@
             color: config.$color-1;
         }
     }
-
     &[aria-expanded="true"] {
         @extend .ds-icon-minus;
     }
-
 }
 
 .ds-accordion__content {
     display: none;
     padding: config.spunits(5) 0 config.spunits(5) 0;
     margin-top: 0;
-
-    & *:first-child {
+    > :first-child {
         margin-top: 0;
     }
-
     // everythin inside aligns with title
-    > * {
+    >* {
         margin-left: config.spunits(10);
     }
     // except for nested blocks and tables
@@ -64,5 +75,19 @@
     .table-wrapper {
         margin-left: 0;
     }
+}
 
+// for squiz implementation need this class on ds-block
+.ds-block-accordion {
+    .ds-accordion {
+        margin-top: 1rem;
+        & + .ds-accordion {
+            margin-top: 0;
+        }
+    }
+    & + .ds-block-accordion {
+        .ds-accordion {
+            margin-top: 0;
+        }
+    }
 }
