@@ -26,19 +26,23 @@ textarea {
 }
 
 a,
-a:visited {
+a:visited { 
     color: config.$color-1;
     text-decoration: underline;
-}
 
-a:hover {
-    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+
+    &:not([class*="ds-btn"]) {
+        @extend .ds-icon--red;
+    }
 }
 
 //add external link icon to external links
 .ds-page-content {
     a[href^="http"] {
-        &:not([href*="latrobe.edu.au"]):not([class*="ds-btn"]):not([href^='#']):not([href^='/']):not(.ds-card__link) {
+        &:not([href*="latrobe.edu.au"]):not([class*="ds-btn"]):not([href^='#']):not([href^='/']):not(.ds-card__link):not([class*="ds-icon"]) {
             @extend .ds-icon-external-link;
             @extend .ds-icon--red;
         }

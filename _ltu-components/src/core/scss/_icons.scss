@@ -1,46 +1,48 @@
 //dependencies
-@use "variables";
+@use "config";
 
 %icon {
     display: inline-block;
     position: relative;
-    padding-right: 28px;
+    padding-right: 1.75em; /* 28px for 1rem - using em here to suit font size change */
 
     &::after {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
         content: "";
         display: inline-block;
         vertical-align: middle;
         width: 1em;
         height: 1em;
-        margin: 0 4px;
+        margin: 0 config.spunits(1);
         background-repeat: no-repeat;
         background-size: 100%;
         background-position: center;
-        filter: variables.$near-black;
+        filter: config.$filter-near-black;
+
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
     }
+
 }
 
 .ds-icon--red {
 
     &::after {
-        filter: variables.$red;
+        filter: config.$filter-red;
     }
 }
 
 .ds-icon--white {
 
     &::after {
-        filter: variables.$white;
+        filter: config.$filter-white;
     }
 }
 
 .ds-icon--before {
     padding-right: inherit;
-    padding-left: 28px;
+    padding-left: 1.75em; /* 28px for 1rem - using em here to suit font size change */
 
     &::after {
         left: 0;
