@@ -63,6 +63,7 @@
         transform: translateY(-4px);
         cursor: pointer;
         box-shadow: config.$shadow-2;
+        box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
 
         .ds-card__heading {
             color: config.$color-1;
@@ -120,7 +121,7 @@
     .save-course-icon:checked + label::before {
         content: "";
         background-image: url("icons/feather-fill/heart.svg");
-        filter: config.$red;
+        filter: config.$filter-red;
     }
 
     .save-course-icon:focus {

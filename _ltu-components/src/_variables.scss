@@ -61,11 +61,11 @@ $color-alt-9: rgb(0, 79, 89) !default;
 $green: #28a745 !default;
 
 /* svg icon filters - changes black to color - https://codepen.io/sosuke/pen/Pjoqqp */
-$near-black: invert(7%) sepia(53%) saturate(0%) hue-rotate(173deg) brightness(107%) contrast(86%) !default; /* #242424 */
-$charcoal: invert(24%) sepia(1%) saturate(0%) hue-rotate(118deg) brightness(92%) contrast(89%) !default; /* #414141 */
-$red: invert(36%) sepia(31%) saturate(3720%) hue-rotate(337deg) brightness(81%) contrast(124%) !default; /* #e2231b */
-$white: invert(100%) sepia(0%) saturate(2%) hue-rotate(132deg) brightness(113%) contrast(101%) !default;
-$teal: invert(49%) sepia(45%) saturate(3730%) hue-rotate(142deg) brightness(92%) contrast(101%) !default; /* #00aa98*/
+$filter-near-black: invert(7%) sepia(53%) saturate(0%) hue-rotate(173deg) brightness(107%) contrast(86%) !default; /* #242424 */
+$filter-charcoal: invert(24%) sepia(1%) saturate(0%) hue-rotate(118deg) brightness(92%) contrast(89%) !default; /* #414141 */
+$filter-red: invert(36%) sepia(31%) saturate(3720%) hue-rotate(337deg) brightness(81%) contrast(124%) !default; /* #e2231b */
+$filter-white: invert(100%) sepia(0%) saturate(2%) hue-rotate(132deg) brightness(113%) contrast(101%) !default;
+$filter-teal: invert(49%) sepia(45%) saturate(3730%) hue-rotate(142deg) brightness(92%) contrast(101%) !default; /* #00aa98*/
 
 //----------------------------------------------------------------------------------------------------------------------------------//
 // Spacing
@@ -88,6 +88,6 @@ $component-padding: $space-md !default;
 // Box shadows
 //----------------------------------------------------------------------------------------------------------------------------------//
 
-$shadow-1: -16px 16px 20px $color-3a !default;
-$shadow-2: 0px 10px 20px $color-3b !default;
-$shadow-3: 0px 10px 20px $color-3d !default; //for dark backgrounds
+$shadow-1: -16px 16px 20px rgba(0,0,0,0.1) !default; // for raised items
+$shadow-2: 0px 8px 16px rgba(0,0,0,0.3) !default; // for hover states
+//$shadow-3: 0px 10px 20px $color-3d !default; // for dark backgrounds
