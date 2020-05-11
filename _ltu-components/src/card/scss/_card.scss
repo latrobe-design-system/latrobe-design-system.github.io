@@ -204,8 +204,4 @@
 .ds-card-set {
     @include config.columns-grid();
     margin-top: 1rem;
-
-    &.ds-card-set--left-align {
-        justify-items: left;
-    }
 }
