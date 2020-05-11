@@ -12,8 +12,8 @@
     display: flex;
 
     /* align text with default text */
-    max-width: 1200px;
-    margin: config.spunits(8) auto;
+    max-width: 1024px;
+    margin: config.spunits(8) auto config.spunits(8) 0;
 
     @media(min-width: 768px){
         position: relative;
