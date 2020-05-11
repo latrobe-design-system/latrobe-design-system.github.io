@@ -4,7 +4,7 @@
 
 .ds-mosaic {
     @extend .clearfix;
-    margin: 3rem 0;
+    margin: config.spunits(8) 0;
     padding: 0;
     list-style-type: none;
 }
