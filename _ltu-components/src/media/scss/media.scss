@@ -2,21 +2,22 @@
 @use "config";
 
 .ds-media-list {
-
+    padding: 0;
 }
 
 .ds-media-item {
+    max-width: 100%;
     display: flex;
     justify-content: flex-start;
     margin-top: 2rem;
 }
 
-.ds-media-item__img {
-    margin-right: config.$space-unit * 10;
+.ds-media-item__header {
+    margin-right: config.$space-unit * 8;
 }
 
 .ds-media-item__body {
-    >*:first-child {
+    > :first-child {
         margin-top: 0;
     }
 }
