@@ -16,16 +16,16 @@
         outline-offset: -2px;
     }
     // reduce accordion font size down one scale
-    h2 {
+    h2:first-child {
         font-size: config.$h3;
     }
-    h3 {
+    h3:first-child {
         font-size: config.$h4;
     }
-    h4 {
+    h4:first-child {
         font-size: config.$h5;
     }
-    h6 {
+    h6:first-child {
         .ds-accordion__trigger {
             font-weight: inherit;
         }
