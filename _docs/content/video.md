@@ -1,6 +1,6 @@
 ---
 title: "Video"
-status: draft
+status: ready
 ---
 
 ## Responsive video embed

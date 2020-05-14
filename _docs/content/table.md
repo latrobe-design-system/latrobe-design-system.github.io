@@ -1,6 +1,6 @@
 ---
 title: "Table"
-status: draft
+status: ready
 ---
 
 {% include sample-iframe.html snippet="table/snippets/table.html" %}
