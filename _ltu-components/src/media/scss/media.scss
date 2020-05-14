@@ -10,11 +10,11 @@
     max-width: 100%;
     display: flex;
     justify-content: flex-start;
-    margin-top: config.$spunits(8);
+    margin-top: config.spunits(8);
 }
 
 .ds-media-item__header {
-    margin-right: config.$spunits(8);
+    margin-right: config.spunits(8);
 }
 
 .ds-media-item__body {

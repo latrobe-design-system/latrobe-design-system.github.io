@@ -28,6 +28,10 @@ table caption.subtle-right {
 td, th {
     vertical-align: top;
     padding: config.$space-unit*7;
+
+    > :first-child {
+        margin-top: 0;
+    }
 }
 
 th {
