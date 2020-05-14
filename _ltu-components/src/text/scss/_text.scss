@@ -120,28 +120,6 @@ ol,
 ul {
     margin: 0;
     padding: 0 0 0 40px;
-
-    &.ds-list--two-col,
-    &.ds-list--three-col,
-    &.ds-list--four-col {
-        max-width: 42rem;
-        @media(min-width: 600px) {
-            columns: 2;
-        }
-    }
-
-    &.ds-list--three-col,
-    &.ds-list--four-col {
-        @media(min-width: 768px) {
-            columns: 3;
-        }
-    }
-
-    &.ds-list--four-col {
-        @media(min-width: 1024px) {
-            columns: 4;
-        }
-    }
 }
 
 li {
@@ -158,6 +136,10 @@ div.ds-list {
             > ul, 
             > ol {
                 columns: 2;
+            }
+
+            li {
+                padding-right: 1rem;
             }
         }
     }

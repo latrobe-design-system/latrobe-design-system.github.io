@@ -7,12 +7,12 @@
 }
 
 .ds-column-layout__column {
-    padding: config.spunits(6) 0 config.spunits(6) 0;
-    > :first-child { margin-top: 0; }
+    margin-top: 0;
 }
 
 .ds-column-layout__column--bg-grey,
 .ds-column-layout__column--bordered {
+    margin-top: 1rem;
     padding: config.spunits(6);
     > :first-child { margin-top: 0; }
 }
