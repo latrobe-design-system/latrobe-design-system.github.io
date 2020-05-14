@@ -57,6 +57,10 @@
         margin-top: 1rem;
         font-size: config.$h3;
     }
+    h3, h4, h5, h6 {
+        margin-top: 1rem;
+        font-size: config.$h4;
+    }
 
     // latrobe chevron
     &::before {

@@ -2,7 +2,10 @@
 @use "config";
 
 .ds-table-wrapper {
-    //responsive tables - scroll when
+    /*
+     * responsive tables - scroll when window width too small
+     * for squiz this wrapper is added via table.js
+     */
     overflow-x: auto;
 }
 
@@ -16,18 +19,18 @@ table {
 table caption {
     font-size: config.$h4;
     font-weight: config.$medium;
-    padding: config.$space-unit * 4 config.$space-unit * 8;
+    padding: config.spunits(4) config.spunits(8);
     text-align: left;
 }
 
 table caption.subtle-right {
-    background-color: #eee;
-    padding: config.$space-unit config.$space-unit * 10;
+    background-color: config.$color-3a;
+    padding: config.spunits(1) config.spunits(10);
 }
 
 td, th {
     vertical-align: top;
-    padding: config.$space-unit*7;
+    padding: config.spunits(7);
 
     > :first-child {
         margin-top: 0;
@@ -56,7 +59,8 @@ tr {
     border-bottom: 2px solid config.$color-3b;
 }
 
-// jquery tablesorter styles
+// jquery tablesorter styles - investigate if required
+/*
 .tablesorter .header {
     background-image: url("icons/feather/chevron-down.svg");
     background-position: center right 4px;
@@ -68,3 +72,4 @@ tr {
 .tablesorter .header:hover {
     background-color: config.$color-3;
 }
+*/
