@@ -3,17 +3,18 @@
 
 .ds-media-list {
     padding: 0;
+    list-style: none;
 }
 
 .ds-media-item {
     max-width: 100%;
     display: flex;
     justify-content: flex-start;
-    margin-top: 2rem;
+    margin-top: config.$spunits(8);
 }
 
 .ds-media-item__header {
-    margin-right: config.$space-unit * 8;
+    margin-right: config.$spunits(8);
 }
 
 .ds-media-item__body {
