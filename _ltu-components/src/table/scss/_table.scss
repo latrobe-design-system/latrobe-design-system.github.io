@@ -10,6 +10,7 @@
 }
 
 table {
+    margin-top: 2rem;
     border: none;
     width: 100%;
     border-collapse: collapse;
@@ -73,3 +74,26 @@ tr {
     background-color: config.$color-3;
 }
 */
+
+.ds-table--unstyled {
+    margin-top: 1rem;
+    border: none;
+    width: auto;
+    caption, tr, th, td {
+        border: none;
+        padding: 0;
+    }
+    th, td {
+        padding: 4px 8px 0 0;
+    }
+    tr {
+        th, td {
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+    tbody th:first-child {
+        border-right: none;
+    }
+}
