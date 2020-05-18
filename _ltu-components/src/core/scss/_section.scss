@@ -67,8 +67,24 @@ div[class*="ds-section--bg-"] {
     > :first-child {
         margin-top: 0;
     }
+    // in case squiz wysywyg div is first child
+    > div:not([class*="ds-block"]), section, article {
+        &:first-child {
+            > :first-child {
+                margin-top: 0;
+            }
+        }
+    }
     > :last-child {
         margin-bottom: 0;
+    }
+    // in case squiz wysywyg div is last child
+    > div:not([class*="ds-block"]), section, article {
+        &:last-child {
+            > :last-child {
+                margin-bottom: 0;
+            }
+        }
     }
 
     //if ds-block is first child
