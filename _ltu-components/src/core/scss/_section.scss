@@ -1,0 +1,145 @@
+// depenencies
+@use "config";
+
+// ds-section for wrapping blocks in a background
+div.ds-section {
+
+    margin: 4rem 0 0 0;
+    padding: 0;
+    max-width: 100%;
+
+    // modifiers background color
+    &--bg-grey {
+        background-color: config.$color-3a;
+    }
+
+    /* historical
+    &--bg-black {
+        background: #242428;
+        color: white;
+
+        a {
+            text-decoration: underline;
+            color: white;
+        }
+
+        .btn {
+            text-decoration: none;
+        }
+
+        .ds-block__header {
+            color: white;
+        }
+    }
+
+    &--bg-red {
+        background-color: config.$color-1;
+
+        .ds-block__header {
+            color: white;
+        }
+    }
+
+    &--bg-black-nodes {
+        background-color: config.$color-2;
+        background-image: url("img/bg-nodes.svg");
+
+        .ds-block__header {
+            color: white;
+        }
+    }
+
+    &--bg-red-nodes {
+        background-color: config.$color-1;
+        background-image: url("img/bg-nodes.svg");
+
+        .ds-block__header {
+            color: white;
+        }
+    } */
+}
+
+div[class*="ds-section--bg-"] {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    // any non ds-block content
+    > :first-child {
+        margin-top: 0;
+    }
+    > :last-child {
+        margin-bottom: 0;
+    }
+
+    //if ds-block is first child
+    .ds-block:first-child {
+        .ds-block__wrapper {
+            > :first-child {
+                margin-top: 0;
+            }
+            // in case squiz wysywyg div is first child
+            > div:not([class*="ds-block"]), section, article {
+                &:first-child {
+                    > :first-child {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+    //if ds-block is last child
+    .ds-block:last-child {
+        .ds-block__wrapper {
+            > :last-child {
+                margin-bottom: 0;
+            }
+            // in case squiz wysywyg div is last child
+            > div:not([class*="ds-block"]), section, article {
+                &:last-child {
+                    > :last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    // adjust margin and padding not bg section following bg section
+    + {
+        div:not([class*="ds-section--bg-"]),
+        section,
+        article {
+            margin-top: 4rem;
+        }
+    }
+}
+
+// adjust spacing between adjancent grey blocks
+div.ds-section--bg-grey + div.ds-section--bg-grey {
+    //padding-top: 0;
+    margin-top: -4rem;
+}
+
+// adjust spacing between adjancent black blocks
+div.ds-section--bg-black + div.ds-section--bg-black {
+    //padding-top: 0;
+    margin-top: -4rem;
+}
+
+// adjust spacing between adjancent red blocks
+div.ds-section--bg-red + div.ds-section--bg-red {
+    //padding-top: 0;
+    margin-top: -4rem;
+}
+
+// adjust spacing between adjancent black-nodes blocks
+div.ds-section--bg-black-nodes + div.ds-section--bg-black-nodes {
+    //padding-top: 0;
+    margin-top: -4rem;
+}
+
+// adjust spacing between adjancent red-nodes blocks
+div.ds-section--bg-red-nodes + div.ds-section--bg-red-nodes {
+    //padding-top: 0;
+    margin-top: -4rem;
+}
