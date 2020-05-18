@@ -2,26 +2,29 @@
 @use "config";
 
 // set margins for standard content containers - because can't set a default class for squiz matrix CMS content containers
-.ds-page-content > div,
-.ds-page-content > section,
-.ds-page-content > article {
-    padding: 0 20px;
-    margin: 0 auto;
-    max-width: 1280px + 80px; // 1280 + 80 (padding)
+.ds-page-content {
+    > { 
+        div:not([class*="ds-section--bg-"]), 
+        section,
+        article {
+            padding: 0 20px;
+            margin: 0 auto;
+            max-width: 1280px + 80px; // 1280 + 80 (padding)
 
-    @media (min-width: 640px) {
-        padding: 0 40px;
+            @media (min-width: 640px) {
+                padding: 0 40px;
+            }
+            // add bottom margin to last child of page if no bg color
+            &:last-child {
+                margin-bottom: 4rem;
+            }
+        }
     }
 }
 
 div.ds-block {
     clear: both; /* inase there is a float above */
-
     max-width: 100%;
-
-    // for blocks without background color
-    padding-top: 0px;
-    padding-bottom: 0px;
 }
 
 // .ds-block__wrapper wraps block content
@@ -46,154 +49,6 @@ div.ds-block {
             max-width: 100%;
             margin: 0;
             padding: 0;
-        }
-    }
-}
-
-// block background color modifiers: usage .ds-block--[grey]
-
-div[class*=" ds-block--bg-"] {
-    // for blocks with background color
-    padding-top: 1px;  
-    padding-bottom: 4rem;
-
-    // bg block inside bg block
-    div[class*=" ds-block--bg-"] {
-        padding: 0;
-        margin: 0;
-    }
-
-    .ds-block__wrapper {
-        > :last-child {
-            margin-bottom: 0;
-        }
-    }
-}
-
-div.ds-block {
-
-    &--bg-grey {
-        background-color: config.$color-3a;
-    }
-
-    &--bg-black {
-        background: #242428;
-        color: white;
-
-        a {
-            text-decoration: underline;
-            color: white;
-        }
-
-        .btn {
-            text-decoration: none;
-        }
-
-        .ds-block__header {
-            color: white;
-        }
-    }
-
-    &--bg-red {
-        background-color: config.$color-1;
-
-        .ds-block__header {
-            color: white;
-        }
-    }
-
-    &--bg-black-nodes {
-        background-color: config.$color-2;
-        background-image: url("img/bg-nodes.svg");
-
-        .ds-block__header {
-            color: white;
-        }
-    }
-
-    &--bg-red-nodes {
-        background-color: config.$color-1;
-        background-image: url("img/bg-nodes.svg");
-
-        .ds-block__header {
-            color: white;
-        }
-    }
-}
-
-// adjust spacing between adjancent grey blocks
-div.ds-block--bg-grey + div.ds-block--bg-grey {
-    //padding-top: 0;
-    margin-top: -4rem;
-}
-
-// adjust spacing between adjancent black blocks
-div.ds-block--bg-black + div.ds-block--bg-black {
-    //padding-top: 0;
-    margin-top: -4rem;
-}
-
-// adjust spacing between adjancent red blocks
-div.ds-block--bg-red + div.ds-block--bg-red {
-    //padding-top: 0;
-    margin-top: -4rem;
-}
-
-// adjust spacing between adjancent black-nodes blocks
-div.ds-block--bg-black-nodes + div.ds-block--bg-black-nodes {
-    //padding-top: 0;
-    margin-top: -4rem;
-}
-
-// adjust spacing between adjancent red-nodes blocks
-div.ds-block--bg-red-nodes + div.ds-block--bg-red-nodes {
-    //padding-top: 0;
-    margin-top: -4rem;
-}
-
-.ds-page-content {
-    > { 
-        div:not([class*=" ds-block--bg-"]),
-        section,
-        article {
-            // add bottom margin to last child of page if no bg color
-            &:last-child {
-                margin-bottom: 4rem;
-            }
-            // adjust margin and padding bg block following not bg block
-            + {
-                div[class*=" ds-block--bg-"] {
-                    margin-top: 4rem;
-                    padding-top: 4rem;
-                    
-                    .ds-block__wrapper {
-                         > :first-child {
-                            margin-top: 0;
-                         }
-                    }
-
-                    .ds-block__wrapper [id^="content_container"]:first-child {
-                        > :first-child {
-                           margin-top: 0;
-                        }
-                    }
-                    // .ds-block__wrapper [id^="content_container"] is to cater for squiz standard content wrapping behaivour
-                }
-            }
-        }
-        div[class*=" ds-block--bg-"] {
-            // no bottom margin for last child of page if has bg-color
-            &:last-child {
-                margin-bottom: 0;
-            }
-            // adjust margin and padding not bg block following bg block
-            + {
-                div:not([class*=" ds-block--bg-"]),
-                section,
-                article {
-                    margin-top: 4rem;
-                }
-            }
         }
     }
 }
