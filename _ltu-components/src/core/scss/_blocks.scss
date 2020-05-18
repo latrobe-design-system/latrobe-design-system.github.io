@@ -34,7 +34,7 @@ div.ds-block {
 div.ds-block {
 
     &--wide {
-        .ds-block__wrapper {
+        > .ds-block__wrapper {
             max-width: 1600px;
         }
     }
