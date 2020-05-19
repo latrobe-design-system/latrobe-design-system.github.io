@@ -1,6 +1,6 @@
 ---
 title: "Media"
-status: draft
+status: ready
 ---
 Used to construct highly repetitive components like news and event lists, blog comments, tweets, and the like.
 {: .intro}

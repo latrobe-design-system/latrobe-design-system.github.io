@@ -16,17 +16,9 @@ There are 4 possible maximum widths of content within a block:
 
 | | Max width | Modifier |
 |---|---|---|
-| Default | 1024px | |
-| Medium | 1280px | ds-block--medium |
+| Default | 1280px | |
 | Wide | 1600px | ds-block--wide |
 | Full width | 100% | ds-block--full-width |
 
-## Block background color
-
-The background of a block is white by default. 
-
-Use the modifier `ds-block--grey` to give the block a grey background. 
 
 {% include sample-code-only.html snippet="core/snippets/block/block.html" %}
-
-{% include sample-iframe-only.html snippet="tests/blocks.html" %}

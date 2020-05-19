@@ -24,5 +24,9 @@
 .ds-modal {
     .ds-modal-content {
         display: block;
+
+        & > :first-child {
+            margin-top: 0;
+        }
     }
 }

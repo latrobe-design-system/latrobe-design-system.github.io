@@ -1,6 +1,6 @@
 ---
 title: "Tabs"
-status: draft
+status: ready
 ---
 
 ## Format
