@@ -1,6 +1,6 @@
 ---
 title: "Mosaic"
-status: draft
+status: ready
 info: 
 ---
 
