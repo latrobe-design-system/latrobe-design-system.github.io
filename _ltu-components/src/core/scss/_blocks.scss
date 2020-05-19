@@ -14,6 +14,10 @@
             @media (min-width: 640px) {
                 padding: 0 40px;
             }
+        }
+        div:not([class*="ds-section--bg-"]), 
+        section,
+        article {
             // add bottom margin to last child of page if no bg color
             &:last-child {
                 margin-bottom: 4rem;
