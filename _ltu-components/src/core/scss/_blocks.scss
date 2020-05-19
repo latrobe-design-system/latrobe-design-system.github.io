@@ -4,15 +4,15 @@
 // set margins for standard content containers - because can't set a default class for squiz matrix CMS content containers
 .ds-page-content {
     > { 
-        div:not([class*="ds-section--bg-"]), 
+        div:not([class*="ds-section--bg-"]):not([class*="ds-block"]), 
         section,
         article {
             padding: 0 20px;
             margin: 0 auto;
-            max-width: 1280px + 80px; // 1280 + 80 (padding)
 
             @media (min-width: 640px) {
                 padding: 0 40px;
+                max-width: 1280px + 80px; // 1280 + 80 (padding)
             }
         }
         div:not([class*="ds-section--bg-"]), 
@@ -29,6 +29,11 @@
 div.ds-block {
     clear: both; /* inase there is a float above */
     max-width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    @media (min-width: 640px) {
+        padding: 0 40px;
+    }
 }
 
 // .ds-block__wrapper wraps block content

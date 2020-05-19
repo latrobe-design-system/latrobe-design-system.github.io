@@ -11,7 +11,7 @@ Accordions should be used sparingly! Content should only be hidden for well cons
 
 Accordions are good for:
 * **Selective content:** i.e. there may be many sections under a given topic but only a few sections apply to a given individual at a time.
-* **Complex process overviews:** with the detail of each step hidden. See the [numbered accordion example](#accordion-numbered) below.
+* **Complex process overviews:** with the detail of each step hidden. See the [Sample 2](#accordion-sample-2) below.
 
 ## Accessibilty
 
