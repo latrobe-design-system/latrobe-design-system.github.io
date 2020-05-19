@@ -1,6 +1,6 @@
 ---
 title: "Standard content page"
-status: draft
+status: ready
 ---
 
 {% include sample-iframe.html snippet="standard-content-page.html" %}
