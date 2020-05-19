@@ -1,0 +1,39 @@
+
+// depenencies
+@use "config";
+
+.ds-child-nav {
+    margin: config.spunits(8) 0;
+    max-width: 100%;
+
+    ul {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    li {
+        max-width: 100%;
+        list-style: none;
+        margin: config.spunits(2) 0;
+        margin-right: config.spunits(3);
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    a {
+        color: config.$color-3d;
+        text-decoration: none;
+        border-bottom: 2px solid config.$color-3b;
+        display: inline-block;
+
+        &:hover {
+            color: config.$color-1;
+            border-color: config.$color-1;
+        }
+    }
+    
+}

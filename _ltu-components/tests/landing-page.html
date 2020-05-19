@@ -1,7 +1,7 @@
 ---
 status: ready
 
-title: "Home"
+title: "Landing page"
 
 showHeader: "yes"
 showFooter: "yes"
@@ -26,6 +26,8 @@ showFooter: "yes"
 
     </div>
 </div>
+
+{% include sample-component.html snippet="ltu-components/src/child-nav/snippets/child-nav.html" %}
 
 <div><h2 style="text-align: center;">Why study at La Trobe?</h2></div>
 {% include sample-component.html snippet="ltu-components/src/proofpoint/snippets/proof-points-set.html" %}
@@ -53,7 +55,13 @@ showFooter: "yes"
     </div>
 </div>
 
+<div><h2 style="text-align: center;">Meet our students</h2></div>
+{% include sample-component.html snippet="ltu-components/src/testimonial/snippets/testimonial-set-3.html" %}
+
 <div>
     <h2>Learn more about La Trobe</h2>
 </div>
 {% include sample-component.html snippet="mosaic/snippets/mosaic.html"%}
+
+{% include sample-component.html snippet="card/snippets/card-set.html"%}
+

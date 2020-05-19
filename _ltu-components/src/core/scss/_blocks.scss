@@ -4,7 +4,8 @@
 // set margins for standard content containers - because can't set a default class for squiz matrix CMS content containers
 .ds-page-content {
     > { 
-        div:not([class*="ds-section--bg-"]):not([class*="ds-block"]), 
+        div:not(.ds-section):not(.ds-block),
+        .ds-section > div:not(.ds-block),
         section,
         article {
             padding: 0 20px;
@@ -15,7 +16,7 @@
                 max-width: 1280px + 80px; // 1280 + 80 (padding)
             }
         }
-        div:not([class*="ds-section--bg-"]), 
+        div:not(.ds-section),
         section,
         article {
             // add bottom margin to last child of page if no bg color
