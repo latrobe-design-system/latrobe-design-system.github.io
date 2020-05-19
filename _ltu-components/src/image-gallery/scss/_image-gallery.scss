@@ -75,11 +75,6 @@
         width: 2/3 * 100%;
     }
 
-    .ds-image-gallery__image:only-child {
-        /*width: 100%;
-        max-width: 853.33px;*/
-    }
-
     .ds-image-gallery__image-wrapper {
         position: absolute;
         top: 0;
@@ -169,7 +164,7 @@
         overflow-y: scroll;
         /* hide scrollbar */
         scrollbar-width: none;
-        -ms-overflow-style: none;
+        //-ms-overflow-style: none;
         &::-webkit-scrollbar {
           display: none;
         }
