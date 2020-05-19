@@ -19,12 +19,14 @@
         list-style: none;
         margin: config.spunits(2) 0;
         margin-right: config.spunits(3);
+        font-size: 0.9em;
 
         &:last-child {
             margin-right: 0;
         }
     }
     a {
+        font-weight: 500;
         color: config.$color-3d;
         text-decoration: none;
         border-bottom: 2px solid config.$color-3b;
