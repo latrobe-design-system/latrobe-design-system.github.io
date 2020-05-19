@@ -1,6 +1,6 @@
 ---
 title: "Collapse"
-status: draft
+status: ready
 info:
 ---
 
