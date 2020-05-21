@@ -13,6 +13,7 @@
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
+        align-items: center;
     }
     li {
         max-width: 100%;
@@ -26,6 +27,9 @@
         }
     }
     a {
+        font-size: inherit;
+    }
+    a.ds-child-nav__link {
         font-weight: 500;
         color: config.$color-3d;
         text-decoration: none;
