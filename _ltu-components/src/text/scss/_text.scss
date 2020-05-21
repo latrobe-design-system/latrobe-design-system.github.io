@@ -199,11 +199,13 @@ br {
 }
 
 /* margins for WYSIWYG text align center and right to cater for line-length restriction */
-[style*="text-align: center"] {
+[style*="text-align: center"],
+[style*="text-align:center"] {
     margin-left: auto;
     margin-right: auto;
 }
-[style*="text-align: right"] {
+[style*="text-align: right"],
+[style*="text-align:right"] {
     margin-left: auto;
 }
 
