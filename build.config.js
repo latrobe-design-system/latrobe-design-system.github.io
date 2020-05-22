@@ -4,10 +4,10 @@ module.exports = {
   },
   views: [
     './_(includes|layouts)/**/*.html',
-    './_ltu-components/src/**/*.html',
-    './_ltu-components/tests/**/*.html',
+    './_ltu-components/(src|tests)/**/*.html',
     './_docs/**/*.md',
     './all-patterns.md',
+    './assets/**/*.scss',
   ],
   scripts: {
     src: './_ltu-components/src/**/*.js',
@@ -28,8 +28,8 @@ module.exports = {
       ]
     },
     site: {
-      src: './assets/_sass/**/*.scss',
-      entryPoint: './assets/_sass/styles.scss',
+      src: './_assets/_sass/**/*.scss',
+      entryPoint: './_assets/_sass/styles.scss',
       dest: './_site/assets/css'
     },
     ltuLegacy: {
