@@ -135,7 +135,7 @@
     }
 }
 
-// full bleed version
+// full bleed version modifier
 .ds-promo--image-bleed {
 
     @media(min-width: 768px) {
@@ -219,7 +219,7 @@
 }
 
 // modifier to set text alignment left
-.ds-promo--text-akign-left  {
+.ds-promo--text-align-left  {
     .ds-promo__text-wrapper {
         text-align: left;
     }
