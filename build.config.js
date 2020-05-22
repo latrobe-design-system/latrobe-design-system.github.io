@@ -28,9 +28,9 @@ module.exports = {
       ]
     },
     site: {
-      src: './_sass/**/*.scss',
-      entryPoint: './_sass/styles.scss',
-      dest: './_site/css'
+      src: './assets/_sass/**/*.scss',
+      entryPoint: './assets/_sass/styles.scss',
+      dest: './_site/assets/css'
     },
     ltuLegacy: {
       src: './_ltu-components/src/ltu-legacy.scss',

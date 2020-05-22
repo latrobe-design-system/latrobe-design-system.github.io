@@ -32,7 +32,7 @@
 .ds-image-gallery {
     position: relative;
     margin-top: 1rem;
-    max-width: 1024px;
+    max-width: 1280px;
 
     .ds-image-gallery__images {
         @extend .clearfix;
@@ -161,13 +161,6 @@
     .ds-image-gallery__images {
         margin: 0;
         padding: 0;
-        overflow-y: scroll;
-        /* hide scrollbar */
-        scrollbar-width: none;
-        //-ms-overflow-style: none;
-        &::-webkit-scrollbar {
-          display: none;
-        }
     }
 
     .ds-image-gallery__image {
