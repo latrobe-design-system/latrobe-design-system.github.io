@@ -1,5 +1,8 @@
 // Responsive video
 .ds-video {
+    max-width: 1024px;
+}
+.ds-video__wrapper {
     height: 0;
     overflow: hidden;
     padding-bottom: 56.25%;
