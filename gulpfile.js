@@ -14,7 +14,7 @@ const config = require('./build.config')
 
 const clean = () => del([
   ...config.scripts.dests.map(d => d+'*'),
-  config.styles.site.dest + '/styles.css*',
+  //config.styles.site.dest + '/styles.css*',
   config.styles.ltuPatterns.dest + '/ds-ltu.css*',
   config.styles.ltuLegacy.dest + '/ltu-legacy.css*'
 ])
@@ -129,7 +129,7 @@ function jekyllBuild (done) {
 
 function watch (done) {
 
-  gulp.watch(config.styles.site.src, siteStyles)
+  //gulp.watch(config.styles.site.src, siteStyles)
   gulp.watch(config.styles.ltuPatterns.src, ltuPatternsStyles)
   gulp.watch(config.styles.ltuLegacy.src, ltuLegacyStyles)
   gulp.watch(config.scripts.src, scripts)
@@ -139,9 +139,10 @@ function watch (done) {
 
 }
 
-exports.siteStyles = siteStyles
+//exports.siteStyles = siteStyles
 exports.ltuPatternsStyles = ltuPatternsStyles
 exports.ltuLegacyStyles = ltuLegacyStyles
 exports.scripts = scripts
-exports.build = gulp.series(clean, jekyllBuild, gulp.parallel(siteStyles, ltuPatternsStyles, ltuLegacyStyles, scripts))
+//exports.build = gulp.series(clean, jekyllBuild, gulp.parallel(siteStyles, ltuPatternsStyles, ltuLegacyStyles, scripts))
+exports.build = gulp.series(clean, jekyllBuild, gulp.parallel(ltuPatternsStyles, ltuLegacyStyles, scripts))
 exports.default = gulp.series(exports.build, watch, serve)
