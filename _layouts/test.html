@@ -1,0 +1,71 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="{{ site.url }}/ltu-components/dist/css/ds-ltu.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
+    <link rel="stylesheet" href="{{ site.url }}/ltu-components/dist/css/ltu-legacy.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
+</head>
+
+<body>
+
+{% if page.showLeftNav == 'yes' %}<script>
+var mobileBreakingPoint = 1023;
+
+if(window.outerWidth <= mobileBreakingPoint){
+    //collapseUniverse();
+    var b = document.body
+    b.className += ' nav-out';
+}
+</script>{% endif %}
+
+    <!--noindex-->
+    <a id="skip" class="ds-btn-primary" href="#content">Skip to content</a>
+    {% if page.showHeader == 'yes' %}{% include legacy-ltu-nav/ltu-header.html %}{% endif %}
+    <!--end noindex-->
+
+    <main id="content">
+
+        <div class="ds-main-wrapper">
+
+            {% if page.showLeftNav == 'yes' %}{% include legacy-ltu-nav/ltu-nav.html %}{% endif %}
+
+            <div class="ds-page-content-wrapper">
+
+                {% if page.showBreadcrumb == 'yes' %}{% include legacy-ltu-nav/ltu-breadcrumb.html %}{% endif %}
+
+                <article class="ds-page-content">
+
+ {{ content }}
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!--noindex-->
+    {% if page.showFooter == 'yes' %}{% include legacy-ltu-nav/ltu-footer.html %}{% endif %}
+    <!--end noindex-->
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+
+    <script src="{{ site.url }}/ltu-components/dist/js/ds-ltu.js?v={{ site.time | date: '%Y%m%d%H%M%S' }}"></script>
+
+    {% if page.showHeader == 'yes' %}
+    <!-- include ltu legacy code for nav sample -->
+    <!-- <script src="https://www.latrobe.edu.au/__data/assets/js_file_folder/0004/1078573/ltu-legacy.js?v={{ site.time | date: '%Y%m%d%H%M%S' }}"></script>-->
+    <script src="{{ site.url }}/ltu-components/dist/js/ltu-legacy.js?v={{ site.time | date: '%Y%m%d%H%M%S' }}"></script>
+    {% endif %}
+    </body>
+</html>

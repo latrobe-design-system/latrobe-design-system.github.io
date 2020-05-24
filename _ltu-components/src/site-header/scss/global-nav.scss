@@ -1,0 +1,137 @@
+// depenencies
+@use "config";
+
+.ds-site-header {
+    position: sticky;
+    top: 0;
+}
+
+.ds-global-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid config.$color-3b;
+}
+
+.ds-global-nav__children {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ds-global-nav__child {
+    padding: 0 config.spunits(4);
+    @media(min-width: 1280px){
+        padding: 0 config.spunits(6);
+    }
+    margin: 0;
+
+    &:hover::after {
+        background-color: config.$color-1;
+    }
+
+    a { 
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        height: 80px; // same height as logo image
+        text-decoration: none;
+        color: config.$color-2;
+        font-weight: config.$bold;
+
+        &::after {
+            content: "";
+            height: 4px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        
+        &:hover {
+            color: config.$color-1;
+            text-decoration: none;
+            &::after {
+                background-color: config.$color-1;
+            }
+        }
+
+
+    }
+}
+
+.ds-global-nav__child--selected {
+    a::after {
+        background-color: config.$color-2;
+    }
+}
+
+.ds-global-home-link {
+    a {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+a.ds-global-search {
+    display: flex;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    text-indent: 80px;
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background-image: url("icons/feather/search.svg");
+        filter: config.$filter-near-black;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    &:hover {
+        filter: config.$filter-red;
+    }
+}
+
+
+.ds-utility-nav {
+    ul {
+        background-color: config.$color-3a;
+        padding: 0 20px;
+        margin: 0;
+        text-align: center;
+        list-style: none;
+        font-size: 14/16 * 1rem;
+
+        li {
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+
+            a, a:visited {
+                display: inline-block;
+                color: config.$color-2;
+                text-decoration: none;
+                padding: 12px 8px 11px 8px; 
+                border-bottom: 1px solid transparent;
+                font-weight: config.$medium;
+            }
+
+            a:hover {
+                color: config.$color-1;
+                border-bottom-color: config.$color-1;
+            }
+        }
+    }
+}

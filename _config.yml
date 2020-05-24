@@ -104,4 +104,4 @@ defaults:
       path: "_ltu-components/tests"
     values:
       type: example
-      layout: snippet
+      layout: test
