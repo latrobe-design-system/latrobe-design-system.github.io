@@ -1,11 +1,5 @@
 {% for pattern in site.ltu-components %}
     {%- if pattern.url contains include.snippet -%}
-        {% if pattern.type == 'block' %}
             {{ pattern.content }}
-        {% else %}
-            <div>
-            {{ pattern.content }}
-            </div>
-        {% endif %}
     {%- endif -%}
 {% endfor %}

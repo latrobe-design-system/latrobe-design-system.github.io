@@ -9,12 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="{{ site.url }}/ltu-components/dist/css/ds-ltu.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
-    <link rel="stylesheet" href="{{ site.url }}/ltu-components/dist/css/ltu-legacy.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
 </head>
 
 <body>
 
-{% if page.type == 'header' %}{{ content }}{% endif %}
+    <!--noindex-->
+    <a id="skip" class="ds-btn-primary" href="#content">Skip to content</a>
+    {% if page.showHeader == 'yes' %}{% include sample-component.html snippet="ltu-components/src/site-header/snippets/global-nav.html" %}{% endif %}
+    <!--end noindex-->
 
     <main id="content">
 
@@ -24,16 +26,7 @@
 
                 <article class="ds-page-content">
 
-{% if page.type == 'content' %}            
-                    <div class="ds-block {{ page.ds-block-modifiers }}">
-                        <div class="ds-block__wrapper">
-
-{{ content }}
-
-                        </div>
-                    </div>
-{% elsif page.type == 'block' %}{{ content }}    
-{% endif %}
+ {{ content }}
 
                 </article>
 
@@ -42,6 +35,10 @@
         </div>
 
     </main>
+
+    <!--noindex-->
+    
+    <!--end noindex-->
 
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"

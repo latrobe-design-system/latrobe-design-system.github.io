@@ -10,3 +10,5 @@ status: ready
 {% include sample-iframe.html snippet="promo/snippets/promo-bleed.html" %}
 
 {% include sample-iframe.html snippet="promo/snippets/promo-bleed-text-right.html" %}
+
+{% include sample-iframe.html snippet="promo/snippets/promo-video.html" %}

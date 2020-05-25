@@ -44,7 +44,7 @@ The modular approach allows Accessibility to be achieved at the component level.
 Vertical and horizontal rhythm is paramount for good UI design.
 
 We achieve this through:
-* Consistent spacing - using the soft grid approach where all spacing is based on 4px (in actually 0.25rem)
+* Consistent spacing - using the soft grid approach where all spacing is based on 4px (0.25rem in reality)
 * Modular scale for heading hierachy - Major third
 
 #### Readability

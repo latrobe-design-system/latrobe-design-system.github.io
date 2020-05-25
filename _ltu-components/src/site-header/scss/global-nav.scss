@@ -4,13 +4,15 @@
 .ds-site-header {
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 .ds-global-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid config.$color-3b;
+    border-bottom: 1px solid config.$color-3c;
+    background-color: white;
 }
 
 .ds-global-nav__children {
@@ -50,6 +52,7 @@
             position: absolute;
             bottom: 0;
             left: 0;
+            filter: none;
         }
         
         &:hover {
@@ -66,7 +69,16 @@
 
 .ds-global-nav__child--selected {
     a::after {
-        background-color: config.$color-2;
+        //background-color: config.$color-2;
+    }
+    a::before {
+        content: url(icons/latrobe-chevron-RGB.svg);
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 8px;
+        width: 16px;
+        height: 16px;
     }
 }
 
@@ -84,6 +96,7 @@ a.ds-global-search {
     height: 80px;
     padding: 0;
     text-indent: 80px;
+    overflow: hidden;
 
     &::after {
         content: "";

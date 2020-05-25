@@ -99,9 +99,10 @@ defaults:
     values:
       status: draft
       layout: snippet
+      type: content
   -
     scope:
       path: "_ltu-components/tests"
     values:
       type: example
-      layout: test
+      layout: test-page-ds

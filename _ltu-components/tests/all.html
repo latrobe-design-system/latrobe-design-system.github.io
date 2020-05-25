@@ -5,11 +5,12 @@ status: draft
 showLeftNav: "no"
 ---
 
-{%- for pattern in site.ltu-components -%}
-    {%- if pattern.type == "block" -%}
-    {% assign url = pattern.path | remove_first: "world" %}
+{% for pattern in site.ltu-components %}
+    {% if pattern.type == "block" %}
+    {% assign url = pattern.path | remove_first: "_" %} 
+    {% capture snippet-path %}{{ url }}{% endcapture %}
     {% include sample-component.html
-        snippet="url"
+        snippet=snippet-path
     %}
-    {%- endif -%}
-{%- endfor -%}
+    {% endif %}
+{% endfor %}
