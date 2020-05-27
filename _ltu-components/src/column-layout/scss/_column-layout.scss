@@ -8,6 +8,9 @@
 
 .ds-column-layout__column {
     margin-top: 0;
+    .ds-block {
+        padding: 0;
+    }
 }
 
 .ds-column-layout__column--bg-grey,

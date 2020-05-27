@@ -15,6 +15,10 @@
 
 .ds-media-item__header {
     margin-right: config.spunits(8);
+
+    img {
+        max-width: 160px;
+    }
 }
 
 .ds-media-item__body {
