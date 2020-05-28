@@ -58,7 +58,7 @@ $color-alt-9: rgb(0, 79, 89) !default;
 
 /* Form colours */
 
-$green: #28a745 !default;
+$green: #52c41a !default;
 
 /* svg icon filters - changes black to color - https://codepen.io/sosuke/pen/Pjoqqp */
 $filter-near-black: invert(7%) sepia(53%) saturate(0%) hue-rotate(173deg) brightness(107%) contrast(86%) !default; /* #242424 */
@@ -73,21 +73,9 @@ $filter-teal: invert(49%) sepia(45%) saturate(3730%) hue-rotate(142deg) brightne
 
 $space-unit: 0.25rem !default; /* 4px */
 
-//$space-unit: 4px !default;
-$space-sm:   calc(1 * var($space-unit)) !default;
-$space-md:   calc(2 * var($space-unit)) !default;
-$space-lg:   calc(3 * var($space-unit)) !default;
-$space-xl:   calc(4 * var($space-unit)) !default;
-$space-xxl:  calc(5 * var($space-unit)) !default;
-$space-xxxl: calc(10 * var($space-unit)) !default;
-
-$component-padding: $space-md !default;
-
-
 //----------------------------------------------------------------------------------------------------------------------------------//
 // Box shadows
 //----------------------------------------------------------------------------------------------------------------------------------//
 
 $shadow-1: -16px 16px 20px rgba(0,0,0,0.1) !default; // for raised items
 $shadow-2: 0px 8px 16px rgba(0,0,0,0.3) !default; // for hover states
-//$shadow-3: 0px 10px 20px $color-3d !default; // for dark backgrounds

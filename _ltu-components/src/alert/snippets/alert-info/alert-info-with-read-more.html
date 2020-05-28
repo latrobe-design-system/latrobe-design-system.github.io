@@ -1,0 +1,30 @@
+---
+title: "Info alert - with read more collapse"
+status: "draft"
+type: block
+text: An info alert may be combined with a collapse where there is a need to provide supplemetary information or many optional links to follow.
+---
+
+<div class="ds-block">
+    <div class="ds-block__wrapper">
+
+        <div class="ds-alert ds-alert--info" role="alert">
+            <div class="ds-alert__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="8"></line></svg>
+            </div>
+
+            <div class="ds-alert__text">
+                <p>You will be required to bring along <button class="ds-btn-link ds-icon-chevron-down ds-collapse__trigger" aria-controls="further1" aria-expanded="false" >100 points of identification</button></p>
+                <div  id="further1" class="ds-collapse__content" role="region" hidden>
+                    <p>Primary documents</p>
+                    <ul>
+                        <li>Australian birth certificate -  70 points</li>
+                        <li>Australian citizenship certificate - 70 points</li>
+                        <li>Australian residency status certificate - 70 points</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
