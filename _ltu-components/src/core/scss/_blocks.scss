@@ -35,6 +35,10 @@ div.ds-block {
     @media (min-width: 640px) {
         padding: 0 40px;
     }
+
+    .ds-block {
+        padding: 0;
+    }
 }
 
 // .ds-block__wrapper wraps block content
