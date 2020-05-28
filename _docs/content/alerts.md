@@ -34,10 +34,10 @@ Use modifiers `ds-alert--success`, `ds-alert--error`, `ds-alert--warning` and sw
 
 {% include sample-iframe.html snippet="alert/snippets/alert-warning/alert-warning-group.html" %}
 
-# Full width version
+## Page alert
 
 Use modifier `ds-block--full-width` on the `ds-block` container and `ds-alert--full-width` on `ds-alert` component for a full width version.
 
-The full width version is a special version for site alerts that site immeadiately below the site header.
+The full width version is a special version for page/site alerts that site immeadiately below the site header.
 
 {% include sample-iframe.html snippet="alert/snippets/alert-info/alert-info-full-width.html" %}
