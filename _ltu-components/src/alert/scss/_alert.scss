@@ -23,16 +23,16 @@
 
     // step down heading sizes
     h2 {
-        font-size: $h3;
+        font-size: config.$h3;
     }
     h3 {
-        font-size: $h4;
+        font-size:  config.$h4;
     }
     h4 {
-        font-size: $h5;
+        font-size:  config.$h5;
     }
     h5 {
-        font-size: $h6;
+        font-size:  config.$h6;
     }
 }
 
