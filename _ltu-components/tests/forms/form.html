@@ -1,0 +1,149 @@
+---
+title: "Form test"
+status: draft
+
+type: block
+
+label: Label
+id: id
+placeholder: placeholder
+hint: This is a hint.
+---
+<div class="ds-block">
+    <div class="ds-block__wrapper">
+        <h2 style="text-align: center;">Ask a question</h2>
+        <p style="text-align: center;">We will respond by the next business day. <br>Please note that fields containing an asterisk (*) are compulsory.</p>
+    </div>
+</div>
+
+<div class="ds-block">
+    <div class="ds-block__wrapper">
+
+        <form class="ds-form ds-form--centered" action="">
+               
+            <div class="ds-column-layout">
+                
+                <div class="ds-column-layout__column">
+
+                    <div class="ds-form-group">
+                        <label class="ds-label sr-only" for="firstname">First name <abbr class="ds-label__required" title="required">*</abbr></label>
+                        <input class="ds-text-input" type="text" id="firstname" placeholder="First name *" required/>
+                    </div>
+
+                </div>
+                <div class="ds-column-layout__column">
+
+                    <div class="ds-form-group">
+                        <label class="ds-label sr-only" for="surname">Family name <abbr class="ds-label__required" title="required">*</abbr></label>
+                        <input class="ds-text-input" type="text" id="surname" placeholder="Family name *" required/>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="ds-column-layout">
+                
+                <div class="ds-column-layout__column">
+
+                    <div class="ds-form-group">
+                        <label class="ds-label sr-only" for="email">Email address <abbr class="ds-label__required" title="required">*</abbr></label>
+                        <input class="ds-text-input" type="email" id="email" placeholder="Email address *" required/>
+                    </div>
+
+                </div>
+                <div class="ds-column-layout__column">
+
+                    <div class="ds-form-group">
+                        <label class="ds-label sr-only" for="mobile">Mobile number <abbr class="ds-label__required" title="required">*</abbr></label>
+                        <input class="ds-text-input" type="tel" id="mobile" placeholder="Mobile number *" required/>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="ds-column-layout">
+                
+                <div class="ds-column-layout__column">
+
+                    <div class="ds-form-group">
+                        <label class="ds-label sr-only" for="name">Country of residence  <abbr class="ds-label__required" title="required">*</abbr></label>
+                    
+                        <select class="ds-select" required>
+                            <option value="option-1">Country of residence *</option>
+                            <option value="option-2">Afghanistan</option>
+                            <option value="option-3">Albania</option>
+                            <option value="option-4">Algeria</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="ds-column-layout__column">
+
+                    <div class="ds-form-group">
+                        <label class="ds-label sr-only" for="name">Country of nationality</label>
+                    
+                        <select class="ds-select">
+                            <option value="option-1">Country of nationality</option>
+                            <option value="option-2">Afghanistan</option>
+                            <option value="option-3">Albania</option>
+                            <option value="option-4">Algeria</option>
+                        </select>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="ds-column-layout">
+                
+                <div class="ds-column-layout__column">
+
+                    <div class="ds-form-group">
+                        <label class="ds-label sr-only" for="name">Level of study</label>
+
+                        <select class="ds-select hobsons-field" data-placeholder="Level of study" name="levelOfStudy" id="levelOfStudy" required>
+                            <option selected="selected" value="">Level of study</option>
+                            <option value="cross-institution-postgraduate">Cross Institution Postgraduate</option>
+                            <option value="cross-institution-undergraduate">Cross Institution Undergraduate</option>
+                            <option value="non-award-course">Non-award Course</option>
+                            <option value="postgraduate">Postgraduate</option>
+                            <option value="postgraduate-research">Postgraduate Research</option>
+                            <option value="study-abroad">Study Abroad</option>
+                            <option value="undergraduate">Undergraduate</option>
+                        </select>
+
+                    </div>
+
+                </div>
+                <div class="ds-column-layout__column">
+
+                    <div class="ds-form-group">
+                        <label class="ds-label sr-only" for="name">Course  <abbr class="ds-label__required" title="required">*</abbr></label>
+                    
+                        <select class="ds-select" required>
+                            <option value="option-1">Course *</option>
+                            <option value="option-2">Undergraduate</option>
+                            <option value="option-3">Non-award course</option>
+                        </select>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="ds-form-group">
+                <label class="ds-label sr-only" for="questions">Questions</label>
+                <textarea class="ds-text-input" id="questions" rows="8" placeholder="Questions"></textarea>
+            </div>
+
+            <div class="ds-form-group">
+                <input type="submit" value="Submit">
+            </div>
+
+        </form>
+
+    </div>
+</div>

@@ -3,12 +3,15 @@ title: "Forms"
 status: draft
 ---
 
-{% include sample-iframe.html snippet="forms/study-with-us.html" %}
+## DS form
 
-{% include sample-iframe.html snippet="forms/form-grid.html" %}
+{% include sample-iframe.html snippet="forms/form.html" %}
 
-{% include sample-iframe.html snippet="forms/form-inputs.html" %}
 
-{% include sample-iframe.html snippet="forms/form-invalid.html" %}
+## squiz form
 
-{% include sample-iframe.html snippet="forms/form-valid.html" %}
+{% include sample-iframe.html snippet="forms/squiz-form.html" %}
+
+
+
+

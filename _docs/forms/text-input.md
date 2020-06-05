@@ -1,20 +1,20 @@
 ---
 title: "Text input"
 status: draft
+
+menu: 2
 ---
 
-{% include sample-iframe.html snippet="inputs/snippets/text-input/text-input.html" %}
+{% include sample-iframe.html snippet="form/snippets/text/text.html" %}
 
-{% include sample-iframe.html snippet="inputs/snippets/text-input/text-input-hint.html" %}
+{% include sample-iframe.html snippet="form/snippets/text/text-required.html" %}
 
-{% include sample-iframe.html snippet="inputs/snippets/text-input/textarea.html" %}
+{% include sample-iframe.html snippet="form/snippets/text/text-with-hint.html" %}
 
-{% include sample-iframe.html snippet="inputs/snippets/text-input/date-picker.html" %}
+{% include sample-iframe.html snippet="form/snippets/text/text-disabled.html" %}
 
-{% include sample-iframe.html snippet="inputs/snippets/text-input/number-input.html" %}
+{% include sample-iframe.html snippet="form/snippets/text/text-readonly.html" %}
 
-{% include sample-iframe.html snippet="inputs/snippets/text-input/valid-and-invalid-states.html" %}
+{% include sample-iframe.html snippet="form/snippets/text/text-invalid.html" %}
 
-{% include sample-iframe.html snippet="inputs/snippets/text-input/disabled-text-input.html" %}
-
-{% include sample-iframe.html snippet="inputs/snippets/text-input/different-width-sizes-for-inputs.html" %}
+{% include sample-iframe.html snippet="form/snippets/text/text-valid.html" %}

@@ -1,0 +1,161 @@
+// depenencies
+@use "config";
+
+.ds-form {
+    width: 100%;
+}
+
+// Source - bootstrap reboot https://github.com/twbs/bootstrap/blob/master/scss/_reboot.scss
+// 1. Browsers set a default `min-width: min-content;` on fieldsets,
+//    unlike e.g. `<div>`s, which have `min-width: 0;` by default.
+//    So we reset that to ensure fieldsets behave more like a standard block element.
+//    See https://github.com/twbs/bootstrap/issues/12359
+//    and https://html.spec.whatwg.org/multipage/#the-fieldset-and-legend-elements
+// 2. Reset the default outline behavior of fieldsets so they don't affect page layout.
+
+.ds-fieldset {
+    min-width: 0; // 1
+    padding: 0; // 2
+    margin: 0; // 2
+    border: 0; // 2
+  }
+
+// Source - bootstrap reboot https://github.com/twbs/bootstrap/blob/master/scss/_reboot.scss
+// 1. By using `float: left`, the legend will behave like a block element.
+//    This way the border of a fieldset wraps around the legend if present.
+// 2. Correct the text wrapping in Edge.
+// 3. Fix wrapping bug.
+//    See https://github.com/twbs/bootstrap/issues/29712
+
+.ds-legend {
+    float: left; // 1
+    width: 100%;
+    padding: 0;
+    line-height: inherit;
+    white-space: normal; // 2
+  
+    + * {
+      clear: left; // 3
+    }
+  }
+
+.ds-legend {
+    // remove browser default style
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    display: block;
+    font-size: config.$h4;
+    font-weight: config.$medium;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    border-bottom: 2px solid config.$color-3b;
+}
+
+// label
+.ds-label {
+    display: block;
+    font-weight: 500;
+    margin: 2em 0 config.spunits(1) 0;
+}
+
+// label required indicator
+abbr.ds-label__required {
+    color: config.$color-1;
+    border: none;
+}
+
+.ds-text-input,
+.ds-textarea,
+.ds-select,
+.ds-input-checkbox,
+.ds-input-radio {
+    // remove browser default style
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.ds-text-input,
+.ds-textarea,
+.ds-select {
+    display: block;
+    max-width: 42rem; // same max-width as paragraphs
+}
+
+.ds-text-input,
+.ds-select {
+    display: block;
+    width: 100%;
+    padding: config.spunits(4);
+    background-color: white;
+    border: 2px solid config.$color-3b;
+    resize: vertical;
+    border-radius: 2px;
+
+    &::placeholder {
+        color: config.$color-3d;
+    }
+
+    &:disabled {
+        background-color: config.$color-3a;
+        color: config.$color-3c;
+    }
+}
+
+.ds-text-input {
+    &:read-only {
+        background-color: config.$color-3a;
+    }
+}
+
+
+.ds-input {
+    &--block {
+        display: block;
+    }
+
+    &--inline {
+        margin-right: config.spunits(4);
+    }
+}
+
+
+// Validation modifiers
+.ds-text-input,
+.ds-select {    
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+    &--invalid {
+        border-color: config.$color-1;
+    }
+
+    &--valid {
+        border-color: config.$green;
+    }
+}
+
+.ds-hint {
+    display: block;
+    margin-top: config.spunits(2);
+    font-weight: 500;
+    color: config.$color-3d;
+
+    &--invalid {
+        color: config.$color-1;
+    }
+
+    &--valid{
+        color: config.$green;
+    }
+}
+
+.ds-control-group {
+    @extend .ds-fieldset;
+    .ds-legend {
+        font-size: 1rem;
+        border-bottom: none;
+        margin-bottom: config.spunits(2);
+    }
+}

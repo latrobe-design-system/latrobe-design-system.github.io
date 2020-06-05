@@ -1,0 +1,14 @@
+---
+title: "Text Area"
+status: "draft"
+
+# Example content
+label: Give us your feedback
+uniquieID: email
+placeholder: Your feedback
+---
+
+<div class="ds-form-group">
+    <label class="ds-label" for="{{ page.uniquieID }}">{{ page.label }}</label>
+    <textarea class="ds-text-input" id="{{ page.uniquieID }}" rows="8" placeholder="{{ page.placeholder }}"></textarea>
+</div>

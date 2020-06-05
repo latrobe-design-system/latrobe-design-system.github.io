@@ -16,6 +16,9 @@ $(document).ready(function() {
             $(this).removeAttr('hidden');
           });
   
+          // update button icon
+          $(this).removeClass('ds-icon-chevron-down').addClass('ds-icon-chevron-up');
+
           // update the button label
           //thisObj.$id.find('span').html('Hide');
   
@@ -28,6 +31,9 @@ $(document).ready(function() {
           $('#'+regionId).slideUp(function(){
             $(this).attr('hidden','hidden');
           });
+
+          // update button icon
+          $(this).removeClass('ds-icon-chevron-up').addClass('ds-icon-chevron-down');
   
           // update the button label
           //thisObj.$id.find('span').html('Show');

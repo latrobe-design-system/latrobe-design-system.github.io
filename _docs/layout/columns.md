@@ -1,6 +1,6 @@
 ---
 title: "Column layout"
-status: draft
+status: ready
 ---
 
 {% include sample-iframe.html snippet="column-layout/snippets/column-layout.html" %}

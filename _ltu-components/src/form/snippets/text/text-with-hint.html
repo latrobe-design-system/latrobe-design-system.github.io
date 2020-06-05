@@ -1,0 +1,16 @@
+---
+title: "Hint Text"
+status: "draft"
+
+# Example content
+label: Name
+id: firstname
+placeholder: Your name
+hint: We'll never share your details with anyone else.
+---
+
+<div class="ds-form-group">
+    <label class="ds-label" for="{{ page.id }}">{{ page.label }}</label>
+    <input class="ds-text-input" type="text" id="{{ page.id }}" placeholder="{{ page.placeholder }}" aria-describedby="{{ page.id }}-hint"/>
+    <small class="ds-hint" id="{{ page.id }}-hint">{{ page.hint }}</small>
+</div>

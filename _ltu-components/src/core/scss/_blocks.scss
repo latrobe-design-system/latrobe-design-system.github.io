@@ -7,7 +7,8 @@
         div:not(.ds-section):not(.ds-block),
         .ds-section > div:not(.ds-block),
         section,
-        article {
+        article,
+        form {
             padding: 0 20px;
             margin: 0 auto;
 
@@ -18,7 +19,8 @@
         }
         div:not(.ds-section),
         section,
-        article {
+        article,
+        form {
             // add bottom margin to last child of page if no bg color
             &:last-child {
                 margin-bottom: 4rem;
