@@ -4,8 +4,7 @@ status: draft
 info:
 ---
 
-{% include sample-iframe-only.html snippet="core/snippets/colour/primary-colours.html" %}
+{% include sample-iframe.html snippet="src/core/snippets/colour/primary-colours.html" iframeonly="yes" %}
 
-{% include sample-iframe-only.html snippet="core/snippets/colour/accent-colours.html" %}
+{% include sample-iframe.html snippet="src/core/snippets/colour/accent-colours.html" iframeonly="yes" %}
 
-<!-- {% include sample-iframe-only.html snippet="core/snippets/colour/brand-alts.html" %} -->

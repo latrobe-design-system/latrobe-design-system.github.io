@@ -3,4 +3,4 @@ title: "Site header"
 status: planned
 ---
 
-{% include sample-iframe.html snippet="site-header/snippets/global-nav.html"%}
+{% include sample-iframe.html snippet="src/site-header/snippets/global-nav.html"%}

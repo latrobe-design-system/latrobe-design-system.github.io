@@ -7,4 +7,4 @@ This is required for Level 2 Landing Pages as mega menu is only path to child pa
 
 This would become redundant if nav was optimized.
 
-{% include sample-iframe.html snippet="child-nav/snippets/child-nav.html"%}
+{% include sample-iframe.html snippet="src/child-nav/snippets/child-nav.html"%}

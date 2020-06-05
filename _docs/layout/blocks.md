@@ -21,4 +21,4 @@ There are 4 possible maximum widths of content within a block:
 | Full width | 100% | ds-block--full-width |
 
 
-{% include sample-code-only.html snippet="core/snippets/block/block.html" %}
+{% include sample-iframe.html snippet="src/core/snippets/block/block.html" codeonly="yes" %}

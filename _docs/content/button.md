@@ -23,24 +23,24 @@ Any of the icons in the [icon set](/foundations/icons/) can be used with a butto
 
 To place the icon on the left also include the class `icon-before`
 
-{% include sample-iframe.html snippet="button/snippets/button.html" %}
+{% include sample-iframe.html snippet="src/button/snippets/button.html" %}
 
-{% include sample-iframe.html snippet="button/snippets/primary_button.html" %}
+{% include sample-iframe.html snippet="src/button/snippets/primary_button.html" %}
 
-{% include sample-iframe.html snippet="button/snippets/secondary_button.html" %}
+{% include sample-iframe.html snippet="src/button/snippets/secondary_button.html" %}
 
-{% include sample-iframe.html snippet="button/snippets/link-button.html" %}
+{% include sample-iframe.html snippet="src/button/snippets/link-button.html" %}
 
-{% include sample-iframe.html snippet="button/snippets/round_button.html" %}
+{% include sample-iframe.html snippet="src/button/snippets/round_button.html" %}
 
 ## Button modifiers
 
-{% include sample-iframe.html snippet="button/snippets/small_button.html" %}
+{% include sample-iframe.html snippet="src/button/snippets/small_button.html" %}
 
-{% include sample-iframe.html snippet="button/snippets/small_icon_button.html" %}
+{% include sample-iframe.html snippet="src/button/snippets/small_icon_button.html" %}
 
-{% include sample-iframe.html snippet="button/snippets/light_button.html" bgcolor="#363636" %}
+{% include sample-iframe.html snippet="src/button/snippets/light_button.html" bgcolor="#363636" %}
 
 ## Form buttons
 
-{% include sample-iframe.html snippet="button/snippets/form_button.html" %}
+{% include sample-iframe.html snippet="src/button/snippets/form_button.html" %}

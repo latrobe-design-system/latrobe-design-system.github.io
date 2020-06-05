@@ -3,4 +3,4 @@ title: "Standard content page"
 status: ready
 ---
 
-{% include sample-iframe.html snippet="standard-content-page.html" %}
+{% include sample-iframe.html snippet="tests/standard-content-page.html" %}

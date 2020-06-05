@@ -3,4 +3,4 @@ title: "All"
 status: draft
 ---
 
-{% include sample-iframe.html snippet="all.html" %}
+{% include sample-iframe.html snippet="tests/all.html" %}
