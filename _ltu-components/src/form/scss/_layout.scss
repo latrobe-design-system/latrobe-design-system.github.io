@@ -1,0 +1,42 @@
+// depenencies
+@use "config";
+
+// Layout
+
+// default ds-form havs same max-width as paragraphs
+// class can be added to wrapper div around form <div class="ds-form"><form></form></div> 
+// or the form itself <form class="ds-form"></form>
+.ds-form {
+   
+}
+
+// modifier for .ds-form to center form on page 
+// class can be added to wrapper div around form <div class="ds-form ds-form--centered"><form></form></div> 
+// or the form itself <form class="ds-form ds-form--centered"></form>
+.ds-form--centered form,
+.ds-form--centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// modifier for .ds-form to make form full width
+// class can be added to wrapper div around form <div class="ds-form ds-form--full-width"><form></form></div> 
+// or the form itself <form class="ds-form ds-form--full-width"></form>
+.ds-form--full-width form,
+.ds-form--full-width {
+        max-width: 100%;
+}
+
+// form groups wrap label and input pairs
+.ds-form-group {
+    margin-top: 1rem;
+}
+
+.ds-form-group--inline {
+    display: inline-block;
+
+    .ds-input-checkbox + label,
+    .ds-input-radio + label {
+            margin-right: config.spunits(4);
+    }
+}

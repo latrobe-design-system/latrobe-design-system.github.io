@@ -1,0 +1,31 @@
+// depenencies
+@use "config";
+@use "form/scss/checkbox";
+
+.ds-input-radio {
+    @extend .ds-input-checkbox;
+}
+
+.ds-input-radio {
+    
+    & + label {
+        /* fake radio outer */
+        &::before {
+            border-radius: 50%;
+        }
+        
+        /* checkmark of fake radio */
+        &::after {
+            height: config.spunits(3);
+            width: config.spunits(3);
+            border: none;
+            transform: none;
+            border-radius: 50%;
+            background: config.$color-2;
+            left: config.spunits(1.5);
+            top: config.spunits(1.5);
+
+        }
+    }
+}
+

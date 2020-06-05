@@ -1,0 +1,19 @@
+---
+title: "Text input invalid"
+status: draft
+text: Invalid state
+
+# Example content
+id: text
+label: Name
+placeholder: Your name
+hint: We'll never share your details with anyone else.
+invalid: Invalid message
+---
+
+<div class="ds-form-group">
+    <label class="ds-label" for="{{ page.id }}">{{ page.label }}</label>
+    <input class="ds-text-input ds-text-input--invalid" type="text" id="{{ page.id }}" placeholder="{{ page.placeholder }}"/>
+    <small class="ds-hint" id="{{ page.id }}-hint">{{ page.hint }}</small>
+    <small class="ds-hint ds-hint--invalid" id="{{ page.id }}-valid-text">{{ page.invalid }}</small>
+</div>

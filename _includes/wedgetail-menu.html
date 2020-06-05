@@ -79,7 +79,7 @@
 
         <p class="wedgetail-menu-list__sub-heading">Forms</p>
 
-        {%- assign x = site.docs | where: 'parentmenu', 'form' | sort: 'url' -%}
+        {%- assign x = site.docs | where: 'parentmenu', 'form' | sort: 'menu' -%}
 
         <ul>
             {%- for pattern in x -%}

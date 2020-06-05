@@ -5,8 +5,7 @@
  */
 
 $(document).ready(function() {
-    $('.ds-alert__close').on('click', function(){
+    $('.ds-alert__close').on('click', function() {
         $(this).parent().remove();
-        });
     });
 });

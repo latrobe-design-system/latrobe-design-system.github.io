@@ -1,18 +1,19 @@
 ---
 title: "Want to study with us?"
 status: draft
+
+type: block
 ---
 
 <div class="ds-block">
-    <div class="ds-block-wrapper" data-blockwidth="narrow">
-        <form class="ds-form">
-            <fieldset class="ds-fieldset">
-                <div class="ds-grid">
-                    <legend class="ds-legend ds-grid__col-12">Want to study with us? Enquire here.</legend>
-
-                    <div class="ds-form-group ds-grid__col-6">
+    <div class="ds-block__wrapper">
+        
+        <h2>Want to study with us? Enquire here.</h2>
+        <div>
+            <form class="ds-form">
+                <fieldset class="ds-fieldset">
+                    <div class="ds-form-group">
                         <label class="ds-label" for="name">I am</label>
-
                         <select class="ds-select"> 
                             <option value="">--</option>
                             <option value="65">Year 9</option>
@@ -49,7 +50,7 @@ status: draft
                         </select>
                     </div>
 
-                    <div class="ds-form-group ds-grid__col-6">
+                    <div class="ds-form-group">
                         <label class="ds-label" for="name">I'm interested in</label>
 
                         <select class="ds-select"> 
@@ -62,7 +63,7 @@ status: draft
                         </select>
                     </div>
 
-                    <div class="ds-form-group ds-grid__col-6">
+                    <div class="ds-form-group">
                         <label class="ds-label" for="name">I want to study</label>
 
                         <select class="ds-select"> 
@@ -81,7 +82,7 @@ status: draft
                         </select>
                     </div>
 
-                    <div class="ds-form-group ds-grid__col-6">
+                    <div class="ds-form-group">
                         <label class="ds-label" for="name">Study Location</label>
 
                         <select class="ds-select">
@@ -98,49 +99,48 @@ status: draft
                             <option value="6179">Online</option>
                         </select>
                     </div>
-                </div>
-            </fieldset>
+                </fieldset>
 
-            <fieldset class="ds-fieldset">
-                <div class="ds-grid">
-                    <legend class="ds-legend ds-grid__col-12">Personal details</legend>
+                <fieldset class="ds-fieldset">
+                    <legend class="ds-legend">Personal details</legend>
 
-
-                    <div class="ds-form-group ds-grid__col-6">
-                        <label class="ds-label" for="{{ page.id }}">First name<abbr class="req" title="required">*</abbr></label>
+                    <div class="ds-form-group">
+                        <label class="ds-label" for="{{ page.id }}">First name <abbr class="ds-label__required" title="required">*</abbr></label>
                         <input class="ds-text-input" type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="John" required/>
                     </div>
 
-                    <div class="ds-form-group ds-grid__col-6">
-                        <label class="ds-label" for="{{ page.id }}">Last name<abbr class="req" title="required">*</abbr></label>
+                    <div class="ds-form-group">
+                        <label class="ds-label" for="{{ page.id }}">Last name <abbr class="ds-label__required" title="required">*</abbr></label>
                         <input class="ds-text-input" type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="Appleseed" required/>
                     </div>
 
-                    <div class="ds-form-group ds-grid__col-6">
-                        <label class="ds-label" for="{{ page.id }}">Email<abbr class="req" title="required">*</abbr></label>
+                    <div class="ds-form-group">
+                        <label class="ds-label" for="{{ page.id }}">Email <abbr class="ds-label__required" title="required">*</abbr></label>
                         <input class="ds-text-input" type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="john@appleseed.com" required/>
                     </div>
                     
-                    <div class="ds-form-group ds-grid__col-3">
-                        <label class="ds-label" for="{{ page.id }}">Postal address in Australia<abbr class="req" title="required">*</abbr></label>
-                        <input class="ds-text-input" type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="0000" required/>
-                    </div>
-
-                    <div class="ds-form-group ds-grid__col-3">
-                        <label class="ds-label" for="{{ page.id }}">Postal code<abbr class="req" title="required">*</abbr></label>
+                    <div class="ds-form-group">
+                        <label class="ds-label" for="{{ page.id }}">Postal address in Australia <abbr class="ds-label__required" title="required">*</abbr></label>
                         <input class="ds-text-input" type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="0000" required/>
                     </div>
 
                     <div class="ds-form-group">
-                        <label class="ds-label" for="name">Message<abbr class="req" title="required">*</abbr></label>
+                        <label class="ds-label" for="{{ page.id }}">Postal code <abbr class="ds-label__required" title="required">*</abbr></label>
+                        <input class="ds-text-input" type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="0000" required/>
+                    </div>
+
+                    <div class="ds-form-group">
+                        <label class="ds-label" for="name">Message <abbr class="ds-label__required" title="required">*</abbr></label>
                         <textarea class="ds-text-input" rows="8" placeholder="Enter your message" required></textarea>
                     </div>
 
-                    <div class="ds-form-group ds-grid__col-12">
-                        <input class="btn" type="button" value="Send">
+                    <div class="ds-form-group">
+                        <input type="submit" value="Submit"> <input type="reset" value="Reset">
                     </div>
-                </div>
-            </fieldset>
-        </form>
+
+                </fieldset>
+            </form>
+        </div>
+
     </div>
 </div>

@@ -1,0 +1,15 @@
+---
+title: "Required"
+status: "draft"
+text: Add required attribute to input and abbr tag after label text
+
+# Example content
+label: Name
+id: firstname
+placeholder: Your name
+---
+
+<div class="ds-form-group">
+    <label class="ds-label" for="{{ page.id }}">{{ page.label }} <abbr class="ds-label__required" title="required">*</abbr></label>
+    <input class="ds-text-input" type="text" id="{{ page.id }}" placeholder="{{ page.placeholder }}" required/>
+</div>

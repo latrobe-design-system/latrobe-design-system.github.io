@@ -3,11 +3,10 @@
 
 .ds-column-layout {
     @include config.columns-grid($alignment: left);
-    //margin-top: 1rem;
 }
 
 .ds-column-layout__column {
-    margin-top: 0;
+    margin-top: 0 !important;
     .ds-block {
         padding: 0;
     }

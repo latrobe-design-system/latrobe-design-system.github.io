@@ -1,0 +1,113 @@
+@use "config";
+@use "text/scss/text";
+@use "form/scss/base";
+@use "form/scss/radio";
+@use "form/scss/checkbox";
+@use "form/scss/file";
+@use "form/scss/select";
+@use "form/scss/layout";
+@use "button/scss/button";
+@use "table/scss/table";
+
+
+.sq-form-required-field-note {
+    margin-top: 1em;
+}
+
+fieldset.sq-form-section,
+.sq-form-question fieldset {
+    @extend .ds-fieldset;
+}
+
+legend.sq-form-section-title,
+legend.sq-form-question-title {
+    @extend .ds-legend;
+}
+
+.sq-form-question-answer,
+.sq-form-question,
+.sq-form-control {
+    @extend .ds-form-group;
+}
+
+.sq-form-question-answer {
+    margin-top: 0;
+}
+
+.sq-form-question {
+    label {
+        @extend .ds-label;
+    }
+}
+
+.sq-form-required-field {
+    @extend .ds-label__required;
+}
+
+.sq-form-question-note {
+    @extend small;
+}
+
+.sq-form-error {
+    @extend small;
+    @extend .ds-hint;
+    @extend .ds-hint--invalid;
+    margin-top: 0;
+}
+
+.sq-form-field[type="text"],
+.sq-form-field[type="password"],
+.sq-form-field[type="text"] {
+    @extend .ds-text-input;
+}
+
+.sq-form-question-error {
+    .sq-form-field[type="text"],
+    .sq-form-field[type="password"],
+    .sq-form-field[type="text"] {
+        @extend .ds-text-input--invalid;
+    }
+}
+
+select.sq-form-field {
+    @extend .ds-select;
+}
+
+.sq-form-question-option-list,
+.sq-form-question-tickbox-list,
+.sq-form-question-tickbox-table {
+    fieldset {
+        @extend .ds-control-group;
+    }
+
+    ol, ul, li {
+        list-style: none;
+        padding: 0;
+    }
+}
+
+.sq-form-question-option-list {
+    input[type="radio"] {
+        @extend .ds-input-radio;
+    }
+}
+
+.sq-form-question-tickbox-list {
+    input[type="checkbox"] {
+        @extend .ds-input-checkbox;
+    }
+}
+
+.sq-form-question-tickbox-table {
+    table {
+        @extend .ds-table--unstyled;
+        
+        th, td {
+            padding: config.spunits(2) config.spunits(4) config.spunits(2) 0;
+        }
+    }
+
+    input[type="checkbox"] {
+        @extend .ds-input-checkbox;
+    }
+}

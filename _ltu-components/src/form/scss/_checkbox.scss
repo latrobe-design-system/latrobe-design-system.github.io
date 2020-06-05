@@ -1,0 +1,62 @@
+// depenencies
+@use "config";
+@use "core/scss/core";
+
+// See this guide https://www.a11ywithlindsey.com/blog/create-custom-keyboard-accessible-radio-buttons
+
+.ds-input-checkbox {
+    display: block;
+    opacity: 0;
+
+    & + label {
+        position: relative;
+        padding-left: config.spunits(8);
+        cursor: pointer;
+        font-weight: 400;
+        margin-top: 0;
+
+        /* fake checkbox */        
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+        }
+        
+        /* fake checkbox box */
+        &::before {
+            height: config.spunits(6);
+            width: config.spunits(6);
+            background-color: white;
+            border: 2px solid config.$color-3b;
+            border-radius: 2px;
+            left: 0;
+        }
+        
+        /* checkmark of the fake checkbox*/
+        &::after {
+            height: config.spunits(2);
+            width: config.spunits(3);
+            border-left: 3px solid;
+            border-bottom: 3px solid;
+            transform: rotate(-45deg);
+            left: config.spunits(1.5);
+            top: config.spunits(1.5);
+
+            /*Hide the checkmark by default*/
+            content: none;
+        }
+    }
+
+    &:focus {
+        + label::before {
+            outline: 3px solid #75b6fc;
+            outline-offset: 1px;
+        }
+    }
+
+    /*Unhide on the checked state*/
+    &:checked + label::after {
+        content: "";
+    }
+}
