@@ -1,8 +1,10 @@
 // depenencies
 @use "config";
 
+form,
 .ds-form {
     width: 100%;
+    max-width: 42rem;
 }
 
 // Source - bootstrap reboot https://github.com/twbs/bootstrap/blob/master/scss/_reboot.scss
@@ -81,7 +83,6 @@ abbr.ds-label__required {
 .ds-textarea,
 .ds-select {
     display: block;
-    max-width: 42rem; // same max-width as paragraphs
 }
 
 .ds-text-input,

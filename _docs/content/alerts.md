@@ -14,11 +14,11 @@ Alerts on the other hand are typically used to provide feedback to user interact
 
 Info alerts may be present on page load or injected to provide information pertinent to a specific user selection.
 
-{% include sample-iframe.html snippet="alert/snippets/alert-info/alert-info.html" %}
+{% include sample-iframe.html snippet="src/alert/snippets/alert-info/alert-info.html" %}
 
-{% include sample-iframe.html snippet="alert/snippets/alert-info/alert-info-with-heading.html" %}
+{% include sample-iframe.html snippet="src/alert/snippets/alert-info/alert-info-with-heading.html" %}
 
-{% include sample-iframe.html snippet="alert/snippets/alert-info/alert-info-with-read-more.html" %}
+{% include sample-iframe.html snippet="src/alert/snippets/alert-info/alert-info-with-read-more.html" %}
 
 ## Other alerts
 
@@ -27,17 +27,17 @@ Success, error and warning alerts are usually not present on the page on load bu
 Use modifiers `ds-alert--success`, `ds-alert--error`, `ds-alert--warning` and swap out icon svg for these versions.
 
 
-{% include sample-iframe.html snippet="alert/snippets/alert-success/alert-success.html" %}
+{% include sample-iframe.html snippet="src/alert/snippets/alert-success/alert-success.html" %}
 
-{% include sample-iframe.html snippet="alert/snippets/alert-success/alert-success-with-content.html" %}
+{% include sample-iframe.html snippet="src/alert/snippets/alert-success/alert-success-with-content.html" %}
 
-{% include sample-iframe.html snippet="alert/snippets/alert-error/alert-error.html" %}
+{% include sample-iframe.html snippet="src/alert/snippets/alert-error/alert-error.html" %}
 
-{% include sample-iframe.html snippet="alert/snippets/alert-error/alert-error-with-content.html" %}
+{% include sample-iframe.html snippet="src/alert/snippets/alert-error/alert-error-with-content.html" %}
 
-{% include sample-iframe.html snippet="alert/snippets/alert-warning/alert-warning.html" %}
+{% include sample-iframe.html snippet="src/alert/snippets/alert-warning/alert-warning.html" %}
 
-{% include sample-iframe.html snippet="alert/snippets/alert-warning/alert-warning-with-content.html" %}
+{% include sample-iframe.html snippet="src/alert/snippets/alert-warning/alert-warning-with-content.html" %}
 
 ## Optional close button
 
@@ -45,13 +45,13 @@ You can add a close button to alerts to allow user to dismiss them.
 
 **Note:** The standard JS only removes the alert from the DOM. So if you place this alert on page load it will reappear.
 
-{% include sample-iframe.html snippet="alert/snippets/alert-info/alert-info-close.html" %}
+{% include sample-iframe.html snippet="src/alert/snippets/alert-info/alert-info-close.html" %}
 
-{% include sample-iframe.html snippet="alert/snippets/alert-success/alert-success-close.html" %}
+{% include sample-iframe.html snippet="src/alert/snippets/alert-success/alert-success-close.html" %}
 
-{% include sample-iframe.html snippet="alert/snippets/alert-error/alert-error-close.html" %}
+{% include sample-iframe.html snippet="src/alert/snippets/alert-error/alert-error-close.html" %}
 
-{% include sample-iframe.html snippet="alert/snippets/alert-warning/alert-warning-close.html" %}
+{% include sample-iframe.html snippet="src/alert/snippets/alert-warning/alert-warning-close.html" %}
 
 ## Page alert
 
@@ -61,4 +61,4 @@ The full width version is a special version for page/site alerts that site immea
 
 Or they could be used for applications at top or bottom of viewport.
 
-{% include sample-iframe.html snippet="alert/snippets/alert-info/alert-info-full-width.html" %}
+{% include sample-iframe.html snippet="src/alert/snippets/alert-info/alert-info-full-width.html" %}

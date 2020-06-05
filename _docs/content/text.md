@@ -3,15 +3,15 @@ title: "Text"
 status: ready
 ---
 
-<!-- {% include sample-iframe.html snippet="elements/text/display-headings.html" %} -->
+<!-- {% include sample-iframe.html snippet="src/elements/text/display-headings.html" %} -->
 
-{% include sample-iframe.html snippet="text/snippets/heading.html" %}
+{% include sample-iframe.html snippet="src/text/snippets/heading.html" %}
 
-{% include sample-iframe.html snippet="text/snippets/paragraph.html" %}
+{% include sample-iframe.html snippet="src/text/snippets/paragraph.html" %}
 
-{% include sample-iframe.html snippet="text/snippets/paragraph-small.html" %}
+{% include sample-iframe.html snippet="src/text/snippets/paragraph-small.html" %}
 
-{% include sample-iframe.html snippet="text/snippets/paragraph-lead.html" %}
+{% include sample-iframe.html snippet="src/text/snippets/paragraph-lead.html" %}
 
 <!-- ### Font styles
 
@@ -26,12 +26,12 @@ status: ready
 | Everything else | Roboto Light         | 16px / 24px                              | 18px / 28px                             | 300    | -->
 
 
-{% include sample-iframe.html snippet="text/snippets/ordered_list.html" %}
+{% include sample-iframe.html snippet="src/text/snippets/ordered_list.html" %}
 
-{% include sample-iframe.html snippet="text/snippets/unordered_list.html" %}
+{% include sample-iframe.html snippet="src/text/snippets/unordered_list.html" %}
 
-{% include sample-iframe.html snippet="text/snippets/hr.html" %}
+{% include sample-iframe.html snippet="src/text/snippets/hr.html" %}
 
-{% include sample-iframe.html snippet="text/snippets/inline.html" %}
+{% include sample-iframe.html snippet="src/text/snippets/inline.html" %}
 
-{% include sample-iframe.html snippet="text/snippets/column-list.html" %}
+{% include sample-iframe.html snippet="src/text/snippets/column-list.html" %}

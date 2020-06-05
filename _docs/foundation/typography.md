@@ -21,4 +21,4 @@ Wedgetail uses a modular type scale to help achieve a harmonious values that are
 
 Our website headings use the Major Third 1.25 sizing scale.
 
-{% include sample-iframe.html snippet="text/snippets/heading.html" %}
+{% include sample-iframe.html snippet="src/text/snippets/heading.html" %}

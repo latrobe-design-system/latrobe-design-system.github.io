@@ -25,6 +25,6 @@ Note: Accordions have a special class for `ds-block` container `ds-block-accordi
 
 For non-matrix implementations where it is more praticle to add, remove and reorder accordions in a group you may forgo the `ds-block-accordion` class on the `ds-block` container and have only one `ds-block` 
 
-{% include sample-iframe.html snippet="accordion/snippets/accordion.html" %}
+{% include sample-iframe.html snippet="src/accordion/snippets/accordion.html" %}
 
-{% include sample-iframe.html snippet="accordion/snippets/accordion-numbered.html" %}
+{% include sample-iframe.html snippet="src/accordion/snippets/accordion-numbered.html" %}

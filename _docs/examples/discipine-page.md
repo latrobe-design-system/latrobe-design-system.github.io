@@ -3,4 +3,4 @@ title: "Discipline page"
 status: draft
 ---
 
-{% include sample-iframe.html snippet="discipline-page.html" %}
+{% include sample-iframe.html snippet="tests/discipline-page.html" %}

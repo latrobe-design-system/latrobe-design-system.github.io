@@ -19,4 +19,4 @@ Our typography vertical spacing is based on 4px increments.
 
 By adopting 4px increments for all vertical and horizontal spacings we can achieve a well aligned harmonious UI without working to a hard grid.
 
-{% include sample-iframe.html snippet="core/snippets/grid/grid.html" %}
+{% include sample-iframe.html snippet="src/core/snippets/grid/grid.html" %}
