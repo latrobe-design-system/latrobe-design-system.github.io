@@ -14,13 +14,12 @@ form,
 //    See https://github.com/twbs/bootstrap/issues/12359
 //    and https://html.spec.whatwg.org/multipage/#the-fieldset-and-legend-elements
 // 2. Reset the default outline behavior of fieldsets so they don't affect page layout.
-
 .ds-fieldset {
     min-width: 0; // 1
     padding: 0; // 2
     margin: 0; // 2
     border: 0; // 2
-  }
+}
 
 // Source - bootstrap reboot https://github.com/twbs/bootstrap/blob/master/scss/_reboot.scss
 // 1. By using `float: left`, the legend will behave like a block element.
@@ -28,9 +27,8 @@ form,
 // 2. Correct the text wrapping in Edge.
 // 3. Fix wrapping bug.
 //    See https://github.com/twbs/bootstrap/issues/29712
-
 .ds-legend {
-    float: left; // 1
+    float: left; // 1 
     width: 100%;
     padding: 0;
     line-height: inherit;
@@ -39,7 +37,7 @@ form,
     + * {
       clear: left; // 3
     }
-  }
+}
 
 .ds-legend {
     // remove browser default style
@@ -50,16 +48,20 @@ form,
     display: block;
     font-size: config.$h4;
     font-weight: config.$medium;
-    margin-top: 2em;
+    margin-top: 3em;
     margin-bottom: 1em;
     border-bottom: 2px solid config.$color-3b;
+
+    ~ * {
+        clear: left; // extend bootstrap reset 3 above to cater for first sibling being non-visible e.g. <script> 
+    }
 }
 
 // label
 .ds-label {
     display: block;
     font-weight: 500;
-    margin: 2em 0 config.spunits(1) 0;
+    margin: 2em 0 0 0;
 }
 
 // label required indicator
@@ -90,6 +92,7 @@ abbr.ds-label__required {
     display: block;
     width: 100%;
     padding: config.spunits(4);
+    margin-top: config.spunits(1);
     background-color: white;
     border: 2px solid config.$color-3b;
     resize: vertical;
@@ -154,9 +157,11 @@ abbr.ds-label__required {
 
 .ds-control-group {
     @extend .ds-fieldset;
+    margin-top: 2rem;
     .ds-legend {
         font-size: 1rem;
         border-bottom: none;
+        margin-top: 0;
         margin-bottom: config.spunits(2);
     }
 }

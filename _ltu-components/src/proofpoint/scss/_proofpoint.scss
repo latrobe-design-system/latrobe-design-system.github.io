@@ -43,7 +43,7 @@
 
 /* proof point set */
 .ds-proofpoint-set {
-    @include config.columns($alignment: center);
+    @include config.columns;
     margin-top: 2rem;
     margin-bottom: 2rem;
 }

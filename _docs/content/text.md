@@ -30,6 +30,8 @@ status: ready
 
 {% include sample-iframe.html snippet="src/text/snippets/unordered_list.html" %}
 
+{% include sample-iframe.html snippet="src/text/snippets/description-list.html" %}
+
 {% include sample-iframe.html snippet="src/text/snippets/hr.html" %}
 
 {% include sample-iframe.html snippet="src/text/snippets/inline.html" %}

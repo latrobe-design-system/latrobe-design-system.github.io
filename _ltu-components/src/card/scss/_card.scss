@@ -202,6 +202,14 @@
 
 /* layouts */
 .ds-card-set {
-    @include config.columns-grid();
+    @include config.columns-grid($alignment: left);
     margin-top: 1rem;
+}
+// adjust min-width for wide card set so only four across
+@media (min-width: 1680px) { 
+    .ds-block--wide {
+        .ds-card-set {
+            @include config.columns-grid($basis-width: 376px, $alignment: left);
+        }
+    }
 }
