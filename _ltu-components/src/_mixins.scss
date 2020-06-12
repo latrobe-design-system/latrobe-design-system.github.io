@@ -1,26 +1,26 @@
 // depenencies
-@use "variables";
+@use "functions";
 
 // @include these for flex or grid with flex fallback columns
 // optionally pass base width
-// note: basis width of 280 with 32px gutter allows for up to three cols in the standard 1024 content container and four cols in medium 1280px container
-@mixin columns($basis-width: 280px, $alignment: left) {
+// note: basis width of 280 with 32px gutter allows for up to four cols in the standard 1280px content container and five cols in wide 1600px container
+@mixin columns($basis-width: 296px, $alignment: center) {
     display: flex;
     flex-wrap: wrap;
     justify-content: $alignment;
-    margin-right: -(variables.$space-unit*8); /* 2rem/32px */
+    margin-right: -32px; // using pixels for gutter so it doesn't scale with base font change from 16px -> 18px @1440 width
     & > * {
         flex-grow: 1;
         flex-shrink: 0;
         flex-basis: $basis-width;
-        margin: 1rem 2rem 0 0;
+        margin: 1rem 32px 0 0; // using pixels for gutter so it doesn't scale with base font change from 16px -> 18px @1440 width
     }
 }
-@mixin columns-grid($basis-width: 280px, $alignment: center, $wrap: auto-fit) {
+@mixin columns-grid($basis-width: 296px, $alignment: center, $wrap: auto-fit) {
     @include columns($basis-width, $alignment); /* flex fallback */
     @supports(display: grid) {
         display: grid;
-        grid-column-gap: variables.$space-unit*8; /* 2rem/32px */
+        grid-column-gap: 32px; // using pixels for gutter so it doesn't scale with base font change from 16px -> 18px @1440 width
         margin-right: 0;
         grid-template-columns: repeat($wrap, minmax($basis-width, 1fr));
         & > * {

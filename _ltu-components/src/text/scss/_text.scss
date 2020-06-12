@@ -243,6 +243,26 @@ dfn {
     font-style: italic;
 }
 
+//description lists
+dl {
+    margin: 1rem 0 0 0;
+}
+
+dt {
+    font-weight: config.$medium;
+    margin: 1rem 0 0 0;
+
+    & + dt {
+        margin-top: 0;
+    }
+}
+
+dd {
+    > :first-child {
+        margin-top: 0;
+    }
+}
+
 hr {
     display: block;
     height: 2px;

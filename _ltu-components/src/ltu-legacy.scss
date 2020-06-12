@@ -412,6 +412,9 @@
         transform: rotateZ(45deg) scale(1);
         transition: transform 0.3s;
         width: 48px;
+
+        // remove default link setting
+        filter: none;
     }
 
     /*.nav-out #hamburger {

@@ -13,7 +13,7 @@
         padding-left: config.spunits(8);
         cursor: pointer;
         font-weight: 400;
-        margin-top: 0;
+        margin-top: config.spunits(1);
 
         /* fake checkbox */        
         &::before,

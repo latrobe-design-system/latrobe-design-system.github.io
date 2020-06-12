@@ -10,13 +10,21 @@
 @use "table/scss/table";
 
 
+form {
+    > [class^="sq-form"] {
+        max-width: 42rem;
+    }
+}
+
 .sq-form-required-field-note {
     margin-top: 1em;
 }
 
-fieldset.sq-form-section,
-.sq-form-question fieldset {
+fieldset.sq-form-section {
     @extend .ds-fieldset;
+}
+.sq-form-question fieldset {
+    @extend .ds-control-group;
 }
 
 legend.sq-form-section-title,
@@ -52,19 +60,19 @@ legend.sq-form-question-title {
     @extend small;
     @extend .ds-hint;
     @extend .ds-hint--invalid;
-    margin-top: 0;
+    margin-top: config.spunits(1);
 }
 
 .sq-form-field[type="text"],
 .sq-form-field[type="password"],
-.sq-form-field[type="text"] {
+.sq-form-field[type="email"] {
     @extend .ds-text-input;
 }
 
 .sq-form-question-error {
     .sq-form-field[type="text"],
     .sq-form-field[type="password"],
-    .sq-form-field[type="text"] {
+    .sq-form-field[type="email"] {
         @extend .ds-text-input--invalid;
     }
 }
@@ -109,5 +117,23 @@ select.sq-form-field {
 
     input[type="checkbox"] {
         @extend .ds-input-checkbox;
+    }
+}
+
+.sq-form-question-datetime,
+.sq-form-question-password {
+    legend {
+        
+    }
+}
+
+.sq-form-question-datetime {
+    label, select {
+        display: inline-block;
+    }
+    select {
+        width: auto;
+        min-width: config.spunits(20);
+        margin-right: config.spunits(4);
     }
 }

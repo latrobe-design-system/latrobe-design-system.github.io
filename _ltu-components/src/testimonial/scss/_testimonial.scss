@@ -44,7 +44,7 @@
 }
 
 .ds-testimonial-set {
-    @include config.columns-grid($alignment: center);
+    @include config.columns-grid;
     justify-items: center;
     margin-top: 1rem;
 

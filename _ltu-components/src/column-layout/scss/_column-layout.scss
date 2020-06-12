@@ -2,7 +2,7 @@
 @use "config";
 
 .ds-column-layout {
-    @include config.columns-grid($alignment: left);
+    @include config.columns-grid;
 }
 
 .ds-column-layout__column {
