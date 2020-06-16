@@ -3,7 +3,7 @@
 
 // @include these for flex or grid with flex fallback columns
 // optionally pass base width
-// note: basis width of 280 with 32px gutter allows for up to four cols in the standard 1280px content container and five cols in wide 1600px container
+// note: basis width of 296 with 32px gutter allows for up to four cols in the standard 1280px content container and five cols in wide 1600px container
 @mixin columns($basis-width: 296px, $alignment: center) {
     display: flex;
     flex-wrap: wrap;

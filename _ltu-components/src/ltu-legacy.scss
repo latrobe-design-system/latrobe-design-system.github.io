@@ -828,6 +828,8 @@
         transition: transform 0.3s 0s ease-in-out, visibility 0s 0.3s;
         width: 100vw;
         z-index: -1;
+
+        overflow-x: hidden; // fix safari overflow issue
     }
 
     .mega-menu-item > div {
@@ -891,8 +893,9 @@
         border: none;
         background: #363636 url("https://www.latrobe.edu.au/__data/assets/file/0007/797119/search-white.svg") no-repeat 0 0;
         height: 48px;
-        text-indent: -1000%;
         width: 48px;
+        text-indent: 48px; //-1000%;
+        overflow: hidden;
     }
 
     .mm-button:focus {

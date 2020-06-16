@@ -3,19 +3,19 @@
 @use "config";
 
 .ds-child-nav {
-    margin: config.spunits(8) 0;
-    max-width: 100%;
-
-    ul {
+    margin: config.spunits(8) auto;
+    overflow-x: scroll;
+    white-space: nowrap;
+    
+    .ds-child-nav__list {
         max-width: 100%;
-        margin: 0;
         padding: 0;
         display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
+        justify-content: space-between;
+        //flex-wrap: wrap;
         align-items: center;
     }
-    li {
+    .ds-child-nav__list-item {
         max-width: 100%;
         list-style: none;
         margin: config.spunits(2) 0;
@@ -29,7 +29,7 @@
     a {
         font-size: inherit;
     }
-    a.ds-child-nav__link {
+    .ds-child-nav__link {
         font-weight: 500;
         color: config.$color-3d;
         text-decoration: none;
