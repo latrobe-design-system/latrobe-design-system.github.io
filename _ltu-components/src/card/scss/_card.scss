@@ -206,10 +206,17 @@
     margin-top: 1rem;
 }
 // adjust min-width for wide card set so only four across
-@media (min-width: 1680px) { 
+@media (min-width: 1280px) { 
     .ds-block--wide {
-        .ds-card-set {
-            @include config.columns-grid($basis-width: 376px, $alignment: left);
+        .ds-card-set:not(.ds-card-set--3max) {
+            grid-template-columns: repeat(auto-fit, minmax(376px, 1fr));
         }
+    }
+}
+
+// modifier to for max three cards across
+.ds-card-set--3max {
+    @media (min-width: 1280px) {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
