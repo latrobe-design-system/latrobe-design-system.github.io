@@ -11,7 +11,7 @@
         max-width: 100%;
         padding: 0;
         display: flex;
-        justify-content: space-evenly;
+        //justify-content: space-evenly;
         //flex-wrap: wrap;
         align-items: center;
     }
@@ -20,18 +20,25 @@
         max-width: 100%;
         list-style: none;
         margin: config.spunits(2) 0;
-        margin-right: config.spunits(3);
+        margin-right: 3%;
         font-size: 0.9em;
 
+        &:first-child {
+            margin-left: auto;
+        }
         &:last-child {
-            margin-right: 0;
+            margin-right: auto;
         }
     }
 
     .ds-child-nav__CTA {
-        margin-left: config.spunits(3);
-        margin-right: 0;
+        margin-right: auto;
         order: 1; // move to end
+    }
+
+    // if CTA present it will be last in display order, reset actual last-child argin right to 3%
+    .ds-child-nav__CTA ~ .ds-child-nav__list-item:last-child {
+        margin-right: 3%;
     }
 
     a {
