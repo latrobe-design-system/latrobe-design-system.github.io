@@ -28,6 +28,12 @@
         }
     }
 
+    .ds-child-nav__CTA {
+        margin-left: config.spunits(3);
+        margin-right: 0;
+        order: 1; // move to end
+    }
+
     a {
         font-size: inherit;
     }
@@ -42,11 +48,6 @@
             color: config.$color-1;
             border-color: config.$color-1;
         }
-    }
-
-    .ds-child-nav__CTA {
-        margin-left: config.spunits(3);
-        margin-right: 0;
     }
 
 }
