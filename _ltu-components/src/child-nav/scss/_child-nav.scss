@@ -15,6 +15,7 @@
         //flex-wrap: wrap;
         align-items: center;
     }
+
     .ds-child-nav__list-item {
         max-width: 100%;
         list-style: none;
@@ -26,6 +27,7 @@
             margin-right: 0;
         }
     }
+
     a {
         font-size: inherit;
     }
@@ -41,5 +43,5 @@
             border-color: config.$color-1;
         }
     }
-    
+
 }
