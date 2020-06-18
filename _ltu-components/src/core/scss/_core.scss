@@ -17,6 +17,11 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    // safety net for offscreen elements to stop them creating horizontal scroll in some browsers
+    overflow-x: hidden;
+}
+
 button,
 html,
 input,
