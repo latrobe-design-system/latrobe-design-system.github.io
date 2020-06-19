@@ -7,85 +7,105 @@
     overflow-x: scroll;
     white-space: nowrap;
     
-    .ds-child-nav__list {
-        max-width: 100%;
-        padding: 0;
-        display: flex;
-        //justify-content: space-evenly;
-        //flex-wrap: wrap;
-        align-items: center;
+    // hiding scrollbar
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
     }
-
-    .ds-child-nav__list-item {
-        max-width: 100%;
-        list-style: none;
-        margin: config.spunits(2) 0;
-        margin-right: 3%;
-        font-size: 0.9em;
-    }
-
-    .ds-child-nav__CTA {
-        order: 1; // move to end
-    }
-
-    // if CTA present it will be last in display order, reset actual last-child margin right to 3%
-    .ds-child-nav__CTA ~ .ds-child-nav__list-item:last-child {
-        margin-right: 3%;
-    }
-
-    // if CTA is actual first child then give second child margin left auto
-    .ds-child-nav__CTA:first-child + .ds-child-nav__list-item {
-        margin-left: auto;
-    }
+    -ms-overflow-style: none;
 
     a {
         font-size: inherit;
     }
-    .ds-child-nav__link {
-        font-weight: 500;
-        color: config.$color-3d;
-        text-decoration: none;
-        border-bottom: 2px solid config.$color-3b;
-        display: inline-block;
+}
+    
+.ds-child-nav__list {
+    max-width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
 
-        &:hover {
-            color: config.$color-1;
-            border-color: config.$color-1;
-        }
-    }
+.ds-child-nav__list-item {
+    max-width: 100%;
+    list-style: none;
+    margin: config.spunits(2) 0;
+    margin-right: 3%;
+    font-size: 0.9em;
+}
 
+.ds-child-nav__CTA {
+    order: 1; // move to end
+}
+
+// if CTA present it will be last in display order, reset actual last-child margin right to 3%
+.ds-child-nav__CTA ~ .ds-child-nav__list-item:last-child {
+    margin-right: 3%;
+}
+
+// if CTA is actual first child then give second child margin left auto
+.ds-child-nav__CTA:first-child + .ds-child-nav__list-item {
+    margin-left: auto;
 }
 
 
+.ds-child-nav__link {
+    font-weight: 500;
+    color: config.$color-3d;
+    text-decoration: none;
+    border-bottom: 2px solid config.$color-3b;
+    display: inline-block;
+
+    &:hover {
+        color: config.$color-1;
+        border-color: config.$color-1;
+    }
+}
+
+@media(min-width: 768px) {
+    .ds-child-nav__list {
+        flex-wrap: wrap;
+    }    
+}
+
+//modifier to center list
 .ds-child-nav--centered {
 
-    .ds-child-nav__list-item {
-        // center 
-        &:first-child {
-            margin-left: auto;
+    @media(min-width: 768px) {
+        .ds-child-nav__list {
+            justify-content: center;
         }
-        &:last-child {
+    }
+
+    @media(max-width: 767px) {
+        .ds-child-nav__list-item {
+            // center 
+            &:first-child {
+                margin-left: auto;
+            }
+            &:last-child {
+                margin-right: auto;
+            }
+        }
+
+        .ds-child-nav__CTA {
             margin-right: auto;
         }
 
-    }
+        // if CTA present it will be last in display order, reset actual last-child margin right to 3%
+        .ds-child-nav__CTA ~ .ds-child-nav__list-item:last-child {
+            margin-right: 3%;
+        }
 
-    .ds-child-nav__CTA {
-        margin-right: auto;
-    }
+        // if CTA is actual first child then set its margin-left 0 and give second child margin left auto
+        .ds-child-nav__CTA:first-child {
+            margin-left: 0;
 
-    // if CTA present it will be last in display order, reset actual last-child margin right to 3%
-    .ds-child-nav__CTA ~ .ds-child-nav__list-item:last-child {
-        margin-right: 3%;
-    }
-
-    // if CTA is actual first child then set its margin-left 0 and give second child margin left auto
-    .ds-child-nav__CTA:first-child {
-        margin-left: 0;
-
-        + .ds-child-nav__list-item {
-            margin-left: auto;
+            + .ds-child-nav__list-item {
+                margin-left: auto;
+            }
         }
     }
-
 }
+
