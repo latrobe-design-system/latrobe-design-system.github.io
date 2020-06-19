@@ -35,7 +35,7 @@
 .ds-hero__text {
     max-width: 800px;
     min-height: 400px;
-    padding: config.spunits(8) config.spunits(7) config.spunits(8) config.spunits(10);
+    padding: config.spunits(8) 20px config.spunits(8) 20px;
     background-color: white;
     position: relative;
     z-index: 1;
@@ -73,8 +73,13 @@
         background-size: 100%;
     }
 
+    @media(min-width: 640px) {
+        padding: config.spunits(8) 40px config.spunits(8) 40px;
+    }
+
     @media(min-width: 768px) {
         width: 2 / 3 * 100%;
+        padding: config.spunits(8) config.spunits(7) config.spunits(8) config.spunits(10);
     }
 }
 
