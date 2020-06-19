@@ -22,23 +22,20 @@
         margin: config.spunits(2) 0;
         margin-right: 3%;
         font-size: 0.9em;
-
-        &:first-child {
-            margin-left: auto;
-        }
-        &:last-child {
-            margin-right: auto;
-        }
     }
 
     .ds-child-nav__CTA {
-        margin-right: auto;
         order: 1; // move to end
     }
 
-    // if CTA present it will be last in display order, reset actual last-child argin right to 3%
+    // if CTA present it will be last in display order, reset actual last-child margin right to 3%
     .ds-child-nav__CTA ~ .ds-child-nav__list-item:last-child {
         margin-right: 3%;
+    }
+
+    // if CTA is actual first child then give second child margin left auto
+    .ds-child-nav__CTA:first-child + .ds-child-nav__list-item {
+        margin-left: auto;
     }
 
     a {
@@ -54,6 +51,40 @@
         &:hover {
             color: config.$color-1;
             border-color: config.$color-1;
+        }
+    }
+
+}
+
+
+.ds-child-nav--centered {
+
+    .ds-child-nav__list-item {
+        // center 
+        &:first-child {
+            margin-left: auto;
+        }
+        &:last-child {
+            margin-right: auto;
+        }
+
+    }
+
+    .ds-child-nav__CTA {
+        margin-right: auto;
+    }
+
+    // if CTA present it will be last in display order, reset actual last-child margin right to 3%
+    .ds-child-nav__CTA ~ .ds-child-nav__list-item:last-child {
+        margin-right: 3%;
+    }
+
+    // if CTA is actual first child then set its margin-left 0 and give second child margin left auto
+    .ds-child-nav__CTA:first-child {
+        margin-left: 0;
+
+        + .ds-child-nav__list-item {
+            margin-left: auto;
         }
     }
 
