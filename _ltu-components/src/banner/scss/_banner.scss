@@ -8,7 +8,7 @@
 
 .ds-hero {
     max-width: 1600px;
-    margin: 0 auto;
+    margin: 0 auto config.spunits(8) auto;
 }
 .ds-hero__content {
     position: relative;
@@ -35,7 +35,7 @@
 .ds-hero__text {
     max-width: 800px;
     min-height: 400px;
-    padding: config.spunits(8) 20px config.spunits(8) 20px;
+    padding: config.spunits(8) 20px 0 20px;
     background-color: white;
     position: relative;
     z-index: 1;
