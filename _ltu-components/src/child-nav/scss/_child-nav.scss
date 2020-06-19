@@ -50,7 +50,8 @@
 }
 
 
-.ds-child-nav__link {
+.ds-child-nav__link,
+.ds-child-nav__link:visited {
     font-weight: 500;
     color: config.$color-3d;
     text-decoration: none;
