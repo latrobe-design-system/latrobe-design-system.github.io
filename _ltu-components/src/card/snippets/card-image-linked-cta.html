@@ -7,7 +7,10 @@ type: block
 <div href="" class="ds-card ds-card--linked">
     <a href="http://example.org" class="ds-card__link">Do what you love</a>
     <header class="ds-card__header">
-        <img class="ds-card__img" src="https://via.placeholder.com/600x400" alt="">
+        <picture>
+            <source src="https://via.placeholder.com/600x400" media="screen and (min-width: 704px)" />
+            <div class="ds-card__image" style="background-image: url(https://via.placeholder.com/600x400);"></div>
+        </picture>
     </header>
 
     <div class="ds-card__body">

@@ -17,7 +17,23 @@
 
 .ds-card__header {
     position: relative;
-    margin: 0; /* override lobotomised owl */
+}
+
+// <div class="ds-card-image> - using background images so can turn off for mobile and not have mobile unecessaruliy download image
+.ds-card__image {
+    display: none; // don't display image on mobile
+
+    // 3/2 ratio images
+    overflow: hidden;
+    height: 0;
+    padding-top: 2/3 * 100%;
+    background-size: cover;
+    background-position: center;
+
+    @media (min-width: 704px) {
+        // once two cards across can fit the display image
+        display: block;
+    }
 }
 
 .ds-card__img {
@@ -208,7 +224,7 @@
     margin-top: 1rem;
 }
 // adjust min-width for wide card set so only four across
-@media (min-width: 1280px) { 
+@media (min-width: 1680px) { 
     .ds-block--wide {
         .ds-card-set:not(.ds-card-set--3max) {
             grid-template-columns: repeat(auto-fit, minmax(376px, 1fr));
