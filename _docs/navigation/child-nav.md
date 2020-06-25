@@ -1,6 +1,6 @@
 ---
 title: "Child nav"
-status: draft
+status: ready
 ---
 
 This is required for Level 2 Landing Pages as mega menu is only path to child pages.

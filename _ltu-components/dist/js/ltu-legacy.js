@@ -5,7 +5,7 @@
 
 /*** from legacy parse file v5 #543334 ***/
 // Set nav-out class on load if mobile viewport
-var mobileBreakingPoint = 1024;
+var mobileBreakingPoint = 1023;
 if(window.outerWidth <= mobileBreakingPoint){
     //collapseUniverse();
     var b = document.body

@@ -8,11 +8,15 @@
 }
 
 .ds-global-nav {
+    border-bottom: 1px solid config.$color-3a;
+    background-color: white;
+}
+.ds-global-nav__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid config.$color-3c;
-    background-color: white;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 .ds-global-nav__children {
@@ -24,21 +28,28 @@
 }
 
 .ds-global-nav__child {
+    margin: 0;
     padding: 0 config.spunits(4);
     @media(min-width: 1280px){
         padding: 0 config.spunits(6);
     }
-    margin: 0;
+    &:first-child {
+        padding-left: 0;
+    }
+    &:last-child{
+        padding-right: 0;
+    }
 
     &:hover::after {
         background-color: config.$color-1;
     }
 
-    a { 
+    a, a:visited { 
         position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
 
         height: 80px; // same height as logo image
         text-decoration: none;
@@ -68,8 +79,8 @@
 }
 
 .ds-global-nav__child--selected {
-    a::after {
-        //background-color: config.$color-2;
+    a, a:visited {
+        color: config.$color-2;
     }
     a::before {
         content: url(icons/latrobe-chevron-RGB.svg);
@@ -125,7 +136,7 @@ a.ds-global-search {
         margin: 0;
         text-align: center;
         list-style: none;
-        font-size: 14/16 * 1rem;
+        font-size: 14px; // do not want this to increase with base font
 
         li {
             display: inline-block;
