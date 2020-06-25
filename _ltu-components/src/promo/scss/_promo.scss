@@ -28,7 +28,7 @@
 
 .ds-promo__text {
 
-    @media(min-width: 960px) {
+    @media(min-width: 1136px) {
         flex: 4;
     }
 }
@@ -44,7 +44,7 @@
 
 .ds-promo__image {
 
-    @media(min-width: 960px) {
+    @media(min-width: 1136px) {
         flex: 6;
     }
 
@@ -144,8 +144,12 @@
             display: block;
             position: relative;
             height: 0;
-            padding-top: 0.4 * 100%;
+            padding-top: .5 * 100%;
             overflow: hidden;
+
+            @media(min-width: 1136px) {
+                padding-top: .4 * 100%;
+            }
         }
 
         .ds-promo__image {
@@ -179,9 +183,9 @@
             background-color: white;
             border: 1px solid config.$color-3b;
             position: absolute;
-            top: 24px;
-            left: 24px;
-            bottom: 24px;
+            top: 0px;
+            left: 0px;
+            bottom: 0px;
             width: 40%;
             min-width: 400px;
             padding: 20px;
@@ -191,11 +195,11 @@
         }
     }
 
-    @media(min-width: 960px) {
+    @media(min-width: 1136px) {
         .ds-promo__text-wrapper {
-            top: 32px;
-            left: 32px;
-            bottom: 32px;
+            top: 24px;
+            left: 24px;
+            bottom: 24px;
         }
     }
 
@@ -203,12 +207,12 @@
 
         @media(min-width: 768px) {
             .ds-promo__text-wrapper {
-                right: 24px;
+                right: 0px;
                 left: auto;
             }
         }
 
-        @media(min-width: 960px) {
+        @media(min-width: 1136px) {
             .ds-promo__text-wrapper {
                 right: 24px;
                 left: auto;
