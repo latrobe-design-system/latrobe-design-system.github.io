@@ -7,13 +7,14 @@
     -webkit-appearance: none;
     -moz-appearance: none;
 
-    //border: 0;
+    display: inline-block; // older browsers
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
     border-radius: 2px;
     font-size: 1rem;
     font-weight: 500;
     line-height: 1;
-    vertical-align: middle;
-    display: inline-block;
     padding: config.spunits(4) config.spunits(5);
     margin: config.spunits(1) 0;
     text-decoration: none;
@@ -211,6 +212,7 @@ input[type="submit"] {
 .ds-btn-round {
     @extend .ds-btn;
     
+    display: inline-block; // cannot be inline-flex
     border: 2px solid config.$color-2;
     border-radius: 50%;
     background-color: transparent;

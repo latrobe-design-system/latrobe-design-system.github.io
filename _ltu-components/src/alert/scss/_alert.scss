@@ -8,6 +8,7 @@
     display: flex;
     padding: config.spunits(4);
     margin-top: config.spunits(4);
+    max-width: 50rem;
 
     @media(min-width: 768px){
         padding: config.spunits(7);
@@ -74,7 +75,15 @@
 
 // modifiers for .ds-alert
 
+.ds-alert--centered {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .ds-alert--full-width {
+    width: 100%;
+    max-width: 100%;
     border: none;
     justify-content: center;
     margin: 0;
