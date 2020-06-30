@@ -34,7 +34,6 @@
 }
 .ds-hero__text {
     max-width: 800px;
-    min-height: 400px;
     padding: config.spunits(8) 20px 0 20px;
     background-color: white;
     position: relative;
@@ -50,14 +49,14 @@
 
     > :first-child { margin-top: 0; }
 
-    h1 {
+    h1, .h1 {
         margin-bottom: 0;
     }
-    h2 {
+    h2, .h2 {
         margin-top: 1rem;
         font-size: config.$h3;
     }
-    h3, h4, h5, h6 {
+    h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
         margin-top: 1rem;
         font-size: config.$h4;
     }
@@ -79,6 +78,7 @@
 
     @media(min-width: 768px) {
         width: 2 / 3 * 100%;
+        min-height: 360px;
         padding: config.spunits(8) config.spunits(7) config.spunits(8) config.spunits(10);
     }
 }
