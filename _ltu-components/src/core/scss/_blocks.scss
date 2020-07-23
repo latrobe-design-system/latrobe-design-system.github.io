@@ -26,6 +26,14 @@
                 margin-bottom: 4rem;
             }
         }
+
+        div:not(.ds-section),
+        section,
+        article {
+            .ds-block {
+                padding: 0;
+            }
+        }
     }
 }
 
