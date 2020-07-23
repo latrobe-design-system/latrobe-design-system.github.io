@@ -26,11 +26,9 @@
 
 {% if page.type == 'content' %}            
                     <div class="ds-block {{ page.ds-block-modifiers }}">
-                        <div class="ds-block__wrapper">
 
 {{ content }}
 
-                        </div>
                     </div>
 {% elsif page.type == 'block' %}{{ content }}    
 {% endif %}

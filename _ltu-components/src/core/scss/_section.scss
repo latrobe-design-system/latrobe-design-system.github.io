@@ -63,21 +63,25 @@ div[class*="ds-section--bg-"] {
     padding-top: 4rem;
     padding-bottom: 4rem;
 
-    // any non ds-block content
     > :first-child {
         margin-top: 0;
     }
-    // in case squiz wysywyg div is first child
-    > div:not([class*="ds-block"]), section, article {
+
+    // if first child is a div, section or article make its first child have margin-top 0
+    > div, section, article {
+
         &:first-child {
             > :first-child {
                 margin-top: 0;
             }
         }
+
     }
+
     > :last-child {
         margin-bottom: 0;
     }
+
     // in case squiz wysywyg div is last child
     > div:not([class*="ds-block"]), section, article {
         &:last-child {
@@ -103,6 +107,7 @@ div[class*="ds-section--bg-"] {
             }
         }
     }
+    
     //if ds-block is last child
     .ds-block:last-child {
         .ds-block__wrapper {

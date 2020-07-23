@@ -30,12 +30,14 @@
 }
 
 div.ds-block {
-    clear: both; /* inase there is a float above */
+    clear: both; /* incase there is a float above */
     max-width: 100%;
     padding: 0 20px;
     margin: 0 auto;
+
     @media (min-width: 640px) {
         padding: 0 40px;
+        max-width: 1280px + 80px; // 1280 + 80 (padding)
     }
 
     .ds-block {
@@ -44,28 +46,28 @@ div.ds-block {
 }
 
 // .ds-block__wrapper wraps block content
-.ds-block__wrapper {
+/*.ds-block__wrapper {
     max-width: 1280px;
     margin: 0 auto;
-}
+}*/
 
 // block width modifiers: usage .ds-block--[medium|wide|full-width]
 div.ds-block {
 
     &--wide {
-        > .ds-block__wrapper {
+        //> .ds-block__wrapper {
             max-width: 1600px;
-        }
+        //}
     }
 
     &--full-width {
         padding: 0;
         margin: 0;
-        .ds-block__wrapper {
+        //.ds-block__wrapper {
             max-width: 100%;
             margin: 0;
             padding: 0;
-        }
+        //}
     }
 }
 
