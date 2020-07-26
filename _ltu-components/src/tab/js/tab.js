@@ -1,7 +1,7 @@
 /*
  *  Modified version of code obtained from
  *  https://www.w3.org/TR/wai-aria-practices/examples/tabs/tabs-2/tabs.html
- *  Modifactions denoted by //mod
+ *  Modifactions denoted by // mod
  */
 
 /*
@@ -41,7 +41,7 @@
     40: 1
   };
 
-  var i; //mod
+  var i; // mod - to stop console error
   // Bind listeners
   for (i = 0; i < tabs.length; ++i) {
     addListeners(i);
@@ -178,13 +178,13 @@
 
   // Deactivate all tabs and tab panels
   function deactivateTabs () {
-    var t; //mod
+    var t; // mod - to stop console error
     for (t = 0; t < tabs.length; t++) {
       tabs[t].setAttribute('tabindex', '-1');
       tabs[t].setAttribute('aria-selected', 'false');
     };
 
-    var p; //mod
+    var p; // mod - to stop console error
     for (p = 0; p < panels.length; p++) {
       panels[p].setAttribute('hidden', 'hidden');
     };
@@ -250,3 +250,11 @@
     return delay;
   };
 }());
+
+// mod 
+// trigger tab if URL # equals tab id - this is to allow linking to specific tab
+var url = document.location.toString();
+if (url.match('#')) {
+  var tabtoopen = document.getElementById(url.split('#')[1])
+  tabtoopen.click();
+}
