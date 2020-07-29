@@ -31,12 +31,12 @@ h5, .h5,
 h6, .h6 {
     font-weight: config.$medium;
     max-width: 42em; // readable line length < 80 characters https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html
-    margin: 0;
 
     &:empty {
         margin: 0;
     }
 }
+
 
 h1, .h1,
 h2, .h2,
@@ -111,6 +111,10 @@ small {
     font-size: 0.8rem;
 }
 
+p.ds-small {
+    line-height: 1.5rem;
+}
+
 p:empty,
 li:empty {
     display: none;
@@ -166,6 +170,15 @@ div.ds-list {
 
 // Margins
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0; // reset margin to 0
+}
+
 h1  {
     margin-top: 1em;
     margin-bottom: 1em;
@@ -204,10 +217,33 @@ br {
     margin-left: auto;
     margin-right: auto;
 }
+
 [style*="text-align: right"],
 [style*="text-align:right"] {
     margin-left: auto;
+    margin-right: 0;
 }
+
+.ds-text-center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ds-text-right {
+    text-align: right;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+div,
+section,
+article {
+    &.ds-text-center {
+        @extend .ds-text-center;
+    }
+}
+
 
 //
 // Fluid Headings

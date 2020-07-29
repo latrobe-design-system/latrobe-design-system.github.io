@@ -75,6 +75,7 @@ abbr.ds-label__required {
 .ds-select,
 .ds-input-checkbox,
 .ds-input-radio {
+    line-height: 1;
     // remove browser default style
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -91,6 +92,7 @@ abbr.ds-label__required {
 .ds-select {
     display: block;
     width: 100%;
+    height: calc(3rem + 4px); // since line height does not work on inputs this makes inputs same height as buttons which helps for inline forms 
     padding: config.spunits(4);
     margin-top: config.spunits(1);
     background-color: white;

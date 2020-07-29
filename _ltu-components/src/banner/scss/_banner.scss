@@ -12,6 +12,7 @@
 }
 .ds-hero__content {
     position: relative;
+    background-color: config.$color-3a;
 
     @media(min-width: 768px) {
         padding: config.spunits(10) 0;
@@ -34,8 +35,7 @@
 }
 .ds-hero__text {
     max-width: 800px;
-    padding: config.spunits(8) 20px 0 20px;
-    background-color: white;
+    padding: config.spunits(8) 20px config.spunits(8) 20px;
     position: relative;
     z-index: 1;
     
@@ -77,6 +77,7 @@
     }
 
     @media(min-width: 768px) {
+        background-color: white;
         width: 2 / 3 * 100%;
         min-height: 360px;
         padding: config.spunits(8) config.spunits(7) config.spunits(8) config.spunits(10);
@@ -107,7 +108,7 @@
         width: 0; 
         height: 0; 
         border-right: config.spunits(6) solid transparent;
-        border-bottom: config.spunits(4) solid #fff;
+        border-bottom: config.spunits(4) solid config.$color-3a;
         position: absolute;
         z-index: 1;
         bottom: 0;
@@ -122,7 +123,7 @@
         height: 0; 
         border-left: config.spunits(35) solid transparent;
         border-right: 0px solid transparent;
-        border-bottom: config.spunits(13) solid #fff;
+        border-bottom: config.spunits(13) solid config.$color-3a;
         position: absolute;
         bottom: 0;
         right: 0;
