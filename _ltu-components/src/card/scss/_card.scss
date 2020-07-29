@@ -222,13 +222,9 @@
 .ds-card-set {
     @include config.columns-grid($alignment: left);
     margin-top: 1rem;
-}
-// adjust min-width for wide card set so only four across
-@media (min-width: 1680px) { 
-    .ds-block--wide {
-        .ds-card-set:not(.ds-card-set--3max) {
-            grid-template-columns: repeat(auto-fit, minmax(376px, 1fr));
-        }
+
+    .ds-card:first-child {
+        margin-left: auto;
     }
 }
 

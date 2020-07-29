@@ -33,10 +33,16 @@ form.ds-form--full-width {
 }
 
 .ds-form-group--inline {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
 
-    .ds-input-checkbox + label,
-    .ds-input-radio + label {
-        margin-right: config.spunits(4);
+    > * {
+        margin: 0;
+    }
+
+    label {
+        white-space: nowrap;
+        margin-right: config.spunits(5);
     }
 }
