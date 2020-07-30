@@ -222,10 +222,6 @@
 .ds-card-set {
     @include config.columns-grid($alignment: left);
     margin-top: 1rem;
-
-    .ds-card:first-child {
-        margin-left: auto;
-    }
 }
 
 // modifier to for max three cards across
@@ -233,4 +229,17 @@
     @media (min-width: 1280px) {
         grid-template-columns: repeat(3, 1fr);
     }
+}
+
+.ds-block.ds-block--wide {
+
+    .ds-card-set {
+
+        /* if only two cards exist give first card margin left auto to center align cards */
+        .ds-card:nth-last-child(2):first-child {
+            margin-left: auto;
+        }
+
+    }
+
 }
