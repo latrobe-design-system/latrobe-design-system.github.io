@@ -11,10 +11,17 @@
   display: none !important;
 }
 
-@media(min-width:1024px) {
-    .hide-on-desktop {
-        display: none !important;
-    }
+
+.hidden-on-mobile {
+  @media(max-width:767px) {
+    display: none !important;
+  }
+}
+
+.hidden-on-tablet {
+  @media(max-width:1023px) {
+    display: none !important;
+  }
 }
 
 /*

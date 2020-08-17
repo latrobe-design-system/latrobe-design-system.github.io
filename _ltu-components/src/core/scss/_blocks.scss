@@ -53,29 +53,23 @@ div.ds-block {
     }
 }
 
-// .ds-block__wrapper wraps block content
-/*.ds-block__wrapper {
-    max-width: 1280px;
-    margin: 0 auto;
-}*/
-
-// block width modifiers: usage .ds-block--[medium|wide|full-width]
+// block width modifiers: usage .ds-block--[narrow|wide|full-width]
 div.ds-block {
 
+    &--narrow {
+        max-width: 1024px;
+    }   
+
     &--wide {
-        //> .ds-block__wrapper {
             max-width: 1600px;
-        //}
     }
 
     &--full-width {
         padding: 0;
         margin: 0;
-        //.ds-block__wrapper {
-            max-width: 100%;
-            margin: 0;
-            padding: 0;
-        //}
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
     }
 }
 

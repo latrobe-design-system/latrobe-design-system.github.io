@@ -12,6 +12,26 @@
     }
 }
 
+/// modifiers
+// --align-center
+.ds-column-layout--align-center {
+    align-items: center;
+    .ds-column-layout__column {
+        padding: 1rem 0;
+        > :first-child { margin-top: 0; }
+    }
+}
+
+
+/// __column modifiers
+// --span2 spans 2 cols when viewport >= 1024px
+.ds-column-layout__column--span2 {
+    @media(min-width: 1024px) {
+        flex-grow: 2; // flex fallback
+        grid-column: span 2; // if supports grid
+    }
+}
+
 .ds-column-layout__column--bg-grey,
 .ds-column-layout__column--bordered {
     margin-top: 1rem;

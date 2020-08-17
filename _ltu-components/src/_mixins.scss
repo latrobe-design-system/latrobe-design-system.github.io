@@ -10,6 +10,7 @@
     justify-content: $alignment;
     margin-right: -32px; // using pixels for gutter so it doesn't scale with base font change from 16px -> 18px @1440 width
     & > * {
+        flex: 1;
         flex-grow: 1;
         flex-shrink: 0;
         flex-basis: $basis-width;
@@ -26,42 +27,5 @@
         & > * {
             margin: 1rem 0 0 0;
         }
-    }
-}
-
-// Media standard breakpoints
-@mixin bp-up($point) {
-    @if $point == xl {
-        @media (min-width: 1280px) { @content; }
-    }
-
-    @else if $point == lg {
-        @media (min-width: 992px) { @content; }
-    }
-
-    @else if $point == md {
-        @media (min-width: 768px)  { @content; }
-    }
-
-    @else if $point == sm {
-        @media (min-width: 576px)  { @content; }
-    }
-}
-
-@mixin bp-down($point) {
-    @if $point == xl {
-        @media (max-width: 1280px) { @content; }
-    }
-
-    @else if $point == lg {
-        @media (max-width: 992px) { @content; }
-    }
-
-    @else if $point == md {
-        @media (max-width: 768px)  { @content; }
-    }
-
-    @else if $point == sm {
-        @media (max-width: 576px)  { @content; }
     }
 }

@@ -2,66 +2,102 @@
 @use "config";
 
 .ds-callout {
-    /*border-left: 4px solid rgba(config.$color-alt-3, 1);*/
-    border-radius: 2px;
-    position: relative;
-    font-weight: 400;
-    padding: config.$space-unit * 4;
-    box-shadow: config.$shadow-1;
-    //box-shadow: config.$shadow-2;
     display: flex;
-
+    flex-flow: row wrap;
+    
     /* align text with default text */
     max-width: 1024px;
     margin: config.spunits(8) auto config.spunits(8) 0;
 
+    padding: config.$space-unit * 4;
     @media(min-width: 768px){
-        position: relative;
         padding: config.$space-unit * 8;
-
-        &::before {
-            display: block;
-            position: absolute;
-            left: config.$space-unit * 6;
-            top: config.$space-unit * 6;
-        }
-    }
-}
-
-.ds-callout__icon {
-    padding-right: config.$space-unit * 3;
-
-    @media(max-width: 768px){
-        margin-bottom: config.$space-unit * 6;
     }
 
-    @media(min-width: 768px){
-        float: left;
-        padding-right: config.$space-unit * 6;
-    }
+    box-shadow: config.$shadow-1;
 
-    svg {
-        width: config.$space-unit * 6;
-        height: config.$space-unit * 6;
-        stroke: config.$color-alt-3;
+    .ds-callout__icon {
 
+
+        padding-right: config.$space-unit * 3;
         @media(min-width: 768px){
-            width: config.$space-unit * 7;
-            height: config.$space-unit * 7;
+            padding-right: config.$space-unit * 6;
         }
+
+        svg {
+            width: config.$space-unit * 6;
+            height: config.$space-unit * 6;
+            stroke: config.$color-alt-3;
+
+            @media(min-width: 768px){
+                width: config.$space-unit * 7;
+                height: config.$space-unit * 7;
+            }
+        }
+
+    }
+
+    .ds-callout__heading {
+        font-size: config.$h3;
+        color: rgba(config.$color-alt-3, 1);
+    }
+
+    .ds-callout__text {
+        max-width: calc(100% - #{config.$space-unit * 9}); // svg width + padding
+        @media(min-width: 768px){
+            max-width: calc(100% - #{config.$space-unit * 13}); // svg width + padding
+        }
+        
+        margin-top: 0;
+
+        >:first-child {
+            margin-top: 0;
+        }
+    }
+
+    .ds-collapse__content {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 100%;
+        @media(min-width: 768px){
+            margin-left: config.spunits(13);
+        }
+    }
+
+}
+
+/// modifiers ///
+
+// --centered callout
+.ds-callout--centered {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+
+    .ds-collapse__content {
+        max-width: 42rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
-.ds-callout__heading {
-    font-size: config.$h3;
-    color: rgba(config.$color-alt-3, 1);
-}
+// --minimal 
+.ds-callout--minimal {
+    box-shadow: none;
+    padding: 0;
 
-.ds-callout__text {
-    align-self: stretch;
-    margin-top: 0;
+    .ds-callout__text {
+        >:first-child {
+            font-weight: 500;
+        }
+    }
 
-    >:first-child {
-        margin-top: 0;
+    .ds-callout__icon {
+        // make it small always
+        padding-right: config.$space-unit * 3;
+        svg {
+            width: config.$space-unit * 6;
+            height: config.$space-unit * 6;
+        }
     }
 }

@@ -15,4 +15,6 @@ Forms comprise of the form itself and multiple form inputs.
 Form inputs can be used 
 
 
-{% include sample-iframe.html snippet="src/form/snippets/form-groups.html" %}
+{% include sample-iframe.html snippet="src/form/snippets/form-group.html" %}
+
+{% include sample-iframe.html snippet="src/form/snippets/form-group-inline.html" %}

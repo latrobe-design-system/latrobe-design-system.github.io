@@ -236,11 +236,24 @@ br {
     margin-right: 0;
 }
 
+/* if text alignment is on container */
 div,
 section,
 article {
+    &[style*="text-align: center"],
+    &[style*="text-align:center"],
     &.ds-text-center {
-        @extend .ds-text-center;
+        * {
+            @extend .ds-text-center;
+        }
+    }
+
+    &[style*="text-align: right"],
+    &[style*="text-align:right"],
+    &.ds-text-right {
+        * {
+            @extend .ds-text-right;
+        }
     }
 }
 

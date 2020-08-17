@@ -20,6 +20,8 @@ Info alerts may be present on page load or injected to provide information perti
 
 {% include sample-iframe.html snippet="src/alert/snippets/alert-info/alert-info-with-read-more.html" %}
 
+{% include sample-iframe.html snippet="src/alert/snippets/alert-info/alert-info-centered-with-read-more.html" %}
+
 ## Other alerts
 
 Success, error and warning alerts are usually not present on the page on load but injected upon user action (unless submit action takes user to new page where alert is loaded - eg success alert to say "Your application has been submitted").
