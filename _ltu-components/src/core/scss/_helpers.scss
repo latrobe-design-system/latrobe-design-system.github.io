@@ -24,6 +24,12 @@
   }
 }
 
+.hide-on-desktop {
+  @media(max-width:1024px) {
+    display: none !important;
+  }
+}
+
 /*
  * Hide only visually, but have it available for screen readers:
  * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
