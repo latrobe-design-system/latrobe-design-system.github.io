@@ -1,0 +1,21 @@
+---
+title: "Inline form group"
+status: "draft"
+text: The default text inputs do not have a width applied to them.
+
+# Example content
+label: Email
+id: email
+placeholder: name@example.com
+---
+<form>
+    <div class="ds-form-group ds-form-group--inline">
+        <label class="ds-label h2" for="{{ page.id }}">
+            {{ page.label }}
+        </label>
+        
+        <input class="ds-text-input" type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="{{ page.placeholder }}"/>
+
+        <input type="submit" value="Submit">
+    </div>
+</form>
