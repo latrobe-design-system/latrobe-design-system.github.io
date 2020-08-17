@@ -13,7 +13,6 @@ div.ds-section {
         background-color: config.$color-3a;
     }
 
-    /* historical
     &--bg-black {
         background: #242428;
         color: white;
@@ -56,7 +55,7 @@ div.ds-section {
         .ds-block__header {
             color: white;
         }
-    } */
+    }
 }
 
 div[class*="ds-section--bg-"] {
@@ -125,13 +124,9 @@ div[class*="ds-section--bg-"] {
         }
     }
 
-    // adjust margin and padding not bg section following bg section
-    + {
-        div:not([class*="ds-section--bg-"]),
-        section,
-        article {
-            margin-top: 4rem;
-        }
+    // adjust top margin bg section following bg section
+    + div[class*="ds-section--bg-"] {
+        margin-top: 0;
     }
 }
 
@@ -163,4 +158,16 @@ div.ds-section--bg-black-nodes + div.ds-section--bg-black-nodes {
 div.ds-section--bg-red-nodes + div.ds-section--bg-red-nodes {
     //padding-top: 0;
     margin-top: -4rem;
+}
+
+div.ds-section--bg-black,
+div.ds-section--bg-red,
+div.ds-section--bg-black-nodes,
+div.ds-section--bg-red-nodes {
+    * {
+        color: #fff !important;
+        a, a:visited {
+            color: #fff;
+        }
+    }
 }

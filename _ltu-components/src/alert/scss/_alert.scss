@@ -2,90 +2,146 @@
 @use "config";
 
 .ds-alert {
+    font-weight: 400;
+    margin-top: config.spunits(4);
+    
+    display: flex;
+    flex-wrap: wrap;
+
+    .ds-alert__text {
+
+        flex: 1;
+        
+        > :first-child {
+            margin-top: 0;
+            font-weight: config.$medium;
+        }
+
+        // step down heading sizes
+        h2 {
+            font-size: config.$h3;
+        }
+        h3 {
+            font-size:  config.$h4;
+        }
+        h4 {
+            font-size:  config.$h5;
+        }
+        h5 {
+            font-size:  config.$h6;
+        }
+    }
+
+    .ds-alert__icon {
+        padding-right: config.spunits(4);
+        vertical-align: top;
+        height: config.spunits(6);
+
+        @media(min-width: 768px){
+            padding-right:  config.spunits(6);
+        }
+
+        svg {
+            width:  config.spunits(6);
+            height:  config.spunits(6);
+        }
+    }
+
+    .ds-alert__close {
+        justify-self: end;
+        margin: 0 0 0 auto;
+        color: inherit;
+        background-color: transparent;
+        border: 0;
+        line-height: 0;
+        cursor: pointer;
+        opacity: 0.6;
+        transition: opacity .05s ease-in-out;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        svg {
+            width:  config.spunits(5);
+            height:  config.spunits(5);
+        }
+    }
+
+    .ds-collapse__content {
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 100%;
+        @media(min-width: 768px){
+            margin-left: config.spunits(12);
+        }
+    }
+
+}
+
+// modifiers for .ds-alert
+
+
+// types
+%ds-alert-type-common {
+    max-width: config.spunits(200);
     border: 2px solid rgba(config.$color-alt-3, 1);
     border-radius: 4px;
-    font-weight: 400;
-    display: flex;
     padding: config.spunits(4);
-    margin-top: config.spunits(4);
-    max-width: 50rem;
-
     @media(min-width: 768px){
         padding: config.spunits(7);
     }
 }
 
-.ds-alert__text {
+.ds-alert--info {
+    @extend %ds-alert-type-common;
 
-    > :first-child {
-        margin-top: 0;
-        font-weight: config.$medium;
-    }
-
-    // step down heading sizes
-    h2 {
-        font-size: config.$h3;
-    }
-    h3 {
-        font-size:  config.$h4;
-    }
-    h4 {
-        font-size:  config.$h5;
-    }
-    h5 {
-        font-size:  config.$h6;
-    }
-}
-
-.ds-alert__icon {
-    padding-right: config.spunits(4);
-    vertical-align: top;
-    height: config.spunits(6);
-
-    @media(min-width: 768px){
-        padding-right:  config.spunits(6);
-    }
+    background-color: rgba(config.$color-alt-3, 0.05);
+    border-color: rgba(config.$color-alt-3, 1);
 
     svg {
-        width:  config.spunits(6);
-        height:  config.spunits(6);
+        color: rgba(config.$color-alt-3, 1);
     }
 }
 
-.ds-alert__close {
-    justify-self: end;
-    margin: 0 0 0 auto;
-    color: inherit;
-    background-color: transparent;
-    border: 0;
-    line-height: 0;
-    cursor: pointer;
-    opacity: 0.6;
-    transition: opacity .05s ease-in-out;
+.ds-alert--success {
+    @extend %ds-alert-type-common;
 
-    &:hover {
-        opacity: 1;
-    }
+    background-color: mix(config.$green, white, 5%);
+    border-color: config.$green;
 
     svg {
-        width:  config.spunits(5);
-        height:  config.spunits(5);
+        color: config.$green;
     }
 }
 
-// modifiers for .ds-alert
+.ds-alert--error {
+    @extend %ds-alert-type-common;
 
-.ds-alert--centered {
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: rgba(config.$color-1, 0.05);
+    border-color: rgba(config.$color-1, 1);
+
+    svg {
+        color: rgba(config.$color-1, 1);
+    }
 }
 
+.ds-alert--warning {
+    @extend %ds-alert-type-common;
+
+    background-color: rgba(config.$color-alt-2, 0.05);
+    border-color: rgba(config.$color-alt-2, 1);
+
+    svg {
+        color: rgba(config.$color-alt-2, 1);
+    }
+}
+
+// full width option for top of page
 .ds-alert--full-width {
     width: 100%;
     max-width: 100%;
     border: none;
-    justify-content: center;
     margin: 0;
 
     @media(min-width: 768px){
@@ -101,39 +157,23 @@
     }
 }
 
-// types
-.ds-alert--info {
-    background-color: rgba(config.$color-alt-3, 0.05);
-    border-color: rgba(config.$color-alt-3, 1);
+// centers alert
+.ds-alert--centered {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
 
-    svg {
-        color: rgba(config.$color-alt-3, 1);
+    .ds-alert__text {
+        flex: 0 1 auto;
     }
-}
 
-.ds-alert--success {
-    background-color: mix(config.$green, white, 5%);
-    border-color: config.$green;
+    .ds-collapse__content {
+        margin-left: 0;
 
-    svg {
-        color: config.$green;
-    }
-}
-
-.ds-alert--error {
-    background-color: rgba(config.$color-1, 0.05);
-    border-color: rgba(config.$color-1, 1);
-
-    svg {
-        color: rgba(config.$color-1, 1);
-    }
-}
-
-.ds-alert--warning {
-    background-color: rgba(config.$color-alt-2, 0.05);
-    border-color: rgba(config.$color-alt-2, 1);
-
-    svg {
-        color: rgba(config.$color-alt-2, 1);
+        p, li, h2, h3, h4, h5, h6 {
+            // center text blocks
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 }

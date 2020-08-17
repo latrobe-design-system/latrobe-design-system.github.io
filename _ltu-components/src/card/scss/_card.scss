@@ -43,7 +43,7 @@
 }
 
 .ds-card__body {
-    padding: 24px 24px 32px 24px;
+    padding: config.spunits(6);
     margin: 0;
 }
 

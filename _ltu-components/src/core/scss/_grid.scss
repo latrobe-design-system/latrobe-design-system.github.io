@@ -6,7 +6,6 @@
     flex-wrap: wrap;
     flex-direction: row;
     margin-right: 0 - 32px;
-    margin-top: 0 !important; /* override lobotomised owl */
 
     &--example {
         & > * {
@@ -21,18 +20,18 @@
     & > * {
         width: calc(100% - 32px);
         margin-right: 32px;
-        &:first-child {
+        /*&:first-child {
             margin-top: 1rem;
-        }
+        }*/
     }
 
-    @include config.bp-up(sm) {
+    @media (min-width: 576px) {
         &__col-3 {
             width: calc(6/12 * 100% - 32px);
         }
     }
 
-    @include config.bp-up(lg) {
+    @media (min-width: 992px) {
         &__col-12 {
             width: calc(100% - 32px);
         }
@@ -91,7 +90,7 @@
         margin-right: 0;
     }
 
-    @include config.bp-up(sm) {
+    @media (min-width: 576px) {
         .ds-grid {
             &__col-3 {
                 width: calc(6/12 * 100%);
@@ -99,7 +98,7 @@
         }
     }
 
-    @include config.bp-up(lg) {
+    @media (min-width: 992px) {
         .ds-grid {
             &__col-12 {
                 width: calc(100%);

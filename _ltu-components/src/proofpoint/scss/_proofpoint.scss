@@ -43,7 +43,28 @@
 
 /* proof point set */
 .ds-proofpoint-set {
-    @include config.columns;
+    @include config.columns($basis-width: 214px);
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+/// modifiers ///
+// proof poyint set modifier to make it scroll left-right on small screens instead of wrapping
+.ds-proofpoint-set--scroll {
+    @media(max-width: 1279px) {
+        flex-wrap: nowrap;
+        justify-content: left;
+        overflow-x: scroll;
+
+        // hiding scrollbar
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        -ms-overflow-style: none;
+
+        .ds-proofpoint {
+
+        }
+    }
 }
