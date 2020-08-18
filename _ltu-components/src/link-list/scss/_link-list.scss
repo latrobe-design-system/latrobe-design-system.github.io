@@ -68,3 +68,23 @@
         font-size: config.$h4;
     }
 }
+
+/// .ds-link-list modifiers
+// image left modifier .ds-link-list--image-left 
+// include an image to left on desktop - image included via inline style - style="backgound-image: url()"
+.ds-link-list--image-left {
+    @media(max-width: 1023px){
+        background-image: none !important;
+    }
+
+    @media(min-width: 1024px){
+        padding-left: calc(1 / 3 * 100% + 16px);
+        background-size: calc(1 / 3 * 100% - 16px);
+        background-repeat: no-repeat;
+        background-position: left center;
+    }
+
+    .ds-link-list__item {
+        width: 100%;
+    }
+}
