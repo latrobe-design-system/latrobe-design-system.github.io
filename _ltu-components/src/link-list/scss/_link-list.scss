@@ -78,6 +78,22 @@
         background-size: calc(1 / 3 * 100% - 16px);
         background-repeat: no-repeat;
         background-position: left center;
+
+        position: relative;
+        // white triangle bottom left
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 0; 
+            height: 0;
+            border-right: config.spunits(40) solid transparent;
+            border-left: 0px solid transparent;
+            border-top: 0;
+            border-bottom: config.spunits(20) solid #fff;
+            bottom: 0;
+            left: 0;
+        }
     }
 
     .ds-link-list__item {

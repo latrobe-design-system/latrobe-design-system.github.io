@@ -1,6 +1,6 @@
 ---
 title: "Link list"
-status: draft
+status: ready
 ---
 
 {% include sample-iframe.html snippet="src/link-list/snippets/link-list.html" %}
