@@ -16,6 +16,7 @@
 
     @media(min-width: 768px) {
         padding: config.spunits(10) 0;
+        background-color: transparent;
 
         // red triangle top left
         &::before {
@@ -143,7 +144,15 @@
         &::after {
             border-left: config.spunits(70) solid transparent;
             border-right: 0px solid transparent;
-            border-bottom: config.spunits(30) solid #fff;
+            border-bottom: config.spunits(25) solid #fff;
+        }
+
+        // modifer for non bleed image on right
+        &--right {
+            max-height: 2/3 * 800px; //for 3/2 image on right
+            img {
+                max-width: 800px;
+            }
         }
     }
 }
