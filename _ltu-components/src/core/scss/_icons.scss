@@ -53,7 +53,18 @@
 
     &::after {
         left: 0;
-        right: unset;
+        right: auto;
+    }
+}
+
+[class*="ds-icon"] {
+    &:empty {
+        padding-right: 1em;
+    }
+
+    &.ds-icon--before:empty {
+        padding-right: inherit;
+        padding-left: 1em;
     }
 }
 

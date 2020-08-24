@@ -99,12 +99,10 @@
 }
 
 
-/* ltu legacy class names */
-.off-screen,
-.visuallyhidden {
-    @extend .sr-only;
-}
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    @extend .sr-only, .focusable, :active;
+/*
+ *  Reduce top margin to 1rem
+ *  Useful for headings that don't need normal heading space
+ */
+.ds-reduce-margin {
+  margin-top: 1rem !important;
 }

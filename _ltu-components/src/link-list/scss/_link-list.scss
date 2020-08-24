@@ -59,13 +59,25 @@
     }
 }
 
+// lead in paragraph
+.ds-link-list__lead-in {
+    // bring lead-in closer to list 
+    + {
+        .ds-link-list {
+            margin-top: 0;
+        }
+    }
+}
+
+/// .ds-link-list modifiers
+//large text
 .ds-link-list--large-text {
     .ds-link-list__item {
         font-size: config.$h4;
     }
 }
 
-/// .ds-link-list modifiers
+
 // image left modifier .ds-link-list--image-left 
 // include an image to left on desktop - image included via inline style - style="backgound-image: url()"
 .ds-link-list--image-left {

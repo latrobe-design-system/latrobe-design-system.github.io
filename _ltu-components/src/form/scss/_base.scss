@@ -1,10 +1,8 @@
 // depenencies
 @use "config";
 
-form,
 .ds-form {
     width: 100%;
-    max-width: 42rem;
 }
 
 // Source - bootstrap reboot https://github.com/twbs/bootstrap/blob/master/scss/_reboot.scss
@@ -61,7 +59,7 @@ form,
 .ds-label {
     display: block;
     font-weight: 500;
-    margin: 2em 0 0 0;
+    margin: 2em 0 config.spunits(1) 0;
 }
 
 // label required indicator
@@ -89,12 +87,12 @@ abbr.ds-label__required {
 }
 
 .ds-text-input,
+.ds-textarea,
 .ds-select {
     display: block;
     width: 100%;
-    height: calc(3rem + 4px); // since line height does not work on inputs this makes inputs same height as buttons which helps for inline forms 
     padding: config.spunits(4);
-    margin-top: config.spunits(1);
+    //margin-top: config.spunits(1);
     background-color: white;
     border: 2px solid config.$color-3b;
     resize: vertical;
@@ -109,6 +107,12 @@ abbr.ds-label__required {
         color: config.$color-3c;
     }
 }
+
+.ds-text-input,
+.ds-select {
+    height: calc(3rem + 4px); // since line height does not work on inputs this makes inputs same height as buttons which helps for inline forms 
+}
+
 
 .ds-text-input {
     &:read-only {
@@ -165,5 +169,69 @@ abbr.ds-label__required {
         border-bottom: none;
         margin-top: 0;
         margin-bottom: config.spunits(2);
+    }
+}
+
+
+
+
+.ds-input-group {
+    display: flex;
+    align-items: stretch;
+    margin-top: config.spunits(1);
+    
+    > * {
+        margin-top: 0 !important;
+    }
+
+    .ds-input-group__prepend,
+    .ds-text-input:not(:last-child),
+    .awesomplete:not(:last-child) .ds-text-input {
+        border-right: 0px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .ds-input-group__append,
+    .ds-text-input:not(:first-child),
+    .awesomplete:not(:first-child) .ds-text-input {
+        border-left: 0px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .awesomplete {
+        flex-grow: 1;
+    }
+}
+
+.ds-input-group__prepend,
+.ds-input-group__append {
+    height: calc(3rem + 4px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    white-space: nowrap;
+    font-weight: 500;
+    border: 2px solid config.$color-3b;
+    border-radius: 2px;
+
+    > [class*="ds-btn"],
+    input[type="submit"],
+    input[type="reset"] {
+        margin: 0 !important;
+        height: 100%;
+    }
+}
+
+.ds-input-group__text {
+    display: flex;
+    align-content: center;
+    height: 100%;
+    padding: 0 config.spunits(2);
+    background-color: config.$color-3a;
+    //modifier to add background
+    &--bg-transparent {
+        background-color: transparent;
     }
 }
