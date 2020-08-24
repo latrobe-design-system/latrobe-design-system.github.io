@@ -9,7 +9,9 @@
 @use "button/scss/button";
 @use "table/scss/table";
 
-
+.ds-form-wrap form {
+    @extend .ds-form;
+}
 form {
     > [class^="sq-form"] {
         max-width: 42rem;
@@ -20,6 +22,7 @@ form {
     margin-top: 1em;
 }
 
+.ds-form-wrap fieldset,
 fieldset.sq-form-section {
     @extend .ds-fieldset;
 }
@@ -27,6 +30,7 @@ fieldset.sq-form-section {
     @extend .ds-control-group;
 }
 
+.ds-form-wrap legend,
 legend.sq-form-section-title,
 legend.sq-form-question-title {
     @extend .ds-legend;
@@ -42,6 +46,7 @@ legend.sq-form-question-title {
     margin-top: 0;
 }
 
+.ds-form-wrap,
 .sq-form-question {
     label {
         @extend .ds-label;
@@ -63,6 +68,7 @@ legend.sq-form-question-title {
     margin-top: config.spunits(1);
 }
 
+.ds-form-wrap input[type="text"],
 .sq-form-field[type="text"],
 .sq-form-field[type="password"],
 .sq-form-field[type="email"] {
@@ -77,6 +83,12 @@ legend.sq-form-question-title {
     }
 }
 
+.ds-form-wrap textarea,
+textarea.sq-form-field {
+    @extend .ds-textarea;
+}
+
+.ds-form-wrap select,
 select.sq-form-field {
     @extend .ds-select;
 }
@@ -94,12 +106,14 @@ select.sq-form-field {
     }
 }
 
+.ds-form-wrap,
 .sq-form-question-option-list {
     input[type="radio"] {
         @extend .ds-input-radio;
     }
 }
 
+.ds-form-wrap,
 .sq-form-question-tickbox-list {
     input[type="checkbox"] {
         @extend .ds-input-checkbox;

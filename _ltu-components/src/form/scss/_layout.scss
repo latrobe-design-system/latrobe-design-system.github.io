@@ -32,20 +32,21 @@ form.ds-form--full-width {
     margin-top: 1rem;
 }
 
-.ds-form-group--inline {
+/*.ds-form-group--inline {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    margin-top: 2rem;
+    align-items: flex-end;
+    margin-top: 0;
 
     > * {
-        margin: 0;
+        margin-bottom: 0;
         width: auto;
         flex-grow: 1;
     }
 
-    > label, [type="submit"], [type="reset"] {
+    > label, [type="submit"], [type="reset"], .ds-text-input__prepend {
         flex-grow: 0;
+        margin-bottom: 0;
     }
 
     .ds-label {
@@ -58,4 +59,4 @@ form.ds-form--full-width {
             margin-right: config.spunits(5);
         }
     }
-}
+}*/
