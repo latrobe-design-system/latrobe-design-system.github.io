@@ -72,6 +72,7 @@ div.awesomplete > ul > li {
 	position: relative;
 	padding: .2em .5em;
 	cursor: pointer;
+	max-width: 100%;
 }
 
 div.awesomplete > ul > li:hover {
