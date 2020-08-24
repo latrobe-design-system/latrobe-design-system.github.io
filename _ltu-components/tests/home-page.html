@@ -71,39 +71,39 @@ showFooter: "yes"
     <script src="https://www.latrobe.edu.au/__data/assets/js_file/0011/815087/awesomeplete.js"></script>
     <script>
         // Course Search Setup
-var CourseSearchArray=[];
-var CourseSearchField = document.querySelector('#query_courses');
-var CourseSearchForm = document.querySelector('#our-course-search');
+        var CourseSearchArray=[];
+        var CourseSearchField = document.querySelector('#query_courses');
+        var CourseSearchForm = document.querySelector('#our-course-search');
 
-if (CourseSearchField) {
-    var coursesearchbar = new Awesomplete(CourseSearchField);
+        if (CourseSearchField) {
+            var coursesearchbar = new Awesomplete(CourseSearchField);
 
-    var ajax = new XMLHttpRequest();
-    var file = "https://www.latrobe.edu.au/courses/assets/courses-autosuggest";
-    ajax.open("GET", file, true);
-    ajax.onload = function() {
-        var CourseSearchArray = JSON.parse(ajax.responseText).map(function(i) {
-            var newArray = new Array(i.label,i.value);
-            return newArray;
-        });
-        coursesearchbar._list=CourseSearchArray;
-        coursesearchbar.evaluate();
-    }
-    ajax.send();
-    
-    document.querySelector("#query_courses").addEventListener('awesomplete-selectcomplete', function(evt){
-        dataLayer.push({
-            'event': 'searchCourseDetailClicked'
-        });
-        document.location = this.value;
-    });
-    
-    document.querySelector("#query_courses").addEventListener('awesomplete-open', function(evt){
-        dataLayer.push({
-            'event': 'homeSearchResultsDisplayed'
-        });
-    });
-}
+            var ajax = new XMLHttpRequest();
+            var file = "https://www.latrobe.edu.au/courses/assets/courses-autosuggest";
+            ajax.open("GET", file, true);
+            ajax.onload = function() {
+                var CourseSearchArray = JSON.parse(ajax.responseText).map(function(i) {
+                    var newArray = new Array(i.label,i.value);
+                    return newArray;
+                });
+                coursesearchbar._list=CourseSearchArray;
+                coursesearchbar.evaluate();
+            }
+            ajax.send();
+            
+            document.querySelector("#query_courses").addEventListener('awesomplete-selectcomplete', function(evt){
+                dataLayer.push({
+                    'event': 'searchCourseDetailClicked'
+                });
+                document.location = this.value;
+            });
+            
+            document.querySelector("#query_courses").addEventListener('awesomplete-open', function(evt){
+                dataLayer.push({
+                    'event': 'homeSearchResultsDisplayed'
+                });
+            });
+        }
     </script>
 
     <p class="h4 ds-link-list__lead-in">Browse by topic</p>
