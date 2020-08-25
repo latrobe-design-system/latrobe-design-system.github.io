@@ -221,6 +221,16 @@
 /* layouts */
 .ds-card-set {
     @include config.columns-grid($alignment: left);
+    @media(min-width: 1300px) {
+        .ds-card {
+            flex-basis: 296px;
+        }
+    }
+    @supports(display: grid) {
+        @media(min-width: 1280px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
     margin-top: 1rem;
 }
 
