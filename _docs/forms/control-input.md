@@ -3,7 +3,7 @@ title: "Control Input"
 status: draft
 text: Radio inputs allow users to select one item at a time.
 
-menu: 5
+menu: 6
 ---
 
 
