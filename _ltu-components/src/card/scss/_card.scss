@@ -220,7 +220,7 @@
 
 /* layouts */
 .ds-card-set {
-    @include config.columns();
+    @include config.columns-grid();
     @supports(display: grid) {
         justify-content: left;
 
