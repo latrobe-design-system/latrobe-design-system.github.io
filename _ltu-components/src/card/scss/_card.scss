@@ -220,15 +220,22 @@
 
 /* layouts */
 .ds-card-set {
-    @include config.columns-grid($alignment: left);
-    @media(min-width: 1300px) {
+    @include config.columns();
+    @supports(display: grid) {
+        justify-content: left;
+
+        /* if only one card exists give it left/right margin auto to center align */
+        .ds-card:last-child:first-child {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    @media(min-width: 1366px) {
         .ds-card {
             flex-basis: 296px;
         }
-    }
-    @supports(display: grid) {
-        @media(min-width: 1280px) {
-            grid-template-columns: repeat(4, 1fr);
+        @supports(display: grid) {
+            grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
         }
     }
     margin-top: 1rem;
@@ -237,19 +244,27 @@
 // modifier to for max three cards across
 .ds-card-set--3max {
     @media (min-width: 1280px) {
-        grid-template-columns: repeat(3, 1fr);
+        .ds-card {
+            flex-basis: 378px;
+        }
+
+        @supports(display: grid) {
+            grid-template-columns: repeat(auto-fit, minmax(378px, 1fr));
+        }
     }
 }
 
 .ds-block.ds-block--wide {
 
-    .ds-card-set {
+    @supports(display: grid) {
+        .ds-card-set {
 
-        /* if only two cards exist give first card margin left auto to center align cards */
-        .ds-card:nth-last-child(2):first-child {
-            margin-left: auto;
+            /* if only two cards exist give first card margin left auto to center align cards */
+            .ds-card:nth-last-child(2):first-child {
+                margin-left: auto;
+            }
+
         }
-
     }
 
 }
