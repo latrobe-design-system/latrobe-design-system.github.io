@@ -51,6 +51,31 @@
     }
 }
 
+.ds-tabs-nav--in-card {
+    @extend .ds-tabs-nav;
+    border-bottom: 2px solid config.$color-3b;
+}
+
+.ds-tabs-nav__tab--in-card {
+    @extend .ds-tabs-nav__tab;
+
+    &[aria-selected="true"]::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        border-bottom: 6px solid config.$color-1;
+    }
+
+    &:focus {
+        outline-offset: -3px;
+    }
+}
+
+
 /*.ds-tabs-nav.ds-tabs-nav--pills {
     border-bottom: none;
     .ds-tabs-nav__tab {
