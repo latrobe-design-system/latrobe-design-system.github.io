@@ -154,11 +154,13 @@
 .ds-grid--evenly-spaced-column {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    // justify-content: flex-end;
 
-    // & > :only-child {
-    //   position: absolute;
-    //   bottom: config.spunits(8);
-    // }
+    @media(min-width: 992px) {
+        justify-content: space-between;
+
+        & > :only-child {
+          position: absolute;
+          bottom: config.spunits(8);
+        }
+    }
 }
