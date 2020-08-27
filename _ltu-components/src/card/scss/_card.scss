@@ -253,3 +253,7 @@
     }
 
 }
+
+.ds-card--with-border {
+    border: solid 1px config.$color-3b;
+}
