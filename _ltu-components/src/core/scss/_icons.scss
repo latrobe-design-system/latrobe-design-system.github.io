@@ -57,6 +57,10 @@
     }
 }
 
+.ds-icon--block {
+    display: block;
+}
+
 [class*="ds-icon"] {
     &:empty {
         padding-right: 1em;
