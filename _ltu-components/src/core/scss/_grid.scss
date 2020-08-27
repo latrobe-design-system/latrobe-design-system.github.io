@@ -150,3 +150,15 @@
         }
     }
 }
+
+.ds-grid--evenly-spaced-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // justify-content: flex-end;
+
+    // & > :only-child {
+    //   position: absolute;
+    //   bottom: config.spunits(8);
+    // }
+}
