@@ -32,6 +32,7 @@
     .nav-out .ds-main-wrapper {
         transform: translateX(-25%);
     }
+    .nav-container.hide-on-desktop + .ds-page-content-wrapper,
     .nav-out .ds-page-content-wrapper {
         flex: 1 0 100%;
     }
