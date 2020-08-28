@@ -6,11 +6,20 @@
 /*** from legacy parse file v5 #543334 ***/
 // Set nav-out class on load if mobile viewport
 var mobileBreakingPoint = 1023;
+/*
+// replace with jquery version so can use document ready
+// sometimes this fires too early before window width is established
 if(window.outerWidth <= mobileBreakingPoint){
     //collapseUniverse();
     var b = document.body
     b.className += ' nav-out';
-}
+}*/
+
+$(document).ready(function(){
+    if ($(window).width() <= mobileBreakingPoint) {
+        $('body').addClass('nav-out');
+    }
+});
 
 /*** behaviours.js #703156  -- EXCERPT ONLY ***/
 // set nav-out on window resize
