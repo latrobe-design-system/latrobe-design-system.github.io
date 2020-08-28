@@ -41,10 +41,22 @@ showBreadcrumb: "yes"
 
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-    <figure class="ds-fiigure">
-        <img src="images/LTU_Media_22133.jpg">
-        <figcaption>This is a caption</figcaption>
-    </figure>
+</div>
+
+    {% include sample-component.html
+        snippet="ltu-components/src/figure/snippets/figure.html"
+    %}
+
+    <div class="ds-block">
+
+        <figure class="ds-figure">
+            <img src="{{ site.url }}/ltu-components/src/figure/snippets/images/480.jpg" alt="">
+            <figcaption class="ds-figure__figcaption">Figcaption</figcaption>
+        </figure>
+        
+    </div>
+
+<div>
 
     <h4>h4 Heading, let's make this longer so that it wraps: are you wrapping?</h4>
 

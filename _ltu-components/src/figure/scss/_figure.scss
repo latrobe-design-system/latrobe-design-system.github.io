@@ -1,0 +1,19 @@
+@use "config";
+.ds-figure {
+    max-width: 1024px;
+
+    img {
+        display: block;
+    }
+
+    figcaption,
+    .ds-figure__figcaption {
+        padding: config.spunits(2) 0;
+    }
+}
+
+//modifer
+
+.ds-figure--full-width {
+    max-width: 100%;
+}
