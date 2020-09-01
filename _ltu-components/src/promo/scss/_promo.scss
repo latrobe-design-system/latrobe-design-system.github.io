@@ -12,6 +12,21 @@
         outline: 1px solid config.$color-3b;
         outline-offset: -1px;
     }
+
+    // red triangle top left
+    &::before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-left: 0px solid transparent;
+        border-right: 81px solid transparent;
+        border-top: 60px solid #e2231b;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+    }
 }
 
 .ds-promo__content {
@@ -95,8 +110,13 @@
         bottom: 0;
         right: 0;
 
-        border-left: 146px solid transparent;
-        border-bottom: 107px solid #fff;
+        border-left: 81px solid transparent;
+        border-bottom: 60px solid #fff;
+
+        @media(min-width: 768px) {
+            border-left: 146px solid transparent;
+            border-bottom: 107px solid #fff;
+        }
     }
     
 }
@@ -123,6 +143,18 @@
 
 // .ds-promo modifier
 .ds-promo--reverse {
+    // red triangle top right
+    &::before {
+        border-left: 81px solid transparent;
+        border-right: 0px solid transparent;
+        border-top: 60px solid #e2231b;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: auto;
+        right: 0;
+    }
+
     // reverses text and image order
     .ds-promo__content {
         @media(min-width: 768px) {
