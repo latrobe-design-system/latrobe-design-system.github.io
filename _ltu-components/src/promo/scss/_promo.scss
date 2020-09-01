@@ -31,6 +31,7 @@
     @media(min-width: 1136px) {
         flex: 4;
     }
+
 }
 
 .ds-promo__text-wrapper {
@@ -39,6 +40,22 @@
 
     > :first-child {
         margin-top: 0;
+    }
+    
+}
+
+.ds-promo__heading {
+
+    // latrobe chevron
+    .ds-promo__heading__chevron {
+        content: "";
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background-image: url("icons/latrobe-chevron-RGB.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        transform: translateX(32px) translateY(-32px);
     }
 }
 
@@ -51,7 +68,7 @@
     position: relative;
 
     // white triangle top left
-    &::before {
+    /*&::before {
         content: "";
         display: block;
         width: 0; 
@@ -63,7 +80,7 @@
         top: 1px;
         left: 0;
         z-index: 1;
-    }
+    }*/
 
     // white triangle bottom right
     &::after {
@@ -77,6 +94,9 @@
         position: absolute;
         bottom: 0;
         right: 0;
+
+        border-left: 146px solid transparent;
+        border-bottom: 107px solid #fff;
     }
     
 }
@@ -112,7 +132,7 @@
 
     .ds-promo__image {
         // white triangle top right
-        &::before {
+        /*&::before {
             border-left: config.spunits(35) solid transparent;
             border-right: 0px solid transparent;
             border-top: config.spunits(13) solid #fff;
@@ -121,7 +141,7 @@
             right: 0;
             left: auto;
             z-index: 1;
-        }
+        }*/
 
         // white triangle bottom left
         &::after {
@@ -131,6 +151,9 @@
             border-bottom: config.spunits(13) solid #fff;
             bottom: 0;
             left: 0;
+
+            border-right: 146px solid transparent;
+            border-bottom: 107px solid #fff;
         }
     }
 }
@@ -180,7 +203,7 @@
         }
 
         .ds-promo__text-wrapper {
-            background-color: white;
+            background-color: rgba(255,255,255,.95);
             border: 1px solid config.$color-3b;
             position: absolute;
             top: 0px;

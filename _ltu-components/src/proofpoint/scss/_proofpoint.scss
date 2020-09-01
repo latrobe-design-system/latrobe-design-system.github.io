@@ -27,8 +27,10 @@
 
 .ds-proofpoint__title {
     color: config.$color-1;
-    font-size: 28px;
-    line-height: 32px;
+    font-family: config.$font-roboto-slab;
+    font-weight: config.$regular;
+    /*font-size: 28px;
+    line-height: 32px;*/
 }
 
 .ds-proofpoint__text {
