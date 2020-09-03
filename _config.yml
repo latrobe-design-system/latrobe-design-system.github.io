@@ -23,7 +23,7 @@ exclude:
     - build.config.js
     - package.json
     - package-lock.json
-    - node_module
+    - node_modules
     - vendor
 
 ## Outputs the navigation collections
