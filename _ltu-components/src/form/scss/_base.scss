@@ -231,7 +231,7 @@ abbr.ds-label__required {
     padding: 0 config.spunits(2);
     background-color: config.$color-3a;
     //modifier to add background
-    &--bg-transparent {
-        background-color: transparent;
+    &--bg-white {
+        background-color: white;
     }
 }
