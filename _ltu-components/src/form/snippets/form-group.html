@@ -2,19 +2,13 @@
 title: "Form group"
 status: "draft"
 text: The default text inputs do not have a width applied to them.
-
-# Example content
-label: Email
-id: email
-placeholder: name@example.com
 ---
 
-<form>
+<form class="ds-form">
+
     <div class="ds-form-group">
-        <label class="ds-label" for="{{ page.id }}">
-            {{ page.label }}
-        </label>
-        
-        <input class="ds-text-input" type="text" class="text-input" id="{{ page.id }}" name="{{ page.id }}" aria-describedby="{{ page.id }}-hint" placeholder="{{ page.placeholder }}"/>
+        <label class="ds-label" for="email">Email</label> 
+        <input class="ds-text-input" type="text" class="text-input" id="email" name="email" placeholder="name@example.com"/>
     </div>
+    
 </form>

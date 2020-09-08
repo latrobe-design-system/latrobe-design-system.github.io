@@ -3,94 +3,194 @@ title: "Input grid"
 status: draft
 ---
 
-<div class="ds-block">
-    <div class="ds-block-wrapper" data-blockwidth="narrow">
-        <form class="ds-form">
-            <div class="ds-grid">
-                <div class="ds-form-group ds-grid__col-12">
-                    {% include sample-component.html
-                        snippet="ltu-components/src/inputs/snippets/text-input/text-input-required.html"
-                        container="false"
-                    %}
-                </div>
-                
-                <div class="ds-form-group ds-grid__col-11">
-                    {% include sample-component.html
-                        snippet="ltu-components/src/inputs/snippets/text-input/text-input-required.html"
-                        container="false"
-                    %}
+<div class="ds-block ds-block--narrow">
+
+    <h2>Want to study with us? Enquire here.</h2>
+
+    <form class="ds-form ds-form--full-width">
+
+        <div class="ds-grid">
+
+            <div class="ds-grid__col-6">
+
+                <div class="ds-form-group">
+                    <label class="ds-label" for="wf_2_8">I am <span class="ds-label__required">*</span></label>
+                    <select class="ds-select" name="wf_2_8" id="wf_2_8">
+                        <option value="">---</option>
+                        <option value="65">Year 9</option>
+                        <option value="66">Year 10</option>
+                        <option value="67">Year 11</option>
+                        <option value="68">Year 12</option>
+                        <option value="5841">Recent school leaver (18-20)</option>
+                        <option value="70">Mature age (21+)</option>
+                        <option value="72">Industry qualified or experienced</option>
+                        <option value="75">University graduate (other uni)</option>
+                        <option value="6713">University graduate (LTU)</option>
+                        <option value="7171">International (outside Australia)</option>
+                        <option value="7170">International (inside Australia)</option>
+                        <option value="71">TAFE graduate</option>
+                        <option value="74">Current students (LTU) - UG</option>
+                        <option value="4585">Current students (LTU) - PG</option>
+                        <option value="73">Current students (other uni) - UG</option>
+                        <option value="5132">Current students (other uni) - PG</option>
+                        <option value="6017">Current Student (other) - TAFE</option>
+                        <option value="76">Current Student (LTU) - Deferred</option>
+                        <option value="77">Parent</option>
+                        <option value="78">Careers advisor / careers counsellor</option>
+                        <option value="79">Teacher</option>
+                        <option value="4179">Principal</option>
+                        <option value="6024">International agent</option>
+                        <option value="80">Other</option>
+                    </select>
+
                 </div>
 
-                <div class="ds-form-group ds-grid__col-10">
-                    {% include sample-component.html
-                        snippet="ltu-components/src/inputs/snippets/text-input/text-input-required.html"
-                        container="false"
-                    %}
+            </div>
+
+
+            <div class="ds-grid__col-6">
+
+                <div class="ds-form-group">
+
+                    <label class="ds-label" for="wf_2_7">I want to study <span
+                            class="ds-label__required">*</span></label>
+                    <select class="ds-select" name="wf_2_7" id="wf_2_7">
+                        <option value="">--</option>
+                        <option value="57">Any</option>
+                        <option value="58">Undergraduate (your first degree)</option>
+                        <option value="60">Postgraduate (coursework)</option>
+                    </select>
+
                 </div>
 
-                <div class="ds-form-group ds-grid__col-9">
-                    {% include sample-component.html
-                        snippet="ltu-components/src/inputs/snippets/text-input/text-input-required.html"
-                        container="false"
-                    %}
+            </div>
+
+            <div class="ds-grid__col-6">
+
+                <div class="ds-form-group">
+
+                    <label class="ds-label" for="wf_2_4">I am interested in <span
+                            class="ds-label__required">*</span></label>
+                    <select class="ds-select" name="wf_2_4" id="wf_2_4">
+                        <option value="">--</option>
+                        <option value="4118" selected="true">Any</option>
+                        <option value="23">Arts and communications</option>
+                        <option value="24">Business and commerce</option>
+                        <option value="25">IT and engineering</option>
+                        <option value="26">Education</option>
+                        <option value="28">Health Sciences, Social Work</option>
+                        <option value="29">Hospitality, Tourism, Sport Management</option>
+                        <option value="30">Law</option>
+                        <option value="31">Outdoor and Environmental Education</option>
+                        <option value="32">Sciences, Psychology</option>
+                        <option value="33">Visual Arts</option>
+                    </select>
+                    <input type="hidden" name="val_wf_2_4" id="val_wf_2_4" value="'wf_2_4','Study Interest 1',1,38,1">
+
                 </div>
 
-                <div class="ds-form-group ds-grid__col-8">
-                    {% include sample-component.html
-                        snippet="ltu-components/src/inputs/snippets/text-input/text-input-required.html"
-                        container="false"
-                    %}
-                </div>
+            </div>
 
-                <div class="ds-form-group ds-grid__col-7">
-                    {% include sample-component.html
-                        snippet="ltu-components/src/inputs/snippets/text-input/text-input-required.html"
-                        container="false"
-                    %}
-                </div>
+            <div class="ds-grid__col-3">
 
-                <div class="ds-form-group ds-grid__col-6">
-                    {% include sample-component.html
-                        snippet="ltu-components/src/inputs/snippets/text-input/text-input-required.html"
-                        container="false"
-                    %}
-                </div>
+                <div class="ds-form-group">
 
-                <div class="ds-form-group ds-grid__col-5" data-block>
-                    {% include sample-component.html
-                        snippet="ltu-components/src/inputs/snippets/text-input/text-input-required.html"
-                        container="false"
-                    %}
-                </div>
+                    <label class="ds-label" for="wf_2_1">At <span class="ds-label__required">*</span></label>
+                    <select class="ds-select" name="wf_2_1" id="wf_2_1">
+                        <option value="">--</option>
+                        <option value="1" selected="true">Any</option>
+                        <option value="3">Albury-Wodonga</option>
+                        <option value="4">Bendigo</option>
+                        <option value="3476">City (Melbourne CBD)</option>
+                        <option value="5">Franklin St</option>
+                        <option value="2">Melbourne (Bundoora)</option>
+                        <option value="6">Mildura</option>
+                        <option value="7">Shepparton</option>
+                        <option value="6333">Sydney</option>
+                        <option value="6179">Online</option>
+                    </select>
+                    <input type="hidden" name="val_wf_2_1" id="val_wf_2_1" value="'wf_2_1','Campus Interest 1',1,14,1">
 
-                <div class="ds-form-group ds-grid__col-4" data-block>
-                    {% include sample-component.html
-                        snippet="ltu-components/src/inputs/snippets/text-input/text-input-required.html"
-                        container="false"
-                    %}
-                </div>
-
-                <div class="ds-form-group ds-grid__col-3" data-block>
-                    {% include sample-component.html
-                        snippet="ltu-components/src/inputs/snippets/text-input/text-input-required.html"
-                        container="false"
-                    %}
-                </div>
-
-                <div class="ds-form-group ds-grid__col-2" data-block>
-                    {% include sample-component.html
-                        snippet="ltu-components/src/inputs/snippets/text-input/text-input-required.html"
-                        container="false"
-                    %}
-                </div>
-
-                <div class="ds-form-group ds-grid__col-1" data-block>
-                    {% include sample-component.html
-                        snippet="ltu-components/src/inputs/snippets/text-input/text-input-required.html"
-                        container="false"
-                    %}
                 </div>
             </div>
-        </form>
-    </div>
+
+            <div class="ds-grid__col-6">
+
+                <div class="ds-form-group">
+
+                    <label class="ds-label" for="wf_2_100003">First name <span class="ds-label__required">*</span></label>
+                    <input class="ds-text-input" name="wf_2_100003" id="wf_2_100003" type="text" maxlength="80"
+                        size="25" class="rn_ErrorField">
+                    <input type="hidden" name="val_wf_2_100003" id="val_wf_2_100003"
+                        value="'wf_2_100003','First Name',5,80,1">
+
+                </div>
+
+            </div>
+
+            <div class="ds-grid__col-6">
+
+                <div class="ds-form-group">
+
+                    <label class="ds-label" for="wf_2_100002">Last name <span class="ds-label__required">*</span></label>
+                    <input class="ds-text-input" name="wf_2_100002" id="wf_2_100002" type="text" maxlength="80"
+                        size="25" class="rn_ErrorField">
+                    <input type="hidden" name="val_wf_2_100002" id="val_wf_2_100002"
+                        value="'wf_2_100002','Last Name',5,80,1">
+
+                </div>
+
+            </div>
+
+            <div class="ds-grid__col-6">
+
+                <div class="ds-form-group">
+
+                    <label class="ds-label" for="wf_2_100004" class="sq">Email <span class="ds-label__required">*</span></label> 
+                    <input class="ds-text-input" name="wf_2_100004" id="wf_2_100004" class="sq rn_ErrorField" type="text" maxlength="80"
+                        size="25">
+                    <input type="hidden" name="val_wf_2_100004" id="val_wf_2_100004"
+                        value="'wf_2_100004','Email Address',5,80,5">
+
+                </div>
+
+            </div>
+
+            <div class="ds-grid__col-2">
+
+                <div class="ds-form-group">
+
+                    <label class="ds-label" for="wf_2_100024">Postal code <span class="ds-label__required">*</span></label> 
+                    <input class="ds-text-input" name="wf_2_100024" id="wf_2_100024" type="text" maxlength="10" size="25">
+                    <input type="hidden" name="val_wf_2_100024" id="val_wf_2_100024" value="'wf_2_100024','Post Code',5,10,1">
+
+                </div>
+
+            </div>
+
+            <div class="ds-grid__col-12">
+
+                <div class="ds-form-group">
+
+                    <label class="ds-label" for="wf_2_822">Message <span class="alert">*</span></label> 
+                    <textarea class="ds-textarea" name="wf_2_822" id="wf_2_822"></textarea>
+                    <input type="hidden" name="val_wf_2_822" id="val_wf_2_822" value="'wf_2_822','Message',6,4000,1">
+
+                </div>
+
+            </div>
+
+            <div class="ds-grid__col-12">
+
+                <div class="ds-form-group">
+
+                    <input aria-describedby="submit_btn_desc" id="submit_btn" name="submit_btn" rntsubmit="true" type="submit" value="Submit">
+
+                </div>
+
+            </div>
+
+    </form>
+
+    <p>By completing this form you give consent for La Trobe University to contact you for marketing purposes. If at any stage you no longer wish to be contacted, simply choose unsubscribe in any of our emails. Read more about <a href="https://www.latrobe.edu.au/privacy">Privacy at La Trobe University</a>.</p>
 </div>

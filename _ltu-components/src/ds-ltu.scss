@@ -1,7 +1,7 @@
 //
 @charset "UTF-8";
 
-// Components
+// Core
 @use "core/scss/fonts";
 @use "core/scss/normalize";
 @use "core/scss/core";
@@ -11,10 +11,12 @@
 @use "core/scss/skip-link";
 @use "core/scss/blocks";
 @use "core/scss/section";
-@use "core/scss/grid";
 @use "core/scss/columns";
 @use "core/scss/helpers";
 
+@use "grid/scss/grid";
+
+// Components
 @use "blockquote/scss/blockquote";
 @use "accordion/scss/accordion";
 @use "alert/scss/alert";
