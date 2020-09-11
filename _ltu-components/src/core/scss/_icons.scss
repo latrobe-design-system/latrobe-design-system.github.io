@@ -2,7 +2,7 @@
 @use "config";
 
 %icon {
-    display: inline-block;
+    //display: inline-block;
     position: relative;
     padding-right: 1.75em; /* 28px for 1rem - using em here to suit font size change */
 
@@ -61,11 +61,6 @@
         left: 0;
         right: auto;
     }
-}
-
-.ds-icon--block {
-    color: config.$color-3d;
-    display: block;
 }
 
 [class*="ds-icon"] {

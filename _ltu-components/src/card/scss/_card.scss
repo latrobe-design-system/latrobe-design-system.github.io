@@ -5,14 +5,11 @@
 .ds-card {
     position: relative;
     width: 100%;
-    max-width: 620px;
+    //max-width: 620px;
     transition: all 0.3s ease-in-out;
     background: #fff;
 
     margin-top: 1rem;
-    *:first-child {
-        margin-top: 0;
-    }
 }
 
 .ds-card__header {
@@ -45,10 +42,15 @@
 .ds-card__body {
     padding: config.spunits(6);
     margin: 0;
+
+    > *:first-child {
+        margin-top: 0;
+    }
 }
 
 .ds-card__heading {
     font-size: config.$h4;
+    margin-top: 0;
 }
 
 .ds-card__link-text {
@@ -57,13 +59,14 @@
     color: config.$color-1;
 }
 
+
 /* link type card */
 .ds-card--linked {
+    border: solid 1px config.$color-3b;
     background: white;
     display: block;
     color: config.$color-2;
     text-decoration: none;
-    border: solid 1px config.$color-3b;
 
     .ds-card__link {
         position: absolute;
@@ -218,42 +221,32 @@
     background: config.$color-alt-3;
 }
 
-/* layouts */
-.ds-card-set {
-    @include config.columns-grid($alignment: left);
-    @media(min-width: 1300px) {
-        .ds-card {
-            flex-basis: 296px;
-        }
-    }
-    @supports(display: grid) {
-        @media(min-width: 1280px) {
-            grid-template-columns: repeat(4, 1fr);
-        }
-    }
-    margin-top: 1rem;
-}
 
-// modifier to for max three cards across
-.ds-card-set--3max {
-    @media (min-width: 1280px) {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-.ds-block.ds-block--wide {
-
-    .ds-card-set {
-
-        /* if only two cards exist give first card margin left auto to center align cards */
-        .ds-card:nth-last-child(2):first-child {
-            margin-left: auto;
-        }
-
-    }
-
-}
-
-.ds-card--with-border {
+.ds-card--course {
     border: solid 1px config.$color-3b;
+
+    .ds-card__body {
+        padding-top: config.spunits(2);
+    }
+
+    .ds-tabs {
+        margin: 0;
+    }
+
+    .ds-tabs-nav {
+        max-width: 100%;
+    }
+
+    .ds-table {
+        max-width: 42rem; // match paragraph
+
+        th {
+            width: 20%;
+        }
+    }
+
+    // view course button container
+    .ds-card--course__CTA {
+        margin-top: auto;
+    }   
 }

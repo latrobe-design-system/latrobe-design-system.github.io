@@ -23,6 +23,8 @@
         /*&:first-child {
             margin-top: 1rem;
         }*/
+        display: flex;
+        flex-direction: column;
     }
 
     @media (min-width: 576px) {

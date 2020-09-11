@@ -4,142 +4,127 @@ title: "Card (tabbed)"
 type: block
 ---
 
+<div class="ds-block">
 
-    <div class="ds-card ds-card--with-border">
-        <div class="ds-tabs">
-            <div class="ds-tabs-nav ds-tabs-nav--in-card" role="tablist">
-                <button class="ds-tabs-nav__tab ds-tabs-nav__tab--in-card" role="tab"
-                    aria-selected="true"
-                    aria-controls="tab1"
-                    id="tab1trigger">Melbourne</button>
-        
-                <button class="ds-tabs-nav__tab ds-tabs-nav__tab--in-card" role="tab"
-                    aria-selected="false"
-                    aria-controls="tab2"
-                    id="tab2trigger"
-                    tabindex="-1">Other</button>
-        
-                <button class="ds-tabs-nav__tab ds-tabs-nav__tab--in-card" role="tab"
-                    aria-selected="false"
-                    aria-controls="tab3"
-                    id="tab3trigger"
-                    tabindex="-1">Sydney</button>
-            </div>
-        
-            <div class="ds-tabs-content">
-                <div id="tab1" class="ds-tab-content__body" role="tabpanel" aria-labelledby="tab1trigger">
-                    <div class="ds-grid">
-                        <div class="ds-grid__col-8">
-                            <h3 class="ds-card__heading">Bachelor of Business</h3>
-                            <p>Get ready for your business career. Enter the workforce equipped with the skills and knowledge employers demand.</p>
-                            <div class="ds-table-wrapper">
-                                <table class="ds-table--unstyled">
-                                    <tbody>
-                                        <tr>
-                                            <th>ATAR:</th>
-                                            <td>Melbourne: 65.40</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Start dates:</th>
-                                            <td>Semester 1 (March 2020), Term 4 (July 2020), Semester 2 (July 2020), Term 5 (September 2020), Term 6 (November 2020), Summer (November 2020)</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Duration:</th>
-                                            <td>3 years full-time or part-time equivalent</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    
-                        <div class="ds-grid__col-4 ds-grid--evenly-spaced-column">
-                            <div class="ds-block--full-width">
-                                <p class="ds-icon-clock ds-icon--before ds-icon--grey ds-icon--block">Starts in July</p>
-                                <p class="ds-icon-bookmark ds-icon--before ds-icon--grey ds-icon--block">Popular course</p>
+    <div class="ds-card  ds-card--course">
+        <div class="ds-card__body">
+            <div class="ds-tabs">
+                <div class="ds-tabs-nav ds-tabs-nav--in-card" role="tablist">
+                    <button class="ds-tabs-nav__tab ds-tabs-nav__tab--in-card" role="tab"
+                        aria-selected="true"
+                        aria-controls="tab1"
+                        id="tab1trigger">Melbourne</button>
+            
+                    <button class="ds-tabs-nav__tab ds-tabs-nav__tab--in-card" role="tab"
+                        aria-selected="false"
+                        aria-controls="tab2"
+                        id="tab2trigger"
+                        tabindex="-1">Other</button>
+            
+                    <button class="ds-tabs-nav__tab ds-tabs-nav__tab--in-card" role="tab"
+                        aria-selected="false"
+                        aria-controls="tab3"
+                        id="tab3trigger"
+                        tabindex="-1">Sydney</button>
+                </div>
+            
+                <div class="ds-tabs-content">
+                    <div id="tab1" class="ds-tab-content__body" role="tabpanel" aria-labelledby="tab1trigger">
+                        <div class="ds-grid">
+                            <div class="ds-grid__col-9">
+                                <h3 class="ds-card__heading">Bachelor of Business</h3>
+                                <p>Get ready for your business career. Enter the workforce equipped with the skills and knowledge employers demand.</p>
+                                <div class="ds-table-wrapper">
+                                    <table class="ds-table ds-table--unstyled">
+                                        <tbody>
+                                            <tr>
+                                                <th>ATAR:</th>
+                                                <td>Melbourne: 65.40</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Start dates:</th>
+                                                <td>Semester 1 (March 2020), Term 4 (July 2020), Semester 2 (July 2020), Term 5 (September 2020), Term 6 (November 2020), Summer (November 2020)</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Duration:</th>
+                                                <td>3 years full-time or part-time equivalent</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         
-                            <div class="ds-block--full-width">
-                                <a class="ds-btn-primary ds-icon-chevron-right" href="#">View course</a>
-                            </div>
-                         
-                        </div>
-                    </div>
-                </div>
-        
-                <div id="tab2" class="ds-tab-content__body" role="tabpanel" aria-labelledby="tab2trigger" hidden>
-                    <div class="ds-grid">
-                        <div class="ds-grid__col-8">
-                            <h3 class="ds-card__heading">Bachelor of Business</h3>
-                            <p>Get ready for your business career. Enter the workforce equipped with the skills and knowledge employers demand.</p>
-                            <div class="ds-table-wrapper">
-                                <table class="ds-table--unstyled">
-                                    <tbody>
-                                        <tr>
-                                            <th>ATAR:</th>
-                                            <td>Other: 65.40</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Start dates:</th>
-                                            <td>Semester 1 (March 2020), Term 4 (July 2020), Semester 2 (July 2020), Term 5 (September 2020), Term 6 (November 2020), Summer (November 2020)</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Duration:</th>
-                                            <td>3 years full-time or part-time equivalent</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    
-                        <div class="ds-grid__col-4 ds-grid--evenly-spaced-column">
-                            <div class="ds-block--full-width">
+                            <div class="ds-grid__col-3">
                                 <p class="ds-icon-clock ds-icon--before ds-icon--grey ds-icon--block">Starts in July</p>
                                 <p class="ds-icon-bookmark ds-icon--before ds-icon--grey ds-icon--block">Popular course</p>
+                                <p class="ds-card--course__CTA"><a href="#" class="ds-btn-primary ds-icon-chevron-right" href="#">View course</a></p>
                             </div>
-                        
-                            <div class="ds-block--full-width">
-                                <a class="ds-btn-primary ds-icon-chevron-right" href="#">View course</a>
-                            </div>
-                         
                         </div>
                     </div>
-                </div>
-        
-                <div id="tab3" class="ds-tab-content__body" role="tabpanel" aria-labelledby="tab3trigger" hidden>
-                    <div class="ds-grid">
-                        <div class="ds-grid__col-8">
-                            <h3 class="ds-card__heading">Bachelor of Business</h3>
-                            <p>Get ready for your business career. Enter the workforce equipped with the skills and knowledge employers demand.</p>
-                            <div class="ds-table-wrapper">
-                                <table class="ds-table--unstyled">
-                                    <tbody>
-                                        <tr>
-                                            <th>ATAR:</th>
-                                            <td>Sydney: 65.40</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Start dates:</th>
-                                            <td>Semester 1 (March 2020), Term 4 (July 2020), Semester 2 (July 2020), Term 5 (September 2020), Term 6 (November 2020), Summer (November 2020)</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Duration:</th>
-                                            <td>3 years full-time or part-time equivalent</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+            
+                    <div id="tab2" class="ds-tab-content__body" role="tabpanel" aria-labelledby="tab2trigger" hidden>
+                        <div class="ds-grid">
+                            <div class="ds-grid__col-9">
+                                <h3 class="ds-card__heading">Bachelor of Business</h3>
+                                <p>Get ready for your business career. Enter the workforce equipped with the skills and knowledge employers demand.</p>
+                                <div class="ds-table-wrapper">
+                                    <table class="ds-table ds-table--unstyled">
+                                        <tbody>
+                                            <tr>
+                                                <th>ATAR:</th>
+                                                <td>Other: 65.40</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Start dates:</th>
+                                                <td>Semester 1 (March 2020), Term 4 (July 2020), Semester 2 (July 2020), Term 5 (September 2020), Term 6 (November 2020), Summer (November 2020)</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Duration:</th>
+                                                <td>3 years full-time or part-time equivalent</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        
+                            <div class="ds-grid__col-3">
+                                <p class="ds-icon-clock ds-icon--before ds-icon--grey ds-icon--block">Starts in July</p>
+                                <p class="ds-icon-bookmark ds-icon--before ds-icon--grey ds-icon--block">Popular course</p>
+                                <p class="ds-card--course__CTA"><a href="#" class="ds-btn-primary ds-icon-chevron-right" href="#">View course</a></p>
                             </div>
                         </div>
-                    
-                        <div class="ds-grid__col-4 ds-grid--evenly-spaced-column">
-                            <!-- <div class="ds-block--full-width">
+                    </div>
+            
+                    <div id="tab3" class="ds-tab-content__body" role="tabpanel" aria-labelledby="tab3trigger" hidden>
+                        <div class="ds-grid">
+                            <div class="ds-grid__col-9">
+                                <h3 class="ds-card__heading">Bachelor of Business</h3>
+                                <p>Get ready for your business career. Enter the workforce equipped with the skills and knowledge employers demand.</p>
+                                <div class="ds-table-wrapper">
+                                    <table class="ds-table ds-table--unstyled">
+                                        <tbody>
+                                            <tr>
+                                                <th>ATAR:</th>
+                                                <td>Sydney: 65.40</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Start dates:</th>
+                                                <td>Semester 1 (March 2020), Term 4 (July 2020), Semester 2 (July 2020), Term 5 (September 2020), Term 6 (November 2020), Summer (November 2020)</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Duration:</th>
+                                                <td>3 years full-time or part-time equivalent</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        
+                            <div class="ds-grid__col-3">
                                 <p class="ds-icon-clock ds-icon--before ds-icon--block">Starts in July</p>
                                 <p class="ds-icon-bookmark ds-icon--before ds-icon--block">Popular course</p>
-                            </div> -->
-                        
-                            <div class="ds-block--full-width">
-                                <a class="ds-btn-primary ds-icon-chevron-right" href="#">View course</a>
+                                <p class="ds-card--course__CTA"><a href="#" class="ds-btn-primary ds-icon-chevron-right" href="#">View course</a></p>
                             </div>
-                         
                         </div>
                     </div>
                 </div>
@@ -147,3 +132,4 @@ type: block
         </div>
     </div>
 
+</div>
