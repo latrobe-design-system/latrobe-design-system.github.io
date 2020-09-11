@@ -60,3 +60,34 @@
         content: "";
     }
 }
+
+
+.ds-input-checkbox--toggle {
+    & + label {
+        display: inline-block;
+        border: 2px solid config.$color-3b;
+        border-radius: 20px;
+        padding: config.spunits(1) config.spunits(4) config.spunits(1) config.spunits(12);
+        
+        &::before {
+            width: 1rem;
+            height: 1rem;
+            margin-top: 0.25rem;
+            left: config.spunits(4);
+        }
+
+        &::after {
+            left: 1.25rem;
+            top: .6rem;
+        }
+    }
+
+    &:checked {
+        & + label {
+            border-color: config.$color-alt-3;
+            &::after {
+                color: config.$color-alt-3;
+            }
+        }
+    }
+}

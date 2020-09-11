@@ -60,3 +60,10 @@ form.ds-form--full-width {
         }
     }
 }*/
+
+.ds-control-group--inline {
+    display: flex;
+    legend {
+        display: inline;
+    }
+}
