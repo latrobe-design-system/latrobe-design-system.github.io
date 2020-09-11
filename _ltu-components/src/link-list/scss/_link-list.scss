@@ -14,6 +14,7 @@
 // apply to standard liks and ds-link-list__link links
 .ds-link-list__item > a,
 .ds-link-list__link {
+    display: block;
     padding-top: config.spunits(4);
     padding-bottom: config.spunits(4);
 }
