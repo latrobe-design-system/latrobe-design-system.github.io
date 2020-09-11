@@ -2,7 +2,7 @@
 @use "config";
 
 %icon {
-    display: inline-block;
+    //display: inline-block;
     position: relative;
     padding-right: 1.75em; /* 28px for 1rem - using em here to suit font size change */
 
@@ -44,6 +44,12 @@
 
     &::after {
         filter: config.$filter-teal;
+    }
+}
+
+.ds-icon--grey {
+    &::after {
+        filter: config.$filter-grey;
     }
 }
 

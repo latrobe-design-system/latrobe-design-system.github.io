@@ -13,6 +13,7 @@
     /* scroll on mobile when too wide */
     white-space: nowrap;
     overflow-x: scroll;
+    overflow-y: hidden;
     /* hide scrollbar */
     scrollbar-width: none;
     -ms-overflow-style: none;
