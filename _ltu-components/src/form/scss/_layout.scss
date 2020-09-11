@@ -62,8 +62,12 @@ form.ds-form--full-width {
 }*/
 
 .ds-control-group--inline {
-    display: flex;
-    legend {
-        display: inline;
+    .ds-legend {
+        width: auto;
+        margin-top: 1.5rem;
+        margin-right: 8px;
+    }
+    > * {
+        display: inline-block;
     }
 }
