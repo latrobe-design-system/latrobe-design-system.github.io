@@ -61,7 +61,6 @@
     }
 }
 
-
 .ds-input-checkbox--toggle {
     & + label {
         display: inline-block;
@@ -84,9 +83,9 @@
 
     &:checked {
         & + label {
-            border-color: config.$color-alt-3;
+            border-color: config.$green;
             &::after {
-                color: config.$color-alt-3;
+                color: config.$green;
             }
         }
     }

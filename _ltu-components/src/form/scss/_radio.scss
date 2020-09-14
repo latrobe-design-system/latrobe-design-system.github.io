@@ -37,7 +37,7 @@
         &::after {
             height: config.spunits(2.5);
             width: config.spunits(2.5);
-            background: config.$color-alt-3;
+            background: config.$color-alt-6;
             left: config.spunits(4.75);
             top: config.spunits(2.75);
         }
@@ -45,7 +45,7 @@
 
     &:checked {
         & + label {
-            border-color: config.$color-alt-3;
+            border-color: config.$color-alt-6;
         }
     }
 }

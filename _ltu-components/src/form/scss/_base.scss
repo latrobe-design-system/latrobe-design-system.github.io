@@ -59,7 +59,7 @@
 .ds-label {
     display: block;
     font-weight: 500;
-    margin: 2em 0 config.spunits(1) 0;
+    margin: 2em 0 0.25em 0; // using em here to reflect Label size
 }
 
 // label required indicator
