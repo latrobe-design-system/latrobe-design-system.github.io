@@ -1,6 +1,6 @@
 <header id="header" class="legacy-header">
     <!-- HEADER -->
-    <p id="gdpr"><span>This website <a href="/statements/privacy">uses cookies</a> to ensure you get a better experience.</span> <button id="gdpr-button">Allow Cookies</button></p>
+    {% if page.showGDPR == 'yes' %}<p id="gdpr"><span>This website <a href="/statements/privacy">uses cookies</a> to ensure you get a better experience.</span> <button id="gdpr-button">Allow Cookies</button></p>{% endif %}
     <div class="header-top flex-wrapper">
         <nav class="nav-utility">
             <ul>
