@@ -7,13 +7,43 @@ layout: test-page-legacy-nav
 showHeader: "yes"
 showFooter: "yes"
 ---
-
 <style>
     #gdpr {
         display: none;
     }
+    .ds-hero {
+        background: #fafafa;
+    }
+    .ds-hero__content {
+        height: 600px;
+        max-height: 60vh;
+    }
+    .ds-hero__text {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: transparent;
+        color: #fff;
+    }
+    .ds-hero__text h1, 
+    .ds-hero__text h2, 
+    .ds-hero__text p:not(.ds-hero__button-group) {
+        text-shadow: 2px 2px 0px #242424, 0px 0px 16px #242424;
+    }
+    .ds-hero__text::before {
+        background-image: url("/ltu-components/dist/css/icons/latrobe-chevron-RGB-white.svg");
+    }
+    .gradient-overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        background: linear-gradient(110deg, rgba(0,0,0,0.4) 45%, transparent 55%);
+    }    
 </style>
-        
+
     <div class="ds-block ds-block--full-width">
         <div class="ds-alert ds-alert--info ds-alert--full-width ds-alert--centered" role="alert">
             <div class="ds-alert__icon">
@@ -30,15 +60,16 @@ showFooter: "yes"
     <div id="id-1064925" class="ds-block ds-block--full-width">
         <div class="ds-hero">
             <div class="ds-hero__content">
+                <div class="gradient-overlay"></div>
                 <div class="ds-hero__image ">
                                     <img src="https://www.latrobe.edu.au/international/images/lims-and-students.jpg/1680.jpg" alt="" srcset="https://www.latrobe.edu.au/international/images/lims-and-students.jpg/medium.jpg 480w, https://www.latrobe.edu.au/international/images/lims-and-students.jpg/preview.jpg 720w, https://www.latrobe.edu.au/international/images/lims-and-students.jpg/1024.jpg 1024w, https://www.latrobe.edu.au/international/images/lims-and-students.jpg/large.jpg 1280w, https://www.latrobe.edu.au/international/images/lims-and-students.jpg/1680.jpg" sizes="100vw">            </div>
                 <div class="ds-hero__text">
                     
                     <h1>International students</h1>
-                    <p class="h2">Studying at La Trobe is a uniquely Australian experience.</p>                <p>At La Trobe, we offer an Australian experience like no other. Our friendly, multicultural campuses are based in beautiful settings ranging from native bushland to inner-city metropolitan. What are you waiting for?</p>                <p>
-                                            <a href="https://www.latrobe.edu.au/international/study" class="ds-btn-primary ds-icon-chevron-right" data-component="ds-hero-banner">Find your course</a>
-                                                                <a href="https://www.latrobe.edu.au/international/international-terms" class="ds-btn-secondary ds-icon-chevron-right" data-component="ds-hero-banner">New terms available</a>
-                                        </p>
+                    <p class="h2">Studying at La Trobe is a uniquely Australian experience.</p>                
+                    <p>At La Trobe, we offer an Australian experience like no other. Our friendly, multicultural campuses are based in beautiful settings ranging from native bushland to inner-city metropolitan. What are you waiting for?</p>                
+                    <p class="ds-hero__button-group"><a href="https://www.latrobe.edu.au/international/study" class="ds-btn-primary ds-icon-chevron-right" data-component="ds-hero-banner">Find your course</a>
+                        <a href="https://www.latrobe.edu.au/international/international-terms" class="ds-btn-secondary ds-btn--light ds-icon-chevron-right" data-component="ds-hero-banner">New terms available</a></p>
                 </div>
             </div>
         </div>

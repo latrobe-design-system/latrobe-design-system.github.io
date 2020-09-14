@@ -12,6 +12,37 @@ showFooter: "yes"
     #gdpr {
         display: none;
     }
+    .ds-hero {
+        background: #fafafa;
+    }
+    .ds-hero__content {
+        height: 600px;
+        max-height: 60vh;
+    }
+    .ds-hero__text {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: transparent;
+        color: #fff;
+    }
+    .ds-hero__text h1, 
+    .ds-hero__text h2, 
+    .ds-hero__text p:not(.ds-hero__button-group) {
+        text-shadow: 2px 2px 0px #242424, 0px 0px 16px #242424;
+    }
+    .ds-hero__text::before {
+        background-image: url("/ltu-components/dist/css/icons/latrobe-chevron-RGB-white.svg");
+    }
+    .gradient-overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        background: linear-gradient(110deg, rgba(0,0,0,0.4) 45%, transparent 55%);
+    }
 </style>
 
 {% include sample-component.html snippet="ltu-components/src/alert/snippets/alert-info/alert-info-full-width.html" %}
@@ -20,6 +51,7 @@ showFooter: "yes"
 
     <div class="ds-hero">
         <div class="ds-hero__content">
+            <div class="gradient-overlay"></div>
             <div class="ds-hero__image">
                 <img src="images/Rollerblading-student.jpg">
             </div>
@@ -61,9 +93,9 @@ showFooter: "yes"
 -->
 
 <div class="ds-block ds-block--narrow">
-    <form class="ds-form ds-form--full-width" action="/courses">
+    <form class="temp ds-form ds-form--full-width" action="/courses">
         <div class="ds-form-group" id="our-course-search">
-            <label class="ds-label h2 ds-reduce-margin--TEMP" for="query_courses">Find your course</label>
+            <label class="ds-label h2 ds-reduce-margin" for="query_courses">Find your course</label>
             <div class="ds-input-group">
                 <div class="ds-input-group__prepend">
                     <span class="ds-input-group__text ds-input-group__text--bg-white"><span class="ds-icon-search ds-icon--red ds-icon--before"></span></span>
@@ -139,7 +171,6 @@ showFooter: "yes"
             <a class="ds-icon-info ds-icon--before" href="https://www.latrobe.edu.au/courses/help">Need help deciding?</a>
         </li>
     </ul>
-
 </div>
 
 <div class="ds-block">
