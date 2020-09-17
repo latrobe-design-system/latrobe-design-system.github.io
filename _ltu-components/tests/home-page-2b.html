@@ -8,56 +8,22 @@ showHeader: "yes"
 showFooter: "yes"
 ---
 
-<style>
-    .ds-hero {
-        background: #fafafa;
-    }
-    .ds-hero__content {
-        height: 600px;
-        max-height: 60vh;
-    }
-    .ds-hero__text {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: transparent;
-        color: #fff;
-    }
-    .ds-hero__text h1, 
-    .ds-hero__text h2, 
-    .ds-hero__text p:not(.ds-hero__button-group) {
-        text-shadow: 2px 2px 0px #242424, 0px 0px 16px #242424;
-    }
-    .ds-hero__text::before {
-        background-image: url("/ltu-components/dist/css/icons/latrobe-chevron-RGB-white.svg");
-    }
-    .gradient-overlay {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 1;
-        background: linear-gradient(110deg, rgba(0,0,0,0.4) 45%, transparent 55%);
-    }
-</style>
-
 {% include sample-component.html snippet="ltu-components/src/alert/snippets/alert-info/alert-info-full-width.html" %}
 
 <div class="ds-block ds-block--full-width">
 
-    <div class="ds-hero">
-        <div class="ds-hero__content">
-            <div class="gradient-overlay"></div>
-            <div class="ds-hero__image">
-                <img src="images/Rollerblading-student.jpg">
-            </div>
-            <div class="ds-hero__text">
-                <p class="h1">Lock in your 2021 options</p>
-                <p class="h2">Apply for the Aspire Early Admission Program</p>
-                <p class="ds-hero__button-group"><a href="#" class="ds-btn-primary ds-icon-chevron-right">Applications close 31 August</a></p>
+    <div class="ds-hero-promo ds-hero-promo--image-right">
+        <div class="ds-hero-promo__image">
+            <img src="images/Group-of-students-talking.jpg">
+        </div>
+        <div class="ds-hero-promo__content">
+            <div class="ds-hero-promo__text">
+                <p class="ds-hero-promo__text__headline">Lock in your 2021 options</p>
+                <p class="ds-hero-promo__text__subheadline">Apply for the Aspire Early Admission Program</p>
+                <p class="ds-hero-promo__button-group"><a href="#" class="ds-btn-secondary ds-btn--light ds-icon-chevron-right">Applications close 31 August</a></p>
             </div>
         </div>
+        <div class="ds-hero-promo__gradient-overlay"></div>
     </div>
 
 </div>
@@ -88,88 +54,90 @@ showFooter: "yes"
 
 </div>
 -->
-
-<div class="ds-block ds-block--narrow">
-    <div style="width: 236px; padding: 8px 32px 0 0; position: absolute; transform: translateX(-100%);"><img src="images/chevrons-30opacity.png" width="236"></div>
-    <form class="temp ds-form ds-form--full-width" action="/courses">
-        <div class="ds-form-group" id="our-course-search">
-            <label class="ds-label h2 ds-reduce-margin" for="query_courses">Find your course</label>
-            <div class="ds-input-group">
-                <div class="ds-input-group__prepend">
-                    <span class="ds-input-group__text ds-input-group__text--bg-white"><span class="ds-icon-search ds-icon--red ds-icon--before"></span></span>
+<div class="ds-block">
+<div class="ds-find-a-course ds-find-a-course--homepage">
+    <div class="ds-block ds-block--narrow">
+        <form class="ds-form ds-form--full-width" action="/courses">
+            <div class="ds-form-group" id="our-course-search">
+                <label class="ds-label h2 ds-reduce-margin" for="query_courses">Find your course</label>
+                <div class="ds-input-group">
+                    <div class="ds-input-group__prepend">
+                        <span class="ds-input-group__text ds-input-group__text--bg-white"><span class="ds-icon-search ds-icon--red ds-icon--before"></span></span>
+                    </div>
+                    <input type="hidden" name="collection" value="course-search" />
+                    <input class="ds-text-input" type="search" id="query_courses" placeholder="Search for a course by keyword, course &hellip;" autocomplete="off">
+                    <input type="submit" id="course-search-submit" value="Search">
                 </div>
-                <input type="hidden" name="collection" value="course-search" />
-                <input class="ds-text-input" type="search" id="query_courses" placeholder="Search for a course by keyword, course &hellip;" autocomplete="off">
-                <input type="submit" id="course-search-submit" value="Search">
             </div>
-        </div>
-    </form>
-    <script src="https://www.latrobe.edu.au/__data/assets/js_file/0011/815087/awesomeplete.js"></script>
-    <script>
-        // Course Search Setup
-        var CourseSearchArray=[];
-        var CourseSearchField = document.querySelector('#query_courses');
-        var CourseSearchForm = document.querySelector('#our-course-search');
+        </form>
+        <script src="https://www.latrobe.edu.au/__data/assets/js_file/0011/815087/awesomeplete.js"></script>
+        <script>
+            // Course Search Setup
+            var CourseSearchArray=[];
+            var CourseSearchField = document.querySelector('#query_courses');
+            var CourseSearchForm = document.querySelector('#our-course-search');
 
-        if (CourseSearchField) {
-            var coursesearchbar = new Awesomplete(CourseSearchField);
+            if (CourseSearchField) {
+                var coursesearchbar = new Awesomplete(CourseSearchField);
 
-            var ajax = new XMLHttpRequest();
-            var file = "https://www.latrobe.edu.au/courses/assets/courses-autosuggest";
-            ajax.open("GET", file, true);
-            ajax.onload = function() {
-                var CourseSearchArray = JSON.parse(ajax.responseText).map(function(i) {
-                    var newArray = new Array(i.label,i.value);
-                    return newArray;
+                var ajax = new XMLHttpRequest();
+                var file = "https://www.latrobe.edu.au/courses/assets/courses-autosuggest";
+                ajax.open("GET", file, true);
+                ajax.onload = function() {
+                    var CourseSearchArray = JSON.parse(ajax.responseText).map(function(i) {
+                        var newArray = new Array(i.label,i.value);
+                        return newArray;
+                    });
+                    coursesearchbar._list=CourseSearchArray;
+                    coursesearchbar.evaluate();
+                }
+                ajax.send();
+                
+                document.querySelector("#query_courses").addEventListener('awesomplete-selectcomplete', function(evt){
+                    dataLayer.push({
+                        'event': 'searchCourseDetailClicked'
+                    });
+                    document.location = this.value;
                 });
-                coursesearchbar._list=CourseSearchArray;
-                coursesearchbar.evaluate();
+                
+                document.querySelector("#query_courses").addEventListener('awesomplete-open', function(evt){
+                    dataLayer.push({
+                        'event': 'homeSearchResultsDisplayed'
+                    });
+                });
             }
-            ajax.send();
-            
-            document.querySelector("#query_courses").addEventListener('awesomplete-selectcomplete', function(evt){
-                dataLayer.push({
-                    'event': 'searchCourseDetailClicked'
-                });
-                document.location = this.value;
-            });
-            
-            document.querySelector("#query_courses").addEventListener('awesomplete-open', function(evt){
-                dataLayer.push({
-                    'event': 'homeSearchResultsDisplayed'
-                });
-            });
-        }
-    </script>
+        </script>
 
-    <p class="h4 ds-link-list__lead-in">Browse by topic</p>
-    <ul class="ds-link-list ds-link-list--2-cols">
-        <li class="ds-link-list__item">
-            <a class="ds-link-list__link" href="#">Arts, social sciences and communications</a>
-        </li>
-        <li class="ds-link-list__item">
-            <a class="ds-link-list__link" href="#">Education and teaching</a>
-        </li>
-        <li class="ds-link-list__item">
-            <a class="ds-link-list__link" href="#">IT and engineering</a>
-        </li>
-        <li class="ds-link-list__item">
-            <a class="ds-link-list__link" href="#">Science</a>
-        </li>
-        <li class="ds-link-list__item">
-            <a class="ds-link-list__link" href="#">Business and commerce</a>
-        </li>
-        <li class="ds-link-list__item">
-            <a class="ds-link-list__link" href="#">Health</a>
-        </li>
-        <li class="ds-link-list__item">
-            <a class="ds-link-list__link" href="#">Law and criminology</a>
-        </li>
-        <li class="ds-link-list__item">
-            <a class="ds-icon-info ds-icon--before" href="https://www.latrobe.edu.au/courses/help">Need help deciding?</a>
-        </li>
-    </ul>
-</div>
+        <p class="h4 ds-link-list__lead-in">Browse by topic</p>
+        <ul class="ds-link-list ds-link-list--2-cols">
+            <li class="ds-link-list__item">
+                <a class="ds-link-list__link" href="#">Arts, social sciences and communications</a>
+            </li>
+            <li class="ds-link-list__item">
+                <a class="ds-link-list__link" href="#">Education and teaching</a>
+            </li>
+            <li class="ds-link-list__item">
+                <a class="ds-link-list__link" href="#">IT and engineering</a>
+            </li>
+            <li class="ds-link-list__item">
+                <a class="ds-link-list__link" href="#">Science</a>
+            </li>
+            <li class="ds-link-list__item">
+                <a class="ds-link-list__link" href="#">Business and commerce</a>
+            </li>
+            <li class="ds-link-list__item">
+                <a class="ds-link-list__link" href="#">Health</a>
+            </li>
+            <li class="ds-link-list__item">
+                <a class="ds-link-list__link" href="#">Law and criminology</a>
+            </li>
+            <li class="ds-link-list__item">
+                <a class="ds-icon-info ds-icon--before" href="https://www.latrobe.edu.au/courses/help">Need help deciding?</a>
+            </li>
+        </ul>
+
+    </div>
+</div></div>
 
 <div class="ds-block">
     <h2 style="text-align: center;">Clever is</h2>
