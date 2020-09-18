@@ -28,116 +28,91 @@ showFooter: "yes"
 
 </div>
 
-<!--
 <div class="ds-block">
-        
-    <div class="ds-callout ds-callout--minimal ds-callout--centered">
-        <div class="ds-callout__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="12" y1="16" x2="12" y2="12"></line>
-                <line x1="12" y1="8" x2="12" y2="8"></line>
-            </svg>
-        </div>
-
-        <div class="ds-callout__text">
-            <p>Study online now and on campus later. <button class="ds-btn-link ds-icon-chevron-down ds-icon--red ds-collapse__trigger" aria-controls="further1" aria-expanded="false" >Read more</button></p>
-        </div>
-
-        <div  id="further1" class="ds-collapse__content" role="region" hidden>
-            <p>In response to COVID-19, La Trobe University is closely following the advice of State and Federal health authorities.</p>
-            <p>As the situation evolves, the courses we offer, and how we offer them, may need to adapt. For example, how we deliver some courses might change from face-to-face to online for a while; academic start dates and subject availabilities might be adjusted for some courses to ensure that students can progress; and access to work-integrated learning opportunities such as clinical placements might be limited for a period of time. However, our aim is to always provide an excellent learning experience and outcomes for our students.</p>
-            <p>We will make our best efforts to limit disruption and to inform future students as soon as possible if any changes are made to our current courses.</p>
-            <p>In the meantime, please go ahead with your application now for our Semester 2 intake which is due to start on 20th July. Book a consultation or call us if anything is unclear and we’ll be happy to help.</p>
-        </div>
-    </div>
-
-</div>
--->
-<div class="ds-block">
-<div class="ds-find-a-course ds-find-a-course--homepage">
-    <div class="ds-block ds-block--narrow">
-        <form class="ds-form ds-form--full-width" action="/courses">
-            <div class="ds-form-group" id="our-course-search">
-                <label class="ds-label h2" for="query_courses">Find your course</label>
-                <div class="ds-input-group">
-                    <div class="ds-input-group__prepend">
-                        <span class="ds-input-group__text ds-input-group__text--bg-white"><span class="ds-icon-search ds-icon--red ds-icon--before"></span></span>
+    <div class="ds-hero-promo__peakaboo">
+        <div class="ds-block ds-block--narrow">
+            <form class="ds-form ds-form--full-width" action="/courses">
+                <div class="ds-form-group" id="our-course-search">
+                    <label class="ds-label h2 ds--reduce-margin" for="query_courses">Find your course</label>
+                    <div class="ds-input-group">
+                        <div class="ds-input-group__prepend">
+                            <span class="ds-input-group__text ds-input-group__text--bg-white"><span class="ds-icon-search ds-icon--red ds-icon--before"></span></span>
+                        </div>
+                        <input type="hidden" name="collection" value="course-search" />
+                        <input class="ds-text-input" type="search" id="query_courses" placeholder="Search for a course by keyword, course &hellip;" autocomplete="off">
+                        <input type="submit" id="course-search-submit" value="Search">
                     </div>
-                    <input type="hidden" name="collection" value="course-search" />
-                    <input class="ds-text-input" type="search" id="query_courses" placeholder="Search for a course by keyword, course &hellip;" autocomplete="off">
-                    <input type="submit" id="course-search-submit" value="Search">
                 </div>
-            </div>
-        </form>
-        <script src="https://www.latrobe.edu.au/__data/assets/js_file/0011/815087/awesomeplete.js"></script>
-        <script>
-            // Course Search Setup
-            var CourseSearchArray=[];
-            var CourseSearchField = document.querySelector('#query_courses');
-            var CourseSearchForm = document.querySelector('#our-course-search');
+            </form>
+            <script src="https://www.latrobe.edu.au/__data/assets/js_file/0011/815087/awesomeplete.js"></script>
+            <script>
+                // Course Search Setup
+                var CourseSearchArray=[];
+                var CourseSearchField = document.querySelector('#query_courses');
+                var CourseSearchForm = document.querySelector('#our-course-search');
 
-            if (CourseSearchField) {
-                var coursesearchbar = new Awesomplete(CourseSearchField);
+                if (CourseSearchField) {
+                    var coursesearchbar = new Awesomplete(CourseSearchField);
 
-                var ajax = new XMLHttpRequest();
-                var file = "https://www.latrobe.edu.au/courses/assets/courses-autosuggest";
-                ajax.open("GET", file, true);
-                ajax.onload = function() {
-                    var CourseSearchArray = JSON.parse(ajax.responseText).map(function(i) {
-                        var newArray = new Array(i.label,i.value);
-                        return newArray;
+                    var ajax = new XMLHttpRequest();
+                    var file = "https://www.latrobe.edu.au/courses/assets/courses-autosuggest";
+                    ajax.open("GET", file, true);
+                    ajax.onload = function() {
+                        var CourseSearchArray = JSON.parse(ajax.responseText).map(function(i) {
+                            var newArray = new Array(i.label,i.value);
+                            return newArray;
+                        });
+                        coursesearchbar._list=CourseSearchArray;
+                        coursesearchbar.evaluate();
+                    }
+                    ajax.send();
+                    
+                    document.querySelector("#query_courses").addEventListener('awesomplete-selectcomplete', function(evt){
+                        dataLayer.push({
+                            'event': 'searchCourseDetailClicked'
+                        });
+                        document.location = this.value;
                     });
-                    coursesearchbar._list=CourseSearchArray;
-                    coursesearchbar.evaluate();
+                    
+                    document.querySelector("#query_courses").addEventListener('awesomplete-open', function(evt){
+                        dataLayer.push({
+                            'event': 'homeSearchResultsDisplayed'
+                        });
+                    });
                 }
-                ajax.send();
-                
-                document.querySelector("#query_courses").addEventListener('awesomplete-selectcomplete', function(evt){
-                    dataLayer.push({
-                        'event': 'searchCourseDetailClicked'
-                    });
-                    document.location = this.value;
-                });
-                
-                document.querySelector("#query_courses").addEventListener('awesomplete-open', function(evt){
-                    dataLayer.push({
-                        'event': 'homeSearchResultsDisplayed'
-                    });
-                });
-            }
-        </script>
+            </script>
 
-        <p class="h4 ds-link-list__lead-in">Browse by topic</p>
-        <ul class="ds-link-list ds-link-list--2-cols">
-            <li class="ds-link-list__item">
-                <a class="ds-link-list__link" href="#">Arts, social sciences and communications</a>
-            </li>
-            <li class="ds-link-list__item">
-                <a class="ds-link-list__link" href="#">Education and teaching</a>
-            </li>
-            <li class="ds-link-list__item">
-                <a class="ds-link-list__link" href="#">IT and engineering</a>
-            </li>
-            <li class="ds-link-list__item">
-                <a class="ds-link-list__link" href="#">Science</a>
-            </li>
-            <li class="ds-link-list__item">
-                <a class="ds-link-list__link" href="#">Business and commerce</a>
-            </li>
-            <li class="ds-link-list__item">
-                <a class="ds-link-list__link" href="#">Health</a>
-            </li>
-            <li class="ds-link-list__item">
-                <a class="ds-link-list__link" href="#">Law and criminology</a>
-            </li>
-            <li class="ds-link-list__item">
-                <a class="ds-icon-info ds-icon--before" href="https://www.latrobe.edu.au/courses/help">Need help deciding?</a>
-            </li>
-        </ul>
+            <p class="h4 ds-link-list__lead-in">Browse by topic</p>
+            <ul class="ds-link-list ds-link-list--2-cols">
+                <li class="ds-link-list__item">
+                    <a class="ds-link-list__link" href="#">Arts, social sciences and communications</a>
+                </li>
+                <li class="ds-link-list__item">
+                    <a class="ds-link-list__link" href="#">Education and teaching</a>
+                </li>
+                <li class="ds-link-list__item">
+                    <a class="ds-link-list__link" href="#">IT and engineering</a>
+                </li>
+                <li class="ds-link-list__item">
+                    <a class="ds-link-list__link" href="#">Science</a>
+                </li>
+                <li class="ds-link-list__item">
+                    <a class="ds-link-list__link" href="#">Business and commerce</a>
+                </li>
+                <li class="ds-link-list__item">
+                    <a class="ds-link-list__link" href="#">Health</a>
+                </li>
+                <li class="ds-link-list__item">
+                    <a class="ds-link-list__link" href="#">Law and criminology</a>
+                </li>
+                <li class="ds-link-list__item">
+                    <a class="ds-icon-info ds-icon--before" href="https://www.latrobe.edu.au/courses/help">Need help deciding?</a>
+                </li>
+            </ul>
 
+        </div>
     </div>
-</div></div>
+</div>
 
 <div class="ds-block">
     <h2 style="text-align: center;">Clever is</h2>

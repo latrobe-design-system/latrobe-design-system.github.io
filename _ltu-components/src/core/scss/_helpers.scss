@@ -103,6 +103,10 @@
  *  Reduce top margin to 1rem
  *  Useful for headings that don't need normal heading space
  */
-.ds-reduce-margin {
+.ds--reduce-margin {
   margin-top: 1rem !important;
+}
+
+.ds--zero-margin {
+  margin-top: 0!important;
 }

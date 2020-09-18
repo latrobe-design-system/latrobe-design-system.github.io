@@ -85,6 +85,8 @@
 .ds-callout--minimal {
     box-shadow: none;
     padding: 0;
+    margin-top: config.spunits(4);
+    margin-bottom: config.spunits(4);
 
     .ds-callout__text {
         >:first-child {
