@@ -10,6 +10,7 @@
     max-width: 1600px;
     margin: 0 auto config.spunits(8) auto;
 }
+
 .ds-hero__content {
     position: relative;
     background-color: config.$color-3a;
@@ -34,6 +35,7 @@
         }
     }
 }
+
 .ds-hero__text {
     max-width: calc(800px - 2rem);
     padding: config.spunits(8) 20px config.spunits(8) 20px;
@@ -151,16 +153,35 @@
             border-bottom: config.spunits(25) solid #fff;*/
         }
 
-        // modifer for non bleed image on right
-        &--right {
+    }
+}
+
+// modifer for non bleed image on right
+.ds-hero--image-right {
+
+    @media(min-width: 768px) {
+
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 75%;
+            box-shadow: config.$shadow-1;
+        }
+
+        .ds-hero__image {
             max-height: 2/3 * 800px; //for 3/2 image on right
             img {
                 max-width: 800px;
             }
         }
+
     }
 }
-
 
 /* old for deleteions
 

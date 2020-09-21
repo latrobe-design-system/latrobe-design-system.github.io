@@ -150,6 +150,13 @@
         padding: config.spunits(2) config.spunits(7);
     }
 
+    .ds-alert__icon {
+        display: none;
+        @media(min-width: 768px){
+            display: block;
+        }
+    }
+
     .ds-alert__text {
         max-width: 1280px;
         // allow content to fill space
