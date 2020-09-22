@@ -26,6 +26,7 @@
     width: 100%;
     color: config.$color-2;
     border-bottom: 2px solid config.$color-3b;
+    padding-right: config.spunits(6);
     
     @extend .ds-icon-arrow-right;
     position: relative;

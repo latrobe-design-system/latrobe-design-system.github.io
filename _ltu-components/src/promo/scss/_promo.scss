@@ -121,6 +121,10 @@
         top: 50%;
         transform: translateY(-50%);
         z-index: -1;
+
+        object-fit: cover;
+        min-height: 100%;
+        width: auto;
     }
 
     
