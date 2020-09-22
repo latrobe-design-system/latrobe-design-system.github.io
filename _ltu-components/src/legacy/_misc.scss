@@ -20,7 +20,7 @@
 @media (min-width:1024px) {
     .ds-main-wrapper {
         display: flex;
-        transition: transform .3s ease-in-out;
+        //transition: transform .3s ease-in-out; // this causes issues with positioning so removing this
     }
     .nav-container {
         flex: 1 0 25%;
