@@ -3,8 +3,7 @@
 
 %icon {
     //display: inline-block;
-    position: relative;
-    padding-right: 1.75em; /* 28px for 1rem - using em here to suit font size change */
+    //position: relative;
 
     &::after {
         content: "";
@@ -18,10 +17,10 @@
         background-position: center;
         filter: config.$filter-near-black;
 
-        position: absolute;
+        /*position: absolute;
         right: 0;
         top: 50%;
-        transform: translateY(-50%);
+        transform: translateY(-50%);*/
     }
 
 }
