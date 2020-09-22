@@ -164,6 +164,21 @@
             background: linear-gradient(110deg, rgba(0,0,0,0.5) 45%, transparent 55%);
         }
     }
+
+    .ds-hero-promo__CTA-mobile {
+        // hide above 767px
+        @media(min-width:768px) {
+            display: none !important;
+        }
+    }
+
+    .ds-hero-promo__CTA-tablet-up {
+        // hide below 768px
+        @media(max-width:767px) {
+            display: none !important;
+        }
+    }
+
     
 }
 
