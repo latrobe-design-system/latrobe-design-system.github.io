@@ -34,6 +34,13 @@
 
 .ds-accordion__trigger {
     @extend .ds-icon--before;
+    position: relative;
+    &::after {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
     @extend .ds-icon-plus;
     background: none;
     display: block;
