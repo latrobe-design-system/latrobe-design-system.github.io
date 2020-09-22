@@ -3,6 +3,7 @@
 */
 
 /* DS Adjustments */
+
 .ds-main-wrapper {
     position: relative;
 }
@@ -45,7 +46,8 @@
 
 /* reset ds defaults */ 
 #header,
-#footer {
+#footer,
+.nav-container {
     h1,
     h2,
     h3,
@@ -73,7 +75,6 @@
         margin-top: initial;
     }
 
-    form,
     form {
         display: block;
     }
