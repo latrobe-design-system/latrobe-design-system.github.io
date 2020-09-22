@@ -29,7 +29,7 @@ form.ds-form--full-width {
 
 // form groups wrap label and input pairs
 .ds-form-group {
-    margin-top: 1rem;
+    //margin-top: 1rem;
 }
 
 /*.ds-form-group--inline {
@@ -60,3 +60,15 @@ form.ds-form--full-width {
         }
     }
 }*/
+
+.ds-control-group--inline {
+    .ds-legend {
+        width: auto;
+        margin-top: config.spunits(3);
+        margin-right: 8px;
+    }
+    > * {
+        display: inline-block;
+        margin: config.spunits(1) 0;
+    }
+}

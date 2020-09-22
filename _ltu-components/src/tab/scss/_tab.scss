@@ -7,12 +7,12 @@
 }
 
 .ds-tabs-nav {
-    max-width: 1024px;
     display: block;
-    border-bottom: 2px solid config.$color-2;
+    border-bottom: 2px solid config.$color-3b;
     /* scroll on mobile when too wide */
     white-space: nowrap;
     overflow-x: scroll;
+    overflow-y: hidden;
     /* hide scrollbar */
     scrollbar-width: none;
     -ms-overflow-style: none;

@@ -134,16 +134,20 @@
 /* secondary button */
 .ds-btn-secondary {
     @extend .ds-btn;
-    color: config.$color-2;
+    //color: config.$color-2;
+    color: config.$color-1;
     background-color: transparent;
-    border: 2px solid config.$color-2;
+    //border: 2px solid config.$color-2;
+    border: 2px solid config.$color-1;
 
     &:visited {
-        color: config.$color-2;
+        //color: config.$color-2;
+        color: config.$color-1;
     }
 
     &[class*="icon-"]::after {
-        filter: config.$filter-near-black;
+        //filter: config.$filter-near-black;
+        filter: config.$filter-red;
     }
 
     /* secondary and light button modifier */

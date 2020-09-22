@@ -1,0 +1,185 @@
+// depenencies
+@use "config";
+@use "text/scss/text";
+
+// hero promo for home page
+.ds-hero-promo {
+
+    @media(min-width: 768px) {
+        position: relative;
+        height: 0;
+        min-height: 500px;
+        padding-bottom: 30%;
+        overflow: hidden;
+    }
+}
+
+.ds-hero-promo__image {
+
+    position: relative;
+    height: 0;
+    padding-bottom: 50%;
+    overflow: hidden;
+
+    @media(min-width: 768px) {
+        position: static;
+    }
+
+    img {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        margin-left: auto;
+    }
+   
+}
+
+.ds-hero-promo__content {
+    
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    color: #fff;
+
+    @media(min-width: 768px) {
+        position: absolute;
+        right: 0;
+        left: 0;
+        z-index: 1;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    @media(min-width: 1281px) {
+        top: 50%;
+        transform: translateY(-55%);
+    }
+}
+
+.ds-hero-promo__text {
+
+    width: 100%;
+    padding: 20px; // using pixels here to maintain on large screens
+
+    @media(max-width: 767px) {
+        background: #e2231b;
+    }
+
+    @media(min-width: 640px) {
+        padding: 20px 40px; // using pixels here to maintain on large screens
+    }
+
+    &::before {
+        display: block;
+        content: url(icons/latrobe-chevron-RGB-white.svg);
+        width: 40px;
+    }
+
+    @media(min-width: 768px) {
+        width: 50%;
+    }
+
+    @media(min-width: 1024px) { 
+        &::before {
+            display: block;
+            content: "";
+            background-image: url(img/logo-white.svg);
+            background-repeat: no-repeat;
+            width: 300px;
+            height: 110px;
+            background-size: 100%;
+            margin-top: -40px;
+            margin-left: -40px;
+        }
+    }
+
+    @media(min-width: 1920px) {
+        &::before {
+            background-image: url(img/LTU_Dom_V_RGB_white_V1.svg);
+            width: 250px;
+            height: 186px;
+            margin-top: -48px;
+            margin-left: -24px;
+        }
+    }
+}
+
+.ds-hero-promo__text__headline {
+    @extend .h1;
+    margin: 0;
+}
+
+.ds-hero-promo__text__subheadline {
+    @extend .h2;
+    margin-top: 0.5em; // em not rem because relative to font size
+    margin-bottom: 1em; // em not rem because relative to font size
+}
+
+.ds-hero-promo__gradient-overlay {
+    @media(min-width: 768px) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(75deg, #e2231b 55%, transparent 55%);
+    }
+
+    @media(min-width: 1152px) {
+        background: linear-gradient(75deg, #e2231b 50%, transparent 50%);
+    }
+
+}
+
+.ds-hero-promo--image-right:not(.ds-hero-promo--transparent-gradient) {
+    @media(min-width: 768px) {
+        .ds-hero-promo__image {
+            
+            img {
+                height: 125%;
+                width: auto;
+                object-fit: cover;
+            }
+
+        }
+    }
+}
+
+.ds-hero-promo--transparent-gradient {
+
+    .ds-hero-promo__text__headline,
+    .ds-hero-promo__text__subheadline {
+        text-shadow: 0px 0px 16px rgba(0,0,0,0.5);
+    }
+
+    .ds-hero-promo__gradient-overlay {
+        @media(min-width: 768px) {
+            background: linear-gradient(110deg, rgba(0,0,0,0.5) 55%, transparent 65%);
+        }
+
+        @media(min-width: 1152px) {
+            background: linear-gradient(110deg, rgba(0,0,0,0.5) 45%, transparent 55%);
+        }
+    }
+    
+}
+
+// a shadowed box that pushes up overlaying bottom of heor promo
+.ds-hero-promo__peakaboo {
+
+    @media(min-width: 1281px) {
+        padding: 20px 20px 60px 20px; // using pixels here to maintain on large screens
+        background-color: #fff;
+        box-shadow: config.$shadow-2;
+        position: relative;
+        z-index: 1;
+        margin-top: -4rem;
+    }
+
+    @media(min-width: 1441px) {
+        margin-top: -4vw;
+    }
+}

@@ -12,127 +12,186 @@ showFooter: "yes"
 
 <div class="ds-block ds-block--full-width">
 
-    <div class="ds-hero">
-        <div class="ds-hero__content">
-            <div class="ds-hero__image ds-hero__image--right">
-                <img src="images/lims-la-trobe.jpg">
-            </div>
-            <div class="ds-hero__text">
-                <p class="h1">Don’t miss our virtual Open Day experience</p>
-                <p class="h2">Melbourne: 2 August | Regional: 23 August</p>
-                <p class="ds-hero__button-group"><a href="#" class="ds-btn-primary ds-icon-chevron-right">Register now</a></p>
+    <div class="ds-hero-promo">
+        <div class="ds-hero-promo__image">
+            <img src="/ltu-components/tests/images/Rollerblading-student.jpg">
+        </div>
+        <div class="ds-hero-promo__content">
+            <div class="ds-hero-promo__text">
+                <p class="ds-hero-promo__text__headline">Lock in your 2021 options</p>
+                <p class="ds-hero-promo__text__subheadline">Apply for the Aspire Early Admission Program</p>
+                <p class="ds-hero-promo__button-group"><a href="#" class="ds-btn-secondary ds-btn--light ds-icon-chevron-right" data-component="ds-hero-promo">Applications close 31 August</a></p>
             </div>
         </div>
+        <div class="ds-hero-promo__gradient-overlay"></div>
     </div>
 
+</div>
+
+<div class="ds-block">
+    <div class="ds-hero-promo__peakaboo">
+    <!--
+        <div class="ds-callout ds-callout--minimal ds-callout--centered">
+            <div class="ds-callout__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12" y2="8"></line>
+                </svg>
+            </div>
+
+            <div class="ds-callout__text">
+                <p>Study online now and on campus later. <button class="ds-btn-link ds-icon-chevron-down ds-icon--red ds-collapse__trigger" aria-controls="further1" aria-expanded="false" >Read more</button></p>
+            </div>
+
+            <div  id="further1" class="ds-collapse__content" role="region" hidden>
+                <p>In response to COVID-19, La Trobe University is closely following the advice of State and Federal health authorities.</p>
+                <p>As the situation evolves, the courses we offer, and how we offer them, may need to adapt. For example, how we deliver some courses might change from face-to-face to online for a while; academic start dates and subject availabilities might be adjusted for some courses to ensure that students can progress; and access to work-integrated learning opportunities such as clinical placements might be limited for a period of time. However, our aim is to always provide an excellent learning experience and outcomes for our students.</p>
+                <p>We will make our best efforts to limit disruption and to inform future students as soon as possible if any changes are made to our current courses.</p>
+                <p>In the meantime, please go ahead with your application now for our Semester 2 intake which is due to start on 20th July. Book a consultation or call us if anything is unclear and we’ll be happy to help.</p>
+            </div>
+        </div>
+    -->
+
+        <div class="ds-block ds-block--narrow">
+            <form class="ds-form ds-form--full-width" action="/courses">
+                <div class="ds-form-group" id="our-course-search">
+                    <label class="ds-label h2 ds--reduce-margin" for="query_courses">Find your course</label>
+                    <div class="ds-input-group">
+                        <div class="ds-input-group__prepend">
+                            <span class="ds-input-group__text ds-input-group__text--bg-white"><span class="ds-icon-search ds-icon--red ds-icon--before"></span></span>
+                        </div>
+                        <input type="hidden" name="collection" value="course-search" />
+                        <input class="ds-text-input" type="search" id="query_courses" placeholder="Search for a course by keyword, course &hellip;" autocomplete="off">
+                        <input type="submit" id="course-search-submit" value="Search">
+                    </div>
+                </div>
+            </form>
+            <script src="https://www.latrobe.edu.au/__data/assets/js_file/0011/815087/awesomeplete.js"></script>
+            <script>
+                // Course Search Setup
+                var CourseSearchArray=[];
+                var CourseSearchField = document.querySelector('#query_courses');
+                var CourseSearchForm = document.querySelector('#our-course-search');
+
+                if (CourseSearchField) {
+                    var coursesearchbar = new Awesomplete(CourseSearchField);
+
+                    var ajax = new XMLHttpRequest();
+                    var file = "https://www.latrobe.edu.au/courses/assets/courses-autosuggest";
+                    ajax.open("GET", file, true);
+                    ajax.onload = function() {
+                        var CourseSearchArray = JSON.parse(ajax.responseText).map(function(i) {
+                            var newArray = new Array(i.label,i.value);
+                            return newArray;
+                        });
+                        coursesearchbar._list=CourseSearchArray;
+                        coursesearchbar.evaluate();
+                    }
+                    ajax.send();
+                    
+                    document.querySelector("#query_courses").addEventListener('awesomplete-selectcomplete', function(evt){
+                        dataLayer.push({
+                            'event': 'searchCourseDetailClicked'
+                        });
+                        document.location = this.value;
+                    });
+                    
+                    document.querySelector("#query_courses").addEventListener('awesomplete-open', function(evt){
+                        dataLayer.push({
+                            'event': 'homeSearchResultsDisplayed'
+                        });
+                    });
+                }
+            </script>
+
+            <p class="h4 ds-link-list__lead-in">Browse by topic</p>
+            <ul class="ds-link-list ds-link-list--2-cols">
+                <li class="ds-link-list__item">
+                    <a class="ds-link-list__link" href="#">Arts, social sciences and communications</a>
+                </li>
+                <li class="ds-link-list__item">
+                    <a class="ds-link-list__link" href="#">Education and teaching</a>
+                </li>
+                <li class="ds-link-list__item">
+                    <a class="ds-link-list__link" href="#">IT and engineering</a>
+                </li>
+                <li class="ds-link-list__item">
+                    <a class="ds-link-list__link" href="#">Science</a>
+                </li>
+                <li class="ds-link-list__item">
+                    <a class="ds-link-list__link" href="#">Business and commerce</a>
+                </li>
+                <li class="ds-link-list__item">
+                    <a class="ds-link-list__link" href="#">Health</a>
+                </li>
+                <li class="ds-link-list__item">
+                    <a class="ds-link-list__link" href="#">Law and criminology</a>
+                </li>
+                <li class="ds-link-list__item">
+                    <a class="ds-icon-info ds-icon--before" href="https://www.latrobe.edu.au/courses/help">Need help deciding?</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
 </div>
 
 
 <div class="ds-block">
-        
-    <div class="ds-callout ds-callout--minimal ds-callout--centered">
-        <div class="ds-callout__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="12" y1="16" x2="12" y2="12"></line>
-                <line x1="12" y1="8" x2="12" y2="8"></line>
-            </svg>
-        </div>
-
-        <div class="ds-callout__text">
-            <p>Study online now and on campus later. <button class="ds-btn-link ds-icon-chevron-down ds-icon--red ds-collapse__trigger" aria-controls="further1" aria-expanded="false" >Read more</button></p>
-        </div>
-
-        <div  id="further1" class="ds-collapse__content" role="region" hidden>
-            <p>In response to COVID-19, La Trobe University is closely following the advice of State and Federal health authorities.</p>
-            <p>As the situation evolves, the courses we offer, and how we offer them, may need to adapt. For example, how we deliver some courses might change from face-to-face to online for a while; academic start dates and subject availabilities might be adjusted for some courses to ensure that students can progress; and access to work-integrated learning opportunities such as clinical placements might be limited for a period of time. However, our aim is to always provide an excellent learning experience and outcomes for our students.</p>
-            <p>We will make our best efforts to limit disruption and to inform future students as soon as possible if any changes are made to our current courses.</p>
-            <p>In the meantime, please go ahead with your application now for our Semester 2 intake which is due to start on 20th July. Book a consultation or call us if anything is unclear and we’ll be happy to help.</p>
-        </div>
-    </div>
-
+    <h2 style="text-align: center;">Clever is</h2>
 </div>
 
+<div class="ds-block ds-block--wide">
 
-<div class="ds-block ds-block--narrow">
-    <form class="ds-form ds-form--full-width" action="/courses">
-        <div class="ds-form-group" id="our-course-search">
-            <label class="ds-label h2 ds-reduce-margin" for="query_courses">Find your course</label>
-            <div class="ds-input-group">
-                <div class="ds-input-group__prepend">
-                    <span class="ds-input-group__text ds-input-group__text--bg-transparent"><span class="ds-icon-search ds-icon--red ds-icon--before"></span></span>
-                </div>
-                <input type="hidden" name="collection" value="course-search" />
-                <input class="ds-text-input" type="search" id="query_courses" placeholder="Search for a course by keyword, course &hellip;" autocomplete="off">
-                <input type="submit" id="course-search-submit" value="Search">
+    <div class="ds-proofpoint-set ds-proofpoint-set--scroll">
+
+        <div class="ds-proofpoint">
+            <img class="ds-proofpont__icon" src="images/pg-earth-globe-with-continents-silhouettes.svg">
+            <div class="ds-proofpoint__body">
+                <h3 class="ds-proofpoint__title">Top 1%</h3>
+                <p class="ds-proofpoint__text">La Trobe is in the top 1% of universities worldwide</p>
+                <p class="ds-proofpoint__footnote"><a href="https://www.latrobe.edu.au/about/rankings-and-ratings"  class="ds-icon-chevron-right">Find out more</a></p>
             </div>
         </div>
-    </form>
-    <script src="https://www.latrobe.edu.au/__data/assets/js_file/0011/815087/awesomeplete.js"></script>
-    <script>
-        // Course Search Setup
-        var CourseSearchArray=[];
-        var CourseSearchField = document.querySelector('#query_courses');
-        var CourseSearchForm = document.querySelector('#our-course-search');
 
-        if (CourseSearchField) {
-            var coursesearchbar = new Awesomplete(CourseSearchField);
+        <div class="ds-proofpoint">
+            <img class="ds-proofpont__icon" src="images/gen-industry-courses-2.svg">
+            <div class="ds-proofpoint__body">
+                <h3 class="ds-proofpoint__title">Career Ready</h3>
+                <p class="ds-proofpoint__text">Our Career Ready program is co-designed with industry</p>
+                <p class="ds-proofpoint__footnote"><a href="https://www.latrobe.edu.au/students/opportunities/careers"  class="ds-icon-chevron-right">Find out more</a></p>
+            </div>
+        </div>
 
-            var ajax = new XMLHttpRequest();
-            var file = "https://www.latrobe.edu.au/courses/assets/courses-autosuggest";
-            ajax.open("GET", file, true);
-            ajax.onload = function() {
-                var CourseSearchArray = JSON.parse(ajax.responseText).map(function(i) {
-                    var newArray = new Array(i.label,i.value);
-                    return newArray;
-                });
-                coursesearchbar._list=CourseSearchArray;
-                coursesearchbar.evaluate();
-            }
-            ajax.send();
-            
-            document.querySelector("#query_courses").addEventListener('awesomplete-selectcomplete', function(evt){
-                dataLayer.push({
-                    'event': 'searchCourseDetailClicked'
-                });
-                document.location = this.value;
-            });
-            
-            document.querySelector("#query_courses").addEventListener('awesomplete-open', function(evt){
-                dataLayer.push({
-                    'event': 'homeSearchResultsDisplayed'
-                });
-            });
-        }
-    </script>
+        <div class="ds-proofpoint">
+            <img class="ds-proofpont__icon" src="images/pg-science-research-1.svg">
+            <div class="ds-proofpoint__body">
+                <h3 class="ds-proofpoint__title">Ground-breaking</h3>
+                <p class="ds-proofpoint__text">We conduct ground-breaking cancer research</p>
+                <p class="ds-proofpoint__footnote"><a href="https://www.latrobe.edu.au/our-work/shaping-the-future-of-cancer-treatment"  class="ds-icon-chevron-right">Find out more</a></p>
+            </div>
+        </div>
 
-    <p class="h4 ds-link-list__lead-in">Browse by topic</p>
-    <ul class="ds-link-list ds-link-list--2-cols">
-        <li class="ds-link-list__item">
-            <a class="ds-link-list__link" href="#">Arts, social sciences and communications</a>
-        </li>
-        <li class="ds-link-list__item">
-            <a class="ds-link-list__link" href="#">Education and teaching</a>
-        </li>
-        <li class="ds-link-list__item">
-            <a class="ds-link-list__link" href="#">IT and engineering</a>
-        </li>
-        <li class="ds-link-list__item">
-            <a class="ds-link-list__link" href="#">Science</a>
-        </li>
-        <li class="ds-link-list__item">
-            <a class="ds-link-list__link" href="#">Business and commerce</a>
-        </li>
-        <li class="ds-link-list__item">
-            <a class="ds-link-list__link" href="#">Health</a>
-        </li>
-        <li class="ds-link-list__item">
-            <a class="ds-link-list__link" href="#">Law and criminology</a>
-        </li>
-        <li class="ds-link-list__item">
-            <a class="ds-icon-info ds-icon--before" href="https://www.latrobe.edu.au/courses/help">Need help deciding?</a>
-        </li>
-    </ul>
+        <div class="ds-proofpoint">
+            <img class="ds-proofpont__icon" src="images/employers-top-marks.svg">
+            <div class="ds-proofpoint__body">
+                <h3 class="ds-proofpoint__title">Employer Satisfaction</h3>
+                <p class="ds-proofpoint__text">Employers give La Trobe top marks</p>
+                <p class="ds-proofpoint__footnote"><a href="https://www.latrobe.edu.au/about/rankings-and-ratings/qilt"  class="ds-icon-chevron-right">Find out more</a></p>
+            </div>
+        </div>
+
+        <div class="ds-proofpoint">
+            <img class="ds-proofpont__icon" src="images/pg-number-one-in-vic-2.svg">
+            <div class="ds-proofpoint__body">
+                <h3 class="ds-proofpoint__title">World standard</h3>
+                <p class="ds-proofpoint__text">We’re rated at, above or well above world standard in all our broad research areas</p>
+                <p class="ds-proofpoint__footnote"><a href="https://www.latrobe.edu.au/about/rankings-and-ratings/era" class="ds-icon-chevron-right">Find out more</a></p>
+            </div>
+        </div>
+
+    </div>
 
 </div>
 
@@ -147,7 +206,7 @@ showFooter: "yes"
             </div>
             <div class="ds-promo__text">
                 <div class="ds-promo__text-wrapper">
-                    <h2>Discover the Aspire Early Admission Program</h2>
+                    <h2 class="ds-promo__heading">Discover the <b>Aspire Early Admission Program</b></h2>
                     <p>If you go above and beyond for your community, we want to do the same for you. Get an early uni offer, or a $20,000 scholarship or help with your exams. Discover how Aspire can give you a head start.</p>
                     <p class="ds-promo__button-group"><a href="#" class="ds-btn-secondary ds-icon-chevron-right">More about Aspire</a></p>
                 </div>
@@ -155,63 +214,6 @@ showFooter: "yes"
         </div>
     </div>
         
-</div>
-
-<div class="ds-block">
-    <h2 style="text-align: center;">Clever is</h2>
-</div>
-
-<div class="ds-block ds-block--wide">
-
-    <div class="ds-proofpoint-set ds-proofpoint-set--scroll">
-
-        <div class="ds-proofpoint">
-            <img class="ds-proofpont__icon" src="https://www.latrobe.edu.au/__data/assets/file/0007/1007773/ug-earth-globe-with-continents-silhouettes.svg">
-            <div class="ds-proofpoint__body">
-                <h3 class="ds-proofpoint__title">Top 1%</h3>
-                <p class="ds-proofpoint__text">La Trobe is in the top 1% of universities worldwide</p>
-                <p class="ds-proofpoint__footnote"><a href="https://www.latrobe.edu.au/about/rankings-and-ratings">Find out more</a></p>
-            </div>
-        </div>
-
-        <div class="ds-proofpoint">
-            <img class="ds-proofpont__icon" src="https://www.latrobe.edu.au/__data/assets/file/0011/796934/gen-industry-courses-2.svg">
-            <div class="ds-proofpoint__body">
-                <h3 class="ds-proofpoint__title">Career Ready</h3>
-                <p class="ds-proofpoint__text">Our Career Ready program is co-designed with industry</p>
-                <p class="ds-proofpoint__footnote"><a href="https://www.latrobe.edu.au/students/opportunities/careers">Find out more</a></p>
-            </div>
-        </div>
-
-        <div class="ds-proofpoint">
-            <img class="ds-proofpont__icon" src="https://www.latrobe.edu.au/__data/assets/file/0004/796936/pg-science-research-1.svg">
-            <div class="ds-proofpoint__body">
-                <h3 class="ds-proofpoint__title">Ground-breaking</h3>
-                <p class="ds-proofpoint__text">We conduct ground-breaking cancer research</p>
-                <p class="ds-proofpoint__footnote"><a href="https://www.latrobe.edu.au/our-work/shaping-the-future-of-cancer-treatment">Find out more</a></p>
-            </div>
-        </div>
-
-        <div class="ds-proofpoint">
-            <img class="ds-proofpont__icon" src="https://www.latrobe.edu.au/__data/assets/file/0004/854374/employers-top-marks.svg">
-            <div class="ds-proofpoint__body">
-                <h3 class="ds-proofpoint__title">Employer Satisfaction</h3>
-                <p class="ds-proofpoint__text">Employers give La Trobe top marks</p>
-                <p class="ds-proofpoint__footnote"><a href="https://www.latrobe.edu.au/about/rankings-and-ratings/qilt">Find out more</a></p>
-            </div>
-        </div>
-
-        <div class="ds-proofpoint">
-            <img class="ds-proofpont__icon" src="https://www.latrobe.edu.au/__data/assets/file/0009/796932/pg-number-one-in-vic-2.svg">
-            <div class="ds-proofpoint__body">
-                <h3 class="ds-proofpoint__title">World standard</h3>
-                <p class="ds-proofpoint__text">We’re rated at, above or well above world standard in all our broad research areas</p>
-                <p class="ds-proofpoint__footnote"><a href="https://www.latrobe.edu.au/about/rankings-and-ratings/era">Find out more</a></p>
-            </div>
-        </div>
-
-    </div>
-
 </div>
 
 <div class="ds-block">
@@ -266,7 +268,7 @@ showFooter: "yes"
             </div>
             <div class="ds-promo__text">
                 <div class="ds-promo__text-wrapper">
-                    <h2>Your brilliant teacher, your bright future</h2>
+                    <h2 class="ds-promo__heading">Your <b>brilliant teacher</b>, your <b>bright future</b></h2>
                     <p>The gift of a master can last a lifetime. At La Trobe, you’ll learn from thought leaders who’ll see your potential and nurture your talents.</p>
                     <p class="ds-promo__button-group"><a href="#" class="ds-btn-secondary ds-icon-chevron-right">Meet our teachers</a></p>
                 </div>
@@ -373,6 +375,131 @@ showFooter: "yes"
 
     </div>
 
+</div>
+
+<div class="ds-block">
+    <div class="ds-column-layout">
+        <div class="ds-column-layout__column">
+     <h2>Events</h2>
+     <div class="ds-block">
+    <div class="ds-block__wrapper">
+        <ul class="ds-media-list">
+            <li class="ds-media-item" itemscope="" itemtype="http://schema.org/Event">
+    <meta itemprop="startDate" content="2020-09-01T18:00+1000">
+    <header class="ds-media-item__header">
+        <img class="ds-media-item__img" src="https://www.latrobe.edu.au/__data/assets/image/0010/1159723/announcement.gif" alt="" width="160px">
+    </header>
+    <div class="ds-media-item__body">
+        <h4><a itemprop="url" href="https://www.latrobe.edu.au/events/all/online-event-master-of-physiotherapy-practice-webinar"><span itemprop="name">Online event: Master of Physiotherapy Practice webinar</span></a></h4>
+        <p><b>Tuesday  01  September 06:00pm</b>
+        </p>
+    </div>
+</li><li class="ds-media-item" itemscope="" itemtype="http://schema.org/Event">
+    <meta itemprop="startDate" content="2020-09-02T17:30+1000">
+    <header class="ds-media-item__header">
+        <img class="ds-media-item__img" src="https://www.latrobe.edu.au/__data/assets/image/0010/1159723/announcement.gif" alt="" width="160px">
+    </header>
+    <div class="ds-media-item__body">
+        <h4><a itemprop="url" href="https://www.latrobe.edu.au/events/all/oral-and-dental-sciences-at-la-trobe"><span itemprop="name">Online event: Oral and Dental Sciences at La Trobe Webinar</span></a></h4>
+        <p><b>Wednesday  02  September 05:30pm</b>
+        </p>
+    </div>
+</li><li class="ds-media-item" itemscope="" itemtype="http://schema.org/Event">
+    <meta itemprop="startDate" content="2020-09-09T18:00+1000">
+    <header class="ds-media-item__header">
+        <img class="ds-media-item__img" src="https://www.latrobe.edu.au/__data/assets/image/0010/1159723/announcement.gif" alt="" width="160px">
+    </header>
+    <div class="ds-media-item__body">
+        <h4><a itemprop="url" href="https://www.latrobe.edu.au/events/all/bachelor-of-biomedical-science-medical-webinar2"><span itemprop="name">Online event: Bachelor of Biomedical Science (Medical) Webinar</span></a></h4>
+        <p><b>Wednesday  09  September 06:00pm</b>
+        </p>
+    </div>
+</li><li class="ds-media-item" itemscope="" itemtype="http://schema.org/Event">
+    <meta itemprop="startDate" content="2020-09-10T17:30+1000">
+    <header class="ds-media-item__header">
+        <img class="ds-media-item__img" src="https://www.latrobe.edu.au/__data/assets/image/0010/1159723/announcement.gif" alt="" width="160px">
+    </header>
+    <div class="ds-media-item__body">
+        <h4><a itemprop="url" href="https://www.latrobe.edu.au/events/all/the-role-of-occupational-therapists-in-community-recovery-from-covid-19"><span itemprop="name">Online event: The role of occupational therapists in community recovery from COVID-19</span></a></h4>
+        <p><b>Thursday  10  September 05:30pm</b>
+        </p>
+    </div>
+</li><li class="ds-media-item" itemscope="" itemtype="http://schema.org/Event">
+    <meta itemprop="startDate" content="2020-09-14T17:30+1000">
+    <header class="ds-media-item__header">
+        <img class="ds-media-item__img" src="https://www.latrobe.edu.au/__data/assets/image/0010/1159723/announcement.gif" alt="" width="160px">
+    </header>
+    <div class="ds-media-item__body">
+        <h4><a itemprop="url" href="https://www.latrobe.edu.au/events/all/inside-speech-pathology-communication-is-a-fundamental-human-right"><span itemprop="name">Online event: Inside speech pathology: Communication is a fundamental human right</span></a></h4>
+        <p><b>Monday  14  September 05:30pm</b>
+        </p>
+    </div>
+</li>
+        </ul>
+        <p><a class="ds-btn-secondary ds-btn--small ds-icon-chevron-right" href="https://www.latrobe.edu.au/events">More events</a></p>
+    </div>
+</div>
+     </div>        <div class="ds-column-layout__column">
+     <h2>News</h2>
+     <div class="ds-block">
+    <div class="ds-block__wrapper">
+        <ul class="ds-media-list">
+            <li class="ds-media-item">
+    <header class="ds-media-item__header">
+        <img class="ds-media-item__img" src="https://www.latrobe.edu.au/news/images/articles/sports-park.jpg/220.jpg" alt="" width="160px">
+    </header>
+
+    <div class="ds-media-item__body">
+        <h4><a href="https://www.latrobe.edu.au/news/articles/2020/release/matildas-waltzing-home-to-la-trobe">Matildas waltzing home to La Trobe</a></h4>
+        <p>La Trobe would be the Victorian base for Football Federation Australia</p>
+    </div>
+</li>
+<li class="ds-media-item">
+    <header class="ds-media-item__header">
+        <img class="ds-media-item__img" src="https://www.latrobe.edu.au/news/images/articles/Donald_Trump_and_Xi_Jinping_meets_at_2018_G20_Summit.jpg/220.jpg" alt="" width="160px">
+    </header>
+
+    <div class="ds-media-item__body">
+        <h4><a href="https://www.latrobe.edu.au/news/articles/2020/opinion/the-complexity-of-the-china-us-rivalry">The complexity of the China-US rivalry</a></h4>
+        <p>Sino-American competition is a serious challenge still unrealised</p>
+    </div>
+</li>
+<li class="ds-media-item">
+    <header class="ds-media-item__header">
+        <img class="ds-media-item__img" src="https://www.latrobe.edu.au/news/images/articles/elderly-person-for-website.jpg/220.jpg" alt="" width="160px">
+    </header>
+
+    <div class="ds-media-item__body">
+        <h4><a href="https://www.latrobe.edu.au/news/articles/2020/release/research-shows-rural-aged-care-shortfall">Research shows rural aged care shortfall</a></h4>
+        <p>Research report submitted to Aged Care Royal Commission highlights shortfalls in rural aged care.</p>
+    </div>
+</li>
+<li class="ds-media-item">
+    <header class="ds-media-item__header">
+        <img class="ds-media-item__img" src="https://www.latrobe.edu.au/news/images/articles/WFH.jpg/220.jpg" alt="" width="160px">
+    </header>
+
+    <div class="ds-media-item__body">
+        <h4><a href="https://www.latrobe.edu.au/news/articles/2020/release/3-new-covid-19-projects-begin">3 new COVID-19 projects begin</a></h4>
+        <p>La Trobe, Medibank and Optus announce Rapid Response Research grants</p>
+    </div>
+</li>
+<li class="ds-media-item">
+    <header class="ds-media-item__header">
+        <img class="ds-media-item__img" src="https://www.latrobe.edu.au/news/images/articles/1-Boundary-Bend-Groves-Boundary-Bend,-Victoria-web.jpg/220.jpg" alt="" width="160px">
+    </header>
+
+    <div class="ds-media-item__body">
+        <h4><a href="https://www.latrobe.edu.au/news/articles/2020/release/the-good-oil-on-extra-virgin-olive-oil">The good oil on extra virgin olive oil</a></h4>
+        <p>Research shows cardioprotective qualities of extra virgin olive oil</p>
+    </div>
+</li>
+
+        </ul>
+        <p><a class="ds-btn-secondary ds-btn--small ds-icon-chevron-right" href="https://www.latrobe.edu.au/news">More news</a></p>
+    </div>
+</div>
+     </div>                    </div>
 </div>
 
 

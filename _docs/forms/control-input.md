@@ -11,11 +11,10 @@ menu: 6
 
 {% include sample-iframe.html snippet="src/form/snippets/checkbox/checkbox-group.html" %}
 
-
 {% include sample-iframe.html snippet="src/form/snippets/radio/radio-group.html" %}
 
-{% include sample-iframe.html snippet="src/form/snippets/valid-and-invalid-states.html" %}
+## Toggle tokens
 
-{% include sample-iframe.html snippet="src/form/snippets/disabled-control-inputs.html" %}
+{% include sample-iframe.html snippet="src/form/snippets/checkbox/checkbox-group-toggle-token.html" %}
 
-{% include sample-iframe.html snippet="src/form/snippets/misc/file-uploader.html" %}
+{% include sample-iframe.html snippet="src/form/snippets/radio/radio-group-toggle-token.html" %}

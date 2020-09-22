@@ -1,7 +1,7 @@
 //
 @charset "UTF-8";
 
-// Components
+// Core
 @use "core/scss/fonts";
 @use "core/scss/normalize";
 @use "core/scss/core";
@@ -11,10 +11,12 @@
 @use "core/scss/skip-link";
 @use "core/scss/blocks";
 @use "core/scss/section";
-@use "core/scss/grid";
 @use "core/scss/columns";
 @use "core/scss/helpers";
 
+@use "grid/scss/grid";
+
+// Components
 @use "blockquote/scss/blockquote";
 @use "accordion/scss/accordion";
 @use "alert/scss/alert";
@@ -23,6 +25,7 @@
 @use "button/scss/button";
 @use "callout/scss/callout";
 @use "card/scss/card";
+@use "card/scss/card-set";
 @use "child-nav/scss/child-nav";
 @use "collapse/scss/collapse";
 @use "column-layout/scss/column-layout";
@@ -39,6 +42,7 @@
 @use "page-intro/scss/page-intro";
 @use "pagination/scss/pagination";
 @use "promo/scss/promo";
+@use "promo/scss/hero-promo";
 @use "proofpoint/scss/proofpoint";
 @use "site-header/scss/global-nav";
 @use "step-list/scss/step-list";

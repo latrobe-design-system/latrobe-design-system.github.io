@@ -144,8 +144,17 @@
     border: none;
     margin: 0;
 
+    padding: config.spunits(2);
+
     @media(min-width: 768px){
-        padding: config.spunits(4) config.spunits(7);
+        padding: config.spunits(2) config.spunits(7);
+    }
+
+    .ds-alert__icon {
+        display: none;
+        @media(min-width: 768px){
+            display: block;
+        }
     }
 
     .ds-alert__text {
