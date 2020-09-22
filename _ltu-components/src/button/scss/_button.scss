@@ -41,6 +41,7 @@
     }
 
     &[class*="ds-icon-"]{
+        position: relative;
         padding-right: config.spunits(11);
         &::after {
             margin: 0 config.spunits(3);
