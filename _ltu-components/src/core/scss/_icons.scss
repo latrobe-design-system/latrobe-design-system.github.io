@@ -53,8 +53,8 @@
 }
 
 .ds-icon--before {
-    padding-right: inherit;
-    padding-left: 1.75em; /* 28px for 1rem - using em here to suit font size change */
+    //padding-right: inherit;
+    //padding-left: 1.75em; /* 28px for 1rem - using em here to suit font size change */
 
     &::after {
         left: 0;

@@ -19,9 +19,9 @@ info: Buttons are used to help users perform common actions more easily and dire
 
 ## Icons
 
-Any of the icons in the [icon set](/foundations/icons/) can be used with a button by including the class `icon-[icon-name]`. Where icon-name is the name listed on the [icons page](/foundations/icons/).
+Any of the icons in the [icon set](/foundations/icons/) can be used with a button by including the class `ds-icon-[icon-name]`. Where icon-name is the name listed on the [icons page](/foundations/icons/).
 
-To place the icon on the left also include the class `icon-before`
+To place the icon on the left also include the class `ds-icon-before`
 
 {% include sample-iframe.html snippet="src/button/snippets/button.html" %}
 
