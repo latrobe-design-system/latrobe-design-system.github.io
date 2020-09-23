@@ -1,6 +1,6 @@
 ---
 title: "Promo - hero"
-status: draft
+status: ready
 ---
 
 The hero promo is for use on the La Trobe homepage.
