@@ -40,6 +40,7 @@ td, th {
 }
 
 th {
+    font-weight: config.$bold;
     text-align: left;
     border-bottom: 2px solid config.$color-3b;
 }
