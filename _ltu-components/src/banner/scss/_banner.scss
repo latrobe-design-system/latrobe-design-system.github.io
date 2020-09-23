@@ -102,21 +102,9 @@
         transform: translateY(-50%);
         right: 0;
         bottom: 0;
+        min-height: 100%;
+        object-fit: cover;
     }
-
-    // white triangle bottom left
-    /*&::before {
-        content: "";
-        display: block;
-        width: 0; 
-        height: 0; 
-        border-right: 58.5 solid transparent;
-        border-bottom: 45px solid config.$color-3a;
-        position: absolute;
-        z-index: 1;
-        bottom: 0;
-        left: -22px;
-    }*/
 
     // white triangle bottom right
     &::after {
@@ -139,18 +127,9 @@
         position: absolute;
         padding-bottom: 0;
         
-        // white triangle bottom left
-        /*&::before {
-            border-right: config.spunits(13) solid transparent;
-            border-bottom: config.spunits(10) solid #fff;
-        }*/
-
         // white triangle bottom right
         &::after {
             border-bottom-color: #fff;
-            /*border-left: config.spunits(70) solid transparent;
-            border-right: 0px solid transparent;
-            border-bottom: config.spunits(25) solid #fff;*/
         }
 
     }
@@ -174,7 +153,7 @@
         }
 
         .ds-hero__image {
-            max-height: 2/3 * 800px; //for 3/2 image on right
+            //max-height: 2/3 * 800px; //for 3/2 image on right
             img {
                 max-width: 800px;
             }
