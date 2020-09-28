@@ -55,7 +55,7 @@
 }
 
 .ds-promo__text-wrapper {
-    padding: config.spunits(11);
+    padding: config.spunits(8) config.spunits(5);
     text-align: center;
 
     > :first-child {
@@ -219,14 +219,12 @@
 
         .ds-promo__text-wrapper {
             background-color: rgba(255,255,255,.95);
-            //border: 1px solid config.$color-3b;
             position: absolute;
             top: 0px;
             left: 0px;
             bottom: 0px;
             width: 40%;
             min-width: 400px;
-            padding: 20px;
             display: flex;
             flex-direction: column;
             justify-content: center;
