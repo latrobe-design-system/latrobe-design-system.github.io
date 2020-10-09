@@ -4,40 +4,37 @@
  * extracted from  #656058
 */
 
-#header,
-#footer {
-    .global-search .twitter-typeahead {
-        width: calc(100% - 60px);
-    }
-    .global-search #clear_LT_search_field {
-        margin-left: -120px;
-    }
-    .global-search #ltu-search-submit {
-        position: relative;
-        z-index: 1;
-    }
-    .ltu-search-fields .twitter-typeahead {
-        display: inline-block!important;        
-    }
+.global-search .twitter-typeahead {
+    width: calc(100% - 60px);
+}
+.global-search #clear_LT_search_field {
+    margin-left: -120px;
+}
+.global-search #ltu-search-submit {
+    position: relative;
+    z-index: 1;
+}
+.ltu-search-fields .twitter-typeahead {
+    display: inline-block!important;        
+}
 
-    .twitter-typeahead .tt-menu {
-        border: none;
-        border-radius: 0px;
-        box-shadow: rgba(0, 0, 0, 0.2) 0.05em 0.2em 0.6em;
-        background: linear-gradient(to right bottom, white, rgba(255, 255, 255, 0.8));
-        padding-bottom: 0;
-    }
-    .twitter-typeahead .tt-menu .tt-suggestion {
-        color: #242424;
-        padding: 10px 19px;
-        font-size: 18px;
-        font-weight: 300;
-    }
-    .twitter-typeahead .tt-menu .tt-suggestion:hover, .twitter-typeahead .tt-menu .tt-cursor {
-        background-color: #fff;
-        color: #242424;
-        box-shadow: 0 0 4px rgba(0,0,0,.4) inset;
-    }
+.twitter-typeahead .tt-menu {
+    border: none;
+    border-radius: 0px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0.05em 0.2em 0.6em;
+    background: linear-gradient(to right bottom, white, rgba(255, 255, 255, 0.8));
+    padding-bottom: 0;
+}
+.twitter-typeahead .tt-menu .tt-suggestion {
+    color: #242424;
+    padding: 10px 19px;
+    font-size: 18px;
+    font-weight: 300;
+}
+.twitter-typeahead .tt-menu .tt-suggestion:hover, .twitter-typeahead .tt-menu .tt-cursor {
+    background-color: #fff;
+    color: #242424;
+    box-shadow: 0 0 4px rgba(0,0,0,.4) inset;
 }
 
 #footer .ltu-search-fields .twitter-typeahead {
