@@ -282,4 +282,4 @@ ltuSearchClear.addEventListener('click', function(evt){
          },
          length: 3
      });
- })(jQuery);</script>
+ })(jQuery);
