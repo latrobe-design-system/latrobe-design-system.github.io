@@ -1,7 +1,6 @@
 // depenencies
-@use "config";
+@use "config";       
 
-/* layouts */
 /* layouts */
 .ds-card-set {
     @include config.columns-grid();
@@ -15,8 +14,18 @@
         }
     }
     .ds-card {
-        max-width: 620px;
+        max-width: 624px;
     }
+    // change to cater for extra ds-block side padding added at min-width 640px
+    @media(min-width: 664px) {
+        .ds-card {
+            flex-basis: 276px;
+        }
+        @supports(display: grid) {
+            grid-template-columns: repeat(auto-fit, minmax(276px, 1fr));
+        }
+    }
+    // change to max out cards at 4 across
     @media(min-width: 1366px) {
         .ds-card {
             flex-basis: 296px;
