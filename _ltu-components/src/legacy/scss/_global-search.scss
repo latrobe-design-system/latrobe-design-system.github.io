@@ -1,0 +1,25 @@
+/* styles for search autocomplete 
+ * relies on <link rel="stylesheet" type="text/css" href="//search.latrobe.edu.au/s/resources-global/css/funnelback.autocompletion.css" />
+ * which is included in head
+*/
+
+.global-search .twitter-typeahead {
+    width: calc(100% - 60px);
+}
+.global-search #clear_LT_search_field {
+    margin-left: -120px;
+}
+.global-search #ltu-search-submit {
+    position: relative;
+    z-index: 1;
+}
+.ltu-search-fields .twitter-typeahead {
+    display: inline-block!important;        
+}
+#footer .ltu-search-fields .twitter-typeahead {
+    display: inline-block!important;
+    width: calc(100% - 49px);
+ }
+#footer form input#LTU_search_field {
+    width: calc(100% - 28px);
+}

@@ -4,7 +4,7 @@
 // @include these for flex or grid with flex fallback columns
 // optionally pass base width
 // note: basis width of 276 with 32px gutter allows for up to four cols when viewport >= 1280px (1200px content container) and five cols in wide 1600px container
-@mixin columns($basis-width: 276px, $alignment: center) {
+@mixin columns($basis-width: 264px, $alignment: center) {
     display: flex;
     flex-wrap: wrap;
     justify-content: $alignment;
@@ -17,7 +17,7 @@
         margin: 1rem 32px 0 0; // using pixels for gutter so it doesn't scale with base font change from 16px -> 18px @1440 width
     }
 }
-@mixin columns-grid($basis-width: 276px, $alignment: center, $wrap: auto-fit) {
+@mixin columns-grid($basis-width: 264px, $alignment: center, $wrap: auto-fit) {
     @include columns($basis-width, $alignment); /* flex fallback */
     @supports(display: grid) {
         display: grid;

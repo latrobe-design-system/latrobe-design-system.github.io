@@ -243,3 +243,43 @@ function incrimentCourseCount(){
         localStorage.removeItem('savedCourses');
     } else mySavedCourses.classList.remove('hidden');
 };
+
+
+/*** site-search.js #1174917  ***/
+// Event listener for search clear button
+var ltuSearchField = document.querySelector('#LT_search_field');
+var ltuSearchClear = document.getElementById('clear_LT_search_field');
+ltuSearchClear.addEventListener('click', function(evt){
+    evt.preventDefault();
+    ltuSearchField.value='';
+});
+
+/*** extract from #655962 ***/
+// Autocompletion setup - header
+(function($) {
+    $('#LT_search_field').autocompletion({
+         datasets: {
+           organic: {
+             enabled: 'enabled',
+             collection: 'Latrobe-search',
+             profile   : '_default',
+             program   : 'https://search.latrobe.edu.au/s/suggest.json',
+           }
+         },
+         length: 3
+     });
+ })(jQuery);
+ // Autocompletion setup - footer
+ (function($) {
+    $('#LTU_search_field').autocompletion({
+         datasets: {
+           organic: {
+             enabled: 'enabled',
+             collection: 'Latrobe-search',
+             profile   : '_default',
+             program   : 'https://search.latrobe.edu.au/s/suggest.json',
+           }
+         },
+         length: 3
+     });
+ })(jQuery);</script>
