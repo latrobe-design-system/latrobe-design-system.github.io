@@ -4,18 +4,20 @@
  * extracted from  #656058
 */
 
-.global-search .twitter-typeahead {
-    width: calc(100% - 60px);
-}
-.global-search #clear_LT_search_field {
-    margin-left: -120px;
-}
-.global-search #ltu-search-submit {
-    position: relative;
-    z-index: 1;
-}
-.ltu-search-fields .twitter-typeahead {
-    display: inline-block!important;        
+#header {
+    .global-search .twitter-typeahead {
+        width: calc(100% - 60px);
+    }
+    .global-search #clear_LT_search_field {
+        margin-left: -120px;
+    }
+    .global-search #ltu-search-submit {
+        position: relative;
+        z-index: 1;
+    }
+    .ltu-search-fields .twitter-typeahead {
+        display: inline-block!important;        
+    }
 }
 
 .twitter-typeahead .tt-menu {
