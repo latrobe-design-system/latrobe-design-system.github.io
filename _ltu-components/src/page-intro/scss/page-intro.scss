@@ -6,17 +6,17 @@
             margin-top: 0;
         }
     }
-    .ds-page-intro__image {
-        margin: 0 0 1rem 0;
+    .ds-figure {
+        margin: 0 0 config.spunits(4) 0;
     }
     @media(min-width: 1024px) {
-        .ds-page-intro__image {
-            width: 30%;
+        .ds-figure {
+            width: calc(100% / 3 - 32px);
             height: auto;
             max-width: 460px;
             clear: both;
             float: right;
-            margin: 0 0 1rem 2rem;
+            margin: 0 0 config.spunits(4) 32px;
         }
     }
 }
