@@ -34,8 +34,8 @@ blockquote {
         &:before {
             content: "";
             display: block;
-            width: config.$space-unit * 5;
-            height: config.$space-unit / 2;
+            width: config.spunits(5);
+            height: config.spunits(0.5);
             background: config.$color-3c;
             margin: 1rem 0 0.8rem 0;
         }

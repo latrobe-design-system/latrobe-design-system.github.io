@@ -8,7 +8,17 @@
 
     figcaption,
     .ds-figure__figcaption {
-        padding: config.spunits(2) 0;
+        margin-top: config.spunits(2);
+        padding: 0 0 0 config.spunits(2);
+
+        &:before {
+            content: "";
+            display: block;
+            width: config.spunits(5);
+            height: config.spunits(0.5);
+            background: config.$color-3c;
+            margin: 0 0 config.spunits(1) 0;
+        }
     }
 }
 
