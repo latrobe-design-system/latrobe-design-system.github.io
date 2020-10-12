@@ -100,3 +100,31 @@ tr {
         border-right: none;
     }
 }
+
+.ds-table--compact {
+
+    caption {
+        padding: config.spunits(4) config.spunits(2);
+    }
+
+    td, th {
+        padding: config.spunits(2);
+    }
+
+    th {
+        border-bottom: 1px solid config.$color-3b;
+    }
+
+    tbody th:first-child {
+        border-right: 1px solid config.$color-3b;
+    }
+    
+    td {
+        border-right: 1px solid config.$color-3b;
+    }
+    
+    tr {
+        border-top: 1px solid config.$color-3b;
+        border-bottom: 1px solid config.$color-3b;
+    }
+}
