@@ -9,7 +9,7 @@
     .ds-figure {
         margin: 0 0 config.spunits(4) 0;
     }
-    @media(min-width: 1024px) {
+    @media(min-width: 768px) {
         .ds-figure {
             width: calc(100% / 3 - 32px);
             height: auto;
