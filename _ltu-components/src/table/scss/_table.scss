@@ -87,7 +87,7 @@ tr {
         padding: 0;
     }
     th, td {
-        padding: 4px 8px 0 0;
+        padding: config.spunits(0.5) config.spunits(8) config.spunits(0.5) 0;
     }
     tr {
         th, td {

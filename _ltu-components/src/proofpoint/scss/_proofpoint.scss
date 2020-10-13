@@ -7,7 +7,7 @@
     flex-direction: column;
     max-width: 400px;
     text-align: center;
-    margin-top: config.$space-unit*8; /* 2rem/32px */
+    margin-top: config.spunits(8); /* 32px */
     margin-bottom: 0;
 }
 
