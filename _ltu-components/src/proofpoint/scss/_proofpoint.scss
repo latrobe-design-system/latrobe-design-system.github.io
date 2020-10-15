@@ -45,7 +45,7 @@
 
 /* proof point set */
 .ds-proofpoint-set {
-    @include config.columns($basis-width: 214px);
+    @include config.columns($basis-width: 214px); // 214px allows max 5 proofpoints within default width ds-block
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
@@ -64,9 +64,5 @@
             display: none;
         }
         -ms-overflow-style: none;
-
-        .ds-proofpoint {
-
-        }
     }
 }
