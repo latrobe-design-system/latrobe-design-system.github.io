@@ -1,0 +1,90 @@
+.ds-card-set--left {
+    background-color: #eee;
+    justify-content: left;
+
+    .ds-card {
+        @media(min-width: 600px) {
+            width: calc(100% / 2);
+        }
+        @media(min-width: 972px) {
+            width: calc(100% / 3);
+        }
+        @media(min-width: 1280px) {
+            width: calc(100% / 4);
+        }
+    }
+
+    @supports(display: grid) {
+        @media(min-width: 600px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media(min-width: 972px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media(min-width: 1280px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .ds-card {
+            margin-right: 0;
+            width: 100%;
+        }
+    }
+}
+
+.ds-col { background-color: khaki;}
+
+.ds-col-set {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-right: -32px; // using pixels for gutter so it doesn't scale with base font change from 16px -> 18px @1440 width
+    & > * {
+        //flex: 1;
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 264px;
+        max-width: 100%; //624px;
+        margin: 1rem 32px 0 0; // using pixels for gutter so it doesn't scale with base font change from 16px -> 18px @1440 width
+
+        @media(min-width: 600px) {
+            flex-basis: calc(100% / 2  - 32px);
+        }
+        @media(min-width: 972px) {
+            flex-basis: calc(100% / 3  - 32px);
+        }
+        @media(min-width: 1280px) {
+            flex-basis: calc(100% / 4  - 32px);
+        }
+    }
+
+    // modifiers
+
+    // max 3 cards across
+    &.ds-col-set--3max {
+        & > * {
+            @media(min-width: 1280px) {
+                flex-basis: calc(100% / 3  - 32px);
+            }
+        }
+    }
+
+    // 
+    &.ds-col-set--left {
+        justify-content: center;
+        & > * {
+            flex-grow: 1;
+        }
+    }
+}
+
+.ds-col-set-grid {
+    display: grid;
+    grid-column-gap: 32px; // using pixels for gutter so it doesn't scale with base font change from 16px -> 18px @1440 width
+    justify-content: center;
+    margin-right: 0;
+    grid-template-columns: repeat(auto-fit, minmax(264px, 1fr));
+    & > * {
+        margin: 1rem 0 0 0;
+    }
+}

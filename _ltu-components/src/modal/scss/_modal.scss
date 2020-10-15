@@ -22,7 +22,7 @@
 .ds-modal-content {
     display: none;
     background-color: #fff;
-    padding: config.$space-unit * 8;
+    padding: config.spunits(8);
 }
 
 // when loaded into modal

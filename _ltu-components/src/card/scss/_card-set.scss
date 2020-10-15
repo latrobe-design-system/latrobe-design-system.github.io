@@ -1,51 +1,124 @@
 // depenencies
 @use "config";       
 
-/* layouts */
 .ds-card-set {
-    @include config.columns-grid();
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-right: -#{config.$gutter};
+
+    //background-color: #eee;
+
+    .ds-card {
+        max-width: (1280px - config.$gutter) / 2;
+        margin: config.spunits(6) config.$gutter 0 0;
+        
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: calc(100%  - #{config.$gutter});
+
+        @media(min-width: 600px) {
+            flex-basis: calc(100% / 2 - #{config.$gutter});
+        }
+
+        @media(min-width: 972px) {
+            flex-basis: calc(100% / 3 - #{config.$gutter});
+        }
+
+        @media(min-width: 1280px) {
+            flex-basis: calc(100% / 4 - #{config.$gutter});
+        }
+    }
+
+    @supports(display: grid) {
+        margin-right: 0;
+        display: grid;
+        grid-column-gap: #{config.$gutter};        
+        grid-template-columns: 1fr;
+
+        @media(min-width: 600px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media(min-width: 972px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        @media(min-width: 1280px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .ds-card {
+            margin: config.spunits(6) 0 0 0;;
+            max-width: 100%;
+        }
+    }
+}
+
+.ds-card-set--3max {
+    .ds-card {
+        @media(min-width: 1280px) {
+            flex-basis: calc(100% / 3 - #{config.$gutter});
+        }
+    }
+
+    @supports(display: grid) {
+        @media(min-width: 1280px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+.ds-card-set--expand {
+    justify-content: center;
+
+    .ds-card {
+        flex-grow: 1;
+    }
+
     @supports(display: grid) {
         justify-content: left;
 
-        /* if only one card exists give it left/right margin auto to center align */
+        grid-template-columns: repeat(auto-fit, minmax(264px, 1fr));
+        
+        // override default
+        @media(min-width: 600px) {
+            grid-template-columns: repeat(auto-fit, minmax(264px, 1fr));
+        }
+
+        // change to cater for extra ds-block side padding added at min-width 640px
+        @media(min-width: 664px) {
+            grid-template-columns: repeat(auto-fit, minmax(276px, 1fr));
+        }
+
+         // override default
+        @media(min-width: 972px) {
+            grid-template-columns: repeat(auto-fit, minmax(276px, 1fr));
+        }
+
+         // override default
+        @media(min-width: 1280px) {
+            grid-template-columns: repeat(auto-fit, minmax(276px, 1fr));
+        }
+
+        &:not(ds-card--3max) {
+            // change to max out cards at 4 across
+            @media(min-width: 1366px) {
+                grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
+            }
+        }
+
+
+        &.ds-card-set--3max {
+            @media (min-width: 1280px) {
+                grid-template-columns: repeat(auto-fit, minmax(378px, 1fr));
+            }
+        }
+
+        // if only one card exists give it left/right margin auto to center align
         .ds-card:last-child:first-child {
             margin-left: auto;
             margin-right: auto;
-        }
-    }
-    .ds-card {
-        max-width: 624px;
-    }
-    // change to cater for extra ds-block side padding added at min-width 640px
-    @media(min-width: 664px) {
-        .ds-card {
-            flex-basis: 276px;
-        }
-        @supports(display: grid) {
-            grid-template-columns: repeat(auto-fit, minmax(276px, 1fr));
-        }
-    }
-    // change to max out cards at 4 across
-    @media(min-width: 1366px) {
-        .ds-card {
-            flex-basis: 296px;
-        }
-        @supports(display: grid) {
-            grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
-        }
-    }
-    margin-top: 1rem;
-}
-
-// modifier to for max three cards across
-.ds-card-set--3max {
-    @media (min-width: 1280px) {
-        .ds-card {
-            flex-basis: 378px;
-        }
-
-        @supports(display: grid) {
-            grid-template-columns: repeat(auto-fit, minmax(378px, 1fr));
         }
     }
 }
@@ -53,10 +126,9 @@
 // adjustments for wide block
 .ds-block.ds-block--wide {
 
-    @supports(display: grid) {
-        .ds-card-set {
-
-            /* if only two cards exist give first card margin left auto to center align cards */
+    .ds-card-set--expand {
+        @supports(display: grid) {
+            // if only two cards exist give first card margin left auto to center align cards
             .ds-card:nth-last-child(2):first-child {
                 margin-left: auto;
             }

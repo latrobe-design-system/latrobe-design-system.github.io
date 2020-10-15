@@ -7,7 +7,7 @@
     flex-direction: column;
     max-width: 400px;
     text-align: center;
-    margin-top: config.$space-unit*8; /* 2rem/32px */
+    margin-top: config.spunits(8); /* 32px */
     margin-bottom: 0;
 }
 
@@ -45,7 +45,7 @@
 
 /* proof point set */
 .ds-proofpoint-set {
-    @include config.columns($basis-width: 214px);
+    @include config.columns($basis-width: 214px); // 214px allows max 5 proofpoints within default width ds-block
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
@@ -64,9 +64,5 @@
             display: none;
         }
         -ms-overflow-style: none;
-
-        .ds-proofpoint {
-
-        }
     }
 }

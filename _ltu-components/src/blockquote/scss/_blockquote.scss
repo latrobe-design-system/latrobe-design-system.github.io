@@ -46,8 +46,8 @@ blockquote {
 
 .ds-blockquote--feature {
 
-    border-left: config.$space-unit solid config.$color-1;
-    padding-left: config.$space-unit * 6;
+    border-left: config.spunits(1) solid config.$color-1;
+    padding-left: config.spunits(6);
     margin: 4rem 0;
 
     & > p {
