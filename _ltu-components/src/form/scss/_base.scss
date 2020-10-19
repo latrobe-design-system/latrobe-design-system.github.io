@@ -110,7 +110,7 @@ abbr.ds-label__required {
 
 .ds-text-input,
 .ds-select {
-    height: calc(3rem + 4px); // since line height does not work on inputs this makes inputs same height as buttons which helps for inline forms 
+    height: calc(1rem + 32px + 4px); // since line height does not work on inputs this makes inputs same height as buttons which helps for inline forms 
 }
 
 
@@ -207,7 +207,7 @@ abbr.ds-label__required {
 
 .ds-input-group__prepend,
 .ds-input-group__append {
-    height: calc(3rem + 4px);
+    height: calc(1rem + 32px + 4px); // since line height does not work on inputs this makes inputs same height as buttons which helps for inline forms 
     display: flex;
     flex-direction: column;
     justify-content: center;
