@@ -7,10 +7,8 @@
     justify-content: left;
     margin-right: -#{config.$gutter};
 
-    //background-color: #eee;
-
     .ds-card {
-        max-width: (1280px - config.$gutter) / 2;
+        max-width: calc((1280px - #{config.$gutter}) / 2);
         margin: config.spunits(6) config.$gutter 0 0;
         
         flex-grow: 0;
