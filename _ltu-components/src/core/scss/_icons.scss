@@ -2,8 +2,9 @@
 @use "config";
 
 %icon {
-    //display: inline-block;
-    //position: relative;
+
+    display: inline-flex;
+    align-items: center;
 
     &::after {
         content: "";
@@ -16,49 +17,62 @@
         background-size: 100%;
         background-position: center;
         filter: config.$filter-near-black;
-
-        /*position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);*/
     }
 
 }
 
+.ds-icon--before {
+
+    &::after { 
+        background: none;
+        width: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    &::before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 1em;
+        height: 1em;
+        margin: 0 config.spunits(1);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        filter: config.$filter-near-black;
+    }
+}
+
 .ds-icon--red {
 
-    &::after {
+    &::after,
+    &.ds-icon--before::before  {
         filter: config.$filter-red;
     }
 }
 
 .ds-icon--white {
 
-    &::after {
+    &::after,
+    &.ds-icon--before::before {
         filter: config.$filter-white;
     }
 }
 
 .ds-icon--teal {
 
-    &::after {
+    &::after,
+    &.ds-icon--before::before {
         filter: config.$filter-teal;
     }
 }
 
 .ds-icon--grey {
-    &::after {
+    &::after,
+    &.ds-icon--before::before {
         filter: config.$filter-grey;
-    }
-}
-
-.ds-icon--before {
-    //padding-right: inherit;
-    //padding-left: 1.75em; /* 28px for 1rem - using em here to suit font size change */
-
-    &::after {
-        left: 0;
-        right: auto;
     }
 }
 
@@ -81,6 +95,18 @@
     &::after {
         background-image: url("icons/feather/activity.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/activity.svg");
+        }
+
+    }
 }
 
 .ds-icon-airplay {
@@ -88,6 +114,18 @@
 
     &::after {
         background-image: url("icons/feather/airplay.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/airplay.svg");
+        }
+
     }
 }
 
@@ -97,6 +135,18 @@
     &::after {
         background-image: url("icons/feather/alert-circle.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/alert-circle.svg");
+        }
+
+    }
 }
 
 .ds-icon-alert-octagon {
@@ -104,6 +154,18 @@
 
     &::after {
         background-image: url("icons/feather/alert-octagon.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/alert-octagon.svg");
+        }
+
     }
 }
 
@@ -113,6 +175,18 @@
     &::after {
         background-image: url("icons/feather/alert-triangle.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/alert-triangle.svg");
+        }
+
+    }
 }
 
 .ds-icon-align-center {
@@ -120,6 +194,18 @@
 
     &::after {
         background-image: url("icons/feather/align-center.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/align-center.svg");
+        }
+
     }
 }
 
@@ -129,6 +215,18 @@
     &::after {
         background-image: url("icons/feather/align-justify.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/align-justify.svg");
+        }
+
+    }
 }
 
 .ds-icon-align-left {
@@ -136,6 +234,18 @@
 
     &::after {
         background-image: url("icons/feather/align-left.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/align-left.svg");
+        }
+
     }
 }
 
@@ -145,6 +255,18 @@
     &::after {
         background-image: url("icons/feather/align-right.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/align-right.svg");
+        }
+
+    }
 }
 
 .ds-icon-anchor {
@@ -152,6 +274,18 @@
 
     &::after {
         background-image: url("icons/feather/anchor.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/anchor.svg");
+        }
+
     }
 }
 
@@ -161,6 +295,18 @@
     &::after {
         background-image: url("icons/feather/aperture.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/aperture.svg");
+        }
+
+    }
 }
 
 .ds-icon-archive {
@@ -168,6 +314,18 @@
 
     &::after {
         background-image: url("icons/feather/archive.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/archive.svg");
+        }
+
     }
 }
 
@@ -177,6 +335,18 @@
     &::after {
         background-image: url("icons/feather/arrow-down-circle.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/arrow-down-circle.svg");
+        }
+
+    }
 }
 
 .ds-icon-arrow-down-left {
@@ -184,6 +354,18 @@
 
     &::after {
         background-image: url("icons/feather/arrow-down-left.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/arrow-down-left.svg");
+        }
+
     }
 }
 
@@ -193,6 +375,18 @@
     &::after {
         background-image: url("icons/feather/arrow-down-right.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/arrow-down-right.svg");
+        }
+
+    }
 }
 
 .ds-icon-arrow-down {
@@ -200,6 +394,18 @@
 
     &::after {
         background-image: url("icons/feather/arrow-down.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/arrow-down.svg");
+        }
+
     }
 }
 
@@ -209,6 +415,18 @@
     &::after {
         background-image: url("icons/feather/arrow-left-circle.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/arrow-left-circle.svg");
+        }
+
+    }
 }
 
 .ds-icon-arrow-left {
@@ -216,6 +434,18 @@
 
     &::after {
         background-image: url("icons/feather/arrow-left.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/arrow-left.svg");
+        }
+
     }
 }
 
@@ -225,6 +455,18 @@
     &::after {
         background-image: url("icons/feather/arrow-right-circle.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/arrow-right-circle.svg");
+        }
+
+    }
 }
 
 .ds-icon-arrow-right {
@@ -232,6 +474,18 @@
 
     &::after {
         background-image: url("icons/feather/arrow-right.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/arrow-right.svg");
+        }
+
     }
 }
 
@@ -241,6 +495,18 @@
     &::after {
         background-image: url("icons/feather/arrow-up-circle.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/arrow-up-circle.svg");
+        }
+
+    }
 }
 
 .ds-icon-arrow-up-left {
@@ -248,6 +514,18 @@
 
     &::after {
         background-image: url("icons/feather/arrow-up-left.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/arrow-up-left.svg");
+        }
+
     }
 }
 
@@ -257,6 +535,18 @@
     &::after {
         background-image: url("icons/feather/arrow-up-right.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/arrow-up-right.svg");
+        }
+
+    }
 }
 
 .ds-icon-arrow-up {
@@ -264,6 +554,18 @@
 
     &::after {
         background-image: url("icons/feather/arrow-up.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/arrow-up.svg");
+        }
+
     }
 }
 
@@ -273,6 +575,18 @@
     &::after {
         background-image: url("icons/feather/at-sign.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/at-sign.svg");
+        }
+
+    }
 }
 
 .ds-icon-award {
@@ -280,6 +594,18 @@
 
     &::after {
         background-image: url("icons/feather/award.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/award.svg");
+        }
+
     }
 }
 
@@ -289,6 +615,18 @@
     &::after {
         background-image: url("icons/feather/bar-chart-2.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/bar-chart-2.svg");
+        }
+
+    }
 }
 
 .ds-icon-bar-chart {
@@ -296,6 +634,18 @@
 
     &::after {
         background-image: url("icons/feather/bar-chart.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/bar-chart.svg");
+        }
+
     }
 }
 
@@ -305,6 +655,18 @@
     &::after {
         background-image: url("icons/feather/battery-charging.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/battery-charging.svg");
+        }
+
+    }
 }
 
 .ds-icon-battery {
@@ -312,6 +674,18 @@
 
     &::after {
         background-image: url("icons/feather/battery.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/battery.svg");
+        }
+
     }
 }
 
@@ -321,6 +695,18 @@
     &::after {
         background-image: url("icons/feather/bell-off.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/bell-off.svg");
+        }
+
+    }
 }
 
 .ds-icon-bell {
@@ -328,6 +714,18 @@
 
     &::after {
         background-image: url("icons/feather/bell.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/bell.svg");
+        }
+
     }
 }
 
@@ -337,6 +735,18 @@
     &::after {
         background-image: url("icons/feather/bluetooth.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/bluetooth.svg");
+        }
+
+    }
 }
 
 .ds-icon-bold {
@@ -344,6 +754,18 @@
 
     &::after {
         background-image: url("icons/feather/bold.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/bold.svg");
+        }
+
     }
 }
 
@@ -353,6 +775,18 @@
     &::after {
         background-image: url("icons/feather/book-open.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/book-open.svg");
+        }
+
+    }
 }
 
 .ds-icon-book {
@@ -360,6 +794,18 @@
 
     &::after {
         background-image: url("icons/feather/book.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/book.svg");
+        }
+
     }
 }
 
@@ -369,6 +815,18 @@
     &::after {
         background-image: url("icons/feather/bookmark.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/bookmark.svg");
+        }
+
+    }
 }
 
 .ds-icon-box {
@@ -376,6 +834,18 @@
 
     &::after {
         background-image: url("icons/feather/box.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/box.svg");
+        }
+
     }
 }
 
@@ -385,6 +855,18 @@
     &::after {
         background-image: url("icons/feather/briefcase.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/briefcase.svg");
+        }
+
+    }
 }
 
 .ds-icon-calendar {
@@ -392,6 +874,18 @@
 
     &::after {
         background-image: url("icons/feather/calendar.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/calendar.svg");
+        }
+
     }
 }
 
@@ -401,6 +895,18 @@
     &::after {
         background-image: url("icons/feather/camera-off.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/camera-off.svg");
+        }
+
+    }
 }
 
 .ds-icon-camera {
@@ -408,6 +914,18 @@
 
     &::after {
         background-image: url("icons/feather/camera.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/camera.svg");
+        }
+
     }
 }
 
@@ -417,6 +935,18 @@
     &::after {
         background-image: url("icons/feather/cast.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/cast.svg");
+        }
+
+    }
 }
 
 .ds-icon-check-circle {
@@ -424,6 +954,18 @@
 
     &::after {
         background-image: url("icons/feather/check-circle.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/check-circle.svg");
+        }
+
     }
 }
 
@@ -433,6 +975,18 @@
     &::after {
         background-image: url("icons/feather/check-square.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/check-square.svg");
+        }
+
+    }
 }
 
 .ds-icon-check {
@@ -440,6 +994,18 @@
 
     &::after {
         background-image: url("icons/feather/check.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/check.svg");
+        }
+
     }
 }
 
@@ -449,6 +1015,18 @@
     &::after {
         background-image: url("icons/feather/chevron-down.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/chevron-down.svg");
+        }
+
+    }
 }
 
 .ds-icon-chevron-left {
@@ -456,6 +1034,18 @@
 
     &::after {
         background-image: url("icons/feather/chevron-left.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/chevron-left.svg");
+        }
+
     }
 }
 
@@ -465,6 +1055,18 @@
     &::after {
         background-image: url("icons/feather/chevron-right.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/chevron-right.svg");
+        }
+
+    }
 }
 
 .ds-icon-chevron-up {
@@ -472,6 +1074,18 @@
 
     &::after {
         background-image: url("icons/feather/chevron-up.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/chevron-up.svg");
+        }
+
     }
 }
 
@@ -481,6 +1095,18 @@
     &::after {
         background-image: url("icons/feather/chevrons-down.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/chevrons-down.svg");
+        }
+
+    }
 }
 
 .ds-icon-chevrons-left {
@@ -488,6 +1114,18 @@
 
     &::after {
         background-image: url("icons/feather/chevrons-left.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/chevrons-left.svg");
+        }
+
     }
 }
 
@@ -497,6 +1135,18 @@
     &::after {
         background-image: url("icons/feather/chevrons-right.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/chevrons-right.svg");
+        }
+
+    }
 }
 
 .ds-icon-chevrons-up {
@@ -504,6 +1154,18 @@
 
     &::after {
         background-image: url("icons/feather/chevrons-up.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/chevrons-up.svg");
+        }
+
     }
 }
 
@@ -513,6 +1175,18 @@
     &::after {
         background-image: url("icons/feather/chrome.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/chrome.svg");
+        }
+
+    }
 }
 
 .ds-icon-circle {
@@ -520,6 +1194,18 @@
 
     &::after {
         background-image: url("icons/feather/circle.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/circle.svg");
+        }
+
     }
 }
 
@@ -529,6 +1215,18 @@
     &::after {
         background-image: url("icons/feather/clipboard.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/clipboard.svg");
+        }
+
+    }
 }
 
 .ds-icon-clock {
@@ -536,6 +1234,18 @@
 
     &::after {
         background-image: url("icons/feather/clock.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/clock.svg");
+        }
+
     }
 }
 
@@ -545,6 +1255,18 @@
     &::after {
         background-image: url("icons/feather/cloud-drizzle.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/cloud-drizzle.svg");
+        }
+
+    }
 }
 
 .ds-icon-cloud-lightning {
@@ -552,6 +1274,18 @@
 
     &::after {
         background-image: url("icons/feather/cloud-lightning.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/cloud-lightning.svg");
+        }
+
     }
 }
 
@@ -561,6 +1295,18 @@
     &::after {
         background-image: url("icons/feather/cloud-off.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/cloud-off.svg");
+        }
+
+    }
 }
 
 .ds-icon-cloud-rain {
@@ -568,6 +1314,18 @@
 
     &::after {
         background-image: url("icons/feather/cloud-rain.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/cloud-rain.svg");
+        }
+
     }
 }
 
@@ -577,6 +1335,18 @@
     &::after {
         background-image: url("icons/feather/cloud-snow.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/cloud-snow.svg");
+        }
+
+    }
 }
 
 .ds-icon-cloud {
@@ -584,6 +1354,18 @@
 
     &::after {
         background-image: url("icons/feather/cloud.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/cloud.svg");
+        }
+
     }
 }
 
@@ -593,6 +1375,18 @@
     &::after {
         background-image: url("icons/feather/code.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/code.svg");
+        }
+
+    }
 }
 
 .ds-icon-codepen {
@@ -600,6 +1394,18 @@
 
     &::after {
         background-image: url("icons/feather/codepen.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/codepen.svg");
+        }
+
     }
 }
 
@@ -609,6 +1415,18 @@
     &::after {
         background-image: url("icons/feather/codesandbox.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/codesandbox.svg");
+        }
+
+    }
 }
 
 .ds-icon-coffee {
@@ -616,6 +1434,18 @@
 
     &::after {
         background-image: url("icons/feather/coffee.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/coffee.svg");
+        }
+
     }
 }
 
@@ -625,6 +1455,18 @@
     &::after {
         background-image: url("icons/feather/columns.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/columns.svg");
+        }
+
+    }
 }
 
 .ds-icon-command {
@@ -632,6 +1474,18 @@
 
     &::after {
         background-image: url("icons/feather/command.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/command.svg");
+        }
+
     }
 }
 
@@ -641,6 +1495,18 @@
     &::after {
         background-image: url("icons/feather/compass.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/compass.svg");
+        }
+
+    }
 }
 
 .ds-icon-copy {
@@ -648,6 +1514,18 @@
 
     &::after {
         background-image: url("icons/feather/copy.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/copy.svg");
+        }
+
     }
 }
 
@@ -657,6 +1535,18 @@
     &::after {
         background-image: url("icons/feather/corner-down-left.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/corner-down-left.svg");
+        }
+
+    }
 }
 
 .ds-icon-corner-down-right {
@@ -664,6 +1554,18 @@
 
     &::after {
         background-image: url("icons/feather/corner-down-right.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/corner-down-right.svg");
+        }
+
     }
 }
 
@@ -673,6 +1575,18 @@
     &::after {
         background-image: url("icons/feather/corner-left-down.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/corner-left-down.svg");
+        }
+
+    }
 }
 
 .ds-icon-corner-left-up {
@@ -680,6 +1594,18 @@
 
     &::after {
         background-image: url("icons/feather/corner-left-up.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/corner-left-up.svg");
+        }
+
     }
 }
 
@@ -689,6 +1615,18 @@
     &::after {
         background-image: url("icons/feather/corner-right-down.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/corner-right-down.svg");
+        }
+
+    }
 }
 
 .ds-icon-corner-right-up {
@@ -696,6 +1634,18 @@
 
     &::after {
         background-image: url("icons/feather/corner-right-up.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/corner-right-up.svg");
+        }
+
     }
 }
 
@@ -705,6 +1655,18 @@
     &::after {
         background-image: url("icons/feather/corner-up-left.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/corner-up-left.svg");
+        }
+
+    }
 }
 
 .ds-icon-corner-up-right {
@@ -712,6 +1674,18 @@
 
     &::after {
         background-image: url("icons/feather/corner-up-right.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/corner-up-right.svg");
+        }
+
     }
 }
 
@@ -721,6 +1695,18 @@
     &::after {
         background-image: url("icons/feather/cpu.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/cpu.svg");
+        }
+
+    }
 }
 
 .ds-icon-credit-card {
@@ -728,6 +1714,18 @@
 
     &::after {
         background-image: url("icons/feather/credit-card.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/credit-card.svg");
+        }
+
     }
 }
 
@@ -737,6 +1735,18 @@
     &::after {
         background-image: url("icons/feather/crop.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/crop.svg");
+        }
+
+    }
 }
 
 .ds-icon-crosshair {
@@ -744,6 +1754,18 @@
 
     &::after {
         background-image: url("icons/feather/crosshair.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/crosshair.svg");
+        }
+
     }
 }
 
@@ -753,6 +1775,18 @@
     &::after {
         background-image: url("icons/feather/database.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/database.svg");
+        }
+
+    }
 }
 
 .ds-icon-delete {
@@ -760,6 +1794,18 @@
 
     &::after {
         background-image: url("icons/feather/delete.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/delete.svg");
+        }
+
     }
 }
 
@@ -769,6 +1815,18 @@
     &::after {
         background-image: url("icons/feather/disc.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/disc.svg");
+        }
+
+    }
 }
 
 .ds-icon-dollar-sign {
@@ -776,6 +1834,18 @@
 
     &::after {
         background-image: url("icons/feather/dollar-sign.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/dollar-sign.svg");
+        }
+
     }
 }
 
@@ -785,6 +1855,18 @@
     &::after {
         background-image: url("icons/feather/download-cloud.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/download-cloud.svg");
+        }
+
+    }
 }
 
 .ds-icon-download {
@@ -792,6 +1874,18 @@
 
     &::after {
         background-image: url("icons/feather/download.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/download.svg");
+        }
+
     }
 }
 
@@ -801,6 +1895,18 @@
     &::after {
         background-image: url("icons/feather/droplet.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/droplet.svg");
+        }
+
+    }
 }
 
 .ds-icon-edit-2 {
@@ -808,6 +1914,18 @@
 
     &::after {
         background-image: url("icons/feather/edit-2.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/edit-2.svg");
+        }
+
     }
 }
 
@@ -817,6 +1935,18 @@
     &::after {
         background-image: url("icons/feather/edit-3.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/edit-3.svg");
+        }
+
+    }
 }
 
 .ds-icon-edit {
@@ -824,6 +1954,18 @@
 
     &::after {
         background-image: url("icons/feather/edit.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/edit.svg");
+        }
+
     }
 }
 
@@ -833,6 +1975,18 @@
     &::after {
         background-image: url("icons/feather/external-link.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/external-link.svg");
+        }
+
+    }
 }
 
 .ds-icon-eye-off {
@@ -840,6 +1994,18 @@
 
     &::after {
         background-image: url("icons/feather/eye-off.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/eye-off.svg");
+        }
+
     }
 }
 
@@ -849,6 +2015,18 @@
     &::after {
         background-image: url("icons/feather/eye.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/eye.svg");
+        }
+
+    }
 }
 
 .ds-icon-facebook {
@@ -856,6 +2034,18 @@
 
     &::after {
         background-image: url("icons/feather/facebook.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/facebook.svg");
+        }
+
     }
 }
 
@@ -865,6 +2055,18 @@
     &::after {
         background-image: url("icons/feather/fast-forward.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/fast-forward.svg");
+        }
+
+    }
 }
 
 .ds-icon-feather {
@@ -872,6 +2074,18 @@
 
     &::after {
         background-image: url("icons/feather/feather.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/feather.svg");
+        }
+
     }
 }
 
@@ -881,6 +2095,18 @@
     &::after {
         background-image: url("icons/feather/figma.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/figma.svg");
+        }
+
+    }
 }
 
 .ds-icon-file-minus {
@@ -888,6 +2114,18 @@
 
     &::after {
         background-image: url("icons/feather/file-minus.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/file-minus.svg");
+        }
+
     }
 }
 
@@ -897,6 +2135,18 @@
     &::after {
         background-image: url("icons/feather/file-plus.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/file-plus.svg");
+        }
+
+    }
 }
 
 .ds-icon-file-text {
@@ -904,6 +2154,18 @@
 
     &::after {
         background-image: url("icons/feather/file-text.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/file-text.svg");
+        }
+
     }
 }
 
@@ -913,6 +2175,18 @@
     &::after {
         background-image: url("icons/feather/file.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/file.svg");
+        }
+
+    }
 }
 
 .ds-icon-film {
@@ -920,6 +2194,18 @@
 
     &::after {
         background-image: url("icons/feather/film.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/film.svg");
+        }
+
     }
 }
 
@@ -929,6 +2215,18 @@
     &::after {
         background-image: url("icons/feather/filter.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/filter.svg");
+        }
+
+    }
 }
 
 .ds-icon-flag {
@@ -936,6 +2234,18 @@
 
     &::after {
         background-image: url("icons/feather/flag.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/flag.svg");
+        }
+
     }
 }
 
@@ -945,6 +2255,18 @@
     &::after {
         background-image: url("icons/feather/folder-minus.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/folder-minus.svg");
+        }
+
+    }
 }
 
 .ds-icon-folder-plus {
@@ -952,6 +2274,18 @@
 
     &::after {
         background-image: url("icons/feather/folder-plus.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/folder-plus.svg");
+        }
+
     }
 }
 
@@ -961,6 +2295,18 @@
     &::after {
         background-image: url("icons/feather/folder.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/folder.svg");
+        }
+
+    }
 }
 
 .ds-icon-frown {
@@ -968,6 +2314,18 @@
 
     &::after {
         background-image: url("icons/feather/frown.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/frown.svg");
+        }
+
     }
 }
 
@@ -977,6 +2335,18 @@
     &::after {
         background-image: url("icons/feather/gift.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/gift.svg");
+        }
+
+    }
 }
 
 .ds-icon-git-branch {
@@ -984,6 +2354,18 @@
 
     &::after {
         background-image: url("icons/feather/git-branch.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/git-branch.svg");
+        }
+
     }
 }
 
@@ -993,6 +2375,18 @@
     &::after {
         background-image: url("icons/feather/git-commit.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/git-commit.svg");
+        }
+
+    }
 }
 
 .ds-icon-git-merge {
@@ -1000,6 +2394,18 @@
 
     &::after {
         background-image: url("icons/feather/git-merge.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/git-merge.svg");
+        }
+
     }
 }
 
@@ -1009,6 +2415,18 @@
     &::after {
         background-image: url("icons/feather/git-pull-request.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/git-pull-request.svg");
+        }
+
+    }
 }
 
 .ds-icon-github {
@@ -1016,6 +2434,18 @@
 
     &::after {
         background-image: url("icons/feather/github.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/github.svg");
+        }
+
     }
 }
 
@@ -1025,6 +2455,18 @@
     &::after {
         background-image: url("icons/feather/gitlab.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/gitlab.svg");
+        }
+
+    }
 }
 
 .ds-icon-globe {
@@ -1032,6 +2474,18 @@
 
     &::after {
         background-image: url("icons/feather/globe.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/globe.svg");
+        }
+
     }
 }
 
@@ -1041,6 +2495,18 @@
     &::after {
         background-image: url("icons/feather/grid.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/grid.svg");
+        }
+
+    }
 }
 
 .ds-icon-hard-drive {
@@ -1048,6 +2514,18 @@
 
     &::after {
         background-image: url("icons/feather/hard-drive.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/hard-drive.svg");
+        }
+
     }
 }
 
@@ -1057,6 +2535,18 @@
     &::after {
         background-image: url("icons/feather/hash.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/hash.svg");
+        }
+
+    }
 }
 
 .ds-icon-headphones {
@@ -1064,6 +2554,18 @@
 
     &::after {
         background-image: url("icons/feather/headphones.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/headphones.svg");
+        }
+
     }
 }
 
@@ -1073,6 +2575,18 @@
     &::after {
         background-image: url("icons/feather/heart.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/heart.svg");
+        }
+
+    }
 }
 
 .ds-icon-help-circle {
@@ -1080,6 +2594,18 @@
 
     &::after {
         background-image: url("icons/feather/help-circle.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/help-circle.svg");
+        }
+
     }
 }
 
@@ -1089,6 +2615,18 @@
     &::after {
         background-image: url("icons/feather/hexagon.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/hexagon.svg");
+        }
+
+    }
 }
 
 .ds-icon-home {
@@ -1096,6 +2634,18 @@
 
     &::after {
         background-image: url("icons/feather/home.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/home.svg");
+        }
+
     }
 }
 
@@ -1105,6 +2655,18 @@
     &::after {
         background-image: url("icons/feather/image.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/image.svg");
+        }
+
+    }
 }
 
 .ds-icon-inbox {
@@ -1112,6 +2674,18 @@
 
     &::after {
         background-image: url("icons/feather/inbox.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/inbox.svg");
+        }
+
     }
 }
 
@@ -1121,6 +2695,18 @@
     &::after {
         background-image: url("icons/feather/info.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/info.svg");
+        }
+
+    }
 }
 
 .ds-icon-instagram {
@@ -1128,6 +2714,18 @@
 
     &::after {
         background-image: url("icons/feather/instagram.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/instagram.svg");
+        }
+
     }
 }
 
@@ -1137,6 +2735,18 @@
     &::after {
         background-image: url("icons/feather/italic.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/italic.svg");
+        }
+
+    }
 }
 
 .ds-icon-key {
@@ -1144,6 +2754,18 @@
 
     &::after {
         background-image: url("icons/feather/key.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/key.svg");
+        }
+
     }
 }
 
@@ -1153,6 +2775,18 @@
     &::after {
         background-image: url("icons/feather/layers.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/layers.svg");
+        }
+
+    }
 }
 
 .ds-icon-layout {
@@ -1160,6 +2794,18 @@
 
     &::after {
         background-image: url("icons/feather/layout.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/layout.svg");
+        }
+
     }
 }
 
@@ -1169,6 +2815,18 @@
     &::after {
         background-image: url("icons/feather/life-buoy.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/life-buoy.svg");
+        }
+
+    }
 }
 
 .ds-icon-link-2 {
@@ -1176,6 +2834,18 @@
 
     &::after {
         background-image: url("icons/feather/link-2.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/link-2.svg");
+        }
+
     }
 }
 
@@ -1185,6 +2855,18 @@
     &::after {
         background-image: url("icons/feather/link.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/link.svg");
+        }
+
+    }
 }
 
 .ds-icon-linkedin {
@@ -1192,6 +2874,18 @@
 
     &::after {
         background-image: url("icons/feather/linkedin.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/linkedin.svg");
+        }
+
     }
 }
 
@@ -1201,6 +2895,18 @@
     &::after {
         background-image: url("icons/feather/list.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/list.svg");
+        }
+
+    }
 }
 
 .ds-icon-loader {
@@ -1208,6 +2914,18 @@
 
     &::after {
         background-image: url("icons/feather/loader.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/loader.svg");
+        }
+
     }
 }
 
@@ -1217,6 +2935,18 @@
     &::after {
         background-image: url("icons/feather/lock.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/lock.svg");
+        }
+
+    }
 }
 
 .ds-icon-log-in {
@@ -1224,6 +2954,18 @@
 
     &::after {
         background-image: url("icons/feather/log-in.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/log-in.svg");
+        }
+
     }
 }
 
@@ -1233,6 +2975,18 @@
     &::after {
         background-image: url("icons/feather/log-out.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/log-out.svg");
+        }
+
+    }
 }
 
 .ds-icon-mail {
@@ -1240,6 +2994,18 @@
 
     &::after {
         background-image: url("icons/feather/mail.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/mail.svg");
+        }
+
     }
 }
 
@@ -1249,6 +3015,18 @@
     &::after {
         background-image: url("icons/feather/map-pin.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/map-pin.svg");
+        }
+
+    }
 }
 
 .ds-icon-map {
@@ -1256,6 +3034,18 @@
 
     &::after {
         background-image: url("icons/feather/map.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/map.svg");
+        }
+
     }
 }
 
@@ -1265,6 +3055,18 @@
     &::after {
         background-image: url("icons/feather/maximize-2.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/maximize-2.svg");
+        }
+
+    }
 }
 
 .ds-icon-maximize {
@@ -1272,6 +3074,18 @@
 
     &::after {
         background-image: url("icons/feather/maximize.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/maximize.svg");
+        }
+
     }
 }
 
@@ -1281,6 +3095,18 @@
     &::after {
         background-image: url("icons/feather/meh.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/meh.svg");
+        }
+
+    }
 }
 
 .ds-icon-menu {
@@ -1288,6 +3114,18 @@
 
     &::after {
         background-image: url("icons/feather/menu.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/menu.svg");
+        }
+
     }
 }
 
@@ -1297,6 +3135,18 @@
     &::after {
         background-image: url("icons/feather/message-circle.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/message-circle.svg");
+        }
+
+    }
 }
 
 .ds-icon-message-square {
@@ -1304,6 +3154,18 @@
 
     &::after {
         background-image: url("icons/feather/message-square.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/message-square.svg");
+        }
+
     }
 }
 
@@ -1313,6 +3175,18 @@
     &::after {
         background-image: url("icons/feather/mic-off.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/mic-off.svg");
+        }
+
+    }
 }
 
 .ds-icon-mic {
@@ -1320,6 +3194,18 @@
 
     &::after {
         background-image: url("icons/feather/mic.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/mic.svg");
+        }
+
     }
 }
 
@@ -1329,6 +3215,18 @@
     &::after {
         background-image: url("icons/feather/minimize-2.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/minimize-2.svg");
+        }
+
+    }
 }
 
 .ds-icon-minimize {
@@ -1336,6 +3234,18 @@
 
     &::after {
         background-image: url("icons/feather/minimize.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/minimize.svg");
+        }
+
     }
 }
 
@@ -1345,6 +3255,18 @@
     &::after {
         background-image: url("icons/feather/minus-circle.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/minus-circle.svg");
+        }
+
+    }
 }
 
 .ds-icon-minus-square {
@@ -1352,6 +3274,18 @@
 
     &::after {
         background-image: url("icons/feather/minus-square.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/minus-square.svg");
+        }
+
     }
 }
 
@@ -1361,6 +3295,18 @@
     &::after {
         background-image: url("icons/feather/minus.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/minus.svg");
+        }
+
+    }
 }
 
 .ds-icon-monitor {
@@ -1368,6 +3314,18 @@
 
     &::after {
         background-image: url("icons/feather/monitor.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/monitor.svg");
+        }
+
     }
 }
 
@@ -1377,6 +3335,18 @@
     &::after {
         background-image: url("icons/feather/moon.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/moon.svg");
+        }
+
+    }
 }
 
 .ds-icon-more-horizontal {
@@ -1384,6 +3354,18 @@
 
     &::after {
         background-image: url("icons/feather/more-horizontal.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/more-horizontal.svg");
+        }
+
     }
 }
 
@@ -1393,6 +3375,18 @@
     &::after {
         background-image: url("icons/feather/more-vertical.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/more-vertical.svg");
+        }
+
+    }
 }
 
 .ds-icon-mouse-pointer {
@@ -1400,6 +3394,18 @@
 
     &::after {
         background-image: url("icons/feather/mouse-pointer.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/mouse-pointer.svg");
+        }
+
     }
 }
 
@@ -1409,6 +3415,18 @@
     &::after {
         background-image: url("icons/feather/move.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/move.svg");
+        }
+
+    }
 }
 
 .ds-icon-music {
@@ -1416,6 +3434,18 @@
 
     &::after {
         background-image: url("icons/feather/music.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/music.svg");
+        }
+
     }
 }
 
@@ -1425,6 +3455,18 @@
     &::after {
         background-image: url("icons/feather/navigation-2.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/navigation-2.svg");
+        }
+
+    }
 }
 
 .ds-icon-navigation {
@@ -1432,6 +3474,18 @@
 
     &::after {
         background-image: url("icons/feather/navigation.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/navigation.svg");
+        }
+
     }
 }
 
@@ -1441,6 +3495,18 @@
     &::after {
         background-image: url("icons/feather/octagon.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/octagon.svg");
+        }
+
+    }
 }
 
 .ds-icon-package {
@@ -1448,6 +3514,18 @@
 
     &::after {
         background-image: url("icons/feather/package.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/package.svg");
+        }
+
     }
 }
 
@@ -1457,6 +3535,18 @@
     &::after {
         background-image: url("icons/feather/paperclip.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/paperclip.svg");
+        }
+
+    }
 }
 
 .ds-icon-pause-circle {
@@ -1464,6 +3554,18 @@
 
     &::after {
         background-image: url("icons/feather/pause-circle.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/pause-circle.svg");
+        }
+
     }
 }
 
@@ -1473,6 +3575,18 @@
     &::after {
         background-image: url("icons/feather/pause.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/pause.svg");
+        }
+
+    }
 }
 
 .ds-icon-pen-tool {
@@ -1480,6 +3594,18 @@
 
     &::after {
         background-image: url("icons/feather/pen-tool.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/pen-tool.svg");
+        }
+
     }
 }
 
@@ -1489,6 +3615,18 @@
     &::after {
         background-image: url("icons/feather/percent.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/percent.svg");
+        }
+
+    }
 }
 
 .ds-icon-phone-call {
@@ -1496,6 +3634,18 @@
 
     &::after {
         background-image: url("icons/feather/phone-call.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/phone-call.svg");
+        }
+
     }
 }
 
@@ -1505,6 +3655,18 @@
     &::after {
         background-image: url("icons/feather/phone-forwarded.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/phone-forwarded.svg");
+        }
+
+    }
 }
 
 .ds-icon-phone-incoming {
@@ -1512,6 +3674,18 @@
 
     &::after {
         background-image: url("icons/feather/phone-incoming.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/phone-incoming.svg");
+        }
+
     }
 }
 
@@ -1521,6 +3695,18 @@
     &::after {
         background-image: url("icons/feather/phone-missed.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/phone-missed.svg");
+        }
+
+    }
 }
 
 .ds-icon-phone-off {
@@ -1528,6 +3714,18 @@
 
     &::after {
         background-image: url("icons/feather/phone-off.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/phone-off.svg");
+        }
+
     }
 }
 
@@ -1537,6 +3735,18 @@
     &::after {
         background-image: url("icons/feather/phone-outgoing.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/phone-outgoing.svg");
+        }
+
+    }
 }
 
 .ds-icon-phone {
@@ -1544,6 +3754,18 @@
 
     &::after {
         background-image: url("icons/feather/phone.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/phone.svg");
+        }
+
     }
 }
 
@@ -1553,6 +3775,18 @@
     &::after {
         background-image: url("icons/feather/pie-chart.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/pie-chart.svg");
+        }
+
+    }
 }
 
 .ds-icon-play-circle {
@@ -1560,6 +3794,18 @@
 
     &::after {
         background-image: url("icons/feather/play-circle.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/play-circle.svg");
+        }
+
     }
 }
 
@@ -1569,6 +3815,18 @@
     &::after {
         background-image: url("icons/feather/play.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/play.svg");
+        }
+
+    }
 }
 
 .ds-icon-plus-circle {
@@ -1576,6 +3834,18 @@
 
     &::after {
         background-image: url("icons/feather/plus-circle.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/plus-circle.svg");
+        }
+
     }
 }
 
@@ -1585,6 +3855,18 @@
     &::after {
         background-image: url("icons/feather/plus-square.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/plus-square.svg");
+        }
+
+    }
 }
 
 .ds-icon-plus {
@@ -1592,6 +3874,18 @@
 
     &::after {
         background-image: url("icons/feather/plus.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/plus.svg");
+        }
+
     }
 }
 
@@ -1601,6 +3895,18 @@
     &::after {
         background-image: url("icons/feather/pocket.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/pocket.svg");
+        }
+
+    }
 }
 
 .ds-icon-power {
@@ -1608,6 +3914,18 @@
 
     &::after {
         background-image: url("icons/feather/power.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/power.svg");
+        }
+
     }
 }
 
@@ -1617,6 +3935,18 @@
     &::after {
         background-image: url("icons/feather/printer.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/printer.svg");
+        }
+
+    }
 }
 
 .ds-icon-radio {
@@ -1624,6 +3954,18 @@
 
     &::after {
         background-image: url("icons/feather/radio.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/radio.svg");
+        }
+
     }
 }
 
@@ -1633,6 +3975,18 @@
     &::after {
         background-image: url("icons/feather/refresh-ccw.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/refresh-ccw.svg");
+        }
+
+    }
 }
 
 .ds-icon-refresh-cw {
@@ -1640,6 +3994,18 @@
 
     &::after {
         background-image: url("icons/feather/refresh-cw.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/refresh-cw.svg");
+        }
+
     }
 }
 
@@ -1649,6 +4015,18 @@
     &::after {
         background-image: url("icons/feather/repeat.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/repeat.svg");
+        }
+
+    }
 }
 
 .ds-icon-rewind {
@@ -1656,6 +4034,18 @@
 
     &::after {
         background-image: url("icons/feather/rewind.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/rewind.svg");
+        }
+
     }
 }
 
@@ -1665,6 +4055,18 @@
     &::after {
         background-image: url("icons/feather/rotate-ccw.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/rotate-ccw.svg");
+        }
+
+    }
 }
 
 .ds-icon-rotate-cw {
@@ -1672,6 +4074,18 @@
 
     &::after {
         background-image: url("icons/feather/rotate-cw.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/rotate-cw.svg");
+        }
+
     }
 }
 
@@ -1681,6 +4095,18 @@
     &::after {
         background-image: url("icons/feather/rss.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/rss.svg");
+        }
+
+    }
 }
 
 .ds-icon-save {
@@ -1688,6 +4114,18 @@
 
     &::after {
         background-image: url("icons/feather/save.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/save.svg");
+        }
+
     }
 }
 
@@ -1697,6 +4135,18 @@
     &::after {
         background-image: url("icons/feather/scissors.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/scissors.svg");
+        }
+
+    }
 }
 
 .ds-icon-search {
@@ -1704,6 +4154,18 @@
 
     &::after {
         background-image: url("icons/feather/search.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/search.svg");
+        }
+
     }
 }
 
@@ -1713,6 +4175,18 @@
     &::after {
         background-image: url("icons/feather/send.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/send.svg");
+        }
+
+    }
 }
 
 .ds-icon-server {
@@ -1720,6 +4194,18 @@
 
     &::after {
         background-image: url("icons/feather/server.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/server.svg");
+        }
+
     }
 }
 
@@ -1729,6 +4215,18 @@
     &::after {
         background-image: url("icons/feather/settings.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/settings.svg");
+        }
+
+    }
 }
 
 .ds-icon-share-2 {
@@ -1736,6 +4234,18 @@
 
     &::after {
         background-image: url("icons/feather/share-2.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/share-2.svg");
+        }
+
     }
 }
 
@@ -1745,6 +4255,18 @@
     &::after {
         background-image: url("icons/feather/share.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/share.svg");
+        }
+
+    }
 }
 
 .ds-icon-shield-off {
@@ -1752,6 +4274,18 @@
 
     &::after {
         background-image: url("icons/feather/shield-off.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/shield-off.svg");
+        }
+
     }
 }
 
@@ -1761,6 +4295,18 @@
     &::after {
         background-image: url("icons/feather/shield.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/shield.svg");
+        }
+
+    }
 }
 
 .ds-icon-shopping-bag {
@@ -1768,6 +4314,18 @@
 
     &::after {
         background-image: url("icons/feather/shopping-bag.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/shopping-bag.svg");
+        }
+
     }
 }
 
@@ -1777,6 +4335,18 @@
     &::after {
         background-image: url("icons/feather/shopping-cart.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/shopping-cart.svg");
+        }
+
+    }
 }
 
 .ds-icon-shuffle {
@@ -1784,6 +4354,18 @@
 
     &::after {
         background-image: url("icons/feather/shuffle.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/shuffle.svg");
+        }
+
     }
 }
 
@@ -1793,6 +4375,18 @@
     &::after {
         background-image: url("icons/feather/sidebar.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/sidebar.svg");
+        }
+
+    }
 }
 
 .ds-icon-skip-back {
@@ -1800,6 +4394,18 @@
 
     &::after {
         background-image: url("icons/feather/skip-back.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/skip-back.svg");
+        }
+
     }
 }
 
@@ -1809,6 +4415,18 @@
     &::after {
         background-image: url("icons/feather/skip-forward.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/skip-forward.svg");
+        }
+
+    }
 }
 
 .ds-icon-slack {
@@ -1816,6 +4434,18 @@
 
     &::after {
         background-image: url("icons/feather/slack.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/slack.svg");
+        }
+
     }
 }
 
@@ -1825,6 +4455,18 @@
     &::after {
         background-image: url("icons/feather/slash.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/slash.svg");
+        }
+
+    }
 }
 
 .ds-icon-sliders {
@@ -1832,6 +4474,18 @@
 
     &::after {
         background-image: url("icons/feather/sliders.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/sliders.svg");
+        }
+
     }
 }
 
@@ -1841,6 +4495,18 @@
     &::after {
         background-image: url("icons/feather/smartphone.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/smartphone.svg");
+        }
+
+    }
 }
 
 .ds-icon-smile {
@@ -1848,6 +4514,18 @@
 
     &::after {
         background-image: url("icons/feather/smile.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/smile.svg");
+        }
+
     }
 }
 
@@ -1857,6 +4535,18 @@
     &::after {
         background-image: url("icons/feather/speaker.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/speaker.svg");
+        }
+
+    }
 }
 
 .ds-icon-square {
@@ -1864,6 +4554,18 @@
 
     &::after {
         background-image: url("icons/feather/square.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/square.svg");
+        }
+
     }
 }
 
@@ -1873,6 +4575,18 @@
     &::after {
         background-image: url("icons/feather/star.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/star.svg");
+        }
+
+    }
 }
 
 .ds-icon-stop-circle {
@@ -1880,6 +4594,18 @@
 
     &::after {
         background-image: url("icons/feather/stop-circle.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/stop-circle.svg");
+        }
+
     }
 }
 
@@ -1889,6 +4615,18 @@
     &::after {
         background-image: url("icons/feather/sun.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/sun.svg");
+        }
+
+    }
 }
 
 .ds-icon-sunrise {
@@ -1896,6 +4634,18 @@
 
     &::after {
         background-image: url("icons/feather/sunrise.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/sunrise.svg");
+        }
+
     }
 }
 
@@ -1905,6 +4655,18 @@
     &::after {
         background-image: url("icons/feather/sunset.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/sunset.svg");
+        }
+
+    }
 }
 
 .ds-icon-tablet {
@@ -1912,6 +4674,18 @@
 
     &::after {
         background-image: url("icons/feather/tablet.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/tablet.svg");
+        }
+
     }
 }
 
@@ -1921,6 +4695,18 @@
     &::after {
         background-image: url("icons/feather/tag.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/tag.svg");
+        }
+
+    }
 }
 
 .ds-icon-target {
@@ -1928,6 +4714,18 @@
 
     &::after {
         background-image: url("icons/feather/target.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/target.svg");
+        }
+
     }
 }
 
@@ -1937,6 +4735,18 @@
     &::after {
         background-image: url("icons/feather/terminal.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/terminal.svg");
+        }
+
+    }
 }
 
 .ds-icon-thermometer {
@@ -1944,6 +4754,18 @@
 
     &::after {
         background-image: url("icons/feather/thermometer.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/thermometer.svg");
+        }
+
     }
 }
 
@@ -1953,6 +4775,18 @@
     &::after {
         background-image: url("icons/feather/thumbs-down.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/thumbs-down.svg");
+        }
+
+    }
 }
 
 .ds-icon-thumbs-up {
@@ -1960,6 +4794,18 @@
 
     &::after {
         background-image: url("icons/feather/thumbs-up.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/thumbs-up.svg");
+        }
+
     }
 }
 
@@ -1969,6 +4815,18 @@
     &::after {
         background-image: url("icons/feather/toggle-left.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/toggle-left.svg");
+        }
+
+    }
 }
 
 .ds-icon-toggle-right {
@@ -1976,6 +4834,18 @@
 
     &::after {
         background-image: url("icons/feather/toggle-right.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/toggle-right.svg");
+        }
+
     }
 }
 
@@ -1985,6 +4855,18 @@
     &::after {
         background-image: url("icons/feather/trash-2.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/trash-2.svg");
+        }
+
+    }
 }
 
 .ds-icon-trash {
@@ -1992,6 +4874,18 @@
 
     &::after {
         background-image: url("icons/feather/trash.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/trash.svg");
+        }
+
     }
 }
 
@@ -2001,6 +4895,18 @@
     &::after {
         background-image: url("icons/feather/trello.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/trello.svg");
+        }
+
+    }
 }
 
 .ds-icon-trending-down {
@@ -2008,6 +4914,18 @@
 
     &::after {
         background-image: url("icons/feather/trending-down.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/trending-down.svg");
+        }
+
     }
 }
 
@@ -2017,6 +4935,18 @@
     &::after {
         background-image: url("icons/feather/trending-up.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/trending-up.svg");
+        }
+
+    }
 }
 
 .ds-icon-triangle {
@@ -2024,6 +4954,18 @@
 
     &::after {
         background-image: url("icons/feather/triangle.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/triangle.svg");
+        }
+
     }
 }
 
@@ -2033,6 +4975,18 @@
     &::after {
         background-image: url("icons/feather/truck.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/truck.svg");
+        }
+
+    }
 }
 
 .ds-icon-tv {
@@ -2040,6 +4994,18 @@
 
     &::after {
         background-image: url("icons/feather/tv.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/tv.svg");
+        }
+
     }
 }
 
@@ -2049,6 +5015,18 @@
     &::after {
         background-image: url("icons/feather/twitter.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/twitter.svg");
+        }
+
+    }
 }
 
 .ds-icon-type {
@@ -2056,6 +5034,18 @@
 
     &::after {
         background-image: url("icons/feather/type.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/type.svg");
+        }
+
     }
 }
 
@@ -2065,6 +5055,18 @@
     &::after {
         background-image: url("icons/feather/umbrella.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/umbrella.svg");
+        }
+
+    }
 }
 
 .ds-icon-underline {
@@ -2072,6 +5074,18 @@
 
     &::after {
         background-image: url("icons/feather/underline.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/underline.svg");
+        }
+
     }
 }
 
@@ -2081,6 +5095,18 @@
     &::after {
         background-image: url("icons/feather/unlock.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/unlock.svg");
+        }
+
+    }
 }
 
 .ds-icon-upload-cloud {
@@ -2088,6 +5114,18 @@
 
     &::after {
         background-image: url("icons/feather/upload-cloud.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/upload-cloud.svg");
+        }
+
     }
 }
 
@@ -2097,6 +5135,18 @@
     &::after {
         background-image: url("icons/feather/upload.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/upload.svg");
+        }
+
+    }
 }
 
 .ds-icon-user-check {
@@ -2104,6 +5154,18 @@
 
     &::after {
         background-image: url("icons/feather/user-check.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/user-check.svg");
+        }
+
     }
 }
 
@@ -2113,6 +5175,18 @@
     &::after {
         background-image: url("icons/feather/user-minus.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/user-minus.svg");
+        }
+
+    }
 }
 
 .ds-icon-user-plus {
@@ -2120,6 +5194,18 @@
 
     &::after {
         background-image: url("icons/feather/user-plus.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/user-plus.svg");
+        }
+
     }
 }
 
@@ -2129,6 +5215,18 @@
     &::after {
         background-image: url("icons/feather/user-x.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/user-x.svg");
+        }
+
+    }
 }
 
 .ds-icon-user {
@@ -2136,6 +5234,18 @@
 
     &::after {
         background-image: url("icons/feather/user.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/user.svg");
+        }
+
     }
 }
 
@@ -2145,6 +5255,18 @@
     &::after {
         background-image: url("icons/feather/users.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/users.svg");
+        }
+
+    }
 }
 
 .ds-icon-video-off {
@@ -2152,6 +5274,18 @@
 
     &::after {
         background-image: url("icons/feather/video-off.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/video-off.svg");
+        }
+
     }
 }
 
@@ -2161,6 +5295,18 @@
     &::after {
         background-image: url("icons/feather/video.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/video.svg");
+        }
+
+    }
 }
 
 .ds-icon-voicemail {
@@ -2168,6 +5314,18 @@
 
     &::after {
         background-image: url("icons/feather/voicemail.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/voicemail.svg");
+        }
+
     }
 }
 
@@ -2177,6 +5335,18 @@
     &::after {
         background-image: url("icons/feather/volume-1.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/volume-1.svg");
+        }
+
+    }
 }
 
 .ds-icon-volume-2 {
@@ -2184,6 +5354,18 @@
 
     &::after {
         background-image: url("icons/feather/volume-2.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/volume-2.svg");
+        }
+
     }
 }
 
@@ -2193,6 +5375,18 @@
     &::after {
         background-image: url("icons/feather/volume-x.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/volume-x.svg");
+        }
+
+    }
 }
 
 .ds-icon-volume {
@@ -2200,6 +5394,18 @@
 
     &::after {
         background-image: url("icons/feather/volume.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/volume.svg");
+        }
+
     }
 }
 
@@ -2209,6 +5415,18 @@
     &::after {
         background-image: url("icons/feather/watch.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/watch.svg");
+        }
+
+    }
 }
 
 .ds-icon-wifi-off {
@@ -2216,6 +5434,18 @@
 
     &::after {
         background-image: url("icons/feather/wifi-off.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/wifi-off.svg");
+        }
+
     }
 }
 
@@ -2225,6 +5455,18 @@
     &::after {
         background-image: url("icons/feather/wifi.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/wifi.svg");
+        }
+
+    }
 }
 
 .ds-icon-wind {
@@ -2232,6 +5474,18 @@
 
     &::after {
         background-image: url("icons/feather/wind.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/wind.svg");
+        }
+
     }
 }
 
@@ -2241,6 +5495,18 @@
     &::after {
         background-image: url("icons/feather/x-circle.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/x-circle.svg");
+        }
+
+    }
 }
 
 .ds-icon-x-octagon {
@@ -2248,6 +5514,18 @@
 
     &::after {
         background-image: url("icons/feather/x-octagon.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/x-octagon.svg");
+        }
+
     }
 }
 
@@ -2257,6 +5535,18 @@
     &::after {
         background-image: url("icons/feather/x-square.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/x-square.svg");
+        }
+
+    }
 }
 
 .ds-icon-x {
@@ -2264,6 +5554,18 @@
 
     &::after {
         background-image: url("icons/feather/x.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/x.svg");
+        }
+
     }
 }
 
@@ -2273,6 +5575,18 @@
     &::after {
         background-image: url("icons/feather/youtube.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/youtube.svg");
+        }
+
+    }
 }
 
 .ds-icon-zap-off {
@@ -2280,6 +5594,18 @@
 
     &::after {
         background-image: url("icons/feather/zap-off.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/zap-off.svg");
+        }
+
     }
 }
 
@@ -2289,6 +5615,18 @@
     &::after {
         background-image: url("icons/feather/zap.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/zap.svg");
+        }
+
+    }
 }
 
 .ds-icon-zoom-in {
@@ -2297,6 +5635,18 @@
     &::after {
         background-image: url("icons/feather/zoom-in.svg");
     }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/zoom-in.svg");
+        }
+
+    }
 }
 
 .ds-icon-zoom-out {
@@ -2304,5 +5654,17 @@
 
     &::after {
         background-image: url("icons/feather/zoom-out.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/zoom-out.svg");
+        }
+
     }
 }

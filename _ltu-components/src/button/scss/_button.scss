@@ -23,7 +23,7 @@
     border: 2px solid transparent;
     transition: background-color 0.05s ease-in-out;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;  // for hover
 
     &:visited {
         color: config.$color-2;
@@ -47,17 +47,20 @@
             margin: 0 config.spunits(3);
             position: absolute;
             right: 0;
-            top: 50%;
-            transform: translateY(-50%);
+            /*top: 50%;
+            transform: translateY(-50%);*/
         }
     }
 
     &.ds-icon--before {
         padding-right: config.spunits(5);
         padding-left: config.spunits(11);
-        &::after {
+        &::before {
+            margin: 0 config.spunits(3);
+            position: absolute;
             left: 0;
-            right: unset;
+            /*top: 50%;
+            transform: translateY(-50%);*/
         }
     }
 
@@ -84,12 +87,12 @@
 
         &.ds-icon--before {
             padding-right: config.spunits(4);
-            padding-left: config.spunits(7);
-
-            &::after {
-                left: 0;
-                right: unset;
+            padding-left: config.spunits(9);
+            &::before {
+                margin: 0 config.spunits(2);
+                width: config.spunits(4);
             }
+        
         }
     }
 
@@ -110,10 +113,9 @@
         text-decoration: underline;
     }
 
-    &[class*="ds-icon-"]{
-        &::after {
+    &[class*="ds-icon-"]::after,
+    &[class*="ds-icon-"].ds-icon--before::before {
             filter: config.$filter-white;
-        }
     }
 
     &.ds-btn--light {
@@ -124,10 +126,9 @@
             color: config.$color-1;
         }
 
-        &[class*="ds-icon-"]{
-            &::after {
+        &[class*="ds-icon-"]::after,
+        &[class*="ds-icon-"].ds-icon--before::before {
                 filter: config.$filter-red;
-            }
         }
     }
 }
@@ -135,19 +136,16 @@
 /* secondary button */
 .ds-btn-secondary {
     @extend .ds-btn;
-    //color: config.$color-2;
     color: config.$color-1;
     background-color: transparent;
-    //border: 2px solid config.$color-2;
     border: 2px solid config.$color-1;
 
     &:visited {
-        //color: config.$color-2;
         color: config.$color-1;
     }
 
-    &[class*="icon-"]::after {
-        //filter: config.$filter-near-black;
+    &[class*="icon-"]::after,
+    &[class*="ds-icon-"].ds-icon--before::before {
         filter: config.$filter-red;
     }
 
@@ -161,7 +159,8 @@
             color: white;
         }
 
-        &[class*="icon-"]::after {
+        &[class*="icon-"]::after,
+        &[class*="ds-icon-"].ds-icon--before::before {
             filter: config.$filter-white;
         }
     }
@@ -193,12 +192,12 @@
 
     &[class*="icon-"]{
         position: relative;
-        padding-right: 1.75em; 
+        padding-right: 1.75em; /* 28px for 1rem - using em here to suit font size change */
         &::after {
             position: absolute;
             right: 0;
-            top: 50%;
-            transform: translateY(-50%);
+            /*top: 50%;
+            transform: translateY(-50%);*/
             filter: config.$filter-red;
         }
     }
@@ -206,6 +205,18 @@
     &.ds-icon--before {
         padding-right: 0;
         padding-left: 1.75em; /* 28px for 1rem - using em here to suit font size change */
+        
+        &::after {
+            display: none;
+        }
+        
+        &::before {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            filter: config.$filter-red;
+        }
     }
     
 }
@@ -271,7 +282,8 @@ input[type="submit"] {
             color: white;
         }
         
-        &[class*="ds-icon-"]::after {
+        &[class*="ds-icon-"]::after,
+        &[class*="ds-icon-"].ds-icon--before::before {
             filter: config.$filter-white;
         }
     }

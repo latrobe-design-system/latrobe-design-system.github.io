@@ -106,30 +106,23 @@
         object-fit: cover;
     }
 
-    // white triangle bottom right
-    &::after {
-        content: "";
-        display: block;
-        width: 0; 
-        height: 0; 
-        border-left: 315px solid transparent;
-        border-right: 0px solid transparent;
-        border-bottom: 112.5px solid config.$color-3a;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-
-        border-left: 146px solid transparent;
-        border-bottom: 107px solid config.$color-3a;
-    }
-
+    
     @media(min-width: 768px) {
         position: absolute;
         padding-bottom: 0;
-        
+
         // white triangle bottom right
         &::after {
-            border-bottom-color: #fff;
+            content: "";
+            display: block;
+            width: 0; 
+            height: 0; 
+            border-left: 146px solid transparent;
+            border-right: 0px solid transparent;
+            border-bottom: 107px solid #fff;
+            position: absolute;
+            bottom: 0;
+            right: 0;
         }
 
     }

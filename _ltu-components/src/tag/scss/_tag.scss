@@ -1,0 +1,72 @@
+// depenencies
+@use "config";
+
+.ds-tag {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    padding: config.spunits(2) config.spunits(3);
+    border: 1px solid config.$color-3b;
+    border-radius: 20px;
+    background: config.$color-3a;
+}
+
+button.ds-tag {
+    /* remove browser styling from button element */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    display: inline-block; // older browsers
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: text-decoration 0.3s ease-in-out; // for hover
+    //transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; // for hover
+
+    &::after {
+        content: "";
+        display: inline-block;
+        vertical-align: top;
+        width: 1em;
+        height: 1em;
+        margin: 0 config.spunits(1);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        filter: config.$filter-near-black;
+        background-image: url("icons/feather/x.svg");
+
+        margin-right: 0;
+    }
+
+    &:hover {
+        text-decoration: underline;
+        /*transform: translateY(-4px);
+        box-shadow: config.$shadow-2;*/
+    }
+}
+
+.ds-tag--green {
+    border-color: config.$green;
+    background-color: lighten(config.$green, 50%);
+}
+
+.ds-shadow-box {
+    background: white;
+    padding-bottom: config.spunits(12);
+    box-shadow: 0px 16px 16px -16px rgba(0,0,0,0.3);
+    
+    @media(min-width: 768px){
+        padding: config.spunits(8) config.spunits(16) config.spunits(16) config.spunits(16);
+        box-shadow: config.$shadow-1;
+    }
+
+    margin-bottom: 2rem;
+
+    
+
+    > *:first-child {
+        margin-top: 0;
+    }
+}

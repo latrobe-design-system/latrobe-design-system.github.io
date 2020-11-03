@@ -1,0 +1,29 @@
+---
+title: "Icon css"
+status: 
+---
+<pre>
+{%- for image in site.static_files -%}
+        {%- if image.path contains 'assets/css/icons/feather/' -%}
+.ds-icon-{{ image.name | remove: ".svg" }} {
+    @extend %icon;
+
+    &::after {
+        background-image: url("icons/feather/{{ image.name }}");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/feather/{{ image.name }}");
+        }
+
+    }
+}
+        {%- endif -%}
+    {%- endfor -%}
+</pre>

@@ -1,19 +1,12 @@
-
 // depenencies
 @use "config";
 
 .ds-child-nav {
-    margin: config.spunits(8) auto;
-    overflow-x: scroll;
-    white-space: nowrap;
-    
-    // hiding scrollbar
-    scrollbar-width: none;
-    &::-webkit-scrollbar {
-        display: none;
-    }
-    -ms-overflow-style: none;
+    // scrolls on mobile
+    @include config.overflowXScroll();
 
+    margin: config.spunits(8) auto;
+    
     a {
         font-size: inherit;
     }
@@ -26,6 +19,10 @@
     display: flex;
     justify-content: left;
     align-items: center;
+
+    @media(min-width: 768px) {
+        flex-wrap: wrap; // wrap on tablet up
+    }
 }
 
 .ds-child-nav__list-item {
@@ -65,11 +62,6 @@
     }
 }
 
-@media(min-width: 768px) {
-    .ds-child-nav__list {
-        flex-wrap: wrap;
-    }    
-}
 
 //modifier to center list
 .ds-child-nav--centered {

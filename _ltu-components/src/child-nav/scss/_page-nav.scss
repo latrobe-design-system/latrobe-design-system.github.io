@@ -1,0 +1,44 @@
+// depenencies
+@use "core/scss/icons";
+@use "child-nav/scss/child-nav";
+
+.ds-page-nav {
+    @extend .ds-child-nav;
+}
+.ds-page-nav__list {
+    @extend .ds-child-nav__list;
+}
+
+.ds-page-nav__list-item {
+    @extend .ds-child-nav__list-item;
+    margin-right: 1%;
+}
+
+.ds-page-nav__list-item:not(.ds-page-nav__CTA) {
+    @extend .ds-icon-chevron-down;
+}
+
+.ds-page-nav__CTA {
+    @extend .ds-child-nav__CTA;
+}
+
+.ds-page-nav__CTA ~ .ds-page-nav__list-item:last-child {
+    margin-right: 1%;
+}
+
+// if CTA present it will be last in display order, reset actual last-child margin right to 3%
+.ds-page-nav__CTA ~ .ds-page-nav__list-item:last-child {
+    margin-right: 2%;
+}
+
+
+.ds-page-nav__link,
+.ds-page-nav__link:visited {
+    @extend .ds-child-nav__link;
+}
+
+//modifier to center list
+.ds-page-nav--centered {
+    @extend .ds-child-nav--centered;
+}
+

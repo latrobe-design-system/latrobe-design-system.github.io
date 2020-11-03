@@ -220,33 +220,3 @@
 
     background: config.$color-alt-3;
 }
-
-
-.ds-card--course {
-    border: solid 1px config.$color-3b;
-
-    .ds-card__body {
-        padding-top: config.spunits(2);
-    }
-
-    .ds-tabs {
-        margin: 0;
-    }
-
-    .ds-tabs-nav {
-        max-width: 100%;
-    }
-
-    .ds-table {
-        max-width: 42rem; // match paragraph
-
-        th {
-            width: 20%;
-        }
-    }
-
-    // view course button container
-    .ds-card--course__CTA {
-        margin-top: auto;
-    }   
-}

@@ -30,3 +30,15 @@
         }
     }
 }
+
+// @include overflowXScroll to make box horizontal scroll on small screens
+@mixin overflowXScroll() {
+    overflow-x: scroll;
+    white-space: nowrap;
+    // hiding scrollbar
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    -ms-overflow-style: none;
+}

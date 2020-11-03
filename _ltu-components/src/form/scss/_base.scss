@@ -163,20 +163,6 @@ abbr.ds-label__required {
     }
 }
 
-.ds-control-group {
-    @extend .ds-fieldset;
-    margin-top: 2rem;
-    .ds-legend {
-        font-size: 1rem;
-        border-bottom: none;
-        margin-top: 0;
-        margin-bottom: config.spunits(2);
-    }
-}
-
-
-
-
 .ds-input-group {
     display: flex;
     align-items: stretch;
@@ -184,6 +170,10 @@ abbr.ds-label__required {
     
     > * {
         margin-top: 0 !important;
+    }
+
+    .ds-text-input {
+        flex: 4;
     }
 
     .ds-input-group__prepend,
@@ -231,7 +221,12 @@ abbr.ds-label__required {
 .ds-input-group__text {
     line-height: 1;
     margin: 0;
-    padding: 0 config.spunits(4);
+
+    padding: 0 config.spunits(1);
+    @media(min-width: 768px){
+        padding: 0 config.spunits(4);
+    }
+    
     display: flex;
     height: 100%;
     align-items: center;
@@ -246,5 +241,9 @@ abbr.ds-label__required {
     > * {
         margin: 0;
         line-height: 1;
+    }
+
+    span + span {
+        margin-left: config.spunits(1);
     }
 }

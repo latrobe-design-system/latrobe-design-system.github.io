@@ -7,18 +7,12 @@
 }
 
 .ds-tabs-nav {
+    /* scroll on mobile when too wide */
+    @include config.overflowXScroll();
+    
     display: block;
     border-bottom: 2px solid config.$color-3b;
-    /* scroll on mobile when too wide */
-    white-space: nowrap;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    /* hide scrollbar */
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    &::-webkit-scrollbar {
-      display: none;
-    }
+    
 }
 
 .ds-tabs-nav__tab {
