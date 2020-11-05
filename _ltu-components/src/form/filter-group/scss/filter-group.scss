@@ -1,9 +1,11 @@
 @use "config";
 @use "core/scss/icons";
+@use "button/scss/button";
 
 .ds--filter-group__filters {
    /* scroll on mobile when too wide */
    @include config.overflowXScroll();
+   //margin-top: ;
 }
 
 .ds--filter-group__filters-label {
@@ -20,7 +22,7 @@
     border: 0;
     cursor: pointer;
 
-    padding-bottom: config.spunits(3);
+    padding: config.spunits(4) 0;
     border-bottom: 4px solid transparent;
     
     &:not(:first-child) {
@@ -42,11 +44,22 @@
 
 }
 
-.ds--filter-group__filter--selection {
-    background-image: url(icons/feather/activity.svg);
-    background-repeat: no-repeat;
-    background-position: top -14px center;
-    background-size: 14px 14px;
+.ds--filter-group__filter--selected {
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 14px;
+        height: 14px;
+        background-image: url(icons/feather/flag.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: absolute;
+        top: 0;
+        left: 35%;
+        filter: config.$filter-green;
+    }
 }
 
 .ds--filter-group__filters-content {
@@ -56,12 +69,38 @@
 .ds--filter-group__filter-content {
     /*position: absolute;
     z-index: 900;*/
+    position: relative;
     width: 100%;
     background: #fff;
     border: 1px solid config.$color-3b;
     padding: config.spunits(6);
+    
+    @media(min-width: 768px) {
+        padding-right: config.spunits(30);
+    }
 
     > *:first-child {
         margin-top: 0;
+
+        label:first-child {
+            margin-top: 0;
+        }
+    }
+
+    .ds-form-group:first-of-type {
+        margin-top: 0;
+    }
+
+    .ds-filter-group__filter-content__apply {
+
+        @extend .ds-btn-secondary;
+        color: config.$green;;
+        border-color: config.$green;
+
+        @media(min-width: 768px) {
+            position: absolute;
+            right: config.spunits(4);
+            top: config.spunits(4);
+        }
     }
 }

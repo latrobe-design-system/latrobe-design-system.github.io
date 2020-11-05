@@ -1,0 +1,20 @@
+// depenencies
+@use "config";
+
+.ds-shadow-box {
+    background: white;
+    padding-bottom: config.spunits(4);
+    margin-bottom: config.spunits(8);
+    border-bottom: 1px solid config.$color-3b;
+    
+    @media(min-width: 768px){
+        padding: config.spunits(8) config.spunits(12);
+        border-bottom: none;
+        box-shadow: config.$shadow-1;
+
+        > *:first-child {
+            margin-top: 0;
+        }
+    }
+
+}

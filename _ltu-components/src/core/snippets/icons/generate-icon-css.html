@@ -2,9 +2,13 @@
 title: "Icon css"
 status: 
 ---
+# Icon css generator
+
+If you add icons to the utility set then you can copy and paste code from this page to the _icons.scss file.
+
 <pre>
-{%- for image in site.static_files -%}
-        {%- if image.path contains 'assets/css/icons/feather/' -%}
+{% for image in site.static_files %}
+{% if image.path contains 'assets/css/icons/feather/' %}
 .ds-icon-{{ image.name | remove: ".svg" }} {
     @extend %icon;
 
@@ -23,7 +27,5 @@ status:
         }
 
     }
-}
-        {%- endif -%}
-    {%- endfor -%}
+}{% endif %}{% endfor %}
 </pre>

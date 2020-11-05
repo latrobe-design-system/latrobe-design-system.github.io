@@ -9,17 +9,17 @@ text:
         <span class="ds--filter-group__filters-label">Refine by:</span>
         
         <!-- filter 1 -->
-        <button class="ds--filter-group__filter ds--filter-group__filter--selection"
+        <button class="ds--filter-group__filter"
                 type="button" 
                 aria-controls="level-filter" 
                 aria-expanded="false">Course level</button>
 
-        <button class="ds--filter-group__filter" 
+        <button class="ds--filter-group__filter  ds--filter-group__filter--selected" 
                 type="button"
                 aria-controls="discipline-filter" 
                 aria-expanded="false">Discipline</button>
 
-        <button class="ds--filter-group__filter" 
+        <button class="ds--filter-group__filter  ds--filter-group__filter--selected" 
                 type="button"
                 aria-controls="location-filter" 
                 aria-expanded="false">Location</button>
@@ -34,74 +34,146 @@ text:
 
         <!-- filter 1 content -->
         <div id="level-filter" class="ds--filter-group__filter-content" role="region" hidden>
-            <div class="ds-form-group">
-                <input class="ds-input-checkbox" type="checkbox" id="level-all" checked>
-                <label class="ds-label" for="level-all">All</label>
-            </div>
-            
-            <div class="ds-form-group">
-                <input class="ds-input-checkbox" type="checkbox" id="level-undergraduate">
-                <label class="ds-label" for="level-undergraduate">Undergraduate</label>
-            </div>
 
-            <div class="ds-form-group">
-                <input class="ds-input-checkbox" type="checkbox" id="level-postgraduate">
-                <label class="ds-label" for="level-postgraduate">Postgraduate</label>
-            </div>
+            <form class="ds-form">
+                <div class="ds-form-group">
+                    <input class="ds-input-checkbox" type="checkbox" id="level-all" checked>
+                    <label class="ds-label" for="level-all">All</label>
+                </div>
+                
+                <div class="ds-form-group">
+                    <input class="ds-input-checkbox" type="checkbox" id="level-undergraduate">
+                    <label class="ds-label" for="level-undergraduate">Undergraduate</label>
+                </div>
 
-            <div class="ds-form-group">
-                <input class="ds-input-checkbox" type="checkbox" id="level-short-course">
-                <label class="ds-label" for="level-short-course">Short courses</label>
-            </div>
+                <div class="ds-form-group">
+                    <input class="ds-input-checkbox" type="checkbox" id="level-postgraduate">
+                    <label class="ds-label" for="level-postgraduate">Postgraduate</label>
+                </div>
+
+                <div class="ds-form-group">
+                    <input class="ds-input-checkbox" type="checkbox" id="level-short-course">
+                    <label class="ds-label" for="level-short-course">Short courses</label>
+                </div>
+
+                <div class="ds-form-group">
+                    <button class="ds-btn-secondary ds-filter-group__filter-content__apply" type="button">Apply</button>
+                </div>
+            </form>
+
         </div>
 
         <!-- filter 2 content -->
         <div id="discipline-filter" class="ds--filter-group__filter-content" role="region" hidden>
             
-            <div class="ds-form-group">
-                <input class="ds-input-checkbox" type="checkbox" id="discipline-all" checked>
-                <label class="ds-label" for="discipline-all">All disciplines</label>
-            </div>
-
-            <div class="ds-filter-group__filter-">
+            <form class="ds-form">
                 <div class="ds-form-group">
-                    <input class="ds-input-checkbox" type="checkbox" id="discipline-arts">
-                    <label class="ds-label" for="discipline-arts">Arts, social sciences and communications</label>
+                    <input class="ds-input-checkbox" type="checkbox" id="discipline-all" checked>
+                    <label class="ds-label" for="discipline-all">All disciplines</label>
                 </div>
-            </div>
+
+                <div class="ds-filter-group__filter-">
+                    <div class="ds-form-group">
+                        <input class="ds-input-checkbox" type="checkbox" id="discipline-arts">
+                        <label class="ds-label" for="discipline-arts">Arts, social sciences and communications</label>
+                    </div>
+                </div>
+
+                <div class="ds-form-group">
+                    <button class="ds-btn-secondary ds-filter-group__filter-content__apply" type="button">Apply</button>
+                </div>
+            </form>
+
         </div>
 
         <!-- filter 3 content -->
         <div id="location-filter" class="ds--filter-group__filter-content" role="region" hidden>
 
-            <div class="ds-form-group">
-                <input class="ds-input-checkbox" type="checkbox" id="location-all" checked>
-                <label class="ds-label" for="level-all">All</label>
-            </div>
+            <form class="ds-form">
 
-            <div class="ds-form-group">
-                <input class="ds-input-checkbox" type="checkbox" id="location-melbourne" checked>
-                <label class="ds-label" for="location-melbourne">Melbourne</label>
-            </div>
+                <div style="columns: 2">
 
-            <div class="ds-form-group">
-                <input class="ds-input-checkbox" type="checkbox" id="location-aw" checked>
-                <label class="ds-label" for="location-aw">Albury-Wodonga</label>
-            </div>
+                    <div class="ds-form-group">
+                        <input class="ds-input-checkbox" id="location-all" type="checkbox" value="all" checked>
+                        <label class="ds-label" for="location-all">All</label>
+                    </div>
+
+                    <div class="ds-form-group">
+                        <input class="ds-input-checkbox" id="location-bu" type="checkbox" value="BU">
+                        <label class="ds-label" for="location-bu">Melbourne</label>
+                    </div>
+
+                    <div class="ds-form-group">
+                        <input class="ds-input-checkbox" id="location-aw" type="checkbox" value="WO">
+                        <label class="ds-label" for="location-aw">Albury-Wodonga</label>
+                    </div>
+
+                    <div class="ds-form-group">
+                        <input class="ds-input-checkbox" id="location-be" type="checkbox" value="BE">
+                        <label class="ds-label" for="location-be">Bendigo</label>
+                    </div>
+
+                    <div class="ds-form-group">
+                        <input class="ds-input-checkbox" id="location-ci" type="checkbox" value="CI">
+                        <label class="ds-label" for="location-ci">City</label>
+                    </div>
+
+                    <div class="ds-form-group">
+                        <input class="ds-input-checkbox" id="location-mi" type="checkbox" value="MI">
+                        <label class="ds-label" for="location-mi">Mildura</label>
+                    </div>
+
+                    <div class="ds-form-group">
+                        <input class="ds-input-checkbox" id="location-on" type="checkbox" value="ON">
+                        <label class="ds-label" for="location-on">Online</label>
+                    </div>
+
+                    <div class="ds-form-group">
+                        <input class="ds-input-checkbox" id="location-sh" type="checkbox" value="OT">
+                        <label class="ds-label" for="location-sh">Shepparton</label>
+                    </div>
+
+                    <div class="ds-form-group">
+                        <input class="ds-input-checkbox" id="location-sy" type="checkbox" value="SY">
+                        <label class="ds-label" for="location-sy">Sydney</label>
+                    </div>
+
+                    <div class="ds-form-group">
+                        <input class="ds-input-checkbox" id="location-mi" type="checkbox" value="OT">
+                        <label class="ds-label" for="location-mi">Other</label>
+                    </div>
+
+                    <div class="ds-form-group">
+                        <button class="ds-btn-secondary ds-filter-group__filter-content__apply" type="button">Apply</button>
+                    </div>
+
+                </div>
+            </form>
 
         </div>
 
         <!-- filter 4 content -->
         <div id="ATAR-filter" class="ds--filter-group__filter-content" role="region" hidden>
             
-            <div class="ds-alert ds-alert--info" role="alert">
-                <div class="ds-alert__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="8"></line></svg>
+            <form class="ds-form">
+                <div class="ds-form-group">
+                    <label class="ds-label"  for="atar-range">Max ATAR:</label> 
+                    <input class="ds-number-input" type="number" min="50" max="99.95" step="0.05">
                 </div>
-                <div class="ds-alert__text">
-                    <p>You may be eligible to have additional points added to this score by La&nbsp;Trobe by using our <a href="" target="_blank">adjustment calculator</a>.</p>
+
+                <div class="ds-alert ds-alert--info" role="alert">
+                    <div class="ds-alert__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="8"></line></svg>
+                    </div>
+                    <div class="ds-alert__text">
+                        <p>You may be eligible to have additional points added to this score by La&nbsp;Trobe by using our <a href="" target="_blank">adjustment calculator</a>.</p>
+                    </div>
                 </div>
-            </div>
+
+                <div class="ds-form-group">
+                    <button class="ds-btn-secondary ds-filter-group__filter-content__apply" type="button">Apply</button>
+                </div>
+            </form>
 
         </div>
 

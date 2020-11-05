@@ -18,26 +18,20 @@
 .ds-course-card__body {
     
     > *:first-child {
-        margin-top: 0;
+        //margin-top: 0;
     }
 }
 
 .ds-course-card__tags {
-    position: absolute;
-    width: 100%;
-    max-width: 100%;
-    top: 0px;
-    left: 0px;
-
-    padding: config.spunits(1) config.spunits(4);
-    @media(min-width: 400px) {
-        padding: config.spunits(1) config.spunits(6);
-    }
-
-    @media(min-width: 1000px) {
+    margin: config.spunits(2) 0;
+    
+    @media(min-width: 1050px) {
+        position: absolute;
         width: 20%;
+        top: 0;
         left: auto;
         right: 0px;
+        margin: 0;
         padding: config.spunits(7) config.spunits(6) 0 0;
 
         + .ds-course-card__course-name {
@@ -62,7 +56,7 @@
         
     }
 
-    @media(min-width: 1000px) {
+    @media(min-width: 1050px) {
         font-size: 1rem;
         display: flex;
         margin: config.spunits(2) 0;
@@ -77,8 +71,8 @@
     box-shadow: -4px 4px 8px rgba(0,0,0,0.2);
     
     position: absolute;
-    top: -8px;
-    right: 12px;
+    top: -#{config.spunits(2)};
+    right: config.spunits(3);
 
     &[class*="ds-icon"] {
         @extend .ds-icon--before;
@@ -87,7 +81,8 @@
         }
     }
 
-    @media(min-width: 1000px) {
+    @media(min-width: 1050px) {
+        top: -#{config.spunits(2)};
         right: auto;
         left: -#{config.spunits(2)};
         margin: 0;
@@ -113,7 +108,7 @@
 }
 
 .ds-course-card__course-name {
-    margin-top: config.spunits(6);
+    margin-top: 0;
 }
 
 .ds-course-card__body {

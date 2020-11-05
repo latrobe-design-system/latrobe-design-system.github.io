@@ -13,7 +13,7 @@
         padding-left: config.spunits(8);
         cursor: pointer;
         font-weight: 400;
-        margin-top: config.spunits(1);
+        margin-top: 0;
 
         /* fake checkbox */        
         &::before,
@@ -41,7 +41,7 @@
             border-bottom: 3px solid;
             transform: rotate(-45deg);
             left: config.spunits(1.5);
-            top: config.spunits(1.5);
+            top: config.spunits(1.75);
 
             /*Hide the checkmark by default*/
             content: none;

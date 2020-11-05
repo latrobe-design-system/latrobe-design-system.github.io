@@ -72,7 +72,8 @@ abbr.ds-label__required {
 .ds-textarea,
 .ds-select,
 .ds-input-checkbox,
-.ds-input-radio {
+.ds-input-radio,
+.ds-number-input {
     line-height: 1;
     // remove browser default style
     -webkit-appearance: none;
@@ -82,13 +83,15 @@ abbr.ds-label__required {
 
 .ds-text-input,
 .ds-textarea,
-.ds-select {
+.ds-select,
+.ds-number-input {
     display: block;
 }
 
 .ds-text-input,
 .ds-textarea,
-.ds-select {
+.ds-select,
+.ds-number-input {
     display: block;
     width: 100%;
     padding: config.spunits(4);
@@ -108,8 +111,13 @@ abbr.ds-label__required {
     }
 }
 
+.ds-number-input {
+    width: auto;
+}
+
 .ds-text-input,
-.ds-select {
+.ds-select,
+.ds-number-input {
     // since line height does not work on inputs this makes inputs same height as buttons which helps for inline forms
     // font-size + top/bottom padding + top/bottom border
     height: calc(1rem + #{config.spunits(8)} + 4px); 
