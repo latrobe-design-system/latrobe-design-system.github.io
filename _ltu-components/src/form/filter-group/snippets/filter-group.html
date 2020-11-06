@@ -2,40 +2,92 @@
 title: "Radio group"
 status: "draft"
 text: 
+
+disciplines:
+  - name: Arts, social sciences and communications
+    sub-disciplines:
+      - name: Arts
+      - name: Creative arts and English
+      - name: Historical and cultural studies
+      - name: International relations and development
+      - name: Languages and linguistics
+      - name: Media, communication and journalism
+      - name: Planning, environment and sustainability
+      - name: Politics, philosophy and economics
+      - name: Social sciences
+  - name: Business and commerce
+    sub-disciplines:
+      - name: Accounting and finance
+      - name: Business and commerce
+      - name: Economics
+      - name: Marketing and management
+      - name: Technology management
+  - name: Education and teaching
+    sub-disciplines:
+      - name: Teaching
+      - name: Outdoor and environmental education
+      - name: Career development
+      - name: Linguistics and TESOL
+  - name: Health
+    sub-disciplines:
+      - name: Allied health and rehabilitation
+      - name: Psychology, counselling and social work
+      - name: Dentistry and oral health
+      - name: Health management
+      - name: Ageing and end of life care
+      - name: Medical sciences
+      - name: Nursing, midwifery and paramedicine
+      - name: Public health
+      - name: Disability
+      - name: Digital health
+  - name: IT and engineering
+    sub-disciplines:
+      - name: Big data
+      - name: Engineering
+      - name: Information technology
+      - name: Computer science
+      - name: Cybersecurity
+  - name: Law and criminology
+    sub-disciplines:
+      - name: Law
+      - name: Criminology
+      - name: Cybersecurity
+  - name: Science
+    sub-disciplines:
+      - name: Agricultural and environmental sciences
+      - name: Molecular and biological sciences
+      - name: Mathematical and computer sciences
+      - name: Medical and psychological sciences
+      - name: Physical and chemical sciences
 ---
 
-<div class="ds--filter-group">
-    <p class="ds--filter-group__filters">
-        <span class="ds--filter-group__filters-label">Refine by:</span>
-        
-        <!-- filter 1 -->
-        <button class="ds--filter-group__filter"
+<div class="ds-filter-group">
+    <p class="ds-filter-group__nav">
+        <span class="ds-filter-group__nav__label">Refine by:</span>
+        <button class="ds-filter-group__nav__tab"
                 type="button" 
-                aria-controls="level-filter" 
+                aria-controls="level-region" 
                 aria-expanded="false">Course level</button>
-
-        <button class="ds--filter-group__filter  ds--filter-group__filter--selected" 
+        <button class="ds-filter-group__nav__tab  ds-filter-group__nav__tab--selected" 
                 type="button"
-                aria-controls="discipline-filter" 
+                aria-controls="discipline-region" 
                 aria-expanded="false">Discipline</button>
-
-        <button class="ds--filter-group__filter  ds--filter-group__filter--selected" 
+        <button class="ds-filter-group__nav__tab  ds-filter-group__nav__tab--selected"
                 type="button"
-                aria-controls="location-filter" 
+                aria-controls="location-region" 
                 aria-expanded="false">Location</button>
-
-        <button class="ds--filter-group__filter" 
+        <button class="ds-filter-group__nav__tab" 
                 type="button"
-                aria-controls="ATAR-filter" 
+                aria-controls="ATAR-region" 
                 aria-expanded="false">ATAR</button>
     </p>
 
-    <div class="ds--filter-group__filters-content">
+    <div class="ds-filter-group__content">
 
         <!-- filter 1 content -->
-        <div id="level-filter" class="ds--filter-group__filter-content" role="region" hidden>
+        <div id="level-region" class="ds-filter-group__content__tab" role="region" hidden>
 
-            <form class="ds-form">
+            <form id="level-filter" class="ds-form ds-filter-group__filter">
                 <div class="ds-form-group">
                     <input class="ds-input-checkbox" type="checkbox" id="level-all" checked>
                     <label class="ds-label" for="level-all">All</label>
@@ -57,41 +109,57 @@ text:
                 </div>
 
                 <div class="ds-form-group">
-                    <button class="ds-btn-secondary ds-filter-group__filter-content__apply" type="button">Apply</button>
+                    <button class="ds-filter-group__content__tab__apply" type="button">Apply</button>
                 </div>
             </form>
 
         </div>
 
         <!-- filter 2 content -->
-        <div id="discipline-filter" class="ds--filter-group__filter-content" role="region" hidden>
+        <div id="discipline-region" class="ds-filter-group__content__tab" role="region" hidden>
             
-            <form class="ds-form">
+            <form id="discipline-filter" class="ds-form ds-filter-group__filter">
+
                 <div class="ds-form-group">
                     <input class="ds-input-checkbox" type="checkbox" id="discipline-all" checked>
-                    <label class="ds-label" for="discipline-all">All disciplines</label>
+                    <label class="ds-label" for="discipline-all">All</label>
                 </div>
 
-                <div class="ds-filter-group__filter-">
-                    <div class="ds-form-group">
-                        <input class="ds-input-checkbox" type="checkbox" id="discipline-arts">
-                        <label class="ds-label" for="discipline-arts">Arts, social sciences and communications</label>
+                {% for discipline in page.disciplines %}
+                <!-- {{ discipline.name }} -->
+                <div class="ds-form-group ds-form-group--two-layer">
+
+                    <input class="ds-input-checkbox" type="checkbox" id="discipline-{{ discipline.name | slugify }}">
+                    <label class="ds-label" for="discipline-{{ discipline.name | slugify }}">{{ discipline.name }}</label>
+                    
+                    <button type="button" class="ds-btn ds-btn--tiny ds-collapse__trigger" aria-controls="region-{{ forloop.index }}" aria-expanded="false">Refine</button>
+                    <div id="region-{{ forloop.index }}" class="ds-collapse__content" role="region" hidden>
+                        <div class="ds-form-group--two-layer__content ds-columns ds-columns--two-col">
+                        {% for sub-discipline in discipline.sub-disciplines %}
+                            <div class="ds-form-group">
+                                <input class="ds-input-checkbox" type="checkbox" id="sub-discipline-{{ sub-discipline.name | slugify }}">
+                                <label class="ds-label" for="sub-discipline-{{ sub-discipline.name | slugify }}">{{ sub-discipline.name }}</label>
+                            </div>
+                        {% endfor %}
                     </div>
+                    </div>
+
                 </div>
+                {% endfor %}
 
                 <div class="ds-form-group">
-                    <button class="ds-btn-secondary ds-filter-group__filter-content__apply" type="button">Apply</button>
+                    <button class="ds-filter-group__content__tab__apply" type="button">Apply</button>
                 </div>
             </form>
 
         </div>
 
         <!-- filter 3 content -->
-        <div id="location-filter" class="ds--filter-group__filter-content" role="region" hidden>
+        <div id="location-region" class="ds-filter-group__content__tab" role="region" hidden>
 
-            <form class="ds-form">
+            <form id="location-filter" class="ds-form ds-filter-group__filter">
 
-                <div style="columns: 2">
+                <div class="ds-columns ds-columns--two-col">
 
                     <div class="ds-form-group">
                         <input class="ds-input-checkbox" id="location-all" type="checkbox" value="all" checked>
@@ -143,19 +211,20 @@ text:
                         <label class="ds-label" for="location-mi">Other</label>
                     </div>
 
-                    <div class="ds-form-group">
-                        <button class="ds-btn-secondary ds-filter-group__filter-content__apply" type="button">Apply</button>
-                    </div>
-
                 </div>
+
+                <div class="ds-form-group">
+                    <button class="ds-filter-group__content__tab__apply" type="button">Apply</button>
+                </div>
+
             </form>
 
         </div>
 
         <!-- filter 4 content -->
-        <div id="ATAR-filter" class="ds--filter-group__filter-content" role="region" hidden>
+        <div id="ATAR-region" class="ds-filter-group__content__tab" role="region" hidden>
             
-            <form class="ds-form">
+            <form id="ATAR-filter" class="ds-form ds-filter-group__filter">
                 <div class="ds-form-group">
                     <label class="ds-label"  for="atar-range">Max ATAR:</label> 
                     <input class="ds-number-input" type="number" min="50" max="99.95" step="0.05">
@@ -171,7 +240,7 @@ text:
                 </div>
 
                 <div class="ds-form-group">
-                    <button class="ds-btn-secondary ds-filter-group__filter-content__apply" type="button">Apply</button>
+                    <button class="ds-filter-group__content__tab__apply" type="button">Apply</button>
                 </div>
             </form>
 

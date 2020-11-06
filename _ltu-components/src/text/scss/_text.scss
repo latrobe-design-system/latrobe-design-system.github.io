@@ -141,7 +141,10 @@ li {
     max-width: 42em; // readable line length 80 characters https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html
 }
 
-// for squiz content template
+// class for CSS columns, choose up to 4 columns
+// usage class="ds-columns ds-columns--[two-col | three-col | four-col]"
+// div.ds-list is for for squiz content template DS Column list
+.ds-columns,
 div.ds-list {
     &--two-col,
     &--three-col,
@@ -179,6 +182,23 @@ div.ds-list {
     }
 }
 
+.ds-columns {
+    vertical-align: top;
+    :first-child {
+        margin-top: 0;
+    }
+}
+
+div.ds-list {
+    vertical-align: top;
+    > ul, 
+    > ol {
+        :first-child {
+            margin-top: 0;
+        }
+    } 
+}
+
 // Margins
 
 h1,
@@ -210,7 +230,7 @@ ul {
 }
 
 li {
-    margin-bottom: 0.5em; // based on element size
+    margin-top: 0.5em; // based on element size
 }
 
 blockquote,

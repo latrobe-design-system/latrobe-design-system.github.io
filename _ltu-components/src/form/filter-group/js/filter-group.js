@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     // expand control click handler for 
-    $('.ds--filter-group__filter').click(function() {
+    $('.ds-filter-group__nav__tab').click(function() {
 
         var regionId = $(this).attr('aria-controls');
 

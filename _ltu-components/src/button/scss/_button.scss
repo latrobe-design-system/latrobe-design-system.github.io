@@ -41,26 +41,31 @@
     }
 
     &[class*="ds-icon-"]{
-        position: relative;
-        padding-right: config.spunits(11);
+        //position: relative;
+        //padding-right: config.spunits(11);
         &::after {
-            margin: 0 config.spunits(3);
-            position: absolute;
+            margin: 0 0 0 config.spunits(3);
+            /*position: absolute;
             right: 0;
-            /*top: 50%;
+            top: 50%;
             transform: translateY(-50%);*/
+            transform: translateX(0.25rem);
         }
     }
 
     &.ds-icon--before {
-        padding-right: config.spunits(5);
-        padding-left: config.spunits(11);
+        //padding-right: config.spunits(5);
+        //padding-left: config.spunits(11);
+        &::after {
+            margin: 0;
+        }
         &::before {
-            margin: 0 config.spunits(3);
-            position: absolute;
+            margin: 0 config.spunits(3) 0 0;
+            /*position: absolute;
             left: 0;
             /*top: 50%;
             transform: translateY(-50%);*/
+            transform: translateX(-0.25rem);
         }
     }
 
@@ -78,24 +83,50 @@
         padding: config.spunits(1) config.spunits(4);
 
         &[class*="ds-icon-"]{
-            padding-right: config.spunits(9);
+            //padding-right: config.spunits(9);
             &::after {
-                margin: 0 config.spunits(2);
-                width: config.spunits(4);
+                margin: 0 0 0 config.spunits(2);
+                //width: config.spunits(4);
             }
         }
 
         &.ds-icon--before {
-            padding-right: config.spunits(4);
-            padding-left: config.spunits(9);
+            //padding-right: config.spunits(4);
+            //padding-left: config.spunits(9);
             &::before {
-                margin: 0 config.spunits(2);
-                width: config.spunits(4);
+                margin: 0 config.spunits(2) 0 0;
+                //width: config.spunits(4);
             }
         
         }
     }
 
+    /* small modifier */
+    &.ds-btn--tiny {
+        font-size: 14px;
+
+        padding: config.spunits(1) config.spunits(2);
+
+        &[class*="ds-icon-"]{
+            //padding-right: config.spunits(6);
+            &::after {
+                margin: 0 0 0 config.spunits(2);
+                //width: config.spunits(4);
+                transform: translateX(0);
+            }
+        }
+
+        &.ds-icon--before {
+            //padding-right: config.spunits(4);
+            //padding-left: config.spunits(9);
+            &::before {
+                margin: 0 config.spunits(2) 0 0 0;
+                //width: config.spunits(4);
+                transform: translateX(0);
+            }
+        
+        }
+    }
 
 }
 
@@ -128,7 +159,7 @@
 
         &[class*="ds-icon-"]::after,
         &[class*="ds-icon-"].ds-icon--before::before {
-                filter: config.$filter-red;
+            filter: config.$filter-red;
         }
     }
 }
@@ -191,30 +222,28 @@
     }
 
     &[class*="icon-"]{
-        position: relative;
-        padding-right: 1.75em; /* 28px for 1rem - using em here to suit font size change */
+        //position: relative;
+        //padding-right: 1.75em; /* 28px for 1rem - using em here to suit font size change */
         &::after {
-            position: absolute;
+            /*position: absolute;
             right: 0;
             /*top: 50%;
             transform: translateY(-50%);*/
+            margin: 0 0 0 config.spunits(2);
             filter: config.$filter-red;
         }
     }
 
     &.ds-icon--before {
-        padding-right: 0;
-        padding-left: 1.75em; /* 28px for 1rem - using em here to suit font size change */
-        
-        &::after {
-            display: none;
-        }
+        //padding-right: 0;
+        //padding-left: 1.75em; /* 28px for 1rem - using em here to suit font size change */
         
         &::before {
-            position: absolute;
+            /*position: absolute;
             left: 0;
             top: 50%;
-            transform: translateY(-50%);
+            transform: translateY(-50%);*/
+            margin: 0 config.spunits(2) 0 0;
             filter: config.$filter-red;
         }
     }
@@ -245,6 +274,7 @@ input[type="submit"] {
     white-space: nowrap;
 
     &[class*="icon-"]{
+        position: relative;
         padding: 0;
         text-indent: 100%;
         

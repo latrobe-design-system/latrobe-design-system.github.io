@@ -2,17 +2,17 @@
 @use "core/scss/icons";
 @use "button/scss/button";
 
-.ds--filter-group__filters {
+.ds-filter-group__nav {
    /* scroll on mobile when too wide */
    @include config.overflowXScroll();
    //margin-top: ;
 }
 
-.ds--filter-group__filters-label {
+.ds-filter-group__nav__label {
     font-weight: config.$medium;
 }
 
-.ds--filter-group__filter {
+.ds-filter-group__nav__tab {
     /* remove browser styling from button element */
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -44,7 +44,7 @@
 
 }
 
-.ds--filter-group__filter--selected {
+.ds-filter-group__nav__tab--selected {
     position: relative;
 
     &::before {
@@ -62,11 +62,11 @@
     }
 }
 
-.ds--filter-group__filters-content {
+.ds--filter-group__content {
     position: relative;
 }
 
-.ds--filter-group__filter-content {
+.ds-filter-group__content__tab {
     /*position: absolute;
     z-index: 900;*/
     position: relative;
@@ -83,15 +83,26 @@
         margin-top: 0;
 
         label:first-child {
-            margin-top: 0;
+            //margin-top: 0;
         }
     }
 
-    .ds-form-group:first-of-type {
-        margin-top: 0;
+    .ds-form {
+        max-width: 100%;
+
+        > .ds-form-group{
+
+            &:first-child {
+                margin-top: 0;
+
+                .ds-label:first-of-type {
+                    margin-top: 0;
+                }
+            }
+        }
     }
 
-    .ds-filter-group__filter-content__apply {
+    .ds-filter-group__content__tab__apply {
 
         @extend .ds-btn-secondary;
         color: config.$green;;
