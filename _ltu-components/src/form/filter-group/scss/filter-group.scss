@@ -79,21 +79,13 @@
         padding-right: config.spunits(30);
     }
 
-    > *:first-child {
-        margin-top: 0;
-
-        label:first-child {
-            //margin-top: 0;
-        }
-    }
-
     .ds-form {
         max-width: 100%;
 
         > .ds-form-group{
 
             &:first-child {
-                margin-top: 0;
+                //margin-top: 0;
 
                 .ds-label:first-of-type {
                     margin-top: 0;

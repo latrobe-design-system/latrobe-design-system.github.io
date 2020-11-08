@@ -2,14 +2,43 @@
 @use "config";
 
 .ds-columns {
-    columns: 280px 2;
+    columns: 200px 2;
     column-gap: 32px;
 
-    &--3cols {
-        column-count: 3;
+    > * {
+        display: inline-block;
+        width: 100%;
+        vertical-align: top;
     }
+}
 
-    &--4cols {
-        column-count: 4;
+.ds-columns--three-col {
+    column-count: 3;
+}
+
+.ds-columns--four-col {
+    column-count: 4;
+}
+
+div.ds-list {
+    > ul, 
+    > ol {
+        @extend .ds-columns;
+
+        li {
+            display: list-item;
+            
+            &:first-child {
+                margin-top: 0;
+            }
+        }
     }
+}
+
+div.ds-list--three-col > ul { 
+    @extend .ds-columns--three-col;
+}
+
+div.ds-list--four-col > ul { 
+    @extend .ds-columns--four-col;
 }

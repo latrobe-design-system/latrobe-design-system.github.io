@@ -141,65 +141,8 @@ li {
     max-width: 42em; // readable line length 80 characters https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html
 }
 
-// class for CSS columns, choose up to 4 columns
-// usage class="ds-columns ds-columns--[two-col | three-col | four-col]"
-// div.ds-list is for for squiz content template DS Column list
-.ds-columns,
-div.ds-list {
-    &--two-col,
-    &--three-col,
-    &--four-col {
-        max-width: 62rem;
-        @media(min-width: 600px) {
-            > ul, 
-            > ol {
-                columns: 2;
-            }
-
-            li {
-                padding-right: 1rem;
-            }
-        }
-    }
-
-    &--three-col,
-    &--four-col {
-        @media(min-width: 768px) {
-            > ul, 
-            > ol {
-                columns: 3;
-            }
-        }
-    }
-
-    &--four-col {
-        @media(min-width: 1024px) {
-            > ul, 
-            > ol {
-                columns: 4;
-            }
-        }
-    }
-}
-
-.ds-columns {
-    vertical-align: top;
-    :first-child {
-        margin-top: 0;
-    }
-}
-
-div.ds-list {
-    vertical-align: top;
-    > ul, 
-    > ol {
-        :first-child {
-            margin-top: 0;
-        }
-    } 
-}
-
 // Margins
+// typography margins are set using em not rem so that margin is relative to type size
 
 h1,
 h2,
@@ -235,7 +178,7 @@ li {
 
 blockquote,
 table {
-    margin-top: 4rem; // based on element size
+    margin-top: 4rem; // based on base font size
 }
 
 br {
