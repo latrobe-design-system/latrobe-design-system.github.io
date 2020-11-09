@@ -27,7 +27,7 @@
     @include config.overflowXScroll();
 
     // all children
-    > *:not(.ds-legend) {
+    > .ds-form-group {
         display: inline-block;
         margin: config.spunits(1) config.spunits(4) 0 0;
     }
@@ -46,7 +46,7 @@
     // toggle-tokens modifier
     &.ds-control-group--toggle-tokens {
 
-        > *:not(.ds-legend) {
+        > .ds-form-group {
             margin-top: 0;
             margin-right: 0;
 
