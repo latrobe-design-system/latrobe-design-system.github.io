@@ -6,10 +6,14 @@ info: For displaying partner logos etc
 
 {% include sample-iframe.html snippet="src/logo-showcase/snippets/logo-showcase.html" %}
 
-## Settings
 
-`data-columns` can be set to 4, 5 or 6 - this will set the maximum images per line
 
-## Use within a block
+## Modifiers
 
-{% include sample-iframe.html snippet="src/logo-showcase/snippets/logo-showcase-block.html" %}
+By default the maximum number of logos in a row is 6.
+
+Use the modifiers below to limit row to 5 or 4 max as desired based on total number of logos.
+
+{% include sample-iframe.html snippet="src/logo-showcase/snippets/logo-showcase-5col.html" %}
+
+{% include sample-iframe.html snippet="src/logo-showcase/snippets/logo-showcase-4col.html" %}

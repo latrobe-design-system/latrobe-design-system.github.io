@@ -208,13 +208,12 @@ abbr.ds-label__required {
 .ds-input-group__prepend,
 .ds-input-group__append {
     // since line height does not work on inputs this makes inputs same height as buttons which helps for inline forms
-    // font-size + top/bottom padding + top/bottom border
-    height: calc(1rem + #{config.spunits(8)} + 4px);
+    height: calc(1rem + #{config.spunits(8)} + 4px); // font-size + top/bottom padding + top/bottom border
     display: flex;
     flex-direction: column;
     justify-content: center;
     white-space: nowrap;
-    font-weight: 500;
+    //font-weight: 500;
     border: 2px solid config.$color-3b;
     border-radius: 2px;
 
@@ -230,9 +229,11 @@ abbr.ds-label__required {
     line-height: 1;
     margin: 0;
 
-    padding: 0 config.spunits(1);
-    @media(min-width: 768px){
-        padding: 0 config.spunits(4);
+    &:not(:empty) { 
+        padding: 0 config.spunits(2);
+        @media(min-width: 768px){
+            padding: 0 config.spunits(3);
+        }
     }
     
     display: flex;
@@ -242,7 +243,6 @@ abbr.ds-label__required {
     background-color: config.$color-3a;
     //modifier to add background
     &--bg-white {
-        //padding: 0;
         background-color: white;
     }
 

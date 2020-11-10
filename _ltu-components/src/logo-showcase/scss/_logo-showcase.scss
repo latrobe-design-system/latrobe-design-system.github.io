@@ -1,22 +1,31 @@
-.ds-logo-showcase__logos {
+// depenencies
+@use "config";
+
+$ds-logo-width: 200px;
+
+.ds-logo-showcase {
     list-style-type: none;
-    margin: 0 auto 24px auto;
+    margin: config.spunits(4) auto config.spunits(8) auto;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    max-width: 6*208px;
-    &[data-columns="5"] {
-        max-width: 5*208px;
+    max-width: calc(6 * (#{$ds-logo-width} + #{config.spunits(2)}));
+
+    // modifiers
+
+    // max colums 5 
+    &--max-5-cols {
+        max-width: calc(5 * (#{$ds-logo-width} + #{config.spunits(2)}));
     }
-    &[data-columns="4"] {
-        max-width: 4*208px;
+    &--max-4-cols {
+        max-width: calc(4 * (#{$ds-logo-width} + #{config.spunits(2)}));
     }
 }
 .ds-logo-showcase__logo {
-    margin: 4px;
-    width: 200px;
+    margin: config.spunits(1);
+    width: $ds-logo-width;
     min-height: 100px;
     display: flex;
     flex-direction: column;
