@@ -1,0 +1,109 @@
+@use "config";
+@use "core/scss/icons";
+@use "button/scss/button";
+
+.ds-filter-group__nav {
+   /* scroll on mobile when too wide */
+   @include config.overflowXScroll();
+   //margin-top: ;
+}
+
+.ds-filter-group__nav__label {
+    font-weight: config.$medium;
+}
+
+.ds-filter-group__nav__tab {
+    /* remove browser styling from button element */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 0;
+    margin: 0;   
+    background: none;
+    border: 0;
+    cursor: pointer;
+
+    padding: config.spunits(4) 0;
+    border-bottom: 4px solid transparent;
+    
+    &:not(:first-child) {
+        margin-left: config.spunits(3);
+    }
+
+    @extend .ds-icon-chevron-down;
+    &::after {
+        transition: transform 0.3s;
+    }
+
+    &[aria-expanded="true"] {
+        border-bottom: 4px solid config.$color-2;
+
+        &::after {
+            transform: rotate(180deg);
+        }
+    }
+
+}
+
+.ds-filter-group__nav__tab--selected {
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 14px;
+        height: 14px;
+        background-image: url(icons/feather/flag.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: absolute;
+        top: 0;
+        left: 35%;
+        filter: config.$filter-green;
+    }
+}
+
+.ds--filter-group__content {
+    position: relative;
+}
+
+.ds-filter-group__content__tab {
+    /*position: absolute;
+    z-index: 900;*/
+    position: relative;
+    width: 100%;
+    background: #fff;
+    border: 1px solid config.$color-3b;
+    padding: config.spunits(6);
+    
+    @media(min-width: 768px) {
+        padding-right: config.spunits(30);
+    }
+
+    .ds-form {
+        max-width: 100%;
+
+        > .ds-form-group{
+
+            &:first-child {
+                //margin-top: 0;
+
+                .ds-label:first-of-type {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    .ds-filter-group__content__tab__apply {
+
+        @extend .ds-btn-secondary;
+        color: config.$green;;
+        border-color: config.$green;
+
+        @media(min-width: 768px) {
+            position: absolute;
+            right: config.spunits(4);
+            top: config.spunits(4);
+        }
+    }
+}

@@ -1,0 +1,147 @@
+// depenencies
+@use "config";
+@use "core/scss/icons";
+
+.ds-course-card {
+    position: relative;
+    margin-top: config.spunits(4);
+    padding: config.spunits(4);
+    background-color: white;
+    border: solid 1px config.$color-3b;
+
+    @media(min-width: 400px) {
+        padding: config.spunits(6);
+    }
+}
+
+.ds-course-card__header,
+.ds-course-card__body {
+    
+    > *:first-child {
+        //margin-top: 0;
+    }
+}
+
+.ds-course-card__tags {
+    margin: config.spunits(2) 0;
+    
+    @media(min-width: 1050px) {
+        position: absolute;
+        width: 20%;
+        top: 0;
+        left: auto;
+        right: 0px;
+        margin: 0;
+        padding: config.spunits(7) config.spunits(6) 0 0;
+
+        + .ds-course-card__course-name {
+            margin-top: 0;
+        }
+    }
+}
+
+.ds-course-card__tag {
+    
+    color: config.$color-alt-3;
+
+    &[class*="ds-icon"] {
+        @extend .ds-icon--before;
+        &::before {
+            filter: config.$filter-teal;
+        }
+    }
+ 
+    font-size: calc(14/16 * 1rem);
+    @media(min-width: 768px) {
+        
+    }
+
+    @media(min-width: 1050px) {
+        font-size: 1rem;
+        display: flex;
+        margin: config.spunits(2) 0;
+    }
+
+}
+
+.ds-course-card__tag--featured {
+    color: white;
+    background: config.$color-alt-3;
+    padding: config.spunits(1) config.spunits(2);
+    box-shadow: -4px 4px 8px rgba(0,0,0,0.2);
+    
+    position: absolute;
+    top: -#{config.spunits(2)};
+    right: config.spunits(3);
+
+    &[class*="ds-icon"] {
+        @extend .ds-icon--before;
+        &::before {
+            filter: config.$filter-white;
+        }
+    }
+
+    @media(min-width: 1050px) {
+        top: -#{config.spunits(2)};
+        right: auto;
+        left: -#{config.spunits(2)};
+        margin: 0;
+    }
+
+
+    &::after {
+        // shadow
+        display: block;
+        content: "";
+        border-width: 8px 6px 0;
+        border-color: transparent;
+        border-right-color: transparent;
+        border-right-color: rgb(0, 170, 152);
+        filter: brightness(65%);
+        left: -12px;
+        border-style: solid;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+
+    }
+}
+
+.ds-course-card__course-name {
+    margin-top: 0;
+}
+
+.ds-course-card__body {
+    
+ 
+    .ds-tabs,
+    .ds-tabs-content {
+        margin: 1rem 0 0 0;
+    }
+
+    .ds-tabs-nav {
+        max-width: 100%;
+    }
+
+    .ds-table {
+        max-width: 42rem; // match paragraph
+
+        th {
+            width: 20%;
+        }
+    }
+
+}
+
+.ds-card--course__CTA {
+    max-width: 100%;
+    text-align: right;
+
+    @media(min-width: 1000px) {
+        text-align: left;
+        position: absolute;
+        width: 20%;
+        right: 0px;
+        bottom: config.spunits(4);
+    }
+}

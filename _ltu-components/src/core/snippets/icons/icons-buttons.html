@@ -1,0 +1,20 @@
+---
+title: "Button icons example"
+status: "Live"
+---
+{%- for image in site.static_files -%}
+    {%- if image.path contains 'assets/css/icons/feather/' -%}
+        <div>
+            <button class="ds-btn ds-icon-{{ image.name | remove: '.svg'}}">Button</button> 
+            <button class="ds-btn ds-icon-{{ image.name | remove: '.svg'}} ds-icon--before">Button</button>
+            <button class="ds-btn ds-btn--small ds-icon-{{ image.name | remove: '.svg'}}">Button</button> 
+            <button class="ds-btn ds-btn--small ds-icon-{{ image.name | remove: '.svg'}} ds-icon--before">Button</button>
+            <button class="ds-btn ds-btn--tiny ds-icon-{{ image.name | remove: '.svg'}}">Button</button> 
+            <button class="ds-btn ds-btn--tiny ds-icon-{{ image.name | remove: '.svg'}} ds-icon--before">Button</button>
+            <button class="ds-btn-link ds-icon-{{ image.name | remove: '.svg'}}">Button</button> 
+            <button class="ds-btn-link ds-icon-{{ image.name | remove: '.svg'}} ds-icon--before">Button</button>
+            <span class="ds-btn-link ds-icon-{{ image.name | remove: '.svg'}}">Button</span> 
+            <span class="ds-btn-link ds-icon-{{ image.name | remove: '.svg'}} ds-icon--before">Button</span>
+        </div>
+    {%- endif -%}
+{%- endfor -%}

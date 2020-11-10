@@ -1,0 +1,25 @@
+@use "config";
+@use "form/range-input/scss/range-input-plugin" with (
+  $thumb-color: config.$color-1
+);
+
+.ds-range-group {
+
+  .ds-range-group__range-select {
+    display: flex;
+    align-items: center;
+
+    > * {
+      white-space: nowrap;
+    }
+
+    .ds-range-group__range-select__prepend {
+      margin-right: config.spunits(2);
+    }
+
+    .ds-range-group__range-select__append {
+      margin-left: config.spunits(2);
+    }
+
+  }
+}

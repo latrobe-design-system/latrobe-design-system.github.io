@@ -1,2 +1,16 @@
 // depenencies
 @use "config";
+@use "core/scss/icons";
+
+.ds-collapse__trigger {
+    @extend .ds-icon-chevron-down;
+    &::after {
+        transition: transform 0.3s;
+    }
+}
+
+.ds-collapse__trigger[aria-expanded="true"] {
+    &::after {
+        transform: rotate(180deg);
+    }
+}

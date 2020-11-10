@@ -1,0 +1,54 @@
+// depenencies
+@use "config";
+
+.ds-tag {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    padding: config.spunits(2) config.spunits(3);
+    margin: config.spunits(1) 0;
+    border: 1px solid config.$color-3b;
+    border-radius: 20px;
+    background: config.$color-3a;
+}
+
+button.ds-tag {
+    /* remove browser styling from button element */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    display: inline-block; // older browsers
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: text-decoration 0.3s ease-in-out; // for hover
+    //transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; // for hover
+
+    &::after {
+        content: "";
+        display: inline-block;
+        vertical-align: top;
+        width: 1em;
+        height: 1em;
+        margin: 0 config.spunits(1);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        filter: config.$filter-near-black;
+        background-image: url("icons/feather/x.svg");
+
+        margin-right: 0;
+    }
+
+    &:hover {
+        text-decoration: underline;
+        /*transform: translateY(-4px);
+        box-shadow: config.$shadow-2;*/
+    }
+}
+
+.ds-tag--green {
+    border-color: config.$green;
+    background-color: lighten(config.$green, 50%);
+}

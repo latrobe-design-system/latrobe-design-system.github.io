@@ -23,4 +23,4 @@ When used next to text, icons should be center-aligned.
 
 <a name="utility-icons"></a>
 
-{% include sample-iframe.html snippet="src/core/snippets/icons/icons.html" %}
+{% include sample-iframe.html snippet="src/core/snippets/icons/icons.html" iframeonly="yes" %}

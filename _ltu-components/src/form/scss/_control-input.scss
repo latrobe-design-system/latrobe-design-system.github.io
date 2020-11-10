@@ -1,0 +1,58 @@
+// depenencies
+@use "config";
+@use "base";
+@use "checkbox";
+@use "radio";
+
+.ds-control-group {
+    @extend .ds-fieldset;
+    margin-top: 2rem;
+    .ds-legend {
+        font-size: 1rem;
+        border-bottom: none;
+        margin-top: 0;
+        margin-bottom: config.spunits(2);
+    }
+}
+
+.ds-control-group--toggle-tokens {
+    .ds-form-group {
+        margin-top: 0;
+    }
+}
+
+.ds-control-group--inline {
+
+    // inline control groups are set to scroll on small screens
+    @include config.overflowXScroll();
+
+    // all children
+    > .ds-form-group {
+        display: inline-block;
+        margin: config.spunits(1) config.spunits(4) 0 0;
+    }
+
+    // last child
+    > :last-child {
+        margin-right: 0;
+    }
+
+    .ds-legend {
+        width: auto;
+        margin-top: config.spunits(1);
+        margin-right: config.spunits(2);
+    }
+
+    // toggle-tokens modifier
+    &.ds-control-group--toggle-tokens {
+
+        > .ds-form-group {
+            margin-top: 0;
+            margin-right: 0;
+
+        }
+
+    }
+
+}
+

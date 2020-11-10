@@ -1,0 +1,274 @@
+---
+title: "Radio group"
+status: "draft"
+text: 
+
+disciplines:
+  - name: Arts, social sciences and communications
+    sub-disciplines:
+      - name: Arts
+      - name: Creative arts and English
+      - name: Historical and cultural studies
+      - name: International relations and development
+      - name: Languages and linguistics
+      - name: Media, communication and journalism
+      - name: Planning, environment and sustainability
+      - name: Politics, philosophy and economics
+      - name: Social sciences
+  - name: Business and commerce
+    sub-disciplines:
+      - name: Accounting and finance
+      - name: Business and commerce
+      - name: Economics
+      - name: Marketing and management
+      - name: Technology management
+  - name: Education and teaching
+    sub-disciplines:
+      - name: Teaching
+      - name: Outdoor and environmental education
+      - name: Career development
+      - name: Linguistics and TESOL
+  - name: Health
+    sub-disciplines:
+      - name: Allied health and rehabilitation
+      - name: Psychology, counselling and social work
+      - name: Dentistry and oral health
+      - name: Health management
+      - name: Ageing and end of life care
+      - name: Medical sciences
+      - name: Nursing, midwifery and paramedicine
+      - name: Public health
+      - name: Disability
+      - name: Digital health
+  - name: IT and engineering
+    sub-disciplines:
+      - name: Big data
+      - name: Engineering
+      - name: Information technology
+      - name: Computer science
+      - name: Cybersecurity
+  - name: Law and criminology
+    sub-disciplines:
+      - name: Law
+      - name: Criminology
+      - name: Cybersecurity
+  - name: Science
+    sub-disciplines:
+      - name: Agricultural and environmental sciences
+      - name: Molecular and biological sciences
+      - name: Mathematical and computer sciences
+      - name: Medical and psychological sciences
+      - name: Physical and chemical sciences
+---
+
+<div class="ds-filter-group">
+    <p class="ds-filter-group__nav">
+        <span class="ds-filter-group__nav__label">Refine by:</span>
+        <button class="ds-filter-group__nav__tab"
+                type="button" 
+                aria-controls="level-region" 
+                aria-expanded="false">Course level</button>
+        <button class="ds-filter-group__nav__tab  ds-filter-group__nav__tab--selected" 
+                type="button"
+                aria-controls="discipline-region" 
+                aria-expanded="false">Discipline</button>
+        <button class="ds-filter-group__nav__tab  ds-filter-group__nav__tab--selected"
+                type="button"
+                aria-controls="location-region" 
+                aria-expanded="false">Location</button>
+        <button class="ds-filter-group__nav__tab"
+                type="button"
+                aria-controls="mode-region" 
+                aria-expanded="false">Study mode</button>
+        <button class="ds-filter-group__nav__tab" 
+                type="button"
+                aria-controls="ATAR-region" 
+                aria-expanded="false">ATAR</button>
+    </p>
+
+    <div class="ds-filter-group__content">
+
+        <!-- filter 1 content -->
+        <div id="level-region" class="ds-filter-group__content__tab" role="region" hidden>
+
+            <form id="level-filter" class="ds-form ds-filter-group__filter">
+
+                    <div class="ds-form-group">
+                        <input class="ds-input-checkbox" type="checkbox" id="level-all" data-all-control="level-all" checked>
+                        <label class="ds-label" for="level-all">All</label>
+                    </div>
+                    
+                    <div class="ds-form-group">
+                        <input class="ds-input-checkbox" type="checkbox" id="level-undergraduate" data-all-parent="level-all">
+                        <label class="ds-label" for="level-undergraduate">Undergraduate</label>
+                    </div>
+
+                    <div class="ds-form-group">
+                        <input class="ds-input-checkbox" type="checkbox" id="level-postgraduate" data-all-parent="level-all">
+                        <label class="ds-label" for="level-postgraduate">Postgraduate</label>
+                    </div>
+
+                    <div class="ds-form-group">
+                        <input class="ds-input-checkbox" type="checkbox" id="level-short-course" data-all-parent="level-all">
+                        <label class="ds-label" for="level-short-course">Short courses</label>
+                    </div>
+
+                    <div class="ds-form-group">
+                        <button class="ds-filter-group__content__tab__apply" type="button">Apply</button>
+                    </div>
+
+            </form>
+
+        </div>
+
+        <!-- filter 2 content -->
+        <div id="discipline-region" class="ds-filter-group__content__tab" role="region" hidden>
+            
+            <form id="discipline-filter" class="ds-form ds-filter-group__filter">
+
+                <div class="ds-form-group">
+                    <input class="ds-input-checkbox" type="checkbox" id="discipline-all" data-all-control="discipline-all" checked>
+                    <label class="ds-label" for="discipline-all">All</label>
+                </div>
+
+                {% for discipline in page.disciplines %}
+                <!-- {{ discipline.name }} -->
+                <div class="ds-form-group ds-form-group--two-layer">
+
+                    <input class="ds-input-checkbox" type="checkbox" id="discipline-{{ discipline.name | slugify }}" data-all-control="discipline-{{ discipline.name | slugify }}-all" data-all-parent="discipline-all">
+                    <label class="ds-label" for="discipline-{{ discipline.name | slugify }}">{{ discipline.name }}</label>
+                    
+                    <button type="button" class="ds-btn ds-btn--tiny ds-collapse__trigger" aria-controls="region-{{ forloop.index }}" aria-expanded="false">Sub-discipline</button>
+                    <div id="region-{{ forloop.index }}" class="ds-collapse__content" role="region" hidden>
+                        <div class="ds-form-group--two-layer__content ds-columns ds-columns--two-col">
+                        {% for sub-discipline in discipline.sub-disciplines %}
+                            <div class="ds-form-group">
+                                <input class="ds-input-checkbox" type="checkbox" id="sub-discipline-{{ sub-discipline.name | slugify }}" data-all-parent="discipline-{{ discipline.name | slugify }}-all">
+                                <label class="ds-label" for="sub-discipline-{{ sub-discipline.name | slugify }}">{{ sub-discipline.name }}</label>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    </div>
+
+                </div>
+                {% endfor %}
+
+                <div class="ds-form-group">
+                    <button class="ds-filter-group__content__tab__apply" type="button">Apply</button>
+                </div>
+            </form>
+
+        </div>
+
+        <!-- filter 3 content -->
+        <div id="location-region" class="ds-filter-group__content__tab" role="region" hidden>
+
+            <form id="location-filter" class="ds-form ds-filter-group__filter">
+
+                <div class="ds-columns ds-columns--three-col">
+
+                    <div class="ds-form-group">
+                        <input class="ds-input-checkbox" id="location-all" type="checkbox" value="all" data-all-control="location-all" checked>
+                        <label class="ds-label" for="location-all">All</label>
+                    </div>
+
+                    <div class="ds-form-group">
+                        <input class="ds-input-checkbox" id="location-bu" type="checkbox" value="BU" data-all-parent="location-all">
+                        <label class="ds-label" for="location-bu">Melbourne</label>
+                    </div>
+
+                    <div class="ds-form-group">
+                        <input class="ds-input-checkbox" id="location-aw" type="checkbox" value="WO" data-all-parent="location-all">
+                        <label class="ds-label" for="location-aw">Albury-Wodonga</label>
+                    </div>
+
+                    <div class="ds-form-group">
+                        <input class="ds-input-checkbox" id="location-be" type="checkbox" value="BE" data-all-parent="location-all">
+                        <label class="ds-label" for="location-be">Bendigo</label>
+                    </div>
+
+                    <div class="ds-form-group">
+                        <input class="ds-input-checkbox" id="location-ci" type="checkbox" value="CI" data-all-parent="location-all">
+                        <label class="ds-label" for="location-ci">City</label>
+                    </div>
+
+                    <div class="ds-form-group">
+                        <input class="ds-input-checkbox" id="location-mi" type="checkbox" value="MI" data-all-parent="location-all">
+                        <label class="ds-label" for="location-mi">Mildura</label>
+                    </div>
+
+                    <div class="ds-form-group">
+                        <input class="ds-input-checkbox" id="location-sh" type="checkbox" value="OT" data-all-parent="location-all">
+                        <label class="ds-label" for="location-sh">Shepparton</label>
+                    </div>
+
+                    <div class="ds-form-group">
+                        <input class="ds-input-checkbox" id="location-sy" type="checkbox" value="SY" data-all-parent="location-all">
+                        <label class="ds-label" for="location-sy">Sydney</label>
+                    </div>
+
+                    <div class="ds-form-group">
+                        <input class="ds-input-checkbox" id="location-mi" type="checkbox" value="OT">
+                        <label class="ds-label" for="location-mi">Other</label>
+                    </div>
+
+                </div>
+
+                <div class="ds-form-group">
+                    <button class="ds-filter-group__content__tab__apply" type="button">Apply</button>
+                </div>
+
+            </form>
+
+        </div>
+
+        <!-- filter 4 content -->
+        <div id="mode-region" class="ds-filter-group__content__tab" role="region" hidden>
+
+            <form id="mode-filter" class="ds-form ds-filter-group__filter">
+
+                    <div class="ds-form-group">
+                        <input class="ds-input-checkbox" type="checkbox" id="mode-all" data-all-control="mode-all" checked>
+                        <label class="ds-label" for="mode-all">All</label>
+                    </div>
+                    
+                    <div class="ds-form-group">
+                        <input class="ds-input-checkbox" type="checkbox" id="mode-on-campus" data-all-parent="mode-all">
+                        <label class="ds-label" for="mode-undergraduate">On campus</label>
+                    </div>
+
+                    <div class="ds-form-group">
+                        <input class="ds-input-checkbox" type="checkbox" id="mode-online" data-all-parent="mode-all">
+                        <label class="ds-label" for="mode-postgraduate">Online</label>
+                    </div>
+            </form>
+
+        </div>
+
+        <!-- filter 5 content -->
+        <div id="ATAR-region" class="ds-filter-group__content__tab" role="region" hidden>
+            
+            <form id="ATAR-filter" class="ds-form ds-filter-group__filter">
+                <div class="ds-form-group">
+                    <label class="ds-label"  for="atar-range">Max ATAR:</label> 
+                    <input class="ds-number-input" type="number" min="50" max="99.95" step="0.05">
+                </div>
+
+                <div class="ds-alert ds-alert--info" role="alert">
+                    <div class="ds-alert__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="8"></line></svg>
+                    </div>
+                    <div class="ds-alert__text">
+                        <p>You may be eligible to have additional points added to this score by La&nbsp;Trobe by using our <a href="" target="_blank">ATAR adjustment calculator</a> <small>(opens in new window)</small>.</p>
+                    </div>
+                </div>
+
+                <div class="ds-form-group">
+                    <button class="ds-filter-group__content__tab__apply" type="button">Apply</button>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+</div>

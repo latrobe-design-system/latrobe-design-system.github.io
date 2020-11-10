@@ -1,7 +1,7 @@
 ---
-title: "Checkbox Block"
+title: "Checkbox valid"
 status: "draft"
-text: "Inline checkbox options can sometimes be difficult to scan. Users may find it challenging to determine with which label the checkbox option corresponds: the one before the checkbox or the one after. Vertical positioning of checkbox, with one choice per line, eliminates this potential cause for confusion."
+text: 
 
 # Example content
 legend: Checkbox Group
@@ -10,38 +10,30 @@ label: Item
 valid: Successfully validated
 ---
 
-<form class="ds-form-group">
-    <fieldset class="ds-fieldset">
-        <legend class="ds-legend">
-            {{ page.legend }}
-        </legend> 
-    </fieldset>
-
-    <div class="ds-control-input-group">
-        <div class="ds-control-input ds-control-input--valid ds-control-input--block">
-            <input class="ds-control-input__input" type="checkbox" id="{{ page.id }}-1">
-
-            <label class="ds-control-input__label" for="{{ page.id }}-1">
-                {{ page.label }}
-            </label>
-        </div>
-
-        <div class="ds-control-input ds-control-input--valid ds-control-input--block">
-            <input class="ds-control-input__input" type="checkbox" id="{{ page.id }}-2">
-
-            <label class="ds-control-input__label" for="{{ page.id }}-2">
-                {{ page.label }}
-            </label>
-        </div>
-
-        <div class="ds-control-input ds-control-input--valid ds-control-input--block">
-            <input class="ds-control-input__input" type="checkbox" id="{{ page.id }}-3">
-
-            <label class="ds-control-input__label" for="{{ page.id }}-3">
-                {{ page.label }}
-            </label>
-        </div>
-
-        <span class="ds-hint ds-hint--valid small-text" id="{{ page.id }}-valid-text">{{ page.valid }}</span>
+<fieldset class="ds-control-group">
+    <legend class="ds-legend">
+        What colors do like?
+    </legend>
+    
+    <div class="ds-form-group">
+        <input class="ds-input-checkbox" type="checkbox" id="checkbox}-1">
+        <label class="ds-label" for="checkbox}-1">
+            Red
+        </label>
     </div>
-</form>
+    
+    <div class="ds-form-group">
+        <input class="ds-input-checkbox" type="checkbox" id="checkbox-2">
+        <label class="ds-label" for="checkbox-2">
+            Blue
+        </label>
+    </div>
+
+    <div class="ds-form-group">
+        <input class="ds-input-checkbox" type="checkbox" id="checkbox-3">
+        <label class="ds-label" for="checkbox-3">
+            Yellow
+        </label>
+    </div>
+
+</fieldset>

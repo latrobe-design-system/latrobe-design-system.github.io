@@ -25,8 +25,10 @@
 @use "button/scss/button";
 @use "callout/scss/callout";
 @use "card/scss/card";
+@use "card/scss/course-card";
 @use "card/scss/card-set";
 @use "child-nav/scss/child-nav";
+@use "child-nav/scss/page-nav";
 @use "collapse/scss/collapse";
 @use "column-layout/scss/column-layout";
 @use "figure/scss/figure";
@@ -44,10 +46,15 @@
 @use "promo/scss/promo";
 @use "promo/scss/hero-promo";
 @use "proofpoint/scss/proofpoint";
+@use "shadow-box/scss/shadow-box";
 @use "site-header/scss/global-nav";
 @use "step-list/scss/step-list";
 @use "tab/scss/tab";
 @use "table/scss/table";
+@use "tag/scss/tag";
 @use "testimonial/scss/testimonial";
 @use "tooltip/scss/tooltip";
 @use "video/scss/video";
+
+// Specific styles
+@use "course-search/scss/course-search";

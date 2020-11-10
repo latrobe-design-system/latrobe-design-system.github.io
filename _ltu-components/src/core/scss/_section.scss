@@ -8,6 +8,11 @@ div.ds-section {
     padding: 0;
     max-width: 100%;
 
+    //section is first child of article
+    &:first-child {
+        margin-top: 0;
+    }
+
     // modifiers background color
     &--bg-grey {
         background-color: config.$color-3a;

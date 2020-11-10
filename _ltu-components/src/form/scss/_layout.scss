@@ -1,5 +1,6 @@
 // depenencies
 @use "config";
+@use "button/scss/button";
 
 // Layout
 
@@ -8,6 +9,7 @@
 // or the form itself <form class="ds-form"></form>
 .ds-form {
     max-width: 42rem;
+    margin-top: 0;
 }
 
 // modifier for .ds-form to center form on page 
@@ -29,46 +31,21 @@ form.ds-form--full-width {
 
 // form groups wrap label and input pairs
 .ds-form-group {
-    //margin-top: 1rem;
+    margin-top: 1rem;
 }
 
-/*.ds-form-group--inline {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    margin-top: 0;
-
-    > * {
-        margin-bottom: 0;
-        width: auto;
-        flex-grow: 1;
-    }
-
-    > label, [type="submit"], [type="reset"], .ds-text-input__prepend {
-        flex-grow: 0;
-        margin-bottom: 0;
-    }
-
-    .ds-label {
-        width: 100%;
-
-        @media(min-width: 768px) {
+//
+.ds-form-group--two-layer {
+    .ds-input-checkbox,
+    .ds-input-radio {
+        + .ds-label {
             display: inline-block;
-            width: auto;
-            white-space: nowrap;
-            margin-right: config.spunits(5);
         }
     }
-}*/
+}
 
-.ds-control-group--inline {
-    .ds-legend {
-        width: auto;
-        margin-top: config.spunits(3);
-        margin-right: 8px;
-    }
-    > * {
-        display: inline-block;
-        margin: config.spunits(1) 0;
-    }
+.ds-form-group--two-layer__content {
+    margin-top: config.spunits(2);
+    padding: config.spunits(4);
+    border: 1px solid config.$color-3b;
 }

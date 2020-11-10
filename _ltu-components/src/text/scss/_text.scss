@@ -141,45 +141,8 @@ li {
     max-width: 42em; // readable line length 80 characters https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html
 }
 
-// for squiz content template
-div.ds-list {
-    &--two-col,
-    &--three-col,
-    &--four-col {
-        max-width: 62rem;
-        @media(min-width: 600px) {
-            > ul, 
-            > ol {
-                columns: 2;
-            }
-
-            li {
-                padding-right: 1rem;
-            }
-        }
-    }
-
-    &--three-col,
-    &--four-col {
-        @media(min-width: 768px) {
-            > ul, 
-            > ol {
-                columns: 3;
-            }
-        }
-    }
-
-    &--four-col {
-        @media(min-width: 1024px) {
-            > ul, 
-            > ol {
-                columns: 4;
-            }
-        }
-    }
-}
-
 // Margins
+// typography margins are set using em not rem so that margin is relative to type size
 
 h1,
 h2,
@@ -210,12 +173,12 @@ ul {
 }
 
 li {
-    margin-bottom: 0.5em; // based on element size
+    margin-top: 0.5em; // based on element size
 }
 
 blockquote,
 table {
-    margin-top: 4rem; // based on element size
+    margin-top: 4rem; // based on base font size
 }
 
 br {

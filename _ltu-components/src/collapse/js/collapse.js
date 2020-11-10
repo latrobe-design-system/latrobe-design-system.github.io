@@ -5,38 +5,27 @@ $(document).ready(function() {
 
       var regionId = $(this).attr('aria-controls');
 
-      if ($(this).attr('aria-expanded') == 'false') { // region is collapsed
+      if ($(this).attr('aria-expanded') == 'false') { // region is collapsed then open it
 
-          // update the aria-expanded attribute of the region
+          // update the aria-expanded attribute of the clicked trigger
           $(this).attr('aria-expanded', 'true');
   
-          // move focus to the region
-          
+          // open the region
           $('#'+regionId).slideDown(function(){
             $(this).removeAttr('hidden');
           });
   
-          // update button icon
-          $(this).removeClass('ds-icon-chevron-down').addClass('ds-icon-chevron-up');
-
-          // update the button label
-          //thisObj.$id.find('span').html('Hide');
-  
         }
-        else { // region is expanded
+        else { // region is expanded then close it
   
-          // update the aria-expanded attribute of the region
+          // update the aria-expanded attribute of the clicked triiger
           $(this).attr('aria-expanded', 'false');
 
+          // close the region
           $('#'+regionId).slideUp(function(){
             $(this).attr('hidden','hidden');
           });
 
-          // update button icon
-          $(this).removeClass('ds-icon-chevron-up').addClass('ds-icon-chevron-down');
-  
-          // update the button label
-          //thisObj.$id.find('span').html('Show');
         }
     });
 
