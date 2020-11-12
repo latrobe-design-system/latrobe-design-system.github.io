@@ -30,13 +30,13 @@ accordion-content: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
 
     <div class="ds-accordion">
         <h3>
-            <button id="sect3trigger" class="ds-accordion__trigger" aria-expanded="false" aria-controls="sect2">
+            <button id="sect2trigger" class="ds-accordion__trigger" aria-expanded="false" aria-controls="sect2">
                 <span class="ds-accordion__title">
                     {{ page.accordion-heading }}
                 </span>
             </button>
         </h3>
-        <div id="sect2" class="ds-accordion__content" role="region" aria-labelledby="sect3trigger">
+        <div id="sect2" class="ds-accordion__content" role="region" aria-labelledby="sect2trigger">
             {{ page.accordion-content }}
         </div>
     </div>

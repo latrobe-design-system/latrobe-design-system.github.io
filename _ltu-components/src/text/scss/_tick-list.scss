@@ -1,0 +1,38 @@
+// depenencies
+@use "config";
+@use "core/scss/icons";
+
+.ds-tick-list {
+
+    padding: 0;
+
+    > li{
+        list-style: none;
+        padding-left: 40px;
+        margin-top: 1em;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 1.2em;
+            height: 1.2em;
+            background-image: url(icons/feather/check.svg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            filter: config.$filter-green;
+
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0.1em;
+        }
+    }
+
+    .ds-ticklist__cross {
+        &::before {
+            background-image: url(icons/feather/x.svg);
+            filter: config.$filter-red;
+        }
+    }
+}
+
