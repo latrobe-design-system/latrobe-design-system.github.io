@@ -5,9 +5,9 @@
 .ds-page-content {
     > { 
         div:not(.ds-section):not(.ds-block),
+        section:not(.ds-section):not(.ds-block),
+        article:not(.ds-section):not(.ds-block),
         .ds-section > div:not(.ds-block),
-        section,
-        article,
         form {
             padding: 0 20px;
             margin: 0 auto;
@@ -17,7 +17,7 @@
                 max-width: 1280px + 80px; // 1280 + 80 (padding)
             }
         }
-        div:not(.ds-section),
+        div,
         section,
         article,
         form {
@@ -27,7 +27,7 @@
             }
         }
 
-        div:not(.ds-section),
+        div,
         section,
         article {
             .ds-block {

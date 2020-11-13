@@ -35,10 +35,16 @@ div.ds-list {
     }
 }
 
-div.ds-list--three-col > ul { 
-    @extend .ds-columns--three-col;
+div.ds-list--three-col { 
+    > ul, 
+    > ol {
+        @extend .ds-columns--three-col;
+    }
 }
 
-div.ds-list--four-col > ul { 
-    @extend .ds-columns--four-col;
+div.ds-list--four-col { 
+    > ul, 
+    > ol {
+        @extend .ds-columns--four-col;
+    }
 }

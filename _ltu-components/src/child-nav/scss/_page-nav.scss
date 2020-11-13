@@ -1,4 +1,5 @@
 // depenencies
+@use "config";
 @use "core/scss/icons";
 @use "child-nav/scss/child-nav";
 
@@ -16,6 +17,12 @@
 
 .ds-page-nav__list-item:not(.ds-page-nav__CTA) {
     @extend .ds-icon-chevron-down;
+    
+    &:hover {
+        &::after {
+            filter: config.$filter-red;
+        }
+    }
 }
 
 .ds-page-nav__CTA {
@@ -41,4 +48,3 @@
 .ds-page-nav--centered {
     @extend .ds-child-nav--centered;
 }
-

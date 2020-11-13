@@ -60,6 +60,17 @@ td {
 tr {
     border-top: 2px solid config.$color-3b;
     border-bottom: 2px solid config.$color-3b;
+
+    &.ds-table__footnotes {
+        td {
+            padding: config.spunits(4) config.spunits(7);
+            font-size: 0.8em;
+
+            p, li {
+                max-width: 100%;
+            }
+        }
+    }
 }
 
 // jquery tablesorter styles - investigate if required
@@ -107,7 +118,7 @@ tr {
         padding: config.spunits(4) config.spunits(2);
     }
 
-    td, th {
+    th, td {
         padding: config.spunits(2);
     }
 
@@ -121,6 +132,10 @@ tr {
     
     td {
         border-right: 1px solid config.$color-3b;
+
+        &:last-child {
+            border-right: none;
+        }
     }
     
     tr {
