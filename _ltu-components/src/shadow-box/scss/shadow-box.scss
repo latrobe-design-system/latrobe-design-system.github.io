@@ -19,3 +19,14 @@
     }
 
 }
+
+.ds-border-box {
+    background: white;
+    margin-top: 1rem;
+    padding: config.spunits(4);
+    border: 2px solid config.$color-3b;
+
+    > *:first-child {
+        margin-top: 0;
+    }
+}

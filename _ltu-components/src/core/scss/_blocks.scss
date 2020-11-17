@@ -27,7 +27,7 @@
             }
         }
 
-        div,
+        div:not(.ds-section),
         section,
         article {
             .ds-block {

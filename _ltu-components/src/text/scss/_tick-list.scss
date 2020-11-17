@@ -34,5 +34,9 @@
             filter: config.$filter-red;
         }
     }
+
+    & + .ds-list-footnotes {
+        padding-left: 48px;
+    }
 }
 

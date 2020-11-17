@@ -13,7 +13,7 @@ div.ds-section {
 
     
     &--bordered {
-        border-top: 2px dashed config.$color-1;
+        border-top: 1px solid config.$color-3a;
 
         &:last-child {
             border-bottom: none;
@@ -127,7 +127,7 @@ div.ds-section--bordered + div.ds-section--bordered {
 
 // add border to top of section no --bg or --bordered modifier following section that has --bordered
 div.ds-section--bordered + div.ds-section:not([class*="ds-section--b"]) {
-    border-top: 2px dashed config.$color-1;
+    border-top: 2px dashed config.$color-3a;
 }
 
 // remove top border if --bordered follows --bg-
