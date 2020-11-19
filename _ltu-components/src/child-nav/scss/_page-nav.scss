@@ -3,9 +3,33 @@
 @use "core/scss/icons";
 @use "child-nav/scss/child-nav";
 
+.ds-page-nav-container {
+    background-color: white;
+
+    // same media condition as legacy header sticky
+    @media(min-height: 600px) and (min-width: 1024px) {
+        
+        position: sticky;
+        top: calc(80px + 2.5rem); // header height
+    }
+}
+
+// page-nav.js adds this class when top sticky position reached
+.ds-page-nav-container--stuck {
+    padding: config.spunits(2) 0 config.spunits(1) 0 !important;
+    transition: background-color box-shadow 1s ease-in-out;
+    background-color: config.$color-3;
+    box-shadow: 0 0 12px rgba(0,0,0,.3);
+
+    .ds-page-nav {
+        margin: 0 auto;
+    }
+}
+
 .ds-page-nav {
     @extend .ds-child-nav;
 }
+
 .ds-page-nav__list {
     @extend .ds-child-nav__list;
 }
@@ -16,8 +40,12 @@
 }
 
 .ds-page-nav__list-item:not(.ds-page-nav__CTA) {
-    @extend .ds-icon-chevron-down;
-    
+    @extend .ds-icon-chevrons-down;
+    // chevrons color
+    &::after {
+        filter: config.$filter-color-3d;
+    }
+    // chevrons color on hover
     &:hover {
         &::after {
             filter: config.$filter-red;
