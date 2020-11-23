@@ -92,10 +92,10 @@ abbr.ds-label__required {
 .ds-textarea,
 .ds-select,
 .ds-number-input {
-    display: block;
+    display: inline-block;
     width: 100%;
     padding: config.spunits(4);
-    //margin-top: config.spunits(1);
+    margin: config.spunits(1) 0;
     background-color: white;
     border: 2px solid config.$color-3b;
     resize: vertical;

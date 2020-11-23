@@ -24,23 +24,23 @@ localjs: "js/course-search.js"
             </legend>
         
             <div class="ds-form-group ds-form-group--radio-toggle">
-                <input class="ds-input-radio ds-input-radio--toggle" type="radio" name="student" id="uniqueID-1" checked>
-                <label class="ds-label" for="uniqueID-1">a domestic student</label>
+                <input class="ds-input-radio ds-input-radio--toggle" type="radio" name="student" id="dom-toggle" checked>
+                <label class="ds-label" for="dom-toggle">a domestic student</label>
             </div>
         
             <div class="ds-form-group ds-form-group--radio-toggle">
-                <input class="ds-input-radio ds-input-radio--toggle" type="radio" name="student" id="uniqueID-2">
-                <label class="ds-label" for="uniqueID-2">an international student</label>
+                <input class="ds-input-radio ds-input-radio--toggle" type="radio" name="student" id="int-toggle">
+                <label class="ds-label" for="int-toggle">an international student</label>
             </div>
         
         </fieldset>
 
-        <form class="ds-form ds-form--full-width" action="">
+        <form class="ds-form ds-form--full-width" id="course-search" action="">
             <div class="ds-form-group">
                 <label class="ds-label h2 sr-only" for="query_courses">Find your course</label>
                 <div class="ds-input-group">
                     <div class="ds-input-group__prepend">
-                        <span class="ds-input-group__text ds-input-group__text--bg-white"></span>
+                        <span class="ds-input-group__text ds-input-group__text--bg-white" id="query-tag-container"></span>
                     </div>
                     <input class="ds-text-input" type="search" id="query_courses" placeholder="Search for a course by keyword, course &hellip;" autocomplete="off">
                     <button class="ds-btn-primary ds-icon-search ds-icon--before ds-btn--icon-only-mobile" type="submit" id="course-search-submit">Search</button>
@@ -56,10 +56,11 @@ localjs: "js/course-search.js"
 
 <div class="ds-block">
 
-    <p class="ds--overflowXSrcoll">
+    <p class="ds--full-width ds--overflowXSrcoll">
         <b>Filtered by:</b> 
-        <button class="ds-tag ds-tag--green" title="remove filter">Health</button> 
-        <button class="ds-tag ds-tag--green" title="remove filter">Melbourne</button>
+        <span id="filter-tags">
+            <!-- <button class="ds-tag ds-tag--green" title="remove filter">Health</button> -->
+        </span>
     </p>
 
     <fieldset class="ds-control-group  ds-control-group--inline">

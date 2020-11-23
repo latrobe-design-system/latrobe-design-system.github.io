@@ -12,4 +12,4 @@ menu: 4
 
 {% include sample-iframe.html snippet="src/form/snippets/select/disabled.html" %}
 
-{% include sample-iframe.html snippet="src/form/snippets/select/select-minimal.html" %}
+{% include sample-iframe.html snippet="src/form/snippets/select/select-small.html" %}

@@ -5,6 +5,8 @@
 
 .ds-page-nav-container {
     background-color: white;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
 
     // same media condition as legacy header sticky
     @media(min-height: 600px) and (min-width: 1024px) {
@@ -16,13 +18,15 @@
 
 // page-nav.js adds this class when top sticky position reached
 .ds-page-nav-container--stuck {
-    padding: config.spunits(2) 0 config.spunits(1) 0 !important;
-    transition: background-color box-shadow 1s ease-in-out;
-    background-color: config.$color-3;
-    box-shadow: 0 0 12px rgba(0,0,0,.3);
+    @media(min-width: 1024px) {
+        padding: config.spunits(2) 0 config.spunits(1) 0 !important;
+        transition: background-color box-shadow 1s ease-in-out;
+        background-color: config.$color-3;
+        box-shadow: 0 0 12px rgba(0,0,0,.3);
 
-    .ds-page-nav {
-        margin: 0 auto;
+        .ds-page-nav {
+            margin: 0 auto;
+        }
     }
 }
 

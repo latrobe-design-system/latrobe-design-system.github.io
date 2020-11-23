@@ -20,27 +20,21 @@
  * minimal modifier
  * usage: class="ds-select ds-select--minimal"
  */
-.ds-select--minimal {
+.ds-select--small {
     display: inline-block;
     width: auto;
     height: auto;
-    border: none;
-    padding-top: 0;
-    padding-left: 0;
-    padding-bottom: 0;
-    padding-right: config.spunits(6);
-    background-position: right center;
-    //font-weight: config.$medium;
-    border-bottom: 1px solid config.$color-2;
+    padding: config.spunits(2) config.spunits(6) config.spunits(2) config.spunits(2); 
+    background-position: right config.spunits(1) center;
 
     /* 
      * sub modifier for --minimal modifier to change colour to green
      * usage: class="ds-select ds-select--minimal ds-select--minimal-green"
      */
-    &.ds-select--minimal-green {
+    &.ds-select--green {
         font-weight: config.$medium;
         color: config.$green;
         background-image: url("icons/chevron-down-green.svg");
-        border-bottom: 1px solid config.$green;
+        border-color: config.$green;
     } 
 }

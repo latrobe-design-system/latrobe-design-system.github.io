@@ -156,17 +156,27 @@ table,
 
 .ds-table--striped {
     tbody {
-
-        tr {
-            //border-top: 0px;
-
-            &:not(:last-child) {
-                //border-bottom: 0px;
-            }
-        }
-
-        tr:nth-child(even) {
+        tr:nth-child(odd) {
             background-color: #eee;
+        }
+    }
+}
+
+.ds-table--stacked-on-mobile {
+    @media(max-width: 767px) {
+        tr {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            border-bottom: none;
+
+            th, td {
+                border: none !important;
+            }
+
+            th {
+                padding-bottom: 0;
+            }
         }
     }
 }

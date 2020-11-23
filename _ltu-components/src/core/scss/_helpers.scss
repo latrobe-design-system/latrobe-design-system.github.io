@@ -115,6 +115,14 @@
 }
 
 /*
+ *  When you need full width p, li, headings
+ */
+
+ .ds--full-width {
+   max-width: 100%;
+ }
+
+/*
  *  Make container overflow scroll horizontally
  *  Useful for 
  */
@@ -138,6 +146,28 @@
 
   // modifiers
 
+  // align items
+  &.ds-flex-layout--align-center {
+    align-items: center;
+  }
+
+  &.ds-flex-layout--align-flex-start {
+    align-items: flex-start;
+  }
+  
+  &.ds-flex-layout--align-flex-end {
+    align-items: flex-end;
+  }
+  
+  &.ds-flex-layout--align-baseline {
+    align-items: baseline;
+  }
+  
+  &.ds-flex-layout--align-stretch {
+    align-items: stretch;
+  }
+
+  // justify content
   &.ds-flex-layout--justify-center {
     justify-content: center;
   }

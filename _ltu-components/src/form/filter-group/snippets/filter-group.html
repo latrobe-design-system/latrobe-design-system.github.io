@@ -64,32 +64,37 @@ disciplines:
 <div class="ds-filter-group">
     <p class="ds-filter-group__nav">
         <span class="ds-filter-group__nav__label">Refine by:</span>
-        <button class="ds-filter-group__nav__tab"
+        <button id="filter-1-trigger"
+                class="ds-filter-group__nav__tab"
                 type="button" 
-                aria-controls="level-region" 
+                aria-controls="filter-1" 
                 aria-expanded="false">Course level</button>
-        <button class="ds-filter-group__nav__tab  ds-filter-group__nav__tab--selected" 
+        <button id="filter-2-trigger"
+                class="ds-filter-group__nav__tab" 
                 type="button"
-                aria-controls="discipline-region" 
+                aria-controls="filter-2" 
                 aria-expanded="false">Discipline</button>
-        <button class="ds-filter-group__nav__tab  ds-filter-group__nav__tab--selected"
+        <button id="filter-3-trigger"
+                class="ds-filter-group__nav__tab"
                 type="button"
-                aria-controls="location-region" 
+                aria-controls="filter-3" 
                 aria-expanded="false">Location</button>
-        <button class="ds-filter-group__nav__tab"
+        <button id="filter-4-trigger"
+                class="ds-filter-group__nav__tab"
                 type="button"
-                aria-controls="mode-region" 
+                aria-controls="filter-4" 
                 aria-expanded="false">Study mode</button>
-        <button class="ds-filter-group__nav__tab" 
+        <button id="filter-5-trigger"
+                class="ds-filter-group__nav__tab" 
                 type="button"
-                aria-controls="ATAR-region" 
+                aria-controls="filter-5" 
                 aria-expanded="false">ATAR</button>
     </p>
 
     <div class="ds-filter-group__content">
 
         <!-- filter 1 content -->
-        <div id="level-region" class="ds-filter-group__content__tab" role="region" hidden>
+        <div id="filter-1" class="ds-filter-group__content__tab" role="region" aria-labelledby="filter-1-trigger" hidden>
 
             <form id="level-filter" class="ds-form ds-filter-group__filter">
 
@@ -114,7 +119,7 @@ disciplines:
                     </div>
 
                     <div class="ds-form-group">
-                        <button class="ds-filter-group__content__tab__apply" type="button">Apply</button>
+                        <button class="ds-filter-group__content__tab__apply">Apply</button>
                     </div>
 
             </form>
@@ -122,7 +127,7 @@ disciplines:
         </div>
 
         <!-- filter 2 content -->
-        <div id="discipline-region" class="ds-filter-group__content__tab" role="region" hidden>
+        <div id="filter-2" class="ds-filter-group__content__tab" role="region" aria-labelledby="filter-2-trigger" hidden>
             
             <form id="discipline-filter" class="ds-form ds-filter-group__filter">
 
@@ -154,14 +159,14 @@ disciplines:
                 {% endfor %}
 
                 <div class="ds-form-group">
-                    <button class="ds-filter-group__content__tab__apply" type="button">Apply</button>
+                    <button class="ds-filter-group__content__tab__apply">Apply</button>
                 </div>
             </form>
 
         </div>
 
         <!-- filter 3 content -->
-        <div id="location-region" class="ds-filter-group__content__tab" role="region" hidden>
+        <div id="filter-3" class="ds-filter-group__content__tab" role="region" aria-labelledby="filter-3-trigger" hidden>
 
             <form id="location-filter" class="ds-form ds-filter-group__filter">
 
@@ -208,14 +213,14 @@ disciplines:
                     </div>
 
                     <div class="ds-form-group">
-                        <input class="ds-input-checkbox" id="location-mi" type="checkbox" value="OT">
-                        <label class="ds-label" for="location-mi">Other</label>
+                        <input class="ds-input-checkbox" id="location-ot" type="checkbox" value="OT" data-all-parent="location-all">
+                        <label class="ds-label" for="location-ot">Other</label>
                     </div>
 
                 </div>
 
                 <div class="ds-form-group">
-                    <button class="ds-filter-group__content__tab__apply" type="button">Apply</button>
+                    <button class="ds-filter-group__content__tab__apply">Apply</button>
                 </div>
 
             </form>
@@ -223,7 +228,7 @@ disciplines:
         </div>
 
         <!-- filter 4 content -->
-        <div id="mode-region" class="ds-filter-group__content__tab" role="region" hidden>
+        <div id="filter-4" class="ds-filter-group__content__tab" role="region" aria-labelledby="filter-4-trigger" hidden>
 
             <form id="mode-filter" class="ds-form ds-filter-group__filter">
 
@@ -234,16 +239,16 @@ disciplines:
                 
                 <div class="ds-form-group">
                     <input class="ds-input-checkbox" type="checkbox" id="mode-on-campus" data-all-parent="mode-all">
-                    <label class="ds-label" for="mode-undergraduate">On campus</label>
+                    <label class="ds-label" for="mode-on-campus">On campus</label>
                 </div>
 
                 <div class="ds-form-group">
                     <input class="ds-input-checkbox" type="checkbox" id="mode-online" data-all-parent="mode-all">
-                    <label class="ds-label" for="mode-postgraduate">Online</label>
+                    <label class="ds-label" for="mode-online">Online</label>
                 </div>
 
                 <div class="ds-form-group">
-                    <button class="ds-filter-group__content__tab__apply" type="button">Apply</button>
+                    <button class="ds-filter-group__content__tab__apply">Apply</button>
                 </div>
                 
             </form>
@@ -251,12 +256,13 @@ disciplines:
         </div>
 
         <!-- filter 5 content -->
-        <div id="ATAR-region" class="ds-filter-group__content__tab" role="region" hidden>
+        <div id="filter-5" class="ds-filter-group__content__tab" role="region" aria-labelledby="filter-5-trigger" hidden>
             
             <form id="ATAR-filter" class="ds-form ds-filter-group__filter">
                 <div class="ds-form-group">
-                    <label class="ds-label"  for="atar-range">Max ATAR:</label> 
-                    <input class="ds-number-input" type="number" min="50" max="99.95" step="0.05">
+                    <label class="ds-label"  for="atar">Max ATAR:</label> 
+                    <input class="ds-number-input" id="atar" type="number" min="50" max="99.95" step="0.05" value="99.95">
+                    <input type="reset" class="ds-btn" id="atar-value-clear" value="Reset">
                 </div>
 
                 <div class="ds-alert ds-alert--info" role="alert">
@@ -264,12 +270,12 @@ disciplines:
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="8"></line></svg>
                     </div>
                     <div class="ds-alert__text">
-                        <p>You may be eligible to have additional points added to this score by La&nbsp;Trobe by using our <a href="" target="_blank">ATAR adjustment calculator</a> <small>(opens in new window)</small>.</p>
+                        <p>You may be eligible to have additional points added to this score by La&nbsp;Trobe by using our <a href="https://www.latrobe.edu.au/study/undergrad/atar-adjustment-factors-calculator" target="_blank">ATAR adjustment calculator</a> <small>(opens in new window)</small>.</p>
                     </div>
                 </div>
 
                 <div class="ds-form-group">
-                    <button class="ds-filter-group__content__tab__apply" type="button">Apply</button>
+                    <button class="ds-filter-group__content__tab__apply">Apply</button>
                 </div>
             </form>
 
