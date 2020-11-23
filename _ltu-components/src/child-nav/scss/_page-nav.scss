@@ -13,14 +13,15 @@
         
         position: sticky;
         top: calc(80px + 2.5rem); // header height
+        transition: background-color box-shadow 1s ease-in-out;
     }
 }
 
 // page-nav.js adds this class when top sticky position reached
 .ds-page-nav-container--stuck {
+    
     @media(min-width: 1024px) {
         padding: config.spunits(2) 0 config.spunits(1) 0 !important;
-        transition: background-color box-shadow 1s ease-in-out;
         background-color: config.$color-3;
         box-shadow: 0 0 12px rgba(0,0,0,.3);
         z-index: 999;
@@ -28,6 +29,21 @@
         .ds-page-nav {
             margin: 0 auto;
         }
+
+        .ds-page-nav__list-item:not(.ds-page-nav__CTA) {
+            // chevrons color
+            &::after {
+                filter: config.$filter-near-black;
+            }
+        }
+
+        .ds-page-nav__link,
+        .ds-page-nav__link:visited {  
+            color: config.$color-2;
+            &:hover {
+                color: config.$color-1;
+            }
+        }  
     }
 }
 
