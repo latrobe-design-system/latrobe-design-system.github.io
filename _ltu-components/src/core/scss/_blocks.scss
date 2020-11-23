@@ -16,12 +16,15 @@
                 padding: 0 40px;
                 max-width: 1280px + 80px; // 1280 + 80 (padding)
             }
+
         }
-        div,
-        section,
-        article,
+        div.ds-block,
+        div.ds-section,
+        div:not(.ds-section):not(.ds-block),
+        section:not(.ds-section):not(.ds-block),
+        article:not(.ds-section):not(.ds-block),
         form {
-            // add bottom margin to last child of page if no bg color
+            // add bottom margin to last child of page
             &:last-child {
                 margin-bottom: 4rem;
             }
