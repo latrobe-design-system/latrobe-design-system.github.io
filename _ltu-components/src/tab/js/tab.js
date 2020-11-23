@@ -1,24 +1,9 @@
 /*
- *  Modified version of code obtained from
+ *  Adapted from: 
  *  https://www.w3.org/TR/wai-aria-practices/examples/tabs/tabs-2/tabs.html
- *  Modifactions denoted by // mod
  */
 
-/*
-*   This content is licensed according to the W3C Software License at
-*   https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
-*/
-(function () {
-  var tablist = document.querySelectorAll('[role="tablist"]')[0];
-  var tabs;
-  var panels;
-
-  generateArrays();
-
-  function generateArrays () {
-    tabs = document.querySelectorAll('[role="tab"]');
-    panels = document.querySelectorAll('[role="tabpanel"]');
-  };
+$(document).ready(function(){
 
   // For easy reference
   var keys = {
@@ -41,77 +26,63 @@
     40: 1
   };
 
-  var i; // mod - to stop console error
-  // Bind listeners
-  for (i = 0; i < tabs.length; ++i) {
-    addListeners(i);
-  };
-
-  function addListeners (index) {
-    tabs[index].addEventListener('click', clickEventListener);
-    tabs[index].addEventListener('keydown', keydownEventListener);
-    tabs[index].addEventListener('keyup', keyupEventListener);
-
-    // Build an array with all tabs (<button>s) in it
-    tabs[index].index = index;
-  };
-
   // When a tab is clicked, activateTab is fired to activate it
-  function clickEventListener (event) {
-    var tab = event.target;
-    activateTab(tab, false);
-  };
+  $('.ds-tabs-nav__tab').on('click', function(){
+    var tabButton = $(this);
+    activateTab(tabButton, false);
+  });
 
   // Handle keydown on tabs
-  function keydownEventListener (event) {
+  $('.ds-tabs-nav__tab').on('keydown', function(event){
     var key = event.keyCode;
+    var tabButton = $(this);
+    var tablist = tabButton.parent();
 
     switch (key) {
       case keys.end:
         event.preventDefault();
         // Activate last tab
-        focusLastTab();
+        focusLastTab($(tablist).children());
         break;
       case keys.home:
         event.preventDefault();
         // Activate first tab
-        focusFirstTab();
+        focusFirstTab($(tablist).children());
         break;
 
       // Up and down are in keydown
       // because we need to prevent page scroll >:)
       case keys.up:
       case keys.down:
-        determineOrientation(event);
+        determineOrientation(tablist, tabButton, event);
         break;
     };
-  };
+  });
 
   // Handle keyup on tabs
-  function keyupEventListener (event) {
+  $('.ds-tabs-nav__tab').on('keyup', function(event){
     var key = event.keyCode;
+    var tabButton = $(this);
+    var tablist = tabButton.parent();
 
     switch (key) {
       case keys.left:
       case keys.right:
-        determineOrientation(event);
-        break;
-      case keys.delete:
-        determineDeletable(event);
+        determineOrientation(tablist, tabButton, event);
         break;
       case keys.enter:
       case keys.space:
-        activateTab(event.target);
+        activateTab(tabButton);
         break;
     };
-  };
+  });
 
-  // When a tablistâ€™s aria-orientation is set to vertical,
+  // When a tablists aria-orientation is set to vertical,
   // only up and down arrow should function.
   // In all other cases only left and right arrow function.
-  function determineOrientation (event) {
+  function determineOrientation (tablist, tabButton, event) {
     var key = event.keyCode;
-    var vertical = tablist.getAttribute('aria-orientation') == 'vertical';
+    var vertical = tablist.attr('aria-orientation') == 'vertical';
     var proceed = false;
 
     if (vertical) {
@@ -127,134 +98,93 @@
     };
 
     if (proceed) {
-      switchTabOnArrowPress(event);
+      switchTabOnArrowPress(tablist, tabButton, event);
     };
   };
 
   // Either focus the next, previous, first, or last tab
   // depending on key pressed
-  function switchTabOnArrowPress (event) {
+  function switchTabOnArrowPress (tablist, tabButton, event) {
     var pressed = event.keyCode;
+    var tabs = $(tablist).children();
+    var tabButtonIndex = tabs.index(tabButton);
 
     if (direction[pressed]) {
       var target = event.target;
-      if (target.index !== undefined) {
-        if (tabs[target.index + direction[pressed]]) {
-          tabs[target.index + direction[pressed]].focus();
+      
+      if (tabButtonIndex !== undefined) {
+        if (tabs[tabButtonIndex + direction[pressed]]) {
+          tabs[tabButtonIndex + direction[pressed]].focus();
         }
         else if (pressed === keys.left || pressed === keys.up) {
-          focusLastTab();
+          focusLastTab(tabs);
         }
         else if (pressed === keys.right || pressed == keys.down) {
-          focusFirstTab();
+          focusFirstTab(tabs);
         };
       };
     };
   };
 
+
   // Activates any given tab panel
-  function activateTab (tab, setFocus) {
+  function activateTab (tabButton, setFocus) {
     setFocus = setFocus || true;
-    // Deactivate all other tabs
-    deactivateTabs();
+
+    // id of button
+    var tabButtonId = tabButton.attr('id');
+    // id of tab button controls
+    var tab = $('[aria-labelledby="'+tabButtonId+'"]');
+
+    // Deactivate all tabs
+    deactivateTabs(tabButton, tab);
 
     // Remove tabindex attribute
-    tab.removeAttribute('tabindex');
+    tabButton.removeAttr('tabindex');
 
     // Set the tab as selected
-    tab.setAttribute('aria-selected', 'true');
-
-    // Get the value of aria-controls (which is an ID)
-    var controls = tab.getAttribute('aria-controls');
+    tabButton.attr('aria-selected', 'true');
 
     // Remove hidden attribute from tab panel to make it visible
-    document.getElementById(controls).removeAttribute('hidden');
+    tab.removeAttr('hidden');
 
     // Set focus when required
     if (setFocus) {
-      tab.focus();
+      tabButton.focus();
     };
   };
+
 
   // Deactivate all tabs and tab panels
-  function deactivateTabs () {
-    var t; // mod - to stop console error
-    for (t = 0; t < tabs.length; t++) {
-      tabs[t].setAttribute('tabindex', '-1');
-      tabs[t].setAttribute('aria-selected', 'false');
-    };
+  function deactivateTabs (tabButton, tab) {
 
-    var p; // mod - to stop console error
-    for (p = 0; p < panels.length; p++) {
-      panels[p].setAttribute('hidden', 'hidden');
-    };
+    // set tab button and sibling buttons to unselected state 
+    tabButton.attr('tabindex', '-1').siblings('[role="tab"]').attr('tabindex', '-1');
+    tabButton.attr('aria-selected', 'false').siblings('.ds-tabs-nav__tab').attr('aria-selected', 'false');
+
+    // set tab and sibling tabs to unselected state
+    tab.attr('hidden', 'hidden').siblings('[role="tabpanel"]').attr('hidden', 'hidden');
+    
   };
 
-  // Make a guess
-  function focusFirstTab () {
-    tabs[0].focus();
+
+  // focus firts tab
+  function focusFirstTab (tabs) {
+    tabs.first().focus();
   };
 
-  // Make a guess
-  function focusLastTab () {
-    tabs[tabs.length - 1].focus();
+  // focus last tab
+  function focusLastTab (tabs) {
+    tabs.last().focus();
   };
 
-  // Detect if a tab is deletable
-  function determineDeletable (event) {
-    target = event.target;
 
-    if (target.getAttribute('data-deletable') !== null) {
-      // Delete target tab
-      deleteTab(event, target);
+ 
+  // trigger tab if URL # equals tab id - this is to allow linking to specific tab
+  var url = document.location.toString();
+  if (url.match('#')) {
+    var tabtoopen = document.getElementById(url.split('#')[1])
+    tabtoopen.click();
+  }
 
-      // Update arrays related to tabs widget
-      generateArrays();
-
-      // Activate the closest tab to the one that was just deleted
-      if (target.index - 1 < 0) {
-        activateTab(tabs[0]);
-      }
-      else {
-        activateTab(tabs[target.index - 1]);
-      };
-    };
-  };
-
-  // Deletes a tab and its panel
-  function deleteTab (event) {
-    var target = event.target;
-    var panel = document.getElementById(target.getAttribute('aria-controls'));
-
-    target.parentElement.removeChild(target);
-    panel.parentElement.removeChild(panel);
-  };
-
-  // Determine whether there should be a delay
-  // when user navigates with the arrow keys
-  function determineDelay () {
-    var hasDelay = tablist.hasAttribute('data-delay');
-    var delay = 0;
-
-    if (hasDelay) {
-      var delayValue = tablist.getAttribute('data-delay');
-      if (delayValue) {
-        delay = delayValue;
-      }
-      else {
-        // If no value is specified, default to 300ms
-        delay = 300;
-      };
-    };
-
-    return delay;
-  };
-}());
-
-// mod 
-// trigger tab if URL # equals tab id - this is to allow linking to specific tab
-var url = document.location.toString();
-if (url.match('#')) {
-  var tabtoopen = document.getElementById(url.split('#')[1])
-  tabtoopen.click();
-}
+});
