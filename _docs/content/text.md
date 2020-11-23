@@ -36,4 +36,3 @@ status: ready
 
 {% include sample-iframe.html snippet="src/text/snippets/inline.html" %}
 
-{% include sample-iframe.html snippet="src/text/snippets/column-list.html" %}

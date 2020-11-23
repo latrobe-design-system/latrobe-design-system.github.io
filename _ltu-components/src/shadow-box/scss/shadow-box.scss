@@ -4,6 +4,7 @@
 .ds-shadow-box {
     background: white;
     padding-bottom: config.spunits(4);
+    margin-top: config.spunits(8);
     margin-bottom: config.spunits(8);
     border-bottom: 1px solid config.$color-3b;
     
@@ -17,4 +18,15 @@
         }
     }
 
+}
+
+.ds-border-box {
+    background: white;
+    margin-top: 1rem;
+    padding: config.spunits(4);
+    border: 2px solid config.$color-3b;
+
+    > *:first-child {
+        margin-top: 0;
+    }
 }

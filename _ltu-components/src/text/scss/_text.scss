@@ -118,11 +118,13 @@ p.ds-lead {
 }
 
 p.ds-small,
+p.ds-footnote,
 small {
     font-size: 0.8rem;
 }
 
-p.ds-small {
+p.ds-small,
+p.ds-footnote {
     line-height: 1.5rem;
 }
 
@@ -139,6 +141,10 @@ ul {
 
 li {
     max-width: 42em; // readable line length 80 characters https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html
+}
+
+.ds-list-footnotes {
+    padding-left: 40px;
 }
 
 // Margins
@@ -199,13 +205,13 @@ br {
 }
 
 .ds-text-center {
-    text-align: center;
+    text-align: center !important;
     margin-left: auto;
     margin-right: auto;
 }
 
 .ds-text-right {
-    text-align: right;
+    text-align: right !important;
     margin-left: auto;
     margin-right: 0;
 }
@@ -281,6 +287,7 @@ dt {
 }
 
 dd {
+    margin-left: 20px;
     > :first-child {
         margin-top: 0;
     }

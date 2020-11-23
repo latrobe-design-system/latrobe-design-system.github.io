@@ -1,6 +1,8 @@
 ---
 title: "Forms"
 status: draft
+
+menu: 100
 ---
 
 ## DS form

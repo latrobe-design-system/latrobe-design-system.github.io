@@ -1,6 +1,8 @@
 //dependencies
 @use "config";
 
+// usage: class="ds-icon-[icon-name]" e.g. class="ds-icon-chevron-down"
+
 %icon {
 
     display: inline-flex;
@@ -13,6 +15,7 @@
         width: 1em;
         height: 1em;
         margin: 0 config.spunits(1);
+        padding: 0;
         background-repeat: no-repeat;
         background-size: 100%;
         background-position: center;
@@ -21,14 +24,18 @@
 
 }
 
+/*** modifiers ***/
+
+// icon before text usage: class="ds-icon-[icon-name] ds-icon--before"
 .ds-icon--before {
 
     &::after { 
-        background: none;
+        display: none;
+        /*background: none;
         width: 0;
         height: 0;
         margin: 0;
-        padding: 0;
+        padding: 0;*/
     }
 
     &::before {
@@ -45,6 +52,7 @@
     }
 }
 
+// icon color red  usage: class="ds-icon-[icon-name] ds-icon--red"
 .ds-icon--red {
 
     &::after,
@@ -53,6 +61,7 @@
     }
 }
 
+// icon color white  usage: class="ds-icon-[icon-name] ds-icon--white"
 .ds-icon--white {
 
     &::after,
@@ -61,6 +70,7 @@
     }
 }
 
+// icon color teal  usage: class="ds-icon-[icon-name] ds-icon--teal"
 .ds-icon--teal {
 
     &::after,
@@ -69,6 +79,7 @@
     }
 }
 
+// icon color grey  usage: class="ds-icon-[icon-name] ds-icon--grey"
 .ds-icon--grey {
     &::after,
     &.ds-icon--before::before {
@@ -76,16 +87,6 @@
     }
 }
 
-/*[class*="ds-icon"] {
-    &:empty {
-        padding-right: 1em;
-    }
-
-    &.ds-icon--before:empty {
-        padding-right: inherit;
-        padding-left: 1em;
-    }
-}*/
 
 /* icons */
 

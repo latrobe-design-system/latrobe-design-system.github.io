@@ -63,6 +63,7 @@
     }
     &[aria-expanded="true"] {
         @extend .ds-icon-minus;
+        border-bottom: 2px dotted config.$color-3b;
     }
 }
 
@@ -73,13 +74,22 @@
     > :first-child {
         margin-top: 0;
     }
+
+    > .ds-table-wrapper:first-child {
+        table {
+            margin-top: 0;
+            caption {
+                padding-top: 0;
+            }
+        }
+    }
     // everythin inside aligns with title
-    >* {
+    > * {
         margin-left: config.spunits(10);
     }
     // except for nested blocks and tables
     .ds-block,
-    .table-wrapper {
+    .ds-table-wrapper {
         margin-left: 0;
     }
 }

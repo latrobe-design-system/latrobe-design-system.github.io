@@ -41,30 +41,22 @@
     }
 
     &[class*="ds-icon-"]{
-        //position: relative;
-        //padding-right: config.spunits(11);
+        
         &::after {
             margin: 0 0 0 config.spunits(3);
-            /*position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);*/
             transform: translateX(0.25rem);
         }
+
     }
 
+
     &.ds-icon--before {
-        //padding-right: config.spunits(5);
-        //padding-left: config.spunits(11);
+        
         &::after {
             margin: 0;
         }
         &::before {
             margin: 0 config.spunits(3) 0 0;
-            /*position: absolute;
-            left: 0;
-            /*top: 50%;
-            transform: translateY(-50%);*/
             transform: translateX(-0.25rem);
         }
     }
@@ -128,6 +120,60 @@
         }
     }
 
+}
+
+
+
+// this mixin is just to avoid copy and paste into two classes below since @exten won't work inside media queries
+@mixin ds-btn--icon-only {
+    display: inline-block;
+    height: config.spunits(13); // match natural height of buttons
+    width: config.spunits(13); // match natural width of buttons
+    position: relative;
+    padding: 0 !important;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    
+    &::after {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto !important;
+        transform: none !important;
+    }
+
+    &.ds-icon--before {
+        &::after {
+            display: none;
+        }
+        &::before {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto !important;
+            transform: none !important;
+        }
+    }
+
+    &.ds-btn--small {
+        height: config.spunits(7); // match natural height of buttons
+        width: config.spunits(7); // match natural width of buttons
+    }
+}
+// class to make button icon only always (text should still be included for accessibility)
+.ds-btn--icon-only {
+    @include ds-btn--icon-only;
+}
+// class to make button icon only on mobile (text should still be included for accessibility and will be visible on > 768px viewport)
+.ds-btn--icon-only-mobile {
+    @media(max-width: 767px) {
+        @include ds-btn--icon-only;
+    }
 }
 
 /* primary button */
@@ -273,6 +319,7 @@ input[type="submit"] {
     overflow: hidden;
     white-space: nowrap;
 
+    // if icon present show icon hide text visually
     &[class*="icon-"]{
         position: relative;
         padding: 0;

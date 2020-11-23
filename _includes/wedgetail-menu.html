@@ -89,7 +89,7 @@
 
         <p class="wedgetail-menu-list__heading">Example Pages</p>
 
-        {%- assign x = site.docs | where: 'parentmenu', 'example' | sort: 'url' -%}
+        {%- assign x = site.docs | where: 'parentmenu', 'example' | sort: 'menu' -%}
 
         <ul>
             {%- for pattern in x -%}

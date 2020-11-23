@@ -1,0 +1,112 @@
+---
+title: "Courses"
+status: draft
+
+layout: test-page-legacy-nav
+showHeader: "yes"
+showFooter: "yes"
+showLeftNav: "no"
+
+localjs: "js/course-search.js"
+---
+
+<div class="ds-block">
+    <h1 style="text-align: center;">Courses and degrees</h1>
+</div>
+
+<div class="ds-block">
+
+    <div class="ds-shadow-box">
+
+        <fieldset class="ds-control-group  ds-control-group--toggle-tokens ds-control-group--inline">
+            <legend class="ds-legend">
+            I am:
+            </legend>
+        
+            <div class="ds-form-group ds-form-group--radio-toggle">
+                <input class="ds-input-radio ds-input-radio--toggle" type="radio" name="student" id="dom-toggle" checked>
+                <label class="ds-label" for="dom-toggle">a domestic student</label>
+            </div>
+        
+            <div class="ds-form-group ds-form-group--radio-toggle">
+                <input class="ds-input-radio ds-input-radio--toggle" type="radio" name="student" id="int-toggle">
+                <label class="ds-label" for="int-toggle">an international student</label>
+            </div>
+        
+        </fieldset>
+
+        <form class="ds-form ds-form--full-width" id="course-search" action="">
+            <div class="ds-form-group">
+                <label class="ds-label h2 sr-only" for="query_courses">Find your course</label>
+                <div class="ds-input-group">
+                    <div class="ds-input-group__prepend">
+                        <span class="ds-input-group__text ds-input-group__text--bg-white" id="query-tag-container"></span>
+                    </div>
+                    <input class="ds-text-input" type="search" id="query_courses" placeholder="Search for a course by keyword, course &hellip;" autocomplete="off">
+                    <button class="ds-btn-primary ds-icon-search ds-icon--before ds-btn--icon-only-mobile" type="submit" id="course-search-submit">Search</button>
+                </div>
+            </div>
+        </form>
+
+        {% include sample-component.html snippet="ltu-components/src/form/filter-group/snippets/filter-group.html" %}
+
+    </div>
+
+</div>
+
+<div class="ds-block">
+
+    <p class="ds--full-width ds--overflowXSrcoll">
+        <b>Filtered by:</b> 
+        <span id="filter-tags">
+            <!-- <button class="ds-tag ds-tag--green" title="remove filter">Health</button> -->
+        </span>
+    </p>
+
+    <fieldset class="ds-control-group  ds-control-group--inline">
+        <legend class="ds-legend ">
+            Sort by:
+        </legend>
+    
+        <div class="ds-form-group">
+            <input class="ds-input-radio" type="radio" name="sort-releveance" id="sort-releveance" checked>
+            <label class="ds-label" for="sort-releveance">Relevence</label>
+        </div>
+    
+        <div class="ds-form-group">
+            <input class="ds-input-radio" type="radio" name="sort-releveance" id="sort-a-z">
+            <label class="ds-label" for="sort-a-z">A&VeryThinSpace;-&VeryThinSpace;Z</label>
+        </div>
+
+        <div class="ds-form-group">
+            <input class="ds-input-radio" type="radio" name="sort-releveance" id="sort-popular">
+            <label class="ds-label" for="sort-popular">Popular</label>
+        </div>
+    
+    </fieldset>
+    
+    <div id="course-search-results">
+
+        {% include sample-component.html snippet="ltu-components/src/card/snippets/course-card.html" %}
+
+
+        <div class="ds-course-card">
+            <div class="ds-course-card__header">
+    
+                <p class="ds-course-card__tags">
+                    <span class="ds-course-card__tag ds-icon-target">Interest area</span>
+                </p>
+    
+                <h3 class="ds-course-card__course-name">Business</h3>
+                <p  class="ds-course-card__course-description">Become a leader who can design innovative solutions to the world’s most challenging problems, while having the freedom to explore what you’re passionate about through our wide range of majors.</p>
+    
+            </div>
+            <div class="ds-course-card__body">
+                <p class="ds-card--course__CTA"><a href="#" class="ds-btn-primary ds-icon-chevron-right" href="#">Find out more</a></p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

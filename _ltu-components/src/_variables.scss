@@ -28,6 +28,7 @@ $h4: $h5 * $heading-scale-ratio;
 $h3: $h4 * $heading-scale-ratio;
 $h2: $h3 * $heading-scale-ratio;
 $h1: $h2 * $heading-scale-ratio;
+$p: $h5;
 
 //----------------------------------------------------------------------------------------------------------------------------------//
 // Colour
@@ -70,6 +71,9 @@ $filter-teal: invert(49%) sepia(45%) saturate(3730%) hue-rotate(142deg) brightne
 $filter-grey: invert(42%) sepia(11%) saturate(0%) hue-rotate(136deg) brightness(97%) contrast(92%); /* #6c6c6c */
 $filter-color-alt-4: invert(20%) sepia(89%) saturate(2203%) hue-rotate(185deg) brightness(92%) contrast(101%);
 $filter-green: invert(56%) sepia(95%) saturate(430%) hue-rotate(56deg) brightness(95%) contrast(91%);
+
+$filter-color-3b: invert(86%) sepia(0%) saturate(0%) hue-rotate(296deg) brightness(96%) contrast(93%);
+$filter-color-3d: invert(42%) sepia(6%) saturate(80%) hue-rotate(315deg) brightness(96%) contrast(83%);
 
 //----------------------------------------------------------------------------------------------------------------------------------//
 // Spacing

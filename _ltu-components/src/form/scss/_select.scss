@@ -1,3 +1,5 @@
+// depenencies
+@use "config";
 .ds-select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -9,4 +11,30 @@
     background-image: url("icons/feather/chevron-down.svg");
     background-position: right 12px center;
     background-repeat: no-repeat;
+    padding-right: config.spunits(10);
+}
+
+/*** modifiers ***/
+
+/*
+ * minimal modifier
+ * usage: class="ds-select ds-select--minimal"
+ */
+.ds-select--small {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: config.spunits(2) config.spunits(6) config.spunits(2) config.spunits(2); 
+    background-position: right config.spunits(1) center;
+
+    /* 
+     * sub modifier for --minimal modifier to change colour to green
+     * usage: class="ds-select ds-select--minimal ds-select--minimal-green"
+     */
+    &.ds-select--green {
+        font-weight: config.$medium;
+        color: config.$green;
+        background-image: url("icons/chevron-down-green.svg");
+        border-color: config.$green;
+    } 
 }

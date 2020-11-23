@@ -36,7 +36,7 @@ if(window.outerWidth <= mobileBreakingPoint){
 
         <div class="ds-main-wrapper">
 
-            {% if page.showLeftNav == 'yes' %}{% include legacy-ltu-nav/ltu-nav.html %}{% endif %}
+            {% include legacy-ltu-nav/ltu-nav.html %}
 
             <div class="ds-page-content-wrapper">
 
@@ -65,5 +65,9 @@ if(window.outerWidth <= mobileBreakingPoint){
     <!-- include ltu legacy code for nav sample -->
     <script src="{{ site.url }}/ltu-components/dist/js/ltu-legacy.js?v={{ site.time | date: '%Y%m%d%H%M%S' }}"></script>
     {% endif %}
+
+    <!-- include local script if defined in front matter -->
+    {% if page.localjs %}<script src="{{ page.localjs }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}"></script>{% endif %}
+
     </body>
 </html>

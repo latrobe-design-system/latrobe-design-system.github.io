@@ -24,11 +24,6 @@ $ds-grid-gutter: 32px;
     & > * {
         width: calc(100% - #{$ds-grid-gutter});
         margin-right: $ds-grid-gutter;
-        /*&:first-child {
-            margin-top: 1rem;
-        }*/
-        display: flex;
-        flex-direction: column;
     }
 
     @media (min-width: 576px) {
@@ -88,6 +83,9 @@ $ds-grid-gutter: 32px;
     }
 }
 
+/* modifier for grid with no gutter
+ * usage: class="ds-grid ds-grid--no-gutter"
+ */
 .ds-grid--no-gutter {
     margin-right: 0;
 
@@ -147,26 +145,12 @@ $ds-grid-gutter: 32px;
             }
 
             &__col-2 {
-                width: calc(2/12 * 100%r);
+                width: calc(2/12 * 100%);
             }
 
             &__col-1 {
                 width: calc(1/12 * 100%);
             }
-        }
-    }
-}
-
-.ds-grid--evenly-spaced-column {
-    display: flex;
-    flex-direction: column;
-
-    @media(min-width: 992px) {
-        justify-content: space-between;
-
-        & > :only-child {
-          position: absolute;
-          bottom: config.spunits(8);
         }
     }
 }

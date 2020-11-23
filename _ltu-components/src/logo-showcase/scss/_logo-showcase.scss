@@ -13,16 +13,17 @@ $ds-logo-width: 200px;
     align-items: center;
     max-width: calc(6 * (#{$ds-logo-width} + #{config.spunits(2)}));
 
-    // modifiers
-
-    // max colums 5 
+    /*** modifiers ***/
+    // max 5 per row ds-logo-showcase--max-5-cols
     &--max-5-cols {
         max-width: calc(5 * (#{$ds-logo-width} + #{config.spunits(2)}));
     }
+    // max 4 per row ds-logo-showcase--max-4-cols
     &--max-4-cols {
         max-width: calc(4 * (#{$ds-logo-width} + #{config.spunits(2)}));
     }
 }
+
 .ds-logo-showcase__logo {
     margin: config.spunits(1);
     width: $ds-logo-width;

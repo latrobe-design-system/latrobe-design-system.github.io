@@ -115,9 +115,87 @@
 }
 
 /*
+ *  When you need full width p, li, headings
+ */
+
+ .ds--full-width {
+   max-width: 100%;
+ }
+
+/*
  *  Make container overflow scroll horizontally
  *  Useful for 
  */
 .ds--overflowXSrcoll {
   @include config.overflowXScroll();
+}
+
+
+.ds-flex-layout {
+  max-width: 100%; 
+  display: flex; 
+  flex-wrap: wrap;
+
+  > * {
+    margin-right: config.spunits(4);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  // modifiers
+
+  // align items
+  &.ds-flex-layout--align-center {
+    align-items: center;
+  }
+
+  &.ds-flex-layout--align-flex-start {
+    align-items: flex-start;
+  }
+  
+  &.ds-flex-layout--align-flex-end {
+    align-items: flex-end;
+  }
+  
+  &.ds-flex-layout--align-baseline {
+    align-items: baseline;
+  }
+  
+  &.ds-flex-layout--align-stretch {
+    align-items: stretch;
+  }
+
+  // justify content
+  &.ds-flex-layout--justify-center {
+    justify-content: center;
+  }
+
+  &.ds-flex-layout--justify-end {
+    justify-content: flex-end;
+  }
+
+  &.ds-flex-layout--justify-space-between {
+    justify-content: space-between;
+  }
+
+  &.ds-flex-layout--justify-space-around {
+    justify-content: space-around;
+  }
+
+  &.ds-flex-layout--justify-space-evenly {
+    justify-content: space-evenly;
+  }
+
+  &.ds-flex-layout--double-gap {
+    > * {
+      margin-right: config.spunits(8);
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
 }

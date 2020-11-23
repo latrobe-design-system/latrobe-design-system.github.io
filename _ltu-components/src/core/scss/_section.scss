@@ -3,8 +3,6 @@
 
 // ds-section for wrapping blocks in a background
 div.ds-section {
-
-    margin: 4rem 0 0 0;
     padding: 0;
     max-width: 100%;
 
@@ -13,59 +11,40 @@ div.ds-section {
         margin-top: 0;
     }
 
+    
+    &--bordered {
+        border-top: 1px solid config.$color-3a;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    
     // modifiers background color
     &--bg-grey {
         background-color: config.$color-3a;
     }
 
     &--bg-black {
-        background: #242428;
-        color: white;
-
-        a {
-            text-decoration: underline;
-            color: white;
-        }
-
-        .btn {
-            text-decoration: none;
-        }
-
-        .ds-block__header {
-            color: white;
-        }
+        background: config.$color-2;
     }
 
     &--bg-red {
         background-color: config.$color-1;
 
-        .ds-block__header {
-            color: white;
-        }
     }
 
-    &--bg-black-nodes {
-        background-color: config.$color-2;
-        background-image: url("img/bg-nodes.svg");
-
-        .ds-block__header {
-            color: white;
-        }
-    }
-
-    &--bg-red-nodes {
-        background-color: config.$color-1;
-        background-image: url("img/bg-nodes.svg");
-
-        .ds-block__header {
-            color: white;
-        }
-    }
 }
 
-div[class*="ds-section--bg-"] {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+div[class*="ds-section--bg-"],
+div.ds-section--bordered {
+    margin: 2 * config.$h2 0 0 0;
+    padding-top: 2 * config.$h2;
+    padding-bottom: 2 * config.$h2;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 
     > :first-child {
         margin-top: 0;
@@ -135,34 +114,26 @@ div[class*="ds-section--bg-"] {
     }
 }
 
-// adjust spacing between adjancent grey blocks
-div.ds-section--bg-grey + div.ds-section--bg-grey {
+// adjust spacing between adjancent background
+div[class*="ds-section--bg-"] + div[class*="ds-section--bg-"] {
     //padding-top: 0;
-    margin-top: -4rem;
+    margin-top: -2 * config.$h2;
 }
 
-// adjust spacing between adjancent black blocks
-div.ds-section--bg-black + div.ds-section--bg-black {
-    //padding-top: 0;
-    margin-top: -4rem;
+// adjust spacing between adjancent background
+div.ds-section--bordered + div.ds-section--bordered {
+    margin-top: 0;
 }
 
-// adjust spacing between adjancent red blocks
-div.ds-section--bg-red + div.ds-section--bg-red {
-    //padding-top: 0;
-    margin-top: -4rem;
+// add border to top of section no --bg or --bordered modifier following section that has --bordered
+div.ds-section--bordered + div.ds-section:not([class*="ds-section--b"]) {
+    border-top: 2px dashed config.$color-3a;
 }
 
-// adjust spacing between adjancent black-nodes blocks
-div.ds-section--bg-black-nodes + div.ds-section--bg-black-nodes {
-    //padding-top: 0;
-    margin-top: -4rem;
-}
-
-// adjust spacing between adjancent red-nodes blocks
-div.ds-section--bg-red-nodes + div.ds-section--bg-red-nodes {
-    //padding-top: 0;
-    margin-top: -4rem;
+// remove top border if --bordered follows --bg-
+div[class*="ds-section--bg-"] + div.ds-section--bordered {
+    margin-top: 0;
+    border-top: none;
 }
 
 div.ds-section--bg-black,
