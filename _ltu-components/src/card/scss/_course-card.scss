@@ -4,10 +4,11 @@
 
 .ds-course-card {
     position: relative;
-    margin-top: config.spunits(4);
+    margin-top: config.spunits(8);
     padding: config.spunits(4);
     background-color: white;
     border: solid 1px config.$color-3b;
+    min-height: 200px;
 
     @media(min-width: 400px) {
         padding: config.spunits(6);
@@ -141,7 +142,7 @@
         text-align: left;
         position: absolute;
         width: 20%;
-        right: 0px;
+        right: config.spunits(2);
         bottom: config.spunits(4);
     }
 }
