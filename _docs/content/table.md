@@ -13,3 +13,6 @@ status: ready
 
 {% include sample-iframe.html snippet="src/table/snippets/table-unstyled.html" %}
 
+
+{% include sample-iframe.html snippet="src/table/snippets/table--stacked-on-mobile.html" %}
+

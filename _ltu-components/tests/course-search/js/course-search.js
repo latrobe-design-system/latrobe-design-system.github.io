@@ -7,7 +7,8 @@
 
 // filter behaviour
 $(document).ready(function() {
-    // handler for filter checkbox all control change
+
+    // handler for checkbox filter all change
     $('.ds-input-checkbox[data-all-control]').on('change', function(){
 
         // disable all filter tabs (until apply button clicked)
@@ -27,7 +28,7 @@ $(document).ready(function() {
         }
     });
 
-    // handler for filter checkbox all children change
+    // handler for checkbox filter change
     $('.ds-input-checkbox[data-all-parent]').on('change', function(){
 
         // disable all filter tabs (until apply button clicked)
