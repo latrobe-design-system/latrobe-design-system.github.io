@@ -7,7 +7,7 @@
     margin-top: config.spunits(8);
     padding: config.spunits(4);
     background-color: white;
-    border: solid 1px config.$color-3b;
+    border: solid 2px config.$color-3b;
     min-height: 200px;
 
     @media(min-width: 400px) {
