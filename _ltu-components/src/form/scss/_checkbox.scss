@@ -59,6 +59,10 @@
     &:checked + label::after {
         content: "";
     }
+
+    &:disabled + label {
+        opacity: 0.5;
+    }
 }
 
 .ds-input-checkbox--toggle {

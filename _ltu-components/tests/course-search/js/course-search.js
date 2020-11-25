@@ -7,6 +7,131 @@
 
 // filter behaviour
 $(document).ready(function() {
+    
+    const numResults = $('#course-search-results-count').text();
+    var query = ''; // store search query
+    var atarDefaultValue = $('#atar').attr('value'); // default atar value
+    var atarValue = atarDefaultValue;
+    
+    
+    $('.ds-filter-group__filter').each(function(){
+        $('#filter-tags').append('<span id="'+$(this).attr('id')+'-tags"></span>');
+    });
+    
+    /* 
+     * reset tags
+     * this function is to refershes the filter tag list after filter change
+     */
+    function resetTags(){
+        
+        var filterTagsWrapper;
+        var filterTags = '';
+        
+        $('#filter-tags span').empty();
+        // add tags for checkboxes
+        $('.ds-filter-group__filter:not(#ATAR-filter)').each(function(){
+            var filterName = $(this).attr('id');
+            filterTagsWrapperId = filterName+'-tags';
+            $(this).find('.ds-input-checkbox').each(function(){
+                
+                // check not top level all control by checking that it doesn't have attr data-all-parent 
+                var attrCheck = $(this).attr('data-all-parent');
+                if (typeof attrCheck !== typeof undefined && attrCheck !== false) {
+                    // if checked add a tag 
+                    if ($(this).prop("checked") == true) {
+                        var thisID = $(this).attr('id');
+                        var thisVal = $(this).val();
+                        var label = $('label[for='+thisID+']').text();
+                        filterTag = '<button class="ds-tag ds-tag--green" title="remove filter" data-filter-id="'+thisID+'" data-filter-value="'+thisVal+'">'+label+'</button>\n';
+                        $('#'+filterTagsWrapperId).append(filterTag);
+                    }
+                }
+            });
+        }).promise().done(function(){
+            
+            
+            // add tag for ATAR if not original value
+            if(atarValue != atarDefaultValue) {
+                $('#ATAR-filter-tags ').append('<button class="ds-tag ds-tag--green" title="remove filter" data-filter-id="atar" data-filter-value="'+atarValue+'">ATAR: '+atarValue+'</button>');
+            }
+            
+            refreshResults();
+            
+        });
+        
+    }
+    
+    function refreshNumResults(numResults) {
+        $('#course-search-results-count').replaceWith('<span id="course-search-results-count">'+numResults+'</span>');
+    }
+    
+    function refreshResults() {
+        
+        //simulate results change
+        $('#course-search-results .ds-course-card').fadeOut();
+        
+        // if no filters    
+        if($('#filter-tags .ds-tag').length == 0) {
+            if(query == ''){
+                // no filter tags no query fade in all course cards
+                $('#course-search-results .ds-course-card').fadeIn();
+                refreshNumResults(numResults);
+            } else {
+                // no filter but query
+                $('#course-search-results .ds-course-card').each(function() {
+                    if($(this).text().includes(query)) {
+                        $(this).fadeIn();
+                    }
+                }).promise().done(function(){
+                    var newNumResults = $('#course-search-results .ds-course-card:visible').length;
+                    refreshNumResults(newNumResults);
+                });
+            }
+        } 
+        // else if fliters
+        else {
+            $('#filter-tags .ds-tag').each(function(){
+                var filterTagWrapperId = $(this).parent().attr('id');
+
+                switch (filterTagWrapperId) {
+                    case 'level-filter-tags':
+                        filterAttribute = 'data-filter-level';
+                        break;
+                    case 'discipline-filter-tags':
+                        filterAttribute = 'data-filter-discipline';
+                        break;
+                    case 'campus-filter-tags':
+                        filterAttribute = 'data-filter-campus';
+                        break;
+                    case 'mode-filter-tags':
+                        filterAttribute = 'data-filter-mode';
+                        break;
+                    case 'ATAR-filter-tags':
+                        filterAttribute = 'data-filter-atar';
+                        break;
+                        
+                }
+                    
+                var filterValue = $(this).attr('data-filter-value');
+                $('#course-search-results .ds-course-card['+filterAttribute+'~="'+filterValue+'"]').each(function() {
+                    if(query != ''){
+                        // filters and query
+                        if($(this).text().includes(query)) {
+                            $(this).fadeIn();
+                        }
+                    } else {
+                        // filter no query
+                        $(this).fadeIn();
+                    }
+                }).promise().done(function(){
+                    var newNumResults = $('#course-search-results .ds-course-card:visible').length;
+                    refreshNumResults(newNumResults);
+                });
+            });
+        }
+        
+    }
+    
 
     // handler for checkbox filter all change
     $('.ds-input-checkbox[data-all-control]').on('change', function(){
@@ -15,15 +140,19 @@ $(document).ready(function() {
         $('.ds-filter-group__nav__tab').attr('disabled', 'disabled');
 
         if($(this).prop("checked") == true) {
+            // check all control
             var allControlName = $(this).attr('data-all-control');
             
             $('[data-all-parent="'+allControlName+'"]').each(function(){
+                // uncheck all children
                 $(this).prop( "checked", false );
-                // if child is also an all control
+                // if child is also an all control parent
                 if($(this).attr('data-all-control')) {
+                    //uncheck all its children
                     var allControlName = $(this).attr('data-all-control');
                     $('[data-all-parent="'+allControlName+'"]').prop( "checked", false );
                 }
+                
             });
         }
     });
@@ -40,11 +169,11 @@ $(document).ready(function() {
         if($(this).prop("checked") == true) {
 
             // if all children in group are now checked
-            if($('.ds-input-checkbox[data-all-parent="'+$(this).attr('data-all-parent')+'"]:checked').length == $('.ds-input-checkbox[data-all-parent="'+$(this).attr('data-all-parent')+'"]').length) {
+            if($('.ds-input-checkbox[data-all-parent="'+allParentName+'"]:checked').length == $('.ds-input-checkbox[data-all-parent="'+allParentName+'"]').length) {
                 // uncheck all children
-                $('.ds-input-checkbox[data-all-parent="'+$(this).attr('data-all-parent')+'"]').prop( "checked", false );
+                $('.ds-input-checkbox[data-all-parent="'+allParentName+'"]').prop( "checked", false );
                 // check all parent
-                $('[data-all-control="'+$(this).attr('data-all-parent')+'"]').prop( "checked", true );
+                $('[data-all-control="'+allParentName+'"]').prop( "checked", true );
             } 
             else {
                 // uncheck all parent
@@ -58,81 +187,38 @@ $(document).ready(function() {
         } 
         // else all children unchecked
         else if($(this).closest('.ds-filter-group__filter').find('.ds-input-checkbox[data-all-parent]:checked').length == 0) {
-            // check all parent
-            $('[data-all-control='+$(this).attr('data-all-parent')+']').prop( "checked", true );
+            // check if parent has parent
+            var attrCheck = $('[data-all-control='+allParentName+']').attr('data-all-parent');
+            if (typeof attrCheck !== typeof undefined && attrCheck !== false) {
+                // if parents parent direct childre are all unchecked then check parents parent
+                if($('[data-all-control="'+attrCheck+'"] [data-all-parent="'+attrCheck+'"]:checked').length == 0) {
+                    $('[data-all-control="'+attrCheck+'"]').prop( "checked", true );
+                } 
+            } else {
+                // if parent has no parent the check it
+                $('[data-all-control='+allParentName+']').prop( "checked", true );
+            }
         }
+        
         
     });
 
-    // handler for ATAR filter change
-    $('#atar').on('change', function(){
-
-        // disable all filter tabs (until apply button clicked)
-        $('.ds-filter-group__nav__tab').attr('disabled', 'disabled');
-
-    });
-
-
-    // handler for filter form submit
-    $('.ds-filter-group__filter').on('submit', function(event){
-
+    
+    // handler for check box filter
+    $('#level-filter, #discipline-filter, #location-filter, #mode-filter').on('submit', function(event){
+        
         event.preventDefault();
-
-        var filterTriggerButtonId = $(this).parent().attr('aria-labelledby'); // get tab button id
-        var atarDefaultValue = $('#atar').attr('value'); // default atar value
-        var atarValue = $('#atar').val(); // get set atarValue filter value
-
-        if ($(this).attr('id') == '#ATAR-filter') { // if atar filter form
-
-            atarValue = $('#atar').val();
-
-            // if atar is reset
-            if(atarValue == atarDefaultValue) {
-                alert(atarValue);
-                // remove selected class from filter drop down button 
-                $('#'+filterTriggerButtonId).removeClass('ds-filter-group__nav__tab--selected');
-            } else {
-                // add selected class to filter drop down button
-                $('#'+filterTriggerButtonId).addClass('ds-filter-group__nav__tab--selected');
-            }
-
-        } else { // other filter forms
-
-            // if the all checkbox is selected
-            if ($(this).find('[data-all-control]').prop("checked") == true) {
-                // remove selected class from filter drop down button 
-                $('#'+filterTriggerButtonId).removeClass('ds-filter-group__nav__tab--selected');
-            } else {
-                // add selected class to filter drop down button
-                $('#'+filterTriggerButtonId).addClass('ds-filter-group__nav__tab--selected');
-            }
         
+        var filterTriggerButtonId = $(this).closest('.ds-filter-group__content__tab').attr('aria-labelledby'); // get tab button id
+        
+        // if the all checkbox is selected
+        if ($(this).find('[data-all-control]').prop("checked") == true) {
+            // remove selected class from filter drop down button 
+            $('#'+filterTriggerButtonId).removeClass('ds-filter-group__nav__tab--selected');
+        } else {
+            // add selected class to filter drop down button
+            $('#'+filterTriggerButtonId).addClass('ds-filter-group__nav__tab--selected');
         }
-
-        /*** reset tags ***/
-        $('#filter-tags').empty();
-        // add tags for checkboxes
-        $('.ds-filter-group__filter:not(#ATAR-filter)').each(function(){
-            $(this).find('.ds-input-checkbox').each(function(){
-                
-                // check not top level all control by checking that it doesn't have attr data-all-parent 
-                var attrCheck = $(this).attr('data-all-parent');
-                if (typeof attrCheck !== typeof undefined && attrCheck !== false) {
-                    // if checked add a tag 
-                    if ($(this).prop("checked") == true) {
-                        var thisID = $(this).attr('id');
-                        var label = $('label[for='+thisID+']').text();
-                        $('#filter-tags').append('<button class="ds-tag ds-tag--green" title="remove filter" data-filter-id="'+thisID+'">'+label+'</button>\n');
-                    }
-                }
-            });
-        });
-        // add tag for ATAR if not original value
-        if(atarValue != atarDefaultValue) {
-            $('#filter-tags').append('<button class="ds-tag ds-tag--green" title="remove filter" data-filter-id="atar">ATAR: '+atarValue+'</button>\n');
-        }
-
-
 
         // enable filter tabs
         $('.ds-filter-group__nav__tab').removeAttr('disabled');
@@ -141,12 +227,51 @@ $(document).ready(function() {
         if($('#'+filterTriggerButtonId).attr('aria-expanded') == "true") {
             $('#'+filterTriggerButtonId).trigger('click');
         }
-
-        // simulate results refresh
-        $('#course-search-results').fadeOut().fadeIn();
+        
+        // reset filter taglist
+        resetTags();
+        
     });
+    
+    // handler for ATAR filter change
+    $('#atar').on('change', function(){
+
+        // disable all filter tabs (until apply button clicked)
+        $('.ds-filter-group__nav__tab').attr('disabled', 'disabled');
+
+    });
+    
+    // handler for ATAR filter
+    $('#ATAR-filter').on('submit', function(event){
+        
+        event.preventDefault();
+        
+        var filterTriggerButtonId = $(this).closest('.ds-filter-group__content__tab').attr('aria-labelledby'); // get tab button id
+        atarValue = $('#atar').val(); // get set atarValue filter value
 
 
+        // if atar is reset
+        if(atarValue == atarDefaultValue) {
+            // remove selected class from filter drop down button 
+            $('#'+filterTriggerButtonId).removeClass('ds-filter-group__nav__tab--selected');
+        } else {
+            // add selected class to filter drop down button
+            $('#'+filterTriggerButtonId).addClass('ds-filter-group__nav__tab--selected');
+        }
+        
+        // enable filter tabs
+        $('.ds-filter-group__nav__tab').removeAttr('disabled');
+
+        // close filter
+        if($('#'+filterTriggerButtonId).attr('aria-expanded') == "true") {
+            $('#'+filterTriggerButtonId).trigger('click');
+        }
+        
+        // reset filter taglist
+        resetTags();
+        
+    });
+        
     
     //handle tag click
     $('#filter-tags').on('click', '.ds-tag', function(){
@@ -168,26 +293,38 @@ $(document).ready(function() {
 
     });
 
+
     // handler for course search
     $('#course-search').on('submit', function(event){
 
         event.preventDefault();
 
-        var query = $('#query_courses').val();
+        // simulate search
+        query = $('#query_courses').val();
         $('#query_courses').val('');
-        $(this).find('#query-tag-container').empty().append('<button type="button" class="ds-tag" title="remove filter" id="query-tag">'+query+'</button>');
-
-        // simulate results refresh
-        $('#course-search-results').fadeOut().fadeIn();
+        
+        $(this).find('#query-tag-container').empty();
+        if (query != '') {
+            $(this).find('#query-tag-container').append('<button type="button" class="ds-tag" title="remove filter" id="query-tag">'+query+'</button>');
+        }
+        
+        // turn on releveance filter and switch it on
+        $('#sort-releveance').removeAttr('disabled').prop('checked', true);
+        
+        refreshResults();
+        
     });
 
     // handler for query-tag
 
     $('#query-tag-container').on('click', '#query-tag', function(){
         $(this).remove();
-
-        // simulate results refresh
-        $('#course-search-results').fadeOut().fadeIn();
+        query = '';
+        // disable relevance filter
+        $('#sort-releveance').addAttr('disabled');
+        // switch to a-z filter
+        $('#sort-a-z').prop('checked', true);
+        refreshResults();
     });
 
 });

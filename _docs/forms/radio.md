@@ -8,4 +8,6 @@ menu: 6
 
 {% include sample-iframe.html snippet="src/form/snippets/radio/radio-group.html" %}
 
+{% include sample-iframe.html snippet="src/form/snippets/radio/radio-disabled.html" %}
+
 {% include sample-iframe.html snippet="src/form/snippets/radio/radio-group-inline.html" %}
