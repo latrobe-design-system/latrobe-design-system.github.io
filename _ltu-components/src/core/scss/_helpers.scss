@@ -124,10 +124,17 @@
 
 /*
  *  Make container overflow scroll horizontally
- *  Useful for 
  */
-.ds--overflowXSrcoll {
+.ds--overflowXScroll {
   @include config.overflowXScroll();
+}
+// For when you only want scroll on mobiles
+.ds--overflowXScroll--mobile {
+  @include config.overflowXScroll(767px);
+}
+// For when you only want scroll on mobiles and tablets
+.ds--overflowXScroll--tablet {
+  @include config.overflowXScroll(1023px);
 }
 
 

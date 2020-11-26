@@ -3,7 +3,7 @@
 
 .ds-child-nav {
     // scrolls on mobile
-    @include config.overflowXScroll();
+    @include config.overflowXScroll(768px);
 
     margin: config.spunits(8) auto;
     
