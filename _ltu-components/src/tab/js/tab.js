@@ -26,14 +26,16 @@ $(document).ready(function(){
     40: 1
   };
 
+ // Events bound to page content wrapper to reduce number of registered events and also make it work for ajax loaded content
+
   // When a tab is clicked, activateTab is fired to activate it
-  $('.ds-tabs-nav__tab').on('click', function(){
+  $('.ds-page-content').on('click', '.ds-tabs-nav__tab', function(){
     var tabButton = $(this);
     activateTab(tabButton, false);
   });
 
   // Handle keydown on tabs
-  $('.ds-tabs-nav__tab').on('keydown', function(event){
+  $('.ds-page-content').on('keydown', '.ds-tabs-nav__tab', function(event){
     var key = event.keyCode;
     var tabButton = $(this);
     var tablist = tabButton.parent();
@@ -60,7 +62,7 @@ $(document).ready(function(){
   });
 
   // Handle keyup on tabs
-  $('.ds-tabs-nav__tab').on('keyup', function(event){
+  $('.ds-page-content').on('keyup', '.ds-tabs-nav__tab', function(event){
     var key = event.keyCode;
     var tabButton = $(this);
     var tablist = tabButton.parent();
