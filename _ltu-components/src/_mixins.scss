@@ -31,14 +31,32 @@
     }
 }
 
-// @include overflowXScroll to make box horizontal scroll on small screens
-@mixin overflowXScroll() {
-    overflow-x: scroll;
-    white-space: nowrap;
-    // hiding scrollbar
-    scrollbar-width: none;
-    &::-webkit-scrollbar {
-        display: none;
+// @include overflowXScroll to make box horizontal scroll
+// optiontionally provide a breakpoint at which to back to normal flow - useful when you want scroll on mobile only 
+@mixin overflowXScroll($break-point: nil) {
+
+    @if $break-point != nil {
+
+        @media(max-width: $break-point) {
+            overflow-x: scroll;
+            white-space: nowrap;
+            // hiding scrollbar
+            scrollbar-width: none;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            -ms-overflow-style: none;
+        }
+
+    } @else {
+        overflow-x: scroll;
+        white-space: nowrap;
+        // hiding scrollbar
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        -ms-overflow-style: none;
     }
-    -ms-overflow-style: none;
+    
 }

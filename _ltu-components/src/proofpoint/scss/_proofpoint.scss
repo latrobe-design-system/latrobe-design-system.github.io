@@ -54,7 +54,7 @@
 // proof poyint set modifier to make it scroll left-right on small screens instead of wrapping
 .ds-proofpoint-set--scroll {
     @media(max-width: 1279px) {
-        // scrolls on mobile
+        // scrolls on < 1280px
         @include config.overflowXScroll();
         white-space: normal;
         flex-wrap: nowrap;
