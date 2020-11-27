@@ -6,7 +6,7 @@ info: For displaying partner logos etc
 
 {% include sample-iframe.html snippet="src/logo-showcase/snippets/logo-showcase.html" %}
 
-
+{% include sample-iframe.html snippet="src/logo-showcase/snippets/logo-showcase-linked.html" %}
 
 ## Modifiers
 
