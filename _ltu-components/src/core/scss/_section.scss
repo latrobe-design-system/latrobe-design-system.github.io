@@ -43,7 +43,7 @@ div.ds-section--bordered {
     padding-bottom: 2 * config.$h2;
 
     &:last-child {
-        margin-bottom: 0;
+        margin-bottom: 0 !important;
     }
 
     > :first-child {
