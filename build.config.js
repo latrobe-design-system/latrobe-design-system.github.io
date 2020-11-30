@@ -5,8 +5,8 @@ module.exports = {
   views: [
     './_(includes|layouts)/**/*.html',
     './_ltu-components/(src|tests)/**/*.html',
+    './_ltu-components/tests/*.html',
     './_docs/**/*.md',
-    './all-patterns.md',
     './assets/**/*.scss',
   ],
   scripts: {
@@ -27,14 +27,9 @@ module.exports = {
         './_site/ltu-components/dist/css',
       ]
     },
-    site: {
-      src: './_assets/_sass/**/*.scss',
-      entryPoint: './_assets/_sass/styles.scss',
-      dest: './_site/assets/css'
-    },
     ltuLegacy: {
-      src: './_ltu-components/src/ltu-legacy.scss',
-      entryPoint: './_ltu-components/src/ltu-legacy.scss',
+      src: './_ltu-components/legacy/**/*.scss',
+      entryPoint: './_ltu-components/legacy/ltu-legacy.scss',
       dests: [
         './_ltu-components/dist/css',
         './_site/ltu-components/dist/css',
