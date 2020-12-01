@@ -12,6 +12,50 @@ $(document).ready(function() {
     var query = ''; // store search query
     var atarDefaultValue = $('#atar').attr('value'); // default atar value
     var atarValue = atarDefaultValue;
+
+    var studentType = '';
+    
+    /* handlers for modal student type selection*/
+    $('body').on('click', '#studentTypeSelect button', function(){
+        studentType = $(this).val(); 
+        localStorage.setItem('studentType', studentType);
+        if(studentType == 'D') {
+            $('#dom-toggle').prop('checked', true);
+            $('#int-toggle').prop('checked', false);
+        } else {
+            $('#dom-toggle').prop('checked', false);
+            $('#int-toggle').prop('checked', true);
+        }
+        closeModal();
+    });
+
+    /* Check if Student type is set otherwise show modal */
+    if (localStorage.getItem('studentType') === null) {
+        content = '<div class="ds-modal-content" id="studentTypeSelect"><h3>We would like to know who you are</h3> <div class="ds-column-layout"> <div class="ds-column-layout__column"> <p>I am a: <br><button class="ds-btn-primary ds-icon-australia-nz ds-icon--before" value="D">Domestic student</button></p> <div> <p><strong>Domestic student means:</strong></br> La Trobe considers you a ‘domestic’ student if you are a citizen or permanent resident of Australia; a citizen of New Zealand; or a permanent humanitarian visa holder.</p> </div> </div> <div class="ds-column-layout__column"> <p>I am an: <br><button class="ds-btn-primary ds-icon-globe ds-icon--before" value="I">International student</button></p> <div> <p><strong>International student means</strong></br> La Trobe considers you an ‘International’ student if you are <strong>not</strong> a citizen or a permanent resident of Australia; <strong>not</strong> a citizen of New Zealand; or <strong>not</strong> a permanent humanitarian visa holder.</p> </div> </div> </div> </div>';
+        openModal('h1', content, undefined,'yes');
+    } else {
+        studentType = localStorage.getItem('studentType');
+        if(studentType == 'D') {
+            $('#dom-toggle').prop('checked', true);
+            $('#int-toggle').prop('checked', false);
+        } else {
+            $('#dom-toggle').prop('checked', false);
+            $('#int-toggle').prop('checked', true);
+        }
+    }
+
+    /*handler for student type toggles */
+    $('#dom-toggle, #int-toggle').on('click', function(){
+        if($(this).val() == 'dom') {
+            $('#dom-toggle').prop('checked', true);
+            $('#int-toggle').prop('checked', false);
+            localStorage.setItem('studentType', 'D');
+        } else {
+            $('#dom-toggle').prop('checked', false);
+            $('#int-toggle').prop('checked', true);
+            localStorage.setItem('studentType', 'I');
+        }
+    });
     
     
     $('.ds-filter-group__filter').each(function(){

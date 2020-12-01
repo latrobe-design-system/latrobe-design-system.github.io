@@ -90,6 +90,52 @@
 
 /* icons */
 
+/* custom icons */
+
+.ds-icon-australia-nz {
+    @extend %icon;
+
+    &::after {
+        background-image: url("icons/australia-nz.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+            background-size: 200%;
+        }
+
+        &::before {
+            background-image: url("icons/australia-nz.svg");
+            background-size: 200%;
+        }
+
+    }
+}
+
+.ds-icon-globe {
+    @extend %icon;
+
+    &::after {
+        background-image: url("icons/globe.svg");
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: none;
+        }
+
+        &::before {
+            background-image: url("icons/globe.svg");
+        }
+
+    }
+}
+
+/* feather icons */
+
 .ds-icon-activity {
     @extend %icon;
 

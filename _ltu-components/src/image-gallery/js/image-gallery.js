@@ -3,13 +3,15 @@
  *
  * @requires /_ltu-components/src/modal/js/modal.js
  */
-jQuery(document).ready(function($) {
+$(document).ready(function($) {
  	//do jQuery stuff when DOM is ready
-    $('body').on('click', '.ds-image-gallery__image, .ds-image-gallery__more button', function(e) {
+    $('body').on('click', '.ds-image-gallery .ds-image-gallery__image, .ds-image-gallery__more button', function(e) {
         e.preventDefault();
-        var target = e.target;
-        var modalContent = $(this).parents('.ds-image-gallery');
-        modalContent = modalContent.html();
-        openModal(target, modalContent);
+
+        var target = e.target; // element clicked
+
+        var modalContent = $(this).parents('.ds-image-gallery').html();
+
+        openModal(target, modalContent, 'medium');
     });
 });
