@@ -1,7 +1,7 @@
 // depenencies
 @use "config";
 
-.ds-modal {
+.ds-modal-dialog {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -11,27 +11,25 @@
     max-width: 1280px;
     max-height: 90vh;
     margin: auto;
+
     overflow-y: scroll;
     /*hide scrollbar*/ 
     scrollbar-width: none;
     &::-webkit-scrollbar {
       display: none;
     }
-}
 
-.ds-modal-content {
-    display: none;
-    background-color: #fff;
-    padding: config.spunits(8);
-}
-
-// when loaded into modal
-.ds-modal {
     .ds-modal-content {
         display: block;
+        background-color: #fff;
+        padding: config.spunits(8);
 
         & > :first-child {
             margin-top: 0;
         }
     }
+}
+
+.ds-modal-content {
+    display: none;
 }
