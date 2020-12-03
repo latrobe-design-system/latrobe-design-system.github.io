@@ -47,7 +47,7 @@ $(document).ready(function() {
     }
 
     // handler for student type toggles
-    $('#dom-toggle, #int-toggle').on('click', function(){
+    $('label[for="dom-toggle"], label[for="int-toggle]').on('click', function(){
         if($(this).val() == 'dom') {
             $('#dom-toggle').prop('checked', true);
             $('#int-toggle').prop('checked', false);

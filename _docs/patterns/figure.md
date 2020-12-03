@@ -5,10 +5,7 @@ status: draft
 
 {% include sample-iframe.html snippet="src/figure/snippets/figure.html" %}
 
-
-## Modifiers
-
-{% include sample-iframe.html snippet="src/figure/snippets/figure-full-width.html" %}
+{% include sample-iframe.html snippet="src/figure/snippets/figure-large-image.html" %}
 
 ## Figures in columns
 

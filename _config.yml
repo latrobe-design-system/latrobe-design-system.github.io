@@ -49,14 +49,9 @@ defaults:
       parentmenu: guideline
   -
     scope:
-      path: "_docs/getting-started"
+      path: "_docs/foundation"
     values:
-      parentmenu: getting-started
-  -
-    scope:
-      path: "_docs/forms"
-    values:
-      parentmenu: form
+      parentmenu: foundation
   -
     scope:
       path: "_docs/layout"
@@ -64,24 +59,24 @@ defaults:
       parentmenu: 'layout'
   -
     scope:
+      path: "_docs/navigation"
+    values:
+      parentmenu: navigation
+  -
+    scope:
       path: "_docs/content"
     values:
       parentmenu: 'content'
   -
     scope:
-      path: "_docs/foundation"
+      path: "_docs/patterns"
     values:
-      parentmenu: foundation
+      parentmenu: patterns
   -
     scope:
-      path: "_docs/elements"
+      path: "_docs/forms"
     values:
-      parentmenu: element
-  -
-    scope:
-      path: "_docs/navigation"
-    values:
-      parentmenu: navigation
+      parentmenu: form
   -
     scope:
       path: "_docs/examples"

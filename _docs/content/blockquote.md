@@ -1,6 +1,7 @@
 ---
 title: "Blockquote"
 status: ready
+menu: 3
 info:
 ---
 

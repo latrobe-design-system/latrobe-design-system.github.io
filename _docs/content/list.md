@@ -1,6 +1,7 @@
 ---
 title: "List"
 status: ready
+menu: 2
 ---
 
 
