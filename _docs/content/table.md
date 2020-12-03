@@ -1,6 +1,7 @@
 ---
 title: "Table"
 status: ready
+menu: 4
 ---
 
 {% include sample-iframe.html snippet="src/table/snippets/table.html" %}

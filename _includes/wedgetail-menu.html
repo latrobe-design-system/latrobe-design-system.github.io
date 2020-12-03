@@ -69,7 +69,17 @@
 
         <p class="wedgetail-menu-list__sub-heading">Content</p>
 
-        {%- assign x = site.docs | where: 'parentmenu', 'content' | sort: 'url' -%}
+        {%- assign x = site.docs | where: 'parentmenu', 'content' | sort: 'menu' -%}
+
+        <ul>
+            {%- for pattern in x -%}
+                {%- include wedgetail-menu-item.html -%}
+            {%- endfor -%}
+        </ul>
+
+        <p class="wedgetail-menu-list__sub-heading">Patterns</p>
+
+        {%- assign x = site.docs | where: 'parentmenu', 'patterns' | sort: 'url' -%}
 
         <ul>
             {%- for pattern in x -%}

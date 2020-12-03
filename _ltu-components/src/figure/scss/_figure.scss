@@ -1,6 +1,5 @@
 @use "config";
 .ds-figure {
-    max-width: 1024px;
 
     img {
         display: block;
@@ -19,15 +18,5 @@
             background: config.$color-3c;
             margin: 0 0 config.spunits(1) 0;
         }
-    }
-}
-
-//modifer
-
-.ds-figure--full-width {
-    max-width: 100%;
-
-    img {
-        width: 100%;
     }
 }

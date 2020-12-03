@@ -3,7 +3,6 @@
 @use "core/scss/icons";
 
 .ds-collapse__trigger {
-    @extend .ds-icon-chevron-down;
     &::after {
         transition: transform 0.3s;
     }

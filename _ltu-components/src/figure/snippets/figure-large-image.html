@@ -1,26 +1,17 @@
 ---
-title: "Figure - two side by side"
+title: "Figure - large image"
 status: draft
+type: block
 
-type: 
+text: "Figure with 2560px wide image. In this example the max container width is smaller than the image native width so the max image width is the same as the container."
 ---
 
 <div class="ds-block">
 
-    <div class="ds-column-layout">
-        <div class="ds-column-layout__column">
-            <figure class="ds-figure ds-figure--full-width">
-                <img src="{{ site.url }}/ltu-components/src/figure/snippets/images/lims-la-trobe-2560.jpg" alt="">
-                <figcaption class="ds-figure__figcaption">Figcaption</figcaption>
-            </figure>
-        </div>
-        <div class="ds-column-layout__column">
-            <figure class="ds-figure ds-figure--full-width">
-                <img src="{{ site.url }}/ltu-components/src/figure/snippets/images/lims-la-trobe-2560.jpg" alt="">
-                <figcaption class="ds-figure__figcaption">Figcaption</figcaption>
-            </figure>
-        </div>
-    </div>
+    <figure class="ds-figure">
+        <img src="{{ site.url }}/ltu-components/src/figure/snippets/images/lims-la-trobe-2560.jpg" alt="">
+        <figcaption class="ds-figure__figcaption">Figcaption</figcaption>
+    </figure>
 
     <!-- 
         NOTE: Where possible You should use the image srcset attribute to provide for responsive images.
