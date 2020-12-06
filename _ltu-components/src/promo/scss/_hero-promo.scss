@@ -185,17 +185,6 @@
 // a shadowed box that pushes up overlaying bottom of heor promo
 .ds-hero-promo__peakaboo {
 
-    .ds-block:first-child {
-        > :first-child {
-            margin-top: 0;
-        }
-    }
-
-    h2, .h2 {
-        &:first-of-type {
-            margin-top: 1rem;
-        }
-    }
 
     @media(min-width: 1281px) {
         padding: 40px 20px 60px 20px; // using pixels here to maintain on large screens
@@ -204,6 +193,18 @@
         position: relative;
         z-index: 1;
         margin-top: -4rem;
+
+        .ds-block:first-child {
+            > :first-child {
+                margin-top: 0;
+            }
+        }
+
+        h2, .h2 {
+            &:first-of-type {
+                margin-top: 1rem;
+            }
+        }
     }
 
     @media(min-width: 1441px) {
