@@ -5,7 +5,11 @@ status: draft
 
 
 
-## 4x grid fundamentals <a name="4x-grid-fundamentals"></a>
+## 4pt (0.25rem) grid
+
+The Wedgetail design system is built on the principles of a 4pt **soft** grid.
+
+By using a spacer variable equal to 0.25rem and setting all paddings, 
 
 All spacing on the site is to be in 4px increments: font-size, line-height, margins, padding
 

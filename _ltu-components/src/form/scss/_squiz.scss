@@ -65,6 +65,10 @@ legend.sq-form-question-title {
     @extend .ds-hint;
     @extend .ds-hint--invalid;
     margin-top: config.spunits(1);
+
+    select {
+        border-color: config.$color-1;
+    }
 }
 
 .ds-form-wrap input[type="text"],
