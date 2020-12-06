@@ -4,8 +4,8 @@ module.exports = {
   },
   views: [
     './_(includes|layouts)/**/*.html',
-    './_ltu-components/(src|tests)/**/*.html',
-    './_ltu-components/tests/*.html',
+    './_ltu-components/(src|example-pages)/**/*.html',
+    './_ltu-components/example-pages/*.html',
     './_docs/**/*.md',
     './assets/**/*.scss',
   ],

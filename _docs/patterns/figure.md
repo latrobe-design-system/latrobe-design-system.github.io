@@ -1,9 +1,9 @@
 ---
 title: "Figure"
-status: draft
+status: ready
 ---
 
-{% include sample-iframe.html snippet="src/figure/snippets/figure.html" %}
+{% include sample-iframe.html snippet="src/figure/snippets/figure.html" iframeonly="yes"%}
 
 {% include sample-iframe.html snippet="src/figure/snippets/figure-large-image.html" %}
 

@@ -9,7 +9,7 @@
 // or the form itself <form class="ds-form"></form>
 .ds-form {
     max-width: 42rem;
-    margin-top: 0;
+    margin-top: 1rem;
 }
 
 // modifier for .ds-form to center form on page 
@@ -32,6 +32,9 @@ form.ds-form--full-width {
 // form groups wrap label and input pairs
 .ds-form-group {
     margin-top: 1rem;
+    &:first-child { 
+        margin-top: 0;
+    }
 }
 
 //

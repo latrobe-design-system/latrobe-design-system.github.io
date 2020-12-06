@@ -1,5 +1,5 @@
 @use "config";
-@use "form/range-input/scss/range-input-plugin" with (
+@use "range-input-plugin" with (
   $thumb-color: config.$color-1
 );
 

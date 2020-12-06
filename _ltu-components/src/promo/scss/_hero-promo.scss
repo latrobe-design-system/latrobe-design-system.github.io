@@ -185,6 +185,12 @@
 // a shadowed box that pushes up overlaying bottom of heor promo
 .ds-hero-promo__peakaboo {
 
+    .ds-block:first-child {
+        > :first-child {
+            margin-top: 0;
+        }
+    }
+
     h2, .h2 {
         &:first-of-type {
             margin-top: 1rem;
