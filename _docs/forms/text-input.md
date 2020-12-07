@@ -2,7 +2,7 @@
 title: "Text input"
 status: draft
 
-menu: 2
+menu: 3
 ---
 
 {% include sample-iframe.html snippet="src/form/snippets/text/text.html" %}

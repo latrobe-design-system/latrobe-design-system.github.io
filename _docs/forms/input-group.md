@@ -2,7 +2,7 @@
 title: "Input group"
 status: draft
 
-menu: 8
+menu: 9
 ---
 
 Extend textual inputs by adding icons, text, or buttonseither side.
