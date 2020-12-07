@@ -6,7 +6,7 @@ status: ready
 Alerts are used to notify users of important information or changes on a page, in a way that attracts the user's attention without interrupting the user's task. Typically they appear at the top of a page or form following a submit action.
 {: .intro}
 
-**Note:** These alerts should not be confused with [Callouts](callout.html) which are for use on standard content pages to draw attention to a particular piece of content. 
+**Note:** These alerts should not be confused with [Callouts](callout.html) which are for static use on standard content pages to draw attention to a particular piece of content. 
 
 Alerts on the other hand are typically used to provide feedback to user interaction such as submitting a form or making a selection.
 

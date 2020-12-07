@@ -194,6 +194,10 @@
         z-index: 1;
         margin-top: -4rem;
 
+        :first-child {
+            margin-top: 0;
+        }
+
         .ds-block:first-child {
             > :first-child {
                 margin-top: 0;

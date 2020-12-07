@@ -26,7 +26,7 @@
             {% if include.codeonly != "yes" %}
             <div class="wedgetail-sample button-primary" style="background: {{ include.bgcolor | default: transparent }};">
                 <div class="wedgetail-preview"> 
-                    {% if include.showcode != "no" %}
+                    {% if include.iframeonly != "yes" %}
                     <a href="javascript:void(0)" title="View Source Code" class="wedgetail-helper-code button"></a>
                     {% endif %}
                     <a class="wedgetail-snippet-file" href="{{ path }}{{ include.snippet }}" target="_blank" title="Open in new tab"></a>

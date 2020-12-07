@@ -21,3 +21,5 @@ There are 4 possible maximum widths of content within a block:
 
 
 {% include sample-iframe.html snippet="src/core/snippets/block/block.html" codeonly="yes" %}
+
+{% include sample-iframe.html snippet="src/core/snippets/block/blocks.html" iframeonly="yes" %}
