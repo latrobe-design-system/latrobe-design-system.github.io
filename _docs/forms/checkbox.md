@@ -3,7 +3,7 @@ title: "Checkbox input"
 status: draft
 text: Checkboxes allow multiple selections
 
-menu: 5
+menu: 6
 ---
 
 

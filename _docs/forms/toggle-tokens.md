@@ -3,7 +3,7 @@ title: "Toggle tokens"
 status: draft
 text: Toggle tokens are
 
-menu: 7
+menu: 8
 ---
 
 {% include sample-iframe.html snippet="src/form/snippets/checkbox/checkbox-group-toggle-token.html" %}

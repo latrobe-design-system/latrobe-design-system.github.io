@@ -19,16 +19,3 @@
     }
 
 }
-
-.ds-highlight-box {
-    background: white;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-    padding: config.spunits(12);
-    border: 2px solid config.$color-2;
-    box-shadow: -12px 12px 0 config.$color-2;
-
-    > *:first-child {
-        margin-top: 0;
-    }
-}
