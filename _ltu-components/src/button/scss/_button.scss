@@ -21,7 +21,6 @@
     color: config.$color-2;
     background-color: config.$color-3a;
     border: 2px solid transparent;
-    transition: background-color 0.05s ease-in-out;
     cursor: pointer;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;  // for hover
 

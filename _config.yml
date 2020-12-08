@@ -97,7 +97,7 @@ defaults:
       type: content
   -
     scope:
-      path: "_ltu-components/example-pages"
+      path: "_ltu-components/test-pages"
     values:
       type: example
       layout: test-page-ds

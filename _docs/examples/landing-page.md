@@ -5,4 +5,4 @@ status: ready
 menu: 2
 ---
 
-{% include sample-iframe.html snippet="example-pages/landing-page.html" %}
+{% include sample-iframe.html snippet="test-pages/landing-page.html" %}
