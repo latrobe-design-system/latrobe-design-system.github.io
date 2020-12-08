@@ -1,6 +1,7 @@
 ---
-title: "Testimonials"
 status: ready
+
+title: "Testimonials"
 ---
 
 {% include sample-iframe.html snippet="src/testimonial/snippets/testimonial-set-1.html" %}

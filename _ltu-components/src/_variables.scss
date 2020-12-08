@@ -9,11 +9,11 @@ $font-roboto-slab: "Roboto Slab", serif !default;
 // Weights
 //----------------------------------------------------------------------------------------------------------------------------------//
 
-$light-weight:    300 !default;
-$regular:   400 !default;
-$medium:   500 !default;
-$bold:     700 !default;
-$black:    900 !default;
+$light-weight: 300 !default;
+$regular: 400 !default;
+$medium: 500 !default;
+$bold: 700 !default;
+$black: 900 !default;
 
 
 //----------------------------------------------------------------------------------------------------------------------------------//
@@ -22,13 +22,14 @@ $black:    900 !default;
 
 $heading-scale-ratio: 1.25; // Major third
 
-$h6: 0.8rem;
 $h5: 1rem;
+$h6: $h5 / $heading-scale-ratio;
 $h4: $h5 * $heading-scale-ratio;
 $h3: $h4 * $heading-scale-ratio;
 $h2: $h3 * $heading-scale-ratio;
 $h1: $h2 * $heading-scale-ratio;
 $p: $h5;
+
 
 //----------------------------------------------------------------------------------------------------------------------------------//
 // Colour

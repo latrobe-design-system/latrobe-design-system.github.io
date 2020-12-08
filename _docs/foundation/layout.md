@@ -4,23 +4,15 @@ status: draft
 ---
 
 
+Alignment is an important fundamental of UI design.
+{: .intro}
 
-## 4pt (0.25rem) grid
+Graphic and UI designers utilise a grid to achieve pleasing designs with well connected content and consisent vertical and horizontal rhythm or spacing.
 
-The Wedgetail design system is built on the principles of a 4pt **soft** grid.
+## The 0.25rem soft grid
 
-By using a spacer variable equal to 0.25rem and setting all paddings, 
+The Wedgetail design system is built on the principles of a **4pt soft grid**.
 
-All spacing on the site is to be in 4px increments: font-size, line-height, margins, padding
+By using a spacer variable equal to 0.25rem (equals 4px when basefont size is 16px) and setting all paddings, margins, column-gaps, widths and other size attributes to multiples of this spacer; alignment to invisible grid is mainatined and vertical and horizontal rhythm is achieved.
 
-## Alignment <a name="alignment"></a>
-
-Alignment is an important fundamental of design.
-
-Graphic and UI designers utilise a grid to achieve pleasing designs with well connected content and consisent vertical and horizontal rythm or spacing.
-
-Our typography vertical spacing is based on 4px increments.
-
-By adopting 4px increments for all vertical and horizontal spacings we can achieve a well aligned harmonious UI without working to a hard grid.
-
-
+We use 0.25rem as the spacer (rather than 4pt/px) since our basefont size changes to 18px at viewport widths >1440px. So using rem units for sizing/spacing will mean the sizing/spacing will scale up with the text.

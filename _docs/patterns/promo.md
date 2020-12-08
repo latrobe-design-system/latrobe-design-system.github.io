@@ -1,6 +1,7 @@
 ---
-title: "Promo"
 status: ready
+
+title: "Promo"
 ---
 
 {% include sample-iframe.html snippet="src/promo/snippets/promo.html" %}

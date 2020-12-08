@@ -7,11 +7,11 @@
 
 html {
     font-size: 16px;
-    line-height: (24 / 16);
+    line-height: (24 / 16); // effectively 8px more than 16
 
     @media(min-width: 1441px){
         font-size: 18px; // increase base font size for large displays
-        line-height: (26 / 18);
+        line-height: (26 / 18);  // effectively 8px more than 18
     }
 }
 
@@ -35,19 +35,22 @@ h6, .h6 {
     &:empty {
         margin: 0;
     }
+}
 
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5 {
     b,
     strong {
         font-weight: config.$bold;
     }
 }
 
-
 h2, .h2 {
     font-family: config.$font-roboto-slab;
     font-weight: config.$regular;
 }
-
 
 h1, .h1,
 h2, .h2,
@@ -86,7 +89,6 @@ h6, .h6 {
     text-transform: uppercase;
     font-weight: config.$black;
 }
-
 
 //
 // Body copy
@@ -237,7 +239,6 @@ article {
     }
 }
 
-
 //
 // Fluid Headings
 //
@@ -247,7 +248,6 @@ article {
         font-size: calc(64px + (72 - 64) * ((100vw - 1024px) / (1920 - 1024)));
     }
 }
-
 
 //
 // inline text elements
@@ -298,7 +298,7 @@ hr {
     height: 2px;
     border: 0;
     border-top: 2px solid #ccc;
-    margin: 1em 0;
+    margin: 4rem 0;
     padding: 0;
 }
 

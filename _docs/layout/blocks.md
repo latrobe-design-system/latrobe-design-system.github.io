@@ -1,6 +1,8 @@
 ---
-title: "Blocks"
 status: ready
+menu: 1
+
+title: "Blocks"
 ---
 Blocks are used to stack content sections on a page and to center content horizontally. 
 

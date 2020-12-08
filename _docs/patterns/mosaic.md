@@ -1,7 +1,7 @@
 ---
-title: "Mosaic"
 status: ready
-info: 
+
+title: "Mosaic"
 ---
 
 {% include sample-iframe.html snippet="src/mosaic/snippets/mosaic.html"%}

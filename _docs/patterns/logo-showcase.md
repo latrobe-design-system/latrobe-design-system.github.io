@@ -1,8 +1,11 @@
 ---
-title: "Logo showcase"
 status: ready
-info: For displaying partner logos etc
+
+title: "Logo showcase"
 ---
+
+For displaying partner logos etc
+{: .intro}
 
 {% include sample-iframe.html snippet="src/logo-showcase/snippets/logo-showcase.html" %}
 

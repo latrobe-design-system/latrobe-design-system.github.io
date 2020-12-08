@@ -1,6 +1,7 @@
 ---
-title: "Proofpoint"
 status: ready
+
+title: "Proofpoint"
 ---
 
 {% include sample-iframe.html snippet="src/proofpoint/snippets/proof-points-basic.html" %}

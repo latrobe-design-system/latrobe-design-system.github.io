@@ -1,6 +1,7 @@
 ---
-title: "Badge"
 status: draft
+
+title: "Badge"
 ---
 
 Badges are used for adding a label. To the end of text.

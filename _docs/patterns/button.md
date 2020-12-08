@@ -1,8 +1,11 @@
 ---
-title: "Button"
 status: ready
-info: Buttons are used to help users perform common actions more easily and direct them through a workflow.
+
+title: "Button"
 ---
+
+Buttons are used to help users perform common actions more easily and direct them through a workflow.
+{: .intro}
 
 ## Types
 

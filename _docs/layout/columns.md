@@ -1,6 +1,8 @@
 ---
-title: "Column layout"
 status: ready
+menu: 2
+
+title: "Column layout"
 ---
 
 The column layout is useful for breaking content up into columns.

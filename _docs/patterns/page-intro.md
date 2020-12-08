@@ -1,8 +1,11 @@
 ---
-title: "Page intro"
 status: ready
-info: Provides for intro text and image
+
+title: "Page intro"
 ---
+
+Provides for intro text and image
+{: .intro}
 
 {% include sample-iframe.html snippet="src/page-intro/snippets/page-intro.html" %}
 

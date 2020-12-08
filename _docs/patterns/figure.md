@@ -1,6 +1,7 @@
 ---
-title: "Figure"
 status: ready
+
+title: "Figure"
 ---
 
 {% include sample-iframe.html snippet="src/figure/snippets/figure.html" iframeonly="yes"%}

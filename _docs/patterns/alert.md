@@ -1,6 +1,7 @@
 ---
-title: "Alert"
 status: ready
+
+title: "Alert"
 ---
 
 Alerts are used to notify users of important information or changes on a page, in a way that attracts the user's attention without interrupting the user's task. Typically they appear at the top of a page or form following a submit action.
