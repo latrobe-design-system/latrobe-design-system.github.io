@@ -39,6 +39,7 @@
 
         @media(max-width: $break-point) {
             overflow-x: scroll;
+            overflow-inline: auto;
             white-space: nowrap;
             // hiding scrollbar
             scrollbar-width: none;
@@ -50,6 +51,7 @@
 
     } @else {
         overflow-x: scroll;
+        overflow-inline: auto;
         white-space: nowrap;
         // hiding scrollbar
         scrollbar-width: none;
