@@ -7,9 +7,20 @@
     line-height: 1;
     padding: config.spunits(2) config.spunits(3);
     margin: config.spunits(1) 0;
-    border: 1px solid config.$color-3b;
+    border: 2px solid config.$color-3b;
     border-radius: 20px;
     background: config.$color-3a;
+}
+
+a.ds-tag,
+a.ds-tag:visited {
+    display: inline-block;
+    color: config.$color-2;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+a.ds-tag:hover {
+    transform: translateY(-4px);
+    box-shadow: config.$shadow-2;
 }
 
 button.ds-tag {
@@ -23,7 +34,7 @@ button.ds-tag {
     vertical-align: middle;
     cursor: pointer;
     transition: text-decoration 0.3s ease-in-out; // for hover
-    //transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; // for hover
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; // for hover
 
     &::after {
         content: "";
@@ -42,9 +53,9 @@ button.ds-tag {
     }
 
     &:hover {
-        text-decoration: underline;
-        /*transform: translateY(-4px);
-        box-shadow: config.$shadow-2;*/
+        //text-decoration: underline;
+        transform: translateY(-4px);
+        box-shadow: config.$shadow-2;
     }
 }
 

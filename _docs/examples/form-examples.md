@@ -7,16 +7,16 @@ menu: 100
 
 ## DS form
 
-{% include sample-iframe.html snippet="example-pages/forms/form.html" %}
+{% include sample-iframe.html snippet="test-pages/forms/form.html" %}
 
 ## oracle form
 
-{% include sample-iframe.html snippet="example-pages/forms/temp.html" %}
+{% include sample-iframe.html snippet="test-pages/forms/temp.html" %}
 
 
 ## squiz form
 
-{% include sample-iframe.html snippet="example-pages/forms/squiz-form.html" %}
+{% include sample-iframe.html snippet="test-pages/forms/squiz-form.html" %}
 
 
 

@@ -5,4 +5,4 @@ status: draft
 menu: 4
 ---
 
-{% include sample-iframe.html snippet="example-pages/course-search/courses.html" %}
+{% include sample-iframe.html snippet="test-pages/course-search/courses.html" %}

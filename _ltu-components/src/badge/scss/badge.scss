@@ -1,0 +1,14 @@
+// dependencies
+@use "config";
+
+.ds-badge {
+    border: 2px solid config.$color-alt-3;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    line-height: 1;
+    font-weight: config.$medium;
+    font-family: config.$font-roboto;
+    text-transform: none;
+    color: config.$color-alt-3;
+    padding: config.spunits(0.5) config.spunits(3);
+}
