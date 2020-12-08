@@ -1,6 +1,7 @@
 ---
-title: "Banner"
 status: ready
+
+title: "Banner"
 ---
 
 Hero banners are used on landing pages.{: .intro}

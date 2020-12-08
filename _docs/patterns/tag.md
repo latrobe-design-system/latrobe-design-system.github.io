@@ -1,6 +1,7 @@
 ---
-title: "Tags"
 status: draft
+
+title: "Tags"
 ---
 
 Tags are used to display relevant categories or set filters. 

@@ -1,7 +1,7 @@
 ---
-title: "Modal"
 status: ready
-info:
+
+title: "Modal"
 ---
 
 ## Modal options

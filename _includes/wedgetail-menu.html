@@ -37,7 +37,7 @@
 
         <p class="wedgetail-menu-list__heading">Foundation</p>
 
-        {%- assign x = site.docs | where: 'parentmenu', 'foundation' | sort: 'url' -%}
+        {%- assign x = site.docs | where: 'parentmenu', 'foundation' | sort: 'menu' -%}
 
         <ul>
             {%- for pattern in x -%}
@@ -49,7 +49,7 @@
 
         <p class="wedgetail-menu-list__sub-heading">Layout</p>
 
-        {%- assign x = site.docs | where: 'parentmenu', 'layout' | sort: 'url' -%}
+        {%- assign x = site.docs | where: 'parentmenu', 'layout' | sort: 'menu' -%}
 
         <ul>
             {%- for pattern in x -%}
@@ -59,7 +59,7 @@
 
         <p class="wedgetail-menu-list__sub-heading">Navigation</p>
 
-        {%- assign x = site.docs | where: 'parentmenu', 'navigation' | sort: 'url' -%}
+        {%- assign x = site.docs | where: 'parentmenu', 'navigation' | sort: 'menu' -%}
 
         <ul>
             {%- for pattern in x -%}

@@ -1,6 +1,7 @@
 ---
-title: "Media"
 status: ready
+
+title: "Media"
 ---
 Used to construct highly repetitive components like news and event lists, blog comments, tweets, and the like.
 {: .intro}

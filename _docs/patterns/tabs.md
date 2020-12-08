@@ -1,6 +1,7 @@
 ---
-title: "Tabs"
 status: ready
+
+title: "Tabs"
 ---
 
 ## Format

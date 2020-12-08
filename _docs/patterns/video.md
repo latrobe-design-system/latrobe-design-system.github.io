@@ -1,6 +1,7 @@
 ---
-title: "Video"
 status: ready
+
+title: "Video"
 ---
 
 ## Responsive video embed
