@@ -12,8 +12,9 @@
 
     font-size: 16px; // stop large screen increase
     line-height: 20px;
+
     a {
-        @extend .ds-icon-chevron-right;  
+        @extend .ds-icon-chevron-right;
     }
 
     a:last-child {
@@ -22,6 +23,14 @@
         text-decoration: none;
         &::after {
             display: none;
+        }
+    }
+
+    // add this class if using squiz %asset_lineage_linked% for breadcrumbs as it adds &gt; after each link
+    &.is-squiz {
+        color: transparent;
+        a {
+            margin-right: -12px;
         }
     }
 
