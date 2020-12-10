@@ -1,6 +1,6 @@
 ---
 status: ready
-menu: 2
+menu: 3
 
 title: "In-Page nav"
 ---

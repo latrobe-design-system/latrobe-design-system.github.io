@@ -1,6 +1,6 @@
 ---
 status: ready
-menu: 1
+menu: 2
 
 title: "Child nav"
 ---

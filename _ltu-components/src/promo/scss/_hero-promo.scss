@@ -194,19 +194,13 @@
         z-index: 1;
         margin-top: -4rem;
 
-        :first-child {
+        > :first-child {
             margin-top: 0;
         }
 
-        .ds-block:first-child {
-            > :first-child {
-                margin-top: 0;
-            }
-        }
-
-        h2, .h2 {
+        h2, .h2, label {
             &:first-of-type {
-                margin-top: 1rem;
+                margin-top: 0;
             }
         }
     }

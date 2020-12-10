@@ -1,6 +1,6 @@
 ---
 status: ready
-menu: 3
+menu: 1
 
 title: "Breadcrumb"
 ---
