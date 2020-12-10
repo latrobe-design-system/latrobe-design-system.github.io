@@ -2,7 +2,7 @@
 @use "config";
 
 // tokens
-$ds-grid-gutter: 32px;
+$ds-grid-gutter: config.spunits(8);
 
 .ds-grid {
     display: flex;
@@ -88,15 +88,7 @@ $ds-grid-gutter: 32px;
         margin-right: 0;
     }
 
-    @media (min-width: 576px) {
-        .ds-grid {
-            &__col-3 {
-                width: calc(6/12 * 100%);
-            }
-        }
-    }
-
-    @media (min-width: 992px) {
+    @media (min-width: 768px) {
         .ds-grid {
             &__col-12 {
                 width: calc(100%);
