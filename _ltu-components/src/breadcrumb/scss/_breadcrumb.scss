@@ -1,17 +1,28 @@
 // depenencies
 @use "config";
+@use "core/scss/icons";
 
 .ds-breadcrumbs {
-    background: transparent url(https://www.latrobe.edu.au/__data/assets/image/0003/12864/dotted-line.gif) repeat-x 0 bottom;
-    color: #e87722;
-    font-size: 16px;
-    line-height: 20px;
-    margin: 0 0 12px;
-    padding: 0 0 20px;
+    padding: 20px 0;
+    border-bottom: 1px dotted config.$color-3b;
+    
 }
 
-.ds-breadcrumbs a:last-child {
-    color: #000;
-    pointer-events: none;
-    text-decoration: none;
+.ds-breadcrumbs {
+
+    font-size: 16px; // stop large screen increase
+    line-height: 20px;
+    a {
+        @extend .ds-icon-chevron-right;  
+    }
+
+    a:last-child {
+        color: #000;
+        pointer-events: none;
+        text-decoration: none;
+        &::after {
+            display: none;
+        }
+    }
+
 }

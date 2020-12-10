@@ -11,6 +11,8 @@ Alerts are used to notify users of important information or changes on a page, i
 
 Alerts on the other hand are typically used to provide feedback to user interaction such as submitting a form or making a selection.
 
+Alerts are commonly used within forms.
+
 ## Info alerts
 
 Info alerts may be present on page load or injected to provide information pertinent to a specific user selection.
@@ -20,8 +22,6 @@ Info alerts may be present on page load or injected to provide information perti
 {% include sample-iframe.html snippet="src/alert/snippets/alert-info/alert-info-with-heading.html" %}
 
 {% include sample-iframe.html snippet="src/alert/snippets/alert-info/alert-info-with-read-more.html" %}
-
-{% include sample-iframe.html snippet="src/alert/snippets/alert-info/alert-info-centered-with-read-more.html" %}
 
 ## Other alerts
 
@@ -56,12 +56,6 @@ You can add a close button to alerts to allow user to dismiss them.
 
 {% include sample-iframe.html snippet="src/alert/snippets/alert-warning/alert-warning-close.html" %}
 
-## Page alert
+## Modifiers
 
-Use modifier `ds-block--full-width` on the `ds-block` container and `ds-alert--full-width` on `ds-alert` component for a full width version.
-
-The full width version is a special version for page/site alerts that site immeadiately below the site header. 
-
-Or they could be used for applications at top or bottom of viewport.
-
-{% include sample-iframe.html snippet="src/alert/snippets/alert-info/alert-info-full-width.html" %}
+{% include sample-iframe.html snippet="src/alert/snippets/alert-info/alert-info-centered-with-read-more.html" %}

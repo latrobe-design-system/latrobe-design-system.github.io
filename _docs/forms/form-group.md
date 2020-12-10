@@ -6,7 +6,7 @@ menu: 2
 type: example
 ---
 
-Form groups are use Each label and form control pairs are always wrapped by 
+Used to group form controls and provide structure and consistent spacing within a form.
 
 {% include sample-iframe.html snippet="src/form/snippets/form-group.html" %}
 

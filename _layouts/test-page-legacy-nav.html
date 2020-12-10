@@ -40,7 +40,17 @@ if(window.outerWidth <= mobileBreakingPoint){
 
             <div class="ds-page-content-wrapper">
 
-                {% if page.showBreadcrumb == 'yes' %}{% include legacy-ltu-nav/ltu-breadcrumb.html %}{% endif %}
+                {% if page.showBreadcrumb == 'yes' %}
+                <div class="ds-block ds-block--wide">
+
+                    <div class="ds-breadcrumbs">
+                        <a href="#">Level 1</a>
+                        <a href="#">Level 2</a>
+                        <a href="#">Level 3</a>
+                        <a href="#">Level 4</a>
+                    </div>
+                
+                </div>{% endif %}
 
                 <article class="ds-page-content">
 

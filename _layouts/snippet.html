@@ -16,8 +16,7 @@
 
 <body>
 
-{% if page.type == 'header' %}{{ content }}{% endif %}
-
+{% if page.type == 'header | footer' %}{{ content }}{% else %}
     <main id="content">
 
         <div class="ds-main-wrapper">
@@ -26,14 +25,7 @@
 
                 <article class="ds-page-content">
 
-{% if page.type == 'content' %}            
-                    <div class="ds-block {{ page.ds-block-modifiers }}">
-
 {{ content }}
-
-                    </div>
-{% elsif page.type == 'block' %}{{ content }}    
-{% endif %}
 
                 </article>
 
@@ -41,7 +33,7 @@
 
         </div>
 
-    </main>
+    </main>{% endif %}
 
     <script src="{{ site.url }}/ltu-components/dist/js/ds-ltu.js?v={{ site.time | date: '%Y%m%d%H%M%S' }}"></script>
 
