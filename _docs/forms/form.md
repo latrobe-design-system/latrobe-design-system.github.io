@@ -13,3 +13,10 @@ Examples and usage guidelines for form control styles and layout.
 Forms comprise of the form itself and multiple form inputs.
 
 {% include sample-iframe.html snippet="src/form/snippets/form.html" %}
+
+## Modifiers
+{% include sample-iframe.html snippet="src/form/snippets/form--full-width.html" %}
+
+## Form in grid layout
+
+{% include sample-iframe.html snippet="src/form/snippets/form-grid.html" %}

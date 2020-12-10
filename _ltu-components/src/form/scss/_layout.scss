@@ -9,7 +9,7 @@
 // or the form itself <form class="ds-form"></form>
 .ds-form {
     max-width: 42rem;
-    margin-top: 1rem;
+    //margin-top: 1rem;
 }
 
 // modifier for .ds-form to center form on page 
@@ -27,48 +27,4 @@ form.ds-form--centered {
 .ds-form--full-width form,
 form.ds-form--full-width {
     max-width: 100%;
-}
-
-// form groups wrap label and input pairs
-.ds-form-group {
-    margin-top: 1rem;
-    &:first-child { 
-        margin-top: 0;
-    }
-}
-
-//
-.ds-form-group--two-layer {
-    .ds-input-checkbox,
-    .ds-input-radio {
-        + .ds-label {
-            display: inline-block;
-        }
-    }
-}
-
-.ds-form-group--two-layer__content {
-    margin-top: config.spunits(2);
-    padding: config.spunits(4);
-    border: 1px solid config.$color-3b;
-}
-
-
-.ds-form-group--inline {
-
-    // inline control groups are set to scroll on small screens
-    //@include config.overflowXScroll();
-
-    // all children
-    > * {
-        display: inline-block;
-        width: auto;
-        margin-right: config.spunits(4);
-    }
-
-    // last child
-    > :last-child {
-        margin-right: 0;
-    }
-
 }

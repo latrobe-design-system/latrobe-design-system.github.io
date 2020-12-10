@@ -26,13 +26,7 @@ $ds-grid-gutter: 32px;
         margin-right: $ds-grid-gutter;
     }
 
-    @media (min-width: 576px) {
-        &__col-3 {
-            width: calc(6/12 * 100% - #{$ds-grid-gutter});
-        }
-    }
-
-    @media (min-width: 992px) {
+    @media (min-width: 768px) {
         &__col-12 {
             width: calc(100% - #{$ds-grid-gutter});
         }
