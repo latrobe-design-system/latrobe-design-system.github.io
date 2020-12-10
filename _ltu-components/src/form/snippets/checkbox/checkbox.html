@@ -5,25 +5,18 @@ text: "
 <p>Single checkboxes are used to confirm a user's selection or preference. For example: to confirm a user agrees to a product's terms and conditions.</p>
 <p>You can Use attribute <code>checked</code> to default to a checked state.</p>
 "
-
-# example content
-uniqueID-1: id1
-label-1: I agree to the terms and conditions.
-
-uniqueID-2: id2
-label-2: I would like to receive updates via email.
 ---
 
 <div class="ds-form-group">
-    <input class="ds-input-checkbox" type="checkbox" id="{{ page.uniqueID-1 }}">
-    <label class="ds-label" for="{{ page.uniqueID-1 }}">
-        {{ page.label-1 }}
+    <input class="ds-input-checkbox" type="checkbox" id="uniqueID-1-checkbox">
+    <label class="ds-label" for="uniqueID-1-checkbox">
+        I agree to the <a href="https://latrobe.edu.au/terms/" target="_blank">terms and conditions</a>
     </label>
 </div>
 
 <div class="ds-form-group">
-    <input class="ds-input-checkbox" type="checkbox" id="{{ page.uniqueID-2 }}"  checked>
-    <label class="ds-label" for="{{ page.uniqueID-2 }}">
-        {{ page.label-2 }}
+    <input class="ds-input-checkbox" type="checkbox" id="uniqueID-2-checkbox"  checked>
+    <label class="ds-label" for="uniqueID-2-checkbox">
+        I would like to receive updates via email
     </label>
 </div>
