@@ -1,31 +1,30 @@
 ---
+status: "ready"
+
 title: "Modal"
-status: "draft"
+text:
 ---
+<div class="ds-block">
 
-<p><button class="ds-btn-primary" data-modal-content="uniqueId" data-modal-width="">Open Modal</button></p>
-<div id="uniqueId" class="ds-modal-content">
-    
-    <h3>Sign up to our newsletter:</h3>
-    <form class="ds-form" id="newsletter" action="">
-        <div class="ds-form-group">
-            <label class="ds-label" for="name">Name <abbr class="ds-label__required" title="required">*</abbr></label>
-            <input class="ds-text-input" type="text" id="name" placeholder="Your name"/>
-        </div>
-        <div class="ds-form-group">
-            <label class="ds-label" for="email">Email  <abbr class="ds-label__required" title="required">*</abbr></label>
-            <input class="ds-text-input" type="email" id="email" placeholder="example@example.com"/>
-            <small class="ds-hint" id="email-hint">We'll never share your email with anyone else.</small>
-        </div>
-        <div class="ds-form-group">
-            <input type="submit" value="Submit">
-        </div>
-    </form>
+    <p><button class="ds-btn-primary" data-modal-content="uniqueId" data-modal-width="">Open Modal</button></p>
+    <div id="uniqueId" class="ds-modal-content">
+        
+        <h3>Sign up to our newsletter:</h3>
+        <form class="ds-form" id="newsletter" action="">
+            <div class="ds-form-group">
+                <label class="ds-label" for="name">Name <abbr class="ds-label__required" title="required">*</abbr></label>
+                <input class="ds-text-input" type="text" id="name" placeholder="Your name"/>
+            </div>
+            <div class="ds-form-group">
+                <label class="ds-label" for="email">Email  <abbr class="ds-label__required" title="required">*</abbr></label>
+                <input class="ds-text-input" type="email" id="email" placeholder="example@example.com"/>
+                <small class="ds-hint" id="email-hint">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="ds-form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
 
-    <script>
-        $(document).ready(function(){
-            $('#newsletter')
-        });
-    </script>
+    </div>
 
 </div>

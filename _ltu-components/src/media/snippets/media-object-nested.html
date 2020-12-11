@@ -1,33 +1,33 @@
 ---
-title: "Media object - nested"
-text: Media objects can be nested.
 status: ready
 
-# Example content
-heading: Heading
-para: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-img: https://via.placeholder.com/100
+
+title: "Media object - nested"
+text: Media objects can be nested.
 ---
+<div class="ds-block">
 
-<div class="ds-media-item">
-    <header class="ds-media-item__header">
-        <img class="ds-media-item__img" src="{{ page.img }}" alt="">
-    </header>
+    <div class="ds-media-item">
+        <header class="ds-media-item__header">
+            <img class="ds-media-item__img" src="https://via.placeholder.com/100" alt="">
+        </header>
 
-    <div class="ds-media-item__body">
-        <h3><a href="#">{{ page.heading }}</a></h3>
-        <p>{{ page.para }}</p>
+        <div class="ds-media-item__body">
+            <h3><a href="#">Heading</a></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-        <div class="ds-media-item">
-            <header class="ds-media-item__header">
-                <img class="ds-media-item__img" src="{{ page.img }}" alt="">
-            </header>
-        
-            <div class="ds-media-item__body">
-                <h3><a href="#">{{ page.heading }}</a></h3>
-                <p>{{ page.para }}</p>
+            <div class="ds-media-item">
+                <header class="ds-media-item__header">
+                    <img class="ds-media-item__img" src="https://via.placeholder.com/100" alt="">
+                </header>
+            
+                <div class="ds-media-item__body">
+                    <h3><a href="#">Heading</a></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
             </div>
-        </div>
 
+        </div>
     </div>
+
 </div>
