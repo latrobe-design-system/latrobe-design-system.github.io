@@ -1,9 +1,8 @@
 ---
-title: "Hero banner  - sample 2"
-text: "This is a hero banner for landing pages"
 status: "ready"
 
-type: block
+title: "Hero banner  - sample 2"
+text: "This is a hero banner for landing pages"
 ---
 <div class="ds-block ds-block--full-width">
 
@@ -11,6 +10,19 @@ type: block
         <div class="ds-hero__content">
             <div class="ds-hero__image">
                 <img src="/ltu-components/src/banner/snippets/images/disc-business.jpg"  alt="">
+
+                <!-- 
+                    NOTE: Where possible You should use the image srcset attribute to provide for responsive images.
+
+                    For La Trobe squiz matrix use this:
+
+                    <img src="{ full size (2056) image URL }" alt="" width="2560" height="1707"
+                    srcset="{ 480 wide variety URL } 480w,
+                    { 720 wide variety URL } 720w,
+                    { 1024 wide variety URL } 1024w,
+                    { 1280 wide variety URL } 1280w,
+                    { full size (2056) image URL } 2560w" sizes="100vw">
+                -->
             </div>
             <div class="ds-hero__text">
                 <h1>Business and commerce</h1>

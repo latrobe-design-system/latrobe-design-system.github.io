@@ -121,12 +121,14 @@ p.ds-lead {
 
 p.ds-small,
 p.ds-footnote,
-small {
+small,
+p span.ds-small {
     font-size: 0.8rem;
 }
 
 p.ds-small,
-p.ds-footnote {
+p.ds-footnote,
+p span.ds-small {
     line-height: 1.5rem;
 }
 

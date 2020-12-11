@@ -1,52 +1,58 @@
 ---
+# THIS IS NOT NEEDED
+
+status: planned
+
 title: "Tabs boxed"
-status: draft
-
-type: block
+text:
 ---
-<div class="ds-tabs ds-tabs--boxed">
-    <div class="ds-tabs-nav" role="tablist">
-        <button class="ds-tabs-nav__tab" role="tab"
-            aria-selected="true"
-            aria-controls="tab1"
-            id="tab1trigger">Tab 1</button>
+<div class="ds-block">
 
-        <button class="ds-tabs-nav__tab" role="tab"
-            aria-selected="false"
-            aria-controls="tab2"
-            id="tab2trigger"
-            tabindex="-1">Tab 2</button>
+    <div class="ds-tabs ds-tabs--boxed">
+        <div class="ds-tabs-nav" role="tablist">
+            <button class="ds-tabs-nav__tab" role="tab"
+                aria-selected="true"
+                aria-controls="tab1"
+                id="tab1trigger">Tab 1</button>
 
-        <button class="ds-tabs-nav__tab" role="tab"
-            aria-selected="false"
-            aria-controls="tab3"
-            id="tab3trigger"
-            tabindex="-1">Tab 3</button>
+            <button class="ds-tabs-nav__tab" role="tab"
+                aria-selected="false"
+                aria-controls="tab2"
+                id="tab2trigger"
+                tabindex="-1">Tab 2</button>
+
+            <button class="ds-tabs-nav__tab" role="tab"
+                aria-selected="false"
+                aria-controls="tab3"
+                id="tab3trigger"
+                tabindex="-1">Tab 3</button>
+        </div>
+
+        <div class="ds-tabs-content">
+            <div id="tab1" class="ds-tab-content__body" role="tabpanel" aria-labelledby="tab1trigger">
+                <h2>First</h2>
+
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate laboriosam libero quis maiores hic explicabo distinctio nesciunt alias! Distinctio ratione eligendi delectus natus accusamus iste laborum omnis qui eius quas.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate laboriosam libero quis maiores hic explicabo distinctio nesciunt alias! Distinctio ratione eligendi delectus natus accusamus iste laborum omnis qui eius quas.</p>
+            </div>
+
+            <div id="tab2" class="ds-tab-content__body" role="tabpanel" aria-labelledby="tab2trigger" hidden>
+                <h2>Second</h2>
+
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate laboriosam libero quis maiores hic explicabo distinctio nesciunt alias! Distinctio ratione eligendi delectus natus accusamus iste laborum omnis qui eius quas.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate laboriosam libero quis maiores hic explicabo distinctio nesciunt alias! Distinctio ratione eligendi delectus natus accusamus iste laborum omnis qui eius quas.</p>
+            </div>
+
+            <div id="tab3" class="ds-tab-content__body" role="tabpanel" aria-labelledby="tab3trigger" hidden>
+                <h2>Third</h2>
+
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate laboriosam libero quis maiores hic explicabo distinctio nesciunt alias! Distinctio ratione eligendi delectus natus accusamus iste laborum omnis qui eius quas.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate laboriosam libero quis maiores hic explicabo distinctio nesciunt alias! Distinctio ratione eligendi delectus natus accusamus iste laborum omnis qui eius quas.</p>
+            </div>
+        </div>
     </div>
 
-    <div class="ds-tabs-content">
-        <div id="tab1" class="ds-tab-content__body" role="tabpanel" aria-labelledby="tab1trigger">
-            <h2>First</h2>
-
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate laboriosam libero quis maiores hic explicabo distinctio nesciunt alias! Distinctio ratione eligendi delectus natus accusamus iste laborum omnis qui eius quas.</p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate laboriosam libero quis maiores hic explicabo distinctio nesciunt alias! Distinctio ratione eligendi delectus natus accusamus iste laborum omnis qui eius quas.</p>
-        </div>
-
-        <div id="tab2" class="ds-tab-content__body" role="tabpanel" aria-labelledby="tab2trigger" hidden>
-            <h2>Second</h2>
-
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate laboriosam libero quis maiores hic explicabo distinctio nesciunt alias! Distinctio ratione eligendi delectus natus accusamus iste laborum omnis qui eius quas.</p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate laboriosam libero quis maiores hic explicabo distinctio nesciunt alias! Distinctio ratione eligendi delectus natus accusamus iste laborum omnis qui eius quas.</p>
-        </div>
-
-        <div id="tab3" class="ds-tab-content__body" role="tabpanel" aria-labelledby="tab3trigger" hidden>
-            <h2>Third</h2>
-
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate laboriosam libero quis maiores hic explicabo distinctio nesciunt alias! Distinctio ratione eligendi delectus natus accusamus iste laborum omnis qui eius quas.</p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate laboriosam libero quis maiores hic explicabo distinctio nesciunt alias! Distinctio ratione eligendi delectus natus accusamus iste laborum omnis qui eius quas.</p>
-        </div>
-    </div>
 </div>

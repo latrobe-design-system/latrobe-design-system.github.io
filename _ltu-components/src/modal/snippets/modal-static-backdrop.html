@@ -1,30 +1,35 @@
 ---
-title: "Modal - static backdrop"
-status: "draft"
-text: "Static "
----
+status: "ready"
 
-<p><button class="ds-btn-primary" data-modal-content="uniqueId" data-modal-width="" data-static-backdrop="yes">Open Modal</button></p>
-<div id="uniqueId" class="ds-modal-content" >
-    <h3>We would like to know who you are</h3>
-    <div class="ds-column-layout">
-        <div class="ds-column-layout__column">
-            <p>I am a: <br><button class="ds-btn-primary ds-icon-australia-nz ds-icon--before" value="D">Domestic
-                    student</button></p>
-            <div>
-                <p><strong>Domestic student means:</strong></br> La Trobe considers you a ‘domestic’ student if you are
-                    a citizen or permanent resident of Australia; a citizen of New Zealand; or a permanent humanitarian
-                    visa holder.</p>
+title: "Modal - static backdrop"
+text: '<p>Include attribute <code>data-static-backdrop="yes"</code> if not show close button and stop modal close via overlay click.</p>
+       <p>This is useful for overlays with required user interaction.</p>'
+---
+<div class="ds-block">
+
+    <p><button class="ds-btn-primary" data-modal-content="uniqueId" data-modal-width="" data-static-backdrop="yes">Open Modal</button></p>
+    <div id="uniqueId" class="ds-modal-content" >
+        <h3>We would like to know who you are</h3>
+        <div class="ds-column-layout">
+            <div class="ds-column-layout__column">
+                <p>I am a: <br><button class="ds-btn-primary ds-icon-australia-nz ds-icon--before" value="D">Domestic
+                        student</button></p>
+                <div>
+                    <p><strong>Domestic student means:</strong></br> La Trobe considers you a ‘domestic’ student if you are
+                        a citizen or permanent resident of Australia; a citizen of New Zealand; or a permanent humanitarian
+                        visa holder.</p>
+                </div>
             </div>
-        </div>
-        <div class="ds-column-layout__column">
-            <p>I am an: <br><button class="ds-btn-primary ds-icon-globe ds-icon--before" value="I">International
-                    student</button></p>
-            <div>
-                <p><strong>International student means</strong></br> La Trobe considers you an ‘International’ student
-                    if you are <strong>not</strong> a citizen or a permanent resident of Australia; <strong>not</strong>
-                    a citizen of New Zealand; or <strong>not</strong> a permanent humanitarian visa holder.</p>
+            <div class="ds-column-layout__column">
+                <p>I am an: <br><button class="ds-btn-primary ds-icon-globe ds-icon--before" value="I">International
+                        student</button></p>
+                <div>
+                    <p><strong>International student means</strong></br> La Trobe considers you an ‘International’ student
+                        if you are <strong>not</strong> a citizen or a permanent resident of Australia; <strong>not</strong>
+                        a citizen of New Zealand; or <strong>not</strong> a permanent humanitarian visa holder.</p>
+                </div>
             </div>
         </div>
     </div>
+
 </div>

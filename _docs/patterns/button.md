@@ -44,6 +44,10 @@ To place the icon on the left also include the class `ds-icon-before`
 
 {% include sample-iframe.html snippet="src/button/snippets/light_button.html" bgcolor="#363636" %}
 
+{% include sample-iframe.html snippet="src/button/snippets/button-icon-only.html" %}
+
+{% include sample-iframe.html snippet="src/button/snippets/button-icon-only-mobile.html" %}
+
 ## Form buttons
 
 {% include sample-iframe.html snippet="src/button/snippets/form_button.html" %}

@@ -6,7 +6,7 @@ menu: 1
 
 By default all text is set to wrap at 80 characters to achieve a readable line length. 
 
-Readable line lengths make text a lot more comfortable to read and scan and absorb information. 
+Readable line lengths make text a lot more comfortable to read and scan and thus absorb information more readaly. 
 
 ## Accessibility
 

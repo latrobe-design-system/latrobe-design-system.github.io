@@ -1,42 +1,46 @@
 ---
-title: "Ordered list"
-
 status: "ready"
+
+title: "Ordered list"
+text:
 ---
+<div class="ds-block">
 
-<p>An ordered list:</p>
+    <p>An ordered list:</p>
+    <ol>
+        <li>list item </li>
+        <li>list item
+            <ol>
+                <li>Nested unordered list
+                    <ol>
+                        <li>list item</li>
+                        <li>Nested unordered list
+                            <ol>
+                                <li>list item</li>
+                                <li>list item</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </li>
+        <li>list item
+            <ul>
+                <li>Nested ordered list
+                    <ul>
+                        <li>list item</li>
+                        <li>Nested ordered list
+                            <ul>
+                                <li>list item</li>
+                                <li>list item</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>list item</li>
+    </ul>
 
-<ol>
-    <li>list item </li>
-    <li>list item
-        <ol>
-            <li>Nested unordered list
-                <ol>
-                    <li>list item</li>
-                    <li>Nested unordered list
-                        <ol>
-                            <li>list item</li>
-                            <li>list item</li>
-                        </ol>
-                    </li>
-                </ol>
-            </li>
-        </ol>
-    </li>
-    <li>list item
-        <ul>
-            <li>Nested ordered list
-                <ul>
-                    <li>list item</li>
-                    <li>Nested ordered list
-                        <ul>
-                            <li>list item</li>
-                            <li>list item</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-    <li>list item</li>
-</ul>
+
+</div>
