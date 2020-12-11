@@ -10,6 +10,8 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
     color: #182538; 
     width: 42em;
+    margin-top: 1em;
+    margin-bottom: 0;
 }
 
 
@@ -36,8 +38,14 @@ h5 {
     font-weight: 400;
 }
 
+p {
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+
 p, li {
     width: 42em;
+    
 }
 
 p.intro {
@@ -48,6 +56,13 @@ figure {
     margin: 0;
 }
 
+code {
+    background-color: #f0f3f8;
+    font-size: 16px;
+    padding: 5px;
+    text-shadow: none;
+    color: #182538;
+}
 
 /* override prism styles */
 

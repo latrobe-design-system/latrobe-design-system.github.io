@@ -16,7 +16,7 @@ There are 4 possible maximum widths of content within a block:
 
 | | Max width | Modifier |
 |---|---|---|
-| Default | 1280px | |
+| Default | 1280px |
 | Narrow | 1024px | `ds-block--narrow` |
 | Wide | 1600px | `ds-block--wide` |
 | Full width | 100% | `ds-block--full-width` |

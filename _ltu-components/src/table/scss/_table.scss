@@ -23,6 +23,7 @@ table,
         font-weight: config.$medium;
         padding: config.spunits(4) config.spunits(8);
         text-align: left;
+        border-bottom: 2px solid config.$color-3b;
 
         &.subtle-right {
             font-size: config.$p;
@@ -68,6 +69,10 @@ table,
                 font-size: 0.8em;
             }
         }
+    }
+
+    thead tr {
+        border-top: none;
     }
 
 }
@@ -118,6 +123,7 @@ table,
 
     caption {
         padding: config.spunits(4) config.spunits(2);
+        border-bottom: 1px solid config.$color-3b;
     }
 
     th, td {
@@ -151,6 +157,10 @@ table,
                 padding: config.spunits(2);
             }
         }
+    }
+
+    thead tr {
+        border-top: none;
     }
 }
 
