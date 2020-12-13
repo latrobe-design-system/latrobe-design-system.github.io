@@ -1,4 +1,6 @@
+//dependencies
 @use "config";
+
 .ds-page-intro {
     margin-top: config.spunits(4);
     .ds-page-intro__content {

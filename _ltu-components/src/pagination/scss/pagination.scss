@@ -1,0 +1,52 @@
+//dependencies
+@use "config";
+
+.ds-pagination {
+
+    @include config.overflowXScroll();
+    margin-top: config.spunits(4);
+    display: flex;
+    align-items: center;
+
+    .ds-pagination__link,
+    .ds-pagination__current {
+        padding: config.spunits(2) config.spunits(3);
+        border: 1px solid config.$color-3b;
+        border-right: 0;
+        
+        &:last-child {
+            border-right: 1px solid config.$color-3b;
+        }
+
+        &:first-child {
+            margin-left: config.spunits(1);
+        }
+
+    }
+
+    .ds-pagination__link {
+        background-color: config.$color-3;
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover {
+            background-color: config.$color-3a;
+        }
+
+        &.ds-pagination__link--current {
+            pointer-events: none;
+            color: config.$color-2;
+            text-decoration: none;
+        }
+    }
+
+    .ds-pagination__link--prev,
+    .ds-pagination__link--next {
+        background-color: white;
+    }
+
+}
+
+//modifier
+.ds-pagination--centered {
+    justify-content: center;
+}
