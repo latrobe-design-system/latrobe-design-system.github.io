@@ -1,24 +1,23 @@
 ---
-status: planned
+status: draft
 
 title: "Pagination"
 ---
 <div class="ds-block">
 
-    <!-- this was copied from Latrobe Search results page , pagination class changed to ds-pagination, now CSS styling required -->
-    <p class="fb-page-nav ds-pagination">
-        Page:
-        <span class="fb-current-result-page">1</span>
-        <a href="https://www.latrobe.edu.au/search?collection=Latrobe-search&amp;searchtype=global&amp;query=Law&amp;start_rank=21">2</a>
-        <a href="https://www.latrobe.edu.au/search?collection=Latrobe-search&amp;searchtype=global&amp;query=Law&amp;start_rank=41">3</a>
-        <a href="https://www.latrobe.edu.au/search?collection=Latrobe-search&amp;searchtype=global&amp;query=Law&amp;start_rank=61">4</a>
-        <a href="https://www.latrobe.edu.au/search?collection=Latrobe-search&amp;searchtype=global&amp;query=Law&amp;start_rank=81">5</a>
-        <a href="https://www.latrobe.edu.au/search?collection=Latrobe-search&amp;searchtype=global&amp;query=Law&amp;start_rank=101">6</a>
-        <a href="https://www.latrobe.edu.au/search?collection=Latrobe-search&amp;searchtype=global&amp;query=Law&amp;start_rank=121">7</a>
-        <a href="https://www.latrobe.edu.au/search?collection=Latrobe-search&amp;searchtype=global&amp;query=Law&amp;start_rank=141">8</a>
-        <a href="https://www.latrobe.edu.au/search?collection=Latrobe-search&amp;searchtype=global&amp;query=Law&amp;start_rank=161">9</a>
-        <a href="https://www.latrobe.edu.au/search?collection=Latrobe-search&amp;searchtype=global&amp;query=Law&amp;start_rank=181">10</a>
-        <a href="https://www.latrobe.edu.au/search?collection=Latrobe-search&amp;searchtype=global&amp;query=Law&amp;start_rank=21" rel="next" class="fb-next-result-page fb-page-nav">Next 20</a>
-    </p>
+    <nav class="ds-pagination" aria-label="Pagination Navigation">
+        <a class="ds-pagination__link ds-pagination__link--prev" href="" rel="prev">Prev</a>
+        <a class="ds-pagination__link" href="" aria-label="Goto Page 1">1</a>
+        <a class="ds-pagination__link ds-pagination__link--current" href="" aria-current="true">2</a>
+        <a class="ds-pagination__link" href="" aria-label="Goto page 3">3</a>
+        <a class="ds-pagination__link" href="" aria-label="Goto page 4">4</a>
+        <a class="ds-pagination__link" href="" aria-label="Goto page 5">5</a>
+        <a class="ds-pagination__link" href="" aria-label="Goto page 6">6</a>
+        <a class="ds-pagination__link" href="" aria-label="Goto page 7">7</a>
+        <a class="ds-pagination__link" href="" aria-label="Goto page 8">8</a>
+        <a class="ds-pagination__link" href="" aria-label="Goto page 9">9</a>
+        <a class="ds-pagination__link" href="" aria-label="Goto page 10">10</a>
+        <a class="ds-pagination__link ds-pagination__link--next" href="" rel="next" aria-label="Goto next page">Next</a>
+    </nav>
 
 </div>

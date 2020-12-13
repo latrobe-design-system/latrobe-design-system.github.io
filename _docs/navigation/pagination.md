@@ -1,5 +1,5 @@
 ---
-status: planned
+status: draft
 menu: 4
 
 title: "Pagination"
