@@ -1,13 +1,31 @@
 ---
-title: "Card basic linked"
-
 status: "ready"
-type: block
+
+title: "Card linked"
+text: '<p>Cards are usually linked. Modifier <code>ds-card--linked</code> required. Anchor tag with class <code>ds-card__link</code> and text equal to Cart title or CTA tag line placed inside the card. Cards are NOT wrapped in anchor tag so as to avoid screen readers uncessarily reading out the entire card contents.</p>'
 ---
-<div href="" class="ds-card ds-card--linked">
-    <a href="http://example.org" class="ds-card__link">Human, transferrable skills</a>
-    <div class="ds-card__body">
-        <h3 class="ds-card__heading">Human, transferrable skills</h3>
-        <p>Build the human skills that transfer to any context. Communication. Innovation. Creative thinking. You’ll develop your ability to listen, empathise, think critically and problem solve.</p>
+
+<div class="ds-block">
+
+    <div class="ds-card-set">
+
+        <div href="" class="ds-card ds-card--linked">
+            <a href="http://example.org" class="ds-card__link">Card title</a>
+            <div class="ds-card__body">
+                <h3 class="ds-card__heading">Card title</h3>
+                <p>Additional text relating to the card.</p>
+            </div>
+        </div>
+
+        <div href="" class="ds-card ds-card--linked">
+            <a href="http://example.org" class="ds-card__link">Card title</a>
+            <div class="ds-card__body">
+                <h3 class="ds-card__heading">Card title</h3>
+                <p>Additional text relating to the card.</p>
+                <p><span class="ds-card__link-text">Optional CTA tag line</span></p>
+            </div>
+        </div>
+
     </div>
+
 </div>

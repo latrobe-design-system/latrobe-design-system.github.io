@@ -8,6 +8,7 @@
     //max-width: 620px;
     transition: all 0.3s ease-in-out;
     background: #fff;
+    border: solid 1px config.$color-3b;
 
     margin-top: 1rem;
 }
@@ -62,7 +63,6 @@
 
 /* link type card */
 .ds-card--linked {
-    border: solid 1px config.$color-3b;
     background: white;
     display: block;
     color: config.$color-2;
