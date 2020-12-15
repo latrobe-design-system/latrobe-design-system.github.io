@@ -1,9 +1,10 @@
 ---
-menu: 3
+status: draft
+
+menu: 2
 
 title: Design
-status: planned
-info: Rapidly build beautiful and accessible experiences. The Wedgetail kit contains all resources you need to get started.
+text: How use design for the design system
 ---
 
-TODO: provide Figma or Adobe XD 
+

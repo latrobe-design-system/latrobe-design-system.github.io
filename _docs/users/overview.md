@@ -2,7 +2,7 @@
 status: draft
 menu: 1
 
-title: "Users Overview"
+title: "Overview"
 text: Documentation for the users of the pattern library.
 ---
 
@@ -11,7 +11,7 @@ text: Documentation for the users of the pattern library.
 La Trobe's Squiz matrix CMS is already making use of the Design System - see the dcumentation here: [https://www.latrobe.edu.au/ds/ds-home](https://www.latrobe.edu.au/ds/ds-home)
 
 
-## Other CMS developers, hand coded site dvelopers, or other website products
+## Other CMS developers, hand coded site developers, or other website products
 
 If you want to use the DS patterns in another CMS or site:
 
