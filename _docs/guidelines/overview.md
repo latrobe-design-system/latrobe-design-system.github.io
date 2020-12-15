@@ -1,18 +1,29 @@
 ---
+status: draft
 menu: 1
 
-status: planned
-
 title: "Overview"
-info: Wedgetail is La Trobe University's design system for digital products and experiences.
+text: 'We use Wedgetail in our design/development process to design, develop and test new and updated UI components. This design system also acts as the specification for CMS integrators and developers.'
 ---
 
-Wedgetail
+- [Why do we need a design system?](#why)
+- [Three Guiding Principles](#principles)
+- [Standardss](#global-accessibility-standards)
 
-We use Wedgetail in our design/development process to design, develop and test new and updated UI components.
-This design system also acts as the specification for CMS integrators and developers.
+## Why do we need a design system? <a name="why"></a>
 
-## Three Guiding Principles
+Learn more about the benefits of design systems:
+* https://www.designbetter.co/design-systems-handbook/introducing-design-systems
+* https://www.invisionapp.com/inside-design/guide-to-design-systems/
+
+See and learn from other design sytems:
+* [Australian Governement Design System](https://designsystem.gov.au/)
+* [AXA Digital Guidelines & Design System](https://www.digital.nsw.gov.au)
+* [Audi](https://www.audi.com/ci/en/guides/user-interface/introduction.html)
+* [and more](https://designsystemsrepo.com/design-systems)
+
+
+## Three Guiding Principles  <a name="principles"></a>
 
 ### 1. Simple Build
 
@@ -26,62 +37,40 @@ Using a design system ensures patterns adapt correctly to meet user needs, offer
 
 Design, develop, test, review, and repurpose patterns, code, and design. That results in a comprehensive collection of tried-and-tested assets that reflect industry best practices.
 
+## Standards <a name="standards"></a>
 
-## Status labels
+### Atomic design
 
-The status scale is a way to indicate the level of robustness of any pattern in this style guide. New patterns should be released into the style guide following these rules, assess each pattern independently.
+We use the [atomic design](https://atomicdesign.bradfrost.com/chapter-2/) approach to create a modular design system.
 
-### Planned
-- The user need has been identified, but the approach to solving the problem has not yet been decided.
-- The team has decided to tackle this UI pattern.
-- Pattern has been listed in the Roadmap.
+### Responsive design
 
-### Draft
-Includes everything from the Planned phase, as well as:
+We use the Responsive Design approach to create a device agnostic solution.
 
-- Pattern is actively being defined. Use at risk, and with caution.
-- Pattern may be generally usable for people with relatively “normal” digital literacy.
-- Pattern is not approved for for use in production.
-- Documentation may/may not be complete.
+### Iterative design
 
-### Ready
-Includes everything in the Planned and Draft phases, as well as:
+We iterate our design to optimise the User experience.
 
-- Pattern works in multiple configurations, and with other patterns in the Style Guide.
-- Pattern is usable, on multiple devices/browsers.
-- Pattern considers people with multiple disabilities (blind, low vision, cognitive disabilities, motor disabilities, low language skills, low digital literacy, etc.).
-- Pattern has been reviewed by internal/external teams.
-- The pattern has passed any heuristic assessments.
-- Documentation is complete.
+### Accessibility
 
-### Retired
-- Pattern is no longer fit for purpose
-- It should be removed from production, and will be removed from the Style Guide in due course.
+The modular approach allows [Accessibility](/guidelines/accessibility.html) to be achieved at the component level.
 
+### Visual design principles
 
-## Getting Started
+#### Vertical and horizontal rhythm
 
-There are many ways to get started with the Wedgetail Design System. It all depends on your project's needs and whether you are a developer or a designer (or somewhere in between).
+Vertical and horizontal rhythm is paramount for good UI design.
 
-There are three ways to get started with the Design System;
+We achieve this through:
+* Consistent spacing - using the soft grid approach where all spacing is based on 4px (0.25rem in reality)
+* Modular scale for heading hierachy - Major third
 
-1. Visit out Wedgetail repo on GitHub and clone to your machine
-2. For designers, visit our download page to use design assets in sketch
-3. For full page templates, download the design system starter kit
+#### Readability
 
-Once you have the components in a website we have advanced guides for developers on how to:
+Readability is also paramount to UI design in particular web site design.
 
-- Customise the colour scheme
-- How to use the font size and space functions
-- Customise existing components
-- Create a new component
-- Set up a development environment
-- Spacing between components
-- The advanced guides assume prior knowledge of npm and SASS.
-
-Throughout the process you may notice issues, missing features or have ideas for new components. If you would like to contribute or help build the future of Wedgetail you can
-
-- Join the community
-- Submit a bug report
-- Submit a feature request
-- Suggest a component
+We achieve this through:
+* Maintaining readable line lengths - https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html
+* Typesetting
+* Predominantly using black text on white background
+* Using whitespace to allow easy focus an scanning of text requiring less cognitive load
