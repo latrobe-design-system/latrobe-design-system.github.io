@@ -89,6 +89,11 @@ defaults:
       parentmenu: form
   -
     scope:
+      path: "_docs/utilities"
+    values:
+      parentmenu: utilities
+  -
+    scope:
       path: "_docs/examples"
     values:
       type: example

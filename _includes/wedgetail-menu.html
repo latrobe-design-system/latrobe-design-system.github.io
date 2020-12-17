@@ -117,6 +117,16 @@
             {%- endfor -%}
         </ul>
 
+        <p class="wedgetail-menu-list__sub-heading">Utilities</p>
+
+        {%- assign x = site.docs | where: 'parentmenu', 'utilities' | sort: 'menu' -%}
+
+        <ul>
+            {%- for pattern in x -%}
+                {%- include wedgetail-menu-item.html -%}
+            {%- endfor -%}
+        </ul>
+
         <p class="wedgetail-menu-list__heading">Example Pages</p>
 
         {%- assign x = site.docs | where: 'parentmenu', 'example' | sort: 'menu' -%}

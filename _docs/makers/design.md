@@ -1,6 +1,5 @@
 ---
 status: draft
-
 menu: 2
 
 title: Design

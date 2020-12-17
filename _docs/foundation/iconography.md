@@ -3,24 +3,12 @@ title: Iconography
 status: draft
 ---
 
-## Designing with icons <a name="designing-with-icons"></a>
+## Utility icons <a name="utility-icons"></a>
 
-### Sizing
+The following set of icons can be added to any text tag using class `ds-icon-[icon name]`. 
 
-Wedgetail components typically use icons on 16px artboards. Icons on 20px, 24px, and 32px artboards can also be used within the UI. Be sure icon size is consistent throughout your product.
+For example `<span class="ds-icon-activity">Text</span>` will display the activity icon to the right of the text. 
 
-### Touch targets
-
-All touch targets for interactive icons need to be 44px or larger. Developers can add padding to a touch target with CSS to meet the 44px requirement.
-
-### Colour
-
-Icons are always a solid, monochromatic color and need to pass the same color contrast ratio as typography (4.5:1). The color of the icon should reflect the importance of the icon’s action which should always be to help guide a user. For more information on color, see the Color guidelines.
-
-### Alignment
-
-When used next to text, icons should be center-aligned.
-
-<a name="utility-icons"></a>
+To display the icon before the text instead add the`ds-icon--before` modifier class: `<span class="ds-icon-activity ds-icon--before">Text</span>`
 
 {% include sample-iframe.html snippet="src/core/snippets/icons/icons.html" iframeonly="yes" %}
