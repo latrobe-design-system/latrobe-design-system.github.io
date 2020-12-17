@@ -30,3 +30,9 @@ _ltu-components folders is where components live.
 dist folder contains the CSS and JS compiled (by gulp) from the CSS and JS in the src folder as well as required static files - starter template, fonts, images.
 
 src directory contains all the component code.
+
+build components here.
+
+Make use  of SCSS variables, mixins and functions to ensure consistency of layout and look and feel.
+
+Vertical spacing is determined by top margins. Make use of spunits function for sizes, padding and margins to achieve 0.25rem grid.
