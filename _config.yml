@@ -49,6 +49,16 @@ defaults:
       parentmenu: guideline
   -
     scope:
+      path: "_docs/users"
+    values:
+      parentmenu: users
+  -
+    scope:
+      path: "_docs/makers"
+    values:
+      parentmenu: makers
+  -
+    scope:
       path: "_docs/foundation"
     values:
       parentmenu: foundation
@@ -77,6 +87,11 @@ defaults:
       path: "_docs/forms"
     values:
       parentmenu: form
+  -
+    scope:
+      path: "_docs/utilities"
+    values:
+      parentmenu: utilities
   -
     scope:
       path: "_docs/examples"

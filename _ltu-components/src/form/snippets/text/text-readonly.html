@@ -1,16 +1,18 @@
 ---
-title: "Read only text input"
 status: "draft"
+
+title: "Read only"
 text: Read only field cannot be edited by the user. Its value can, however, still be changed by JavaScript. Read only input elements in a form will be submitted.
-
-
-# Example content
-label: Name
-id: firstname
-placeholder: Your name
 ---
+<div class="ds-block">
 
-<div class="ds-form-group">
-    <label class="ds-label" for="{{ page.id }}">{{ page.label }}</label>
-    <input class="ds-text-input" type="text" id="{{ page.id }}" placeholder="{{ page.placeholder }}" readonly/>
+    <form class="ds-form">
+
+        <div class="ds-form-group">
+            <label class="ds-label" for="firstname">Name</label>
+            <input class="ds-text-input" type="text" id="firstname" placeholder="Your name"  readonly/>
+        </div>
+
+    </form>
+
 </div>

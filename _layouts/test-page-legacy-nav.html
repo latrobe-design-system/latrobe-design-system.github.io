@@ -17,7 +17,7 @@
 
 <body>
 
-{% if page.showLeftNav == 'yes' %}<script>
+<script>
 var mobileBreakingPoint = 1023;
 
 if(window.outerWidth <= mobileBreakingPoint){
@@ -25,11 +25,11 @@ if(window.outerWidth <= mobileBreakingPoint){
     var b = document.body
     b.className += ' nav-out';
 }
-</script>{% endif %}
+</script>
 
     <!--noindex-->
     <a id="skip" class="ds-btn-primary" href="#content">Skip to content</a>
-    {% if page.showHeader == 'yes' %}{% include legacy-ltu-nav/ltu-header.html %}{% endif %}
+    {% include legacy-ltu-nav/ltu-header.html %}
     <!--end noindex-->
 
     <main id="content">
@@ -65,16 +65,14 @@ if(window.outerWidth <= mobileBreakingPoint){
     </main>
 
     <!--noindex-->
-    {% if page.showFooter == 'yes' %}{% include legacy-ltu-nav/ltu-footer.html %}{% endif %}
+    {% include legacy-ltu-nav/ltu-footer.html %}
     <!--end noindex-->
 
     <!-- DS js -->
     <script src="{{ site.url }}/ltu-components/dist/js/ds-ltu.js?v={{ site.time | date: '%Y%m%d%H%M%S' }}"></script>
 
-    {% if page.showHeader == 'yes' %}
     <!-- include ltu legacy code for nav sample -->
     <script src="{{ site.url }}/ltu-components/dist/js/ltu-legacy.js?v={{ site.time | date: '%Y%m%d%H%M%S' }}"></script>
-    {% endif %}
 
     <!-- include local script if defined in front matter -->
     {% if page.localjs %}<script src="{{ page.localjs }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}"></script>{% endif %}

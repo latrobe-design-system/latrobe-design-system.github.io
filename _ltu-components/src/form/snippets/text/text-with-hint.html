@@ -1,10 +1,19 @@
 ---
-title: "Hint Text"
 status: "draft"
+
+title: "Hint Text"
 ---
 
-<div class="ds-form-group">
-    <label class="ds-label" for="firstname">Name</label>
-    <input class="ds-text-input" type="text" id="firstname" placeholder="Your name" aria-describedby="{{ page.id }}-hint"/>
-    <small class="ds-hint" id="{{ page.id }}-hint">We'll never share your details with anyone else.</small>
+<div class="ds-block">
+
+    <form class="ds-form">
+
+        <div class="ds-form-group">
+            <label class="ds-label" for="firstname">Name</label>
+            <input class="ds-text-input" type="text" id="firstname" placeholder="Your name" aria-describedby="text-hint"/>
+            <small class="ds-hint" id="text-hint">We'll never share your details with anyone else.</small>
+        </div>
+    
+    </form>
+
 </div>

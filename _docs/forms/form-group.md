@@ -6,7 +6,7 @@ menu: 2
 type: example
 ---
 
-Used to group form controls and provide structure and consistent spacing within a form.
+Used to group form labels and controls and provide structure and consistent spacing within a form.
 
 {% include sample-iframe.html snippet="src/form/snippets/form-group.html" %}
 

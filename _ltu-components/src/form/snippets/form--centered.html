@@ -8,15 +8,50 @@ text: 'Use modifier class <code>ds-form--centered</code> to center the form'
 
     <form class="ds-form ds-form--centered">
 
-        {% include sample-component.html snippet="ltu-components/src/form/snippets/text/text.html" %}
+        <div class="ds-form-group">
+            <label class="ds-label" for="firstname">Name <abbr class="ds-label__required" title="required">*</abbr></label>
+            <input class="ds-text-input" type="text" id="firstname" placeholder="Your name" required/>
+        </div>
 
-        {% include sample-component.html snippet="ltu-components/src/form/snippets/email/email.html" %}
+        <div class="ds-form-group">
+            <label class="ds-label" for="email">Email  <abbr class="ds-label__required" title="required">*</abbr></label>
+            <input class="ds-text-input" type="email" id="email" placeholder="example@example.com"/>
+            <small class="ds-hint" id="{{ page.id }}-hint">We'll never share your email with anyone else.</small>
+        </div>
 
-        {% include sample-component.html snippet="ltu-components/src/form/snippets/textarea/textarea.html" %}
+        <div class="ds-form-group">
+            <label class="ds-label" for="uniquieID-textarea">Give us your feedback <abbr class="ds-label__required" title="required">*</abbr></label>
+            <textarea class="ds-textarea" id="uniquieID-textarea" rows="8" placeholder="Your feedback" required></textarea>
+        </div>
 
-        {% include sample-component.html snippet="ltu-components/src/form/snippets/checkbox/checkbox.html" %}
+        <fieldset class="ds-control-group">
 
-        {% include sample-component.html snippet="ltu-components/src/form/snippets/button/input-button.html" %}
+            <div class="ds-form-group">
+                <input class="ds-input-checkbox" type="checkbox" id="uniqueID-1-checkbox">
+                <label class="ds-label" for="uniqueID-1-checkbox">
+                    I agree to the <a href="https://latrobe.edu.au/terms/" target="_blank">terms and conditions</a>
+                </label>
+            </div>
+
+            <div class="ds-form-group">
+                <input class="ds-input-checkbox" type="checkbox" id="uniqueID-2-checkbox"  checked>
+                <label class="ds-label" for="uniqueID-2-checkbox">
+                    I would like to receive updates via email
+                </label>
+            </div>
+            
+        </fieldset>
+
+        <div class="ds-control-group">
+
+            <div class="ds-form-group">
+                <input type="button" value="Button">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+
+        </div>
+        
     </form>
 
 </div>

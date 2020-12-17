@@ -118,7 +118,7 @@ abbr.ds-label__required {
     height: calc(1rem + #{config.spunits(8)} + 4px); 
 }
 
-
+.ds-textarea,
 .ds-text-input {
     &:read-only {
         background-color: config.$color-3a;

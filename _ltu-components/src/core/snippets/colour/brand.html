@@ -1,0 +1,30 @@
+---
+status: "ready"
+
+title: Brand
+colors:
+    - name: La Trobe Red
+      hex: "#e2231b"
+    - name: La Trobe Black
+      hex: "#242424"
+---
+<div class="ds-block">
+
+    <ul class="ds-media-list">
+        {% for item in page.colors %}
+        <li class="ds-media-item">
+            <header class="ds-media-item__header">
+                <div style="width: 100px; height: 100px; background:{% if item.hex %}{{ item.hex }}{% else if item.rgb %}{{ item.rgb }}{% endif %};">
+            </header>
+  
+            <div class="ds-media-item__body">
+                {% if item.name %}<h3>{{ item.name }}</h3>{% endif %}
+                {% if item.hex %}<p>{{ item.hex }}</p>{% endif %}
+                {% if item.rgb %}<p>{{ item.rgb }}</p>{% endif %}
+                {% if item.sass-variable %}<p>sass-variable: {{ item.sass-variable }}</p>{% endif %}
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+  
+  </div>

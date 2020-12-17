@@ -1,7 +1,5 @@
 # Wedgetail Design System
 
-## This design system is under construction
-
 - Prod: https://latrobe-design-system.github.io/
 - Dev: https://latrobe-design-system.netlify.com/
 

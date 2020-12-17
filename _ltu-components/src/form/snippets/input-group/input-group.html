@@ -3,70 +3,75 @@ title: "Input group"
 status: "draft"
 text: 
 ---
-<form class="ds-form">
 
-    <div class="ds-form-group">
-        <label class="ds-label" for="username">Choose username</label>
+<div class="ds-block">
 
-        <div class="ds-input-group">
-            <div class="ds-input-group__prepend">
-                <span class="ds-input-group__text">@</span>
+    <form class="ds-form">
+
+        <div class="ds-form-group">
+            <label class="ds-label" for="username">Choose username</label>
+
+            <div class="ds-input-group">
+                <div class="ds-input-group__prepend">
+                    <span class="ds-input-group__text">@</span>
+                </div>
+                <input class="ds-text-input" type="text" id="username" placeholder="Your username">
             </div>
-            <input class="ds-text-input" type="text" id="username" placeholder="Your username">
+
         </div>
 
-    </div>
+    </form>
 
-</form>
+    <form class="ds-form">
 
-<form class="ds-form">
-
-    <div class="ds-form-group">
-        <label class="ds-label" for="email">La Trobe email address</label>
-        <div class="ds-input-group">
-            <input class="ds-text-input" type="text" id="email" placeholder="Your email address">
-            <div class="ds-input-group__append">
-                <span class="ds-input-group__text">@latrobe.edu.au</span>
-            </div>
-        </div>
-    </div>
-
-</form>
-
-<form class="ds-form">
-
-    <div class="ds-form-group">
-        <label class="ds-label" for="donation">Donation</label>
-        
-        <div class="ds-input-group">
-            <div class="ds-input-group__prepend">
-                <span class="ds-input-group__text">$AUD</span>
-            </div>
-            <input class="ds-text-input" type="number" id="donation" placeholder="Your donation amount">
-            <div class="ds-input-group__append">
-                <span class="ds-input-group__text">.00</span>
+        <div class="ds-form-group">
+            <label class="ds-label" for="email">La Trobe email address</label>
+            <div class="ds-input-group">
+                <input class="ds-text-input" type="text" id="email" placeholder="Your email address">
+                <div class="ds-input-group__append">
+                    <span class="ds-input-group__text">@latrobe.edu.au</span>
+                </div>
             </div>
         </div>
 
-    </div>
+    </form>
 
-</form>
+    <form class="ds-form">
 
-<form class="ds-form">
-
-    <div class="ds-form-group">
-        <label class="ds-label" for="query_courses">Find your course</label>
-        
-        <div class="ds-input-group">
-            <div class="ds-input-group__prepend">
-                <span class="ds-input-group__text ds-input-group__text--bg-white">
-                    <span class="ds-icon-search ds-icon--red"></span>
-                </span>
+        <div class="ds-form-group">
+            <label class="ds-label" for="donation">Donation</label>
+            
+            <div class="ds-input-group">
+                <div class="ds-input-group__prepend">
+                    <span class="ds-input-group__text">$AUD</span>
+                </div>
+                <input class="ds-text-input" type="number" id="donation" placeholder="Your donation amount">
+                <div class="ds-input-group__append">
+                    <span class="ds-input-group__text">.00</span>
+                </div>
             </div>
-            <input class="ds-text-input" type="search" id="query_courses" placeholder="Search for a course by keyword, course &hellip;">
-            <input type="submit" id="course-search-submit" value="Search">
+
         </div>
 
-    </div>
+    </form>
 
-</form>
+    <form class="ds-form">
+
+        <div class="ds-form-group">
+            <label class="ds-label" for="query_courses">Find your course</label>
+            
+            <div class="ds-input-group">
+                <div class="ds-input-group__prepend">
+                    <span class="ds-input-group__text ds-input-group__text--bg-white">
+                        <span class="ds-icon-search ds-icon--red"></span>
+                    </span>
+                </div>
+                <input class="ds-text-input" type="search" id="query_courses" placeholder="Search for a course by keyword, course &hellip;">
+                <input type="submit" id="course-search-submit" value="Search">
+            </div>
+
+        </div>
+
+    </form>
+
+</div>

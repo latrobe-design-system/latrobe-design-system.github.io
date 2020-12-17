@@ -1,0 +1,41 @@
+---
+status: "ready"
+
+title: Greys
+
+colors:
+    - hex: "#fafafa"
+      sass-variable: $color-3
+    - hex: "#eee"
+      sass-variable: $color-3a
+    - hex: "#ccc"
+      sass-variable: $color-3b
+    - hex: "#999"
+      sass-variable: $color-3c
+    - hex: "#6C6C6C"
+      sass-variable: $color-3d
+    - name: Charcoal
+      hex: "#414141"
+      sass-variable: $color-2a
+---
+
+<div class="ds-block">
+
+    <ul class="ds-media-list">
+        {% for item in page.colors %}
+        <li class="ds-media-item">
+            <header class="ds-media-item__header">
+                <div style="width: 100px; height: 100px; background:{% if item.hex %}{{ item.hex }}{% else if item.rgb %}{{ item.rgb }}{% endif %};">
+            </header>
+  
+            <div class="ds-media-item__body">
+                {% if item.name %}<h3>{{ item.name }}</h3>{% endif %}
+                {% if item.hex %}<p>{{ item.hex }}</p>{% endif %}
+                {% if item.rgb %}<p>{{ item.rgb }}</p>{% endif %}
+                {% if item.sass-variable %}<p>sass-variable: {{ item.sass-variable }}</p>{% endif %}
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+  
+  </div>

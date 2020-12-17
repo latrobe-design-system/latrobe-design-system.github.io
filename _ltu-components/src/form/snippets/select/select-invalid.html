@@ -1,22 +1,26 @@
 ---
-title: "Invalid state"
 status: draft
-text: Add a border around select boxes to indicate whether user input is valid or invalid.
 
-# Example content
-label: What option?
-invalid: Please select and option
+title: "Invalid state"
+text: 
 ---
 
-<div class="ds-form-group">
-    <label class="ds-label" for="name">{{ page.label }}</label>
+<div class="ds-block">
 
-    <select class="ds-select ds-select--invalid">
-        <option value="option-1">Option 1</option>
-        <option value="option-2">Option 2</option>
-        <option value="option-3">Option 3</option>
-        <option value="option-4">Option 4</option>
-    </select>
+    <form class="ds-form">
 
-    <small class="ds-hint ds-hint--invalid small-text" id="{{ page.id }}-invalid-text">{{ page.invalid }}</small>
+        <div class="ds-form-group">
+            <label class="ds-label" for="select">What option?</label>
+            <select class="ds-select ds-select--invalid">
+                <option value="option-1">Option 1</option>
+                <option value="option-2">Option 2</option>
+                <option value="option-3">Option 3</option>
+                <option value="option-4">Option 4</option>
+            </select>
+            <small class="ds-hint" id="text-hint">We need this to provide you the best advice.</small>
+            <small class="ds-hint ds-hint--invalid">Invalid message</small>
+        </div>
+
+    </form>
+
 </div>

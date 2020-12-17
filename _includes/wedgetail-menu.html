@@ -35,6 +35,26 @@
             {%- endfor -%}
         </ul>
 
+        <p class="wedgetail-menu-list__heading">Users</p>
+
+        {%- assign x = site.docs | where: 'parentmenu', 'users' | sort: 'menu' -%}
+
+        <ul>
+            {%- for pattern in x -%}
+                {%- include wedgetail-menu-item.html -%}
+            {%- endfor -%}
+        </ul>
+
+        <p class="wedgetail-menu-list__heading">Makers</p>
+
+        {%- assign x = site.docs | where: 'parentmenu', 'makers' | sort: 'menu' -%}
+
+        <ul>
+            {%- for pattern in x -%}
+                {%- include wedgetail-menu-item.html -%}
+            {%- endfor -%}
+        </ul>
+
         <p class="wedgetail-menu-list__heading">Foundation</p>
 
         {%- assign x = site.docs | where: 'parentmenu', 'foundation' | sort: 'menu' -%}
@@ -90,6 +110,16 @@
         <p class="wedgetail-menu-list__sub-heading">Forms</p>
 
         {%- assign x = site.docs | where: 'parentmenu', 'form' | sort: 'menu' -%}
+
+        <ul>
+            {%- for pattern in x -%}
+                {%- include wedgetail-menu-item.html -%}
+            {%- endfor -%}
+        </ul>
+
+        <p class="wedgetail-menu-list__sub-heading">Utilities</p>
+
+        {%- assign x = site.docs | where: 'parentmenu', 'utilities' | sort: 'menu' -%}
 
         <ul>
             {%- for pattern in x -%}

@@ -1,10 +1,19 @@
 ---
-title: "Required"
 status: "draft"
-text: 'Add required attribute to input and &lt;abbr class="ds-label__required" title="required"&gt;*&lt;/abb&gt; tag after label text'
+
+title: "Required"
+text: 'Add required attribute to input and &lt;abbr class="ds-label__required" title="required"&gt;*&lt;/abbr&gt; tag after label text'
 ---
 
-<div class="ds-form-group">
-    <label class="ds-label" for="firstname">Name <abbr class="ds-label__required" title="required">*</abbr></label>
-    <input class="ds-text-input" type="text" id="firstname" placeholder="Your name" required/>
+<div class="ds-block">
+
+    <form class="ds-form">
+
+        <div class="ds-form-group">
+            <label class="ds-label" for="firstname">Name <abbr class="ds-label__required" title="required">*</abbr></label>
+            <input class="ds-text-input" type="text" id="firstname" placeholder="Your name" required/>
+        </div>
+
+    </form>
+
 </div>
