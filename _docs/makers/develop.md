@@ -21,3 +21,12 @@ https://github.com/latrobe-design-system/latrobe-design-system.github.io
 
 ### Run local
 1. In terminal run - npm start
+
+
+## How to use
+
+_ltu-components folders is where components live.
+
+dist folder contains the CSS and JS compiled (by gulp) from the CSS and JS in the src folder as well as required static files - starter template, fonts, images.
+
+src directory contains all the component code.
