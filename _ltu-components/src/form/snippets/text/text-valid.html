@@ -1,19 +1,22 @@
 ---
-title: "Text input valid"
 status: draft
-text: 'Valid state'
 
-# Example content
-id: text
-label: Name
-placeholder: Your name
-hint: We'll never share your details with anyone else.
-valid: Succesfully message
+title: "Text input valid"
+text: 'Valid state'
 ---
 
-<div class="ds-form-group">
-    <label class="ds-label" for="{{ page.id }}">{{ page.label }}</label>
-    <input class="ds-text-input  ds-text-input--valid" type="text" id="{{ page.id }}" placeholder="{{ page.placeholder }}"/>
-    <small class="ds-hint" id="{{ page.id }}-hint">{{ page.hint }}</small>
-    <small class="ds-hint ds-hint--valid" id="{{ page.id }}-valid-text">{{ page.valid }}</small>
+
+<div class="ds-block">
+
+    <form class="ds-form">
+
+        <div class="ds-form-group">
+            <label class="ds-label" for="firstname">Name</label>
+            <input class="ds-text-input ds-text-input--valid" type="text" id="firstname" placeholder="Your name"  aria-describedby="text-hint"/>
+            <small class="ds-hint" id="text-hint">We'll never share your details with anyone else.</small>
+            <small class="ds-hint ds-hint--valid">Succesfully message</small>
+        </div>
+
+    </form>
+
 </div>

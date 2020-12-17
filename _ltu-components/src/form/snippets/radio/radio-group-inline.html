@@ -1,22 +1,31 @@
 ---
-title: "Radio group"
 status: "draft"
+
+title: "Radio group"
 text: "Add <code>ds-control-group--inline</code> modifier class to <code>ds-control-group</code> fieldset for inline radio boxes."
 ---
 
-<fieldset class="ds-control-group ds-control-group--inline">
-    <legend class="ds-legend">
-        Are you hungry:
-    </legend>
+<div class="ds-block">
 
-    <div class="ds-form-group">
-        <input class="ds-input-radio" type="radio" name="brew" id="uniqueID-1" checked>
-        <label class="ds-label" for="uniqueID-1">Yes</label>
-    </div>
+    <form class="ds-form">
 
-    <div class="ds-form-group">
-        <input class="ds-input-radio" type="radio" name="brew" id="uniqueID-2">
-        <label class="ds-label" for="uniqueID-2">No</label>
-    </div>
+        <fieldset class="ds-control-group ds-control-group--inline">
+            <legend class="ds-legend">
+                Are you hungry:
+            </legend>
 
-</fieldset>
+            <div class="ds-form-group">
+                <input class="ds-input-radio" type="radio" name="brew" id="uniqueID-1" checked>
+                <label class="ds-label" for="uniqueID-1">Yes</label>
+            </div>
+
+            <div class="ds-form-group">
+                <input class="ds-input-radio" type="radio" name="brew" id="uniqueID-2">
+                <label class="ds-label" for="uniqueID-2">No</label>
+            </div>
+
+        </fieldset>
+
+    </form>
+
+</div>

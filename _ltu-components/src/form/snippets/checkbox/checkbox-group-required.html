@@ -1,8 +1,8 @@
 ---
 status: "draft"
 
-title: "Valid"
-text: 
+title: "Required"
+text: 'Add &lt;abbr class="ds-label__required" title="required"&gt;*&lt;/abbr&gt; tag after legend text'
 ---
 
 <div class="ds-block">
@@ -11,7 +11,7 @@ text:
 
         <fieldset class="ds-control-group">
             <legend class="ds-legend">
-                What colors do like?
+                What colors do like? <abbr class="ds-label__required" title="required">*</abbr>
             </legend>
             
             <div class="ds-form-group">
@@ -36,9 +36,6 @@ text:
             </div>
 
         </fieldset>
-
-        <small class="ds-hint" id="text-hint">Your color preference is important to us.</small>
-        <small class="ds-hint ds-hint--valid">Succesfully message</small>
 
     </form>
 

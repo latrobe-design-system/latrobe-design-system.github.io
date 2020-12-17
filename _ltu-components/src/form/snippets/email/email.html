@@ -1,17 +1,20 @@
 ---
-title: "Email"
 status: "draft"
-text: "Email inputs use type: email" 
 
-# Example content
-label: Email
-id: email
-placeholder: example@example.com
-hint: We'll never share your email with anyone else.
+title: "Email"
+text: "Email inputs use type: email" 
 ---
 
-<div class="ds-form-group">
-    <label class="ds-label" for="{{ page.id }}">{{ page.label }}  <abbr class="ds-label__required" title="required">*</abbr></label>
-    <input class="ds-text-input" type="email" id="{{ page.id }}" placeholder="{{ page.placeholder }}"/>
-    <small class="ds-hint" id="{{ page.id }}-hint">{{ page.hint }}</small>
+<div class="ds-block">
+
+    <form class="ds-form">
+
+        <div class="ds-form-group">
+            <label class="ds-label" for="email">Email  <abbr class="ds-label__required" title="required">*</abbr></label>
+            <input class="ds-text-input" type="email" id="email" placeholder="example@example.com"/>
+            <small class="ds-hint" id="{{ page.id }}-hint">We'll never share your email with anyone else.</small>
+        </div>
+
+    </form>
+
 </div>

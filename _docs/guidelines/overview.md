@@ -1,5 +1,5 @@
 ---
-status: draft
+status: ready
 menu: 1
 
 title: "Overview"
@@ -13,17 +13,18 @@ text: 'We use Wedgetail in our design/development process to design, develop and
 ## Why do we need a design system? <a name="why"></a>
 
 Learn more about the benefits of design systems:
-* https://www.designbetter.co/design-systems-handbook/introducing-design-systems
-* https://www.invisionapp.com/inside-design/guide-to-design-systems/
+* InVision [Design Systems Handbook](https://www.designbetter.co/design-systems-handbook/introducing-design-systems)
+* Article [A comprehensive guide to design systems](https://www.invisionapp.com/inside-design/guide-to-design-systems/)
+* [Atomic Design](https://atomicdesign.bradfrost.com/table-of-contents/)
 
 See and learn from other design sytems:
 * [Australian Governement Design System](https://designsystem.gov.au/)
-* [AXA Digital Guidelines & Design System](https://www.digital.nsw.gov.au)
+* [digital.nsw](https://www.digital.nsw.gov.au)
 * [Audi](https://www.audi.com/ci/en/guides/user-interface/introduction.html)
 * [and more](https://designsystemsrepo.com/design-systems)
 
 
-## Three Guiding Principles  <a name="principles"></a>
+## Our Guiding Principles  <a name="principles"></a>
 
 ### 1. Simple Build
 
@@ -37,7 +38,7 @@ Using a design system ensures patterns adapt correctly to meet user needs, offer
 
 Design, develop, test, review, and repurpose patterns, code, and design. That results in a comprehensive collection of tried-and-tested assets that reflect industry best practices.
 
-## Standards <a name="standards"></a>
+## Our Standards <a name="standards"></a>
 
 ### Atomic design
 

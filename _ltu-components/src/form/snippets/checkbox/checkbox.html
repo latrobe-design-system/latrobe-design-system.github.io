@@ -5,23 +5,32 @@ title: "Single checkbox"
 text: "
 <p>Single checkboxes are used to confirm a user's selection or preference. For example: to confirm a user agrees to a product's terms and conditions.</p>
 <p>You can Use attribute <code>checked</code> to default to a checked state.</p>
+<p>Even single checkbox form groups should be wrapped in a <code>ds-control-group</code> to maintain form spacing.</p>
 "
 ---
 
 <div class="ds-block">
 
-    <div class="ds-form-group">
-        <input class="ds-input-checkbox" type="checkbox" id="uniqueID-1-checkbox">
-        <label class="ds-label" for="uniqueID-1-checkbox">
-            I agree to the <a href="https://latrobe.edu.au/terms/" target="_blank">terms and conditions</a>
-        </label>
-    </div>
+    <form class="ds-form">
 
-    <div class="ds-form-group">
-        <input class="ds-input-checkbox" type="checkbox" id="uniqueID-2-checkbox"  checked>
-        <label class="ds-label" for="uniqueID-2-checkbox">
-            I would like to receive updates via email
-        </label>
-    </div>
+        <fieldset class="ds-control-group">
+
+            <div class="ds-form-group">
+                <input class="ds-input-checkbox" type="checkbox" id="uniqueID-1-checkbox">
+                <label class="ds-label" for="uniqueID-1-checkbox">
+                    I agree to the <a href="https://latrobe.edu.au/terms/" target="_blank">terms and conditions</a>
+                </label>
+            </div>
+
+            <div class="ds-form-group">
+                <input class="ds-input-checkbox" type="checkbox" id="uniqueID-2-checkbox"  checked>
+                <label class="ds-label" for="uniqueID-2-checkbox">
+                    I would like to receive updates via email
+                </label>
+            </div>
+            
+        </fieldset>
+
+    </form>
 
 </div>
