@@ -244,6 +244,13 @@ function incrimentCourseCount(){
     } else mySavedCourses.classList.remove('hidden');
 };
 
+/***  global.js #815086 ***/
+/* Add Enter key to search toggle */
+var searchButton = document.getElementById('global-search-button');
+
+searchButton.addEventListener('click', function(e) {
+    document.getElementById('LT_search_field').focus();
+});
 
 /*** site-search.js #1174917  ***/
 // Event listener for search clear button
