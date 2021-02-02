@@ -245,8 +245,18 @@ function incrimentCourseCount(){
 };
 
 /***  global.js #815086 ***/
-/* Add Enter key to search toggle */
+
 var searchButton = document.getElementById('global-search-button');
+
+searchButton.addEventListener('keyup', function(e){
+    if (e.key === 'Enter') {
+        if (e.target.checked) {
+            e.target.checked = false;
+        } else {
+            e.target.checked = true;
+            document.getElementById('LT_search_field').focus();
+        }
+    };
 
 searchButton.addEventListener('click', function(e) {
     document.getElementById('LT_search_field').focus();
