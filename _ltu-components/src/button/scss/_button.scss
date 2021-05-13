@@ -364,3 +364,11 @@ input[type="submit"] {
         }
     }
 }
+
+/* round button */
+.ds-btn-ghost {
+    @extend .ds-btn;
+
+    background-color: white;
+    border: solid 2px config.$color-3a;
+}

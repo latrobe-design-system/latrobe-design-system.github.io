@@ -54,6 +54,12 @@
     margin-top: 0;
 }
 
+.ds-card__subheading {
+    color: config.$color-alt-3;
+    font-size: config.$h4;
+    font-weight: bold;
+}
+
 .ds-card__link-text {
     @extend .ds-icon-chevron-right;
     @extend .ds-icon--red;
@@ -219,4 +225,18 @@
     @extend .ds-card__tag;
 
     background: config.$color-alt-3;
+}
+
+
+.ds-card__tag-course {
+    @extend .ds-card__tag;
+
+    background: config.$color-3a;
+    color: config.$color-2;
+    font-weight: bold;
+
+    @media (min-width: 500px) {
+        position: relative;
+        float: right;
+    }
 }
