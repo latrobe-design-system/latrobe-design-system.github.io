@@ -101,13 +101,16 @@
     .ds-filter-group__filter__apply {
 
         @extend .ds-btn-secondary;
-        color: config.$green;;
-        border-color: config.$green;
+        // color: config.$green;
+        // border-color: config.$green;
+        color: white;
+        background-color: config.$green;
+        border-color: transparent;
 
         @media(min-width: 768px) {
-            position: absolute;
-            right: config.spunits(4);
-            top: config.spunits(4);
+            // position: absolute;
+            // right: config.spunits(4);
+            // top: config.spunits(4);
         }
     }
 }

@@ -1,4 +1,32 @@
 $(document).ready(function() {
+    $('#show-course-filters').click(function() {
+        let filterButton = document.querySelector('#show-course-filters');
+        let $location = $('.ds-filter-megamenu');
+        $location.toggle().slide();
+        // $location.hide()
+
+        // let allFilters = document.querySelectorAll('.ds-filter-group__content__tab');
+
+
+        if (filterButton.textContent === 'Hide filters') {
+            filterButton.textContent = "Show filters";
+            // $location.show();
+        } else {
+            filterButton.textContent = "Hide filters";
+        }
+            
+       
+
+        //     // $location.append(allFilters);
+        //     $location.append(allFilters);
+
+        //     allFilters.forEach(function( filterGroup ) {
+        //         console.log(filterGroup)
+        //         filterGroup.hidden = false;
+        //     })
+        // }
+
+    });
 
     // expand control click handler for 
     $('.ds-filter-group__nav__tab').click(function() {

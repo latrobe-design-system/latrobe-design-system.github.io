@@ -18,30 +18,119 @@ localjs: "js/course-search.js"
 
         <fieldset class="ds-control-group  ds-control-group--toggle-tokens ds-control-group--inline">
             <legend class="ds-legend">
-            I am:
+                I am:
             </legend>
-        
+
             <div class="ds-form-group ds-form-group--radio-toggle">
-                <input class="ds-input-radio ds-input-radio--toggle" type="radio" name="student" id="dom-toggle" value="dom" checked>
+                <input class="ds-input-radio ds-input-radio--toggle" type="radio" name="student" id="dom-toggle"
+                    value="dom" checked>
                 <label class="ds-label" for="dom-toggle">a domestic student</label>
             </div>
-        
+
             <div class="ds-form-group ds-form-group--radio-toggle">
-                <input class="ds-input-radio ds-input-radio--toggle" type="radio" name="student" id="int-toggle" value="int">
+                <input class="ds-input-radio ds-input-radio--toggle" type="radio" name="student" id="int-toggle"
+                    value="int">
                 <label class="ds-label" for="int-toggle">an international student</label>
             </div>
-        
+
         </fieldset>
+
+        <div class="ds-block">
+
+            <fieldset class="ds-control-group  ds-control-group--toggle-tokens ds-control-group--inline">
+                <legend class="ds-legend">
+                    Study level:
+                </legend>
+        
+                <div class="ds-form-group">
+                    <input class="ds-input-checkbox ds-input-checkbox--toggle" type="checkbox" id="checkbox-1" checked>
+                    <label class="ds-label" for="checkbox-1">
+                        Undergraduate
+                    </label>
+                </div>
+        
+                <div class="ds-form-group">
+                    <input class="ds-input-checkbox ds-input-checkbox--toggle" type="checkbox" id="checkbox-2">
+                    <label class="ds-label" for="checkbox-2">
+                        Postgraduate
+                    </label>
+                </div>
+        
+                <div class="ds-form-group">
+                    <input class="ds-input-checkbox ds-input-checkbox--toggle" type="checkbox" id="checkbox-3">
+                    <label class="ds-label" for="checkbox-3">
+                        Research
+                    </label>
+                </div>
+        
+                <div class="ds-form-group">
+                    <input class="ds-input-checkbox ds-input-checkbox--toggle" type="checkbox" id="checkbox-4">
+                    <label class="ds-label" for="checkbox-4">
+                        Short courses
+                    </label>
+                </div>
+        
+            </fieldset>
+        
+        </div>
+
+        <!-- <form id="level-filter" class="ds-form ds-filter-group__filter">
+
+            <div class="ds-block">
+
+    <fieldset class="ds-control-group  ds-control-group--toggle-tokens ds-control-group--inline">
+        <legend class="ds-legend">
+            Suggested filters:
+        </legend>
+
+        <div class="ds-form-group">
+            <input class="ds-input-checkbox ds-input-checkbox--toggle" type="checkbox" id="checkbox-1" checked>
+            <label class="ds-label" for="checkbox-1">
+                Undergraduate
+            </label>
+        </div>
+
+        <div class="ds-form-group">
+            <input class="ds-input-checkbox ds-input-checkbox--toggle" type="checkbox" id="checkbox-2">
+            <label class="ds-label" for="checkbox-2">
+                Postgraduate
+            </label>
+        </div>
+
+        <div class="ds-form-group">
+            <input class="ds-input-checkbox ds-input-checkbox--toggle" type="checkbox" id="checkbox-3">
+            <label class="ds-label" for="checkbox-3">
+                Melbourne
+            </label>
+        </div>
+
+        <div class="ds-form-group">
+            <input class="ds-input-checkbox ds-input-checkbox--toggle" type="checkbox" id="checkbox-4">
+            <label class="ds-label" for="checkbox-4">
+                Short courses
+            </label>
+        </div>
+
+    </fieldset>
+
+</div>
+
+            
+
+    </form> -->
 
         <form class="ds-form ds-form--full-width" id="course-search" action="">
             <div class="ds-form-group">
                 <label class="ds-label h2 sr-only" for="query_courses">Find your course</label>
                 <div class="ds-input-group">
                     <div class="ds-input-group__prepend">
-                        <span class="ds-input-group__text ds-input-group__text--bg-white" id="query-tag-container"></span>
+                        <span class="ds-input-group__text ds-input-group__text--bg-white"
+                            id="query-tag-container"></span>
                     </div>
-                    <input class="ds-text-input" type="search" id="query_courses" placeholder="Search for a course by keyword, course &hellip;" autocomplete="off">
-                    <button class="ds-btn-primary ds-icon-search ds-icon--before ds-btn--icon-only-mobile" type="submit" id="course-search-submit">Search</button>
+                    <input class="ds-text-input" type="search" id="query_courses"
+                        placeholder="Search for a course by keyword, course &hellip;" autocomplete="off">
+                    <button class="ds-btn-primary ds-icon-search ds-icon--before ds-btn--icon-only-mobile" type="submit"
+                        id="course-search-submit">Search</button>
                 </div>
             </div>
         </form>
@@ -55,7 +144,7 @@ localjs: "js/course-search.js"
 <div class="ds-block">
 
     <p class="ds--full-width ds--overflowXScroll--mobile">
-        <b>Filtered by:</b> 
+        <b>Filtered by:</b>
         <span id="filter-tags">
             <!-- <button class="ds-tag ds-tag--green" title="remove filter">Health</button> -->
         </span>
@@ -65,12 +154,12 @@ localjs: "js/course-search.js"
         <legend class="ds-legend ">
             Sort by:
         </legend>
-    
+
         <div class="ds-form-group">
             <input class="ds-input-radio" type="radio" name="sort-releveance" id="sort-releveance" checked>
-            <label class="ds-label" for="sort-releveance">Relevence</label>
+            <label class="ds-label" for="sort-releveance">Relevance</label>
         </div>
-    
+
         <div class="ds-form-group">
             <input class="ds-input-radio" type="radio" name="sort-releveance" id="sort-a-z">
             <label class="ds-label" for="sort-a-z">A&VeryThinSpace;-&VeryThinSpace;Z</label>
@@ -80,11 +169,11 @@ localjs: "js/course-search.js"
             <input class="ds-input-radio" type="radio" name="sort-releveance" id="sort-popular">
             <label class="ds-label" for="sort-popular">Popular</label>
         </div>
-    
+
     </fieldset>
 
     <p><b>Number of results:</b> <span id="course-search-results-count">418</span></p>
-    
+
     <div id="course-search-results">
 
         <!-- {% include sample-component.html snippet="ltu-components/src/card/snippets/course-card.html" %} -->
@@ -94,29 +183,22 @@ localjs: "js/course-search.js"
             <div href="http://example.org" class="ds-card">
                 <header class="ds-card__header">
 
-                    <span class="ds-card__tag-course">New course</span>
+                    <span class="ds-card__tag-course">Popular course</span>
                 </header>
-        
+
                 <div class="ds-card__body">
                     <h3 class="ds-card__heading">Bachelor of Business Analytics</h3>
                     <p class="ds-card__subheading">Undergraduate course</p>
 
                     <div class="ds-tabs">
                         <div class="ds-tabs-nav" role="tablist">
-                            <button class="ds-tabs-nav__tab" 
-                                role="tab"
-                                aria-selected="true"
-                                aria-controls="tab1"
+                            <button class="ds-tabs-nav__tab" role="tab" aria-selected="true" aria-controls="tab1"
                                 id="tab1trigger">Melbourne</button>
-                
-                            <button class="ds-tabs-nav__tab" 
-                                role="tab"
-                                aria-selected="false"
-                                aria-controls="tab2"
-                                id="tab2trigger"
-                                tabindex="-1">Sydney</button>
+
+                            <button class="ds-tabs-nav__tab" role="tab" aria-selected="false" aria-controls="tab2"
+                                id="tab2trigger" tabindex="-1">Sydney</button>
                         </div>
-                
+
                         <div class="ds-tabs-content">
                             <div id="tab1" class="ds-tab-content__body" role="tabpanel" aria-labelledby="tab1trigger">
                                 <div class="ds-table-wrapper">
@@ -138,8 +220,9 @@ localjs: "js/course-search.js"
                                     </table>
                                 </div>
                             </div>
-                
-                            <div id="tab2" class="ds-tab-content__body" role="tabpanel" aria-labelledby="tab2trigger" hidden>
+
+                            <div id="tab2" class="ds-tab-content__body" role="tabpanel" aria-labelledby="tab2trigger"
+                                hidden>
                                 <div class="ds-table-wrapper">
                                     <table class="ds-table ds-table--unstyled">
                                         <tbody>
@@ -161,7 +244,7 @@ localjs: "js/course-search.js"
                             </div>
                         </div>
 
-                        <div class="ds-block">                   
+                        <div class="ds-block">
                             <a class="ds-btn-primary ds-icon-chevron-right" href="#">View course</a>
                             <button class="ds-btn ds-icon-heart ds-icon--before">Save and compare</button>
                         </div>
@@ -169,42 +252,31 @@ localjs: "js/course-search.js"
                     </div>
                 </div>
             </div>
-        
-                        <div href="http://example.org" class="ds-card">
+
+            <div href="http://example.org" class="ds-card">
                 <header class="ds-card__header">
 
                     <span class="ds-card__tag-course">New course</span>
                 </header>
-        
+
                 <div class="ds-card__body">
                     <h3 class="ds-card__heading">Bachelor of Arts</h3>
                     <p class="ds-card__subheading">Undergraduate course</p>
 
                     <div class="ds-tabs">
                         <div class="ds-tabs-nav" role="tablist">
-                            <button class="ds-tabs-nav__tab" 
-                                role="tab"
-                                aria-selected="true"
-                                aria-controls="tab4"
-                                id="tab1trigger">Melbourne</button>
-                
-                            <button class="ds-tabs-nav__tab" 
-                                role="tab"
-                                aria-selected="false"
-                                aria-controls="tab5"
-                                id="tab2trigger"
-                                tabindex="-1">Albury-Wodonga</button>
-                
-                            <button class="ds-tabs-nav__tab" 
-                                role="tab"
-                                aria-selected="false"
-                                aria-controls="tab6"
-                                id="tab3trigger"
-                                tabindex="-1">Bendigo</button>
+                            <button class="ds-tabs-nav__tab" role="tab" aria-selected="true" aria-controls="tab3"
+                                id="tab3trigger">Melbourne</button>
+
+                            <button class="ds-tabs-nav__tab" role="tab" aria-selected="false" aria-controls="tab4"
+                                id="tab4trigger" tabindex="-1">Albury-Wodonga</button>
+
+                            <button class="ds-tabs-nav__tab" role="tab" aria-selected="false" aria-controls="tab5"
+                                id="tab5trigger" tabindex="-1">Bendigo</button>
                         </div>
-                
+
                         <div class="ds-tabs-content">
-                            <div id="tab4" class="ds-tab-content__body" role="tabpanel" aria-labelledby="tab1trigger">
+                            <div id="tab3" class="ds-tab-content__body" role="tabpanel" aria-labelledby="tab3trigger">
                                 <div class="ds-table-wrapper">
                                     <table class="ds-table ds-table--unstyled">
                                         <tbody>
@@ -214,7 +286,8 @@ localjs: "js/course-search.js"
                                             </tr>
                                             <tr>
                                                 <th>Start dates:</th>
-                                                <td>Semester 1 (March), Semester 2 (July), Semester 1 (March), Semester 2 (July)</td>
+                                                <td>Semester 1 (March), Semester 2 (July), Semester 1 (March), Semester
+                                                    2 (July)</td>
                                             </tr>
                                             <tr>
                                                 <th>Duration:</th>
@@ -224,8 +297,9 @@ localjs: "js/course-search.js"
                                     </table>
                                 </div>
                             </div>
-                
-                            <div id="tab5" class="ds-tab-content__body" role="tabpanel" aria-labelledby="tab2trigger" hidden>
+
+                            <div id="tab4" class="ds-tab-content__body" role="tabpanel" aria-labelledby="tab4trigger"
+                                hidden>
                                 <div class="ds-table-wrapper">
                                     <table class="ds-table ds-table--unstyled">
                                         <tbody>
@@ -245,8 +319,9 @@ localjs: "js/course-search.js"
                                     </table>
                                 </div>
                             </div>
-                
-                            <div id="tab6" class="ds-tab-content__body" role="tabpanel" aria-labelledby="tab3trigger" hidden>
+
+                            <div id="tab5" class="ds-tab-content__body" role="tabpanel" aria-labelledby="tab5trigger"
+                                hidden>
                                 <div class="ds-table-wrapper">
                                     <table class="ds-table ds-table--unstyled">
                                         <tbody>
@@ -268,7 +343,7 @@ localjs: "js/course-search.js"
                             </div>
                         </div>
 
-                        <div class="ds-block">                   
+                        <div class="ds-block">
                             <a class="ds-btn-primary ds-icon-chevron-right" href="#">View course</a>
                             <button class="ds-btn ds-icon-heart ds-icon--before">Save and compare</button>
                         </div>
@@ -276,7 +351,56 @@ localjs: "js/course-search.js"
                     </div>
                 </div>
             </div>
-        
+
+            <div href="http://example.org" class="ds-card">
+                <header class="ds-card__header">
+
+                    <span class="ds-card__tag-course">Double degree</span>
+                </header>
+
+                <div class="ds-card__body">
+                    <h3 class="ds-card__heading">Master of Cybersecurity (Computer Science)</h3>
+                    <p class="ds-card__subheading">Graduate course</p>
+
+                    <div class="ds-tabs">
+                        <div class="ds-tabs-nav" role="tablist">
+                            <button class="ds-tabs-nav__tab" role="tab" aria-selected="true" aria-controls="tab7"
+                                id="tab7trigger">Melbourne</button>
+                        </div>
+
+                        <div class="ds-tabs-content">
+                            <div id="tab7" class="ds-tab-content__body" role="tabpanel" aria-labelledby="tab7trigger">
+                                <div class="ds-table-wrapper">
+                                    <table class="ds-table ds-table--unstyled">
+                                        <tbody>
+                                            <tr>
+                                                <th>ATAR:</th>
+                                                <td>70.55</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Start dates:</th>
+                                                <td>Any time (2021)</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Duration:</th>
+                                                <td>3 years full-time or part-time equivalent</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="ds-block">
+                            <a class="ds-btn-primary ds-icon-chevron-right" href="#">View course</a>
+                            <button class="ds-btn ds-icon-heart ds-icon--before">Save and compare</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
         </div>
         <!-- <div class="ds-course-card">
             <div class="ds-course-card__header">
