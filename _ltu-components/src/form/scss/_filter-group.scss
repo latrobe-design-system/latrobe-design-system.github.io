@@ -3,6 +3,7 @@
 @use "button/scss/button";
 
 .ds-filter-group__nav {
+    background-color: config.$color-3a;
    /* scroll on mobile when too wide */
    @include config.overflowXScroll();
    //margin-top: ;
@@ -10,6 +11,16 @@
 
 .ds-filter-group__nav__label {
     font-weight: config.$medium;
+
+    &[aria-expanded="true"] {
+        & > span::after {
+            transition: transform 0.3s;
+        }
+
+        & > span::after {
+            transform: rotate(180deg);
+        }
+    }
 }
 
 .ds-filter-group__nav__tab {
@@ -111,6 +122,57 @@
             // position: absolute;
             // right: config.spunits(4);
             // top: config.spunits(4);
+        }
+    }
+}
+
+.ds-filter-megamenu {
+    border: none;
+    box-shadow: config.$shadow-1;
+    padding-right: 0;
+
+    &__filters {
+        max-height: 80vh;
+        overflow: auto;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+    
+        h4 {
+            font-size: config.$h5;
+            margin-bottom: config.spunits(2);
+        }
+        
+        &__section {
+            border-bottom: solid 2px config.$color-3b;
+            padding-bottom: config.spunits(6);
+    
+        }
+        
+        &__section:nth-of-type(5) {
+            border-bottom: solid 3px config.$color-3b;
+            margin-bottom: config.spunits(6);
+        }
+    }
+
+    &__action {
+        background: white;
+        bottom: 0;
+        box-shadow: config.$shadow-2;
+        margin-top: config.spunits(2);
+        position: sticky;
+        z-index: 200;
+    }
+   
+
+    label {
+        // override checkbox colour
+        &::before {   
+            border: solid 2px config.$green;
+        }
+    
+        // override checkmark colour
+        &::after {
+            border-left: 3px solid config.$green;
+            border-bottom: 3px solid config.$green;
         }
     }
 }

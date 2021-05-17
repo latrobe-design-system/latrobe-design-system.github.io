@@ -1,8 +1,8 @@
 $(document).ready(function() {
     $('#show-course-filters').click(function() {
         let filterButton = document.querySelector('#show-course-filters');
-        let $location = $('.ds-filter-megamenu');
-        $location.toggle().slide();
+        var $location = $('.ds-filter-megamenu');
+        // $location.toggle();
         // $location.hide()
 
         // let allFilters = document.querySelectorAll('.ds-filter-group__content__tab');
@@ -10,9 +10,11 @@ $(document).ready(function() {
 
         if (filterButton.textContent === 'Hide filters') {
             filterButton.textContent = "Show filters";
+            $location.slideUp();
             // $location.show();
         } else {
             filterButton.textContent = "Hide filters";
+            $location.slideDown();
         }
             
        
@@ -29,7 +31,7 @@ $(document).ready(function() {
     });
 
     // expand control click handler for 
-    $('.ds-filter-group__nav__tab').click(function() {
+    $('.ds-filter-group__nav__tab, .ds-filter-group__nav__label').click(function() {
 
         var regionId = $(this).attr('aria-controls');
 

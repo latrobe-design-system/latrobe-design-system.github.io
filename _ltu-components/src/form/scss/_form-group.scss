@@ -17,9 +17,11 @@
 }
 
 .ds-form-group--two-layer__content {
-    margin-top: config.spunits(2);
+    // margin-top: config.spunits(2);
+    margin-top: 0;
+    margin-left: config.spunits(4);
     padding: config.spunits(4);
-    border: 1px solid config.$color-3b;
+    // border: 1px solid config.$color-3b;
 }
 
 
