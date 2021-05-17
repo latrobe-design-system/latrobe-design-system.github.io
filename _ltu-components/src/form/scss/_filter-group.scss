@@ -4,9 +4,15 @@
 
 .ds-filter-group__nav {
     background-color: config.$color-3a;
-   /* scroll on mobile when too wide */
-   @include config.overflowXScroll();
-   //margin-top: ;
+    padding-left: config.spunits(2);
+
+    /* scroll on mobile when too wide */
+    @include config.overflowXScroll();
+    //margin-top: ;
+
+    @media(min-width: 768px) {
+        margin-right: config.spunits(30);
+    }
 }
 
 .ds-filter-group__nav__label {
@@ -129,11 +135,12 @@
 .ds-filter-megamenu {
     border: none;
     box-shadow: config.$shadow-1;
-    padding-right: 0;
+    // padding-right: 0;
 
     &__filters {
         max-height: 80vh;
-        overflow: auto;
+        overflow-y: auto;
+        overflow-x: hidden;
         -ms-overflow-style: -ms-autohiding-scrollbar;
     
         h4 {
@@ -158,8 +165,8 @@
         bottom: 0;
         box-shadow: config.$shadow-2;
         margin-top: config.spunits(2);
+        padding: config.spunits(2);
         position: sticky;
-        z-index: 200;
     }
    
 

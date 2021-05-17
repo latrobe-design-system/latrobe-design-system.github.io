@@ -365,10 +365,19 @@ input[type="submit"] {
     }
 }
 
-/* round button */
-.ds-btn-ghost {
-    @extend .ds-btn;
-
+/* ghost button modifier */
+.ds-btn--ghost {
     background-color: white;
-    border: solid 2px config.$color-3a;
+    border: solid 2px config.$color-3c;
+}
+
+.ds-btn--ghost__active {
+    background-color: white;
+    border: solid 2px config.$green;
+    color: config.$green;
+
+    &[class*="icon-"]::after,
+    &[class*="ds-icon-"].ds-icon--before::before {
+        filter: config.$filter-green;
+    }
 }

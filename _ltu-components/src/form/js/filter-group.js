@@ -10,10 +10,14 @@ $(document).ready(function() {
 
         if (filterButton.textContent === 'Hide filters') {
             filterButton.textContent = "Show filters";
+            filterButton.classList.add('ds-btn--ghost');
+            filterButton.classList.remove('ds-btn--ghost__active');
             $location.slideUp();
             // $location.show();
         } else {
             filterButton.textContent = "Hide filters";
+            filterButton.classList.add('ds-btn--ghost__active');
+            filterButton.classList.remove('ds-btn--ghost');
             $location.slideDown();
         }
             
