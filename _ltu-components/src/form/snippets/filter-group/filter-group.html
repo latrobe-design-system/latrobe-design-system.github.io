@@ -94,8 +94,8 @@ disciplines:
             </div>
             
             <div class="ds-filter-megamenu ds-filter-group__content__tab" style="display: none;">
-                <div class="ds-filter-megamenu__filters"  >
-                    <div class="ds-filter-megamenu__section">
+                <div class="ds-filter-megamenu__filters">
+                    <div id="discipline-filter" class="ds-filter-group__filter">
                     <h4>Discipline</h4>
                     <div class="ds-form-group">
                         <input class="ds-input-checkbox" type="checkbox" id="discipline-all" data-all-control="discipline-all" checked>
@@ -127,7 +127,7 @@ disciplines:
                     {% endfor %}
                 </div>
             
-                <div class="ds-filter-megamenu__section">
+                <div id="location-filter" class="ds-filter-megamenu__section">
                     <h4>Location</h4>
                     <div class="ds-columns ds-columns--three-col">
             
@@ -178,7 +178,7 @@ disciplines:
             
                     </div>
             </div>
-            <div class="ds-filter-megamenu__section">
+            <div id="study-filter" class="ds-filter-megamenu__section">
                     <h4>Study mode</h4>
                         <div class="ds-form-group">
                             <input class="ds-input-checkbox" type="checkbox" id="mode-all" data-all-control="mode-all" checked>
@@ -195,21 +195,21 @@ disciplines:
                             <label class="ds-label" for="mode-online">Online</label>
                         </div>
             </div>
-            <div class="ds-filter-megamenu__section">
+            <div id="double-degree-filter" class="ds-filter-megamenu__section">
                     <h4>Double degree</h4>
                         <div class="ds-form-group">
-                            <input class="ds-input-checkbox" type="checkbox" id="degree-all" data-all-control="degree-all" checked>
-                            <label class="ds-label" for="degree-all">All</label>
+                            <input class="ds-input-checkbox" type="checkbox" id="double-degree-all" data-all-control="double-degree-all" checked>
+                            <label class="ds-label" for="double-degree-all">All</label>
                         </div>
                         
                         <div class="ds-form-group">
-                            <input class="ds-input-checkbox" type="checkbox" id="degree-on-campus" data-all-parent="degree-all">
-                            <label class="ds-label" for="degree-on-campus">On campus</label>
+                            <input class="ds-input-checkbox" type="checkbox" id="degree-single" data-all-parent="double-degree-all">
+                            <label class="ds-label" for="degree-single">Single degree </label>
                         </div>
             
                         <div class="ds-form-group">
-                            <input class="ds-input-checkbox" type="checkbox" id="degree-online" data-all-parent="degree-all">
-                            <label class="ds-label" for="degree-online">Online</label>
+                            <input class="ds-input-checkbox" type="checkbox" id="degree-double" data-all-parent="double-degree-all">
+                            <label class="ds-label" for="degree-double">Double degree</label>
                         </div>
                         </div>
                         <div class="ds-filter-megamenu__section">     
@@ -222,7 +222,7 @@ disciplines:
                                         <label class="ds-label"  for="atar">Max ATAR:</label> 
                                         <input class="ds-text-input ds-input--inline" id="atar" type="number" min="50" max="99.95" step="0.05" value="99.95">
                                         <!-- <input type="reset" class="ds-btn" id="atar-value-clear" value="Reset"> -->
-                                        <input type="button" class="ds-btn" id="atar-value-enter" value="Enter(?)">
+                                        <input type="button" class="ds-btn ds-filter-group__filter__apply" id="atar-value-enter" value="Enter">
                                     </div>
                 
                                 </form>   
@@ -243,8 +243,8 @@ disciplines:
             
                         </div>
                         <div class="ds-filter-megamenu__action">
-                            <button class="ds-filter-group__filter__apply">Apply filter</button>
-                            <button class="ds-btn">Reset</button>
+                            <button id="apply_filters" class="ds-filter-group__filter__apply">Apply filter</button>
+                            <button class="ds-btn ds-filter-group__filter__clear">Clear filter</button>
                 </div>
             
 
@@ -413,7 +413,7 @@ disciplines:
                 </div>
 
                 <!-- filter 5 content -->
-                <div id="filter-5" class="ds-filter-group__content__tab" role="region" aria-labelledby="filter-5-trigger" hidden>
+                <!-- <div id="filter-5" class="ds-filter-group__content__tab" role="region" aria-labelledby="filter-5-trigger" hidden>
                     
                     <form id="ATAR-filter" class="ds-form ds-filter-group__filter">
                         <div class="ds-form-group ds-form-group--inline">
@@ -436,10 +436,33 @@ disciplines:
                         </div>
                     </form>
 
-                </div>
+                </div> -->
 
             </div>
                 </div>
             </div>
 
+            <div id="discipline-filter-tags" class="ds-block">
+                    <strong>Disciplines</strong>
+
+                    <button class="ds-tag ds-tag--green" title="remove filter">Arts, social sciences and communications</button>
+                    
+                    <button class="ds-tag ds-tag--green" title="remove filter">Business and commerce</button>
+                    
+                    <button class="ds-tag ds-tag--green" title="remove filter">A really long course</button>
+            </div>
+            <div id="location-filter-tags" class="ds-block">
+                <strong>Location</strong>
+
+                <button class="ds-tag ds-tag--green" title="remove filter">Melbourne</button>
+                
+                <button class="ds-tag ds-tag--green" title="remove filter">Albury-Wodonga</button>
+            </div>
+
+            <div id="ATAR-filter-tag" class="ds-block">
+                <strong>ATAR</strong>
+
+                <button class="ds-tag ds-tag--green" title="remove filter">60.50</button>
+            </div>
+        </div>
 </div>

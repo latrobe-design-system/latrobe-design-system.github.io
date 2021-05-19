@@ -369,15 +369,17 @@ input[type="submit"] {
 .ds-btn--ghost {
     background-color: white;
     border: solid 2px config.$color-3c;
-}
+    margin: config.spunits(2);
 
-.ds-btn--ghost__active {
-    background-color: white;
-    border: solid 2px config.$green;
-    color: config.$green;
+    &__active {
+        @extend .ds-btn--ghost;
+        background-color: white;
+        border: solid 2px config.$green;
+        color: config.$green;
 
-    &[class*="icon-"]::after,
-    &[class*="ds-icon-"].ds-icon--before::before {
-        filter: config.$filter-green;
+        &[class*="icon-"]::after,
+        &[class*="ds-icon-"].ds-icon--before::before {
+            filter: config.$filter-green;
+        }
     }
 }

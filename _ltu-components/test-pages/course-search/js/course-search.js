@@ -60,26 +60,25 @@ $(document).ready(function() {
     });
 
     */
-    
-    
-    $('.ds-filter-group__filter').each(function(){
-        $('#filter-tags').append('<span id="'+$(this).attr('id')+'-tags"></span>');
-    });
+
     
     /* 
      * reset tags
      * this function is to refershes the filter tag list after filter change
      */
     function resetTags(){
-        
         var filterTagsWrapper;
         var filterTags = '';
         
-        $('#filter-tags span').empty();
+        $('#discipline-filter-tags button').remove();
+        $('#location-filter-tags button').remove();
+        $('#ATAR-filter-tag button').remove();
+        // $('#filter-tags button').remove();
         // add tags for checkboxes
         $('.ds-filter-group__filter:not(#ATAR-filter)').each(function(){
             var filterName = $(this).attr('id');
             filterTagsWrapperId = filterName+'-tags';
+
             $(this).find('.ds-input-checkbox').each(function(){
                 
                 // check not top level all control by checking that it doesn't have attr data-all-parent 
@@ -89,9 +88,27 @@ $(document).ready(function() {
                     if ($(this).prop("checked") == true) {
                         var thisID = $(this).attr('id');
                         var thisVal = $(this).val();
-                        var label = $('label[for='+thisID+']').text();
+                        var label = $('label[for='+thisID+']').first().text();
+
                         filterTag = '<button class="ds-tag ds-tag--green" title="remove filter" data-filter-id="'+thisID+'" data-filter-value="'+thisVal+'">'+label+'</button>\n';
+
                         $('#'+filterTagsWrapperId).append(filterTag);
+                         switch ( $(this).attr('id') ) {
+                            case 'discipline-filter':
+                                $('#discipline-filter-tags').append('<span id="'+$(this).attr('id')+'-tags"></span>');
+                                break;
+                            case 'location-filter':
+                                $('#location-filter-tags').append('<span id="'+$(this).attr('id')+'-tags"></span>');
+                                break;
+                            case 'mode-filter':
+                                $('#mode-filter-tags').append('<span id="'+$(this).attr('id')+'-tags"></span>');
+                                break;
+                            // case 'double-degree-filter':
+                            //     break;
+                            case 'ATAR-filter':
+                                $('#ATAR-filter-tag').append('<span id="'+$(this).attr('id')+'-tags"></span>');    
+                                break;
+                        }
                     }
                 }
             });
@@ -140,19 +157,23 @@ $(document).ready(function() {
         else {
             $('#filter-tags .ds-tag').each(function(){
                 var filterTagWrapperId = $(this).parent().attr('id');
-
+                console.log('a', filterTagWrapperId)
                 switch (filterTagWrapperId) {
-                    case 'level-filter-tags':
-                        filterAttribute = 'data-filter-level';
-                        break;
+                    // case 'level-filter-tags':
+                    //     filterAttribute = 'data-filter-level';
+                    //     $('#level-filter').addClass('ds-filter-group__nav__tab--selected');
+                    //     break;
                     case 'discipline-filter-tags':
                         filterAttribute = 'data-filter-discipline';
+                        $('#filter-2-trigger').addClass('ds-filter-group__nav__tab--selected');
                         break;
-                    case 'campus-filter-tags':
-                        filterAttribute = 'data-filter-campus';
+                    case 'location-filter-tags':
+                        filterAttribute = 'data-filter-location';
+                        $('#filter-3-trigger').addClass('ds-filter-group__nav__tab--selected');
                         break;
                     case 'mode-filter-tags':
                         filterAttribute = 'data-filter-mode';
+                        $('#filter-4-trigger').addClass('ds-filter-group__nav__tab--selected');
                         break;
                     case 'ATAR-filter-tags':
                         filterAttribute = 'data-filter-atar';
@@ -185,7 +206,7 @@ $(document).ready(function() {
     $('.ds-input-checkbox[data-all-control]').on('change', function(){
 
         // disable all filter tabs (until apply button clicked)
-        $('.ds-filter-group__nav__tab').attr('disabled', 'disabled');
+        // $('.ds-filter-group__nav__tab').attr('disabled', 'disabled');
 
         if($(this).prop("checked") == true) {
             // check all control
@@ -207,9 +228,8 @@ $(document).ready(function() {
 
     // handler for checkbox filter change
     $('.ds-input-checkbox[data-all-parent]').on('change', function(){
-
         // disable all filter tabs (until apply button clicked)
-        $('.ds-filter-group__nav__tab').attr('disabled', 'disabled');
+        // $('.ds-filter-group__nav__tab').attr('disabled', 'disabled');
 
         var allParentName = $(this).attr('data-all-parent');
 
@@ -251,50 +271,82 @@ $(document).ready(function() {
         
     });
 
-    
     // handler for check box filter
-    $('#level-filter, #discipline-filter, #location-filter, #mode-filter').on('submit', function(event){
-        
+    $('#apply_filters').on('click', function(event){
         event.preventDefault();
-        
-        var filterTriggerButtonId = $(this).closest('.ds-filter-group__content__tab').attr('aria-labelledby'); // get tab button id
+
+        // check that it's not select all  
+        if ( $('#discipline-filter input:checked' ).length > 0 && !$('#discipline-filter').find('[data-all-control]').prop("checked")) {
+            $('#filter-2-trigger').addClass('ds-filter-group__nav__tab--selected');
+        } else {
+            $('#filter-2-trigger').removeClass('ds-filter-group__nav__tab--selected'); 
+        }
+        if ( $('#location-filter  input:checked' ).length > 0 && !$('#location-filter').find('[data-all-control]').prop("checked")) {
+            $('#filter-3-trigger').addClass('ds-filter-group__nav__tab--selected');
+        } else {
+            $('#filter-3-trigger').removeClass('ds-filter-group__nav__tab--selected'); 
+        }
+        if ( $('#study-filter input:checked' ).length > 0 && !$('#study-filter').find('[data-all-control]').prop("checked")) {
+            $('#filter-4-trigger').addClass('ds-filter-group__nav__tab--selected');
+        } else {
+            $('#filter-4-trigger').removeClass('ds-filter-group__nav__tab--selected'); 
+        }
+      
+        // var filterTriggerButtonId = $(this).closest('.ds-filter-group__content__tab').attr('aria-labelledby'); // get tab button id
         
         // if the all checkbox is selected
-        if ($(this).find('[data-all-control]').prop("checked") == true) {
-            // remove selected class from filter drop down button 
-            $('#'+filterTriggerButtonId).removeClass('ds-filter-group__nav__tab--selected');
-        } else {
-            // add selected class to filter drop down button
-            $('#'+filterTriggerButtonId).addClass('ds-filter-group__nav__tab--selected');
-        }
+        // if ($(this).find('[data-all-control]').prop("checked") == true) {
+        //     // remove selected class from filter drop down button 
+        //     $('#'+filterTriggerButtonId).removeClass('ds-filter-group__nav__tab--selected');
+        // } else {
+        //     // add selected class to filter drop down button
+        //     $('#'+filterTriggerButtonId).addClass('ds-filter-group__nav__tab--selected');
+        // }
 
-        // enable filter tabs
-        $('.ds-filter-group__nav__tab').removeAttr('disabled');
+        // // enable filter tabs
+        // $('.ds-filter-group__nav__tab').removeAttr('disabled');
 
-        // close filter
-        if($('#'+filterTriggerButtonId).attr('aria-expanded') == "true") {
-            $('#'+filterTriggerButtonId).trigger('click');
-        }
+        // // close filter
+        // if($('#'+filterTriggerButtonId).attr('aria-expanded') == "true") {
+        //     $('#'+filterTriggerButtonId).trigger('click');
+        // }
+
+        // TODO: close megamenu filter, set aria expanded
         
         // reset filter taglist
         resetTags();
         
+    });
+
+    $('.ds-filter-group__filter__clear').on('click', function() {
+        console.log('clear filter')
+        // TODO: clear all checkboxes/ATAR in filter menu
+        $('[data-all-control]').each( function() {
+            $(this).prop("checked", true);
+        })
+
+        $('[data-all-parent]').each( function() {
+            if ( $(this).prop("checked") )
+                $(this).trigger('click');
+        });
+
+        resetTags();
     });
     
     // handler for ATAR filter change
     $('#atar').on('change', function(){
 
         // disable all filter tabs (until apply button clicked)
-        $('.ds-filter-group__nav__tab').attr('disabled', 'disabled');
+        // $('.ds-filter-group__nav__tab').attr('disabled', 'disabled');
 
     });
     
     // handler for ATAR filter
-    $('#ATAR-filter').on('submit', function(event){
-        
+    $('#ATAR-filter, #atar-value-enter').on('click submit', function(event){
         event.preventDefault();
         
         var filterTriggerButtonId = $(this).closest('.ds-filter-group__content__tab').attr('aria-labelledby'); // get tab button id
+
         atarValue = $('#atar').val(); // get set atarValue filter value
 
 
@@ -324,6 +376,7 @@ $(document).ready(function() {
     //handle tag click
     $('#filter-tags').on('click', '.ds-tag', function(){
         // get correspoding filter id from button attribute data-filter-id
+
         var filterId = $(this).attr('data-filter-id');
 
         if ($(this).attr('data-filter-id') != 'atar') { // if checkbox filter
@@ -341,6 +394,10 @@ $(document).ready(function() {
 
     });
 
+    $('#discipline-filter-tags, #location-filter-tags, #ATAR-filter-tag').on('click', '.ds-tag', function() {
+        $(this).remove();
+        // get the ID
+    });
 
     // handler for course search
     $('#course-search').on('submit', function(event){
