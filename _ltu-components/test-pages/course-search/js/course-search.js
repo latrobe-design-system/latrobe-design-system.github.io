@@ -79,6 +79,8 @@ $(document).ready(function() {
             var filterName = $(this).attr('id');
             filterTagsWrapperId = filterName+'-tags';
 
+            console.log(filterName);
+
             $(this).find('.ds-input-checkbox').each(function(){
                 
                 // check not top level all control by checking that it doesn't have attr data-all-parent 
@@ -92,21 +94,21 @@ $(document).ready(function() {
 
                         filterTag = '<button class="ds-tag ds-tag--green" title="remove filter" data-filter-id="'+thisID+'" data-filter-value="'+thisVal+'">'+label+'</button>\n';
 
-                        $('#'+filterTagsWrapperId).append(filterTag);
-                         switch ( $(this).attr('id') ) {
+                        // $('#'+filterTagsWrapperId).append(filterTag);
+                         switch ( filterName ) {
                             case 'discipline-filter':
-                                $('#discipline-filter-tags').append('<span id="'+$(this).attr('id')+'-tags"></span>');
+                                $('#discipline-filter-tags').append(filterTag);
                                 break;
                             case 'location-filter':
-                                $('#location-filter-tags').append('<span id="'+$(this).attr('id')+'-tags"></span>');
+                                $('#location-filter-tags').append(filterTag);
                                 break;
                             case 'mode-filter':
-                                $('#mode-filter-tags').append('<span id="'+$(this).attr('id')+'-tags"></span>');
+                                $('#mode-filter-tags').append(filterTag);
                                 break;
                             // case 'double-degree-filter':
                             //     break;
                             case 'ATAR-filter':
-                                $('#ATAR-filter-tag').append('<span id="'+$(this).attr('id')+'-tags"></span>');    
+                                $('#ATAR-filter-tag').append(filterTag);    
                                 break;
                         }
                     }
@@ -374,29 +376,30 @@ $(document).ready(function() {
         
     
     //handle tag click
-    $('#filter-tags').on('click', '.ds-tag', function(){
-        // get correspoding filter id from button attribute data-filter-id
+    // $('#filter-tags').on('click', '.ds-tag', function(){
+    //     // get correspoding filter id from button attribute data-filter-id
 
-        var filterId = $(this).attr('data-filter-id');
+    //     var filterId = $(this).attr('data-filter-id');
 
-        if ($(this).attr('data-filter-id') != 'atar') { // if checkbox filter
-            // trigger correspoding filter click
-            $('#'+filterId).prop("checked",false).trigger("change").promise().done(function(){
-                // trigger correspoding filters parent form submit
-                $(this).closest('.ds-filter-group__filter').trigger('submit');
-            });
-        } else {
-            $('#atar-value-clear').trigger('click').promise().done(function(){
-                // trigger correspoding filters parent form submit
-                $(this).closest('.ds-filter-group__filter').trigger('submit');
-            });
-        }
+    //     if ($(this).attr('data-filter-id') != 'atar') { // if checkbox filter
+    //         // trigger correspoding filter click
+    //         $('#'+filterId).prop("checked",false).trigger("change").promise().done(function(){
+    //             // trigger correspoding filters parent form submit
+    //             $(this).closest('.ds-filter-group__filter').trigger('submit');
+    //         });
+    //     } else {
+    //         $('#atar-value-clear').trigger('click').promise().done(function(){
+    //             // trigger correspoding filters parent form submit
+    //             $(this).closest('.ds-filter-group__filter').trigger('submit');
+    //         });
+    //     }
 
-    });
+    // });
 
     $('#discipline-filter-tags, #location-filter-tags, #ATAR-filter-tag').on('click', '.ds-tag', function() {
         $(this).remove();
-        // get the ID
+        console.log('for', $(this).attr('data-filter-id'));
+        $("#" + $(this).attr('data-filter-id')).prop("checked", false);
     });
 
     // handler for course search
