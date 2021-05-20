@@ -72,7 +72,13 @@ $(document).ready(function() {
         
         $('#discipline-filter-tags button').remove();
         $('#location-filter-tags button').remove();
+        $('#study-filter-tags button').remove();
         $('#ATAR-filter-tag button').remove();
+
+        $('#discipline-filter-tags').hide();
+        $('#location-filter-tags').hide();
+        $('#study-filter-tags').hide();
+        $('#ATAR-filter-tag').hide();
         // $('#filter-tags button').remove();
         // add tags for checkboxes
         $('.ds-filter-group__filter:not(#ATAR-filter)').each(function(){
@@ -91,6 +97,7 @@ $(document).ready(function() {
 
                         filterTag = '<button class="ds-tag ds-tag--green" title="remove filter" data-filter-id="'+thisID+'" data-filter-value="'+thisVal+'">'+label+'</button>\n';
 
+                        $('#'+filterTagsWrapperId).show();
                         $('#'+filterTagsWrapperId).append(filterTag);
                     }
                 }
@@ -328,7 +335,7 @@ $(document).ready(function() {
     $('#atar-value-enter').on('click', function(event){
         event.preventDefault();
         
-        var filterTriggerButtonId = $(this).closest('.ds-filter-group__content__tab').attr('aria-labelledby'); // get tab button id
+        // var filterTriggerButtonId = $(this).closest('.ds-filter-group__content__tab').attr('aria-labelledby'); // get tab button id
 
         atarValue = $('#atar').val(); // get set atarValue filter value
 
@@ -336,18 +343,18 @@ $(document).ready(function() {
         // if atar is reset
         if(atarValue == atarDefaultValue) {
             // remove selected class from filter drop down button 
-            $('#'+filterTriggerButtonId).removeClass('ds-filter-group__nav__tab--selected');
+            $('#filter-5-trigger').removeClass('ds-filter-group__nav__tab--selected');
         } else {
             // add selected class to filter drop down button
-            $('#'+filterTriggerButtonId).addClass('ds-filter-group__nav__tab--selected');
+            $('#filter-5-trigger').addClass('ds-filter-group__nav__tab--selected');
         }
         
         // enable filter tabs
         $('.ds-filter-group__nav__tab').removeAttr('disabled');
 
         // close filter
-        if($('#'+filterTriggerButtonId).attr('aria-expanded') == "true") {
-            $('#'+filterTriggerButtonId).trigger('click');
+        if($('#filter-5-trigger').attr('aria-expanded') == "true") {
+            $('#filter-5-trigger').trigger('click');
         }
         
         // reset filter taglist
@@ -377,7 +384,7 @@ $(document).ready(function() {
 
     // });
 
-    $('#discipline-filter-tags, #location-filter-tags, #ATAR-filter-tag').on('click', '.ds-tag', function() {
+    $('#discipline-filter-tags, #location-filter-tags, #study-filter-tags, #ATAR-filter-tag').on('click', '.ds-tag', function() {
         $(this).remove();
         console.log('for', $(this).attr('data-filter-id'));
         $("#" + $(this).attr('data-filter-id')).prop("checked", false);

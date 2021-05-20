@@ -74,4 +74,14 @@ $(document).ready(function() {
         }
     });
 
+    $('.ds-icon-heart').on('click', function() {
+        if ( $(this).attr("data-saved") === "false" ) {
+            $(this).attr("data-saved", "true");
+            $(this).addClass('ds-icon-heart-filled');
+        } else {
+            $(this).attr("data-saved", "false");
+            $(this).removeClass('ds-icon-heart-filled');
+        }
+    })
+
 });

@@ -188,3 +188,24 @@
         }
     }
 }
+
+.ds-icon-heart-filled {
+    &::after {
+        background-image: url("icons/feather-fill/heart.svg");
+        filter: config.$filter-red;
+    }
+
+    &.ds-icon--before {
+        
+        &::after {
+            background-image: url("icons/feather-fill/heart.svg");
+            filter: config.$filter-red;
+        }
+
+        &::before {
+            background-image: url("icons/feather-fill/heart.svg");
+            filter: config.$filter-red;
+        }
+
+    }
+}
