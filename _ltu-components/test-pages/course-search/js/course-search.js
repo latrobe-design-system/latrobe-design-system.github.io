@@ -77,12 +77,9 @@ $(document).ready(function() {
         // add tags for checkboxes
         $('.ds-filter-group__filter:not(#ATAR-filter)').each(function(){
             var filterName = $(this).attr('id');
-            filterTagsWrapperId = filterName+'-tags';
-
-            console.log(filterName);
-
-            $(this).find('.ds-input-checkbox').each(function(){
-                
+            var filterTagsWrapperId = filterName+'-tags';
+           
+            $(this).find('.ds-input-checkbox').each(function(){    
                 // check not top level all control by checking that it doesn't have attr data-all-parent 
                 var attrCheck = $(this).attr('data-all-parent');
                 if (typeof attrCheck !== typeof undefined && attrCheck !== false) {
@@ -94,23 +91,7 @@ $(document).ready(function() {
 
                         filterTag = '<button class="ds-tag ds-tag--green" title="remove filter" data-filter-id="'+thisID+'" data-filter-value="'+thisVal+'">'+label+'</button>\n';
 
-                        // $('#'+filterTagsWrapperId).append(filterTag);
-                         switch ( filterName ) {
-                            case 'discipline-filter':
-                                $('#discipline-filter-tags').append(filterTag);
-                                break;
-                            case 'location-filter':
-                                $('#location-filter-tags').append(filterTag);
-                                break;
-                            case 'mode-filter':
-                                $('#mode-filter-tags').append(filterTag);
-                                break;
-                            // case 'double-degree-filter':
-                            //     break;
-                            case 'ATAR-filter':
-                                $('#ATAR-filter-tag').append(filterTag);    
-                                break;
-                        }
+                        $('#'+filterTagsWrapperId).append(filterTag);
                     }
                 }
             });
@@ -119,7 +100,7 @@ $(document).ready(function() {
             
             // add tag for ATAR if not original value
             if(atarValue != atarDefaultValue) {
-                $('#ATAR-filter-tags ').append('<button class="ds-tag ds-tag--green" title="remove filter" data-filter-id="atar" data-filter-value="'+atarValue+'">ATAR: '+atarValue+'</button>');
+                $('#ATAR-filter-tag').append('<button class="ds-tag ds-tag--green" title="remove filter" data-filter-id="atar" data-filter-value="'+atarValue+'">ATAR: '+atarValue+'</button>');
             }
             
             refreshResults();
@@ -344,7 +325,7 @@ $(document).ready(function() {
     });
     
     // handler for ATAR filter
-    $('#ATAR-filter, #atar-value-enter').on('click submit', function(event){
+    $('#atar-value-enter').on('click', function(event){
         event.preventDefault();
         
         var filterTriggerButtonId = $(this).closest('.ds-filter-group__content__tab').attr('aria-labelledby'); // get tab button id
