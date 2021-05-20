@@ -233,10 +233,7 @@
 
     background: config.$color-3a;
     color: config.$color-2;
+    float: right;
     font-weight: bold;
-
-    @media (min-width: 500px) {
-        position: relative;
-        float: right;
-    }
+    position: relative;
 }

@@ -4,7 +4,7 @@ title: "Course card"
 type: block
 ---
 
-<div class="ds-block">
+<!-- <div class="ds-block">
 
     <div class="ds-course-card">
         <div class="ds-course-card__header">
@@ -112,4 +112,75 @@ type: block
         </div>
     </div>
 
+</div> -->
+<div class="ds-block">
+<div href="http://example.org" class="ds-card">
+    <header class="ds-card__header">
+
+        <span class="ds-card__tag-course">Popular course</span>
+    </header>
+
+    <div class="ds-card__body">
+        <h3 class="ds-card__heading">Bachelor of Business Analytics</h3>
+        <p class="ds-card__subheading">Undergraduate course</p>
+
+        <div class="ds-tabs">
+            <div class="ds-tabs-nav" role="tablist">
+                <button class="ds-tabs-nav__tab" role="tab" aria-selected="true" aria-controls="tab1"
+                    id="tab1trigger">Melbourne</button>
+
+                <button class="ds-tabs-nav__tab" role="tab" aria-selected="false" aria-controls="tab2"
+                    id="tab2trigger" tabindex="-1">Sydney</button>
+            </div>
+
+            <div class="ds-tabs-content">
+                <div id="tab1" class="ds-tab-content__body" role="tabpanel" aria-labelledby="tab1trigger">
+                    <div class="ds-table-wrapper">
+                        <table class="ds-table ds-table--unstyled">
+                            <tbody>
+                                <tr>
+                                    <th>ATAR:</th>
+                                    <td>65.40</td>
+                                </tr>
+                                <tr>
+                                    <th>Start dates:</th>
+                                    <td>Multiple start dates at various locations</td>
+                                </tr>
+                                <tr>
+                                    <th>Duration:</th>
+                                    <td>3 years full-time or part-time equivalent</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="tab2" class="ds-tab-content__body" role="tabpanel" aria-labelledby="tab2trigger"
+                    hidden>
+                    <div class="ds-table-wrapper">
+                        <table class="ds-table ds-table--unstyled">
+                            <tbody>
+                                <tr>
+                                    <th>ATAR:</th>
+                                    <td>75.40 </td>
+                                </tr>
+                                <tr>
+                                    <th>Start dates:</th>
+                                    <td>Multiple start dates at various locations</td>
+                                </tr>
+                                <tr>
+                                    <th>Duration:</th>
+                                    <td>3 years full-time or part-time equivalent</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+           
+            <p><a class="ds-btn-primary ds-icon-chevron-right" href="#">View course</a>
+            <button data-saved="false" class="ds-btn ds-icon-heart ds-icon--before">Save and compare</button></p>
+        </div>
+    </div>
+</div>
 </div>
