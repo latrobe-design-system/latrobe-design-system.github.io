@@ -42,23 +42,23 @@ $(document).ready(function() {
         if ($(this).attr('aria-expanded') == 'false') { // region is collapsed then open it
 
             // close any open siblings
-            // $(this).siblings().each(function() {
-            //     var siblingRegionId = $(this).attr('aria-controls');
+            $(this).siblings().each(function() {
+                var siblingRegionId = $(this).attr('aria-controls');
 
-            //     // close siblings colapsible region
-            //     $('#'+siblingRegionId).hide().attr('hidden','hidden');
+                // close siblings colapsible region
+                $('#'+siblingRegionId).hide().attr('hidden','hidden');
 
-            //     // update the aria-expanded attribute of the siblings trigger
-            //     $(this).attr('aria-expanded', 'false');
-            // });
+                // update the aria-expanded attribute of the siblings trigger
+                $(this).attr('aria-expanded', 'false');
+            });
 
             // update the aria-expanded attribute of the clicked trigger
             $(this).attr('aria-expanded', 'true');
   
             // open region
-            // $('#'+regionId).slideDown(function(){
-            //     $(this).removeAttr('hidden');
-            // });
+            $('#'+regionId).slideDown(function(){
+                $(this).removeAttr('hidden');
+            });
 
             $location.slideDown();
   
@@ -69,9 +69,9 @@ $(document).ready(function() {
             $(this).attr('aria-expanded', 'false');
             $location.slideUp();
             // close region
-            // $('#'+regionId).slideUp(function(){
-            //     $(this).attr('hidden','hidden');
-            // });
+            $('#'+regionId).slideUp(function(){
+                $(this).attr('hidden','hidden');
+            });
 
         }
     });

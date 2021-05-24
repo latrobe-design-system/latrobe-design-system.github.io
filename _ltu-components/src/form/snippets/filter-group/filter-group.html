@@ -108,11 +108,13 @@ disciplines:
             
                         <input class="ds-input-checkbox" type="checkbox" id="discipline-{{ discipline.name | slugify }}" data-all-control="discipline-{{ discipline.name | slugify }}-all" data-all-parent="discipline-all">
                         <label class="ds-label ds-filter-group__nav__label" for="discipline-{{ discipline.name | slugify }}" aria-controls="region-{{ forloop.index }}" aria-expanded="false">{{ discipline.name }} <span class="ds-icon-chevron-down"></span></label>
-                        
+
                         <!-- <button type="button" class="ds-filter-group__nav__tab ds-collapse__trigger" aria-controls="region-{{ forloop.index }}" aria-expanded="false">{{ discipline.name }}</button> -->
 
                         <!-- <button type="button" class="ds-filter-group__nav__tab ds-collapse__trigger" aria-controls="region-{{ forloop.index }}" aria-expanded="false">Sub-discipline</button> -->
                         <div id="region-{{ forloop.index }}" class="ds-collapse__content" role="region" hidden>
+                            <p><a href="#" class="ds-icon ds-icon-chevron-right">Visit this discipline page</a></p>
+                        
                             <div class="ds-form-group--two-layer__content ds-columns ds-columns--two-col">
                             {% for sub-discipline in discipline.sub-disciplines %}
                                 <div class="ds-form-group">
@@ -283,134 +285,7 @@ disciplines:
 
                 </div> -->
 
-                <!-- filter 2 content -->
-                <div id="filter-2" class="ds-filter-group__content__tab" role="region" aria-labelledby="filter-2-trigger" hidden>
-                    
-                    <!-- <form id="discipline-filter-ZZZ" class="ds-form ds-filter-group__filter">
 
-                        <div class="ds-form-group">
-                            <input class="ds-input-checkbox" type="checkbox" id="discipline-all" data-all-control="discipline-all" checked>
-                            <label class="ds-label" for="discipline-all">All</label>
-                        </div>
-
-                        {% for discipline in page.disciplines %}
-                         {{ discipline.name }} -->
-                        <div class="ds-form-group ds-form-group--two-layer">
-
-                            <input class="ds-input-checkbox" type="checkbox" id="discipline-{{ discipline.name | slugify }}" data-all-control="discipline-{{ discipline.name | slugify }}-all" data-all-parent="discipline-all">
-                            <label class="ds-label" for="discipline-{{ discipline.name | slugify }}">{{ discipline.name }}</label>
-                            
-                            <button type="button" class="ds-btn ds-btn--tiny ds-collapse__trigger" aria-controls="region-{{ forloop.index }}" aria-expanded="false">Sub-discipline</button>
-                            <div id="region-{{ forloop.index }}" class="ds-collapse__content" role="region" hidden>
-                                <div class="ds-form-group--two-layer__content ds-columns ds-columns--two-col">
-                                {% for sub-discipline in discipline.sub-disciplines %}
-                                    <div class="ds-form-group">
-                                        <input class="ds-input-checkbox" type="checkbox" id="sub-discipline-{{ sub-discipline.name | slugify }}" data-all-parent="discipline-{{ discipline.name | slugify }}-all">
-                                        <label class="ds-label" for="sub-discipline-{{ sub-discipline.name | slugify }}">{{ sub-discipline.name }}</label>
-                                    </div>
-                                {% endfor %}
-                            </div>
-                            </div>
-
-                        </div>
-                        {% endfor %}
-
-                        <div class="ds-form-group">
-                            <button class="ds-filter-group__filter__apply">Apply</button>
-                        </div>
-                    </form> -->
-
-                </div>
-
-                <!-- filter 3 content -->
-                <div id="filter-3" class="ds-filter-group__content__tab" role="region" aria-labelledby="filter-3-trigger" hidden>
-
-                    <form id="location-filter" class="ds-form ds-filter-group__filter">
-
-                        <div class="ds-columns ds-columns--three-col">
-
-                            <div class="ds-form-group">
-                                <input class="ds-input-checkbox" id="location-all" type="checkbox" value="all" data-all-control="location-all" checked>
-                                <label class="ds-label" for="location-all">All</label>
-                            </div>
-
-                            <div class="ds-form-group">
-                                <input class="ds-input-checkbox" id="location-bu" type="checkbox" value="BU" data-all-parent="location-all">
-                                <label class="ds-label" for="location-bu">Melbourne</label>
-                            </div>
-
-                            <div class="ds-form-group">
-                                <input class="ds-input-checkbox" id="location-aw" type="checkbox" value="WO" data-all-parent="location-all">
-                                <label class="ds-label" for="location-aw">Albury-Wodonga</label>
-                            </div>
-
-                            <div class="ds-form-group">
-                                <input class="ds-input-checkbox" id="location-be" type="checkbox" value="BE" data-all-parent="location-all">
-                                <label class="ds-label" for="location-be">Bendigo</label>
-                            </div>
-
-                            <div class="ds-form-group">
-                                <input class="ds-input-checkbox" id="location-ci" type="checkbox" value="CI" data-all-parent="location-all">
-                                <label class="ds-label" for="location-ci">City</label>
-                            </div>
-
-                            <div class="ds-form-group">
-                                <input class="ds-input-checkbox" id="location-mi" type="checkbox" value="MI" data-all-parent="location-all">
-                                <label class="ds-label" for="location-mi">Mildura</label>
-                            </div>
-
-                            <div class="ds-form-group">
-                                <input class="ds-input-checkbox" id="location-sh" type="checkbox" value="OT" data-all-parent="location-all">
-                                <label class="ds-label" for="location-sh">Shepparton</label>
-                            </div>
-
-                            <div class="ds-form-group">
-                                <input class="ds-input-checkbox" id="location-sy" type="checkbox" value="SY" data-all-parent="location-all">
-                                <label class="ds-label" for="location-sy">Sydney</label>
-                            </div>
-
-                            <div class="ds-form-group">
-                                <input class="ds-input-checkbox" id="location-ot" type="checkbox" value="OT" data-all-parent="location-all">
-                                <label class="ds-label" for="location-ot">Other</label>
-                            </div>
-
-                        </div>
-
-                        <div class="ds-form-group">
-                            <button class="ds-filter-group__filter__apply">Apply</button>
-                        </div>
-
-                    </form>
-
-                </div>
-
-                <!-- filter 4 content -->
-                <div id="filter-4" class="ds-filter-group__content__tab" role="region" aria-labelledby="filter-4-trigger" hidden>
-
-                    <form id="mode-filter" class="ds-form ds-filter-group__filter">
-
-                        <div class="ds-form-group">
-                            <input class="ds-input-checkbox" type="checkbox" id="mode-all" data-all-control="mode-all" checked>
-                            <label class="ds-label" for="mode-all">All</label>
-                        </div>
-                        
-                        <div class="ds-form-group">
-                            <input class="ds-input-checkbox" type="checkbox" id="mode-on-campus" data-all-parent="mode-all">
-                            <label class="ds-label" for="mode-on-campus">On campus</label>
-                        </div>
-
-                        <div class="ds-form-group">
-                            <input class="ds-input-checkbox" type="checkbox" id="mode-online" data-all-parent="mode-all">
-                            <label class="ds-label" for="mode-online">Online</label>
-                        </div>
-
-                        <div class="ds-form-group">
-                            <button class="ds-filter-group__filter__apply">Apply</button>
-                        </div>
-                        
-                    </form>
-
-                </div>
 
                 <!-- filter 5 content -->
                 <!-- <div id="filter-5" class="ds-filter-group__content__tab" role="region" aria-labelledby="filter-5-trigger" hidden>

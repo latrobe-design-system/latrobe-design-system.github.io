@@ -147,7 +147,7 @@ $(document).ready(function() {
         else {
             $('#filter-tags .ds-tag').each(function(){
                 var filterTagWrapperId = $(this).parent().attr('id');
-                console.log('a', filterTagWrapperId)
+                // console.log('a', filterTagWrapperId)
                 switch (filterTagWrapperId) {
                     // case 'level-filter-tags':
                     //     filterAttribute = 'data-filter-level';
@@ -373,7 +373,7 @@ $(document).ready(function() {
     $('#discipline-filter-tags, #location-filter-tags, #study-filter-tags, #ATAR-filter-tag').on('click', '.ds-tag', function() {
                 
         var parentNode = $(this).parent().attr('id');
-        console.log( 'parent', $(this), parentNode );
+        // console.log( 'parent', $(this), parentNode );
         // console.log($('#' + parentNode + " .ds-tag").length);
 
         // Hacky
