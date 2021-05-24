@@ -64,7 +64,7 @@ disciplines:
 <div class="ds-block">
     <div class="ds-filter-group">
             <div class="ds-filter-group__nav">
-                <button id="show-course-filters" class="ds-btn ds-btn--ghost ds-icon-filter ds-icon--before">Show filters</button>
+                <button id="show-course-filters" class="ds-btn ds-btn--small ds-btn--ghost ds-icon-filter ds-icon--before">Show filters</button>
                 <!-- <span class="ds-filter-group__nav__label">Refine by:</span> -->
                 <!-- <button id="filter-1-trigger"
                     class="ds-filter-group__nav__tab"
@@ -212,13 +212,13 @@ disciplines:
                             <label class="ds-label" for="degree-double">Double degree</label>
                         </div>
                         </div>
-                        <div class="ds-filter-megamenu__section">     
+                        <div id="ds-filter_ATAR-megamenu__section" class="ds-filter-megamenu__section">     
                         <h4>Estimated ATAR</h4>
                         <div class="ds-grid">
                             <div class="ds-grid__col-5">
             
                                 <form id="ATAR-filter" class="ds-form ds-filter-group__filter">
-                                    <div class="ds-form-group ds-form-group--inline">
+                                    <div class="ds-form-group">
                                         <label class="ds-label"  for="atar">Max ATAR:</label> 
                                         <input class="ds-text-input ds-input--inline" id="atar" type="number" min="50" max="99.95" step="0.05" value="99.95">
                                         <!-- <input type="reset" class="ds-btn" id="atar-value-clear" value="Reset"> -->
@@ -294,7 +294,7 @@ disciplines:
                         </div>
 
                         {% for discipline in page.disciplines %}
-                        <!-- {{ discipline.name }} -->
+                         {{ discipline.name }} -->
                         <div class="ds-form-group ds-form-group--two-layer">
 
                             <input class="ds-input-checkbox" type="checkbox" id="discipline-{{ discipline.name | slugify }}" data-all-control="discipline-{{ discipline.name | slugify }}-all" data-all-parent="discipline-all">
@@ -461,11 +461,11 @@ disciplines:
 
             <div id="study-filter-tags" class="ds-block">
                 <strong>Study mode</strong>
+                <button class="ds-tag ds-tag--green" title="remove filter">Online</button>
             </div>
 
             <div id="ATAR-filter-tag" class="ds-block">
                 <strong>ATAR</strong>
-
                 <button class="ds-tag ds-tag--green" title="remove filter">60.50</button>
             </div>
         </div>

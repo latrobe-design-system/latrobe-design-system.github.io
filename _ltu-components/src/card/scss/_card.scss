@@ -237,3 +237,11 @@
     font-weight: bold;
     position: relative;
 }
+ 
+.ds-card__actions {
+    margin-top: config.spunits(2);
+    @media (min-width: 485px) {
+        display: flex;
+        gap: config.spunits(3);
+    }
+}

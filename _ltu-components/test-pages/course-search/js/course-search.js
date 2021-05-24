@@ -265,6 +265,14 @@ $(document).ready(function() {
     $('#apply_filters').on('click', function(event){
         event.preventDefault();
 
+        let filterButton = document.querySelector('#show-course-filters');
+        var $filterElement = $('.ds-filter-megamenu');
+
+        filterButton.textContent = "Show filters";
+        filterButton.classList.add('ds-btn--ghost');
+        filterButton.classList.remove('ds-btn--ghost__active');
+        $filterElement.slideUp();
+
         // check that it's not select all  
         if ( $('#discipline-filter input:checked' ).length > 0 && !$('#discipline-filter').find('[data-all-control]').prop("checked")) {
             $('#filter-2-trigger').addClass('ds-filter-group__nav__tab--selected');
@@ -281,29 +289,7 @@ $(document).ready(function() {
         } else {
             $('#filter-4-trigger').removeClass('ds-filter-group__nav__tab--selected'); 
         }
-      
-        // var filterTriggerButtonId = $(this).closest('.ds-filter-group__content__tab').attr('aria-labelledby'); // get tab button id
-        
-        // if the all checkbox is selected
-        // if ($(this).find('[data-all-control]').prop("checked") == true) {
-        //     // remove selected class from filter drop down button 
-        //     $('#'+filterTriggerButtonId).removeClass('ds-filter-group__nav__tab--selected');
-        // } else {
-        //     // add selected class to filter drop down button
-        //     $('#'+filterTriggerButtonId).addClass('ds-filter-group__nav__tab--selected');
-        // }
 
-        // // enable filter tabs
-        // $('.ds-filter-group__nav__tab').removeAttr('disabled');
-
-        // // close filter
-        // if($('#'+filterTriggerButtonId).attr('aria-expanded') == "true") {
-        //     $('#'+filterTriggerButtonId).trigger('click');
-        // }
-
-        // TODO: close megamenu filter, set aria expanded
-        
-        // reset filter taglist
         resetTags();
         
     });
@@ -385,8 +371,34 @@ $(document).ready(function() {
     // });
 
     $('#discipline-filter-tags, #location-filter-tags, #study-filter-tags, #ATAR-filter-tag').on('click', '.ds-tag', function() {
+                
+        var parentNode = $(this).parent().attr('id');
+        console.log( 'parent', $(this), parentNode );
+        // console.log($('#' + parentNode + " .ds-tag").length);
+
+        // Hacky
+        if ( $('#' + parentNode + " .ds-tag").length === 1) {
+            switch(parentNode) {
+                case 'discipline-filter-tags':
+                    $('#filter-2-trigger').removeClass('ds-filter-group__nav__tab--selected');
+                    break;
+                case 'location-filter-tags':
+                    $('#filter-3-trigger').removeClass('ds-filter-group__nav__tab--selected');
+                    break;
+                case 'study-filter-tags':
+                    $('#filter-4-trigger').removeClass('ds-filter-group__nav__tab--selected');
+                    break;
+                case 'ATAR-filter-tag':
+                    $('#filter-5-trigger').removeClass('ds-filter-group__nav__tab--selected');
+                    break;
+            }
+            $('#' + parentNode).hide();
+
+
+        }
+
         $(this).remove();
-        console.log('for', $(this).attr('data-filter-id'));
+        // console.log('for', $(this).attr('data-filter-id'));
         $("#" + $(this).attr('data-filter-id')).prop("checked", false);
     });
 
@@ -421,6 +433,19 @@ $(document).ready(function() {
         // switch to a-z filter
         $('#sort-a-z').prop('checked', true);
         refreshResults();
+    });
+
+    
+    $('.ds-icon-heart').on('click', function() {
+        if ( $(this).attr("data-saved") === "false" ) {
+            $(this).attr("data-saved", "true");
+            $(this).addClass('ds-icon-heart-filled');
+            // implement functionality in your app
+            console.log( $(this).attr('data-course') + ' added' );
+        } else {
+            $(this).attr("data-saved", "false");
+            $(this).removeClass('ds-icon-heart-filled');
+        }
     });
 
 });

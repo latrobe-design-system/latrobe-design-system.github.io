@@ -62,4 +62,8 @@ button.ds-tag {
 .ds-tag--green {
     border-color: config.$green;
     background-color: lighten(config.$green, 50%);
+
+    &:not(:last-child) {
+        margin-right: config.spunits(1.5);
+    }
 }

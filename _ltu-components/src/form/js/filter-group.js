@@ -38,50 +38,41 @@ $(document).ready(function() {
     $('.ds-filter-group__nav__tab, .ds-filter-group__nav__label').click(function() {
 
         var regionId = $(this).attr('aria-controls');
-
+        var $location = $('.ds-filter-megamenu');
         if ($(this).attr('aria-expanded') == 'false') { // region is collapsed then open it
 
             // close any open siblings
-            $(this).siblings().each(function() {
-                var siblingRegionId = $(this).attr('aria-controls');
+            // $(this).siblings().each(function() {
+            //     var siblingRegionId = $(this).attr('aria-controls');
 
-                // close siblings colapsible region
-                $('#'+siblingRegionId).hide().attr('hidden','hidden');
+            //     // close siblings colapsible region
+            //     $('#'+siblingRegionId).hide().attr('hidden','hidden');
 
-                // update the aria-expanded attribute of the siblings trigger
-                $(this).attr('aria-expanded', 'false');
-            });
+            //     // update the aria-expanded attribute of the siblings trigger
+            //     $(this).attr('aria-expanded', 'false');
+            // });
 
             // update the aria-expanded attribute of the clicked trigger
             $(this).attr('aria-expanded', 'true');
   
             // open region
-            $('#'+regionId).slideDown(function(){
-                $(this).removeAttr('hidden');
-            });
+            // $('#'+regionId).slideDown(function(){
+            //     $(this).removeAttr('hidden');
+            // });
+
+            $location.slideDown();
   
         }
         else { // region is expanded then close it
   
             // update the aria-expanded attribute of the region
             $(this).attr('aria-expanded', 'false');
-
+            $location.slideUp();
             // close region
-            $('#'+regionId).slideUp(function(){
-                $(this).attr('hidden','hidden');
-            });
+            // $('#'+regionId).slideUp(function(){
+            //     $(this).attr('hidden','hidden');
+            // });
 
         }
     });
-
-    $('.ds-icon-heart').on('click', function() {
-        if ( $(this).attr("data-saved") === "false" ) {
-            $(this).attr("data-saved", "true");
-            $(this).addClass('ds-icon-heart-filled');
-        } else {
-            $(this).attr("data-saved", "false");
-            $(this).removeClass('ds-icon-heart-filled');
-        }
-    })
-
 });

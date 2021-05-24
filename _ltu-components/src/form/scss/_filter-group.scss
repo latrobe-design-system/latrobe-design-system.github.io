@@ -10,10 +10,19 @@
     @include config.overflowXScroll();
     //margin-top: ;
 
+    @media(max-width: 670px) {
+        min-height: config.spunits(4);
+        
+        & .ds-filter-group__nav__tab:not(:first-child) {
+             visibility: hidden;
+        }
+    }
+
     @media(min-width: 768px) {
         margin-right: config.spunits(30);
     }
 }
+
 
 .ds-filter-group__nav__label {
     font-weight: config.$medium;
@@ -52,7 +61,7 @@
     }
 
     &[aria-expanded="true"] {
-        border-bottom: 4px solid config.$color-2;
+        // border-bottom: 4px solid config.$color-2;
 
         &::after {
             transform: rotate(180deg);
@@ -86,6 +95,10 @@
 .ds-filter-group__nav__tab--selected {
     color: config.$green;
     font-weight: bold;
+
+    &::after {
+        filter: config.$filter-green;
+    }
 }
 
 .ds--filter-group__content {
@@ -121,10 +134,7 @@
     }
 
     .ds-filter-group__filter__apply {
-
         @extend .ds-btn-secondary;
-        // color: config.$green;
-        // border-color: config.$green;
         color: white;
         background-color: config.$green;
         border-color: transparent;
@@ -171,20 +181,36 @@
         box-shadow: config.$shadow-2;
         margin-top: config.spunits(2);
         padding: config.spunits(2);
-        position: sticky;
-    }
-   
 
-    label {
-        // override checkbox colour
-        &::before {   
-            border: solid 2px config.$green;
+        @media(max-width: 768px)
+        {
+            position: sticky;
         }
-    
+    }
+
+    .ds-input-checkbox:checked+label {
         // override checkmark colour
         &::after {
             border-left: 3px solid config.$green;
             border-bottom: 3px solid config.$green;
+        }
+    }
+
+    .ds-input-checkbox:checked+label::before {
+        border: solid 2px config.$green;
+    }
+
+}
+
+#discipline-filter-tags {
+    margin-top: config.spunits(2);
+}
+
+#ds-filter_ATAR-megamenu__section {
+    @media(max-width: 1110px) {
+        & [class^="ds-grid__col-"] {
+            display: block;
+            width: auto;
         }
     }
 }
