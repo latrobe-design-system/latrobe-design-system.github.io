@@ -206,62 +206,31 @@
 
 }
 
-// #discipline-filter-tags {
-//     margin-top: config.spunits(2);
-// }
+.filter {   
+    margin-top: config.spunits(6);
 
-    // .filter + .filter {
-    //     margin-top: config.spunits(2);
-    // }
+    & + .filter {
+        margin-top: config.spunits(4);
+    }
 
-    .filter {   
-        margin-top: config.spunits(6);
+    @media (min-width: 768px) {
+        display: flex;
+        align-items: baseline;
+        gap: config.spunits(2);
+    }
 
-        & + .filter {
-            margin-top: config.spunits(4);
-        }
+    &__heading {
+        flex: 0 0 100%;
+
 
         @media (min-width: 768px) {
-            display: flex;
-            align-items: baseline;
-            gap: config.spunits(2);
+            flex: 0 0 6rem;
         }
+    }
 
-        &__heading {
-            // border: solid 1px red;
-            // display: block;
-            flex: 2 1 2rem;
-
-
-            @media(min-width: 768px) {
-                flex: 0 0 6rem;
-            }
-        }
-
-        &__list {
-            flex: 2 1 400px;
-            
-            @media(min-width: 768px) {
-                // display: inline-block;
-                // width: config.spunits(24);
-            }
-
-            
-        }
-
-        &__list--multiline {
-            // border: solid 1px orange;
-            // max-width: 80%;
-            // vertical-align: middle;
-            
-            @media(min-width: 768px) {
-                display: inline-block;
-                outline: solid 1px orange;
-                // display: block;
-                // width: 100%;
-                vertical-align: middle;
-            }
-        }
+    // &__list {
+    //     flex: 2 1;          
+    // }
 }
 
 #ds-filter_ATAR-megamenu__section {
