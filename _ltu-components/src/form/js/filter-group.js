@@ -61,6 +61,7 @@ $(document).ready(function() {
             });
 
             $location.slideDown();
+            $("body").addClass("overlay");
   
         }
         else { // region is expanded then close it
