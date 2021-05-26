@@ -258,7 +258,7 @@ $(document).ready(function() {
             }
         }
         
-        
+        playFilterAnimation();   
     });
 
     // handler for check box filter
@@ -291,7 +291,7 @@ $(document).ready(function() {
         }
 
         resetTags();
-        
+        playFilterAnimation();
     });
 
     $('.ds-filter-group__filter__clear').on('click', function() {
@@ -307,6 +307,7 @@ $(document).ready(function() {
         });
 
         resetTags();
+        playFilterAnimation();
     });
     
     // handler for ATAR filter change
@@ -345,7 +346,7 @@ $(document).ready(function() {
         
         // reset filter taglist
         resetTags();
-        
+        playFilterAnimation();
     });
         
     
@@ -370,14 +371,19 @@ $(document).ready(function() {
 
     // });
 
-    $('#discipline-filter-tags, #location-filter-tags, #study-filter-tags, #ATAR-filter-tag').on('click', '.ds-tag', function() {
+    $('.filter').on('click', '.ds-tag', function() {
                 
-        var parentNode = $(this).parent().attr('id');
+        var parentNode = $(this).closest(".filter").attr("id");
         // console.log( 'parent', $(this), parentNode );
-        // console.log($('#' + parentNode + " .ds-tag").length);
-
+        var numFilters = $('#' + parentNode + " .ds-tag").length;
+        console.log('num', numFilters);
         // Hacky
-        if ( $('#' + parentNode + " .ds-tag").length === 1) {
+
+        $(this).remove();
+        // console.log('for', $(this).attr('data-filter-id'));
+        $("#" + $(this).attr('data-filter-id')).prop("checked", false);
+
+        if ( $('#' + parentNode + " .ds-tag").length === 0 ) {
             switch(parentNode) {
                 case 'discipline-filter-tags':
                     $('#filter-2-trigger').removeClass('ds-filter-group__nav__tab--selected');
@@ -392,15 +398,17 @@ $(document).ready(function() {
                     $('#filter-5-trigger').removeClass('ds-filter-group__nav__tab--selected');
                     break;
             }
-            $('#' + parentNode).hide();
 
-
+            console.log('pn', parentNode);
+            $('#' + parentNode).remove();
         }
 
-        $(this).remove();
-        // console.log('for', $(this).attr('data-filter-id'));
-        $("#" + $(this).attr('data-filter-id')).prop("checked", false);
+        playFilterAnimation();
     });
+
+    function playFilterAnimation() {
+        $("#course-search-results").fadeOut().fadeIn();
+    }
 
     // handler for course search
     $('#course-search').on('submit', function(event){
@@ -440,12 +448,17 @@ $(document).ready(function() {
         if ( $(this).attr("data-saved") === "false" ) {
             $(this).attr("data-saved", "true");
             $(this).addClass('ds-icon-heart-filled');
-            // implement functionality in your app
-            console.log( $(this).attr('data-course') + ' added' );
+            // implement functionality in your app    
+            $(this).parent().find(".interaction-note").show();
         } else {
             $(this).attr("data-saved", "false");
             $(this).removeClass('ds-icon-heart-filled');
+            $(this).parent().find(".interaction-note").hide();
         }
+    });
+
+    $('.close-note').on('click', function() {
+        $(this).parent().hide();
     });
 
 });

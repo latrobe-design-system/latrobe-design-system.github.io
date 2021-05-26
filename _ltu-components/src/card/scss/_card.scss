@@ -57,7 +57,7 @@
 .ds-card__subheading {
     color: config.$color-alt-3;
     font-size: config.$p;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .ds-card__link-text {
@@ -208,6 +208,63 @@
     }
 }
 
+.ds-card__save--course-search {
+    & + .interaction-note {
+        //margin-top: 48px;
+        background-color: #fff;
+        box-shadow: 0 0 4px rgba(0,0,0,0.4);
+        box-sizing: border-box;
+        color: #242424;
+        //margin: 8px auto 0;
+        //margin-top: 8px;
+        display: none;
+        padding: 20px 48px 20px 20px;
+        position: absolute;
+        left: 170px;
+        text-align: center;
+        bottom: -20px;
+        min-width: 268px;
+        max-width: 30vw;
+        z-index: 100;
+
+        @media (max-width: 480px) {
+            display: block;
+            left: 20px;
+        }
+
+        &::before {
+            color: #fff;
+            content: "\25B2";
+            display: block;
+            position: absolute;
+            left: 85px;
+            top: -16px;
+            transform: scale(1.5);
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .close-note {
+            background: transparent url("icons/feather/x-circle.svg") no-repeat center;
+            border: 0;
+            height: 48px;
+            padding: 0;
+            position: absolute;
+            right: 0;
+            top: 6px;
+            width: 48px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: config.$color-3a;
+
+            }
+        }
+    }
+}
+
 .ds-card__tag {
     display: inline-block;
     position: absolute;
@@ -234,7 +291,8 @@
     background: config.$color-3a;
     color: config.$color-2;
     float: right;
-    font-weight: bold;
+    // font-weight: bold;
+    font-weight: 500;
     position: relative;
 }
  

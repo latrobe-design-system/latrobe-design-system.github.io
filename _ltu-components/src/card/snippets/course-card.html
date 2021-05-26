@@ -180,8 +180,11 @@ type: block
            
             <div class="course-card__actions">
                 <a class="ds-btn-primary ds-icon-chevron-right" href="#">View course</a>
-                <button data-saved="false" class="ds-btn ds-icon-heart ds-icon--before">Save and compare</button></p>
-            </div>
+                <button data-saved="false" class="ds-btn ds-icon-heart ds-icon--before ds-card__save--course-search" aria-haspopup="true">Save and compare</button>
+         
+                    <div id="save-course-note" class="interaction-note"><button class="close-note" onclick="closeNote(this); return false;" data-ltu-cm-bp="ClosePopUpClicked"></button><p class="zero-margin">Bachelor of Business added to "<a href="/courses/my-saved-courses?favourites=836928,836880" data-ltu-cm-bp="ViewSavedCoursesPopUpClicked">My saved courses</a>". Now you can <a class="compare-course-link" href="/courses/my-saved-courses/compare-courses?type=UG&amp;favourites=836928,836880">Compare them</a>.</p></div>
+                </div>
+  
         </div>
     </div>
 </div>

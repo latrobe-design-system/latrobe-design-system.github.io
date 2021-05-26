@@ -10,6 +10,10 @@
     border: 2px solid config.$color-3b;
     border-radius: 20px;
     background: config.$color-3a;
+
+    @media (max-width: 388px) {
+        border-radius: 30px;
+    }
 }
 
 a.ds-tag,

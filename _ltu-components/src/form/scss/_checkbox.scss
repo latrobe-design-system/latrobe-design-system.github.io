@@ -73,14 +73,15 @@
         padding: config.spunits(1) config.spunits(4) config.spunits(1) config.spunits(12);
         
         &::before {
-            width: 1rem;
-            height: 1rem;
+            height: config.spunits(6);
+            width: config.spunits(6);
             margin-top: 0.25rem;
+            top: 0;
             left: config.spunits(4);
         }
 
         &::after {
-            left: 1.2rem;
+            left: 1.4rem;
             top: .6rem;
         }
     }

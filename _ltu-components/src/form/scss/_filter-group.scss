@@ -3,7 +3,14 @@
 @use "button/scss/button";
 
 .ds-filter-group {
-    margin-right: 7.5rem;
+    @media (min-width: 767px) {
+        margin-right: 7.5rem;
+    }
+}
+
+.ds-filter__link {
+    margin-top: config.spunits(1);
+    margin-left: 2rem;
 }
 
 .ds-filter-group__nav {
@@ -23,7 +30,7 @@
     }
 
     @media(min-width: 768px) {
-        margin-right: config.spunits(30);
+        // margin-right: config.spunits(30);
     }
 }
 
@@ -118,9 +125,9 @@
     border: 2px solid config.$color-3b;
     padding: config.spunits(6);
     
-    @media(min-width: 768px) {
-        padding-right: config.spunits(30);
-    }
+    // @media(min-width: 768px) {
+    //     padding-right: config.spunits(30);
+    // }
 
     .ds-form {
         max-width: 100%;
@@ -210,7 +217,11 @@
     margin-top: config.spunits(6);
 
     & + .filter {
-        margin-top: config.spunits(4);
+        margin-top: config.spunits(.75);
+
+        @media (max-width: 767px) {
+            margin-top: config.spunits(4); 
+        }
     }
 
     @media (min-width: 768px) {
@@ -220,7 +231,7 @@
     }
 
     &__heading {
-        flex: 0 0 100%;
+        flex: 0 0 80%;
 
 
         @media (min-width: 768px) {
