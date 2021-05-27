@@ -432,6 +432,12 @@ $(document).ready(function() {
         
     });
 
+    // local autosuggest trigger
+    $('#course-search').on('change', function(event) {
+        console.log('show autosuggestions')
+        $('#course-autosuggestions').show();
+    });
+
     // handler for query-tag
 
     $('#query-tag-container').on('click', '#query-tag', function(){

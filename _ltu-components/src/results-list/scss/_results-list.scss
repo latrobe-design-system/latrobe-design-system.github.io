@@ -1,0 +1,45 @@
+// dependencies
+@use "config";
+
+.ds-results-list {
+    width: 75%;
+    margin-right: 0;
+    // position: relative;
+
+    // @extend .link-list;
+    position: absolute;
+    z-index: 500;
+    min-height: 20vh;
+    margin-top: 0;
+    background: white;
+    border: solid 1px config.$color-3b;
+
+    & > ul {
+        // margin-top: -.75rem;
+    }
+
+    & li {
+        padding: config.spunits(2) config.spunits(4);
+        list-style: none;
+        margin-left: -2.5rem;
+        display: block;
+        max-width: 120%;
+
+        &:nth-child(odd) {
+           background-color: config.$color-3; 
+        }
+    }
+}
+
+.ds-results-list__search-keywords {
+    padding: 1rem;
+    margin-top: 0;
+    background: #eafbe2;
+    max-width: 100%;
+    display: block;
+}
+
+.ds-results-list__suggested-keywords {
+    font-weight: 500;
+    margin-left: 1rem;
+}
