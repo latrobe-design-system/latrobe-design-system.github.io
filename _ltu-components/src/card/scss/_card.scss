@@ -210,26 +210,34 @@
 
 .ds-card__save--course-search {
     & + .interaction-note {
-        //margin-top: 48px;
         background-color: #fff;
         box-shadow: 0 0 4px rgba(0,0,0,0.4);
         box-sizing: border-box;
         color: #242424;
-        //margin: 8px auto 0;
-        //margin-top: 8px;
         display: none;
         padding: 20px 48px 20px 20px;
         position: absolute;
-        left: 170px;
         text-align: center;
-        bottom: -20px;
+        // left: 170px;
+        // bottom: -20px;
+        top: calc(100% - 3rem);
         min-width: 268px;
         max-width: 30vw;
         z-index: 100;
 
-        @media (max-width: 480px) {
-            display: block;
-            left: 20px;
+        @media (min-width: 459px) {
+            // outline: red 1px solid;
+            display: none;
+            left: calc(100vw / 6);
+        }
+
+        @media (min-width: 1280px) {
+            top: calc(100% - 4rem);
+        }
+
+        @media (min-width: 1940px) {
+            // outline: purple 1px solid;
+            left: calc(100vw / 12);
         }
 
         &::before {

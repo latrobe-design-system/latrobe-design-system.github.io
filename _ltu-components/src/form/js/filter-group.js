@@ -13,12 +13,14 @@ $(document).ready(function() {
             filterButton.classList.add('ds-btn--ghost');
             filterButton.classList.remove('ds-btn--ghost__active');
             $location.slideUp();
+            // $("body").removeClass("overlay overlay-open");
             // $location.show();
         } else {
             filterButton.textContent = "Hide filters";
             filterButton.classList.add('ds-btn--ghost__active');
             filterButton.classList.remove('ds-btn--ghost');
             $location.slideDown();
+            // $("body").addClass("overlay overlay-open");
         }
             
        
@@ -61,7 +63,7 @@ $(document).ready(function() {
             });
 
             $location.slideDown();
-            $("body").addClass("overlay");
+            $("body").addClass("overlay overlay-open");
   
         }
         else { // region is expanded then close it
@@ -69,6 +71,7 @@ $(document).ready(function() {
             // update the aria-expanded attribute of the region
             $(this).attr('aria-expanded', 'false');
             $location.slideUp();
+            $("body").removeClass("overlay overlay-open");
             // close region
             $('#'+regionId).slideUp(function(){
                 $(this).attr('hidden','hidden');

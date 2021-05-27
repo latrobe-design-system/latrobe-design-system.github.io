@@ -307,7 +307,7 @@ $(document).ready(function() {
         });
 
         resetTags();
-        $(".ds-filter-megamenu").slideOut();
+        $(".ds-filter-megamenu").slideUp();
         playFilterAnimation();
     });
     
