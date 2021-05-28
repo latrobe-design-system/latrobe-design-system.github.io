@@ -468,4 +468,57 @@ $(document).ready(function() {
         $(this).parent().hide();
     });
 
+    $("#query_courses").keyup(function(e) {
+        var autosuggestionResults = [
+            "Business",
+            "Marketing",
+            "Management",
+            "Business and commerce"
+            "Business and law"
+        ];
+
+        console.log('type18')
+        var typedQuery = $("#query_courses").val();
+
+        $('.ds-results-list__search-keywords').text(typedQuery);
+        
+        if ($("#query_courses").val().length > 1) {
+            console.log('show results/get server results', autosuggestionResults, typedQuery)
+
+            $(".ds-results-list").fadeIn();
+
+            var filteredList = autosuggestionResults.filter(result => { return result.toLowerCase().includes(typedQuery)});
+
+            var asList = filteredList.map(result => { return `<li class="ds-results-list-item">${result}</li>`});
+
+            $(".autosuggest-results").remove(asList);
+            $(".autosuggest-results").append(asList);
+        } 
+    });
+
+    $("#query_courses").keydown(function(e) {
+        // down arrow pressed
+
+        if (e.which === 40) {
+            currentIndex++;
+            $("#query_courses").val($(autosuggestionResults[currentIndex]).text());
+        }
+
+         //up arrow pressed
+         if (e.which === 38) {
+            currentIndex--;
+            
+            if (currentIndex < 0) {
+                $("#query_courses").val($(autosuggestionResults[0]).text());
+            }
+            else { 
+                $("#query_courses").val($(autosuggestionResults[currentIndex]).text());
+            }
+        }
+    });
+
+    $(".ds-results-list-item").on('click', function() {
+        $("#query_courses").val($(this).text());
+    });
+
 });
