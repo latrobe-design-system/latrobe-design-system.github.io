@@ -289,6 +289,26 @@
     }
 }
 
+// TODO: move these to the right place
+
+#course-autosuggest {
+    display: none;
+}
+
 #related-terms-container {
     display: none;
+
+    height: 20vh;
+    border: solid 2px config.$color-3b;
+    border-top: transparent;
+    margin-top: 0;
+    margin-right: 7.5rem;
+}
+
+.no-bottom-border {
+    border-bottom: none;
+}
+
+.expand {
+    height: 40vh;
 }

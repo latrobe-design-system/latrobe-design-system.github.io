@@ -86,14 +86,16 @@ localjs: "js/course-search.js"
                     <button class="ds-btn-primary ds-icon-search ds-icon--before ds-btn--icon-only-mobile" type="submit"
                         id="course-search-submit">Search</button>
                 </div>
+                <div id="related-terms-container">
+                    <p>Related to your search:</p>
+                    <button class="ds-tag ds-tag--add" data-search-type="related-term">Related term 1</button>
+                    <button class="ds-tag ds-tag--add" data-search-type="related-term">Related term 2</button>
+                    <button class="ds-tag ds-tag--add" data-search-type="related-term">Related term 3</button>
+                </div>
             </div>
         </form>
-        <div id="related-terms-container">
-            <button class="ds-tag ds-tag--add" data-search-type="related-term">Related term 1</button>
-            <button class="ds-tag ds-tag--add" data-search-type="related-term">Related term 2</button>
-            <button class="ds-tag ds-tag--add" data-search-type="related-term">Related term 3</button>
-        </div>
-            <div id="course-autosuggest" class="ds-results-list">
+        <div id="course-autosuggest" 
+        class="ds-results-list">
                 <p class="ds-results-list__search-keywords ds-icon-search ds-icon--before">search keywords: "<span></span>"</p>
                 <p class="ds-results-list__suggested-keywords">Suggested keywords:</p>
                 <ul class="autosuggest-results">
