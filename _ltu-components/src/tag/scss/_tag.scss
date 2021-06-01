@@ -75,3 +75,40 @@ button.ds-tag {
     //     display: block;
     // }
 }
+
+button.ds-tag--add {
+    /* remove browser styling from button element */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    display: inline-block; // older browsers
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: text-decoration 0.3s ease-in-out; // for hover
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; // for hover
+    background-color: transparent;
+
+    &::after {
+        content: "";
+        display: inline-block;
+        vertical-align: top;
+        width: 1em;
+        height: 1em;
+        margin: 0 config.spunits(1);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        filter: config.$filter-near-black;
+        background-image: url("icons/feather/plus.svg");
+
+        margin-right: 0;
+    }
+
+    &:hover {
+        //text-decoration: underline;
+        transform: translateY(-4px);
+        box-shadow: config.$shadow-2;
+    }
+}

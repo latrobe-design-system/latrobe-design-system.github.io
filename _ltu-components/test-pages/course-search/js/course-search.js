@@ -464,9 +464,14 @@ $(document).ready(function() {
         query = $('#query_courses').val();
         $('#query_courses').val('');
         
-        $(this).find('#query-tag-container').empty();
+        $(this).find('#query-tag-container');
+
         if (query != '') {
-            $(this).find('#query-tag-container').append('<button type="button" class="ds-tag" title="remove filter" id="query-tag">'+query+'</button>');
+            $(this).find('#query-tag-container').append('<button type="button" class="ds-tag ds-tag--green" title="remove filter">'+query+'</button>');
+        }
+
+        if ($(this).find('#query-tag-container .ds-tag').length > 0) {
+            $('#related-terms-container').show();
         }
         
         // turn on releveance filter and switch it on
@@ -476,6 +481,11 @@ $(document).ready(function() {
         
     });
 
+    $('#related-terms-container .ds-tag').on("click", function() {
+        $("#query-tag-container").append(this);
+        $(this).removeClass("ds-tag--add").addClass("ds-tag--green");
+    })
+
     // local autosuggest trigger
     $('#course-search').on('change', function(event) {
         console.log('show autosuggestions')
@@ -484,8 +494,13 @@ $(document).ready(function() {
 
     // handler for query-tag
 
-    $('#query-tag-container').on('click', '#query-tag', function(){
-        $(this).remove();
+    $('#query-tag-container').on('click', '.ds-tag', function(){
+        if ($(this).data("search-type") === "related-term") {
+            $("#related-terms-container").append(this);
+        } else {
+            $(this).remove();
+        }
+
         query = '';
         // disable relevance filter
         $('#sort-releveance').addAttr('disabled');
