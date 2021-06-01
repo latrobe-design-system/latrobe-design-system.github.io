@@ -13,6 +13,50 @@ $(document).ready(function() {
     var atarDefaultValue = $('#atar').attr('value'); // default atar value
     var atarValue = atarDefaultValue;
 
+    // sample list
+    var autosuggestionResults = [
+        "Business",
+        "Marketing",
+        "Management",
+        "Business and commerce",
+        "Business and law"
+    ];
+
+    // More complex sample list
+    // var autosuggestionResults = [
+    //     {
+    //         searchTerm: "business",
+    //         relatedTerms: [
+    //             "Business",
+    //             "Marketing",
+    //             "Management",
+    //             "Business and commerce",
+    //             "Business and law"
+    //         ]
+    //     },
+    //     {
+    //         searchTerm: "arts",
+    //         relatedTerms: [
+    //             "archaeology",
+    //             "creative arts",
+    //             "international relations",
+    //             "politics"
+    //         ]
+    //     },
+    //     {
+    //         searchTerm: "IT and engineering",
+    //         relatedTerms: [
+    //             "computer science",
+    //             "cybersecurity",
+    //             "civil engineering"
+    //         ]
+    //     },
+    // ]
+
+    var autosuggestionResultsIndex = 0;
+    var filteredList = [];
+    var asList = [];
+
     /* for UX testing - demo modal student type picker
 
     var studentType = '';
@@ -469,15 +513,8 @@ $(document).ready(function() {
     });
 
     $("#query_courses").keyup(function(e) {
-        var autosuggestionResults = [
-            "Business",
-            "Marketing",
-            "Management",
-            "Business and commerce"
-            "Business and law"
-        ];
-
-        console.log('type18')
+        
+        console.log('type20')
         var typedQuery = $("#query_courses").val();
 
         $('.ds-results-list__search-keywords').text(typedQuery);
@@ -487,12 +524,11 @@ $(document).ready(function() {
 
             $(".ds-results-list").fadeIn();
 
-            var filteredList = autosuggestionResults.filter(result => { return result.toLowerCase().includes(typedQuery)});
+            filteredList = autosuggestionResults.filter(result => { return result.toLowerCase().includes(typedQuery)});
 
-            var asList = filteredList.map(result => { return `<li class="ds-results-list-item">${result}</li>`});
+            asList = filteredList.map(result => { return `<li class="ds-results-list-item">${result}</li>`});
 
-            $(".autosuggest-results").remove(asList);
-            $(".autosuggest-results").append(asList);
+            $(".autosuggest-results").html(asList);
         } 
     });
 
@@ -500,25 +536,33 @@ $(document).ready(function() {
         // down arrow pressed
 
         if (e.which === 40) {
-            currentIndex++;
-            $("#query_courses").val($(autosuggestionResults[currentIndex]).text());
+            autosuggestionResultsIndex++;
+                        
+            if (autosuggestionResultsIndex > filteredList.length) {
+                autosuggestionResultsIndex = 0;
+            }
+            
+            $("#query_courses").val($(filteredList[autosuggestionResultsIndex]).text());
         }
 
          //up arrow pressed
          if (e.which === 38) {
-            currentIndex--;
+            autosuggestionResultsIndex--;
             
-            if (currentIndex < 0) {
-                $("#query_courses").val($(autosuggestionResults[0]).text());
+            if (autosuggestionResultsIndex < filteredList.length ) {
+                autosuggestionResultsIndex = 0;
             }
-            else { 
-                $("#query_courses").val($(autosuggestionResults[currentIndex]).text());
-            }
+            
+            $("#query_courses").val($(filteredList[autosuggestionResultsIndex]).text());
+            
         }
+
+        $(asList[autosuggestionResultsIndex]).addClass("highlighted");
+        console.log('index', autosuggestionResultsIndex, filteredList[autosuggestionResultsIndex]);
     });
 
     $(".ds-results-list-item").on('click', function() {
+        console.log('clicked item')
         $("#query_courses").val($(this).text());
     });
-
 });
