@@ -495,6 +495,8 @@ $(document).ready(function() {
     $('#query-tag-container').on('click', '.ds-tag', function(){
         if ($(this).data("search-type") === "related-term") {
             $("#related-terms-container").append(this);
+            $(this).removeClass("ds-tag--green");
+            $(this).addClass("ds-tag--add");
         } else {
             $(this).remove();
         }
