@@ -303,10 +303,36 @@
     border-top: transparent;
     margin-top: 0;
     margin-right: 7.5rem;
+    padding: config.spunits(4);
+
+    & p {
+        margin-top: 0;
+    }
+}
+
+.input-focus-right-corner {
+    border: solid 2px config.$color-1 !important;
+    border-left: transparent !important;
+    border-bottom: transparent !important;
+}
+
+.input-focus-left-corner {
+    border: solid 2px config.$color-1 !important;
+    border-bottom: transparent !important;
+    border-right: transparent !important;
+}
+
+.input-focus-bottom {
+    border: solid 2px config.$color-1 !important;
+    border-top: transparent !important;
 }
 
 .no-bottom-border {
-    border-bottom: none;
+    border-bottom: none !important;
+}
+
+.no-outline {
+    outline: transparent;
 }
 
 .expand {

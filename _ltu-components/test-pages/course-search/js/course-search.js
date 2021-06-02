@@ -577,16 +577,21 @@ $(document).ready(function() {
         console.log('index', autosuggestionResultsIndex, filteredList[autosuggestionResultsIndex]);
     });
 
-    $(".ds-results-list-item").on('click', function() {
-        console.log('clicked item')
+    $(".autosuggest-results").on("click",  ".ds-results-list-item", function() {
+        //create the tag
         $("#query_courses").val($(this).text());
+        $("#course-search-submit").trigger("click");
     });
 
     $("#query_courses").focus( function() {
-        $(this).addClass("no-bottom-border");
-        $('.ds-input-group__prepend').addClass("no-bottom-border");
-
         if ($('#query-tag-container .ds-tag').length > 0) {
+            $('#related-terms-container').addClass("input-focus-bottom");
+
+            $("#query_courses").addClass("input-focus no-bottom-border");
+
+            $('.ds-input-group__prepend').addClass("input-focus-left-corner no-bottom-border");
+    
+            $("#query_courses").addClass("input-focus-right-corner no-outline");
             $('#related-terms-container').show();
         }
         
@@ -595,8 +600,11 @@ $(document).ready(function() {
 
     $("#query_courses").blur( function() {
         $(this).removeClass("no-bottom-border");
+        $('.ds-input-group__prepend').removeClass("input-focus-left-corner no-bottom-border");
+
+        $("#query_courses").removeClass("input-focus-right-corner no-outline");
         $('.ds-input-group__prepend').removeClass("no-bottom-border");
-        // $('#related-terms-container').hide();
+        $('#related-terms-container').hide();
         // $('#related-terms-container').fadeOut();
     });
 });

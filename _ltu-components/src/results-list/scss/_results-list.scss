@@ -24,6 +24,7 @@
         margin-left: -2.5rem;
         display: block;
         max-width: 120%;
+        cursor: pointer;
 
         &:nth-child(odd) {
            background-color: config.$color-3; 
