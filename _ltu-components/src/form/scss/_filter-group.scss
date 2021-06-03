@@ -320,19 +320,19 @@
     }
 }
 
-.input-focus-right-corner {
+.ds-text-input__focus-right-corner {
     border: solid 2px config.$color-1 !important;
     border-left: transparent !important;
     border-bottom: transparent !important;
 }
 
-.input-focus-left-corner {
+.ds-text-input__focus-left-corner {
     border: solid 2px config.$color-1 !important;
     border-bottom: transparent !important;
     border-right: transparent !important;
 }
 
-.input-focus-bottom {
+.ds-text-input__focus-bottom {
     border: solid 2px config.$color-1 !important;
     border-top: transparent !important;
 }
@@ -361,7 +361,16 @@
 //     }
 // }
 
-@media (max-width: 500px) {
+
+.query-tag-message {
+    // display: none;
+
+    // @media (max-width: 500px) {  
+    //         & > span:first-child {
+    //         display: none !important; // don't override it with js
+    //         }
+    // }
+}
     // #course-search {
     //         position: absolute;
     //         top: 0;
@@ -377,4 +386,4 @@
     //     // z-index: 100;
     //     max-width: 100%;
     // }
-}
+// }

@@ -125,17 +125,20 @@ $(document).ready(function() {
         $('#discipline-filter-tags button').remove();
         $('#location-filter-tags button').remove();
         $('#study-filter-tags button').remove();
+        $('#degree-filter-tags button').remove();
         $('#ATAR-filter-tag button').remove();
 
         $('#discipline-filter-tags').hide();
         $('#location-filter-tags').hide();
         $('#study-filter-tags').hide();
+        $('#degree-filter-tags').hide();
         $('#ATAR-filter-tag').hide();
         // $('#filter-tags button').remove();
         // add tags for checkboxes
         $('.ds-filter-group__filter:not(#ATAR-filter)').each(function(){
             var filterName = $(this).attr('id');
             var filterTagsWrapperId = filterName+'-tags';
+            console.log('id', filterTagsWrapperId);
            
             $(this).find('.ds-input-checkbox').each(function(){    
                 // check not top level all control by checking that it doesn't have attr data-all-parent 
@@ -199,7 +202,7 @@ $(document).ready(function() {
         else {
             $('#filter-tags .ds-tag').each(function(){
                 var filterTagWrapperId = $(this).parent().attr('id');
-                // console.log('a', filterTagWrapperId)
+                console.log('id', filterTagWrapperId)
                 switch (filterTagWrapperId) {
                     // case 'level-filter-tags':
                     //     filterAttribute = 'data-filter-level';
@@ -213,9 +216,13 @@ $(document).ready(function() {
                         filterAttribute = 'data-filter-location';
                         $('#filter-3-trigger').addClass('ds-filter-group__nav__tab--selected');
                         break;
-                    case 'mode-filter-tags':
+                    case 'study-filter-tags':
                         filterAttribute = 'data-filter-mode';
                         $('#filter-4-trigger').addClass('ds-filter-group__nav__tab--selected');
+                        break;
+                    case 'degree-filter-tags':
+                        filterAttribute = 'data-filter-mode';
+                        $('#filter-5-trigger').addClass('ds-filter-group__nav__tab--selected');
                         break;
                     case 'ATAR-filter-tags':
                         filterAttribute = 'data-filter-atar';
@@ -341,6 +348,11 @@ $(document).ready(function() {
         } else {
             $('#filter-4-trigger').removeClass('ds-filter-group__nav__tab--selected'); 
         }
+        if ( $('#degree-filter input:checked' ).length > 0 && !$('#degree-filter').find('[data-all-control]').prop("checked")) {
+            $('#filter-5-trigger').addClass('ds-filter-group__nav__tab--selected');
+        } else {
+            $('#filter-5-trigger').removeClass('ds-filter-group__nav__tab--selected'); 
+        }
 
         resetTags();
         playFilterAnimation();
@@ -383,18 +395,18 @@ $(document).ready(function() {
         // if atar is reset
         if(atarValue == atarDefaultValue) {
             // remove selected class from filter drop down button 
-            $('#filter-5-trigger').removeClass('ds-filter-group__nav__tab--selected');
+            $('#filter-6-trigger').removeClass('ds-filter-group__nav__tab--selected');
         } else {
             // add selected class to filter drop down button
-            $('#filter-5-trigger').addClass('ds-filter-group__nav__tab--selected');
+            $('#filter-6-trigger').addClass('ds-filter-group__nav__tab--selected');
         }
         
         // enable filter tabs
         $('.ds-filter-group__nav__tab').removeAttr('disabled');
 
         // close filter
-        if($('#filter-5-trigger').attr('aria-expanded') == "true") {
-            $('#filter-5-trigger').trigger('click');
+        if($('#filter-6-trigger').attr('aria-expanded') == "true") {
+            $('#filter-6-trigger').trigger('click');
         }
         
         // reset filter taglist
@@ -447,8 +459,11 @@ $(document).ready(function() {
                 case 'study-filter-tags':
                     $('#filter-4-trigger').removeClass('ds-filter-group__nav__tab--selected');
                     break;
-                case 'ATAR-filter-tag':
+                case 'degree-filter-tags':
                     $('#filter-5-trigger').removeClass('ds-filter-group__nav__tab--selected');
+                    break;
+                case 'ATAR-filter-tag':
+                    $('#filter-6-trigger').removeClass('ds-filter-group__nav__tab--selected');
                     break;
             }
 
@@ -605,13 +620,13 @@ $(document).ready(function() {
 
     $("#query_courses").focus( function() {
         if ($('#query-tag-container .ds-tag').length > 0) {
-            $('#related-terms-container').addClass("input-focus-bottom");
+            $('#related-terms-container').addClass("ds-text-input__focus-bottom");
 
-            $("#query_courses").addClass("input-focus no-bottom-border");
+            $("#query_courses").addClass("ds-text-input__related-search no-bottom-border");
 
-            $('.ds-input-group__prepend').addClass("input-focus-left-corner no-bottom-border");
+            $('.ds-input-group__prepend').addClass("ds-text-input__focus-left-corner no-bottom-border");
     
-            $("#query_courses").addClass("input-focus-right-corner no-outline");
+            $("#query_courses").addClass("ds-text-input__focus-right-corner no-outline");
 
             if (!searchState.relatedIsShowing) {
                 searchState.relatedIsShowing = true;
@@ -623,11 +638,11 @@ $(document).ready(function() {
     });
 
     $("#query_courses").blur( function() {
-        $(this).removeClass("input-focus-right-corner no-bottom-border no-outline");
-        $('.ds-input-group__prepend').removeClass("input-focus-left-corner no-bottom-border");
+        $(this).removeClass("ds-text-input__related-search ds-text-input__focus-right-corner no-bottom-border no-outline");
+        $('.ds-input-group__prepend').removeClass("ds-text-input__focus-left-corner no-bottom-border");
         $('.ds-input-group__prepend').removeClass("no-bottom-border");
 
-        $("#related-terms-container").removeClass("input-focus-right-corner no-outline");
+        $("#related-terms-container").removeClass("ds-text-input__focus-right-corner no-outline");
     });
 
     $(document).on("click", function(e) {

@@ -95,6 +95,11 @@ disciplines:
                     class="ds-filter-group__nav__tab" 
                     type="button"
                     aria-controls="filter-5" 
+                    aria-expanded="false">Degree type</button>
+                    <button id="filter-6-trigger"
+                    class="ds-filter-group__nav__tab" 
+                    type="button"
+                    aria-controls="filter-6" 
                     aria-expanded="false">ATAR</button>
             </div>
             
@@ -202,20 +207,20 @@ disciplines:
                             <label class="ds-label" for="mode-online">Online</label>
                         </div>
             </div>
-            <div id="double-degree-filter" class="ds-filter-megamenu__section ds-filter-group__filter">
-                    <h4>Double degree</h4>
+            <div id="degree-filter" class="ds-filter-megamenu__section ds-filter-group__filter">
+                    <h4>Degree type</h4>
                         <div class="ds-form-group">
-                            <input class="ds-input-checkbox" type="checkbox" id="double-degree-all" data-all-control="double-degree-all" checked>
-                            <label class="ds-label" for="double-degree-all">All</label>
+                            <input class="ds-input-checkbox" type="checkbox" id="degree-all" data-all-control="degree-all" checked>
+                            <label class="ds-label" for="degree-all">All</label>
                         </div>
                         
                         <div class="ds-form-group">
-                            <input class="ds-input-checkbox" type="checkbox" id="degree-single" data-all-parent="double-degree-all">
-                            <label class="ds-label" for="degree-single">Single degree </label>
+                            <input class="ds-input-checkbox" type="checkbox" id="degree-single" data-all-parent="degree-all">
+                            <label class="ds-label" for="degree-single">Single degree</label>
                         </div>
             
                         <div class="ds-form-group">
-                            <input class="ds-input-checkbox" type="checkbox" id="degree-double" data-all-parent="double-degree-all">
+                            <input class="ds-input-checkbox" type="checkbox" id="degree-double" data-all-parent="degree-all">
                             <label class="ds-label" for="degree-double">Double degree</label>
                         </div>
                         </div>
@@ -354,6 +359,15 @@ disciplines:
                 </div>
                 <div class="filter__list">
                     <button class="ds-tag ds-tag--green" title="remove filter">Online</button>
+                </div>
+            </div>
+
+            <div id="degree-filter-tags" class="filter">
+                <div class="filter__heading">
+                    <strong>Degree type</strong>
+                </div>
+                <div class="filter__list">
+                    <button class="ds-tag ds-tag--green" title="remove filter">Double degree</button>
                 </div>
             </div>
 
