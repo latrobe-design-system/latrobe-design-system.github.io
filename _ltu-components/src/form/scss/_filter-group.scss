@@ -363,13 +363,13 @@
 
 
 .query-tag-message {
-    // display: none;
+    display: flex;
 
-    // @media (max-width: 500px) {  
-    //         & > span:first-child {
-    //         display: none !important; // don't override it with js
-    //         }
-    // }
+    @media (max-width: 500px) {  
+            & > span:first-child {
+            display: none !important; // don't override it with js
+            }
+    }
 }
     // #course-search {
     //         position: absolute;
@@ -386,4 +386,3 @@
     //     // z-index: 100;
     //     max-width: 100%;
     // }
-// }
