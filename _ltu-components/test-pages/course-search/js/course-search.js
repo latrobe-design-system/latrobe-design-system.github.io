@@ -13,6 +13,14 @@ $(document).ready(function() {
     var atarDefaultValue = $('#atar').attr('value'); // default atar value
     var atarValue = atarDefaultValue;
 
+    var searchState = {
+        currentState: '',
+        nextState: '',
+        relatedIsShowing: false,
+        queryTagMessageIsShowing: false,
+
+    }
+
     // sample list
     var autosuggestionResults = [
         "Business",
@@ -460,18 +468,26 @@ $(document).ready(function() {
 
         event.preventDefault();
 
-        $('#course-autosuggest').fadeOut();
+        // $("#related-terms-container").hide();
+        $('#course-autosuggest').hide();
 
         // simulate search
         query = $('#query_courses').val();
         $('#query_courses').val('');
         
-        $(this).find('#query-tag-container');
+        // $(this).find('#query-tag-container');
 
         if (query != '') {
             $(this).find('#query-tag-container').append('<button type="button" class="ds-tag ds-tag--green" title="remove filter">'+query+'</button>');
+            console.log('here')
+            $(".query-tag-message").show();
         }
 
+        if ( $(this).find('#query-tag-container .ds-tag') > 0 ) {
+            console.log("show message")
+            $(".query-tag-message").show();
+        }
+ 
         // turn on releveance filter and switch it on
         $('#sort-releveance').removeAttr('disabled').prop('checked', true);
         
@@ -499,6 +515,9 @@ $(document).ready(function() {
             $(this).addClass("ds-tag--add");
         } else {
             $(this).remove();
+            if ($("#query-tag-container .ds-tag").length === 0) {
+                $(".query-tag-message").hide();
+            }
         }
 
         query = '';
@@ -528,29 +547,29 @@ $(document).ready(function() {
     });
 
     $("#query_courses").keyup(function(e) {
-        
-        console.log('type20')
         var typedQuery = $("#query_courses").val();
 
         $('.ds-results-list__search-keywords').text(typedQuery);
         
         if ($("#query_courses").val().length > 1) {
-            console.log('show results/get server results', autosuggestionResults, typedQuery)
+            // console.log('show results/get server results', autosuggestionResults, typedQuery)
 
-            $("#course-autosuggest").fadeIn();
-            $(".ds-results-list").fadeIn();
+            // $("#course-autosuggest").fadeIn();
+            $("#related-terms-container").hide();
+            $(".ds-results-list").show();
 
             filteredList = autosuggestionResults.filter(result => { return result.toLowerCase().includes(typedQuery)});
 
             asList = filteredList.map(result => { return `<li class="ds-results-list-item">${result}</li>`});
 
             $(".autosuggest-results").html(asList);
-        } 
+        } else {
+            $("#related-terms-container").show();
+        }
     });
 
     $("#query_courses").keydown(function(e) {
         // down arrow pressed
-
         if (e.which === 40) {
             autosuggestionResultsIndex++;
                         
@@ -581,6 +600,7 @@ $(document).ready(function() {
         //create the tag
         $("#query_courses").val($(this).text());
         $("#course-search-submit").trigger("click");
+        $(".query-tag-message").show();
     });
 
     $("#query_courses").focus( function() {
@@ -592,19 +612,32 @@ $(document).ready(function() {
             $('.ds-input-group__prepend').addClass("input-focus-left-corner no-bottom-border");
     
             $("#query_courses").addClass("input-focus-right-corner no-outline");
-            $('#related-terms-container').show();
+
+            if (!searchState.relatedIsShowing) {
+                searchState.relatedIsShowing = true;
+                $('#related-terms-container').show();
+            }
         }
         
         // $("related-terms-container").show();
     });
 
     $("#query_courses").blur( function() {
-        $(this).removeClass("no-bottom-border");
+        $(this).removeClass("input-focus-right-corner no-bottom-border no-outline");
         $('.ds-input-group__prepend').removeClass("input-focus-left-corner no-bottom-border");
-
-        $("#query_courses").removeClass("input-focus-right-corner no-outline");
         $('.ds-input-group__prepend').removeClass("no-bottom-border");
-        $('#related-terms-container').hide();
-        // $('#related-terms-container').fadeOut();
+
+        $("#related-terms-container").removeClass("input-focus-right-corner no-outline");
+    });
+
+    $(document).on("click", function(e) {
+        // I'm sure there's a better way to target this
+        if (e.target.id === "query_courses" || e.target.id === "related-terms-container" || e.target.parentNode.id === "related-terms-container" || e.target.parentNode.id === "query-tag-container") {
+            // do nothing
+        } else {
+            searchState.relatedIsShowing = false;
+            $('#related-terms-container').hide();
+        }
+
     });
 });

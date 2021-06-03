@@ -293,20 +293,30 @@
 
 #course-autosuggest {
     display: none;
+    max-width: 70rem;
+
+    @media (max-width: 500px) {
+        // position: absolute;
+        // top: 5.5rem;
+        // width: 90%;
+    }
 }
 
 #related-terms-container {
     display: none;
 
-    height: 20vh;
+    min-height: 20vh;
     border: solid 2px config.$color-3b;
     border-top: transparent;
     margin-top: 0;
-    margin-right: 7.5rem;
     padding: config.spunits(4);
 
     & p {
         margin-top: 0;
+    }
+
+    @media (min-width: 767px) {
+        margin-right: 7.5rem;
     }
 }
 
@@ -337,4 +347,34 @@
 
 .expand {
     height: 40vh;
+}
+
+// #query-tag-container {
+//     @media (max-width: 500px) {
+//         display: block;
+
+//         > button {
+//             display: inline;
+//             // width: 100%;
+//             outline: solid 1px red;
+//         }
+//     }
+// }
+
+@media (max-width: 500px) {
+    // #course-search {
+    //         position: absolute;
+    //         top: 0;
+    //         padding-top: 2rem;
+    //         height: 100%;
+    //         background: white;
+    //         // z-index: 100;
+    // }
+
+    // .ds-filter-group {
+    //     position: absolute;
+    //     top: 6rem;
+    //     // z-index: 100;
+    //     max-width: 100%;
+    // }
 }
