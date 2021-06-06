@@ -294,12 +294,6 @@
 #course-autosuggest {
     display: none;
     max-width: 70rem;
-
-    @media (max-width: 500px) {
-        // position: absolute;
-        // top: 5.5rem;
-        // width: 90%;
-    }
 }
 
 #related-terms-container {
@@ -347,6 +341,10 @@
 
 .expand {
     height: 40vh;
+}
+
+.highlighted {
+    background-color: yellow;
 }
 
 // #query-tag-container {

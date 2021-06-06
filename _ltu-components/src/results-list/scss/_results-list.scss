@@ -2,32 +2,35 @@
 @use "config";
 
 .ds-results-list {
-    width: 75%;
+    width: 85%;
     margin-right: 0;
-    // position: relative;
-
-    // @extend .link-list;
-    position: absolute;
+    position: relative;
     z-index: 500;
     min-height: 20vh;
+    // max-height: 40vh;
     margin-top: 0;
     background: white;
-    border: solid 1px config.$color-3b;
-
-    & > ul {
-        // margin-top: -.75rem;
-    }
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    width: 100%;
 
     & li {
-        padding: config.spunits(2) config.spunits(4);
+        padding: config.spunits(4) config.spunits(6.5) config.spunits(4) config.spunits(4);
+        // position: relative;
         list-style: none;
+        margin-top: 0; //override text li styles
         margin-left: -2.5rem;
+        max-width: calc(100% + 2.5rem); //compensate margin-left
         display: block;
-        max-width: 120%;
         cursor: pointer;
 
         &:nth-child(odd) {
            background-color: config.$color-3; 
+        }
+
+        &:hover {
+            background-color: config.$color-3a;
         }
     }
 }

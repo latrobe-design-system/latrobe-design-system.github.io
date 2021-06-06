@@ -122,10 +122,10 @@ $(document).ready(function() {
         var filterTagsWrapper;
         var filterTags = '';
         
-        $('#discipline-filter-tags button').remove();
-        $('#location-filter-tags button').remove();
-        $('#study-filter-tags button').remove();
-        $('#degree-filter-tags button').remove();
+        $('#[*="-filter-tags"] button').remove();
+        // $('#location-filter-tags button').remove();
+        // $('#study-filter-tags button').remove();
+        // $('#degree-filter-tags button').remove();
         $('#ATAR-filter-tag button').remove();
 
         $('#discipline-filter-tags').hide();
@@ -548,6 +548,7 @@ $(document).ready(function() {
         if ( $(this).attr("data-saved") === "false" ) {
             $(this).attr("data-saved", "true");
             $(this).addClass('ds-icon-heart-filled');
+            $('.ds-icon-heart').not(this).parent().find(".interaction-note").hide();
             // implement functionality in your app    
             $(this).parent().find(".interaction-note").show();
         } else {
@@ -584,8 +585,7 @@ $(document).ready(function() {
     });
 
     $("#query_courses").keydown(function(e) {
-        // down arrow pressed
-        if (e.which === 40) {
+        if (e.key === 'Down') {
             autosuggestionResultsIndex++;
                         
             if (autosuggestionResultsIndex > filteredList.length) {
@@ -595,16 +595,14 @@ $(document).ready(function() {
             $("#query_courses").val($(filteredList[autosuggestionResultsIndex]).text());
         }
 
-         //up arrow pressed
-         if (e.which === 38) {
+         if (e.key === 'Up') {
             autosuggestionResultsIndex--;
             
             if (autosuggestionResultsIndex < filteredList.length ) {
                 autosuggestionResultsIndex = 0;
             }
             
-            $("#query_courses").val($(filteredList[autosuggestionResultsIndex]).text());
-            
+            $("#query_courses").val($(filteredList[autosuggestionResultsIndex]).text());        
         }
 
         $(asList[autosuggestionResultsIndex]).addClass("highlighted");

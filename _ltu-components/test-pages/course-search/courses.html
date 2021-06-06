@@ -86,15 +86,7 @@ localjs: "js/course-search.js"
                     <button class="ds-btn-primary ds-icon-search ds-icon--before ds-btn--icon-only-mobile" type="submit"
                         id="course-search-submit">Search</button>
                 </div>
-                <div id="related-terms-container">
-                    <p>Related to your search:</p>
-                    <button class="ds-tag ds-tag--add" data-search-type="related-term">Related term 1</button>
-                    <button class="ds-tag ds-tag--add" data-search-type="related-term">Related term 2</button>
-                    <button class="ds-tag ds-tag--add" data-search-type="related-term">Related term 3</button>
-                </div>
-            </div>
-        </form>
-        <div id="course-autosuggest" 
+                <div id="course-autosuggest" 
         class="ds-results-list">
                 <p class="ds-results-list__search-keywords ds-icon-search ds-icon--before">&ThickSpace;search keywords: "<span></span>"</p>
                 <p class="ds-results-list__suggested-keywords">Suggested keywords:</p>
@@ -106,6 +98,14 @@ localjs: "js/course-search.js"
                     <li class="ds-results-list-item">Marketing</li> -->
                 </ul>
         </div>
+                <div id="related-terms-container">
+                    <p>Related to your search:</p>
+                    <button class="ds-tag ds-tag--add" data-search-type="related-term">Related term 1</button>
+                    <button class="ds-tag ds-tag--add" data-search-type="related-term">Related term 2</button>
+                    <button class="ds-tag ds-tag--add" data-search-type="related-term">Related term 3</button>
+                </div>
+            </div>
+        </form>
 
         {% include sample-component.html snippet="ltu-components/src/form/snippets/filter-group/filter-group.html" %}
 
@@ -335,7 +335,7 @@ localjs: "js/course-search.js"
 
                 <div class="ds-card__body">
                     <h3 class="ds-card__heading">Master of Cybersecurity (Computer Science)</h3>
-                    <p class="ds-card__subheading">Graduate course</p>
+                    <p class="ds-card__subheading">Postgraduate course</p>
 
                     <div class="ds-tabs">
                         <div class="ds-tabs-nav" role="tablist">

@@ -56,6 +56,10 @@
     .ds-card {
         @media(min-width: 1280px) {
             flex-basis: calc(100% / 2 - #{config.$gutter});
+            
+            & td {
+                max-width: 40ch;
+            }
         }
     }
 
