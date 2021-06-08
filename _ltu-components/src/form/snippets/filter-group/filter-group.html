@@ -62,91 +62,69 @@ disciplines:
 ---
 
 <div class="ds-block">
-
     <div class="ds-filter-group">
-        <p class="ds-filter-group__nav">
-            <span class="ds-filter-group__nav__label">Refine by:</span>
-            <button id="filter-1-trigger"
+        <div id="related-terms-container">
+            <button class="ds-tag ds-tag--add" data-search-type="related-term">Related term 1</button>
+            <button class="ds-tag ds-tag--add" data-search-type="related-term">Related term 2</button>
+            <button class="ds-tag ds-tag--add" data-search-type="related-term">Related term 3</button>
+        </div>
+            <div class="ds-filter-group__nav">
+                <button id="show-course-filters" class="ds-btn ds-btn--small ds-btn--ghost ds-icon-filter ds-icon--before">Show filters</button>
+                <!-- <span class="ds-filter-group__nav__label">Refine by:</span> -->
+                <!-- <button id="filter-1-trigger"
                     class="ds-filter-group__nav__tab"
                     type="button" 
                     aria-controls="filter-1" 
-                    aria-expanded="false">Course level</button>
+                    aria-expanded="false">Course level</button> -->
             <button id="filter-2-trigger"
                     class="ds-filter-group__nav__tab" 
                     type="button"
                     aria-controls="filter-2" 
                     aria-expanded="false">Discipline</button>
             <button id="filter-3-trigger"
-                    class="ds-filter-group__nav__tab"
-                    type="button"
+            class="ds-filter-group__nav__tab"
+            type="button"
                     aria-controls="filter-3" 
                     aria-expanded="false">Location</button>
-            <button id="filter-4-trigger"
+                    <button id="filter-4-trigger"
                     class="ds-filter-group__nav__tab"
                     type="button"
                     aria-controls="filter-4" 
                     aria-expanded="false">Study mode</button>
-            <button id="filter-5-trigger"
+                    <button id="filter-5-trigger"
                     class="ds-filter-group__nav__tab" 
                     type="button"
                     aria-controls="filter-5" 
+                    aria-expanded="false">Degree type</button>
+                    <button id="filter-6-trigger"
+                    class="ds-filter-group__nav__tab" 
+                    type="button"
+                    aria-controls="filter-6" 
                     aria-expanded="false">ATAR</button>
-        </p>
-
-        <div class="ds-filter-group__content">
-
-            <!-- filter 1 content -->
-            <div id="filter-1" class="ds-filter-group__content__tab" role="region" aria-labelledby="filter-1-trigger" hidden>
-
-                <form id="level-filter" class="ds-form ds-filter-group__filter">
-
-                        <div class="ds-form-group">
-                            <input class="ds-input-checkbox" type="checkbox" id="level-all" data-all-control="level-all" value="" checked>
-                            <label class="ds-label" for="level-all">All</label>
-                        </div>
-                        
-                        <div class="ds-form-group">
-                            <input class="ds-input-checkbox" type="checkbox" id="level-undergraduate" data-all-parent="level-all" value="UG">
-                            <label class="ds-label" for="level-undergraduate">Undergraduate</label>
-                        </div>
-
-                        <div class="ds-form-group">
-                            <input class="ds-input-checkbox" type="checkbox" id="level-postgraduate" data-all-parent="level-all" value="PG">
-                            <label class="ds-label" for="level-postgraduate">Postgraduate</label>
-                        </div>
-
-                        <div class="ds-form-group">
-                            <input class="ds-input-checkbox" type="checkbox" id="level-short-course" data-all-parent="level-all" value="SC">
-                            <label class="ds-label" for="level-short-course">Short courses</label>
-                        </div>
-
-                        <div class="ds-form-group">
-                            <button class="ds-filter-group__filter__apply">Apply</button>
-                        </div>
-
-                </form>
-
             </div>
-
-            <!-- filter 2 content -->
-            <div id="filter-2" class="ds-filter-group__content__tab" role="region" aria-labelledby="filter-2-trigger" hidden>
-                
-                <form id="discipline-filter" class="ds-form ds-filter-group__filter">
-
+            
+            <div class="ds-filter-megamenu ds-filter-group__content__tab" style="display: none;">
+                <div class="ds-filter-megamenu__filters">
+                    <div id="discipline-filter" class="ds-filter-group__filter ds-filter-megamenu__section">
+                    <h4>Discipline</h4>
                     <div class="ds-form-group">
                         <input class="ds-input-checkbox" type="checkbox" id="discipline-all" data-all-control="discipline-all" checked>
                         <label class="ds-label" for="discipline-all">All</label>
                     </div>
-
+            
                     {% for discipline in page.disciplines %}
                     <!-- {{ discipline.name }} -->
                     <div class="ds-form-group ds-form-group--two-layer">
-
+            
                         <input class="ds-input-checkbox" type="checkbox" id="discipline-{{ discipline.name | slugify }}" data-all-control="discipline-{{ discipline.name | slugify }}-all" data-all-parent="discipline-all">
-                        <label class="ds-label" for="discipline-{{ discipline.name | slugify }}">{{ discipline.name }}</label>
-                        
-                        <button type="button" class="ds-btn ds-btn--tiny ds-collapse__trigger" aria-controls="region-{{ forloop.index }}" aria-expanded="false">Sub-discipline</button>
+                        <label class="ds-label ds-filter-group__nav__label" for="discipline-{{ discipline.name | slugify }}" aria-controls="region-{{ forloop.index }}" aria-expanded="false">{{ discipline.name }} <span class="ds-icon-chevron-down"></span></label>
+
+                        <!-- <button type="button" class="ds-filter-group__nav__tab ds-collapse__trigger" aria-controls="region-{{ forloop.index }}" aria-expanded="false">{{ discipline.name }}</button> -->
+
+                        <!-- <button type="button" class="ds-filter-group__nav__tab ds-collapse__trigger" aria-controls="region-{{ forloop.index }}" aria-expanded="false">Sub-discipline</button> -->
                         <div id="region-{{ forloop.index }}" class="ds-collapse__content" role="region" hidden>
+                            <p class="ds-filter__link"><a href="#" class="ds-icon ds-icon-chevron-right">Visit this discipline page</a></p>
+                        
                             <div class="ds-form-group--two-layer__content ds-columns ds-columns--two-col">
                             {% for sub-discipline in discipline.sub-disciplines %}
                                 <div class="ds-form-group">
@@ -156,134 +134,250 @@ disciplines:
                             {% endfor %}
                         </div>
                         </div>
-
+            
                     </div>
                     {% endfor %}
-
-                    <div class="ds-form-group">
-                        <button class="ds-filter-group__filter__apply">Apply</button>
-                    </div>
-                </form>
-
-            </div>
-
-            <!-- filter 3 content -->
-            <div id="filter-3" class="ds-filter-group__content__tab" role="region" aria-labelledby="filter-3-trigger" hidden>
-
-                <form id="location-filter" class="ds-form ds-filter-group__filter">
-
+                </div>
+            
+                <div id="location-filter" class="ds-filter-megamenu__section ds-filter-group__filter">
+                    <h4>Location</h4>
                     <div class="ds-columns ds-columns--three-col">
-
+            
                         <div class="ds-form-group">
                             <input class="ds-input-checkbox" id="location-all" type="checkbox" value="all" data-all-control="location-all" checked>
                             <label class="ds-label" for="location-all">All</label>
                         </div>
-
+            
                         <div class="ds-form-group">
                             <input class="ds-input-checkbox" id="location-bu" type="checkbox" value="BU" data-all-parent="location-all">
                             <label class="ds-label" for="location-bu">Melbourne</label>
                         </div>
-
+            
                         <div class="ds-form-group">
                             <input class="ds-input-checkbox" id="location-aw" type="checkbox" value="WO" data-all-parent="location-all">
                             <label class="ds-label" for="location-aw">Albury-Wodonga</label>
                         </div>
-
+            
                         <div class="ds-form-group">
                             <input class="ds-input-checkbox" id="location-be" type="checkbox" value="BE" data-all-parent="location-all">
                             <label class="ds-label" for="location-be">Bendigo</label>
                         </div>
-
+            
                         <div class="ds-form-group">
                             <input class="ds-input-checkbox" id="location-ci" type="checkbox" value="CI" data-all-parent="location-all">
                             <label class="ds-label" for="location-ci">City</label>
                         </div>
-
+            
                         <div class="ds-form-group">
                             <input class="ds-input-checkbox" id="location-mi" type="checkbox" value="MI" data-all-parent="location-all">
                             <label class="ds-label" for="location-mi">Mildura</label>
                         </div>
-
+            
                         <div class="ds-form-group">
                             <input class="ds-input-checkbox" id="location-sh" type="checkbox" value="OT" data-all-parent="location-all">
                             <label class="ds-label" for="location-sh">Shepparton</label>
                         </div>
-
+            
                         <div class="ds-form-group">
                             <input class="ds-input-checkbox" id="location-sy" type="checkbox" value="SY" data-all-parent="location-all">
                             <label class="ds-label" for="location-sy">Sydney</label>
                         </div>
-
+            
                         <div class="ds-form-group">
                             <input class="ds-input-checkbox" id="location-ot" type="checkbox" value="OT" data-all-parent="location-all">
                             <label class="ds-label" for="location-ot">Other</label>
                         </div>
-
+            
                     </div>
-
-                    <div class="ds-form-group">
-                        <button class="ds-filter-group__filter__apply">Apply</button>
-                    </div>
-
-                </form>
-
             </div>
-
-            <!-- filter 4 content -->
-            <div id="filter-4" class="ds-filter-group__content__tab" role="region" aria-labelledby="filter-4-trigger" hidden>
-
-                <form id="mode-filter" class="ds-form ds-filter-group__filter">
-
-                    <div class="ds-form-group">
-                        <input class="ds-input-checkbox" type="checkbox" id="mode-all" data-all-control="mode-all" checked>
-                        <label class="ds-label" for="mode-all">All</label>
-                    </div>
-                    
-                    <div class="ds-form-group">
-                        <input class="ds-input-checkbox" type="checkbox" id="mode-on-campus" data-all-parent="mode-all">
-                        <label class="ds-label" for="mode-on-campus">On campus</label>
-                    </div>
-
-                    <div class="ds-form-group">
-                        <input class="ds-input-checkbox" type="checkbox" id="mode-online" data-all-parent="mode-all">
-                        <label class="ds-label" for="mode-online">Online</label>
-                    </div>
-
-                    <div class="ds-form-group">
-                        <button class="ds-filter-group__filter__apply">Apply</button>
-                    </div>
-                    
-                </form>
-
+            <div id="study-filter" class="ds-filter-megamenu__section ds-filter-group__filter">
+                    <h4>Study mode</h4>
+                        <div class="ds-form-group">
+                            <input class="ds-input-checkbox" type="checkbox" id="mode-all" data-all-control="mode-all" checked>
+                            <label class="ds-label" for="mode-all">All</label>
+                        </div>
+                        
+                        <div class="ds-form-group">
+                            <input class="ds-input-checkbox" type="checkbox" id="mode-on-campus" data-all-parent="mode-all">
+                            <label class="ds-label" for="mode-on-campus">On campus</label>
+                        </div>
+            
+                        <div class="ds-form-group">
+                            <input class="ds-input-checkbox" type="checkbox" id="mode-online" data-all-parent="mode-all">
+                            <label class="ds-label" for="mode-online">Online</label>
+                        </div>
             </div>
-
-            <!-- filter 5 content -->
-            <div id="filter-5" class="ds-filter-group__content__tab" role="region" aria-labelledby="filter-5-trigger" hidden>
+            <div id="degree-filter" class="ds-filter-megamenu__section ds-filter-group__filter">
+                    <h4>Degree type</h4>
+                        <div class="ds-form-group">
+                            <input class="ds-input-checkbox" type="checkbox" id="degree-all" data-all-control="degree-all" checked>
+                            <label class="ds-label" for="degree-all">All</label>
+                        </div>
+                        
+                        <div class="ds-form-group">
+                            <input class="ds-input-checkbox" type="checkbox" id="degree-single" data-all-parent="degree-all">
+                            <label class="ds-label" for="degree-single">Single degree</label>
+                        </div>
+            
+                        <div class="ds-form-group">
+                            <input class="ds-input-checkbox" type="checkbox" id="degree-double" data-all-parent="degree-all">
+                            <label class="ds-label" for="degree-double">Double degree</label>
+                        </div>
+                        </div>
+                        <div id="ds-filter_ATAR-megamenu__section" class="ds-filter-megamenu__section">     
+                        <h4>Estimated ATAR</h4>
+                        <div class="ds-grid">
+                            <div class="ds-grid__col-5">
+            
+                                <form id="ATAR-filter" class="ds-form ds-filter-group__filter">
+                                    <div class="ds-form-group ds-form-group--flex">
+                                        <label class="ds-label sr-only" for="atar">Max ATAR:</label>
+                                        <input class="ds-text-input ds-input--inline" id="atar" type="number" min="50" max="99.95" step="0.05" value="99.95">
+                                        <!-- <input type="reset" class="ds-btn" id="atar-value-clear" value="Reset"> -->
+                                        <input type="button" class="ds-btn ds-filter-group__filter__apply" id="atar-value-enter" value="Enter">
+                                    </div>
                 
-                <form id="ATAR-filter" class="ds-form ds-filter-group__filter">
-                    <div class="ds-form-group ds-form-group--inline">
-                        <label class="ds-label"  for="atar">Max ATAR:</label> 
-                        <input class="ds-text-input ds-input--inline" id="atar" type="number" min="50" max="99.95" step="0.05" value="99.95">
-                        <input type="reset" class="ds-btn" id="atar-value-clear" value="Reset">
-                    </div>
-
-                    <div class="ds-alert ds-alert--info" role="alert">
-                        <div class="ds-alert__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="8"></line></svg>
+                                </form>
+                            </div>
+                                    
+                            <div class="ds-grid__col-7">
+            
+                                <div class="ds-alert ds-alert--info" role="alert">
+                                    <div class="ds-alert__icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="8"></line></svg>
+                                    </div>
+                                    <div class="ds-alert__text">
+                                        <p>You may be eligible to have additional points added to this score by La&nbsp;Trobe by using our <a href="https://www.latrobe.edu.au/study/undergrad/atar-adjustment-factors-calculator" target="_blank">ATAR adjustment calculator</a> <small>(opens in new window)</small>.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+            
                         </div>
-                        <div class="ds-alert__text">
-                            <p>You may be eligible to have additional points added to this score by La&nbsp;Trobe by using our <a href="https://www.latrobe.edu.au/study/undergrad/atar-adjustment-factors-calculator" target="_blank">ATAR adjustment calculator</a> <small>(opens in new window)</small>.</p>
-                        </div>
-                    </div>
+                        <div class="ds-filter-megamenu__action">
+                            <button id="apply_filters" class="ds-filter-group__filter__apply">Apply filter</button>
+                            <button class="ds-btn ds-filter-group__filter__clear">Clear filter</button>
+                </div>
+            
 
-                    <div class="ds-form-group">
-                        <button class="ds-filter-group__filter__apply">Apply</button>
-                    </div>
-                </form>
+            <div class="ds-filter-group__content">
+
+                <!-- filter 1 content -->
+                <!-- <div id="filter-1" class="ds-filter-group__content__tab" role="region" aria-labelledby="filter-1-trigger" hidden>
+
+                    <form id="level-filter" class="ds-form ds-filter-group__filter">
+
+                            <div class="ds-form-group">
+                                <input class="ds-input-checkbox" type="checkbox" id="level-all" data-all-control="level-all" value="" checked>
+                                <label class="ds-label" for="level-all">All</label>
+                            </div>
+                            
+                            <div class="ds-form-group">
+                                <input class="ds-input-checkbox" type="checkbox" id="level-undergraduate" data-all-parent="level-all" value="UG">
+                                <label class="ds-label" for="level-undergraduate">Undergraduate</label>
+                            </div>
+
+                            <div class="ds-form-group">
+                                <input class="ds-input-checkbox" type="checkbox" id="level-postgraduate" data-all-parent="level-all" value="PG">
+                                <label class="ds-label" for="level-postgraduate">Postgraduate</label>
+                            </div>
+
+                            <div class="ds-form-group">
+                                <input class="ds-input-checkbox" type="checkbox" id="level-short-course" data-all-parent="level-all" value="SC">
+                                <label class="ds-label" for="level-short-course">Short courses</label>
+                            </div>
+
+                            <div class="ds-form-group">
+                                <button class="ds-filter-group__filter__apply">Apply</button>
+                            </div>
+
+                    </form>
+
+                </div> -->
+
+
+
+                <!-- filter 5 content -->
+                <!-- <div id="filter-5" class="ds-filter-group__content__tab" role="region" aria-labelledby="filter-5-trigger" hidden>
+                    
+                    <form id="ATAR-filter" class="ds-form ds-filter-group__filter">
+                        <div class="ds-form-group ds-form-group--inline">
+                            <label class="ds-label"  for="atar">Max ATAR:</label> 
+                            <input class="ds-text-input ds-input--inline" id="atar" type="number" min="50" max="99.95" step="0.05" value="99.95">
+                            <input type="reset" class="ds-btn" id="atar-value-clear" value="Reset">
+                        </div>
+
+                        <div class="ds-alert ds-alert--info" role="alert">
+                            <div class="ds-alert__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="8"></line></svg>
+                            </div>
+                            <div class="ds-alert__text">
+                                <p>You may be eligible to have additional points added to this score by La&nbsp;Trobe by using our <a href="https://www.latrobe.edu.au/study/undergrad/atar-adjustment-factors-calculator" target="_blank">ATAR adjustment calculator</a> <small>(opens in new window)</small>.</p>
+                            </div>
+                        </div>
+
+                        <div class="ds-form-group">
+                            <button class="ds-filter-group__filter__apply">Apply</button>
+                        </div>
+                    </form>
+
+                </div> -->
 
             </div>
+                </div>
+            </div>
 
+            <div id="discipline-filter-tags" class="filter">
+                    <div class="filter__heading">
+                        <strong>Disciplines</strong>
+                    </div>
+
+                    <div class="filter__list">
+                        <button class="ds-tag ds-tag--green" title="remove filter">Arts, social sciences and communications</button>
+                        
+                        <button class="ds-tag ds-tag--green" title="remove filter">Business and commerce</button>
+
+                        <button class="ds-tag ds-tag--green" title="remove filter">Education and teaching</button>
+                        
+                    </div>
+            </div>
+            <div id="location-filter-tags" class="filter">
+                <div class="filter__heading">
+                    <strong>Location</strong>
+                </div>
+
+                <div class="filter__list">     
+                    <button class="ds-tag ds-tag--green" title="remove filter">Melbourne</button>
+                    
+                    <button class="ds-tag ds-tag--green" title="remove filter">Albury-Wodonga</button>
+                </div>
+            </div>
+
+            <div id="study-filter-tags" class="filter">
+                <div class="filter__heading">
+                    <strong>Study mode</strong>
+                </div>
+                <div class="filter__list">
+                    <button class="ds-tag ds-tag--green" title="remove filter">Online</button>
+                </div>
+            </div>
+
+            <div id="degree-filter-tags" class="filter">
+                <div class="filter__heading">
+                    <strong>Degree type</strong>
+                </div>
+                <div class="filter__list">
+                    <button class="ds-tag ds-tag--green" title="remove filter">Double degree</button>
+                </div>
+            </div>
+
+            <div id="ATAR-filter-tag" class="filter">
+                <div class="filter__heading">
+                    <strong>ATAR</strong>
+                </div>
+                <div class="filter__list">
+                    <button class="ds-tag ds-tag--green" title="remove filter">60.50</button>
+                </div>
+            </div>
         </div>
-    </div>
-
 </div>

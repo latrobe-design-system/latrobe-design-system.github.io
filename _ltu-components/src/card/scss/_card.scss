@@ -54,6 +54,12 @@
     margin-top: 0;
 }
 
+.ds-card__subheading {
+    color: config.$color-alt-3;
+    font-size: config.$p;
+    font-weight: 500;
+}
+
 .ds-card__link-text {
     @extend .ds-icon-chevron-right;
     @extend .ds-icon--red;
@@ -202,6 +208,74 @@
     }
 }
 
+.ds-card__save--course-search {
+    & + .interaction-note {
+        background-color: #fff;
+        box-shadow: 0 0 4px rgba(0,0,0,0.4);
+        box-sizing: border-box;
+        color: #242424;
+        display: none;
+        padding: 20px 48px 20px 20px;
+        position: absolute;
+        text-align: center;
+        // left: 170px;
+        // bottom: -20px;
+        top: calc(100% - 3rem);
+        min-width: 268px;
+        max-width: 30vw;
+        z-index: 100;
+
+        @media (min-width: 459px) {
+            // left: calc(100vw / 6);
+            left: calc(100vw / 2.5);
+        }
+
+        @media (min-width: 720px) {
+            left: calc(100vw / 6);
+        }
+
+        @media (min-width: 1280px) {
+            top: calc(100% - 4rem);
+        }
+
+        @media (min-width: 1940px) {
+            // outline: purple 1px solid;
+            left: calc(100vw / 12);
+        }
+
+        &::before {
+            color: #fff;
+            content: "\25B2";
+            display: block;
+            position: absolute;
+            left: 85px;
+            top: -16px;
+            transform: scale(1.5);
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .close-note {
+            background: transparent url("icons/feather/x-circle.svg") no-repeat center;
+            border: 0;
+            height: 48px;
+            padding: 0;
+            position: absolute;
+            right: 0;
+            top: 6px;
+            width: 48px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: config.$color-3a;
+
+            }
+        }
+    }
+}
+
 .ds-card__tag {
     display: inline-block;
     position: absolute;
@@ -219,4 +293,24 @@
     @extend .ds-card__tag;
 
     background: config.$color-alt-3;
+}
+
+
+.ds-card__tag-course {
+    @extend .ds-card__tag;
+
+    background: config.$color-3a;
+    color: config.$color-2;
+    float: right;
+    // font-weight: bold;
+    font-weight: 500;
+    position: relative;
+}
+ 
+.ds-card__actions {
+    margin-top: config.spunits(2);
+    @media (min-width: 485px) {
+        display: flex;
+        gap: config.spunits(3);
+    }
 }
