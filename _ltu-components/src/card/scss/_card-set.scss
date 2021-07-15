@@ -52,6 +52,27 @@
     }
 }
 
+.ds-card-set--2max {
+    .ds-card {
+        @media(min-width: 1280px) {
+            flex-basis: calc(100% / 2 - #{config.$gutter});
+            
+            & td {
+                max-width: 40ch;
+            }
+        }
+    }
+
+    @supports(display: grid) {       
+        @media(min-width: 1280px) {
+            margin-right: 0;
+            display: grid;
+            grid-column-gap: #{config.$gutter};        
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
 .ds-card-set--3max {
     .ds-card {
         @media(min-width: 1280px) {

@@ -1,0 +1,33 @@
+---
+title: "Form with tags"
+status: draft
+
+type: block
+
+label: Label
+id: id
+placeholder: placeholder
+hint: This is a hint.
+---
+
+<form class="ds-form ds-form--full-width" action="/courses">
+    <div class="ds-form-group" id="our-course-search">
+        <label class="ds-label h2 ds-reduce-margin" for="query_courses">Find your course</label>
+        <div class="ds-input-group">
+            <div class="ds-input-group__prepend">
+                <span class="ds-input-group__text ds-input-group__text--bg-transparent"><span class="ds-icon-search ds-icon--red ds-icon--before"></span></span>
+            </div>
+            <div class="ds-input-group__prepend ds-input-group__buttons">
+                <button class="ds-btn ds-btn-tag ds-btn--small ds-icon-x" data-filter="Commerce" aria-label="Close">Commerce</button>
+                <button class="ds-btn ds-btn-tag ds-btn--small ds-icon-x" data-filter="online" aria-label="Close">online</button>
+                <button class="ds-btn ds-btn-tag ds-btn--small ds-icon-x" data-filter="full-time" aria-label="Close">full-time</button>
+            </div>
+            <input type="hidden" name="collection" value="course-search">
+            <div class="awesomplete"><input class="ds-text-input" type="search" id="query_courses" placeholder="Search for a course by keyword, course …" autocomplete="off" aria-autocomplete="list"><ul hidden=""></ul><span class="visually-hidden" role="status" aria-live="assertive" aria-relevant="additions"></span></div>
+            <input type="submit" id="course-search-submit" value="Search">
+        </div>
+    </div>
+    <div class="ds-block">
+        
+    </div>
+</form>

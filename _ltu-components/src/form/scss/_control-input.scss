@@ -24,12 +24,16 @@
 .ds-control-group--inline {
 
     // inline control groups are set to scroll on small screens
-    @include config.overflowXScroll();
+    // @include config.overflowXScroll();
 
     // all children
     > .ds-form-group {
         display: inline-block;
         margin: config.spunits(1) config.spunits(4) 0 0;
+
+        @media (max-width: 320px) {
+            display: block;
+        } 
     }
 
     // last child
@@ -41,6 +45,12 @@
         width: auto;
         margin-top: config.spunits(1);
         margin-right: config.spunits(2);
+
+        @media (max-width: 916px) {
+            display: block;
+            width: 100%;
+            // border: solid 1px red;
+        }
     }
 
     // toggle-tokens modifier
@@ -51,8 +61,5 @@
             margin-right: 0;
 
         }
-
     }
-
 }
-

@@ -10,6 +10,10 @@
     border: 2px solid config.$color-3b;
     border-radius: 20px;
     background: config.$color-3a;
+
+    @media (max-width: 388px) {
+        border-radius: 30px;
+    }
 }
 
 a.ds-tag,
@@ -62,4 +66,50 @@ button.ds-tag {
 .ds-tag--green {
     border-color: config.$green;
     background-color: lighten(config.$green, 50%);
+
+    &:not(:last-child) {
+        margin-right: config.spunits(1.5);
+    }
+
+    // @media(max-width: 1280px) {
+    //     display: block;
+    // }
+}
+
+button.ds-tag--add {
+    /* remove browser styling from button element */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    display: inline-block; // older browsers
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: text-decoration 0.3s ease-in-out; // for hover
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; // for hover
+    background-color: transparent;
+    margin-right: config.spunits(1);
+
+    &::after {
+        content: "";
+        display: inline-block;
+        vertical-align: top;
+        width: 1em;
+        height: 1em;
+        margin: 0 config.spunits(1);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        filter: config.$filter-near-black;
+        background-image: url("icons/feather/plus.svg");
+
+        margin-right: 0;
+    }
+
+    &:hover {
+        //text-decoration: underline;
+        transform: translateY(-4px);
+        box-shadow: config.$shadow-2;
+    }
 }
