@@ -205,12 +205,13 @@
         box-shadow: config.$shadow-2;
         margin-top: config.spunits(2);
         padding: config.spunits(2);
+        position: sticky;
 
-        @media(max-width: 600px)
-        {
-            position: sticky;
-            bottom: 0;
-        }
+        // @media(max-width: 600px)
+        // {
+        //     position: sticky;
+        //     bottom: 0;
+        // }
     }
 
     .ds-input-checkbox:checked+label {

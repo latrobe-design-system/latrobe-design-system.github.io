@@ -22,48 +22,65 @@ $(document).ready(function() {
     }
 
     // sample list
-    var autosuggestionResults = [
-        "Business",
-        "Marketing",
-        "Management",
-        "Business and commerce",
-        "Business and law"
-    ];
+    // var autosuggestionResults = [
+    //     "Business",
+    //     "Marketing",
+    //     "Management",
+    //     "Business and commerce",
+    //     "Business and law"
+    // ];
 
     // More complex sample list
-    // var autosuggestionResults = [
-    //     {
-    //         searchTerm: "business",
-    //         relatedTerms: [
-    //             "Business",
-    //             "Marketing",
-    //             "Management",
-    //             "Business and commerce",
-    //             "Business and law"
-    //         ]
-    //     },
-    //     {
-    //         searchTerm: "arts",
-    //         relatedTerms: [
-    //             "archaeology",
-    //             "creative arts",
-    //             "international relations",
-    //             "politics"
-    //         ]
-    //     },
-    //     {
-    //         searchTerm: "IT and engineering",
-    //         relatedTerms: [
-    //             "computer science",
-    //             "cybersecurity",
-    //             "civil engineering"
-    //         ]
-    //     },
-    // ]
+    var autosuggestionResults = [
+        {
+            searchTerm: "business",
+            relatedTerms: [
+                "Business",
+                "Marketing",
+                "Management",
+                "Business and commerce",
+                "Business and law"
+            ]
+        },
+        {
+            searchTerm: "arts",
+            relatedTerms: [
+                "archaeology",
+                "creative arts",
+                "international relations",
+                "politics"
+            ]
+        },
+        {
+            searchTerm: "IT and engineering",
+            relatedTerms: [
+                "computer science",
+                "cybersecurity",
+                "civil engineering"
+            ]
+        },
+        {
+            searchTerm: "Business and commerce",
+            relatedTerms: [
+                "Marketing and management",
+                "Technology management",
+                "Economics"
+            ]
+        },
+        {
+            searchTerm: "Health",
+            relatedTerms: [
+                "Psychology, counselling and social work",
+                "Nursing, midwifery and paramedicine",
+                "Public health"
+            ]
+        },
+    ]
 
     var autosuggestionResultsIndex = 0;
     var filteredList = [];
     var asList = [];
+    var relatedTermsList = [];
 
     /* for UX testing - demo modal student type picker
 
@@ -510,7 +527,8 @@ $(document).ready(function() {
         
     });
 
-    $('#related-terms-container .ds-tag').on("click", function() {
+    $('#related-terms-container').on("click", ".ds-tag", function() {
+        console.log('test add');
         $("#query-tag-container").append(this);
         $(this).removeClass("ds-tag--add").addClass("ds-tag--green");
     })
@@ -574,10 +592,16 @@ $(document).ready(function() {
             $("#related-terms-container").hide();
             $(".ds-results-list").show();
 
-            filteredList = autosuggestionResults.filter(result => { return result.toLowerCase().includes(typedQuery)});
+            filteredList = autosuggestionResults.filter(result => { return result.searchTerm.toLowerCase().includes(typedQuery)});
 
-            asList = filteredList.map(result => { return `<li class="ds-results-list-item">${result}</li>`});
+            console.log('fl', filteredList, filteredList[0].relatedTerms);
 
+
+            asList = filteredList.map(result => { return `<li class="ds-results-list-item">${result.searchTerm}</li>`});
+
+            console.log('as', asList);
+
+            // flat is es6 only
             $(".autosuggest-results").html(asList);
         } else {
             $("#related-terms-container").show();
@@ -618,6 +642,14 @@ $(document).ready(function() {
 
     $("#query_courses").focus( function() {
         if ($('#query-tag-container .ds-tag').length > 0) {
+            var testTerms = filteredList.map(result => result.relatedTerms.map(result => { return `${result}`}));
+            var testTerms2 = testTerms.flat();
+            relatedTermsList = testTerms2.map(result =>  { return `<button class="ds-tag ds-tag--add" data-search-type="related-term">${result}</button>` });
+
+            // TODO: also check if a term is already added, and do not show/or do not add it again
+
+            $('#related-terms-container').html(relatedTermsList);
+
             $('#related-terms-container').addClass("ds-text-input__focus-bottom");
 
             $("#query_courses").addClass("ds-text-input__related-search no-bottom-border");
