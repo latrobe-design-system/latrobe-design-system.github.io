@@ -1,0 +1,62 @@
+.ds-explainer {
+    position: relative;
+    display: inline-flex;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    
+    &::after {
+        width: 16px;
+        filter: invert(63%) sepia(0%) saturate(231%) hue-rotate(209deg) brightness(97%) contrast(94%);
+    }
+
+    &:active,
+    &:hover {
+
+        &::after {
+            filter: invert(48%) sepia(98%) saturate(1281%) hue-rotate(136deg) brightness(86%) contrast(101%);
+        }
+        
+        .ds-explainer-text {
+            visibility: visible;
+
+            &[data-position="top"] {
+                display: block;
+                position: absolute;
+                left: 0;
+                top: -3rem;
+                width: 20rem; 
+            }
+        }
+    }
+
+    .ds-explainer-text {
+        visibility: hidden;
+        padding: 8px;
+        position: absolute;
+        z-index: 1;
+        left: 100%;
+        min-width: 100px;
+        background-color: #f2fbfa;
+        border: 1px solid #00AA98;
+        width: 11rem;
+        top: 0;
+        word-break: normal;
+        text-align: left;
+        line-height: 1.5rem;
+        font-size: .8rem;
+        white-space: normal;
+
+        &[data-position="top"] {
+            display: none;  
+        }
+    }
+    
+    @media (max-width: 700px) {
+        .ds-explainer-text[data-position="top"] {
+            left: -14rem;
+            top: -10rem;
+        }
+    }
+}
