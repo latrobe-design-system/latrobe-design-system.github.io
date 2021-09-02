@@ -5,16 +5,19 @@ title: "Explainer (top)"
 text: "When used in a form, you can use data-position=\"top\" to position an explainer above the indicator."
 ---
 
-<div class="ds-block">
-<div class="ds-form--group ds-grid">
-    <label class="ds-label" :for="'subject-dropdown-' + field" x-text="field === 1 ? 'An English subject' : 'Choose a subject'" for="subject-dropdown-1">An English subject</label>
-    <select class="ds-select" :id="'subject-dropdown-' + field" @change="selectedSubjectList" id="subject-dropdown-1">
-      <option value="" x-text="prompt">Choose an English subject</option>
-      <template x-for="subject in dataSource">
-        <option :value="subject.name" x-text="subject"></option>
-      </template><option :value="subject.name" x-text="subject">English</option><option :value="subject.name" x-text="subject">English (EAL)</option><option :value="subject.name" x-text="subject">English Language</option><option :value="subject.name" x-text="subject">Literature</option>
-    </select>
-    <label class="ds-label ds-flex" for="subject-raw-1">Raw <button class="ds-explainer ds-icon-help-circle"><span class="ds-explainer-text" data-position="top">Your raw score is a number between 0–50 and is based on your results from school assessments and examinations. This score, determined by the VCAA, reflects how you performed compared to all other students who studied the same subject.</span></button></label>
-    <input class="ds-text-input" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="--" value="" maxlength="2" id="subject-raw-1">
+<div class="ds-block--narrow">
+    <div class="ds-form--group ds-flex">
+        <label class="ds-label" for="subject-dropdown-1">An English subject</label>
+        <select class="ds-select" id="subject-dropdown-1">
+            <option value="">Choose an English subject</option>
+            <option value="English">English</option>
+            <option value="English (EAL)">English (EAL)</option>
+            <option value="English Language">English Language</option>
+            <option value="Literature">Literature</option>
+        </select>
+    </div>
+    <div class="ds-form--group ds-flex">
+        <label class="ds-label ds-flex" for="subject-raw-1">Raw <button class="ds-explainer ds-icon-help-circle"><span class="ds-explainer-text" data-position="top">Your raw score is a number between 0–50 and is based on your results from school assessments and examinations. This score, determined by the VCAA, reflects how you performed compared to all other students who studied the same subject.</span></button></label>
+        <input class="ds-text-input" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="--" value="" maxlength="2" id="subject-raw-1">
+    </div>
   </div>
-</div>
