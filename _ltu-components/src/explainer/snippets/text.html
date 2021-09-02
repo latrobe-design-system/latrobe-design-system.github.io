@@ -2,36 +2,38 @@
 status: ready
 
 title: "Explainer"
-text: "Use an explainer (different from a tooltip) for non-essential, contextual helper information. Crucial information should not be included as part of an explainer, or .sr-only used."
+text: "Use an explainer (different from a tooltip) for non-essential, contextual helper information. Crucial information should not be included as part of an explainer, or <code>.sr-only</code> used for screen readers."
 ---
 
 <div class="ds-block">
+    <div class="ds-table--wrapper">
     <table>
         <tr>
-            <td style="display:flex">
+            <td>
               <span>N/A</span>
               <button class="ds-explainer ds-icon-help-circle">
                 <span class="ds-explainer-text">N/A: Students not accepted in this category</span>
               </button>
             </td>
-            <td><a target="_blank" href="/courses/bachelor-of-applied-business">Bachelor of Applied Business</a></td>
+            <td><a target="_blank" href="https://latrobe.edu.au/courses/bachelor-of-applied-business">Bachelor of Applied Business</a></td>
             <td data-location-code="ON">Online</td>
           </tr>
-          <tr x-show="numCourseDisplayed > i" x-transition:enter-start="grow-start" x-transition:enter="grow" x-transition:enter-end="grow-end" class="">
-            <td style="display:flex">
-              <span x-text="course.minSelectionRank || 'View on course page'">N/P</span>
-              <button x-show="course.minSelectionRank == 'N/A'" class="ds-explainer ds-icon-help-circle" style="display: none;">
+          <tr>
+            <td>
+              <span>N/P</span>
+              <button class="ds-explainer ds-icon-help-circle">
                 <span class="ds-explainer-text">N/A: Students not accepted in this category</span>
               </button>
-              <button x-show="course.minSelectionRank == 'N/P'" class="ds-explainer ds-icon-help-circle">
+              <button class="ds-explainer ds-icon-help-circle">
                 <span class="ds-explainer-text">N/P: Not published (includes categories with less than five students).</span>
               </button>
-              <button x-show="course.minSelectionRank == 'NC'" class="ds-explainer ds-icon-help-circle" style="display: none;">
+              <button class="ds-explainer ds-icon-help-circle">
                 <span class="ds-explainer-text">NC: New course</span>
               </button>
             </td>
-            <td><a :href="course.urlPath" x-text="course.title" @click="setFACDefaults(course)" target="_blank" href="/courses/bachelor-of-accounting">Bachelor of Accounting</a></td>
-            <td :data-location-code="course.locationCode" x-text="course.locationName" data-location-code="SY">Sydney</td>
+            <td><a target="_blank" href="https://latrobe.edu.au/courses/bachelor-of-accounting">Bachelor of Accounting</a></td>
+            <td data-location-code="SY">Sydney</td>
           </tr>
     </table>
+</div>
 </div>
