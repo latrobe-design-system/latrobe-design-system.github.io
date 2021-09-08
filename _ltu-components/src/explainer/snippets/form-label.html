@@ -1,12 +1,11 @@
 ---
 status: ready
-
 title: "Explainer (top)"
-text: "When used in a form, you can use data-position=\"top\" to position an explainer above the indicator."
+text: "When used in a form, you can use <code>ds-explainer-text--top</code> or <code>data-position=[\"top\"]</code> to position an explainer above the indicator."
 ---
 
-<div class="ds-block--narrow">
-    <div class="ds-form--group ds-flex">
+<div class="ds-block--narrow ds-grid">
+    <div class="ds-form--group ds-grid__col-6">
         <label class="ds-label" for="subject-dropdown-1">An English subject</label>
         <select class="ds-select" id="subject-dropdown-1">
             <option value="">Choose an English subject</option>
@@ -16,8 +15,8 @@ text: "When used in a form, you can use data-position=\"top\" to position an exp
             <option value="Literature">Literature</option>
         </select>
     </div>
-    <div class="ds-form--group ds-flex">
-        <label class="ds-label ds-flex" for="subject-raw-1">Raw <button class="ds-explainer ds-icon-help-circle"><span class="ds-explainer-text" data-position="top">Your raw score is a number between 0–50 and is based on your results from school assessments and examinations. This score, determined by the VCAA, reflects how you performed compared to all other students who studied the same subject.</span></button></label>
+    <div class="ds-form--group ds-grid__col-1">
+        <label class="ds-label ds-flex" for="subject-raw-1">Raw <button class="ds-explainer ds-icon-help-circle"><span class="ds-explainer-text ds-explainer-text--top">Your raw score is a number between 0–50 and is based on your results from school assessments and examinations. This score, determined by the VCAA, reflects how you performed compared to all other students who studied the same subject.</span></button></label>
         <input class="ds-text-input" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="--" value="" maxlength="2" id="subject-raw-1">
     </div>
   </div>

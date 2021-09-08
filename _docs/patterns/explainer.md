@@ -4,7 +4,7 @@ status: ready
 title: "Explainer"
 ---
 
-The card component is used to provide a brief summary of content or a task, usually with a link to more detail. 
+The explainer is used to provide additional context for a term. It should never be used for core content.
 {: .intro}
 
 ## Explainer

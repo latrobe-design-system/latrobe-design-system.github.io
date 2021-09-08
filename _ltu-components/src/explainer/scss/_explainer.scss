@@ -21,6 +21,7 @@
         .ds-explainer-text {
             visibility: visible;
 
+            &--top,
             &[data-position="top"] {
                 display: block;
                 position: absolute;
@@ -48,12 +49,14 @@
         font-size: .8rem;
         white-space: normal;
 
+        &--top,
         &[data-position="top"] {
             display: none;  
         }
     }
     
     @media (max-width: 700px) {
+        .ds-explainer--top,
         .ds-explainer-text[data-position="top"] {
             left: -14rem;
             top: -10rem;
