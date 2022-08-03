@@ -32,13 +32,21 @@
     @extend .ds-input-checkbox--toggle;
 
     & + label {
+        &::before {
+            height: config.spunits(6);
+            width: config.spunits(6);
+            border-radius: 50%;
+            left: config.spunits(3);
+            top: 0;
+        }
+
         /* checkmark of fake radio */
         &::after {
-            height: config.spunits(2.5);
-            width: config.spunits(2.5);
+            height: config.spunits(3);
+            width: config.spunits(3);
             background: config.$green;
-            left: 1.2rem;
-            top: 0.68rem;
+            left: config.spunits(4.5);
+            top: config.spunits(2.5);
         }
     }
 

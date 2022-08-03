@@ -364,3 +364,28 @@ input[type="submit"] {
         }
     }
 }
+
+/* ghost button modifier */
+.ds-btn--ghost {
+    @extend .ds-btn-secondary;
+    background-color: white;
+    border: solid 2px config.$color-3c;
+    color: config.$color-2;
+    // margin: config.spunits(2);
+
+    &[class*="ds-icon-"].ds-icon--before::before {
+        filter: config.$filter-near-black;
+    }
+
+    &__active {
+        @extend .ds-btn--ghost;
+        background-color: white;
+        border: solid 2px config.$green;
+        color: config.$green;
+
+        &[class*="icon-"]::after,
+        &[class*="ds-icon-"].ds-icon--before::before {
+            filter: config.$filter-green;
+        }
+    }
+}
