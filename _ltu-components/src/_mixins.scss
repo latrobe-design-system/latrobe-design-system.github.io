@@ -9,13 +9,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: $alignment;
-    margin-right: -#{variables.$gutter};
+    gap: 0 variables.$gutter;
+
     & > * {
         flex: 1;
         flex-grow: 1;
         flex-shrink: 0;
         flex-basis: $basis-width;
-        margin: 1rem variables.$gutter 0 0;
+        margin: 1rem 0 0 0;
     }
 }
 @mixin columns-grid($basis-width: 264px, $alignment: center, $wrap: auto-fit) {
@@ -32,7 +33,7 @@
 }
 
 // @include overflowXScroll to make box horizontal scroll
-// optiontionally provide a breakpoint at which to back to normal flow - useful when you want scroll on mobile only 
+// optiontionally provide a breakpoint at which to back to normal flow - useful when you want scroll on mobile only
 @mixin overflowXScroll($break-point: nil) {
 
     @if $break-point != nil {
@@ -60,5 +61,5 @@
         }
         -ms-overflow-style: none;
     }
-    
+
 }
