@@ -110,7 +110,7 @@ async function scripts () {
 function jekyllBuild (done) {
 
   spawn(
-    'jekyll',
+    'bundle exec jekyll',
     [
       'build',
       '--config',

@@ -339,3 +339,17 @@ q:before {
 q:after {
     content: close-quote;
 }
+
+ol.ds-ordered-list-mixed {
+    > li > ol {
+        list-style-type: lower-alpha;
+
+        > li > ol {
+            list-style-type: lower-roman;
+
+            > li > ol {
+                list-style-type: circle;
+            }
+        }
+    }
+}
