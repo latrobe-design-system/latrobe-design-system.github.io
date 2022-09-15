@@ -831,6 +831,7 @@
         width: 100vw;
         z-index: -1;
 
+        max-width: 100%;
         overflow-x: hidden; // fix safari overflow issue
     }
 
