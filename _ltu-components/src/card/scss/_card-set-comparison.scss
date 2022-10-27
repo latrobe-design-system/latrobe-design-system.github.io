@@ -1,0 +1,166 @@
+@use "config";
+@use "core/scss/icons";
+
+.ds-card-set--comparison {
+    display: flex;
+    gap: 1rem;
+    // flex-wrap: nowrap;
+    // overflow-x: scroll;
+    @include config.overflowXScroll();
+    white-space: normal;
+    flex-wrap: nowrap;
+    justify-content: left;
+
+    & .ds-card {
+        min-width: 300px;
+        box-shadow: none;
+    }
+
+    & .ds-card:hover {
+        transform: none;
+    }
+
+    & .ds-card__info {
+        height: 20rem;
+    }
+
+    & .ds-btn-primary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    & .ds-card__link-text {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.ds-scroll-left,
+.ds-scroll-right {
+    // position: absolute;
+    height: 20rem;
+    position: relative;
+    // float: right;
+    // top: 40px;
+    // right: 20px;
+    // background: #00aa98;
+    // // display: none;
+    // align-items: center;
+    // justify-content: center;
+    // width: 3rem;
+    // height: 11.25rem;
+    // border-radius: 4px;
+    // box-shadow: 0 8px 8px 0 rgb(0 0 0 / 5%);
+    // z-index: 4;
+    // margin-top: -10px;
+}
+
+.ds-card__status {
+    position: absolute;
+    background-color: config.$color-3a;
+    display: block;
+    // margin-left: 1.25rem;
+    top: 10.75rem;
+    margin-top: -1rem;
+    padding: .75rem .25rem;
+    color: #000;
+    width: 13.75rem;
+    font-size: .875rem;
+    font-weight: 400;
+    text-align: center;
+
+    &[data-status="open"] {
+        background-color: config.$color-1;
+        color: white;
+    }
+
+    &[data-status="closed"] {
+        background-color: #eee;
+    }
+
+    &[data-status="prepare"] {
+        background-color: #eafbe2;
+    }
+
+    &[data-status="advance"] {
+        background-color: #fce882;
+        color: black;
+    }
+}
+
+.ds-card__status-info {
+    padding-bottom: 1.5rem;
+    border-bottom: dotted 3px config.$color-3c;
+}
+
+.ds-card-set-scroll-button {
+    position: absolute;
+    background: #fff;
+    cursor: pointer;
+    border: none;
+    top: 10rem;
+    height: 8rem;
+    z-index: 10;
+    background: #00aa98;
+    border-radius: 4px;
+    // // display: none;
+    // align-items: center;
+    // justify-content: center;
+    // width: 3rem;
+    // height: 11.25rem;
+    // border-radius: 4px;
+    // box-shadow: 0 8px 8px 0 rgb(0 0 0 / 5%);
+    // z-index: 4;
+    // margin-top: -10px;
+}
+
+.ds-card-set-scroll-button:after {
+    // filter: invert(27%) sepia(86%) saturate(5872%) hue-rotate(353deg) brightness(92%) contrast(92%);
+    filter: config.$filter-white;
+    width: 44px;
+    height: 44px;
+}
+
+.ds-scroll-left {
+    left: 5rem;
+}
+
+.ds-scroll-right {
+    right: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .ds-scroll-right:before {
+        content:" ";
+        height: 100rem;
+        background: linear-gradient(to left,rgba(255,255,255,1),rgba(255,255,255,0));
+        width: 5rem;
+        left: -10rem;
+        position: absolute
+    }
+
+    .ds-scroll-left:before {
+        content: " ";
+        height: 100rem;
+        background: linear-gradient(to right,rgba(255,255,255,1),rgba(255,255,255,0));
+        width: 5rem;
+        right: -5rem;
+        position: absolute
+    }
+
+    .ds-card-set-scroll {
+        overflow-x: hidden
+    }
+}
+
+.ds-card-set-scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 24px
+}
+
+@media only screen and (max-width: 767px) {
+    .ds-card-set-scroll-button {
+        display:none
+    }
+}
