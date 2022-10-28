@@ -20,6 +20,11 @@
         transform: none;
     }
 
+    & .ds-card__heading {
+        margin-top: 2rem;
+        margin-bottom: .5rem;
+    }
+
     & .ds-card__info {
         height: 20rem;
     }
@@ -89,6 +94,7 @@
 }
 
 .ds-card__status-info {
+    height: 4.5rem;
     padding-bottom: 1.5rem;
     border-bottom: dotted 3px config.$color-3c;
 }

@@ -31,4 +31,4 @@ Dev note: Further test pages [here](/ltu-components/test-pages/card-set/).
 
 ## Card Set comparison
 
-{% include sample-iframe.html snippet="src/proofpoint/snippets/card-set-comparison.html" %}
+{% include sample-iframe.html snippet="src/card/snippets/card-set-comparison.html" %}
