@@ -12,7 +12,10 @@
     justify-content: left;
 
     & .ds-card {
-        min-width: 300px;
+        // min-width: 300px;
+        // min-width: 450px;
+        min-width: 22rem;
+        max-width: 22rem;
         box-shadow: none;
     }
 
@@ -26,6 +29,9 @@
     }
 
     & .ds-card__info {
+        border-top: dotted 3px config.$color-3b;
+        margin-top: config.spunits(8);
+        padding-top: config.spunits(4);
         height: 20rem;
     }
 
@@ -37,6 +43,12 @@
     & .ds-card__link-text {
         display: flex;
         justify-content: center;
+    }
+
+    & .ds-card__header {
+        // position: fixed;
+        min-width: 22rem;
+        max-width: 22rem;
     }
 }
 
@@ -65,13 +77,14 @@
     background-color: config.$color-3a;
     display: block;
     // margin-left: 1.25rem;
-    top: 10.75rem;
+    // top: 10.75rem;
+    top: 13rem;
     margin-top: -1rem;
     padding: .75rem .25rem;
     color: #000;
     width: 13.75rem;
     font-size: .875rem;
-    font-weight: 400;
+    font-weight: 500;
     text-align: center;
 
     &[data-status="open"] {
@@ -94,9 +107,8 @@
 }
 
 .ds-card__status-info {
-    height: 4.5rem;
+    // height: 4.5rem;
     padding-bottom: 1.5rem;
-    border-bottom: dotted 3px config.$color-3c;
 }
 
 .ds-card-set-scroll-button {
@@ -105,7 +117,8 @@
     cursor: pointer;
     border: none;
     top: 10rem;
-    height: 8rem;
+    // height: 8rem;
+    height: 11.5rem;
     z-index: 10;
     background: #00aa98;
     border-radius: 4px;
@@ -127,32 +140,70 @@
     height: 44px;
 }
 
-.ds-scroll-left {
-    left: 5rem;
-}
-
-.ds-scroll-right {
-    right: 2rem;
+.ds-card__header--sticky {
+    // position: sticky;
+    // top: 420px;
+    padding-top: 420px;
 }
 
 @media only screen and (min-width: 768px) {
-    .ds-scroll-right:before {
-        content:" ";
-        height: 100rem;
-        background: linear-gradient(to left,rgba(255,255,255,1),rgba(255,255,255,0));
-        width: 5rem;
-        left: -10rem;
-        position: absolute
+.ds-scroll-right {
+    // right: 2rem;
+    right: 8rem;
+    z-index: 30;
     }
 
-    .ds-scroll-left:before {
-        content: " ";
-        height: 100rem;
-        background: linear-gradient(to right,rgba(255,255,255,1),rgba(255,255,255,0));
-        width: 5rem;
-        right: -5rem;
-        position: absolute
+    .ds-card-set--comparison__first::before,
+    .ds-card-set--comparison__last::after {
+        display: none;
     }
+
+    .ds-card-set--comparison::before {
+        content: " ";
+        height: 100%;
+        background: linear-gradient(to right, white, transparent);
+        width: 10rem;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .ds-card-set--comparison::after {
+        content: " ";
+        height: 100%;
+        background: linear-gradient(to left, white, transparent);
+        width: 10rem;
+        right: 10rem;
+        position: absolute;
+        z-index: 20;
+        }
+
+    // .ds-scroll-right:before {
+    //     content:" ";
+    //     height: 100rem;
+    //     background: linear-gradient(to left,rgba(255,255,255,1), transparent);
+    //     width: 10rem;
+    //     // left: -10rem;
+    //     left: -4rem;
+    //     position: absolute;
+    //     z-index: -1;
+    // }
+    
+    .ds-scroll-left {
+        // left: 5rem;
+        left: 8rem;
+        z-index: 30;
+    }
+
+    // .ds-scroll-left:before {
+    //     content: " ";
+    //     height: 100rem;
+    //     background: linear-gradient(to right,rgba(255,255,255,1),transparent);
+    //     width: 10rem;
+    //     // right: -5rem;
+    //     right: -4rem;
+    //     position: absolute;
+    //     z-index: -1;
+    // }
 
     .ds-card-set-scroll {
         overflow-x: hidden
