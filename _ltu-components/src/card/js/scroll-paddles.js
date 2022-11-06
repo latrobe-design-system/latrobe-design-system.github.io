@@ -8,14 +8,15 @@ $(document).ready(function() {
 
 
 let options = {
-  // root: document.querySelector('h2'),
-  // rootMargin: '150px',
-  threshold: 1
+  // root: document.querySelector('.ds-card-set--comparison'),
+  // rootMargin: '-50px',
+  threshold: 0.6
 }
 
 let observer = new IntersectionObserver(dostuff, options);
 
-let observedElements = document.querySelectorAll('.ds-card__checklist');
+// let observedElements = document.querySelectorAll('.ds-card__body');
+let observedElements = document.querySelectorAll('.ds-card__body');
 
 observedElements.forEach(target => {
   observer.observe(target);
@@ -31,15 +32,32 @@ function dostuff(entries) {
   entries.map((entry) => {
     if (entry.isIntersecting) {
       console.log('intersect!')
+      // document.querySelectorAll('.ds-card__header').forEach(element => {
+      //   element.classList.add('ds-card__header--sticky');
+      // })
       document.querySelectorAll('.ds-card__header').forEach(element => {
-        element.classList.add('ds-card__header--sticky');
-        element.querySelector('.ds-card__image').style.display = 'none';
+        // element.classList.add('ds-card__header--sticky');
+        // $(element).hide();
+      })
+      document.querySelectorAll('.ds-card__status-info').forEach(element => {
+        // element.classList.add('ds-card__status-info--sticky');
+      })
+      document.querySelectorAll('.ds-card__cta').forEach(element => {
+        // element.classList.add('ds-card__cta--sticky');
+      })
+      document.querySelectorAll('.ds-card__body').forEach(element => {
+        // element.classList.add('ds-card__body--transition');
       })
     } else {
       console.log('not intersecting...')
+      // document.querySelectorAll('.ds-card__header').forEach(element => {
+      //   element.classList.remove('ds-card__header--sticky');
+      // })
       document.querySelectorAll('.ds-card__header').forEach(element => {
         element.classList.remove('ds-card__header--sticky');
-        element.querySelector('.ds-card__image').style.display = 'block';
+      })
+      document.querySelectorAll('.ds-card__body').forEach(element => {
+        element.classList.remove('ds-card__body--transition');
       })
     }
   });

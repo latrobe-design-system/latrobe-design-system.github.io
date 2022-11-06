@@ -1,6 +1,18 @@
 @use "config";
 @use "core/scss/icons";
 
+.ds-card-set--comparison-container {
+    display: flex;
+    position: relative;
+}
+
+@media (min-width: 1880px) {
+    .ds-card-set--comparison-container {
+        max-width: 1880px;
+        display: flex;
+    }
+}
+
 .ds-card-set--comparison {
     display: flex;
     gap: 1rem;
@@ -11,73 +23,64 @@
     flex-wrap: nowrap;
     justify-content: left;
 
-    & .ds-card {
-        // min-width: 300px;
-        // min-width: 450px;
-        min-width: 22rem;
-        max-width: 22rem;
+    .ds-card {
+        @media(min-width: 1281px) {
+            // width: 22rem;
+            flex-basis: calc(100% / 3.5 - #{config.$gutter});
+        }
+        // min-width: 22rem;
+        // max-width: 22rem;
+
+        @media(min-width: 700px) {
+            // flex-basis: calc(2000px / 4 - #{config.$gutter});
+        }
+        
         box-shadow: none;
     }
-
-    & .ds-card:hover {
+    
+    .ds-card:hover {
         transform: none;
     }
 
-    & .ds-card__heading {
+    // & .ds-card__image {
+    //     transform: none;
+    // }
+
+    .ds-card__heading {
         margin-top: 2rem;
         margin-bottom: .5rem;
     }
 
-    & .ds-card__info {
+    .ds-card__info {
         border-top: dotted 3px config.$color-3b;
         margin-top: config.spunits(8);
         padding-top: config.spunits(4);
         height: 20rem;
     }
 
-    & .ds-btn-primary {
+    .ds-btn-primary {
         width: 100%;
         justify-content: center;
     }
 
-    & .ds-card__link-text {
+    .ds-card__link-text {
         display: flex;
         justify-content: center;
     }
 
-    & .ds-card__header {
+    .ds-card__header {
         // position: fixed;
-        min-width: 22rem;
-        max-width: 22rem;
+        // min-width: 22rem;
+        // max-width: 22rem;
+       width: 350px;
+        transition: all .25s;
     }
-}
-
-.ds-scroll-left,
-.ds-scroll-right {
-    // position: absolute;
-    height: 20rem;
-    position: relative;
-    // float: right;
-    // top: 40px;
-    // right: 20px;
-    // background: #00aa98;
-    // // display: none;
-    // align-items: center;
-    // justify-content: center;
-    // width: 3rem;
-    // height: 11.25rem;
-    // border-radius: 4px;
-    // box-shadow: 0 8px 8px 0 rgb(0 0 0 / 5%);
-    // z-index: 4;
-    // margin-top: -10px;
 }
 
 .ds-card__status {
     position: absolute;
     background-color: config.$color-3a;
     display: block;
-    // margin-left: 1.25rem;
-    // top: 10.75rem;
     top: 13rem;
     margin-top: -1rem;
     padding: .75rem .25rem;
@@ -106,59 +109,103 @@
     }
 }
 
+@media (max-width: 703px) {
+    .ds-card-set--comparison {
+        .ds-card__status {
+            position: static;
+        }
+    }
+}
+
+@media (min-width: 1441px) {
+    .ds-card-set--comparison {
+        .ds-card__status {
+            top: 11.5rem;
+        }
+    }
+}
+
 .ds-card__status-info {
-    // height: 4.5rem;
     padding-bottom: 1.5rem;
 }
 
+
 .ds-card-set-scroll-button {
-    position: absolute;
-    background: #fff;
-    cursor: pointer;
-    border: none;
-    top: 10rem;
-    // height: 8rem;
-    height: 11.5rem;
-    z-index: 10;
     background: #00aa98;
     border-radius: 4px;
-    // // display: none;
-    // align-items: center;
-    // justify-content: center;
-    // width: 3rem;
-    // height: 11.25rem;
-    // border-radius: 4px;
-    // box-shadow: 0 8px 8px 0 rgb(0 0 0 / 5%);
-    // z-index: 4;
-    // margin-top: -10px;
+    border: none;
+    cursor: pointer;
+    height: 11.5rem;
+    top: 10rem;
+    position: absolute;
+    // position: relative;
+    // left: -1rem;
+    z-index: 30;
+
+    &:after {
+        filter: config.$filter-white;
+        height: 44px;
+        width: 44px;
+    }
 }
 
-.ds-card-set-scroll-button:after {
-    // filter: invert(27%) sepia(86%) saturate(5872%) hue-rotate(353deg) brightness(92%) contrast(92%);
-    filter: config.$filter-white;
-    width: 44px;
-    height: 44px;
+.ds-scroll-left {
+    left: -1rem;
+}
+
+.ds-scroll-right {
+    right: 1rem;
+
+}
+
+@media(max-width: 1023px) {
+    .ds-card-set-scroll-button {
+        // height: 10rem;
+    }
 }
 
 .ds-card__header--sticky {
-    // position: sticky;
+    position: sticky;
     // top: 420px;
-    padding-top: 420px;
+    // padding-top: 420px;
+    padding-left: 2rem;
+    transform: translateY(15rem);
+    transition: all 1.25s ease-in-out;
+    z-index: 25;
+}
+
+.ds-card__heading--sticky,
+.ds-card__status-info--sticky,
+.ds-card__cta--sticky {
+    transform: translateY(15rem);
+    z-index: 25;
+    background: white;
+    transition: all .5s ease-in-out;    
+}
+
+
+.ds-card__body--transition {
+    color:red;
+    transition: all;
 }
 
 @media only screen and (min-width: 768px) {
-.ds-scroll-right {
-    // right: 2rem;
-    right: 8rem;
-    z-index: 30;
-    }
-
+    // .ds-scroll-right {
+    //     right: 2rem;
+    //     z-index: 30;
+    // }
+      
+    // .ds-scroll-left {
+    //     left: 2rem;
+    //     z-index: 30;
+    // }
     .ds-card-set--comparison__first::before,
     .ds-card-set--comparison__last::after {
         display: none;
     }
 
-    .ds-card-set--comparison::before {
+    .ds-card-set--comparison::before,
+    .ds-card-set--comparison::after {
         content: " ";
         height: 100%;
         background: linear-gradient(to right, white, transparent);
@@ -169,55 +216,81 @@
 
     .ds-card-set--comparison::after {
         content: " ";
-        height: 100%;
         background: linear-gradient(to left, white, transparent);
-        width: 10rem;
-        right: 10rem;
-        position: absolute;
-        z-index: 20;
+        right: 0;
+        z-index: 1;
         }
 
-    // .ds-scroll-right:before {
-    //     content:" ";
-    //     height: 100rem;
-    //     background: linear-gradient(to left,rgba(255,255,255,1), transparent);
-    //     width: 10rem;
-    //     // left: -10rem;
-    //     left: -4rem;
-    //     position: absolute;
-    //     z-index: -1;
-    // }
-    
-    .ds-scroll-left {
-        // left: 5rem;
-        left: 8rem;
-        z-index: 30;
-    }
-
-    // .ds-scroll-left:before {
-    //     content: " ";
-    //     height: 100rem;
-    //     background: linear-gradient(to right,rgba(255,255,255,1),transparent);
-    //     width: 10rem;
-    //     // right: -5rem;
-    //     right: -4rem;
-    //     position: absolute;
-    //     z-index: -1;
-    // }
 
     .ds-card-set-scroll {
-        overflow-x: hidden
+        overflow-x: hidden;
     }
+}
+
+// .ds-scroll-left {
+//     position: relative;
+//     left: 1rem;
+// }
+
+// .ds-scroll-right {
+//     position: relative;
+//     right: 1rem;
+// } 
+
+@media only screen and (max-width: 1879px) {   
+    // .ds-scroll-left {
+    //     left: 0;
+    // }
+    // .ds-scroll-right {
+    //     right: 0;
+    // } 
+}
+
+@media only screen and (min-width: 1880px) {   
+    // .ds-scroll-left {
+    //     position: relative;
+    //     left: 1rem;
+    // }
+
+    // .ds-scroll-right {
+    //     position: relative;
+    //     right: 1rem;
+    // } 
 }
 
 .ds-card-set-scroll {
     display: flex;
     flex-wrap: nowrap;
-    padding-bottom: 24px
+    padding-bottom: 24px;
 }
 
 @media only screen and (max-width: 767px) {
     .ds-card-set-scroll-button {
-        display:none
+        display: none;
     }
+}
+
+
+.ds-card-set-comparison--3max { 
+    .ds-card {
+
+        @media(min-width: 1280px) {
+            flex-basis: calc(100% / 3 - #{config.$gutter});
+        }
+        
+        .ds-card__status {
+            top: 16rem;
+        }
+
+        .ds-card__heading {
+            margin-top: 1.5rem;
+        }
+    }
+
+    @supports(display: grid) {
+        @media(min-width: 1280px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
 }
