@@ -28,12 +28,6 @@
             // width: 22rem;
             flex-basis: calc(100% / 3.5 - #{config.$gutter});
         }
-        // min-width: 22rem;
-        // max-width: 22rem;
-
-        @media(min-width: 700px) {
-            // flex-basis: calc(2000px / 4 - #{config.$gutter});
-        }
         
         box-shadow: none;
     }
@@ -41,10 +35,6 @@
     .ds-card:hover {
         transform: none;
     }
-
-    // & .ds-card__image {
-    //     transform: none;
-    // }
 
     .ds-card__heading {
         margin-top: 2rem;
@@ -59,6 +49,7 @@
     }
 
     .ds-btn-primary {
+        margin-top: 1rem;
         width: 100%;
         justify-content: center;
     }
@@ -266,9 +257,17 @@
     padding-bottom: 24px;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 550px) {
+    .ds-card-set--comparison-container {
+        margin-top: 4rem;
+    }
+
     .ds-card-set-scroll-button {
         display: none;
+    }
+
+    .ds-card-__status {
+        margin-top: -3rem !important;
     }
 }
 
