@@ -69,20 +69,17 @@
     }
 
     .ds-card__header {
-        // position: fixed;
-        // min-width: 22rem;
-        // max-width: 22rem;
-    //    width: 350px;
         transition: all .25s;
     }
 }
 
 .ds-card__status {
-    position: absolute;
+    // position: absolute;
+    position: relative;
     background-color: config.$color-3a;
     display: block;
-    top: 13rem;
-    margin-top: -1rem;
+    // top: 13rem;
+    margin-top: -3.5rem !important;
     padding: .75rem .25rem;
     color: #000;
     width: 13.75rem;
@@ -112,7 +109,7 @@
 @media (max-width: 703px) {
     .ds-card-set--comparison {
         .ds-card__status {
-            position: static;
+            // position: static;
         }
     }
 }
@@ -120,7 +117,7 @@
 @media (min-width: 1441px) {
     .ds-card-set--comparison {
         .ds-card__status {
-            top: 11.5rem;
+            // top: 11.5rem;
         }
     }
 }
@@ -133,19 +130,18 @@
 .ds-card-set-scroll-button {
     background: #00aa98;
     border-radius: 4px;
+    padding: 0 .5rem;
     border: none;
     cursor: pointer;
     height: 11.5rem;
-    top: 10rem;
+    top: 3rem;
     position: absolute;
-    // position: relative;
-    // left: -1rem;
     z-index: 30;
 
     &:after {
         filter: config.$filter-white;
-        height: 44px;
-        width: 44px;
+        height: 32px;
+        width: 32px;
     }
 }
 
@@ -154,7 +150,7 @@
 }
 
 .ds-scroll-right {
-    right: 1rem;
+    right: -1rem;
 
 }
 
@@ -208,16 +204,22 @@
     .ds-card-set--comparison::after {
         content: " ";
         height: 100%;
-        background: linear-gradient(to right, white, transparent);
-        width: 10rem;
+        width: 15rem;
         position: absolute;
+        z-index: 1;
+    }
+
+    .ds-card-set--comparison::before {
+        content: " ";
+        background: linear-gradient(to right, white, transparent);
+        left: -.1rem;
         z-index: 1;
     }
 
     .ds-card-set--comparison::after {
         content: " ";
         background: linear-gradient(to left, white, transparent);
-        right: 0;
+        right: -.1rem;
         z-index: 1;
         }
 
