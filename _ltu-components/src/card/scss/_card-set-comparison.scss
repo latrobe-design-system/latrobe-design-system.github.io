@@ -6,6 +6,18 @@
     position: relative;
 }
 
+.ds-card__info {
+    border-top: dotted 3px config.$color-3b;
+    margin-top: config.spunits(8);
+    padding-top: config.spunits(4);
+    // height: 10rem;
+    display: inline-block;
+}
+
+.ds-card__checklist {
+    display: inline-block;
+}
+
 @media (min-width: 1880px) {
     .ds-card-set--comparison-container {
         max-width: 1880px;
@@ -39,13 +51,6 @@
     .ds-card__heading {
         margin-top: 2rem;
         margin-bottom: .5rem;
-    }
-
-    .ds-card__info {
-        border-top: dotted 3px config.$color-3b;
-        margin-top: config.spunits(8);
-        padding-top: config.spunits(4);
-        height: 20rem;
     }
 
     .ds-btn-primary {
@@ -125,7 +130,7 @@
     border: none;
     cursor: pointer;
     height: 11.5rem;
-    top: 3rem;
+    top: 8rem;
     position: absolute;
     z-index: 30;
 
@@ -171,21 +176,25 @@
 }
 
 
-.ds-card__body--transition {
-    color:red;
-    transition: all;
+// .ds-card__body--transition {
+//     transition: all;
+// }
+
+.swipe-to-view {
+    padding: config.spunits(4) 0;
+}
+
+@media only screen and (min-width: 551px) {
+    .ds-card-set--comparison {
+        margin-top: config.spunits(8);
+    }
+    
+    .swipe-to-view {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 768px) {
-    // .ds-scroll-right {
-    //     right: 2rem;
-    //     z-index: 30;
-    // }
-      
-    // .ds-scroll-left {
-    //     left: 2rem;
-    //     z-index: 30;
-    // }
     .ds-card-set--comparison__first::before,
     .ds-card-set--comparison__last::after {
         display: none;
@@ -285,6 +294,11 @@
 
         .ds-card__heading {
             margin-top: 1.5rem;
+        }
+
+        .ds-card-set--comparison__first,
+        .ds-card-set--comparison__last {
+            display: none;
         }
     }
 
