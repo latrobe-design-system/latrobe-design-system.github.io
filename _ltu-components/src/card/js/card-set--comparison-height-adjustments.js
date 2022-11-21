@@ -17,15 +17,18 @@ function dynamicHeights() {
     const cardElementSet = document.querySelectorAll('.ds-card-set--comparison .ds-card');
 
     cardElementSet.forEach(element => {
-        const cardHeading = element.querySelector('.ds-card__heading')
-        const cardStatusInfo = element.querySelector('.ds-card__status-info')
+        const cardHeading = element.querySelector('.ds-card__heading');
+        const cardStatusInfo = element.querySelector('.ds-card__status-info');
         const cardInfo = element.querySelector('.ds-card__info');
         const cardChecklist = element.querySelector('.ds-card__checklist');
         const cardAccordionSet = element.querySelectorAll('.ds-accordion .ds-accordion__trigger');
 
-        if (cardHeading.clientHeight > tallestCardHeading) {
-            tallestCardHeading = cardHeading.clientHeight;
+        if (cardHeading !== null) {
+            if (cardHeading.clientHeight > tallestCardHeading) {
+                tallestCardHeading = cardHeading.clientHeight;
+            }
         }
+
 
         if (cardStatusInfo.clientHeight > tallestCardStatusInfo) {
             tallestCardStatusInfo = cardStatusInfo.clientHeight;
@@ -35,8 +38,12 @@ function dynamicHeights() {
             tallestCardInfo = cardInfo.clientHeight;
         }
 
-        if (cardChecklist.clientHeight > tallestCardChecklist) {
-            tallestCardChecklist = cardChecklist.clientHeight;
+        if (cardChecklist !== null) {
+            if (cardChecklist.clientHeight > tallestCardChecklist) {
+                tallestCardChecklist = cardChecklist.clientHeight;
+            }
+        } else {
+            console.log('no')
         }
 
         cardAccordionSet.forEach((accordion, index) => {
