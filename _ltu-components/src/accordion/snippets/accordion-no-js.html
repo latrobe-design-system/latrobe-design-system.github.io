@@ -1,0 +1,50 @@
+---
+status: ready
+
+title: "Accordion - example 4"
+text: This exmple demostrates  use case of using presentation from design system but skipping JavaScript applied to related DOM. Applying <b>ds-no-js</b> CSS class to trigger element (element with <b>ds-accordion__trigger</b> CSS class) to avoid JS handlers applied.
+---
+
+<div class="ds-block ds-block-accordion">
+
+    <div class="ds-accordion">
+        <h3>
+            <button id="sect1trigger" class="ds-accordion__trigger ds-no-js" aria-expanded="false" aria-controls="sect1">
+                <span class="ds-accordion__title">
+                    Item
+                </span>
+            </button>
+        </h3>
+        <div id="sect1" class="ds-accordion__content" role="region" aria-labelledby="sect1trigger">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Duis auteirure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="ds-block ds-block-accordion">
+
+    <div class="ds-accordion">
+        <h3>
+            <button id="sect2trigger" class="ds-accordion__trigger ds-no-js" aria-expanded="false" aria-controls="sect2">
+                <span class="ds-accordion__title">
+                    Item
+                </span>
+            </button>
+        </h3>
+        <div id="sect2" class="ds-accordion__content" role="region" aria-labelledby="sect2trigger">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Duis auteirure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+jQuery(document).ready(function($) {
+    $(".ds-accordion__trigger").click(() => {
+        alert('This is custom click handler!');
+    })
+})
+</script>
