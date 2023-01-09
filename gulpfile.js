@@ -1,9 +1,8 @@
-const spawn = require('cross-spawn')
+const { exec } = require('node:child_process');
 const browserSync = require('browser-sync')
 const del = require('del')
 const gulp = require('gulp')
-const sass = require('gulp-sass')
-sass.compiler = require('sass')
+const sass = require('gulp-sass')(require('sass'))
 const sourcemaps = require("gulp-sourcemaps")
 const rollup = require('rollup').rollup
 const rollupMulti = require('@rollup/plugin-multi-entry')
@@ -108,14 +107,8 @@ async function scripts () {
 }
 
 function jekyllBuild (done) {
-
-  spawn(
-    'bundle exec jekyll',
-    [
-      'build',
-      '--config',
-      config.jekyll.default
-    ],
+  exec(
+    `bundle exec jekyll build --config ${config.jekyll.default}`,
     {
       env: process.env,
       stdio: 'inherit'
@@ -123,7 +116,6 @@ function jekyllBuild (done) {
   )
   .on('close', reload)
   .on('exit', done)
-
 }
 
 function watch (done) {
