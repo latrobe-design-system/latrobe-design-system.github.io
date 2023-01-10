@@ -10,9 +10,9 @@
 
     <link rel="stylesheet" href="{{ site.url }}/ltu-components/dist/css/ds-ltu.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
     <link rel="stylesheet" href="{{ site.url }}/ltu-components/dist/css/ltu-legacy.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
-    
+
     <!--@@ load jquery in head so that usable in body @@-->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -49,7 +49,7 @@ if(window.outerWidth <= mobileBreakingPoint){
                         <a href="#">Level 3</a>
                         <a href="#">Level 4</a>
                     </div>
-                
+
                 </div>{% endif %}
 
                 <article class="ds-page-content">
@@ -72,7 +72,7 @@ if(window.outerWidth <= mobileBreakingPoint){
     <script src="{{ site.url }}/ltu-components/dist/js/ds-ltu.js?v={{ site.time | date: '%Y%m%d%H%M%S' }}"></script>
 
     <!-- include ltu legacy code for nav sample -->
-    <script src="{{ site.url }}/ltu-components/dist/js/ltu-legacy.js?v={{ site.time | date: '%Y%m%d%H%M%S' }}"></script>  
+    <script src="{{ site.url }}/ltu-components/dist/js/ltu-legacy.js?v={{ site.time | date: '%Y%m%d%H%M%S' }}"></script>
 
     <!-- include local script if defined in front matter -->
     {% if page.localjs %}<script src="{{ page.localjs }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}"></script>{% endif %}
