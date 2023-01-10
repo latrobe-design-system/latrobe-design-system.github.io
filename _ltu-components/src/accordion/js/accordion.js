@@ -7,15 +7,21 @@ jQuery(document).ready(function($) {
  	//do jQuery stuff when DOM is ready
 
     // show all default open accordions
-    $( ".ds-accordion__trigger" ).each(function() {
-        if($(this).attr('aria-expanded') == 'true') {
-            $(this).parent().next(".ds-accordion__content").show();
-        }
-    });
+    const dsOpenAccordionOnLoad = (selector) => {
+        selector = selector || ".ds-accordion__trigger:not(.ds-no-js)"
+        $( selector ).each(function() {
+            if($(this).attr('aria-expanded') == 'true') {
+                $(this).parent().next(".ds-accordion__content").show();
+            }
+        });
+    }
+
+    window.dsOpenAccordionOnLoad = dsOpenAccordionOnLoad
+
+    dsOpenAccordionOnLoad();
 
     // click handler for accordions
-    $( ".ds-accordion__trigger" ).click(function() {
-
+    jQuery(document).on('click', '.ds-accordion__trigger:not(.ds-no-js)', function(event) {
         if ($(this).attr('aria-expanded') == 'true') {
             $(this).attr( 'aria-expanded', 'false');
         } else {
