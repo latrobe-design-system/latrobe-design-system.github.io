@@ -1,4 +1,5 @@
 // depenencies
+@use "sass:math";
 @use "config";
 
 .ds-promo {
@@ -61,7 +62,7 @@
     > :first-child {
         margin-top: 0;
     }
-    
+
 }
 
 .ds-promo__heading {
@@ -93,8 +94,8 @@
         @media(min-width: 1024px) {
             content: "";
             display: block;
-            width: 0; 
-            height: 0; 
+            width: 0;
+            height: 0;
             border-left: 146px solid transparent;
             border-right: 0px solid transparent;
             border-bottom: 107px solid #fff;
@@ -104,7 +105,7 @@
         }
 
     }
-    
+
 }
 
 .ds-promo__image-wrapper {
@@ -113,7 +114,7 @@
     position: relative;
     overflow: hidden;
     height: 0;
-    padding-top: 2/3 * 100%;
+    padding-top: math.div(2, 3) * 100%;
 
     img {
         width: 100%;
@@ -127,7 +128,7 @@
         width: auto;
     }
 
-    
+
 }
 
 
