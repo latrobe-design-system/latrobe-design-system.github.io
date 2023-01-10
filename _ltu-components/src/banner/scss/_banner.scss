@@ -1,4 +1,5 @@
 // depenencies
+@use "sass:math";
 @use "config";
 @use "text/scss/text";
 
@@ -41,7 +42,7 @@
     padding: config.spunits(8) 20px config.spunits(8) 20px;
     position: relative;
     z-index: 1;
-    
+
     // button group always at bottom
     display: flex;
     flex-direction: column;
@@ -81,7 +82,7 @@
 
     @media(min-width: 768px) {
         background-color: rgba(255,255,255,0.95);
-        width: 2 / 3 * 100%;
+        width: math.div(2, 3) * 100%;
         min-height: 360px;
         padding: config.spunits(8) config.spunits(7) config.spunits(8) config.spunits(10);
     }
@@ -106,7 +107,7 @@
         object-fit: cover;
     }
 
-    
+
     @media(min-width: 768px) {
         position: absolute;
         padding-bottom: 0;
@@ -115,8 +116,8 @@
         &::after {
             content: "";
             display: block;
-            width: 0; 
-            height: 0; 
+            width: 0;
+            height: 0;
             border-left: 146px solid transparent;
             border-right: 0px solid transparent;
             border-bottom: 107px solid #fff;

@@ -1,4 +1,5 @@
 // depenencies
+@use "sass:math";
 @use "config";
 
 //
@@ -7,11 +8,11 @@
 
 html {
     font-size: 16px;
-    line-height: (24 / 16); // effectively 8px more than 16
+    line-height: math.div(24, 16); // effectively 8px more than 16
 
     @media(min-width: 1441px){
         font-size: 18px; // increase base font size for large displays
-        line-height: (26 / 18);  // effectively 8px more than 18
+        line-height: math.div(26, 18);  // effectively 8px more than 18
     }
 }
 
