@@ -52,7 +52,7 @@
     $(window).resize(function () {
         $('iframe').each(function () {
             var iframeId = $(this).attr('id');
-            console.log(iframeId);
+            // console.log(iframeId);
             setIframeHeight(this);
         });
     });
@@ -84,7 +84,7 @@
             var hash = this.hash;
             if (target.length == 0) target = $('a[name="' + this.hash.substr(1) + '"]');
             if (target.length == 0) target = $('html');
-            console.log(target);
+            // console.log(target);
             // If the Target element is collapsed; expand it...
             if($(target).hasClass('collapsed')) {
             $(target).nextUntil('h1').slideDown();

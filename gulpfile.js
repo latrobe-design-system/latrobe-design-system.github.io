@@ -28,23 +28,6 @@ function reload() {
   return server.reload()
 }
 
-async function siteStyles () {
-
-  gulp.src(config.styles.site.entryPoint)
-    .pipe(sourcemaps.init())
-    .pipe(sass({
-      outputStyle: 'compressed',
-    })
-      .on('error', function (error) {
-        console.error(`siteStyles.sass: ${error.messageFormatted}`)
-        this.emit('end')
-      }))
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(config.styles.site.dest))
-    .pipe(server.stream({ match: '**/*.css' }))
-
-}
-
 async function ltuPatternsStyles () {
 
   gulp.src(config.styles.ltuPatterns.entryPoint)
@@ -122,7 +105,7 @@ function watch (done) {
 
   gulp.watch(config.styles.ltuPatterns.src, ltuPatternsStyles)
   gulp.watch(config.styles.ltuLegacy.src, ltuLegacyStyles)
-  gulp.watch(config.scripts.src, scripts)
+  gulp.watch(config.scripts.srcForWatch, scripts)
   gulp.watch(config.views, jekyllBuild)
 
   done()

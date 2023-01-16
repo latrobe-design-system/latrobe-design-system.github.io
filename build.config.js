@@ -10,7 +10,14 @@ module.exports = {
     './assets/**/*.scss',
   ],
   scripts: {
-    src: './_ltu-components/src/**/*.js',
+    src: [
+      './_ltu-components/src/_setup/pre-setup.js',
+      './_ltu-components/src/!(_setup)/**/*.js',
+      './_ltu-components/src/_setup/setup.js',
+    ],
+    srcForWatch: [
+      './_ltu-components/src/**/*.js',
+    ],
     dests: [
       './_site/ltu-components/dist/js/ds-ltu.js',
       './_ltu-components/dist/js/ds-ltu.js',

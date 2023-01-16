@@ -2,14 +2,23 @@
 status: ready
 
 title: "Accordion - example 4"
-text: This exmple demostrates  use case of using presentation from design system but skipping JavaScript applied to related DOM. Applying <b>ds-no-js</b> CSS class to trigger element (element with <b>ds-accordion__trigger</b> CSS class) to avoid JS handlers applied.
+text: This exmple demostrates abilities of setting up custom components&#58;
+    <ul>
+        <li>
+            Using presentation (component  HTML) from design system but not applying JavaScript handlers.
+            Adding <b>ds-no-js</b> CSS class to accordion element (with <b>ds-accordion</b> CSS class) to avoid JS handlers being applied.
+        </li>
+        <li>
+            Setup component manually
+        </li>
+    </ul>
 ---
 
 <div class="ds-block ds-block-accordion">
 
-    <div class="ds-accordion">
+    <div class="ds-accordion ds-no-js">
         <h3>
-            <button id="sect1trigger" class="ds-accordion__trigger ds-no-js" aria-expanded="false" aria-controls="sect1">
+            <button id="sect1trigger" class="ds-accordion__trigger" aria-expanded="false" aria-controls="sect1">
                 <span class="ds-accordion__title">
                     Item
                 </span>
@@ -25,9 +34,9 @@ text: This exmple demostrates  use case of using presentation from design system
 
 <div class="ds-block ds-block-accordion">
 
-    <div class="ds-accordion">
+    <div class="ds-accordion ds-no-js">
         <h3>
-            <button id="sect2trigger" class="ds-accordion__trigger ds-no-js" aria-expanded="false" aria-controls="sect2">
+            <button id="sect2trigger" class="ds-accordion__trigger" aria-expanded="false" aria-controls="sect2">
                 <span class="ds-accordion__title">
                     Item
                 </span>
@@ -43,8 +52,18 @@ text: This exmple demostrates  use case of using presentation from design system
 
 <script>
 jQuery(document).ready(function($) {
-    $(".ds-accordion__trigger").click(() => {
-        alert('This is custom click handler!');
+    LTUDS.ready(() => {
+        const selector = '.ds-accordion__trigger'
+
+        $(selector).click(() => {
+            alert('This is custom click handler!');
+        })
+
+        const component = LTUDS.components.accordion
+
+        component.helpers.openAccordionOnLoad(selector)
+        $(selector).on('click', component.eventHandlers.triggerOnClick)
+
     })
 })
 </script>
