@@ -48,7 +48,7 @@
             }
         },
         /**
-         * Register a callbakc when LTUDS is ready
+         * Register a callback when LTUDS is ready
          * @param {Object} cb - callback function to be invokved
          * @returns
          */
@@ -67,6 +67,12 @@
         setupComponents: (keys, options) => {
             _runAllComponents('setup', keys || _this.getComponentKeys(), options || {})
             isInitialised = true
+
+            // dispatch custom event to notify 3rd party readiness of LTU DS library
+            const event = new CustomEvent('ltuds:ready', { detail: { LTUDS: _this } })
+            dispatchEvent(event);
+
+            // execute all queued on-ready callback
             let cb
             while (cb = callbacksOnReady.shift()) {
                 try {
