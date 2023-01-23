@@ -3,9 +3,18 @@
  *
  * @requires: /ltu-components/src/modal/js/modal.js
  */
-$(document).ready(function($) {
-     //do jQuery stuff when DOM is ready
-    $('body').on('click', 'a[data-youtube]', function(e) {
+jQuery(document).ready(function ($) {
+    const _config = {
+        name: 'modal-video',
+        selectors: {
+            container: '',
+            children: {
+                trigger: 'a[data-youtube]',
+            }
+        },
+    }
+
+    function triggerOnClick(e) {
         e.preventDefault();
 
         // get object that was clicked
@@ -15,9 +24,26 @@ $(document).ready(function($) {
         var videoId = $(target).attr('data-youtube');
 
         // modal content
-        var modalContent = '<div class="ds-video ds-video--fullwidth"><div class="ds-video__wrapper"><iframe id="vid-'+videoId+'" width="560" height="315" type="text/html" src="https://www.youtube.com/embed/'+videoId+'?rel=0&amp;autoplay=1" frameborder="0" allowfullscreen></iframe></div></div>';
+        var modalContent = '<div class="ds-video ds-video--fullwidth"><div class="ds-video__wrapper"><iframe id="vid-' + videoId + '" width="560" height="315" type="text/html" src="https://www.youtube.com/embed/' + videoId + '?rel=0&amp;autoplay=1" frameborder="0" allowfullscreen></iframe></div></div>';
 
         // open modal with responsive video content
-        openModal(target, modalContent, 'medium');
-    });
+        LTUDS.components.modal.helpers.openModal(target, modalContent, 'medium');
+    }
+
+    window.LTUDS.registerComponent(_config.name, {
+        eventHandlers: {
+            triggerOnClick: triggerOnClick,
+        },
+        setup: (helper) => {
+            const { getSelector } = helper
+
+            const selector = getSelector(_config.selectors.container, 'trigger', _config.selectors)
+
+            jQuery(document.body)
+                .off('click', selector, triggerOnClick)
+                .on('click', selector, triggerOnClick)
+                ;
+        },
+    })
+
 });

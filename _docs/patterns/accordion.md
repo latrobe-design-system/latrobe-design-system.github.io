@@ -31,4 +31,4 @@ For non-matrix implementations where it is more praticle to add, remove and reor
 
 {% include sample-iframe.html snippet="src/accordion/snippets/accordion-default-opened.html" %}
 
-{% include sample-iframe.html snippet="src/accordion/snippets/accordion-no-js.html" %}
+{% include sample-iframe.html snippet="src/accordion/snippets/accordion-custom-component.html" %}
