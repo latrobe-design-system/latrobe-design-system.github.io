@@ -15,4 +15,7 @@ A maximum of six tabs may be displayed. This is to maintain an uncluttered UI an
 ### Order
 Tab order should be consistent across an experience. Tabs with related content should be grouped adjacent to each other.
 
+### Open tab on page load
+Tab can be opened on page load by anchor value, see <a href="/ltu-components/src/tab/snippets/tabs.html#tab2trigger" target="_blank">example</a>.
+
 {% include sample-iframe.html snippet="src/tab/snippets/tabs.html"%}

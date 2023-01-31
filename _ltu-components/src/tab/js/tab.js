@@ -186,7 +186,7 @@ jQuery(document).ready(function ($) {
         var url = document.location.toString();
         if (url.match('#')) {
             var tabtoopen = document.getElementById(url.split('#')[1])
-            tabtoopen.click();
+            tabtoopen && tabtoopen.click();
         }
     }
 
