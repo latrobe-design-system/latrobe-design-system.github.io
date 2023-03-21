@@ -17,7 +17,8 @@ html {
 }
 
 body {
-    font-family: config.$font-roboto;
+    // font-family: config.$font-roboto;
+    font-family: config.$font-dm-sans;
     font-weight: config.$regular;
     font-size: 1rem;
     -webkit-font-smoothing: antialiased;
@@ -30,6 +31,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
+    font-family: config.$font-knockout;
     font-weight: config.$medium;
     max-width: 42em; // readable line length < 80 characters https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html
 
@@ -49,7 +51,8 @@ h5, .h5 {
 }
 
 h2, .h2 {
-    font-family: config.$font-roboto-slab;
+    font-family: config.$font-knockout;
+    // font-family: config.$font-roboto-slab;
     font-weight: config.$regular;
 }
 
