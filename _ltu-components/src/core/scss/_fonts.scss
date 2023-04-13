@@ -10,26 +10,60 @@
        url('fonts/knockout/Knockout-50Welterweight.woff') format('woff');
 }
 
-/* DM Sans */
+/* dm-sans-regular - latin_latin-ext */
 @font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: 'DM Sans';
   font-style: normal;
-  font-weight: normal;
-  font-display: swap;
-  src: url('fonts/dm-sans/DMSans-Regular.woff2') format('woff2'),
-       url('fonts/dm-sans/DMSans-Regular.woff') format('woff');
+  font-weight: 400;
+  src: url('fonts/dm-sans/dm-sans-v11-latin_latin-ext-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+       url('fonts/dm-sans/dm-sans-v11-latin_latin-ext-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-
-/* DM Sans Bold - 700 */ 
+/* dm-sans-italic - latin_latin-ext */
 @font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'DM Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url('fonts/dm-sans/dm-sans-v11-latin_latin-ext-italic.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+       url('fonts/dm-sans/dm-sans-v11-latin_latin-ext-italic.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* dm-sans-500 - latin_latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('fonts/dm-sans/dm-sans-v11-latin_latin-ext-500.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+       url('fonts/dm-sans/dm-sans-v11-latin_latin-ext-500.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* dm-sans-500italic - latin_latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'DM Sans';
+  font-style: italic;
+  font-weight: 500;
+  src: url('fonts/dm-sans/dm-sans-v11-latin_latin-ext-500italic.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+       url('fonts/dm-sans/dm-sans-v11-latin_latin-ext-500italic.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* dm-sans-700 - latin_latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
-  src: url('fonts/dm-sans/DMSans-Bold.woff2') format('woff2'),
-       url('fonts/dm-sans/DMSans-Bold.woff') format('woff');
+  src: url('fonts/dm-sans/dm-sans-v11-latin_latin-ext-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+       url('fonts/dm-sans/dm-sans-v11-latin_latin-ext-700.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-
+/* dm-sans-700italic - latin_latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'DM Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: url('fonts/dm-sans/dm-sans-v11-latin_latin-ext-700italic.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+       url('fonts/dm-sans/dm-sans-v11-latin_latin-ext-700italic.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 
 /* ROBOTO */
 
