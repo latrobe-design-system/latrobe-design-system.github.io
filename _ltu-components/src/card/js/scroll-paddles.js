@@ -110,7 +110,7 @@ $(".ds-scroll-right").click(function () {
     if (previousTimeStamp !== timestamp) {
       elementSet.scrollLeft += scrollSpeed;
 
-      if (elementSet.scrollWidth - elementSet.scrollLeft === elementSet.clientWidth) {
+      if (Math.abs(elementSet.scrollWidth - elementSet.scrollLeft - elementSet.clientWidth) < 1) {
         console.log('last');
 
         $(elementSet.nextElementSibling).hide();

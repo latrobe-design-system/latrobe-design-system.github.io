@@ -1,0 +1,35 @@
+diff --git a/_ltu-components/src/card/js/card-set-comparison-dynamic-heights.js b/_ltu-components/src/card/js/card-set-comparison-dynamic-heights.js
+index 4dd4d61f..26e17435 100644
+--- a/_ltu-components/src/card/js/card-set-comparison-dynamic-heights.js
++++ b/_ltu-components/src/card/js/card-set-comparison-dynamic-heights.js
+@@ -2,7 +2,7 @@ $(document).ready(function() {
+     dynamicHeights();
+ 
+     addEventListener('resize', (event) => {
+-        dynamicHeights();
++        setTimeout(() => dynamicHeights(), 500) // wait for a reasonable time after both animation and redraw are completed
+     })
+ })
+ 
+@@ -23,6 +23,8 @@ function dynamicHeights() {
+         let cardAccordionSet = element.querySelectorAll('.ds-accordion .ds-accordion__trigger');
+ 
+         try {
++            cardHeading.style.height = null
++
+             if (cardHeading.clientHeight > tallestCardHeading) {
+                 tallestCardHeading = cardHeading.clientHeight;
+             }
+diff --git a/_ltu-components/src/card/js/scroll-paddles.js b/_ltu-components/src/card/js/scroll-paddles.js
+index aa3d8152..58026199 100644
+--- a/_ltu-components/src/card/js/scroll-paddles.js
++++ b/_ltu-components/src/card/js/scroll-paddles.js
+@@ -110,7 +110,7 @@ $(".ds-scroll-right").click(function () {
+     if (previousTimeStamp !== timestamp) {
+       elementSet.scrollLeft += scrollSpeed;
+ 
+-      if (elementSet.scrollWidth - elementSet.scrollLeft === elementSet.clientWidth) {
++      if (Math.abs(elementSet.scrollWidth - elementSet.scrollLeft - elementSet.clientWidth) < 1) {
+         console.log('last');
+ 
+         $(elementSet.nextElementSibling).hide();

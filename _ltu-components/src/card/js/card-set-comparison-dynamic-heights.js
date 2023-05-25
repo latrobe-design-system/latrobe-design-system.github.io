@@ -2,7 +2,7 @@ $(document).ready(function() {
     dynamicHeights();
 
     addEventListener('resize', (event) => {
-        dynamicHeights();
+        setTimeout(() => dynamicHeights(), 500) // wait for a reasonable time after both animation and redraw are completed
     })
 })
 
@@ -23,6 +23,8 @@ function dynamicHeights() {
         let cardAccordionSet = element.querySelectorAll('.ds-accordion .ds-accordion__trigger');
 
         try {
+            cardHeading.style.height = null
+
             if (cardHeading.clientHeight > tallestCardHeading) {
                 tallestCardHeading = cardHeading.clientHeight;
             }
