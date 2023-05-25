@@ -10,7 +10,6 @@
     border-top: dotted 3px config.$color-3b;
     margin-top: config.spunits(8);
     padding-top: config.spunits(4);
-    // height: 10rem;
     display: inline-block;
 }
 
@@ -28,8 +27,6 @@
 .ds-card-set--comparison {
     display: flex;
     gap: 1rem;
-    // flex-wrap: nowrap;
-    // overflow-x: scroll;
     @include config.overflowXScroll();
     white-space: normal;
     flex-wrap: nowrap;
@@ -37,7 +34,6 @@
 
     .ds-card {
         @media(min-width: 1281px) {
-            // width: 22rem;
             flex-basis: calc(100% / 3.5 - #{config.$gutter});
         }
         
@@ -70,11 +66,9 @@
 }
 
 .ds-card__status {
-    // position: absolute;
     position: relative;
     background-color: config.$color-3a;
     display: block;
-    // top: 13rem;
     margin-top: -3.5rem !important;
     padding: .75rem .25rem;
     color: #000;
@@ -99,22 +93,6 @@
     &[data-status="advance"] {
         background-color: #fce882;
         color: black;
-    }
-}
-
-@media (max-width: 703px) {
-    .ds-card-set--comparison {
-        .ds-card__status {
-            // position: static;
-        }
-    }
-}
-
-@media (min-width: 1441px) {
-    .ds-card-set--comparison {
-        .ds-card__status {
-            // top: 11.5rem;
-        }
     }
 }
 
@@ -150,16 +128,8 @@
 
 }
 
-@media(max-width: 1023px) {
-    .ds-card-set-scroll-button {
-        // height: 10rem;
-    }
-}
-
 .ds-card__header--sticky {
     position: sticky;
-    // top: 420px;
-    // padding-top: 420px;
     padding-left: 2rem;
     transform: translateY(15rem);
     transition: all 1.25s ease-in-out;
@@ -174,11 +144,6 @@
     background: white;
     transition: all .5s ease-in-out;    
 }
-
-
-// .ds-card__body--transition {
-//     transition: all;
-// }
 
 .swipe-to-view {
     padding: config.spunits(4) 0;
@@ -207,18 +172,19 @@
         width: 15rem;
         position: absolute;
         z-index: 1;
+        pointer-events: none;
     }
 
     .ds-card-set--comparison::before {
         content: " ";
-        background: linear-gradient(to right, white, transparent);
+        background: linear-gradient(to right, white, rgba(255,255,255,0));
         left: -.1rem;
         z-index: 1;
     }
 
     .ds-card-set--comparison::after {
         content: " ";
-        background: linear-gradient(to left, white, transparent);
+        background: linear-gradient(to left, white, rgba(255,255,255,0));
         right: -.1rem;
         z-index: 1;
         }
@@ -227,37 +193,6 @@
     .ds-card-set-scroll {
         overflow-x: hidden;
     }
-}
-
-// .ds-scroll-left {
-//     position: relative;
-//     left: 1rem;
-// }
-
-// .ds-scroll-right {
-//     position: relative;
-//     right: 1rem;
-// } 
-
-@media only screen and (max-width: 1879px) {   
-    // .ds-scroll-left {
-    //     left: 0;
-    // }
-    // .ds-scroll-right {
-    //     right: 0;
-    // } 
-}
-
-@media only screen and (min-width: 1880px) {   
-    // .ds-scroll-left {
-    //     position: relative;
-    //     left: 1rem;
-    // }
-
-    // .ds-scroll-right {
-    //     position: relative;
-    //     right: 1rem;
-    // } 
 }
 
 .ds-card-set-scroll {
