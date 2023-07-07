@@ -51,8 +51,20 @@ jQuery(document).ready(function ($) {
     /**
      * Function Close Modal
      */
-    function closeModal() {
-        $('.ds-modal').fadeOut(function () {
+    function closeModal($elem) {
+        /**
+         * make sure $elem is an element with .ds-modal
+         */
+        if ($elem) {
+            $elem = $($elem);
+            if (!$elem.is('.ds-modal')) {
+                $elem = $elem.parents('.ds-modal').eq(0)
+            }
+        } else {
+            $elem = $('.ds-modal:visible');
+        }
+
+        $elem.fadeOut(function () {
 
             // delete modal
             $(this).remove();
@@ -83,8 +95,14 @@ jQuery(document).ready(function ($) {
                     // undefined for click, 13 for enter key, 27 for esc key
                     event.preventDefault();
 
+                    let $elemModal = $(event.target);
+
+                    if (!$elemModal.is('.ds-modal')) {
+                        $elemModal = $elemModal.parent('.ds-modal')
+                    }
+
                     // close the modal
-                    closeModal($(this));
+                    closeModal($elemModal);
                 }
             }
 
