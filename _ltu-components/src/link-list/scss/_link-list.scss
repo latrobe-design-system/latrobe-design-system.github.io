@@ -2,6 +2,7 @@
 @use "config";
 @use "mixins";
 @use "core/scss/icons";
+@use "text/scss/text";
 
 .ds-link-list {
     padding: 0;
@@ -25,7 +26,7 @@
     text-decoration: none;
     width: 100%;
     color: config.$color-2;
-    border-bottom: 2px solid config.$color-3b;
+    border-bottom: 2px solid config.$color-2;
     padding-right: config.spunits(6);
     
     @extend .ds-icon-arrow-right;
@@ -70,7 +71,8 @@
 
 // lead in paragraph
 .ds-link-list__lead-in {
-    font-weight: config.$medium;
+    @extend .h2;
+    // font-weight: config.$medium;
     // bring lead-in closer to list 
     + {
         .ds-link-list {
