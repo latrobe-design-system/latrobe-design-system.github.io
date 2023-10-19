@@ -32,5 +32,8 @@
     "rollup": "^1.32.1",
     "rollup-plugin-uglify": "^6.0.4",
     "sass": "^1.57.0"
+  },
+  "dependencies": {
+    "child-process-promise": "^2.2.1"
   }
 }

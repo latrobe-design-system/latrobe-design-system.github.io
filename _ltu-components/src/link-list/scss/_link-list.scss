@@ -106,18 +106,18 @@
 
         position: relative;
         // white triangle bottom left
-        &::before {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 0; 
-            height: 0;
-            border-right: 81px solid transparent;
-            border-bottom: 60px solid #fff;
-            border-top: 0;
-            bottom: 0;
-            left: 0;
-        }
+        // &::before {
+        //     content: "";
+        //     display: block;
+        //     position: absolute;
+        //     width: 0; 
+        //     height: 0;
+        //     border-right: 81px solid transparent;
+        //     border-bottom: 60px solid #fff;
+        //     border-top: 0;
+        //     bottom: 0;
+        //     left: 0;
+        // }
 
     }
 

@@ -38,6 +38,62 @@ $p: $h5;
 //----------------------------------------------------------------------------------------------------------------------------------//
 // Colour
 //----------------------------------------------------------------------------------------------------------------------------------//
+:root {
+    // Brand
+    --latrobe-red: #e2231b;
+    --latrobe-black: #242424;
+
+    // Greys
+    --latrobe-light-grey-1: #fafafa;
+    --latrobe-light-grey-2: #eee;
+    --latrobe-grey-1: #ccc;
+    --latrobe-grey-2: #999;
+    --latrobe-grey-3: #666;
+    --latrobe-charcoal: #414141;
+
+    // Utility colours
+
+    --blue: #0591f8;
+    --blue-shade-20: #0474c6;
+    --blue-shade-40: #035795;
+    --blue-tint-50: #82c8fc;
+    --blue-tint-90: #e6f4fe;
+
+    --teal: #00aa98;
+    --teal-shade-20: #00887a;
+    --teal-shade-40: #00665b;
+    --teal-tint-50: #80d5cc;
+    --teal-tint-90: #e6f7f5;
+
+    --green: #398712;
+    --green-cta-shade-20: #2e6c0e;
+    --green-cta-shade-40: #22510b;
+    --green-cta-tint-50: #9cc389;
+    --green-cta-tint-90: #ebf3e7;
+
+    --green-confirm-shade-20: #429d15;
+    --green-confirm-shade-40: #317610;
+    --green-confirm-tint-50: #a9e28d;
+    --green-confirm-tint-90: #eef9e8;
+
+    --orange: #ff9700;
+    --orange-shade-20: #cc7900;
+    --orange-shade-40: #995b00;
+    --orange-tint-50: #ffcB80;
+    --orange-tint-90: #fff5e6;
+
+    --yellow: #fce882;
+    --yellow-shade-20: #caba68;
+    --yellow-shade-40: #978b4e;
+    --yellow-tint-50: #fef4c1;
+    --yellow-tint-90: #fffdf3;
+
+    --latrobe-red-shade-20: #b51c16;
+    --latrobe-red-shade-40: #881510;
+    --latrobe-red-tint-50: #e84f49;
+    --latrobe-red-tint-90: #fce9e8;
+}
+
 
 /* red shades */
 $color-1: #e2231b !default; /* primary red */

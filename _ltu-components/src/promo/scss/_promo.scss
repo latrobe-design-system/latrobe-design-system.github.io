@@ -4,38 +4,39 @@
 
 .ds-promo {
     margin: 4rem 0;
-    outline: 1px solid config.$color-3b;
+    // outline: 1px solid config.$color-3b;
 
     position: relative;
 
     @media(min-width: 960px) {
         border: 0;
-        outline: 1px solid config.$color-3b;
+        // outline: 1px solid config.$color-3b;
         outline-offset: -1px;
     }
 
     // red triangle top left
-    &::before {
-        content: "";
-        display: block;
-        width: 0;
-        height: 0;
-        border-left: 0px solid transparent;
-        border-right: 41px solid transparent;
-        border-top: 30px solid #e2231b;
-        position: absolute;
-        z-index: 2;
-        top: 0;
-        left: 0;
+    // &::before {
+    //     content: "";
+    //     display: block;
+    //     width: 0;
+    //     height: 0;
+    //     border-left: 0px solid transparent;
+    //     border-right: 41px solid transparent;
+    //     border-top: 30px solid #e2231b;
+    //     position: absolute;
+    //     z-index: 2;
+    //     top: 0;
+    //     left: 0;
 
-        @media(min-width: 1024px) {
-            border-right: 81px solid transparent;
-            border-top: 60px solid #e2231b;
-        }
-    }
+    //     @media(min-width: 1024px) {
+    //         border-right: 81px solid transparent;
+    //         border-top: 60px solid #e2231b;
+    //     }
+    // }
 }
 
 .ds-promo__content {
+
     @media(min-width: 768px) {
         display: flex;
         flex-direction: row-reverse;
@@ -48,6 +49,8 @@
 }
 
 .ds-promo__text {
+    border-radius: 2.5rem;
+    // background-color: white;
 
     @media(min-width: 1136px) {
         flex: 4;
@@ -56,8 +59,10 @@
 }
 
 .ds-promo__text-wrapper {
-    padding: config.spunits(8) config.spunits(5);
-    text-align: center;
+    // padding: config.spunits(8) config.spunits(5);
+    padding: 4.375rem 3.125rem;
+    text-align: left;
+    border-radius: 2.5rem;
 
     > :first-child {
         margin-top: 0;
@@ -66,6 +71,7 @@
 }
 
 .ds-promo__heading {
+    text-align: left;
 
     // latrobe chevron
     .ds-promo__heading__chevron {
@@ -81,7 +87,6 @@
 }
 
 .ds-promo__image {
-
     @media(min-width: 1136px) {
         flex: 6;
     }
@@ -89,26 +94,27 @@
     position: relative;
 
     // white triangle bottom right
-    &::after {
+    // &::after {
 
-        @media(min-width: 1024px) {
-            content: "";
-            display: block;
-            width: 0;
-            height: 0;
-            border-left: 146px solid transparent;
-            border-right: 0px solid transparent;
-            border-bottom: 107px solid #fff;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-        }
+    //     @media(min-width: 1024px) {
+    //         content: "";
+    //         display: block;
+    //         width: 0;
+    //         height: 0;
+    //         border-left: 146px solid transparent;
+    //         border-right: 0px solid transparent;
+    //         border-bottom: 107px solid #fff;
+    //         position: absolute;
+    //         bottom: 0;
+    //         right: 0;
+    //     }
 
-    }
+    // }
 
 }
 
 .ds-promo__image-wrapper {
+    border-radius: 2.5rem;
 
     //3/4 aspect ratio box
     position: relative;
@@ -219,7 +225,7 @@
         }
 
         .ds-promo__text-wrapper {
-            background-color: rgba(255,255,255,.95);
+            background-color: rgba(255,255,255,1);
             position: absolute;
             top: 0px;
             left: 0px;

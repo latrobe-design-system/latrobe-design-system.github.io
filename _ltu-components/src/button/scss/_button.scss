@@ -21,6 +21,7 @@
     color: config.$color-2;
     background-color: config.$color-3a;
     border: 2px solid transparent;
+    border-radius: 1.75rem;
     cursor: pointer;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;  // for hover
 
@@ -77,6 +78,7 @@
             //padding-right: config.spunits(9);
             &::after {
                 margin: 0 0 0 config.spunits(2);
+                // filter: invert(21%) sepia(78%) saturate(7479%) hue-rotate(356deg) brightness(95%) contrast(86%);
                 //width: config.spunits(4);
             }
         }
@@ -203,7 +205,7 @@
         }
 
         &[class*="ds-icon-"]::after,
-        &[class*="ds-icon-"].ds-icon--before::before {
+        &.ds-icon--before::before {
             filter: config.$filter-red;
         }
     }
@@ -389,3 +391,49 @@ input[type="submit"] {
         }
     }
 }
+
+.ds-btn,
+.ds-btn-secondary,
+.ds-btn--small {
+    border-radius: 1.875rem;
+    padding: .8125rem 1.5rem;
+}
+
+.ds-btn-primary:hover {
+    background-color: var(--latrobe-red-shade-20);
+
+    &[class*='ds-icon']::after {
+        // filter: invert(13%) sepia(79%) saturate(4686%) hue-rotate(355deg) brightness(88%) contrast(91%);
+    }
+}
+
+.ds-btn--light {
+    background-color: white;
+    color: var(--latrobe-red);
+
+    &[class*='ds-icon']::after {
+        // filter: invert(94%) sepia(0%) saturate(7500%) hue-rotate(95deg) brightness(105%) contrast(108%);
+    }
+}
+
+.ds-btn-primary.ds-btn--light:hover {
+    border-color: white;
+}
+
+.ds-btn-secondary:hover {
+    border-color: var(--latrobe-red-shade-20);
+    color: var(--latrobe-red-shade-20);
+
+    &::after {
+        filter: invert(13%) sepia(79%) saturate(4686%) hue-rotate(355deg) brightness(88%) contrast(91%);
+    }
+}
+
+.ds-btn-cta {
+    background-color: var(--green);
+    color: white;
+}
+
+// .ds-btn-cta[class*='ds-icon']::after {
+//     filter: invert(94%) sepia(0%) saturate(7500%) hue-rotate(95deg) brightness(105%) contrast(108%);
+// }

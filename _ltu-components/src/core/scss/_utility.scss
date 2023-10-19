@@ -1,3 +1,5 @@
+@use "config";
+
 /* overlay */
 .overlay {
     position: fixed;
@@ -29,3 +31,25 @@ body.overlay-open {
   overflow-y: hidden;
 }
 /* end */
+
+.colour-primary {
+    color: config.$color-1;
+}
+
+// #our-course-search {
+//     outline: solid 2px red;
+
+//     .ds-input-group__prepend {
+//         border-top-left-radius: 1.875rem; 
+//         border-bottom-left-radius: 1.875rem;
+//         background: pink;
+//     }
+
+//     .awesomeplete {
+//         outline: solid 1px blue;
+//     }
+
+//     #course-search-submit {
+//         width: 10rem; 
+//     }
+// }

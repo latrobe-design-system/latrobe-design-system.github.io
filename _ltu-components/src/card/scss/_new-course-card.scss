@@ -1,0 +1,43 @@
+@use "config";
+@use "core/scss/icons";
+
+.ds-new-course-card {
+    border-radius: 0.25rem;
+    padding: 2rem;
+    border: solid 1px config.$color-1;
+    border-left: solid 8px config.$color-1;
+    max-width: 100%;
+
+    &__course-type {
+        color: config.$color-1;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: .75rem;
+    }
+
+    &__course-name {
+        color: config.$color-2;
+        margin: 0;
+    }
+
+    &__course-code {
+        color: config.$color-2a;
+    }
+}
+
+.ds-new-course-card--studyflex {
+    // border-left: solid 8px red;
+    & > * {
+        flex-basis: 50rem;
+    }
+}
+
+
+.ds-course-card--set {
+    display: flex;
+    overflow-x: scroll;
+
+    & :not(:last-child) {
+        margin-right: 2rem;
+    }
+}

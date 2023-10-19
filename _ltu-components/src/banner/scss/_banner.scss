@@ -21,19 +21,19 @@
         background-color: transparent;
 
         // red triangle top left
-        &::before {
-            content: "";
-            display: block;
-            width: 0;
-            height: 0;
-            border-left: 146px solid transparent;
-            border-right: 146px solid transparent;
-            border-top: 107px solid #e2231b;
-            position: absolute;
-            z-index: 2;
-            top: 0;
-            left: -146px;
-        }
+        // &::before {
+        //     content: "";
+        //     display: block;
+        //     width: 0;
+        //     height: 0;
+        //     border-left: 146px solid transparent;
+        //     border-right: 146px solid transparent;
+        //     border-top: 107px solid #e2231b;
+        //     position: absolute;
+        //     z-index: 2;
+        //     top: 0;
+        //     left: -146px;
+        // }
     }
 }
 
@@ -66,15 +66,15 @@
     }
 
     // latrobe chevron
-    &::before {
-        content: "";
-        display: block;
-        width: 40px;
-        height: 40px;
-        background-image: url("icons/latrobe-chevron-RGB.svg");
-        background-repeat: no-repeat;
-        background-size: 100%;
-    }
+    // &::before {
+    //     content: "";
+    //     display: block;
+    //     width: 40px;
+    //     height: 40px;
+    //     background-image: url("icons/latrobe-chevron-RGB.svg");
+    //     background-repeat: no-repeat;
+    //     background-size: 100%;
+    // }
 
     @media(min-width: 640px) {
         padding: config.spunits(8) 40px config.spunits(8) 40px;
@@ -113,18 +113,18 @@
         padding-bottom: 0;
 
         // white triangle bottom right
-        &::after {
-            content: "";
-            display: block;
-            width: 0;
-            height: 0;
-            border-left: 146px solid transparent;
-            border-right: 0px solid transparent;
-            border-bottom: 107px solid #fff;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-        }
+        // &::after {
+        //     content: "";
+        //     display: block;
+        //     width: 0;
+        //     height: 0;
+        //     border-left: 146px solid transparent;
+        //     border-right: 0px solid transparent;
+        //     border-bottom: 107px solid #fff;
+        //     position: absolute;
+        //     bottom: 0;
+        //     right: 0;
+        // }
 
     }
 }

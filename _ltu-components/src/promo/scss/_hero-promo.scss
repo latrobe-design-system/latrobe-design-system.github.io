@@ -72,66 +72,69 @@
         padding: 20px 40px; // using pixels here to maintain on large screens
     }
 
-    &::before {
-        display: block;
-        content: url(icons/latrobe-chevron-RGB-white.svg);
-        width: 40px;
-    }
+    // &::before {
+    //     display: block;
+    //     content: url(icons/latrobe-chevron-RGB-white.svg);
+    //     width: 40px;
+    // }
 
     @media(min-width: 768px) {
         width: 50%;
     }
 
     @media(min-width: 1024px) {
-        &::before {
-            display: block;
-            content: "";
-            background-image: url(img/logo-white.svg);
-            background-repeat: no-repeat;
-            width: 300px;
-            height: 110px;
-            background-size: 100%;
-            margin-top: -40px;
-            margin-left: -40px;
-        }
+        // &::before {
+        //     display: block;
+        //     content: "";
+        //     background-image: url(img/logo-white.svg);
+        //     background-repeat: no-repeat;
+        //     width: 300px;
+        //     height: 110px;
+        //     background-size: 100%;
+        //     margin-top: -40px;
+        //     margin-left: -40px;
+        // }
     }
 
-    @media(min-width: 1920px) {
-        &::before {
-            background-image: url(img/LTU_Dom_V_RGB_white_V1.svg);
-            width: 250px;
-            height: 186px;
-            margin-top: -48px;
-            margin-left: -24px;
-        }
-    }
+    // @media(min-width: 1920px) {
+    //     &::before {
+    //         background-image: url(img/LTU_Dom_V_RGB_white_V1.svg);
+    //         width: 250px;
+    //         height: 186px;
+    //         margin-top: -48px;
+    //         margin-left: -24px;
+    //     }
+    // }
 }
 
 .ds-hero-promo__text__headline {
     @extend .h1;
     margin: 0;
+    font-feature-settings: "ss02";
 }
 
 .ds-hero-promo__text__subheadline {
-    @extend .h2;
+    // @extend .text;
+    // font-family: config.$font-dm-sans;
+    text-transform: initial;
     margin-top: 0.5em; // em not rem because relative to font size
     margin-bottom: 1em; // em not rem because relative to font size
 }
 
 .ds-hero-promo__gradient-overlay {
-    @media(min-width: 768px) {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background: linear-gradient(75deg, #e2231b 55%, transparent 55%);
-    }
+    // @media(min-width: 768px) {
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     background: linear-gradient(75deg, #e2231b 55%, transparent 55%);
+    // }
 
-    @media(min-width: 1152px) {
-        background: linear-gradient(75deg, #e2231b 50%, transparent 50%);
-    }
+    // @media(min-width: 1152px) {
+    //     background: linear-gradient(75deg, #e2231b 50%, transparent 50%);
+    // }
 
 }
 

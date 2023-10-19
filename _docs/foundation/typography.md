@@ -15,7 +15,7 @@ Roboto medium (500) is used for bolded body copy and headings (h1, h3, h4, h5).
 
 Roboto bold (700) is used for bolded text within headings and table headings.
 
-Robotot black (900) is used for heading h6.
+Roboto black (900) is used for heading h6.
 
 [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab)
 
