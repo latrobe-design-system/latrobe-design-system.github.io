@@ -10,6 +10,7 @@
     transition: all 0.3s ease-in-out;
     background: #fff;
     border: solid 1px config.$color-3b;
+    border-radius: 1.25rem;
 
     margin-top: 1rem;
 }
@@ -28,6 +29,8 @@
     padding-top: math.div(2, 3) * 100%;
     background-size: cover;
     background-position: center;
+    border-top-left-radius: 1.25rem;
+    border-top-right-radius: 1.25rem;
 
     @media (min-width: 704px) {
         // once two cards across can fit the display image
