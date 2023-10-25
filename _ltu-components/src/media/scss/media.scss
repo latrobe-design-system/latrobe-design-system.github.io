@@ -21,6 +21,7 @@
 
     img {
         max-width: 100px;
+        border-radius: 0.625rem;
         @media(min-width: 768px) {
             max-width: 160px;
         }
