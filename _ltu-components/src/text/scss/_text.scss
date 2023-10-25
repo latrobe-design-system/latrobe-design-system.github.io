@@ -117,16 +117,7 @@ p.ds-lead {
     position: relative;
     font-size: 1.4rem;
     margin-bottom: config.spunits(8);
-    &::before {
-        content: "";
-        display: block;
-        width: 32px;
-        height: 32px;
-        background-image: url("icons/latrobe-chevron-RGB.svg");
-        background-repeat: no-repeat;
-        background-size: 100%;
-        margin-bottom: config.spunits(2);
-    }
+
     @media(min-width: 768px) {
         padding-right: 32px;
     }
