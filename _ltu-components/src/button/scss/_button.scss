@@ -21,7 +21,7 @@
     color: config.$color-2;
     background-color: config.$color-3a;
     border: 2px solid transparent;
-    border-radius: 1.75rem;
+    // border-radius: 1.75rem;
     cursor: pointer;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;  // for hover
 
@@ -397,6 +397,12 @@ input[type="submit"] {
 .ds-btn--small {
     border-radius: 1.875rem;
     padding: .8125rem 1.5rem;
+}
+
+.ltu-search-fields input[type="submit"] {
+    border-radius: 0;
+    padding: 0;
+    position: absolute;
 }
 
 .ds-btn-primary:hover {
