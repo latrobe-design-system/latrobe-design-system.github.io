@@ -122,21 +122,37 @@ function clearActiveNav(){
 var mmTriggers = document.getElementsByClassName('mm-trigger');
 for (i = 0; i < mmTriggers.length-1; i++) {
     var item = mmTriggers[i];
-    if (item.checked == true) {
+    const menuItem = item.parentElement.querySelector('.mega-menu-item');
+    const links = menuItem?.querySelectorAll('a');
+    const singleLink = (links?.length === 1 && menuItem.children.length === 1 && links[0] === menuItem.children[0]);
+    if (item.checked == true && !singleLink) {
         item.parentNode.classList.add('active');
         item.parentNode.parentNode.parentNode.classList.add('active');
+    } else if (singleLink) {
+        item.parentElement.classList.add('mm-single-link');
+
+        const label = item.parentElement.querySelector('label');
+        if (label && links[0]) {
+            label.parentElement.replaceChild(links[0], label);
+        }
     }
     item.addEventListener('change',function(e){
-        $this = e.target;
+        const $this = e.target;
         clearActiveNav();
-        document.getElementById('nav-universes').classList.add('active');
-        if ($this.checked) {
-            $this.setAttribute('aria-expanded','true');
-            $this.nextElementSibling.nextElementSibling.setAttribute('aria-hidden','false');
-            $this.parentElement.classList.add('active');
-        }
-        if($this.getAttribute('title') == 'close'){
-            clearActiveNav();
+        
+        if (singleLink) {
+            menuItem.style.display = 'none';
+            window.location.href = links[0].href;
+        } else {
+            document.getElementById('nav-universes').classList.add('active');
+            if ($this.checked) {
+                $this.setAttribute('aria-expanded','true');
+                $this.nextElementSibling.nextElementSibling.setAttribute('aria-hidden','false');
+                $this.parentElement.classList.add('active');
+            }
+            if($this.getAttribute('title') == 'close'){
+                clearActiveNav();
+            }
         }
     },false);
     item.addEventListener('keyup',function(e){
