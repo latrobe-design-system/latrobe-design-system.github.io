@@ -139,7 +139,7 @@ for (i = 0; i < mmTriggers.length-1; i++) {
     item.addEventListener('change',function(e){
         const $this = e.target;
         clearActiveNav();
-        
+
         if (singleLink) {
             menuItem.style.display = 'none';
             window.location.href = links[0].href;
@@ -273,7 +273,7 @@ searchButton.addEventListener('keyup', function(e) {
             document.getElementById('LT_search_field').focus();
         }
     }
-});     
+});
 
 searchButton.addEventListener('click', function(e) {
     document.getElementById('LT_search_field').focus();
@@ -295,7 +295,7 @@ ltuSearchClear.addEventListener('click', function(evt){
          datasets: {
            organic: {
              enabled: 'enabled',
-             collection: 'Latrobe-search',
+             collection: 'latr~sp-latrobe',
              profile   : '_default',
              program   : 'https://search.latrobe.edu.au/s/suggest.json',
            }
@@ -309,7 +309,7 @@ ltuSearchClear.addEventListener('click', function(evt){
          datasets: {
            organic: {
              enabled: 'enabled',
-             collection: 'Latrobe-search',
+             collection: 'latr~sp-latrobe',
              profile   : '_default',
              program   : 'https://search.latrobe.edu.au/s/suggest.json',
            }
